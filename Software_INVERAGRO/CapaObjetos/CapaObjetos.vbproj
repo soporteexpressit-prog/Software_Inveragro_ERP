@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8E19705F-856A-4640-B5E1-C3644B69E6A2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>CapaObjetos</RootNamespace>
+    <AssemblyName>CapaObjetos</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>CapaObjetos.xml</DocumentationFile>
+    <DefineConstants>_MYFORMS=True</DefineConstants>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>CapaObjetos.xml</DocumentationFile>
+    <DefineConstants>_MYFORMS=True</DefineConstants>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Almacen\coCategoriaProducto.vb" />
+    <Compile Include="Almacen\coControlCombustible.vb" />
+    <Compile Include="Almacen\coControlPresentacion.vb" />
+    <Compile Include="Almacen\coMarca.vb" />
+    <Compile Include="Almacen\coProductos.vb" />
+    <Compile Include="Almacen\coTransporte.vb" />
+    <Compile Include="Compras\coVentas.vb" />
+    <Compile Include="Compras\coIngreso.vb" />
+    <Compile Include="Compras\coCotizacion.vb" />
+    <Compile Include="Almacen\coUnidadMedida.vb" />
+    <Compile Include="Configuracion\coAdministrarUsuarios.vb" />
+    <Compile Include="Configuracion\coConfiguracion.vb" />
+    <Compile Include="Configuracion\coPerfil.vb" />
+    <Compile Include="Configuracion\coLogin.vb" />
+    <Compile Include="Configuracion\coUsuarios.vb" />
+    <Compile Include="Contabilidad\coActivo.vb" />
+    <Compile Include="Contabilidad\coCategoriaActivo.vb" />
+    <Compile Include="Contabilidad\coControlBonificacionVehiculoNN.vb" />
+    <Compile Include="Contabilidad\coControlSeguro.vb" />
+    <Compile Include="Contabilidad\coCtaCobrar.vb" />
+    <Compile Include="Contabilidad\coMarcaActivo.vb" />
+    <Compile Include="Contabilidad\coCaja.vb" />
+    <Compile Include="Contabilidad\coMotivoTransaccion.vb" />
+    <Compile Include="Contabilidad\coPrestamo.vb" />
+    <Compile Include="Contabilidad\coCtaPagar.vb" />
+    <Compile Include="Contabilidad\coBanco.vb" />
+    <Compile Include="Contabilidad\coCuentaBanco.vb" />
+    <Compile Include="Contabilidad\coGiroEmpresa.vb" />
+    <Compile Include="Contabilidad\coMoneda.vb" />
+    <Compile Include="Contabilidad\coPlanCuenta.vb" />
+    <Compile Include="Contabilidad\coTipoActivo.vb" />
+    <Compile Include="Contabilidad\coTipoCambio.vb" />
+    <Compile Include="Contabilidad\coTipoDocumento.vb" />
+    <Compile Include="Contabilidad\coTipoSeguro.vb" />
+    <Compile Include="Contabilidad\coUbicacion.vb" />
+    <Compile Include="CostosPresupuestos\coCostosPresupuestos.vb" />
+    <Compile Include="Molino\coControlDespacho.vb" />
+    <Compile Include="Molino\coControlExcedente.vb" />
+    <Compile Include="Molino\coControlPreparacionAlimento.vb" />
+    <Compile Include="Molino\coControlRecepcionAlimento.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Nutricion\coControlAlimento.vb" />
+    <Compile Include="Nutricion\coControlFormulacion.vb" />
+    <Compile Include="Nutricion\coMedicamentoRacion.vb" />
+    <Compile Include="Nutricion\coNucleo.vb" />
+    <Compile Include="Nutricion\coControlPremixero.vb" />
+    <Compile Include="Produccion\coArea.vb" />
+    <Compile Include="Produccion\coControlCampanaEmbarque.vb" />
+    <Compile Include="Produccion\coControlDespachoCerdoVenta.vb" />
+    <Compile Include="Produccion\coControlGestacion.vb" />
+    <Compile Include="Produccion\coControlLoteDestete.vb" />
+    <Compile Include="Produccion\coControlMaterialGenetico.vb" />
+    <Compile Include="Produccion\coControlMedico.vb" />
+    <Compile Include="Produccion\coControlRelacionPesoEdad.vb" />
+    <Compile Include="Produccion\coControlAnimal.vb" />
+    <Compile Include="Produccion\coJaulaCorral.vb" />
+    <Compile Include="Produccion\coGalpon.vb" />
+    <Compile Include="Produccion\coSala.vb" />
+    <Compile Include="Produccion\coTipoIncidencia.vb" />
+    <Compile Include="RecursosHumanos\coAreaCapacitadora.vb" />
+    <Compile Include="RecursosHumanos\coCargo.vb" />
+    <Compile Include="Contabilidad\coProveedor.vb" />
+    <Compile Include="RecursosHumanos\coControlAsistencia.vb" />
+    <Compile Include="RecursosHumanos\coControlCapacitacion.vb" />
+    <Compile Include="RecursosHumanos\coControlincidencia.vb" />
+    <Compile Include="RecursosHumanos\coControlMemoDespido.vb" />
+    <Compile Include="RecursosHumanos\coDerechoHabientos.vb" />
+    <Compile Include="RecursosHumanos\coontrolPagosyDes.vb" />
+    <Compile Include="RecursosHumanos\coPermisoLaboral.vb" />
+    <Compile Include="RecursosHumanos\coTemaCapacitacion.vb" />
+    <Compile Include="RecursosHumanos\coTemarioCapacitacion.vb" />
+    <Compile Include="RecursosHumanos\coTipoCapacitacion.vb" />
+    <Compile Include="RecursosHumanos\coTipoCurso.vb" />
+    <Compile Include="RecursosHumanos\coMotivoMemoDespido.vb" />
+    <Compile Include="RecursosHumanos\coTipoSeguroPlanilla.vb" />
+    <Compile Include="RecursosHumanos\coTrabajador.vb" />
+    <Compile Include="RecursosHumanos\coTipoMotivoEpp.vb" />
+    <Compile Include="Sanidad\coEnfermedad.vb" />
+    <Compile Include="SeguridadPersonal\coControlEpp.vb" />
+    <Compile Include="Ventas\coCliente.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>

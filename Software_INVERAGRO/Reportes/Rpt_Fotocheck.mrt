@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<StiSerializer version="1.02" type="Net" application="StiReport">
+  <Dictionary Ref="1" type="Dictionary" isKey="true">
+    <BusinessObjects isList="true" count="0" />
+    <Databases isList="true" count="0" />
+    <DataSources isList="true" count="1">
+      <Table Ref="2" type="DataTableSource" isKey="true">
+        <Alias>Table</Alias>
+        <Columns isList="true" count="4">
+          <value>nombre,System.String</value>
+          <value>apellidoCompleto,System.String</value>
+          <value>foto,System.Byte[]</value>
+          <value>dni,System.String</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>Table</Name>
+        <NameInSource>NewDataSet.Table</NameInSource>
+      </Table>
+    </DataSources>
+    <Relations isList="true" count="0" />
+    <Report isRef="0" />
+    <Variables isList="true" count="0" />
+  </Dictionary>
+  <EngineVersion>EngineV2</EngineVersion>
+  <GlobalizationStrings isList="true" count="0" />
+  <MetaTags isList="true" count="0" />
+  <Pages isList="true" count="1">
+    <Page1 Ref="3" type="Page" isKey="true">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Components isList="true" count="3">
+        <PageHeaderBand1 Ref="4" type="PageHeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,0.4,28.3,17.2</ClientRectangle>
+          <Components isList="true" count="11">
+            <Text1 Ref="5" type="Text" isKey="true">
+              <Border>None;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>1.4,9,9,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,12,Bold</Font>
+              <Guid>ca68bd05118940e9832be353c01d2cb0</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text1</Name>
+              <Page isRef="3" />
+              <Parent isRef="4" />
+              <Text>{Table.nombre}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text1>
+            <Image1 Ref="6" type="Image" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>3.4,4.2,5,4.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <DataColumn>Table.foto</DataColumn>
+              <Guid>0171330d3ced4f2a96e7a859df977385</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Image1</Name>
+              <Page isRef="3" />
+              <Parent isRef="4" />
+              <Stretch>True</Stretch>
+              <VertAlignment>Center</VertAlignment>
+            </Image1>
+            <Text2 Ref="7" type="Text" isKey="true">
+              <Border>None;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>1.4,9.8,9,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10,Bold</Font>
+              <Guid>8b3909ecb25343bdb59012d71ebe2255</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text2</Name>
+              <Page isRef="3" />
+              <Parent isRef="4" />
+              <Text>{Table.apellidoCompleto}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text2>
+            <Text3 Ref="8" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>4,0.8,6.4,2.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,11,Bold</Font>
+              <Guid>7bf884061d4949c8b725ab467039e310</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text3</Name>
+              <Page isRef="3" />
+              <Parent isRef="4" />
+              <Text>INVERAGRO SAN MARTIN DE PORRAS S.A.C</Text>
+              <TextBrush>[227:108:9]</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text3>
+            <Image2 Ref="9" type="Image" isKey="true">
+              <Border>None;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>1.4,0.8,2.6,2.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Guid>b2a0ecedf6de4a49b4839329d0b2faa3</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Image>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</Image>
+              <Margins>0,0,0,0</Margins>
+              <Name>Image2</Name>
+              <Page isRef="3" />
+              <Parent isRef="4" />
+              <Stretch>True</Stretch>
+              <VertAlignment>Center</VertAlignment>
+            </Image2>
+            <Shape2 Ref="10" type="Shape" isKey="true">
+              <BorderColor>OrangeRed</BorderColor>
+              <Brush>OrangeRed</Brush>
+              <ClientRectangle>0.8,13,10.2,1.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Name>Shape2</Name>
+              <Page isRef="3" />
+              <Parent isRef="4" />
+              <ShapeType Ref="11" type="Stimulsoft.Report.Components.ShapeTypes.StiRectangleShapeType" isKey="true" />
+              <Size>2</Size>
+            </Shape2>
+            <BarCode1 Ref="12" type="Stimulsoft.Report.BarCodes.StiBarCode" isKey="true">
+              <BackColor>White</BackColor>
+              <BarCodeType Ref="13" type="Stimulsoft.Report.BarCodes.StiMsiBarCodeType" isKey="true">
+                <CheckSum1>Modulo10</CheckSum1>
+              </BarCodeType>
+              <Border>None;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <ClientRectangle>1.4,10.6,9,2.6</ClientRectangle>
+              <Code>{Table.dni}</Code>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9.75,Bold,Point,False,0</Font>
+              <ForeColor>Black</ForeColor>
+              <Guid>6d7c1005a1784de5bc39e94d4787bd0b</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Name>BarCode1</Name>
+              <Page isRef="3" />
+              <Parent isRef="4" />
+              <Printable>False</Printable>
+              <VertAlignment>Center</VertAlignment>
+            </BarCode1>
+            <StartPointPrimitive1 Ref="14" type="Stimulsoft.Report.Components.StiStartPointPrimitive" isKey="true">
+              <ClientRectangle>0.8,0.6,0,0</ClientRectangle>
+              <Name>StartPointPrimitive1</Name>
+              <Page isRef="3" />
+              <Parent isRef="4" />
+              <ReferenceToGuid>afee117974b141ef8c38842c5c7995c6</ReferenceToGuid>
+            </StartPointPrimitive1>
+            <EndPointPrimitive1 Ref="15" type="Stimulsoft.Report.Components.StiEndPointPrimitive" isKey="true">
+              <ClientRectangle>11,15.2,0,0</ClientRectangle>
+              <Name>EndPointPrimitive1</Name>
+              <Page isRef="3" />
+              <Parent isRef="4" />
+              <ReferenceToGuid>afee117974b141ef8c38842c5c7995c6</ReferenceToGuid>
+            </EndPointPrimitive1>
+            <StartPointPrimitive2 Ref="16" type="Stimulsoft.Report.Components.StiStartPointPrimitive" isKey="true">
+              <ClientRectangle>0.8,14.2,0,0</ClientRectangle>
+              <Name>StartPointPrimitive2</Name>
+              <Page isRef="3" />
+              <Parent isRef="4" />
+              <ReferenceToGuid>52318d01b63b40419b5e082e52a8f023</ReferenceToGuid>
+            </StartPointPrimitive2>
+            <EndPointPrimitive2 Ref="17" type="Stimulsoft.Report.Components.StiEndPointPrimitive" isKey="true">
+              <ClientRectangle>11,15.2,0,0</ClientRectangle>
+              <Name>EndPointPrimitive2</Name>
+              <Page isRef="3" />
+              <Parent isRef="4" />
+              <ReferenceToGuid>52318d01b63b40419b5e082e52a8f023</ReferenceToGuid>
+            </EndPointPrimitive2>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>PageHeaderBand1</Name>
+          <Page isRef="3" />
+          <Parent isRef="3" />
+        </PageHeaderBand1>
+        <RoundedRectanglePrimitive1 Ref="18" type="Stimulsoft.Report.Components.StiRoundedRectanglePrimitive" isKey="true">
+          <ClientRectangle>0.8,1,10.2,14.6</ClientRectangle>
+          <Color>OrangeRed</Color>
+          <Guid>afee117974b141ef8c38842c5c7995c6</Guid>
+          <Name>RoundedRectanglePrimitive1</Name>
+          <Page isRef="3" />
+          <Parent isRef="3" />
+          <Round>0.2</Round>
+          <Size>2</Size>
+        </RoundedRectanglePrimitive1>
+        <RoundedRectanglePrimitive2 Ref="19" type="Stimulsoft.Report.Components.StiRoundedRectanglePrimitive" isKey="true">
+          <ClientRectangle>0.8,14.6,10.2,1</ClientRectangle>
+          <Color>OrangeRed</Color>
+          <Guid>52318d01b63b40419b5e082e52a8f023</Guid>
+          <Name>RoundedRectanglePrimitive2</Name>
+          <Page isRef="3" />
+          <Parent isRef="3" />
+          <Round>0.5</Round>
+          <Size>2</Size>
+        </RoundedRectanglePrimitive2>
+      </Components>
+      <Conditions isList="true" count="0" />
+      <Guid>5b1327cdafb5435890f26ced270690b8</Guid>
+      <Margins>1.2,0.203,1.2,1.2</Margins>
+      <Name>Page1</Name>
+      <Orientation>Landscape</Orientation>
+      <PageHeight>21</PageHeight>
+      <PageWidth>29.7</PageWidth>
+      <Report isRef="0" />
+      <Watermark Ref="20" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
+        <Font>Arial,100</Font>
+        <TextBrush>[50:0:0:0]</TextBrush>
+      </Watermark>
+    </Page1>
+  </Pages>
+  <PreviewSettings>268435455</PreviewSettings>
+  <PrinterSettings Ref="21" type="Stimulsoft.Report.Print.StiPrinterSettings" isKey="true" />
+  <ReferencedAssemblies isList="true" count="8">
+    <value>System.Dll</value>
+    <value>System.Drawing.Dll</value>
+    <value>System.Windows.Forms.Dll</value>
+    <value>System.Data.Dll</value>
+    <value>System.Xml.Dll</value>
+    <value>Stimulsoft.Controls.Dll</value>
+    <value>Stimulsoft.Base.Dll</value>
+    <value>Stimulsoft.Report.Dll</value>
+  </ReferencedAssemblies>
+  <ReportAlias>Report</ReportAlias>
+  <ReportChanged>12/2/2024 2:58:49 PM</ReportChanged>
+  <ReportCreated>9/23/2024 4:36:24 PM</ReportCreated>
+  <ReportFile>C:\Users\LEGION\Source\Repos\SoftwareINVERAGRO-Personaltools\Software_INVERAGRO\Formularios\bin\Debug\Reportes\Rpt_Fotocheck.mrt</ReportFile>
+  <ReportGuid>f62db7491ed649b9b27db88edec5b240</ReportGuid>
+  <ReportName>Report</ReportName>
+  <ReportUnit>Centimeters</ReportUnit>
+  <ReportVersion>2016.1.0</ReportVersion>
+  <Script>using System;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Data;
+using Stimulsoft.Controls;
+using Stimulsoft.Base.Drawing;
+using Stimulsoft.Report;
+using Stimulsoft.Report.Dialogs;
+using Stimulsoft.Report.Components;
+
+namespace Reports
+{
+    public class Report : Stimulsoft.Report.StiReport
+    {
+        public Report()        {
+            this.InitializeComponent();
+        }
+
+        #region StiReport Designer generated code - do not modify
+		#endregion StiReport Designer generated code - do not modify
+    }
+}
+</Script>
+  <ScriptLanguage>CSharp</ScriptLanguage>
+  <Styles isList="true" count="0" />
+</StiSerializer>

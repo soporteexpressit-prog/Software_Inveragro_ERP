@@ -1,0 +1,1270 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<StiSerializer version="1.02" type="Net" application="StiReport">
+  <Dictionary Ref="1" type="Dictionary" isKey="true">
+    <BusinessObjects isList="true" count="0" />
+    <Databases isList="true" count="0" />
+    <DataSources isList="true" count="2">
+      <Table Ref="2" type="DataTableSource" isKey="true">
+        <Alias>Table</Alias>
+        <Columns isList="true" count="9">
+          <value>Código,System.Int32</value>
+          <value>Fecha_x0020_de_x0020_Capacitación,System.Nullable`1[System.DateTime]</value>
+          <value>Capacitador,System.String</value>
+          <value>Temario,System.String</value>
+          <value>Pertenece_x0020_al_x0020_Tema,System.String</value>
+          <value>Tipo_x0020_de_x0020_Curso,System.String</value>
+          <value>Área_x0020_Capacitadora,System.String</value>
+          <value>Responsable,System.String</value>
+          <value>archivofirma,System.Byte[]</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>Table</Name>
+        <NameInSource>NewDataSet.Table</NameInSource>
+      </Table>
+      <Table1 Ref="3" type="DataTableSource" isKey="true">
+        <Alias>Table1</Alias>
+        <Columns isList="true" count="5">
+          <value>Código,System.Int32</value>
+          <value>N_x00B0__x0020_de_x0020_Documento,System.String</value>
+          <value>Participante,System.String</value>
+          <value>firmaparticipante,System.Byte[]</value>
+          <value>indice,System.Int64</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>Table1</Name>
+        <NameInSource>NewDataSet.Table1</NameInSource>
+      </Table1>
+    </DataSources>
+    <Relations isList="true" count="0" />
+    <Report isRef="0" />
+    <Variables isList="true" count="0" />
+  </Dictionary>
+  <EngineVersion>EngineV2</EngineVersion>
+  <GlobalizationStrings isList="true" count="0" />
+  <MetaTags isList="true" count="0" />
+  <Pages isList="true" count="1">
+    <Page1 Ref="4" type="Page" isKey="true">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Components isList="true" count="4">
+        <PageHeaderBand1 Ref="5" type="PageHeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,0.4,20,7.2</ClientRectangle>
+          <Components isList="true" count="50">
+            <Text26 Ref="6" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>White</Brush>
+              <ClientRectangle>4.2,0,15.8,1</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9,Bold</Font>
+              <Guid>acc425d3587949fdaa3fe091a2da88c5</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text26</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>REGISTRO DE INDUCCIÓN, CAPACITACIÓN, ENTRENAMIENTO, SIMULACROS DE EMERGENCIA 
+Y CHARLA DIARIA SST</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text26>
+            <Image1 Ref="7" type="Image" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0,4.2,1</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <File>C:\Users\LENOVO\Downloads\inveragro.png</File>
+              <Guid>fadfd0d0311f49fda6de782c6a967558</Guid>
+              <Image>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</Image>
+              <Margins>0,0,0,0</Margins>
+              <Name>Image1</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Stretch>True</Stretch>
+            </Image1>
+            <Text1 Ref="8" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[216:216:216]</Brush>
+              <ClientRectangle>0,1,20,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,6,Bold</Font>
+              <Guid>d5a6dfe4bcc94a7baa7a111237312bba</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text1</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>I. DATOS DEL EMPLEADOR PRINCIPAL</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text1>
+            <Text2 Ref="9" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>White</Brush>
+              <ClientRectangle>0,1.4,3.2,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,6,Bold</Font>
+              <Guid>ad11296db36841e7865af67d42bfd613</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text2</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>RAZON SOCIAL O 
+DENOMINACIÓN SOCIAL </Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text2>
+            <Text4 Ref="10" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>White</Brush>
+              <ClientRectangle>3.2,1.4,3.2,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,6,Bold</Font>
+              <Guid>ff3bab6cc8ea4edd84c252e66be15a67</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text4</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>RUC</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text4>
+            <Text5 Ref="11" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>White</Brush>
+              <ClientRectangle>6.4,1.4,6.4,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,6,Bold</Font>
+              <Guid>d11d5a07bd084f95a5227180a7e0c263</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text5</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>DOMICILIO
+(Dirección, distrito, departamento, provincia)</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text5>
+            <Text6 Ref="12" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>White</Brush>
+              <ClientRectangle>12.8,1.4,3.4,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,6,Bold</Font>
+              <Guid>c4c03cde0b8844d5bef613ea1580c8fb</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text6</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>TIPO DE ACTIVIDAD 
+ECONÓMICA</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text6>
+            <Text7 Ref="13" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>White</Brush>
+              <ClientRectangle>16.2,1.4,3.8,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,6,Bold</Font>
+              <Guid>75254a17d6194429aabf25168c04bf9f</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text7</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>NÚMERO DE 
+TRABAJADORES EN EL 
+CENTRO LABORAL</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text7>
+            <Text8 Ref="14" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>White</Brush>
+              <ClientRectangle>0,2.2,3.2,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,6,Bold</Font>
+              <Guid>dd5e09c6cd91475586b2f83f6a7c170b</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text8</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>INVERAGRO S.A.C</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text8>
+            <Text9 Ref="15" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>White</Brush>
+              <ClientRectangle>3.2,2.2,3.2,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,6,Bold</Font>
+              <Guid>f0ac088647bf496f85a62d097d69e9eb</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text9</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>20479862738</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text9>
+            <Text10 Ref="16" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>White</Brush>
+              <ClientRectangle>6.4,2.2,6.4,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,6,Bold</Font>
+              <Guid>6fb1dcec28544d8f97b033cfee50f7fe</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text10</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>CAR. FERNANDO BELAUNDE TERRY S/N BARRIO EL EDEN 
+JAZAN-BONGARA-AMAZONAS</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text10>
+            <Text11 Ref="17" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>White</Brush>
+              <ClientRectangle>12.8,2.2,3.4,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,6,Bold</Font>
+              <Guid>46ed9e76b5c74cf1ac11c125750c9119</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text11</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>AGROPECUARIA</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text11>
+            <Text12 Ref="18" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>White</Brush>
+              <ClientRectangle>16.2,2.2,3.8,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,6,Bold</Font>
+              <Guid>a5a0536532b94aec8d9d83e843da20a8</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text12</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text12>
+            <Text13 Ref="19" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[216:216:216]</Brush>
+              <ClientRectangle>0,3,20,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,6,Bold</Font>
+              <Guid>e47fa6656daf4b7ca9b21ea87692e130</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text13</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>II. MARCA CON UNA (X)</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text13>
+            <Text14 Ref="20" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>White</Brush>
+              <ClientRectangle>0,3.4,4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,6,Bold</Font>
+              <Guid>47f1995a2ffd46cfa251ba94f419de2d</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text14</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>INDUCCIÓN</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text14>
+            <Text15 Ref="21" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>White</Brush>
+              <ClientRectangle>4,3.4,4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,6,Bold</Font>
+              <Guid>1fc6720703e347dca8ee5089d32eb261</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text15</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>CAPACITACIÓN</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text15>
+            <Text16 Ref="22" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>White</Brush>
+              <ClientRectangle>8,3.4,4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,6,Bold</Font>
+              <Guid>5cfd1fe9399a4a33a2df5be7ac5af1c6</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text16</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>ENTRENAMIENTO</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text16>
+            <Text17 Ref="23" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>White</Brush>
+              <ClientRectangle>12,3.4,4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,6,Bold</Font>
+              <Guid>82ea1c723cac410e9f71ef9e3977fc15</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text17</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>SIMULACRO DE EMERGENCIA</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text17>
+            <Text18 Ref="24" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>White</Brush>
+              <ClientRectangle>16,3.4,4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,6,Bold</Font>
+              <Guid>db0143e714eb468a92fef9b535ede418</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text18</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>CHARLA DIARIA</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text18>
+            <Text23 Ref="25" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>White</Brush>
+              <ClientRectangle>0,3.8,4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,6,Bold</Font>
+              <Guid>e0c2a9135649418682bf9e08cdfa535d</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text23</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text23>
+            <Text24 Ref="26" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>White</Brush>
+              <ClientRectangle>4,3.8,4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,6,Bold</Font>
+              <Guid>34a801044c6740df9f8da29c46a35daa</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text24</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text24>
+            <Text25 Ref="27" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>White</Brush>
+              <ClientRectangle>8,3.8,4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,6,Bold</Font>
+              <Guid>b32c85a50f43475eb45585b0062c508e</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text25</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text25>
+            <Text27 Ref="28" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>White</Brush>
+              <ClientRectangle>12,3.8,4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,6,Bold</Font>
+              <Guid>47f55c049e104d0892e37795a3a9f3e9</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text27</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text27>
+            <Text28 Ref="29" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>White</Brush>
+              <ClientRectangle>16,3.8,4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,6,Bold</Font>
+              <Guid>08390dc800ab4c7eb08895142e059a45</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text28</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text28>
+            <Text29 Ref="30" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>White</Brush>
+              <ClientRectangle>0,4.2,4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,6,Bold</Font>
+              <Guid>684e99873ee04ecbba8a9c5741b3412d</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text29</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>ÁREA CAPACITADORA</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text29>
+            <Text30 Ref="31" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>White</Brush>
+              <ClientRectangle>0,4.6,4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,6,Bold</Font>
+              <Guid>cc4b474ae1c44de996cc9bce63ac7d99</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text30</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>TIPO DE CURSO</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text30>
+            <Text31 Ref="32" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>White</Brush>
+              <ClientRectangle>0,5,4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,6,Bold</Font>
+              <Guid>607a9962952a4e71a1aef5543476b71f</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text31</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>TEMA</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text31>
+            <Text32 Ref="33" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>White</Brush>
+              <ClientRectangle>0,5.4,4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,6,Bold</Font>
+              <Guid>e3520dfb09df45f1aab70589b097bde0</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text32</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>TEMARIO</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text32>
+            <Text33 Ref="34" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>White</Brush>
+              <ClientRectangle>0,5.8,4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,6,Bold</Font>
+              <Guid>3b221948752444ad993334ff7bab4812</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text33</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>CAPACITADOR</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text33>
+            <Text34 Ref="35" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>White</Brush>
+              <ClientRectangle>4,4.2,16,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,6,Bold</Font>
+              <Guid>dc1e6b5297534c1b850c5881a29f07ea</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text34</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text34>
+            <Text35 Ref="36" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>White</Brush>
+              <ClientRectangle>4,4.6,16,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,6,Bold</Font>
+              <Guid>e20bfe1b7551417781f8df0edfe4a262</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text35</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text35>
+            <Text36 Ref="37" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>White</Brush>
+              <ClientRectangle>4,5,16,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,6,Bold</Font>
+              <Guid>11c7f722cec74238bef1f48ce37225e8</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text36</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text36>
+            <Text37 Ref="38" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>White</Brush>
+              <ClientRectangle>4,5.4,16,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,6,Bold</Font>
+              <Guid>d752061ed61f4c27a3830596ac2b6e40</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text37</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text37>
+            <Text38 Ref="39" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>White</Brush>
+              <ClientRectangle>4,5.8,16,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,6,Bold</Font>
+              <Guid>68fff0aa13a14feeadd776fea021cbfb</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text38</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text38>
+            <Text39 Ref="40" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>White</Brush>
+              <ClientRectangle>0,6.2,4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,6,Bold</Font>
+              <Guid>1a1b255310d54cf88472798b18b9b549</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text39</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>DURACIÓN</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text39>
+            <Text40 Ref="41" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>White</Brush>
+              <ClientRectangle>12,6.2,4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,6,Bold</Font>
+              <Guid>617da08c234e4c96945b784f00a95c77</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text40</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>FECHA</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text40>
+            <DataTable_Temario Ref="42" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>4.2,5.4,15.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataTable_Temario</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>{Table.Temario}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </DataTable_Temario>
+            <DataTable_Capacitador Ref="43" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>4.2,5.8,15.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataTable_Capacitador</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>{Table.Capacitador}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </DataTable_Capacitador>
+            <Text41 Ref="44" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>White</Brush>
+              <ClientRectangle>4,6.2,8.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,6,Bold</Font>
+              <Guid>305b9435d8c14c2b82898133bc195028</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text41</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text41>
+            <Text42 Ref="45" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>White</Brush>
+              <ClientRectangle>16,6.2,4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,6,Bold</Font>
+              <Guid>f5aa605a593046fba7be15453d074533</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text42</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text42>
+            <DataTable_Fecha_de_Capacitación Ref="46" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>16,6.2,4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataTable_Fecha_de_Capacitación</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>{Table.Fecha_de_Capacitación}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="47" type="DateFormat" isKey="true" />
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </DataTable_Fecha_de_Capacitación>
+            <DataTable_Pertenece_al_Tema Ref="48" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>4.2,5,15.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataTable_Pertenece_al_Tema</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>{Table.Pertenece_al_Tema}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </DataTable_Pertenece_al_Tema>
+            <DataTable_Tipo_de_Curso Ref="49" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>4.2,4.6,15.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataTable_Tipo_de_Curso</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>{Table.Tipo_de_Curso}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </DataTable_Tipo_de_Curso>
+            <DataTable_Área_Capacitadora Ref="50" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>4.2,4.2,15.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataTable_Área_Capacitadora</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>{Table.Área_Capacitadora}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </DataTable_Área_Capacitadora>
+            <Text19 Ref="51" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[242:242:242]</Brush>
+              <ClientRectangle>0,6.6,0.8,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,6,Bold</Font>
+              <Guid>a7b484a33f1c487c9da9eef67c81d7bb</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text19</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>N°</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text19>
+            <Text20 Ref="52" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[242:242:242]</Brush>
+              <ClientRectangle>0.8,6.6,8,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,6,Bold</Font>
+              <Guid>9c25b1905b4043078f22a7f5cb853fdf</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text20</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>NOMBRES Y APELLIDOS</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text20>
+            <Text21 Ref="53" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[242:242:242]</Brush>
+              <ClientRectangle>8.8,6.6,2.8,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,6,Bold</Font>
+              <Guid>51db2823bca04495894a3d44b2d67138</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text21</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>N° DNI</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text21>
+            <Text22 Ref="54" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[242:242:242]</Brush>
+              <ClientRectangle>11.6,6.6,2.8,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,6,Bold</Font>
+              <Guid>ac4bae2df329447a83ee3d467d22458c</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text22</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>ÁREA</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text22>
+            <Text43 Ref="55" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[242:242:242]</Brush>
+              <ClientRectangle>14.4,6.6,2.8,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,6,Bold</Font>
+              <Guid>075e39d970e9443baf5f8d7a84e4cddd</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text43</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>FIRMA</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text43>
+            <Text44 Ref="56" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[242:242:242]</Brush>
+              <ClientRectangle>17.2,6.6,2.8,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,6,Bold</Font>
+              <Guid>f3dfc06d5ec84a0a9e1ea86668eb7afb</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text44</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>OBSERVACIONES</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text44>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>PageHeaderBand1</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+        </PageHeaderBand1>
+        <PageFooterBand1 Ref="57" type="PageFooterBand" isKey="true">
+          <Border>Top;Black;1;Solid;False;4;Black</Border>
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,25.7,20,2</ClientRectangle>
+          <Components isList="true" count="2">
+            <Text3 Ref="58" type="Text" isKey="true">
+              <Brush>White</Brush>
+              <ClientRectangle>15.4,0.7,3.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10,Bold</Font>
+              <Guid>cc02dcf2390547aa8a19df73c409bc8f</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text3</Name>
+              <Page isRef="4" />
+              <Parent isRef="57" />
+              <Text>{PageNofM}</Text>
+              <TextBrush>LightGray</TextBrush>
+              <Type>Expression</Type>
+            </Text3>
+            <Text56 Ref="59" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>2,0.3,12.8,1.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8.25,Bold,Point,False,0</Font>
+              <Guid>44d02d3c2536463cb18fe9745679f8cb</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text56</Name>
+              <Page isRef="4" />
+              <Parent isRef="57" />
+              <Text>INVERAGRO SAN MARTIN DE PORRAS S.A.C
+CAR. FERNANDO BELAUNDE TERRY NRO. 0 INT. A BARRIO EL EDEN (KM. 296+ 400)
+RUC: 20479862738
+AMAZONAS - BONGARA - JAZAN
+</Text>
+              <TextBrush>LightGray</TextBrush>
+              <Type>Expression</Type>
+            </Text56>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Guid>1c9e55f220c94dd39380814b4426a0be</Guid>
+          <Name>PageFooterBand1</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+        </PageFooterBand1>
+        <DataTable1 Ref="60" type="DataBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid isNull="true" />
+          <ClientRectangle>0,8.4,20,0.8</ClientRectangle>
+          <Components isList="true" count="7">
+            <DataTable1_Código Ref="61" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>0,0,0.8,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataTable1_Código</Name>
+              <Page isRef="4" />
+              <Parent isRef="60" />
+              <Text>{Table1.indice}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </DataTable1_Código>
+            <DataTable1_N__de_Documento Ref="62" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>8.8,0,2.8,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataTable1_N__de_Documento</Name>
+              <Page isRef="4" />
+              <Parent isRef="60" />
+              <Text>{Table1.N__de_Documento}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </DataTable1_N__de_Documento>
+            <DataTable1_Participante Ref="63" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>0.8,0,8,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataTable1_Participante</Name>
+              <Page isRef="4" />
+              <Parent isRef="60" />
+              <Text>{Table1.Participante}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </DataTable1_Participante>
+            <Text45 Ref="64" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>White</Brush>
+              <ClientRectangle>11.6,0,2.8,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,6,Bold</Font>
+              <Guid>b2cf8cfa98ae4c6e890c9035c813f6c4</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text45</Name>
+              <Page isRef="4" />
+              <Parent isRef="60" />
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text45>
+            <Text46 Ref="65" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>White</Brush>
+              <ClientRectangle>14.4,0,2.8,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,6,Bold</Font>
+              <Guid>eeba42ef06dc4ffeb0b5049a764d4ecd</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text46</Name>
+              <Page isRef="4" />
+              <Parent isRef="60" />
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text46>
+            <Text47 Ref="66" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>White</Brush>
+              <ClientRectangle>17.2,0,2.8,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,6,Bold</Font>
+              <Guid>beb5c2ac334b4a13b88d148ec4837ee8</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text47</Name>
+              <Page isRef="4" />
+              <Parent isRef="60" />
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text47>
+            <Image3 Ref="67" type="Image" isKey="true">
+              <Brush>White</Brush>
+              <ClientRectangle>14.4,0.01,2.8,0.7</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <DataColumn>Table1.firmaparticipante</DataColumn>
+              <Guid>537dd37ebdaf40e3a03dbd89122db611</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Image3</Name>
+              <Page isRef="4" />
+              <Parent isRef="60" />
+              <Stretch>True</Stretch>
+            </Image3>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataSourceName>Table1</DataSourceName>
+          <Filters isList="true" count="0" />
+          <Name>DataTable1</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+          <Sort isList="true" count="0" />
+        </DataTable1>
+        <FooterBand1 Ref="68" type="FooterBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,10,20,1.2</ClientRectangle>
+          <Components isList="true" count="9">
+            <Text48 Ref="69" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[216:216:216]</Brush>
+              <ClientRectangle>0,0,20,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,6,Bold</Font>
+              <Guid>1a482f6968654b508a2064d55f390e2e</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text48</Name>
+              <Page isRef="4" />
+              <Parent isRef="68" />
+              <Text>III. RESPONSABLE DEL REGISTRO</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text48>
+            <Text49 Ref="70" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>White</Brush>
+              <ClientRectangle>0,0.4,4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,6,Bold</Font>
+              <Guid>741df1c9fc214b53950809e0f42735e8</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text49</Name>
+              <Page isRef="4" />
+              <Parent isRef="68" />
+              <Text>NOMBRE</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text49>
+            <Text50 Ref="71" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>White</Brush>
+              <ClientRectangle>0,1,4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,6,Bold</Font>
+              <Guid>d0ae056483694c2fabea44feb895fe8a</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text50</Name>
+              <Page isRef="4" />
+              <Parent isRef="68" />
+              <Text>CARGO</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text50>
+            <Text51 Ref="72" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>White</Brush>
+              <ClientRectangle>4,0.4,7.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,6,Bold</Font>
+              <Guid>ff51d425220f432aa8be5aede23babb7</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text51</Name>
+              <Page isRef="4" />
+              <Parent isRef="68" />
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text51>
+            <Text52 Ref="73" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>White</Brush>
+              <ClientRectangle>4,1,7.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,6,Bold</Font>
+              <Guid>a6b694ad79c044a4a9e9bf5c6864ddd6</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text52</Name>
+              <Page isRef="4" />
+              <Parent isRef="68" />
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text52>
+            <Text53 Ref="74" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>White</Brush>
+              <ClientRectangle>11.6,0.4,2.8,1.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,6,Bold</Font>
+              <Guid>f9e9c1150a1e45889f86bbadd440997c</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text53</Name>
+              <Page isRef="4" />
+              <Parent isRef="68" />
+              <Text>FIRMA</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text53>
+            <Text54 Ref="75" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>White</Brush>
+              <ClientRectangle>14.4,0.4,5.6,1.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,6,Bold</Font>
+              <Guid>c7d3e1e4caed4d6993b363c5c24b8ee8</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text54</Name>
+              <Page isRef="4" />
+              <Parent isRef="68" />
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text54>
+            <Text55 Ref="76" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>White</Brush>
+              <ClientRectangle>4,0.4,7.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,6,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text55</Name>
+              <Page isRef="4" />
+              <Parent isRef="68" />
+              <Text>{Table.Responsable}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text55>
+            <Image2 Ref="77" type="Image" isKey="true">
+              <Brush>White</Brush>
+              <ClientRectangle>15.4,0.41,3.2,1</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <DataColumn>Table.archivofirma</DataColumn>
+              <Margins>0,0,0,0</Margins>
+              <Name>Image2</Name>
+              <Page isRef="4" />
+              <Parent isRef="68" />
+              <Stretch>True</Stretch>
+            </Image2>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>FooterBand1</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+        </FooterBand1>
+      </Components>
+      <Conditions isList="true" count="0" />
+      <Guid>b59ec99c583f4f558bd73997e0ad9c0c</Guid>
+      <Margins>0.5,0.5,1,1</Margins>
+      <Name>Page1</Name>
+      <PageHeight>29.7</PageHeight>
+      <PageWidth>21</PageWidth>
+      <Report isRef="0" />
+      <Watermark Ref="78" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
+        <Font>Arial,100</Font>
+        <TextBrush>[50:0:0:0]</TextBrush>
+      </Watermark>
+    </Page1>
+  </Pages>
+  <PreviewSettings>268435455</PreviewSettings>
+  <PrinterSettings Ref="79" type="Stimulsoft.Report.Print.StiPrinterSettings" isKey="true" />
+  <ReferencedAssemblies isList="true" count="8">
+    <value>System.Dll</value>
+    <value>System.Drawing.Dll</value>
+    <value>System.Windows.Forms.Dll</value>
+    <value>System.Data.Dll</value>
+    <value>System.Xml.Dll</value>
+    <value>Stimulsoft.Controls.Dll</value>
+    <value>Stimulsoft.Base.Dll</value>
+    <value>Stimulsoft.Report.Dll</value>
+  </ReferencedAssemblies>
+  <ReportAlias>Report</ReportAlias>
+  <ReportChanged>10/16/2024 3:20:21 PM</ReportChanged>
+  <ReportCreated>3/1/2019 10:36:14 AM</ReportCreated>
+  <ReportFile>C:\Users\djjhi\OneDrive\Documentos\Proyecto practicas\Proyecto\Software_INVERAGRO\Formularios\bin\Debug\Reportes\Rpt_ParticipantesCapacitacion.mrt</ReportFile>
+  <ReportGuid>2d7c3f0cfb85452f94df2e4df49515d2</ReportGuid>
+  <ReportName>Report</ReportName>
+  <ReportUnit>Centimeters</ReportUnit>
+  <ReportVersion>2016.1.0</ReportVersion>
+  <Script>using System;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Data;
+using Stimulsoft.Controls;
+using Stimulsoft.Base.Drawing;
+using Stimulsoft.Report;
+using Stimulsoft.Report.Dialogs;
+using Stimulsoft.Report.Components;
+
+namespace Reports
+{
+    public class Report : Stimulsoft.Report.StiReport
+    {
+        public Report()        {
+            this.InitializeComponent();
+        }
+
+        #region StiReport Designer generated code - do not modify
+		#endregion StiReport Designer generated code - do not modify
+    }
+}
+</Script>
+  <ScriptLanguage>CSharp</ScriptLanguage>
+  <Styles isList="true" count="0" />
+</StiSerializer>
