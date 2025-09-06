@@ -11,6 +11,7 @@ Public Class FrmControlJaula
             ListarPlanteles()
             clsBasicas.Formato_Tablas_Grid(dtgListado)
             Ptbx_Cargando.Visible = True
+            CmbEstado.SelectedIndex = 0
             Consultar()
         Catch ex As Exception
             clsBasicas.controlException(Name, ex)
@@ -33,41 +34,54 @@ Public Class FrmControlJaula
         End With
     End Sub
 
+    Private Sub BloquearControladores()
+        Ptbx_Cargando.Visible = True
+        GrupoFiltros.Enabled = False
+        ToolStrip1.Enabled = False
+    End Sub
+
+    Private Sub DesbloquearControladores()
+        Ptbx_Cargando.Visible = False
+        GrupoFiltros.Enabled = True
+        ToolStrip1.Enabled = True
+    End Sub
+
     Sub Consultar()
         If Not BackgroundWorker1.IsBusy Then
-            Ptbx_Cargando.Visible = True
-            ToolStrip1.Enabled = False
-            BackgroundWorker1.RunWorkerAsync()
+            BloquearControladores()
+
+            Dim obj As New coJaulaCorral With {
+                .Descripcion = txtDescripcion.Text,
+                .IdUbicacion = cmbUbicacion.Value,
+                .Tipo = "JAULA",
+                .Estado = "ACTIVO"
+            }
+
+            BackgroundWorker1.RunWorkerAsync(obj)
         End If
     End Sub
 
     Private Sub BackgroundWorker1_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorker1.DoWork
         Try
-            Dim obj As New coJaulaCorral With {
-                .Descripcion = txtDescripcion.Text,
-                .IdUbicacion = cmbUbicacion.Value,
-                .Tipo = "JAULA"
-            }
-
+            Dim obj As coJaulaCorral = CType(e.Argument, coJaulaCorral)
             tbtmp = cn.Cn_Consultar(obj).Copy
             tbtmp.TableName = "tmp"
             e.Result = tbtmp
-            tbtmp.Columns("Codigo").ColumnMapping = MappingType.Hidden
-            tbtmp.Columns("Dimensiones").ColumnMapping = MappingType.Hidden
-            tbtmp.Columns("densidadxCorral").ColumnMapping = MappingType.Hidden
         Catch ex As Exception
             e.Cancel = True
         End Try
     End Sub
 
     Private Sub BackgroundWorker1_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BackgroundWorker1.RunWorkerCompleted
-        Ptbx_Cargando.Visible = False
+        DesbloquearControladores()
         If e.Error IsNot Nothing OrElse e.Cancelled Then
             msj_advert("Error al Cargar los Datos")
         Else
             dtgListado.DataSource = CType(e.Result, DataTable)
+            dtgListado.DisplayLayout.Bands(0).Columns("Codigo").Hidden = True
+            dtgListado.DisplayLayout.Bands(0).Columns("Dimensiones").Hidden = True
+            dtgListado.DisplayLayout.Bands(0).Columns("densidadxCorral").Hidden = True
             Colorear()
-            ToolStrip1.Enabled = True
         End If
     End Sub
 
@@ -149,7 +163,7 @@ Public Class FrmControlJaula
         Consultar()
     End Sub
 
-    Private Sub BtnFiltro_Click(sender As Object, e As EventArgs) Handles BtnFiltro.Click
+    Private Sub BtnFiltro_Click(sender As Object, e As EventArgs) 
         Dim isFilterActive As Boolean = Not BtnFiltro.Checked
         BtnFiltro.Checked = isFilterActive
         clsBasicas.Filtrar_Tabla(dtgListado, isFilterActive)

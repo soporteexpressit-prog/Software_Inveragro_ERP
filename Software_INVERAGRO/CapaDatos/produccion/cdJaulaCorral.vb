@@ -46,6 +46,7 @@ Public Class cdJaulaCorral
             da.SelectCommand.Parameters.AddWithValue("@descripcion", obj.Descripcion)
             da.SelectCommand.Parameters.AddWithValue("@idUbicacion", obj.IdUbicacion)
             da.SelectCommand.Parameters.AddWithValue("@tipo", obj.Tipo)
+            da.SelectCommand.Parameters.AddWithValue("@estado", obj.Estado)
             da.Fill(dt)
         Catch ex As Exception
             Throw ex

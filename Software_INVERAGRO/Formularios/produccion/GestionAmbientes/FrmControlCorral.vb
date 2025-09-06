@@ -9,9 +9,9 @@ Public Class FrmControlCorral
 
     Private Sub FrmControlCorral_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
-            ListarPlanteles()
             clsBasicas.Formato_Tablas_Grid(dtgListado)
-            Ptbx_Cargando.Visible = True
+            CmbEstado.SelectedIndex = 0
+            ListarPlanteles()
             Consultar()
         Catch ex As Exception
             clsBasicas.controlException(Name, ex)
@@ -34,41 +34,53 @@ Public Class FrmControlCorral
         End With
     End Sub
 
+    Private Sub BloquearControladores()
+        Ptbx_Cargando.Visible = True
+        GrupoFiltros.Enabled = False
+        ToolStrip1.Enabled = False
+    End Sub
+
+    Private Sub DesbloquearControladores()
+        Ptbx_Cargando.Visible = False
+        GrupoFiltros.Enabled = True
+        ToolStrip1.Enabled = True
+    End Sub
+
     Sub Consultar()
         If Not BackgroundWorker1.IsBusy Then
-            Ptbx_Cargando.Visible = True
-            ToolStrip1.Enabled = False
-            BackgroundWorker1.RunWorkerAsync()
+            BloquearControladores()
+
+            Dim obj As New coJaulaCorral With {
+                .Descripcion = txtDescripcion.Text,
+                .IdUbicacion = cmbUbicacion.Value,
+                .Tipo = "CORRAL",
+                .Estado = CmbEstado.Text
+            }
+
+            BackgroundWorker1.RunWorkerAsync(obj)
         End If
     End Sub
 
     Private Sub BackgroundWorker1_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorker1.DoWork
         Try
-            Dim obj As New coJaulaCorral With {
-                .Descripcion = txtDescripcion.Text,
-                .IdUbicacion = cmbUbicacion.Value,
-                .Tipo = "CORRAL"
-            }
-
+            Dim obj As coJaulaCorral = CType(e.Argument, coJaulaCorral)
             tbtmp = cn.Cn_Consultar(obj).Copy
             tbtmp.TableName = "tmp"
             e.Result = tbtmp
-            tbtmp.Columns("Codigo").ColumnMapping = MappingType.Hidden
-            tbtmp.Columns("densidadxCorral").ColumnMapping = MappingType.Hidden
         Catch ex As Exception
             e.Cancel = True
         End Try
     End Sub
 
     Private Sub BackgroundWorker1_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BackgroundWorker1.RunWorkerCompleted
-        Ptbx_Cargando.Visible = False
+        DesbloquearControladores()
         If e.Error IsNot Nothing OrElse e.Cancelled Then
             msj_advert("Error al Cargar los Datos")
         Else
             dtgListado.DataSource = CType(e.Result, DataTable)
-            Colorear()
+            dtgListado.DisplayLayout.Bands(0).Columns("Codigo").Hidden = True
+            dtgListado.DisplayLayout.Bands(0).Columns("densidadxCorral").Hidden = True
             dtgListado.DisplayLayout.Bands(0).Columns("Sala").Hidden = True
-            ToolStrip1.Enabled = True
         End If
     End Sub
 
@@ -158,12 +170,6 @@ Public Class FrmControlCorral
         Catch ex As Exception
             clsBasicas.controlException(Name, ex)
         End Try
-    End Sub
-
-    Private Sub BtnFiltro_Click(sender As Object, e As EventArgs) Handles BtnFiltro.Click
-        Dim isFilterActive As Boolean = Not BtnFiltro.Checked
-        BtnFiltro.Checked = isFilterActive
-        clsBasicas.Filtrar_Tabla(dtgListado, isFilterActive)
     End Sub
 
     Private Sub dtgListado_InitializeLayout(sender As Object, e As UltraWinGrid.InitializeLayoutEventArgs) Handles dtgListado.InitializeLayout
