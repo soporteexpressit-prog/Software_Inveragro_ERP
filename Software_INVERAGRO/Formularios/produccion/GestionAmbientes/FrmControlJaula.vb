@@ -163,12 +163,6 @@ Public Class FrmControlJaula
         Consultar()
     End Sub
 
-    Private Sub BtnFiltro_Click(sender As Object, e As EventArgs) 
-        Dim isFilterActive As Boolean = Not BtnFiltro.Checked
-        BtnFiltro.Checked = isFilterActive
-        clsBasicas.Filtrar_Tabla(dtgListado, isFilterActive)
-    End Sub
-
     Private Sub dtgListado_InitializeLayout(sender As Object, e As UltraWinGrid.InitializeLayoutEventArgs) Handles dtgListado.InitializeLayout
         Try
             If (dtgListado.Rows.Count = 0) Then
