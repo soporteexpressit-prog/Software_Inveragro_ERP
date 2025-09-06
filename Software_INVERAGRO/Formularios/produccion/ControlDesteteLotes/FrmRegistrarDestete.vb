@@ -34,6 +34,20 @@ Public Class FrmRegistrarDestete
         TxtPesoPromCamada.ReadOnly = True
     End Sub
 
+    Private Sub BloquearControladores()
+        Ptbx_Cargando.Visible = True
+        CmbLotes.Enabled = False
+        GrupoOpciones.Enabled = False
+        ToolStrip1.Enabled = False
+    End Sub
+
+    Private Sub DesbloquearControladores()
+        Ptbx_Cargando.Visible = False
+        CmbLotes.Enabled = True
+        GrupoOpciones.Enabled = True
+        ToolStrip1.Enabled = True
+    End Sub
+
     Sub ListarLotes()
         Dim cn As New cnControlLoteDestete
         Dim obj As New coControlLoteDestete With {
@@ -67,12 +81,7 @@ Public Class FrmRegistrarDestete
 
     Sub Consultar()
         If Not BackgroundWorker1.IsBusy Then
-            Ptbx_Cargando.Visible = True
-            ToolStrip1.Enabled = False
-            BtnGuardarPesoCamada.Enabled = False
-            TxtPesoCamada.Enabled = False
-            CmbAnios.Enabled = False
-            TxtCondCorporal.Enabled = False
+            BloquearControladores()
             TxtCantidadCrias.Text = "0"
 
             Dim obj As New coControlLoteDestete With {
@@ -101,11 +110,7 @@ Public Class FrmRegistrarDestete
             msj_advert("Error al Cargar los Datos")
         Else
             dtgListado.DataSource = CType(e.Result, DataTable)
-            Ptbx_Cargando.Visible = False
-            ToolStrip1.Enabled = True
-            BtnGuardarPesoCamada.Enabled = True
-            TxtPesoCamada.Enabled = True
-            CmbAnios.Enabled = True
+            DesbloquearControladores()
             TxtCondCorporal.Enabled = True
             If dtgListado.Rows.Count > 1 Then
                 LblCodigoArete.Text = dtgListado.Rows(1).Cells("Arete").Value.ToString()
@@ -372,6 +377,7 @@ Public Class FrmRegistrarDestete
             Else
                 e.Layout.Bands(0).Summaries.Clear()
                 clsBasicas.Totales_Formato(dtgListado, e, 1)
+                clsBasicas.SumarTotales_Formato(dtgListado, e, 5)
             End If
         Catch ex As Exception
             clsBasicas.controlException(Name, ex)

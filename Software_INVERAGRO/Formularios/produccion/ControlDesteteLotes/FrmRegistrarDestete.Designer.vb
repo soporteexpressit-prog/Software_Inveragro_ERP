@@ -57,7 +57,7 @@ Partial Class FrmRegistrarDestete
         Me.CmbLotes = New Infragistics.Win.UltraWinGrid.UltraCombo()
         Me.CmbAnios = New System.Windows.Forms.ComboBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.GrupoOpciones = New System.Windows.Forms.GroupBox()
         Me.TxtCondCorporal = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -79,7 +79,7 @@ Partial Class FrmRegistrarDestete
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         Me.Panel2.SuspendLayout()
         CType(Me.CmbLotes, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox1.SuspendLayout()
+        Me.GrupoOpciones.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         CType(Me.Ptbx_Cargando, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dtgListado, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -96,7 +96,7 @@ Partial Class FrmRegistrarDestete
         Me.Panel2.Controls.Add(Me.CmbLotes)
         Me.Panel2.Controls.Add(Me.CmbAnios)
         Me.Panel2.Controls.Add(Me.Label2)
-        Me.Panel2.Controls.Add(Me.GroupBox1)
+        Me.Panel2.Controls.Add(Me.GrupoOpciones)
         Me.Panel2.Controls.Add(Me.Label1)
         Me.Panel2.Controls.Add(Me.TxtCantidadCrias)
         Me.Panel2.Controls.Add(Me.GroupBox3)
@@ -246,24 +246,24 @@ Partial Class FrmRegistrarDestete
         Me.Label2.TabIndex = 199
         Me.Label2.Text = "Año :"
         '
-        'GroupBox1
+        'GrupoOpciones
         '
-        Me.GroupBox1.Controls.Add(Me.TxtCondCorporal)
-        Me.GroupBox1.Controls.Add(Me.Label6)
-        Me.GroupBox1.Controls.Add(Me.Label3)
-        Me.GroupBox1.Controls.Add(Me.TxtPesoPromCamada)
-        Me.GroupBox1.Controls.Add(Me.LblCodigoArete)
-        Me.GroupBox1.Controls.Add(Me.BtnGuardarPesoCamada)
-        Me.GroupBox1.Controls.Add(Me.TxtPesoCamada)
-        Me.GroupBox1.Controls.Add(Me.LblPeso)
-        Me.GroupBox1.Controls.Add(Me.Label4)
-        Me.GroupBox1.Controls.Add(Me.DtpFechaDestete)
-        Me.GroupBox1.Location = New System.Drawing.Point(15, 170)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(1448, 179)
-        Me.GroupBox1.TabIndex = 198
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Información General del Destete"
+        Me.GrupoOpciones.Controls.Add(Me.TxtCondCorporal)
+        Me.GrupoOpciones.Controls.Add(Me.Label6)
+        Me.GrupoOpciones.Controls.Add(Me.Label3)
+        Me.GrupoOpciones.Controls.Add(Me.TxtPesoPromCamada)
+        Me.GrupoOpciones.Controls.Add(Me.LblCodigoArete)
+        Me.GrupoOpciones.Controls.Add(Me.BtnGuardarPesoCamada)
+        Me.GrupoOpciones.Controls.Add(Me.TxtPesoCamada)
+        Me.GrupoOpciones.Controls.Add(Me.LblPeso)
+        Me.GrupoOpciones.Controls.Add(Me.Label4)
+        Me.GrupoOpciones.Controls.Add(Me.DtpFechaDestete)
+        Me.GrupoOpciones.Location = New System.Drawing.Point(15, 170)
+        Me.GrupoOpciones.Name = "GrupoOpciones"
+        Me.GrupoOpciones.Size = New System.Drawing.Size(1448, 179)
+        Me.GrupoOpciones.TabIndex = 198
+        Me.GrupoOpciones.TabStop = False
+        Me.GrupoOpciones.Text = "Información General del Destete"
         '
         'TxtCondCorporal
         '
@@ -584,8 +584,8 @@ Partial Class FrmRegistrarDestete
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         CType(Me.CmbLotes, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
+        Me.GrupoOpciones.ResumeLayout(False)
+        Me.GrupoOpciones.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
         CType(Me.Ptbx_Cargando, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dtgListado, System.ComponentModel.ISupportInitialize).EndInit()
@@ -607,7 +607,7 @@ Partial Class FrmRegistrarDestete
     Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
     Friend WithEvents TxtCantidadCrias As TextBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents GrupoOpciones As GroupBox
     Friend WithEvents LblPeso As Label
     Friend WithEvents BtnGuardarPesoCamada As Button
     Friend WithEvents TxtPesoCamada As TextBox

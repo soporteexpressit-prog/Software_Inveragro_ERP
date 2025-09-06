@@ -171,6 +171,7 @@ Public Class FrmControlMaternidadDestete
             Else
                 e.Layout.Bands(0).Summaries.Clear()
                 clsBasicas.Totales_Formato(dtgListado, e, 1)
+                clsBasicas.SumarTotales_Formato(dtgListado, e, 13)
             End If
         Catch ex As Exception
             clsBasicas.controlException(Name, ex)
