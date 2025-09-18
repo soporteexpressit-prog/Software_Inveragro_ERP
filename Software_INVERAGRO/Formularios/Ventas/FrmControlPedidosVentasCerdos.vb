@@ -357,8 +357,7 @@ Public Class FrmControlPedidosVentasCerdos
             End If
 
             If (dtgListado.Rows.Count > 0) Then
-                If (activeRow.Cells(26).Value.ToString = "31") Then
-
+                If {"31", "45", "46", "47", "48"}.Contains(activeRow.Cells(26).Value.ToString) Then
                     If activeRow.Cells(19).Value.ToString() <> "PENDIENTE" Then
                         msj_advert("No se puede Anexar una Nueva Venta por Kilos porque el Pedido Seleccionado ya fue enviado a Facturación")
                         Return

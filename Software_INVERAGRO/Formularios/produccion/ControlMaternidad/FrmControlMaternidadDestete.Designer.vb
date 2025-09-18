@@ -95,9 +95,9 @@ Partial Class FrmControlMaternidadDestete
         Me.Panel2.Controls.Add(Me.ToolStrip1)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(2, 1, 2, 1)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(2386, 261)
+        Me.Panel2.Size = New System.Drawing.Size(1515, 170)
         Me.Panel2.TabIndex = 12
         '
         'BtnObjetivoPartos
@@ -106,11 +106,10 @@ Partial Class FrmControlMaternidadDestete
         Me.BtnObjetivoPartos.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnObjetivoPartos.Image = CType(resources.GetObject("BtnObjetivoPartos.Image"), System.Drawing.Image)
         Me.BtnObjetivoPartos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnObjetivoPartos.Location = New System.Drawing.Point(2052, 115)
-        Me.BtnObjetivoPartos.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.BtnObjetivoPartos.Location = New System.Drawing.Point(1368, 75)
         Me.BtnObjetivoPartos.Name = "BtnObjetivoPartos"
-        Me.BtnObjetivoPartos.Padding = New System.Windows.Forms.Padding(6, 0, 6, 0)
-        Me.BtnObjetivoPartos.Size = New System.Drawing.Size(217, 51)
+        Me.BtnObjetivoPartos.Padding = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.BtnObjetivoPartos.Size = New System.Drawing.Size(145, 33)
         Me.BtnObjetivoPartos.TabIndex = 242
         Me.BtnObjetivoPartos.Tag = "Muestra Motivos de Mortalidad más Frecuentes"
         Me.BtnObjetivoPartos.Text = "Objetivo Partos"
@@ -123,9 +122,10 @@ Partial Class FrmControlMaternidadDestete
         Me.Label6.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(233, Byte), Integer))
         Me.Label6.Font = New System.Drawing.Font("Verdana", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(49, Byte), Integer))
-        Me.Label6.Location = New System.Drawing.Point(25, 30)
+        Me.Label6.Location = New System.Drawing.Point(17, 20)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(677, 29)
+        Me.Label6.Size = New System.Drawing.Size(451, 18)
         Me.Label6.TabIndex = 128
         Me.Label6.Text = "CONTROL DE CERDAS EN ETAPA DE MATERNIDAD"
         '
@@ -136,9 +136,11 @@ Partial Class FrmControlMaternidadDestete
         Me.GrupoFiltros.Controls.Add(Me.LblArete)
         Me.GrupoFiltros.Controls.Add(Me.CmbUbicacion)
         Me.GrupoFiltros.Controls.Add(Me.Label3)
-        Me.GrupoFiltros.Location = New System.Drawing.Point(30, 84)
+        Me.GrupoFiltros.Location = New System.Drawing.Point(20, 55)
+        Me.GrupoFiltros.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GrupoFiltros.Name = "GrupoFiltros"
-        Me.GrupoFiltros.Size = New System.Drawing.Size(1061, 95)
+        Me.GrupoFiltros.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GrupoFiltros.Size = New System.Drawing.Size(707, 62)
         Me.GrupoFiltros.TabIndex = 176
         Me.GrupoFiltros.TabStop = False
         Me.GrupoFiltros.Text = "Filtro de Búsqueda"
@@ -149,11 +151,10 @@ Partial Class FrmControlMaternidadDestete
         Me.btnBuscar.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBuscar.Image = CType(resources.GetObject("btnBuscar.Image"), System.Drawing.Image)
         Me.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnBuscar.Location = New System.Drawing.Point(892, 19)
-        Me.btnBuscar.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btnBuscar.Location = New System.Drawing.Point(595, 12)
         Me.btnBuscar.Name = "btnBuscar"
-        Me.btnBuscar.Padding = New System.Windows.Forms.Padding(6, 0, 6, 0)
-        Me.btnBuscar.Size = New System.Drawing.Size(138, 63)
+        Me.btnBuscar.Padding = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.btnBuscar.Size = New System.Drawing.Size(92, 41)
         Me.btnBuscar.TabIndex = 217
         Me.btnBuscar.Text = "Buscar"
         Me.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -163,11 +164,10 @@ Partial Class FrmControlMaternidadDestete
         '
         Me.TxtCodArete.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxtCodArete.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtCodArete.Location = New System.Drawing.Point(593, 36)
-        Me.TxtCodArete.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.TxtCodArete.Location = New System.Drawing.Point(395, 23)
         Me.TxtCodArete.MaxLength = 20
         Me.TxtCodArete.Name = "TxtCodArete"
-        Me.TxtCodArete.Size = New System.Drawing.Size(179, 28)
+        Me.TxtCodArete.Size = New System.Drawing.Size(121, 21)
         Me.TxtCodArete.TabIndex = 216
         Me.TxtCodArete.TabStop = False
         '
@@ -177,10 +177,10 @@ Partial Class FrmControlMaternidadDestete
         Me.LblArete.BackColor = System.Drawing.Color.Transparent
         Me.LblArete.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblArete.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.LblArete.Location = New System.Drawing.Point(505, 39)
-        Me.LblArete.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.LblArete.Location = New System.Drawing.Point(337, 25)
+        Me.LblArete.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblArete.Name = "LblArete"
-        Me.LblArete.Size = New System.Drawing.Size(78, 22)
+        Me.LblArete.Size = New System.Drawing.Size(52, 14)
         Me.LblArete.TabIndex = 215
         Me.LblArete.Text = "Arete :"
         '
@@ -241,10 +241,9 @@ Partial Class FrmControlMaternidadDestete
         Me.CmbUbicacion.DisplayLayout.ScrollStyle = Infragistics.Win.UltraWinGrid.ScrollStyle.Immediate
         Me.CmbUbicacion.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy
         Me.CmbUbicacion.DropDownStyle = Infragistics.Win.UltraWinGrid.UltraComboStyle.DropDownList
-        Me.CmbUbicacion.Location = New System.Drawing.Point(139, 36)
-        Me.CmbUbicacion.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.CmbUbicacion.Location = New System.Drawing.Point(93, 23)
         Me.CmbUbicacion.Name = "CmbUbicacion"
-        Me.CmbUbicacion.Size = New System.Drawing.Size(267, 29)
+        Me.CmbUbicacion.Size = New System.Drawing.Size(178, 22)
         Me.CmbUbicacion.TabIndex = 172
         '
         'Label3
@@ -253,10 +252,10 @@ Partial Class FrmControlMaternidadDestete
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(35, 39)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label3.Location = New System.Drawing.Point(23, 25)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(93, 22)
+        Me.Label3.Size = New System.Drawing.Size(62, 14)
         Me.Label3.TabIndex = 173
         Me.Label3.Text = "Plantel :"
         '
@@ -267,11 +266,11 @@ Partial Class FrmControlMaternidadDestete
         Me.ToolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
         Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnRegistrarParto, Me.BtnMonitoreomaternidadpro, Me.BtnMortalidadCrias, Me.BtnNodrizamaternidadpro, Me.BtnMovimientoLechonmaternidadpro, Me.BtnHistorialCerda, Me.BtnDejarVacia, Me.BtnCambiarLote, Me.BtnRegistrarDestetecontroldestetepro, Me.BtnExportarControlMDmaternidadpro, Me.btnreporteRrhhctrlcapaci})
-        Me.ToolStrip1.Location = New System.Drawing.Point(0, 221)
-        Me.ToolStrip1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.ToolStrip1.Location = New System.Drawing.Point(0, 132)
+        Me.ToolStrip1.Margin = New System.Windows.Forms.Padding(2, 1, 2, 1)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Padding = New System.Windows.Forms.Padding(0, 0, 3, 0)
-        Me.ToolStrip1.Size = New System.Drawing.Size(2386, 40)
+        Me.ToolStrip1.Padding = New System.Windows.Forms.Padding(0, 0, 2, 0)
+        Me.ToolStrip1.Size = New System.Drawing.Size(1515, 38)
         Me.ToolStrip1.TabIndex = 52
         Me.ToolStrip1.Text = "Monitoreo"
         '
@@ -284,7 +283,7 @@ Partial Class FrmControlMaternidadDestete
         Me.BtnRegistrarParto.Margin = New System.Windows.Forms.Padding(5)
         Me.BtnRegistrarParto.Name = "BtnRegistrarParto"
         Me.BtnRegistrarParto.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnRegistrarParto.Size = New System.Drawing.Size(92, 30)
+        Me.BtnRegistrarParto.Size = New System.Drawing.Size(71, 28)
         Me.BtnRegistrarParto.Text = "Parto"
         Me.BtnRegistrarParto.ToolTipText = "Parto2"
         '
@@ -297,7 +296,7 @@ Partial Class FrmControlMaternidadDestete
         Me.BtnMonitoreomaternidadpro.Margin = New System.Windows.Forms.Padding(5)
         Me.BtnMonitoreomaternidadpro.Name = "BtnMonitoreomaternidadpro"
         Me.BtnMonitoreomaternidadpro.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnMonitoreomaternidadpro.Size = New System.Drawing.Size(229, 30)
+        Me.BtnMonitoreomaternidadpro.Size = New System.Drawing.Size(160, 28)
         Me.BtnMonitoreomaternidadpro.Text = "Condicion Corporal"
         Me.BtnMonitoreomaternidadpro.ToolTipText = "Monitoreo"
         '
@@ -310,7 +309,7 @@ Partial Class FrmControlMaternidadDestete
         Me.BtnMortalidadCrias.Margin = New System.Windows.Forms.Padding(5)
         Me.BtnMortalidadCrias.Name = "BtnMortalidadCrias"
         Me.BtnMortalidadCrias.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnMortalidadCrias.Size = New System.Drawing.Size(203, 30)
+        Me.BtnMortalidadCrias.Size = New System.Drawing.Size(143, 28)
         Me.BtnMortalidadCrias.Text = "Mortalidad Crías"
         Me.BtnMortalidadCrias.ToolTipText = "Exportar"
         '
@@ -323,7 +322,7 @@ Partial Class FrmControlMaternidadDestete
         Me.BtnNodrizamaternidadpro.Margin = New System.Windows.Forms.Padding(5)
         Me.BtnNodrizamaternidadpro.Name = "BtnNodrizamaternidadpro"
         Me.BtnNodrizamaternidadpro.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnNodrizamaternidadpro.Size = New System.Drawing.Size(116, 30)
+        Me.BtnNodrizamaternidadpro.Size = New System.Drawing.Size(86, 28)
         Me.BtnNodrizamaternidadpro.Text = "Nodriza"
         Me.BtnNodrizamaternidadpro.ToolTipText = "Exportar"
         '
@@ -336,7 +335,7 @@ Partial Class FrmControlMaternidadDestete
         Me.BtnMovimientoLechonmaternidadpro.Margin = New System.Windows.Forms.Padding(5)
         Me.BtnMovimientoLechonmaternidadpro.Name = "BtnMovimientoLechonmaternidadpro"
         Me.BtnMovimientoLechonmaternidadpro.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnMovimientoLechonmaternidadpro.Size = New System.Drawing.Size(233, 30)
+        Me.BtnMovimientoLechonmaternidadpro.Size = New System.Drawing.Size(162, 28)
         Me.BtnMovimientoLechonmaternidadpro.Text = "Movimiento Lechón"
         Me.BtnMovimientoLechonmaternidadpro.ToolTipText = "Exportar"
         '
@@ -349,7 +348,7 @@ Partial Class FrmControlMaternidadDestete
         Me.BtnHistorialCerda.Margin = New System.Windows.Forms.Padding(5)
         Me.BtnHistorialCerda.Name = "BtnHistorialCerda"
         Me.BtnHistorialCerda.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnHistorialCerda.Size = New System.Drawing.Size(123, 30)
+        Me.BtnHistorialCerda.Size = New System.Drawing.Size(91, 28)
         Me.BtnHistorialCerda.Text = "Historial"
         Me.BtnHistorialCerda.ToolTipText = "Historial Extracciones"
         '
@@ -362,7 +361,7 @@ Partial Class FrmControlMaternidadDestete
         Me.BtnDejarVacia.Margin = New System.Windows.Forms.Padding(5)
         Me.BtnDejarVacia.Name = "BtnDejarVacia"
         Me.BtnDejarVacia.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnDejarVacia.Size = New System.Drawing.Size(154, 30)
+        Me.BtnDejarVacia.Size = New System.Drawing.Size(112, 28)
         Me.BtnDejarVacia.Text = "Dejar Vacía"
         '
         'BtnCambiarLote
@@ -374,7 +373,7 @@ Partial Class FrmControlMaternidadDestete
         Me.BtnCambiarLote.Margin = New System.Windows.Forms.Padding(5)
         Me.BtnCambiarLote.Name = "BtnCambiarLote"
         Me.BtnCambiarLote.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnCambiarLote.Size = New System.Drawing.Size(171, 30)
+        Me.BtnCambiarLote.Size = New System.Drawing.Size(123, 28)
         Me.BtnCambiarLote.Text = "Cambiar Lote"
         '
         'BtnRegistrarDestetecontroldestetepro
@@ -386,7 +385,7 @@ Partial Class FrmControlMaternidadDestete
         Me.BtnRegistrarDestetecontroldestetepro.Margin = New System.Windows.Forms.Padding(5)
         Me.BtnRegistrarDestetecontroldestetepro.Name = "BtnRegistrarDestetecontroldestetepro"
         Me.BtnRegistrarDestetecontroldestetepro.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnRegistrarDestetecontroldestetepro.Size = New System.Drawing.Size(116, 30)
+        Me.BtnRegistrarDestetecontroldestetepro.Size = New System.Drawing.Size(86, 28)
         Me.BtnRegistrarDestetecontroldestetepro.Text = "Destete"
         Me.BtnRegistrarDestetecontroldestetepro.ToolTipText = "Parto"
         '
@@ -399,7 +398,7 @@ Partial Class FrmControlMaternidadDestete
         Me.BtnExportarControlMDmaternidadpro.Margin = New System.Windows.Forms.Padding(5)
         Me.BtnExportarControlMDmaternidadpro.Name = "BtnExportarControlMDmaternidadpro"
         Me.BtnExportarControlMDmaternidadpro.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnExportarControlMDmaternidadpro.Size = New System.Drawing.Size(125, 30)
+        Me.BtnExportarControlMDmaternidadpro.Size = New System.Drawing.Size(92, 28)
         Me.BtnExportarControlMDmaternidadpro.Text = "Exportar"
         Me.BtnExportarControlMDmaternidadpro.ToolTipText = "Exportar"
         '
@@ -413,31 +412,31 @@ Partial Class FrmControlMaternidadDestete
         Me.btnreporteRrhhctrlcapaci.Margin = New System.Windows.Forms.Padding(5)
         Me.btnreporteRrhhctrlcapaci.Name = "btnreporteRrhhctrlcapaci"
         Me.btnreporteRrhhctrlcapaci.Padding = New System.Windows.Forms.Padding(2)
-        Me.btnreporteRrhhctrlcapaci.Size = New System.Drawing.Size(143, 30)
+        Me.btnreporteRrhhctrlcapaci.Size = New System.Drawing.Size(103, 28)
         Me.btnreporteRrhhctrlcapaci.Text = "Reportes"
         '
         'BtnReportePartos
         '
         Me.BtnReportePartos.Name = "BtnReportePartos"
-        Me.BtnReportePartos.Size = New System.Drawing.Size(339, 34)
+        Me.BtnReportePartos.Size = New System.Drawing.Size(222, 22)
         Me.BtnReportePartos.Text = "Partos x Lote"
         '
         'MortalidadMaternidadToolStripMenuItem
         '
         Me.MortalidadMaternidadToolStripMenuItem.Name = "MortalidadMaternidadToolStripMenuItem"
-        Me.MortalidadMaternidadToolStripMenuItem.Size = New System.Drawing.Size(339, 34)
+        Me.MortalidadMaternidadToolStripMenuItem.Size = New System.Drawing.Size(222, 22)
         Me.MortalidadMaternidadToolStripMenuItem.Text = "Mortalidad Maternidad"
         '
         'BtnReporteDestete
         '
         Me.BtnReporteDestete.Name = "BtnReporteDestete"
-        Me.BtnReporteDestete.Size = New System.Drawing.Size(339, 34)
+        Me.BtnReporteDestete.Size = New System.Drawing.Size(222, 22)
         Me.BtnReporteDestete.Text = "Destete x Lote"
         '
         'PartosVsDesteteToolStripMenuItem
         '
         Me.PartosVsDesteteToolStripMenuItem.Name = "PartosVsDesteteToolStripMenuItem"
-        Me.PartosVsDesteteToolStripMenuItem.Size = New System.Drawing.Size(339, 34)
+        Me.PartosVsDesteteToolStripMenuItem.Size = New System.Drawing.Size(222, 22)
         Me.PartosVsDesteteToolStripMenuItem.Text = "Partos vs Destete"
         '
         'dtgListado
@@ -512,10 +511,9 @@ Partial Class FrmControlMaternidadDestete
         Me.dtgListado.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy
         Me.dtgListado.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dtgListado.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dtgListado.Location = New System.Drawing.Point(0, 261)
-        Me.dtgListado.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.dtgListado.Location = New System.Drawing.Point(0, 170)
         Me.dtgListado.Name = "dtgListado"
-        Me.dtgListado.Size = New System.Drawing.Size(2386, 604)
+        Me.dtgListado.Size = New System.Drawing.Size(1515, 392)
         Me.dtgListado.TabIndex = 33
         Me.dtgListado.Text = "UltraGrid1"
         '
@@ -526,10 +524,9 @@ Partial Class FrmControlMaternidadDestete
         '
         Me.Ptbx_Cargando.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Ptbx_Cargando.Image = Global.Formularios.My.Resources.Resources.loader
-        Me.Ptbx_Cargando.Location = New System.Drawing.Point(1108, 497)
-        Me.Ptbx_Cargando.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Ptbx_Cargando.Location = New System.Drawing.Point(855, 323)
         Me.Ptbx_Cargando.Name = "Ptbx_Cargando"
-        Me.Ptbx_Cargando.Size = New System.Drawing.Size(64, 57)
+        Me.Ptbx_Cargando.Size = New System.Drawing.Size(43, 37)
         Me.Ptbx_Cargando.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.Ptbx_Cargando.TabIndex = 34
         Me.Ptbx_Cargando.TabStop = False
@@ -537,12 +534,13 @@ Partial Class FrmControlMaternidadDestete
         '
         'FrmControlMaternidadDestete
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(2386, 865)
+        Me.ClientSize = New System.Drawing.Size(1515, 562)
         Me.Controls.Add(Me.Ptbx_Cargando)
         Me.Controls.Add(Me.dtgListado)
         Me.Controls.Add(Me.Panel2)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "FrmControlMaternidadDestete"
         Me.Text = "ETAPA MATERNIDAD "
         Me.Panel2.ResumeLayout(False)
