@@ -7,7 +7,6 @@ Public Class FrmReporteLoteDestete
     Dim cn As New cnControlLoteDestete
     Private search As Boolean = False
     Public idPlantel As Integer = 0
-    Dim tbtmp As New DataTable
     Dim ds As New DataSet
 
     Public Sub New()
@@ -90,10 +89,8 @@ Public Class FrmReporteLoteDestete
     Private Sub BackgroundWorker1_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorker1.DoWork
         Try
             Dim obj As coControlLoteDestete = CType(e.Argument, coControlLoteDestete)
-            tbtmp = cn.Cn_ConsultarLotesDestete(obj).Copy
-            ds = cn.Cn_EdadPromedioLoteDestete(obj).Copy
-            tbtmp.TableName = "tmp"
-            e.Result = tbtmp
+            ds = cn.Cn_ConsultarLotesDestete(obj).Copy
+            e.Result = ds
         Catch ex As Exception
             e.Cancel = True
         End Try
@@ -103,11 +100,13 @@ Public Class FrmReporteLoteDestete
         If e.Error IsNot Nothing OrElse e.Cancelled Then
             msj_advert("Error al Cargar los Datos")
         Else
-            dtgListado.DataSource = CType(e.Result, DataTable)
-            DtgConsolidadEdad.DataSource = ds.Tables(0)
+            Dim dsResult As DataSet = CType(e.Result, DataSet)
             DesbloquearControladores()
+            dtgListado.DataSource = dsResult.Tables(0)
+            DtgConsolidadEdad.DataSource = dsResult.Tables(1)
             dtgListado.DisplayLayout.Bands(0).Columns("idLote").Hidden = True
             dtgListado.DisplayLayout.Bands(0).Columns("fNacimiento").Hidden = True
+            DtgConsolidadEdad.DisplayLayout.Bands(0).Columns("EdadLote").Hidden = True
             LblLechones.Text = SumarLechones().ToString()
             LblMarranas.Text = dtgListado.Rows.Count.ToString()
             LblMl.Text = If(CInt(LblMarranas.Text) = 0, 0, (CInt(LblLechones.Text) / CInt(LblMarranas.Text)).ToString("F1"))
@@ -120,11 +119,12 @@ Public Class FrmReporteLoteDestete
                 LblFechaNacimiento.Text = "0"
             End If
 
-            If ds.Tables(0).Rows.Count > 0 Then
-                LblEdad.Text = ds.Tables(1).Rows(0).Item("EdadLote")
+            If DtgConsolidadEdad.Rows.Count > 0 Then
+                LblEdad.Text = DtgConsolidadEdad.Rows(0).Cells("EdadLote").Value.ToString()
             Else
                 LblEdad.Text = "0"
             End If
+
             Colorear()
             CentrarColumnas()
         End If

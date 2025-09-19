@@ -242,8 +242,8 @@ Public Class cnControlLoteDestete
         Return cls_at.Cd_ConsultarxIdUbicacion("[w_pa_consultar_clinicas]", obj)
     End Function
 
-    Public Function Cn_ConsultarLotesDestete(ByRef obj As coControlLoteDestete) As DataTable
-        Return cls_at.Cd_ConsultarxIdLote("[w_pa_cons_reporte_destete]", obj)
+    Public Function Cn_ConsultarLotesDestete(ByRef obj As coControlLoteDestete) As DataSet
+        Return cls_at.Cd_ConsultarxIdLoteDs("[w_pa_cons_reporte_destete_v2]", obj)
     End Function
 
     Public Function Cn_ConsultarPesoLotexIdMovimiento(ByRef obj As coControlLoteDestete) As DataTable
