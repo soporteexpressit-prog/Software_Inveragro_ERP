@@ -112,6 +112,22 @@ Public Class FrmControlCampaña
         End If
     End Sub
 
+    Private Sub BtnReporteEngorde_Click(sender As Object, e As EventArgs) Handles BtnReporteEngorde.Click
+        Dim activeRow As Infragistics.Win.UltraWinGrid.UltraGridRow = dtgListado.ActiveRow
+        If (dtgListado.Rows.Count > 0) Then
+            If (activeRow.Cells(0).Value.ToString.Length <> 0) Then
+                Dim frm As New FrmReporteEngordeCampana With {
+                    .idCampaña = dtgListado.ActiveRow.Cells("idcampaña").Value
+                }
+                frm.ShowDialog()
+            Else
+                msj_advert(MensajesSistema.mensajesGenerales("SELECCIONE_REGISTRO"))
+            End If
+        Else
+            msj_advert(MensajesSistema.mensajesGenerales("SELECCIONE_REGISTRO"))
+        End If
+    End Sub
+
     Private Sub BtnCerrar_Click(sender As Object, e As EventArgs) Handles BtnCerrar.Click
         Dispose()
     End Sub

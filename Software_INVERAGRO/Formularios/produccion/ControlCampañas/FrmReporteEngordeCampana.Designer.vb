@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class FrmControlCampaña
+Partial Class FrmReporteEngordeCampana
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -37,100 +37,38 @@ Partial Class FrmControlCampaña
         Dim Appearance13 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance14 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance15 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.GrupoFiltros = New System.Windows.Forms.GroupBox()
-        Me.CmbAnios = New System.Windows.Forms.ComboBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.BtnExportar = New System.Windows.Forms.ToolStripButton()
-        Me.BtnCerrar = New System.Windows.Forms.ToolStripButton()
-        Me.BtnReporteEngorde = New System.Windows.Forms.ToolStripButton()
-        Me.dtgListado = New Infragistics.Win.UltraWinGrid.UltraGrid()
+        Me.btnCerrar = New System.Windows.Forms.ToolStripButton()
+        Me.LblDiaPic = New System.Windows.Forms.Label()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.Ptbx_Cargando = New System.Windows.Forms.PictureBox()
+        Me.dtgListado = New Infragistics.Win.UltraWinGrid.UltraGrid()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
-        Me.Panel2.SuspendLayout()
-        Me.GrupoFiltros.SuspendLayout()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.ToolStrip1.SuspendLayout()
-        CType(Me.dtgListado, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox2.SuspendLayout()
         CType(Me.Ptbx_Cargando, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dtgListado, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'Panel2
-        '
-        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(233, Byte), Integer))
-        Me.Panel2.Controls.Add(Me.GrupoFiltros)
-        Me.Panel2.Controls.Add(Me.Label6)
-        Me.Panel2.Controls.Add(Me.ToolStrip1)
-        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel2.Location = New System.Drawing.Point(0, 0)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(2, 1, 2, 1)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1131, 187)
-        Me.Panel2.TabIndex = 10
-        '
-        'GrupoFiltros
-        '
-        Me.GrupoFiltros.Controls.Add(Me.CmbAnios)
-        Me.GrupoFiltros.Controls.Add(Me.Label3)
-        Me.GrupoFiltros.Location = New System.Drawing.Point(37, 63)
-        Me.GrupoFiltros.Margin = New System.Windows.Forms.Padding(2)
-        Me.GrupoFiltros.Name = "GrupoFiltros"
-        Me.GrupoFiltros.Padding = New System.Windows.Forms.Padding(2)
-        Me.GrupoFiltros.Size = New System.Drawing.Size(236, 69)
-        Me.GrupoFiltros.TabIndex = 179
-        Me.GrupoFiltros.TabStop = False
-        Me.GrupoFiltros.Text = "Filtro de Búsqueda"
-        '
-        'CmbAnios
-        '
-        Me.CmbAnios.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CmbAnios.FormattingEnabled = True
-        Me.CmbAnios.Location = New System.Drawing.Point(70, 27)
-        Me.CmbAnios.Margin = New System.Windows.Forms.Padding(2)
-        Me.CmbAnios.Name = "CmbAnios"
-        Me.CmbAnios.Size = New System.Drawing.Size(112, 28)
-        Me.CmbAnios.TabIndex = 178
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.BackColor = System.Drawing.Color.Transparent
-        Me.Label3.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(23, 32)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(41, 14)
-        Me.Label3.TabIndex = 177
-        Me.Label3.Text = "Año :"
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(233, Byte), Integer))
-        Me.Label6.Font = New System.Drawing.Font("Verdana", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(49, Byte), Integer))
-        Me.Label6.Location = New System.Drawing.Point(43, 29)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(229, 18)
-        Me.Label6.TabIndex = 128
-        Me.Label6.Text = "CONTROL DE CAMPAÑAS"
         '
         'ToolStrip1
         '
         Me.ToolStrip1.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.ToolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.ToolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
         Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnExportar, Me.BtnCerrar, Me.BtnReporteEngorde})
-        Me.ToolStrip1.Location = New System.Drawing.Point(0, 149)
-        Me.ToolStrip1.Margin = New System.Windows.Forms.Padding(2, 1, 2, 1)
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnExportar, Me.btnCerrar})
+        Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.ToolStrip1.Margin = New System.Windows.Forms.Padding(2)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Padding = New System.Windows.Forms.Padding(0, 0, 2, 0)
-        Me.ToolStrip1.Size = New System.Drawing.Size(1131, 38)
-        Me.ToolStrip1.TabIndex = 52
+        Me.ToolStrip1.Size = New System.Drawing.Size(1152, 38)
+        Me.ToolStrip1.TabIndex = 53
         Me.ToolStrip1.Text = "ToolStrip1"
         '
         'BtnExportar
@@ -146,31 +84,55 @@ Partial Class FrmControlCampaña
         Me.BtnExportar.Text = "Exportar"
         Me.BtnExportar.ToolTipText = "Exportar"
         '
-        'BtnCerrar
+        'btnCerrar
         '
-        Me.BtnCerrar.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnCerrar.ForeColor = System.Drawing.Color.White
-        Me.BtnCerrar.Image = Global.Formularios.My.Resources.Resources.salir
-        Me.BtnCerrar.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.BtnCerrar.Margin = New System.Windows.Forms.Padding(5)
-        Me.BtnCerrar.Name = "BtnCerrar"
-        Me.BtnCerrar.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnCerrar.Size = New System.Drawing.Size(66, 28)
-        Me.BtnCerrar.Text = "Salir"
+        Me.btnCerrar.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCerrar.ForeColor = System.Drawing.Color.White
+        Me.btnCerrar.Image = Global.Formularios.My.Resources.Resources.salir
+        Me.btnCerrar.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btnCerrar.Margin = New System.Windows.Forms.Padding(5)
+        Me.btnCerrar.Name = "btnCerrar"
+        Me.btnCerrar.Padding = New System.Windows.Forms.Padding(2)
+        Me.btnCerrar.Size = New System.Drawing.Size(66, 28)
+        Me.btnCerrar.Text = "Salir"
+        Me.btnCerrar.ToolTipText = "Cerrar"
         '
-        'BtnReporteEngorde
+        'LblDiaPic
         '
-        Me.BtnReporteEngorde.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.BtnReporteEngorde.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.BtnReporteEngorde.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnReporteEngorde.ForeColor = System.Drawing.Color.White
-        Me.BtnReporteEngorde.Image = Global.Formularios.My.Resources.Resources.Reporte_24_px
-        Me.BtnReporteEngorde.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.BtnReporteEngorde.Margin = New System.Windows.Forms.Padding(5)
-        Me.BtnReporteEngorde.Name = "BtnReporteEngorde"
-        Me.BtnReporteEngorde.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnReporteEngorde.Size = New System.Drawing.Size(145, 28)
-        Me.BtnReporteEngorde.Text = "Reporte Engorde"
+        Me.LblDiaPic.AutoSize = True
+        Me.LblDiaPic.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.LblDiaPic.Font = New System.Drawing.Font("Verdana", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblDiaPic.ForeColor = System.Drawing.Color.Green
+        Me.LblDiaPic.Location = New System.Drawing.Point(26, 83)
+        Me.LblDiaPic.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblDiaPic.Name = "LblDiaPic"
+        Me.LblDiaPic.Size = New System.Drawing.Size(256, 23)
+        Me.LblDiaPic.TabIndex = 256
+        Me.LblDiaPic.Text = "REPORTE DE ENGORDE"
+        '
+        'GroupBox2
+        '
+        Me.GroupBox2.Controls.Add(Me.Ptbx_Cargando)
+        Me.GroupBox2.Controls.Add(Me.dtgListado)
+        Me.GroupBox2.Location = New System.Drawing.Point(11, 162)
+        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(2)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(2)
+        Me.GroupBox2.Size = New System.Drawing.Size(1130, 541)
+        Me.GroupBox2.TabIndex = 250
+        Me.GroupBox2.TabStop = False
+        '
+        'Ptbx_Cargando
+        '
+        Me.Ptbx_Cargando.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Ptbx_Cargando.Image = Global.Formularios.My.Resources.Resources.loader
+        Me.Ptbx_Cargando.Location = New System.Drawing.Point(516, 237)
+        Me.Ptbx_Cargando.Name = "Ptbx_Cargando"
+        Me.Ptbx_Cargando.Size = New System.Drawing.Size(43, 37)
+        Me.Ptbx_Cargando.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.Ptbx_Cargando.TabIndex = 177
+        Me.Ptbx_Cargando.TabStop = False
+        Me.Ptbx_Cargando.Visible = False
         '
         'dtgListado
         '
@@ -211,8 +173,6 @@ Partial Class FrmControlCampaña
         Me.dtgListado.DisplayLayout.Override.CellAppearance = Appearance8
         Me.dtgListado.DisplayLayout.Override.CellClickAction = Infragistics.Win.UltraWinGrid.CellClickAction.EditAndSelectText
         Me.dtgListado.DisplayLayout.Override.CellPadding = 0
-        Me.dtgListado.DisplayLayout.Override.FilterOperatorDefaultValue = Infragistics.Win.UltraWinGrid.FilterOperatorDefaultValue.Contains
-        Me.dtgListado.DisplayLayout.Override.FilterUIType = Infragistics.Win.UltraWinGrid.FilterUIType.FilterRow
         Appearance9.BackColor = System.Drawing.SystemColors.Control
         Appearance9.BackColor2 = System.Drawing.SystemColors.ControlDark
         Appearance9.BackGradientAlignment = Infragistics.Win.GradientAlignment.Element
@@ -244,63 +204,113 @@ Partial Class FrmControlCampaña
         Me.dtgListado.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy
         Me.dtgListado.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dtgListado.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dtgListado.Location = New System.Drawing.Point(0, 187)
+        Me.dtgListado.Location = New System.Drawing.Point(2, 15)
         Me.dtgListado.Name = "dtgListado"
-        Me.dtgListado.Size = New System.Drawing.Size(1131, 468)
-        Me.dtgListado.TabIndex = 29
+        Me.dtgListado.Size = New System.Drawing.Size(1126, 524)
+        Me.dtgListado.TabIndex = 176
         Me.dtgListado.Text = "UltraGrid1"
-        '
-        'Ptbx_Cargando
-        '
-        Me.Ptbx_Cargando.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Ptbx_Cargando.Image = Global.Formularios.My.Resources.Resources.loader
-        Me.Ptbx_Cargando.Location = New System.Drawing.Point(569, 397)
-        Me.Ptbx_Cargando.Name = "Ptbx_Cargando"
-        Me.Ptbx_Cargando.Size = New System.Drawing.Size(43, 37)
-        Me.Ptbx_Cargando.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.Ptbx_Cargando.TabIndex = 30
-        Me.Ptbx_Cargando.TabStop = False
-        Me.Ptbx_Cargando.Visible = False
         '
         'BackgroundWorker1
         '
         '
-        'FrmControlCampaña
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(353, 63)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(80, 13)
+        Me.Label1.TabIndex = 257
+        Me.Label1.Text = "# Engordes :"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(341, 91)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(92, 13)
+        Me.Label2.TabIndex = 258
+        Me.Label2.Text = "# Chanchillas :"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(355, 121)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(78, 13)
+        Me.Label3.TabIndex = 259
+        Me.Label3.Text = "# Retornos :"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(441, 63)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(202, 13)
+        Me.Label4.TabIndex = 260
+        Me.Label4.Text = "Representa todos los cerdos de engorde."
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(441, 91)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(614, 13)
+        Me.Label5.TabIndex = 261
+        Me.Label5.Text = "Representa todos las chanchillas que se encuentran actualmente si se retorna este" &
+    " valor disminuye porque cambia de ubicación."
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(441, 121)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(562, 13)
+        Me.Label6.TabIndex = 262
+        Me.Label6.Text = "No se identica de donde salio la Chanchilla por eso se prorratea según el total d" &
+    "e animales que retornaron de ese lote."
+        '
+        'FrmReporteEngordeCampana
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1131, 655)
-        Me.Controls.Add(Me.Ptbx_Cargando)
-        Me.Controls.Add(Me.dtgListado)
-        Me.Controls.Add(Me.Panel2)
-        Me.Margin = New System.Windows.Forms.Padding(2)
-        Me.MaximizeBox = False
-        Me.MinimizeBox = False
-        Me.Name = "FrmControlCampaña"
+        Me.ClientSize = New System.Drawing.Size(1152, 714)
+        Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.LblDiaPic)
+        Me.Controls.Add(Me.GroupBox2)
+        Me.Controls.Add(Me.ToolStrip1)
+        Me.Name = "FrmReporteEngordeCampana"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "CONTROL DE CAMPAÑAS"
-        Me.Panel2.ResumeLayout(False)
-        Me.Panel2.PerformLayout()
-        Me.GrupoFiltros.ResumeLayout(False)
-        Me.GrupoFiltros.PerformLayout()
+        Me.Text = "Reporte Engorde"
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()
-        CType(Me.dtgListado, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox2.ResumeLayout(False)
         CType(Me.Ptbx_Cargando, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dtgListado, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents Panel2 As Panel
-    Friend WithEvents Label6 As Label
     Friend WithEvents ToolStrip1 As ToolStrip
     Friend WithEvents BtnExportar As ToolStripButton
-    Friend WithEvents BtnCerrar As ToolStripButton
-    Friend WithEvents BtnReporteEngorde As ToolStripButton
+    Friend WithEvents btnCerrar As ToolStripButton
+    Friend WithEvents LblDiaPic As Label
+    Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents Ptbx_Cargando As PictureBox
     Friend WithEvents dtgListado As Infragistics.Win.UltraWinGrid.UltraGrid
-    Friend WithEvents CmbAnios As ComboBox
-    Friend WithEvents Label3 As Label
     Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
-    Friend WithEvents GrupoFiltros As GroupBox
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Label6 As Label
 End Class

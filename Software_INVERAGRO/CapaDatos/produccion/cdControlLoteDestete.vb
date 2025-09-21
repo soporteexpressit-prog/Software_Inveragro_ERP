@@ -1265,4 +1265,19 @@ Public Class cdControlLoteDestete
         con.Salir()
         Return ds
     End Function
+
+    Public Function Cd_ReporteEngordeCampana(name As String, obj As coControlLoteDestete) As DataTable
+        Dim ds As New DataTable
+        Try
+            con.Abrir()
+            Dim da As New SqlDataAdapter(name, con.con)
+            da.SelectCommand.CommandType = 4
+            da.SelectCommand.Parameters.AddWithValue("@idCampaña", obj.IdCampana)
+            da.Fill(ds)
+        Catch ex As Exception
+            Throw ex
+        End Try
+        con.Salir()
+        Return ds
+    End Function
 End Class

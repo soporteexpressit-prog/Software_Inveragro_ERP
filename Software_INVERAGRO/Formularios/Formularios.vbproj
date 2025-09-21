@@ -1230,6 +1230,12 @@
     <Compile Include="Nutricion\ControlSalidaAlimentoCerdo\FrmAlimentacionPresupuesto.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="produccion\ControlCampañas\FrmReporteEngordeCampana.Designer.vb">
+      <DependentUpon>FrmReporteEngordeCampana.vb</DependentUpon>
+    </Compile>
+    <Compile Include="produccion\ControlCampañas\FrmReporteEngordeCampana.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="produccion\ControlDesteteLotes\FrmDetalleMotivoFrecuente.Designer.vb">
       <DependentUpon>FrmDetalleMotivoFrecuente.vb</DependentUpon>
     </Compile>
@@ -4309,6 +4315,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Nutricion\ControlSalidaAlimentoCerdo\FrmAlimentacionPresupuesto.resx">
       <DependentUpon>FrmAlimentacionPresupuesto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="produccion\ControlCampañas\FrmReporteEngordeCampana.resx">
+      <DependentUpon>FrmReporteEngordeCampana.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="produccion\ControlDesteteLotes\FrmCantidadSacarClinica.resx">
       <DependentUpon>FrmCantidadSacarClinica.vb</DependentUpon>
