@@ -267,10 +267,10 @@ Partial Class FrmReporteEngordeCampana
         Me.Label6.AutoSize = True
         Me.Label6.Location = New System.Drawing.Point(441, 121)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(562, 13)
+        Me.Label6.Size = New System.Drawing.Size(569, 13)
         Me.Label6.TabIndex = 262
-        Me.Label6.Text = "No se identica de donde salio la Chanchilla por eso se prorratea según el total d" &
-    "e animales que retornaron de ese lote."
+        Me.Label6.Text = "No se identifíca de donde salio la Chanchilla por eso se prorratea según el total" &
+    " de animales que retornaron de ese lote."
         '
         'FrmReporteEngordeCampana
         '
