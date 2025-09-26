@@ -1692,6 +1692,12 @@
     <Compile Include="produccion\FrmVisualizarDesteteHembra.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="produccion\GestionAmbientes\FrmMantenimientoPlantel.Designer.vb">
+      <DependentUpon>FrmMantenimientoPlantel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="produccion\GestionAmbientes\FrmMantenimientoPlantel.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="produccion\GestionAmbientes\FrmPlanteles.Designer.vb">
       <DependentUpon>FrmPlanteles.vb</DependentUpon>
     </Compile>
@@ -4540,6 +4546,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="produccion\FrmVisualizarDesteteHembra.resx">
       <DependentUpon>FrmVisualizarDesteteHembra.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="produccion\GestionAmbientes\FrmMantenimientoPlantel.resx">
+      <DependentUpon>FrmMantenimientoPlantel.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="produccion\GestionAmbientes\FrmPlanteles.resx">
       <DependentUpon>FrmPlanteles.vb</DependentUpon>

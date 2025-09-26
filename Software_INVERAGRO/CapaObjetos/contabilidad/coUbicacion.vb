@@ -7,6 +7,8 @@
     Private _Iduser As Integer
     Private _NumChanchillas As Integer
     Private _Anio As Integer
+    Private _Direccion As String
+    Private _Clasificacion As String
 
     Private _Codigo2 As Integer
     Private _Codigo3 As Integer
@@ -108,6 +110,24 @@
         End Get
         Set(value As Integer)
             _Anio = value
+        End Set
+    End Property
+
+    Public Property Direccion As String
+        Get
+            Return _Direccion
+        End Get
+        Set(value As String)
+            _Direccion = value
+        End Set
+    End Property
+
+    Public Property Clasificacion As String
+        Get
+            Return _Clasificacion
+        End Get
+        Set(value As String)
+            _Clasificacion = value
         End Set
     End Property
 End Class

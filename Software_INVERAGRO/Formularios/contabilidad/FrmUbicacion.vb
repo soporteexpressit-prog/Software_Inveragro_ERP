@@ -79,7 +79,7 @@ Public Class FrmUbicacion
                 .Descripcion = txtDescripcion.Text,
                 .Densidad = If(esPlantel = "SI", CDec(TxtDensidad.Text), Nothing),
                 .NumChanchillas = Nothing,
-                .Iduser = 1
+                .Iduser = VP_IdUser
             }
 
             Dim _mensaje As String = cn.Cn_Mantenimiento(obj)

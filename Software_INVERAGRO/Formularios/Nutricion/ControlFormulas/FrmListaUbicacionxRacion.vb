@@ -13,6 +13,8 @@ Public Class FrmListaUbicacionxRacion
             dtgListado.DataSource = cn.Cn_ConsultarPlanteles()
             dtgListado.DisplayLayout.Bands(0).Columns("idUbicacion").Hidden = True
             dtgListado.DisplayLayout.Bands(0).Columns("Densidad por Corral").Hidden = True
+            dtgListado.DisplayLayout.Bands(0).Columns("Dirección").Hidden = True
+            dtgListado.DisplayLayout.Bands(0).Columns("Clasificación").Hidden = True
             dtgListado.DisplayLayout.Bands(0).Columns("+ N° Chanchillas").Hidden = True
         Catch ex As Exception
             clsBasicas.controlException(Name, ex)

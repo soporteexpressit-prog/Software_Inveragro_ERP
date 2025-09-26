@@ -6,38 +6,8 @@ Public Class FrmPlanteles
     Private _CodUbicacion As Integer
     Dim _Operacion As Integer
 
-    Sub Nuevo()
-        _Operacion = 0
-        Cambio()
-        limpiar()
-    End Sub
-
-    Sub limpiar()
-        txtCodigo.Text = ""
-        txtDescripcion.Text = ""
-        txtDescripcion.Select()
-        _CodUbicacion = 0
-    End Sub
-
-    Sub Cambio()
-        btnEditarCtubicacion.Visible = False
-        btnGuardarCtubicacion.Visible = True
-        btnCancelar.Visible = True
-        txtDescripcion.Enabled = True
-    End Sub
-    Sub Cancelar()
-        btnEditarCtubicacion.Visible = True
-        btnGuardarCtubicacion.Visible = False
-        btnCancelar.Visible = False
-        txtCodigo.Clear()
-        txtCodigo.Enabled = False
-        txtDescripcion.Clear()
-        txtDescripcion.Enabled = False
-    End Sub
-
     Private Sub FrmPlanteles_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
-            Cancelar()
             clsBasicas.Formato_Tablas_Grid(dtgListado)
             Consultar()
             ListarPlanteles()
@@ -74,84 +44,36 @@ Public Class FrmPlanteles
         End With
     End Sub
 
-    Sub Mantenimiento()
-        Try
-            If (_Operacion = 1 OrElse _Operacion = 2) AndAlso (txtCodigo.Text = "" OrElse txtCodigo.Text.Length = 0) Then
-                msj_advert(MensajesSistema.mensajesGenerales("SELECCIONE_REGISTRO"))
-                Return
-            End If
-            If (_Operacion = 0 OrElse _Operacion = 1) AndAlso (txtDescripcion.Text = "" OrElse txtDescripcion.Text.Length = 0) Then
-                msj_advert("Descripción no Valida")
-                Return
-            End If
-
-            If (TxtDensidad.Text = "" OrElse TxtDensidad.Text.Length = 0) Then
-                msj_advert("Densidad no Valida")
-                Return
-            End If
-
-            If (MessageBox.Show("¿ESTÁ SEGURO DE ESTA ACCIÓN?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.No) Then
-                Return
-            End If
-
-            Dim obj As New coUbicacion With {
-                .Operacion = _Operacion,
-                .Codigo = _CodUbicacion,
-                .Descripcion = txtDescripcion.Text,
-                .Densidad = CDec(TxtDensidad.Text),
-                .NumChanchillas = NumChanchillas.Value,
-                .Iduser = 1
-            }
-
-            Dim _mensaje As String = cn.Cn_MantenimientoPlanteles(obj)
-            If (obj.Coderror = 0) Then
-                msj_ok(_mensaje)
-                Cancelar()
-                Consultar()
-            Else
-                msj_advert(_mensaje)
-            End If
-        Catch ex As Exception
-            clsBasicas.controlException(Name, ex)
-        End Try
-    End Sub
-
     Sub Consultar()
         dtgListado.DataSource = cn.Cn_ConsultarPlanteles()
         dtgListado.DisplayLayout.Bands(0).Columns("idUbicacion").Hidden = True
         dtgListado.DisplayLayout.Bands(0).Columns("Raciones Asignadas").Hidden = True
     End Sub
 
-    Private Sub btnEditar_Click(sender As Object, e As EventArgs) Handles btnEditarCtubicacion.Click
-        If (dtgListado.Rows.Count > 0) Then
-            If (dtgListado.ActiveRow.Cells(0).Value.ToString.Length <> 0) Then
-                _Operacion = 1
-                Cambio()
-                _CodUbicacion = CInt(dtgListado.DisplayLayout.ActiveRow.Cells("idUbicacion").Value.ToString)
-                txtCodigo.Text = _CodUbicacion.ToString
-                txtDescripcion.Text = dtgListado.DisplayLayout.ActiveRow.Cells("Descripción").Value.ToString
-                txtDescripcion.Focus()
-                TxtDensidad.Text = dtgListado.DisplayLayout.ActiveRow.Cells("Densidad por Corral").Value.ToString
-                NumChanchillas.Value = CInt(dtgListado.DisplayLayout.ActiveRow.Cells("+ N° Chanchillas").Value.ToString)
+    Private Sub btnEditar_Click(sender As Object, e As EventArgs) Handles BtnEditar.Click
+        Try
+            Dim activeRow As Infragistics.Win.UltraWinGrid.UltraGridRow = dtgListado.ActiveRow
+            If (dtgListado.Rows.Count > 0) Then
+                If (activeRow.Cells(0).Value.ToString.Length <> 0) Then
+                    Dim idUbicacion As Integer = CInt(activeRow.Cells("idUbicacion").Value)
+
+                    Dim frm As New FrmMantenimientoPlantel With {
+                        ._IdUbicacion = idUbicacion
+                    }
+                    frm.ShowDialog()
+                    Consultar()
+                Else
+                    msj_advert(MensajesSistema.mensajesGenerales("SELECCIONE_REGISTRO"))
+                End If
             Else
                 msj_advert(MensajesSistema.mensajesGenerales("SELECCIONE_REGISTRO"))
             End If
-        Else
-            msj_advert(MensajesSistema.mensajesGenerales("SELECCIONE_REGISTRO"))
-        End If
+        Catch ex As Exception
+            clsBasicas.controlException(Name, ex)
+        End Try
     End Sub
 
-    Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
-        Cancelar()
-    End Sub
-
-    Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardarCtubicacion.Click
-        Mantenimiento()
-        TxtDensidad.Text = ""
-        NumChanchillas.Value = 0
-    End Sub
-
-    Private Sub TxtDensidad_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtDensidad.KeyPress
+    Private Sub TxtDensidad_KeyPress(sender As Object, e As KeyPressEventArgs)
         clsBasicas.ValidarDecimalEstricto(sender, e)
     End Sub
 
@@ -210,6 +132,31 @@ Public Class FrmPlanteles
             LblPlantelFijado.BackColor = Color.Green
             LblPlantelFijado.ForeColor = Color.White
         End If
+    End Sub
+
+    Private Sub BtnExportarBtnMandarCamalprocontrolverracos_Click(sender As Object, e As EventArgs) Handles BtnExportarBtnMandarCamalprocontrolverracos.Click
+        Try
+            If (dtgListado.Rows.Count = 0) Then
+                msj_advert(MensajesSistema.mensajesGenerales("SIN_RESULTADOS"))
+                Return
+            Else
+                clsBasicas.ExportarExcel("REPORTE PLANTELES", dtgListado)
+            End If
+        Catch ex As Exception
+            clsBasicas.controlException(Name, ex)
+        End Try
+    End Sub
+
+    Private Sub BtnNuevo_Click(sender As Object, e As EventArgs) Handles BtnNuevo.Click
+        Try
+            Dim frm As New FrmMantenimientoPlantel With {
+                ._IdUbicacion = 0
+            }
+            frm.ShowDialog()
+            Consultar()
+        Catch ex As Exception
+            clsBasicas.controlException(Name, ex)
+        End Try
     End Sub
 
     Private Sub btnCerrar_Click(sender As Object, e As EventArgs) Handles btnCerrar.Click

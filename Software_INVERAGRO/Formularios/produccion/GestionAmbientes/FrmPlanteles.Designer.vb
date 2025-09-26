@@ -51,33 +51,22 @@ Partial Class FrmPlanteles
         Dim Appearance27 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Me.dtgListado = New Infragistics.Win.UltraWinGrid.UltraGrid()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.NumChanchillas = New System.Windows.Forms.NumericUpDown()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.LblDensidad = New System.Windows.Forms.Label()
-        Me.TxtDensidad = New System.Windows.Forms.TextBox()
-        Me.txtDescripcion = New System.Windows.Forms.TextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.txtCodigo = New System.Windows.Forms.TextBox()
-        Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
-        Me.Label6 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.LblPlantelFijado = New System.Windows.Forms.Label()
+        Me.BtnBuscarVehiculo = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.CmbUbicacion = New Infragistics.Win.UltraWinGrid.UltraCombo()
-        Me.BtnBuscarVehiculo = New System.Windows.Forms.Button()
-        Me.btnEditarCtubicacion = New System.Windows.Forms.ToolStripButton()
-        Me.btnCancelar = New System.Windows.Forms.ToolStripButton()
-        Me.btnGuardarCtubicacion = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
+        Me.BtnNuevo = New System.Windows.Forms.ToolStripButton()
+        Me.BtnEditar = New System.Windows.Forms.ToolStripButton()
         Me.btnCerrar = New System.Windows.Forms.ToolStripButton()
-        Me.LblPlantelFijado = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.BtnExportarBtnMandarCamalprocontrolverracos = New System.Windows.Forms.ToolStripButton()
         CType(Me.dtgListado, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
-        Me.GroupBox1.SuspendLayout()
-        CType(Me.NumChanchillas, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.ToolStrip1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.CmbUbicacion, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ToolStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'dtgListado
@@ -150,10 +139,9 @@ Partial Class FrmPlanteles
         Me.dtgListado.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy
         Me.dtgListado.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dtgListado.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dtgListado.Location = New System.Drawing.Point(0, 275)
-        Me.dtgListado.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.dtgListado.Location = New System.Drawing.Point(0, 194)
         Me.dtgListado.Name = "dtgListado"
-        Me.dtgListado.Size = New System.Drawing.Size(1780, 842)
+        Me.dtgListado.Size = New System.Drawing.Size(1187, 496)
         Me.dtgListado.TabIndex = 10
         Me.dtgListado.Text = "UltraGrid1"
         '
@@ -161,152 +149,14 @@ Partial Class FrmPlanteles
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(233, Byte), Integer))
         Me.Panel2.Controls.Add(Me.GroupBox2)
-        Me.Panel2.Controls.Add(Me.GroupBox1)
         Me.Panel2.Controls.Add(Me.ToolStrip1)
         Me.Panel2.Controls.Add(Me.Label6)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1780, 275)
+        Me.Panel2.Size = New System.Drawing.Size(1187, 194)
         Me.Panel2.TabIndex = 9
-        '
-        'GroupBox1
-        '
-        Me.GroupBox1.Controls.Add(Me.NumChanchillas)
-        Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Controls.Add(Me.LblDensidad)
-        Me.GroupBox1.Controls.Add(Me.TxtDensidad)
-        Me.GroupBox1.Controls.Add(Me.txtDescripcion)
-        Me.GroupBox1.Controls.Add(Me.Label4)
-        Me.GroupBox1.Controls.Add(Me.Label3)
-        Me.GroupBox1.Controls.Add(Me.txtCodigo)
-        Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.GroupBox1.Location = New System.Drawing.Point(18, 55)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.GroupBox1.Size = New System.Drawing.Size(1000, 132)
-        Me.GroupBox1.TabIndex = 53
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Información:"
-        '
-        'NumChanchillas
-        '
-        Me.NumChanchillas.Location = New System.Drawing.Point(788, 40)
-        Me.NumChanchillas.Maximum = New Decimal(New Integer() {1000, 0, 0, 0})
-        Me.NumChanchillas.Name = "NumChanchillas"
-        Me.NumChanchillas.Size = New System.Drawing.Size(106, 28)
-        Me.NumChanchillas.TabIndex = 55
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Verdana", 9.0!)
-        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(601, 43)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(175, 22)
-        Me.Label1.TabIndex = 54
-        Me.Label1.Text = "+ N° Chanchillas :"
-        '
-        'LblDensidad
-        '
-        Me.LblDensidad.AutoSize = True
-        Me.LblDensidad.BackColor = System.Drawing.Color.Transparent
-        Me.LblDensidad.Font = New System.Drawing.Font("Verdana", 9.0!)
-        Me.LblDensidad.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.LblDensidad.Location = New System.Drawing.Point(571, 89)
-        Me.LblDensidad.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
-        Me.LblDensidad.Name = "LblDensidad"
-        Me.LblDensidad.Size = New System.Drawing.Size(205, 22)
-        Me.LblDensidad.TabIndex = 52
-        Me.LblDensidad.Text = "Densidad por Corral :"
-        '
-        'TxtDensidad
-        '
-        Me.TxtDensidad.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.TxtDensidad.Location = New System.Drawing.Point(788, 86)
-        Me.TxtDensidad.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.TxtDensidad.MaxLength = 50
-        Me.TxtDensidad.Name = "TxtDensidad"
-        Me.TxtDensidad.Size = New System.Drawing.Size(106, 28)
-        Me.TxtDensidad.TabIndex = 53
-        '
-        'txtDescripcion
-        '
-        Me.txtDescripcion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.txtDescripcion.Location = New System.Drawing.Point(237, 86)
-        Me.txtDescripcion.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.txtDescripcion.MaxLength = 100
-        Me.txtDescripcion.Name = "txtDescripcion"
-        Me.txtDescripcion.Size = New System.Drawing.Size(247, 28)
-        Me.txtDescripcion.TabIndex = 48
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.BackColor = System.Drawing.Color.Transparent
-        Me.Label4.Font = New System.Drawing.Font("Verdana", 9.0!)
-        Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label4.Location = New System.Drawing.Point(88, 89)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(127, 22)
-        Me.Label4.TabIndex = 47
-        Me.Label4.Text = "Descripción :"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.BackColor = System.Drawing.Color.Transparent
-        Me.Label3.Font = New System.Drawing.Font("Verdana", 9.0!)
-        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(129, 43)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(86, 22)
-        Me.Label3.TabIndex = 46
-        Me.Label3.Text = "Código :"
-        '
-        'txtCodigo
-        '
-        Me.txtCodigo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.txtCodigo.Location = New System.Drawing.Point(237, 40)
-        Me.txtCodigo.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.txtCodigo.MaxLength = 50
-        Me.txtCodigo.Name = "txtCodigo"
-        Me.txtCodigo.Size = New System.Drawing.Size(106, 28)
-        Me.txtCodigo.TabIndex = 51
-        '
-        'ToolStrip1
-        '
-        Me.ToolStrip1.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.ToolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.ToolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
-        Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnEditarCtubicacion, Me.btnCancelar, Me.btnGuardarCtubicacion, Me.btnCerrar})
-        Me.ToolStrip1.Location = New System.Drawing.Point(0, 235)
-        Me.ToolStrip1.Margin = New System.Windows.Forms.Padding(3)
-        Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Padding = New System.Windows.Forms.Padding(0, 0, 3, 0)
-        Me.ToolStrip1.Size = New System.Drawing.Size(1780, 40)
-        Me.ToolStrip1.TabIndex = 52
-        Me.ToolStrip1.Text = "ToolStrip1"
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(233, Byte), Integer))
-        Me.Label6.Font = New System.Drawing.Font("Verdana", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label6.Location = New System.Drawing.Point(16, 14)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(165, 29)
-        Me.Label6.TabIndex = 128
-        Me.Label6.Text = "PLANTELES"
         '
         'GroupBox2
         '
@@ -314,12 +164,40 @@ Partial Class FrmPlanteles
         Me.GroupBox2.Controls.Add(Me.BtnBuscarVehiculo)
         Me.GroupBox2.Controls.Add(Me.Label5)
         Me.GroupBox2.Controls.Add(Me.CmbUbicacion)
-        Me.GroupBox2.Location = New System.Drawing.Point(1025, 66)
+        Me.GroupBox2.Location = New System.Drawing.Point(14, 51)
+        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(2)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(534, 121)
+        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(2)
+        Me.GroupBox2.Size = New System.Drawing.Size(356, 86)
         Me.GroupBox2.TabIndex = 129
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Selecciona Plantel Global"
+        '
+        'LblPlantelFijado
+        '
+        Me.LblPlantelFijado.AutoSize = True
+        Me.LblPlantelFijado.BackColor = System.Drawing.Color.Transparent
+        Me.LblPlantelFijado.Font = New System.Drawing.Font("Verdana", 7.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblPlantelFijado.ForeColor = System.Drawing.Color.Black
+        Me.LblPlantelFijado.Location = New System.Drawing.Point(105, 55)
+        Me.LblPlantelFijado.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblPlantelFijado.Name = "LblPlantelFijado"
+        Me.LblPlantelFijado.Size = New System.Drawing.Size(10, 12)
+        Me.LblPlantelFijado.TabIndex = 56
+        Me.LblPlantelFijado.Text = "-"
+        '
+        'BtnBuscarVehiculo
+        '
+        Me.BtnBuscarVehiculo.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnBuscarVehiculo.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnBuscarVehiculo.Image = Global.Formularios.My.Resources.Resources.bloquear__1_
+        Me.BtnBuscarVehiculo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnBuscarVehiculo.Location = New System.Drawing.Point(300, 25)
+        Me.BtnBuscarVehiculo.Name = "BtnBuscarVehiculo"
+        Me.BtnBuscarVehiculo.Size = New System.Drawing.Size(32, 29)
+        Me.BtnBuscarVehiculo.TabIndex = 181
+        Me.BtnBuscarVehiculo.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnBuscarVehiculo.UseVisualStyleBackColor = True
         '
         'Label5
         '
@@ -327,10 +205,10 @@ Partial Class FrmPlanteles
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label5.Location = New System.Drawing.Point(54, 49)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label5.Location = New System.Drawing.Point(36, 32)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(93, 22)
+        Me.Label5.Size = New System.Drawing.Size(62, 14)
         Me.Label5.TabIndex = 180
         Me.Label5.Text = "Plantel :"
         '
@@ -391,65 +269,51 @@ Partial Class FrmPlanteles
         Me.CmbUbicacion.DisplayLayout.ScrollStyle = Infragistics.Win.UltraWinGrid.ScrollStyle.Immediate
         Me.CmbUbicacion.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy
         Me.CmbUbicacion.DropDownStyle = Infragistics.Win.UltraWinGrid.UltraComboStyle.DropDownList
-        Me.CmbUbicacion.Location = New System.Drawing.Point(152, 46)
-        Me.CmbUbicacion.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.CmbUbicacion.Location = New System.Drawing.Point(101, 30)
         Me.CmbUbicacion.Name = "CmbUbicacion"
-        Me.CmbUbicacion.Size = New System.Drawing.Size(267, 29)
+        Me.CmbUbicacion.Size = New System.Drawing.Size(178, 22)
         Me.CmbUbicacion.TabIndex = 179
         '
-        'BtnBuscarVehiculo
+        'ToolStrip1
         '
-        Me.BtnBuscarVehiculo.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BtnBuscarVehiculo.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnBuscarVehiculo.Image = Global.Formularios.My.Resources.Resources.bloquear__1_
-        Me.BtnBuscarVehiculo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnBuscarVehiculo.Location = New System.Drawing.Point(450, 38)
-        Me.BtnBuscarVehiculo.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.BtnBuscarVehiculo.Name = "BtnBuscarVehiculo"
-        Me.BtnBuscarVehiculo.Size = New System.Drawing.Size(48, 45)
-        Me.BtnBuscarVehiculo.TabIndex = 181
-        Me.BtnBuscarVehiculo.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.BtnBuscarVehiculo.UseVisualStyleBackColor = True
+        Me.ToolStrip1.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.ToolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.ToolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
+        Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnNuevo, Me.BtnEditar, Me.BtnExportarBtnMandarCamalprocontrolverracos, Me.btnCerrar})
+        Me.ToolStrip1.Location = New System.Drawing.Point(0, 156)
+        Me.ToolStrip1.Margin = New System.Windows.Forms.Padding(2)
+        Me.ToolStrip1.Name = "ToolStrip1"
+        Me.ToolStrip1.Padding = New System.Windows.Forms.Padding(0, 0, 2, 0)
+        Me.ToolStrip1.Size = New System.Drawing.Size(1187, 38)
+        Me.ToolStrip1.TabIndex = 52
+        Me.ToolStrip1.Text = "ToolStrip1"
         '
-        'btnEditarCtubicacion
+        'BtnNuevo
         '
-        Me.btnEditarCtubicacion.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnEditarCtubicacion.ForeColor = System.Drawing.Color.White
-        Me.btnEditarCtubicacion.Image = Global.Formularios.My.Resources.Resources.editar
-        Me.btnEditarCtubicacion.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.btnEditarCtubicacion.Margin = New System.Windows.Forms.Padding(5)
-        Me.btnEditarCtubicacion.Name = "btnEditarCtubicacion"
-        Me.btnEditarCtubicacion.Padding = New System.Windows.Forms.Padding(2)
-        Me.btnEditarCtubicacion.Size = New System.Drawing.Size(98, 30)
-        Me.btnEditarCtubicacion.Text = "Editar"
-        Me.btnEditarCtubicacion.ToolTipText = "Editar"
+        Me.BtnNuevo.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnNuevo.ForeColor = System.Drawing.Color.White
+        Me.BtnNuevo.Image = Global.Formularios.My.Resources.Resources.nuevo
+        Me.BtnNuevo.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BtnNuevo.Margin = New System.Windows.Forms.Padding(5)
+        Me.BtnNuevo.Name = "BtnNuevo"
+        Me.BtnNuevo.Padding = New System.Windows.Forms.Padding(2)
+        Me.BtnNuevo.Size = New System.Drawing.Size(81, 28)
+        Me.BtnNuevo.Text = "Nuevo "
+        Me.BtnNuevo.ToolTipText = "Nuevo "
         '
-        'btnCancelar
+        'BtnEditar
         '
-        Me.btnCancelar.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCancelar.ForeColor = System.Drawing.Color.White
-        Me.btnCancelar.Image = Global.Formularios.My.Resources.Resources.cancelar
-        Me.btnCancelar.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.btnCancelar.Margin = New System.Windows.Forms.Padding(5)
-        Me.btnCancelar.Name = "btnCancelar"
-        Me.btnCancelar.Padding = New System.Windows.Forms.Padding(2)
-        Me.btnCancelar.Size = New System.Drawing.Size(126, 30)
-        Me.btnCancelar.Text = "Cancelar"
-        Me.btnCancelar.ToolTipText = "Cancelar"
-        Me.btnCancelar.Visible = False
-        '
-        'btnGuardarCtubicacion
-        '
-        Me.btnGuardarCtubicacion.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnGuardarCtubicacion.ForeColor = System.Drawing.Color.White
-        Me.btnGuardarCtubicacion.Image = Global.Formularios.My.Resources.Resources.guardar
-        Me.btnGuardarCtubicacion.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.btnGuardarCtubicacion.Margin = New System.Windows.Forms.Padding(5)
-        Me.btnGuardarCtubicacion.Name = "btnGuardarCtubicacion"
-        Me.btnGuardarCtubicacion.Padding = New System.Windows.Forms.Padding(2)
-        Me.btnGuardarCtubicacion.Size = New System.Drawing.Size(121, 30)
-        Me.btnGuardarCtubicacion.Text = "Guardar"
-        Me.btnGuardarCtubicacion.ToolTipText = "Guardar"
+        Me.BtnEditar.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnEditar.ForeColor = System.Drawing.Color.White
+        Me.BtnEditar.Image = Global.Formularios.My.Resources.Resources.editar
+        Me.BtnEditar.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BtnEditar.Margin = New System.Windows.Forms.Padding(5)
+        Me.BtnEditar.Name = "BtnEditar"
+        Me.BtnEditar.Padding = New System.Windows.Forms.Padding(2)
+        Me.BtnEditar.Size = New System.Drawing.Size(74, 28)
+        Me.BtnEditar.Text = "Editar"
+        Me.BtnEditar.ToolTipText = "Editar"
         '
         'btnCerrar
         '
@@ -460,68 +324,70 @@ Partial Class FrmPlanteles
         Me.btnCerrar.Margin = New System.Windows.Forms.Padding(5)
         Me.btnCerrar.Name = "btnCerrar"
         Me.btnCerrar.Padding = New System.Windows.Forms.Padding(2)
-        Me.btnCerrar.Size = New System.Drawing.Size(84, 30)
+        Me.btnCerrar.Size = New System.Drawing.Size(66, 28)
         Me.btnCerrar.Text = "Salir"
         Me.btnCerrar.ToolTipText = "Cerrar"
         '
-        'LblPlantelFijado
+        'Label6
         '
-        Me.LblPlantelFijado.AutoSize = True
-        Me.LblPlantelFijado.BackColor = System.Drawing.Color.Transparent
-        Me.LblPlantelFijado.Font = New System.Drawing.Font("Verdana", 7.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblPlantelFijado.ForeColor = System.Drawing.Color.Black
-        Me.LblPlantelFijado.Location = New System.Drawing.Point(157, 84)
-        Me.LblPlantelFijado.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
-        Me.LblPlantelFijado.Name = "LblPlantelFijado"
-        Me.LblPlantelFijado.Size = New System.Drawing.Size(15, 17)
-        Me.LblPlantelFijado.TabIndex = 56
-        Me.LblPlantelFijado.Text = "-"
+        Me.Label6.AutoSize = True
+        Me.Label6.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.Label6.Font = New System.Drawing.Font("Verdana", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.Label6.Location = New System.Drawing.Point(11, 17)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(110, 18)
+        Me.Label6.TabIndex = 128
+        Me.Label6.Text = "PLANTELES"
+        '
+        'BtnExportarBtnMandarCamalprocontrolverracos
+        '
+        Me.BtnExportarBtnMandarCamalprocontrolverracos.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnExportarBtnMandarCamalprocontrolverracos.ForeColor = System.Drawing.Color.White
+        Me.BtnExportarBtnMandarCamalprocontrolverracos.Image = Global.Formularios.My.Resources.Resources.exportar2
+        Me.BtnExportarBtnMandarCamalprocontrolverracos.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BtnExportarBtnMandarCamalprocontrolverracos.Margin = New System.Windows.Forms.Padding(5)
+        Me.BtnExportarBtnMandarCamalprocontrolverracos.Name = "BtnExportarBtnMandarCamalprocontrolverracos"
+        Me.BtnExportarBtnMandarCamalprocontrolverracos.Padding = New System.Windows.Forms.Padding(2)
+        Me.BtnExportarBtnMandarCamalprocontrolverracos.Size = New System.Drawing.Size(92, 28)
+        Me.BtnExportarBtnMandarCamalprocontrolverracos.Text = "Exportar"
+        Me.BtnExportarBtnMandarCamalprocontrolverracos.ToolTipText = "Exportar"
         '
         'FrmPlanteles
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1780, 1117)
+        Me.ClientSize = New System.Drawing.Size(1187, 690)
         Me.Controls.Add(Me.dtgListado)
         Me.Controls.Add(Me.Panel2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "FrmPlanteles"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "MANTENIMIENTO DE PLANTELES"
         CType(Me.dtgListado, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
-        CType(Me.NumChanchillas, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.ToolStrip1.ResumeLayout(False)
-        Me.ToolStrip1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         CType(Me.CmbUbicacion, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ToolStrip1.ResumeLayout(False)
+        Me.ToolStrip1.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents dtgListado As Infragistics.Win.UltraWinGrid.UltraGrid
     Friend WithEvents Panel2 As Panel
-    Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents LblDensidad As Label
-    Friend WithEvents TxtDensidad As TextBox
-    Friend WithEvents txtDescripcion As TextBox
-    Friend WithEvents Label4 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents txtCodigo As TextBox
     Friend WithEvents ToolStrip1 As ToolStrip
-    Friend WithEvents btnCancelar As ToolStripButton
-    Friend WithEvents btnGuardarCtubicacion As ToolStripButton
     Friend WithEvents btnCerrar As ToolStripButton
     Friend WithEvents Label6 As Label
-    Friend WithEvents btnEditarCtubicacion As ToolStripButton
-    Friend WithEvents NumChanchillas As NumericUpDown
-    Friend WithEvents Label1 As Label
+    Friend WithEvents BtnEditar As ToolStripButton
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents Label5 As Label
     Friend WithEvents CmbUbicacion As Infragistics.Win.UltraWinGrid.UltraCombo
     Friend WithEvents BtnBuscarVehiculo As Button
     Friend WithEvents LblPlantelFijado As Label
+    Friend WithEvents BtnNuevo As ToolStripButton
+    Friend WithEvents BtnExportarBtnMandarCamalprocontrolverracos As ToolStripButton
 End Class

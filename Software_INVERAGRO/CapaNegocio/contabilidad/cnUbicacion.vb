@@ -9,11 +9,15 @@ Public Class cnUbicacion
     End Function
 
     Public Function Cn_MantenimientoPlanteles(ByRef obj As coUbicacion) As String
-        Return cls_at.Cd_MantenimientoPlanteles("[w_pa_mant_ubicacion]", obj)
+        Return cls_at.Cd_MantenimientoPlanteles("[w_pa_mant_ubicacion_v2]", obj)
     End Function
 
     Public Function Cn_Consultar(obj As coUbicacion) As DataTable
         Return cls_at.Cd_Consultar("[w_pa_cons_ubicacion]", obj)
+    End Function
+
+    Public Function Cn_ConsultarxId(obj As coUbicacion) As DataTable
+        Return cls_at.Cd_ConsultarxId("[w_pa_cons_ubicacion_x_id]", obj)
     End Function
 
     Public Function Cn_ConsultarPlanteles() As DataTable
