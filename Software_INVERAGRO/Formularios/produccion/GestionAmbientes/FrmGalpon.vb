@@ -5,51 +5,12 @@ Imports Infragistics.Win
 Public Class FrmGalpon
     Dim cn As New cnGalpon
     Private _CodGalpon As Integer
-    Dim _Operacion As Integer
 
-    Sub Nuevo()
-        _Operacion = 0
-        Cambio()
-        limpiar()
-    End Sub
-
-    Sub limpiar()
-        txtCodigo.Text = ""
-        txtDescripcion.Text = ""
-        txtDescripcion.Select()
-        _CodGalpon = 0
-    End Sub
-
-    Sub Cambio()
-        btnNuevoPgal.Visible = False
-        btnEditarPgal.Visible = False
-        btnGuardarPgal.Visible = True
-        btnCancelar.Visible = True
-        txtDescripcion.Enabled = True
-        cmbUbicacion.Enabled = True
-        cmbArea.Enabled = True
-    End Sub
-    Sub Cancelar()
-        btnNuevoPgal.Visible = True
-        btnEditarPgal.Visible = True
-        btnGuardarPgal.Visible = False
-        btnCancelar.Visible = False
-        txtCodigo.Clear()
-        txtCodigo.Enabled = False
-        txtDescripcion.Clear()
-        txtDescripcion.Enabled = False
-        cmbUbicacion.Enabled = False
-        cmbArea.Enabled = False
-        CkxEsEmbarcadero.Checked = False
-    End Sub
     Private Sub FrmGalpon_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
-            Cancelar()
             ListarPlanteles()
-            ListarAreas()
             clsBasicas.Formato_Tablas_Grid(dtgListado)
             clsBasicas.Filtrar_Tabla(dtgListado, True)
-            Consultar()
         Catch ex As Exception
             clsBasicas.controlException(Name, ex)
         End Try
@@ -71,69 +32,19 @@ Public Class FrmGalpon
         End With
     End Sub
 
-    Sub ListarAreas()
-        Dim cn As New cnArea
-        Dim tb As New DataTable
-        tb = cn.Cn_Listar().Copy
-        tb.TableName = "tmp"
-        tb.Columns(1).ColumnName = "Seleccione una Área"
-        With cmbArea
-            .DataSource = tb
-            .DisplayMember = tb.Columns(1).ColumnName
-            .ValueMember = tb.Columns(0).ColumnName
-            If (tb.Rows.Count > 0) Then
-                .Value = tb.Rows(0)(0)
-            End If
-        End With
-    End Sub
-
-    Sub Mantenimiento()
-        Try
-            Dim _mensaje As String = ""
-            If (_Operacion = 1 OrElse _Operacion = 2) AndAlso (txtCodigo.Text = "" OrElse txtCodigo.Text.Length = 0) Then
-                msj_advert(MensajesSistema.mensajesGenerales("SELECCIONE_REGISTRO"))
-                Return
-            End If
-            If (_Operacion = 0 OrElse _Operacion = 1) AndAlso (txtDescripcion.Text = "" OrElse txtDescripcion.Text.Length = 0) Then
-                msj_advert("Descripción no Valida")
-                Return
-            End If
-
-            If (MessageBox.Show("¿ESTÁ SEGURO DE ESTA ACCIÓN?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.No) Then
-                Return
-            End If
-
-            Dim obj As New coGalpon With {
-                .Operacion = _Operacion,
-                .Codigo = _CodGalpon,
-                .Descripcion = txtDescripcion.Text,
-                .IdArea = cmbArea.Value,
-                .IdUbicacion = cmbUbicacion.Value,
-                .EsEmbarcadero = If(CkxEsEmbarcadero.Checked, "SI", "NO")
-            }
-
-            _mensaje = cn.Cn_Mantenimiento(obj)
-            If (obj.Coderror = 0) Then
-                msj_ok(_mensaje)
-                Cancelar()
-                Consultar()
-            Else
-                msj_advert(_mensaje)
-            End If
-        Catch ex As Exception
-            clsBasicas.controlException(Name, ex)
-        End Try
-    End Sub
-
     Sub Consultar()
         Dim obj As New coGalpon With {
             .Descripcion = "",
-            .IdUbicacion = Nothing
+            .IdUbicacion = If(CkxTodos.Checked, Nothing, cmbUbicacion.Value)
         }
         dtgListado.DataSource = cn.Cn_Consultar(obj)
         dtgListado.DisplayLayout.Bands(0).Columns("Codigo").Hidden = True
         dtgListado.DisplayLayout.Bands(0).Columns("esEmbarcadero").Hidden = True
         Colorear()
+    End Sub
+
+    Private Sub CkxTodos_CheckedChanged(sender As Object, e As EventArgs) Handles CkxTodos.CheckedChanged
+        Consultar()
     End Sub
 
     Sub Colorear()
@@ -151,42 +62,9 @@ Public Class FrmGalpon
 
             'centrar columnas
             With dtgListado.DisplayLayout.Bands(0)
-                .Columns(nombreGalpon).CellAppearance.TextHAlign = HAlign.Center
                 .Columns(estadoCapacidad).CellAppearance.TextHAlign = HAlign.Center
             End With
         End If
-    End Sub
-
-    Private Sub btnNuevo_Click(sender As Object, e As EventArgs) Handles btnNuevoPgal.Click
-        Nuevo()
-    End Sub
-
-    Private Sub btnEditar_Click(sender As Object, e As EventArgs) Handles btnEditarPgal.Click
-        If (dtgListado.Rows.Count > 0) Then
-            If (dtgListado.ActiveRow.Cells(0).Value.ToString.Length <> 0) Then
-                _Operacion = 1
-                Cambio()
-                _CodGalpon = CInt(dtgListado.DisplayLayout.ActiveRow.Cells("Codigo").Value.ToString)
-                txtCodigo.Text = _CodGalpon.ToString
-                txtDescripcion.Text = dtgListado.DisplayLayout.ActiveRow.Cells("Galpón").Value.ToString.Replace("- EMBARCADERO", "").Trim()
-                txtDescripcion.Focus()
-                cmbUbicacion.Text = dtgListado.DisplayLayout.ActiveRow.Cells("Plantel").Value.ToString
-                cmbArea.Text = dtgListado.DisplayLayout.ActiveRow.Cells("Área").Value.ToString
-                CkxEsEmbarcadero.Checked = dtgListado.DisplayLayout.ActiveRow.Cells("esEmbarcadero").Value.ToString = "SI"
-            Else
-                msj_advert(MensajesSistema.mensajesGenerales("SELECCIONE_REGISTRO"))
-            End If
-        Else
-            msj_advert("Seleccione un Registro")
-        End If
-    End Sub
-
-    Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
-        Cancelar()
-    End Sub
-
-    Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardarPgal.Click
-        Mantenimiento()
     End Sub
 
     Private Sub dtgListado_InitializeLayout(sender As Object, e As UltraWinGrid.InitializeLayoutEventArgs) Handles dtgListado.InitializeLayout
@@ -199,6 +77,94 @@ Public Class FrmGalpon
         Catch ex As Exception
             clsBasicas.controlException(Name, ex)
         End Try
+    End Sub
+
+    Private Sub btnNuevoPgal_Click(sender As Object, e As EventArgs) Handles btnNuevoPgal.Click
+        Try
+            Dim frm As New FrmMantenimientoGalpon With {
+                ._IdGalpon = 0
+            }
+            frm.ShowDialog()
+            Consultar()
+        Catch ex As Exception
+            clsBasicas.controlException(Name, ex)
+        End Try
+    End Sub
+
+    Private Sub btnEditarPgal_Click(sender As Object, e As EventArgs) Handles btnEditarPgal.Click
+        Try
+            Dim activeRow As Infragistics.Win.UltraWinGrid.UltraGridRow = dtgListado.ActiveRow
+            If (dtgListado.Rows.Count > 0) Then
+                If (activeRow.Cells(0).Value.ToString.Length <> 0) Then
+                    Dim idGalpon As Integer = CInt(activeRow.Cells("Codigo").Value)
+
+                    Dim frm As New FrmMantenimientoGalpon With {
+                        ._IdGalpon = idGalpon
+                    }
+                    frm.ShowDialog()
+                    Consultar()
+                Else
+                    msj_advert(MensajesSistema.mensajesGenerales("SELECCIONE_REGISTRO"))
+                End If
+            Else
+                msj_advert(MensajesSistema.mensajesGenerales("SELECCIONE_REGISTRO"))
+            End If
+        Catch ex As Exception
+            clsBasicas.controlException(Name, ex)
+        End Try
+    End Sub
+
+    Private Sub BtnEliminar_Click(sender As Object, e As EventArgs) Handles BtnEliminar.Click
+        Try
+            Dim activeRow As Infragistics.Win.UltraWinGrid.UltraGridRow = dtgListado.ActiveRow
+            If (dtgListado.Rows.Count > 0) Then
+                If (activeRow.Cells(0).Value.ToString.Length <> 0) Then
+                    If (MessageBox.Show("¿ESTÁ SEGURO DE ELIMINAR ESTE GALPÓN?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.No) Then
+                        Return
+                    End If
+
+                    Dim obj As New coGalpon With {
+                        .Operacion = 2, 'Eliminar
+                        .Codigo = activeRow.Cells(0).Value.ToString(),
+                        .Descripcion = "",
+                        .IdUbicacion = cmbUbicacion.Value,
+                        .IdArea = cmbArea.Value,
+                        .EsEmbarcadero = "NO"
+                    }
+
+                    Dim MensajeBgWk As String = cn.Cn_Mantenimiento(obj)
+                    If (obj.Coderror = 0) Then
+                        msj_ok(MensajeBgWk)
+                        Consultar()
+                    Else
+                        msj_advert(MensajeBgWk)
+                    End If
+                Else
+                    msj_advert(MensajesSistema.mensajesGenerales("SELECCIONE_REGISTRO"))
+                End If
+            Else
+                msj_advert(MensajesSistema.mensajesGenerales("SELECCIONE_REGISTRO"))
+            End If
+        Catch ex As Exception
+            clsBasicas.controlException(Name, ex)
+        End Try
+    End Sub
+
+    Private Sub BtnExportarBtnMandarCamalprocontrolverracos_Click(sender As Object, e As EventArgs) Handles BtnExportarBtnMandarCamalprocontrolverracos.Click
+        Try
+            If (dtgListado.Rows.Count = 0) Then
+                msj_advert(MensajesSistema.mensajesGenerales("SIN_RESULTADOS"))
+                Return
+            Else
+                clsBasicas.ExportarExcel("REPORTE GALPONES", dtgListado)
+            End If
+        Catch ex As Exception
+            clsBasicas.controlException(Name, ex)
+        End Try
+    End Sub
+
+    Private Sub cmbUbicacion_ValueChanged(sender As Object, e As EventArgs) Handles cmbUbicacion.ValueChanged
+        Consultar()
     End Sub
 
     Private Sub btnCerrar_Click(sender As Object, e As EventArgs) Handles btnCerrar.Click

@@ -1,17 +1,16 @@
-﻿Imports CapaNegocio
+﻿Imports System.ComponentModel
+Imports CapaNegocio
 Imports CapaObjetos
 Imports Infragistics.Win
 
-Public Class FrmCronogramaEngordeVT
+Public Class FrmCronogramaGestacion
     Dim cn As New cnControlMedico
     Dim tbtmp As New DataTable
     Public idUbicacion As Integer = 0
 
-    Private Sub FrmCronogramaEngordeVT_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub FrmCronogramaGestacion_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
             Inicializar()
-            ListarCampañas()
-            ListarLotes()
             Consultar()
         Catch ex As Exception
             clsBasicas.controlException(Name, ex)
@@ -19,55 +18,11 @@ Public Class FrmCronogramaEngordeVT
     End Sub
 
     Private Sub Inicializar()
+        Me.KeyPreview = True
         clsBasicas.LlenarComboAnios(CmbAnios)
+        NumLote.Value = clsBasicas.ObtenerNumeroSemanaFecha(DateTime.Now)
         Ptbx_Cargando.Visible = True
-        clsBasicas.Filtrar_Tabla(dtgListado, True)
         clsBasicas.Formato_Tablas_Grid(dtgListado)
-    End Sub
-
-    Sub ListarCampañas()
-        Dim cn As New cnUbicacion
-        Dim tb As New DataTable
-        Dim obj As New coUbicacion With {
-            .Codigo = idUbicacion,
-            .Anio = CmbAnios.Text
-        }
-        tb = cn.Cn_ListarCampañas(obj).Copy
-        tb.TableName = "tmp"
-        tb.Columns(1).ColumnName = "Seleccione un Plantel"
-        With CmbCampaña
-            .DataSource = tb
-            .DisplayMember = tb.Columns(1).ColumnName
-            .ValueMember = tb.Columns(0).ColumnName
-            If (tb.Rows.Count > 0) Then
-                .Value = tb.Rows(0)(0)
-            End If
-        End With
-    End Sub
-
-    Sub ListarLotes()
-        Dim tb As New DataTable
-        Dim obj As New coControlMedico With {
-            .Codigo = CmbCampaña.Value
-        }
-        tb = cn.Cn_ConsultarLotesSanidad(obj).Copy
-        tb.TableName = "tmp"
-        tb.Columns(1).ColumnName = "Seleccione un Plantel"
-        With CmbLote
-            .DataSource = tb
-            .DisplayMember = tb.Columns(1).ColumnName
-            .ValueMember = tb.Columns(0).ColumnName
-            If (tb.Rows.Count > 0) Then
-                .Value = tb.Rows(0)(0)
-            End If
-        End With
-    End Sub
-
-    Private Sub CmbCampaña_TextChanged(sender As Object, e As EventArgs) Handles CmbCampaña.TextChanged
-        If CmbLote Is Nothing OrElse CmbLote.Value Is Nothing OrElse String.IsNullOrEmpty(CmbLote.Text) Then
-            Return
-        End If
-        ListarLotes()
     End Sub
 
     Private Sub BloquearControladores()
@@ -84,11 +39,16 @@ Public Class FrmCronogramaEngordeVT
 
     Sub Consultar()
         If Not BackgroundWorker1.IsBusy Then
-            BloquearControladores()
+            Ptbx_Cargando.Visible = True
+            ToolStrip1.Enabled = False
+            Dim intervalo As (Date, Date) = clsBasicas.ObtenerIntervaloSemana(CmbAnios.Text, NumLote.Value)
+            LblPeriodo.Text = clsBasicas.ObtenerPeriodoDeSemana(CmbAnios.Text, NumLote.Value)
 
             Dim obj As New coControlMedico With {
-                .IdLote = CmbLote.Value,
-                .Codigo = CmbCampaña.Value
+                .NumSemana = NumLote.Value,
+                .FechaInicio = intervalo.Item1,
+                .FechaFin = intervalo.Item2,
+                .IdUbicacion = idUbicacion
             }
 
             BackgroundWorker1.RunWorkerAsync(obj)
@@ -98,7 +58,7 @@ Public Class FrmCronogramaEngordeVT
     Private Sub BackgroundWorker1_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorker1.DoWork
         Try
             Dim obj As coControlMedico = CType(e.Argument, coControlMedico)
-            tbtmp = cn.Cn_CronogramaVacEngorde(obj).Copy
+            tbtmp = cn.Cn_CronogramaVacGestacion(obj).Copy
             tbtmp.TableName = "tmp"
             e.Result = tbtmp
         Catch ex As Exception
@@ -140,13 +100,19 @@ Public Class FrmCronogramaEngordeVT
         End If
     End Sub
 
-    Private Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
-        Try
-            Consultar()
-        Catch ex As Exception
-            clsBasicas.controlException(Name, ex)
-        End Try
+    Private Sub NumLote_ValueChanged(sender As Object, e As EventArgs) Handles NumLote.ValueChanged
+        If CmbAnios.Text = "" Or NumLote.Value = 0 Then
+            LblPeriodo.Text = ""
+            Return
+        End If
+
+        LblPeriodo.Text = clsBasicas.ObtenerPeriodoDeSemana(CmbAnios.Text, NumLote.Value)
     End Sub
+
+    Private Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
+        Consultar()
+    End Sub
+
 
     Private Sub btnCerrar_Click(sender As Object, e As EventArgs) Handles btnCerrar.Click
         Dispose()

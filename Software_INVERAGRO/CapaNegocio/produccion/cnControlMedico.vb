@@ -64,7 +64,11 @@ Public Class cnControlMedico
         Return cls_at.Cd_ConsultarLotesSanidad("[w_pa_lotecampaña_x_campaña]", obj)
     End Function
 
-    Public Function Cn_ConsultarCumplimientoVacunacion(ByRef obj As coControlMedico) As DataTable
-        Return cls_at.Cd_ConsultarCumplimientoVacunacion("[w_pa_cumplimiento_vacunacion]", obj)
+    Public Function Cn_CronogramaVacEngorde(ByRef obj As coControlMedico) As DataTable
+        Return cls_at.Cd_CronogramaVacEngorde("[w_pa_cumplimiento_vacunacion]", obj)
+    End Function
+
+    Public Function Cn_CronogramaVacGestacion(ByRef obj As coControlMedico) As DataTable
+        Return cls_at.Cd_CronogramaVacGestacion("[w_pa_cons_cronograma_gestacion]", obj)
     End Function
 End Class

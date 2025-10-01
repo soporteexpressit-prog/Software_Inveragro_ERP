@@ -404,7 +404,7 @@ Public Class cdControlMedico
         Return ds
     End Function
 
-    Public Function Cd_ConsultarCumplimientoVacunacion(name As String, obj As coControlMedico) As DataTable
+    Public Function Cd_CronogramaVacEngorde(name As String, obj As coControlMedico) As DataTable
         Dim ds As New DataTable
         Try
             con.Abrir()
@@ -412,6 +412,24 @@ Public Class cdControlMedico
             da.SelectCommand.CommandType = 4
             da.SelectCommand.Parameters.AddWithValue("@idCampaña", obj.Codigo)
             da.SelectCommand.Parameters.AddWithValue("@idLote", obj.IdLote)
+            da.Fill(ds)
+        Catch ex As Exception
+            Throw ex
+        End Try
+        con.Salir()
+        Return ds
+    End Function
+
+    Public Function Cd_CronogramaVacGestacion(name As String, obj As coControlMedico) As DataTable
+        Dim ds As New DataTable
+        Try
+            con.Abrir()
+            Dim da As New SqlDataAdapter(name, con.con)
+            da.SelectCommand.CommandType = 4
+            da.SelectCommand.Parameters.AddWithValue("@idUbicacion", obj.IdUbicacion)
+            da.SelectCommand.Parameters.AddWithValue("@fechaDesde", obj.FechaInicio)
+            da.SelectCommand.Parameters.AddWithValue("@fechaHasta", obj.FechaFin)
+            da.SelectCommand.Parameters.AddWithValue("@numSemana", obj.NumSemana)
             da.Fill(ds)
         Catch ex As Exception
             Throw ex

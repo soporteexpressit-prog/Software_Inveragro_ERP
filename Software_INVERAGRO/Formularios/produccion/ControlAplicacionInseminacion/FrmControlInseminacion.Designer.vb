@@ -41,6 +41,8 @@ Partial Class FrmControlInseminacion
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
@@ -60,8 +62,6 @@ Partial Class FrmControlInseminacion
         Me.Ptbx_Cargando = New System.Windows.Forms.PictureBox()
         Me.dtgListado = New Infragistics.Win.UltraWinGrid.UltraGrid()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
         Me.Panel2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         CType(Me.NumLote, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -79,9 +79,9 @@ Partial Class FrmControlInseminacion
         Me.Panel2.Controls.Add(Me.LblPlantel)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(2, 1, 2, 1)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1879, 347)
+        Me.Panel2.Size = New System.Drawing.Size(1253, 226)
         Me.Panel2.TabIndex = 9
         '
         'Label6
@@ -90,9 +90,10 @@ Partial Class FrmControlInseminacion
         Me.Label6.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(233, Byte), Integer))
         Me.Label6.Font = New System.Drawing.Font("Verdana", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(49, Byte), Integer))
-        Me.Label6.Location = New System.Drawing.Point(65, 44)
+        Me.Label6.Location = New System.Drawing.Point(43, 29)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(757, 29)
+        Me.Label6.Size = New System.Drawing.Size(506, 18)
         Me.Label6.TabIndex = 128
         Me.Label6.Text = "CONTROL DE SERVICIOS Y PÉRDIDAS REPRODUCTIVAS"
         '
@@ -112,12 +113,40 @@ Partial Class FrmControlInseminacion
         Me.GroupBox1.Controls.Add(Me.btnBuscar)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label3)
-        Me.GroupBox1.Location = New System.Drawing.Point(54, 106)
+        Me.GroupBox1.Location = New System.Drawing.Point(36, 69)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(1798, 159)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox1.Size = New System.Drawing.Size(1199, 103)
         Me.GroupBox1.TabIndex = 170
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Filtros de Búsquedas"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.Label1.Location = New System.Drawing.Point(1027, 81)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(87, 14)
+        Me.Label1.TabIndex = 191
+        Me.Label1.Text = "MORTALIDAD"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.BackColor = System.Drawing.Color.Red
+        Me.Label4.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.Red
+        Me.Label4.Location = New System.Drawing.Point(1003, 81)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(13, 14)
+        Me.Label4.TabIndex = 190
+        Me.Label4.Text = "-"
         '
         'Label17
         '
@@ -125,10 +154,10 @@ Partial Class FrmControlInseminacion
         Me.Label17.BackColor = System.Drawing.Color.Transparent
         Me.Label17.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label17.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label17.Location = New System.Drawing.Point(1541, 90)
-        Me.Label17.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label17.Location = New System.Drawing.Point(1027, 58)
+        Me.Label17.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(85, 22)
+        Me.Label17.Size = New System.Drawing.Size(58, 14)
         Me.Label17.TabIndex = 189
         Me.Label17.Text = "ABORTO"
         '
@@ -138,10 +167,10 @@ Partial Class FrmControlInseminacion
         Me.Label16.BackColor = System.Drawing.Color.LightSalmon
         Me.Label16.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label16.ForeColor = System.Drawing.Color.LightSalmon
-        Me.Label16.Location = New System.Drawing.Point(1505, 90)
-        Me.Label16.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label16.Location = New System.Drawing.Point(1003, 58)
+        Me.Label16.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(19, 22)
+        Me.Label16.Size = New System.Drawing.Size(13, 14)
         Me.Label16.TabIndex = 188
         Me.Label16.Text = "-"
         '
@@ -151,10 +180,10 @@ Partial Class FrmControlInseminacion
         Me.Label13.BackColor = System.Drawing.Color.LightYellow
         Me.Label13.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label13.ForeColor = System.Drawing.Color.LightYellow
-        Me.Label13.Location = New System.Drawing.Point(1505, 57)
-        Me.Label13.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label13.Location = New System.Drawing.Point(1003, 37)
+        Me.Label13.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(19, 22)
+        Me.Label13.Size = New System.Drawing.Size(13, 14)
         Me.Label13.TabIndex = 187
         Me.Label13.Text = "-"
         '
@@ -164,10 +193,10 @@ Partial Class FrmControlInseminacion
         Me.Label12.BackColor = System.Drawing.Color.LightGray
         Me.Label12.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label12.ForeColor = System.Drawing.Color.LightGray
-        Me.Label12.Location = New System.Drawing.Point(1505, 22)
-        Me.Label12.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label12.Location = New System.Drawing.Point(1003, 14)
+        Me.Label12.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(19, 22)
+        Me.Label12.Size = New System.Drawing.Size(13, 14)
         Me.Label12.TabIndex = 186
         Me.Label12.Text = "-"
         '
@@ -177,10 +206,10 @@ Partial Class FrmControlInseminacion
         Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label7.Location = New System.Drawing.Point(1541, 57)
-        Me.Label7.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label7.Location = New System.Drawing.Point(1027, 37)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(177, 22)
+        Me.Label7.Size = New System.Drawing.Size(122, 14)
         Me.Label7.TabIndex = 185
         Me.Label7.Text = "REPETICIÓN CELO"
         '
@@ -190,10 +219,10 @@ Partial Class FrmControlInseminacion
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label5.Location = New System.Drawing.Point(1541, 22)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label5.Location = New System.Drawing.Point(1027, 14)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(142, 22)
+        Me.Label5.Size = New System.Drawing.Size(97, 14)
         Me.Label5.TabIndex = 184
         Me.Label5.Text = "FALSA PREÑEZ"
         '
@@ -203,10 +232,10 @@ Partial Class FrmControlInseminacion
         Me.LblPeriodo.BackColor = System.Drawing.Color.Transparent
         Me.LblPeriodo.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblPeriodo.ForeColor = System.Drawing.Color.Black
-        Me.LblPeriodo.Location = New System.Drawing.Point(50, 110)
-        Me.LblPeriodo.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.LblPeriodo.Location = New System.Drawing.Point(33, 72)
+        Me.LblPeriodo.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblPeriodo.Name = "LblPeriodo"
-        Me.LblPeriodo.Size = New System.Drawing.Size(18, 22)
+        Me.LblPeriodo.Size = New System.Drawing.Size(12, 14)
         Me.LblPeriodo.TabIndex = 181
         Me.LblPeriodo.Text = "-"
         '
@@ -214,19 +243,21 @@ Partial Class FrmControlInseminacion
         '
         Me.CmbAnios.Font = New System.Drawing.Font("Verdana", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CmbAnios.FormattingEnabled = True
-        Me.CmbAnios.Location = New System.Drawing.Point(126, 47)
+        Me.CmbAnios.Location = New System.Drawing.Point(84, 28)
+        Me.CmbAnios.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.CmbAnios.Name = "CmbAnios"
-        Me.CmbAnios.Size = New System.Drawing.Size(198, 34)
+        Me.CmbAnios.Size = New System.Drawing.Size(133, 26)
         Me.CmbAnios.TabIndex = 178
         '
         'NumLote
         '
         Me.NumLote.Font = New System.Drawing.Font("Verdana", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.NumLote.Location = New System.Drawing.Point(548, 47)
+        Me.NumLote.Location = New System.Drawing.Point(365, 29)
+        Me.NumLote.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.NumLote.Maximum = New Decimal(New Integer() {52, 0, 0, 0})
         Me.NumLote.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.NumLote.Name = "NumLote"
-        Me.NumLote.Size = New System.Drawing.Size(120, 34)
+        Me.NumLote.Size = New System.Drawing.Size(80, 25)
         Me.NumLote.TabIndex = 180
         Me.NumLote.Value = New Decimal(New Integer() {1, 0, 0, 0})
         '
@@ -236,11 +267,10 @@ Partial Class FrmControlInseminacion
         Me.btnBuscar.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBuscar.Image = CType(resources.GetObject("btnBuscar.Image"), System.Drawing.Image)
         Me.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnBuscar.Location = New System.Drawing.Point(800, 53)
-        Me.btnBuscar.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btnBuscar.Location = New System.Drawing.Point(533, 29)
         Me.btnBuscar.Name = "btnBuscar"
-        Me.btnBuscar.Padding = New System.Windows.Forms.Padding(6, 0, 6, 0)
-        Me.btnBuscar.Size = New System.Drawing.Size(138, 63)
+        Me.btnBuscar.Padding = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.btnBuscar.Size = New System.Drawing.Size(92, 41)
         Me.btnBuscar.TabIndex = 163
         Me.btnBuscar.Text = "Buscar"
         Me.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -252,10 +282,10 @@ Partial Class FrmControlInseminacion
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(50, 53)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label2.Location = New System.Drawing.Point(33, 34)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(58, 22)
+        Me.Label2.Size = New System.Drawing.Size(40, 14)
         Me.Label2.TabIndex = 179
         Me.Label2.Text = "Año :"
         '
@@ -265,10 +295,10 @@ Partial Class FrmControlInseminacion
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(435, 53)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label3.Location = New System.Drawing.Point(290, 34)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(98, 22)
+        Me.Label3.Size = New System.Drawing.Size(67, 14)
         Me.Label3.TabIndex = 177
         Me.Label3.Text = "Semana :"
         '
@@ -279,11 +309,11 @@ Partial Class FrmControlInseminacion
         Me.ToolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
         Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnExportarInseminacionpro, Me.BtnCerrar})
-        Me.ToolStrip1.Location = New System.Drawing.Point(0, 307)
-        Me.ToolStrip1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.ToolStrip1.Location = New System.Drawing.Point(0, 188)
+        Me.ToolStrip1.Margin = New System.Windows.Forms.Padding(2, 1, 2, 1)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Padding = New System.Windows.Forms.Padding(0, 0, 3, 0)
-        Me.ToolStrip1.Size = New System.Drawing.Size(1879, 40)
+        Me.ToolStrip1.Padding = New System.Windows.Forms.Padding(0, 0, 2, 0)
+        Me.ToolStrip1.Size = New System.Drawing.Size(1253, 38)
         Me.ToolStrip1.TabIndex = 52
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -296,7 +326,7 @@ Partial Class FrmControlInseminacion
         Me.BtnExportarInseminacionpro.Margin = New System.Windows.Forms.Padding(5)
         Me.BtnExportarInseminacionpro.Name = "BtnExportarInseminacionpro"
         Me.BtnExportarInseminacionpro.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnExportarInseminacionpro.Size = New System.Drawing.Size(125, 30)
+        Me.BtnExportarInseminacionpro.Size = New System.Drawing.Size(92, 28)
         Me.BtnExportarInseminacionpro.Text = "Exportar"
         Me.BtnExportarInseminacionpro.ToolTipText = "Exportar"
         '
@@ -309,7 +339,7 @@ Partial Class FrmControlInseminacion
         Me.BtnCerrar.Margin = New System.Windows.Forms.Padding(5)
         Me.BtnCerrar.Name = "BtnCerrar"
         Me.BtnCerrar.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnCerrar.Size = New System.Drawing.Size(84, 30)
+        Me.BtnCerrar.Size = New System.Drawing.Size(66, 28)
         Me.BtnCerrar.Text = "Salir"
         '
         'LblPlantel
@@ -318,10 +348,10 @@ Partial Class FrmControlInseminacion
         Me.LblPlantel.BackColor = System.Drawing.Color.Transparent
         Me.LblPlantel.Font = New System.Drawing.Font("Verdana", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblPlantel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.LblPlantel.Location = New System.Drawing.Point(1640, 44)
-        Me.LblPlantel.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.LblPlantel.Location = New System.Drawing.Point(1093, 29)
+        Me.LblPlantel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblPlantel.Name = "LblPlantel"
-        Me.LblPlantel.Size = New System.Drawing.Size(65, 29)
+        Me.LblPlantel.Size = New System.Drawing.Size(42, 18)
         Me.LblPlantel.TabIndex = 175
         Me.LblPlantel.Text = "- - -"
         '
@@ -329,10 +359,9 @@ Partial Class FrmControlInseminacion
         '
         Me.Ptbx_Cargando.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Ptbx_Cargando.Image = Global.Formularios.My.Resources.Resources.loader
-        Me.Ptbx_Cargando.Location = New System.Drawing.Point(854, 611)
-        Me.Ptbx_Cargando.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Ptbx_Cargando.Location = New System.Drawing.Point(569, 397)
         Me.Ptbx_Cargando.Name = "Ptbx_Cargando"
-        Me.Ptbx_Cargando.Size = New System.Drawing.Size(64, 57)
+        Me.Ptbx_Cargando.Size = New System.Drawing.Size(43, 37)
         Me.Ptbx_Cargando.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.Ptbx_Cargando.TabIndex = 28
         Me.Ptbx_Cargando.TabStop = False
@@ -410,50 +439,24 @@ Partial Class FrmControlInseminacion
         Me.dtgListado.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy
         Me.dtgListado.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dtgListado.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dtgListado.Location = New System.Drawing.Point(0, 347)
-        Me.dtgListado.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.dtgListado.Location = New System.Drawing.Point(0, 226)
         Me.dtgListado.Name = "dtgListado"
-        Me.dtgListado.Size = New System.Drawing.Size(1879, 715)
+        Me.dtgListado.Size = New System.Drawing.Size(1253, 464)
         Me.dtgListado.TabIndex = 27
         Me.dtgListado.Text = "UltraGrid1"
         '
         'BackgroundWorker1
         '
         '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(1541, 124)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(131, 22)
-        Me.Label1.TabIndex = 191
-        Me.Label1.Text = "MORTALIDAD"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.BackColor = System.Drawing.Color.Red
-        Me.Label4.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.Color.Red
-        Me.Label4.Location = New System.Drawing.Point(1505, 124)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(19, 22)
-        Me.Label4.TabIndex = 190
-        Me.Label4.Text = "-"
-        '
         'FrmControlInseminacion
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1879, 1062)
+        Me.ClientSize = New System.Drawing.Size(1253, 690)
         Me.Controls.Add(Me.Ptbx_Cargando)
         Me.Controls.Add(Me.dtgListado)
         Me.Controls.Add(Me.Panel2)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "FrmControlInseminacion"

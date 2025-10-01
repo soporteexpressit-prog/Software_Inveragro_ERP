@@ -1692,6 +1692,12 @@
     <Compile Include="produccion\FrmVisualizarDesteteHembra.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="produccion\GestionAmbientes\FrmMantenimientoGalpon.Designer.vb">
+      <DependentUpon>FrmMantenimientoGalpon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="produccion\GestionAmbientes\FrmMantenimientoGalpon.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="produccion\GestionAmbientes\FrmMantenimientoPlantel.Designer.vb">
       <DependentUpon>FrmMantenimientoPlantel.vb</DependentUpon>
     </Compile>
@@ -1854,10 +1860,10 @@
     <Compile Include="sanidad\ControlMedicacion\FrmCronogramaEngordeVT.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="sanidad\ControlMedicacion\FrmCronogramaP1P2VT.Designer.vb">
-      <DependentUpon>FrmCronogramaP1P2VT.vb</DependentUpon>
+    <Compile Include="sanidad\ControlMedicacion\FrmCronogramaGestacion.Designer.vb">
+      <DependentUpon>FrmCronogramaGestacion.vb</DependentUpon>
     </Compile>
-    <Compile Include="sanidad\ControlMedicacion\FrmCronogramaP1P2VT.vb">
+    <Compile Include="sanidad\ControlMedicacion\FrmCronogramaGestacion.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="sanidad\ControlMedicacion\FrmListarCerdoVacunacion.Designer.vb">
@@ -4547,6 +4553,9 @@
     <EmbeddedResource Include="produccion\FrmVisualizarDesteteHembra.resx">
       <DependentUpon>FrmVisualizarDesteteHembra.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="produccion\GestionAmbientes\FrmMantenimientoGalpon.resx">
+      <DependentUpon>FrmMantenimientoGalpon.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="produccion\GestionAmbientes\FrmMantenimientoPlantel.resx">
       <DependentUpon>FrmMantenimientoPlantel.vb</DependentUpon>
     </EmbeddedResource>
@@ -4628,8 +4637,8 @@
     <EmbeddedResource Include="sanidad\ControlMedicacion\FrmCronogramaEngordeVT.resx">
       <DependentUpon>FrmCronogramaEngordeVT.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="sanidad\ControlMedicacion\FrmCronogramaP1P2VT.resx">
-      <DependentUpon>FrmCronogramaP1P2VT.vb</DependentUpon>
+    <EmbeddedResource Include="sanidad\ControlMedicacion\FrmCronogramaGestacion.resx">
+      <DependentUpon>FrmCronogramaGestacion.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="sanidad\ControlMedicacion\FrmListarCerdoVacunacion.resx">
       <DependentUpon>FrmListarCerdoVacunacion.vb</DependentUpon>

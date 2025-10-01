@@ -12,6 +12,10 @@ Public Class cnGalpon
         Return cls_at.Cd_Consultar("[w_pa_cons_galpon]", obj)
     End Function
 
+    Public Function Cn_ConsultarxId(obj As coGalpon) As DataTable
+        Return cls_at.Cd_ConsultarxId("[w_pa_cons_galpon_x_id]", obj)
+    End Function
+
     Public Function Cn_ListarGalpones() As DataTable
         Return cls_at.Cd_Listar("[w_pa_listar_galpon]")
     End Function

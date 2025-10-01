@@ -212,19 +212,23 @@ Public Class FrmControlMedicacion
         End If
     End Sub
 
-    Private Sub ToolStripButton1_Click(sender As Object, e As EventArgs) Handles ToolStripButton1.Click
+    Private Sub BtnCronogramaGestacion_Click(sender As Object, e As EventArgs) Handles BtnCronogramaGestacion.Click
         Try
-            If CmbUbicacion.Value = 1 Or CmbUbicacion.Value = 2 Then
-                'Dim frm As New FrmCronogramaP1P2VT With {
-                '    .idUbicacion = CmbUbicacion.Value
-                '}
-                'frm.ShowDialog()
-            Else
-                Dim frm As New FrmCronogramaEngordeVT With {
-                    .idUbicacion = CmbUbicacion.Value
-                }
-                frm.ShowDialog()
-            End If
+            Dim frm As New FrmCronogramaGestacion With {
+                .idUbicacion = CmbUbicacion.Value
+            }
+            frm.ShowDialog()
+        Catch ex As Exception
+            clsBasicas.controlException(Name, ex)
+        End Try
+    End Sub
+
+    Private Sub BtnCronogramaEngorde_Click(sender As Object, e As EventArgs) Handles BtnCronogramaEngorde.Click
+        Try
+            Dim frm As New FrmCronogramaEngordeVT With {
+                .idUbicacion = CmbUbicacion.Value
+            }
+            frm.ShowDialog()
         Catch ex As Exception
             clsBasicas.controlException(Name, ex)
         End Try

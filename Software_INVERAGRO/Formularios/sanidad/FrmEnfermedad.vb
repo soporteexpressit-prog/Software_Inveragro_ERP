@@ -183,35 +183,39 @@ Public Class FrmEnfermedad
     End Sub
 
     Private Sub BtnEliminar_Click(sender As Object, e As EventArgs) Handles BtnEliminar.Click
-        Dim activeRow As Infragistics.Win.UltraWinGrid.UltraGridRow = dtgListado.ActiveRow
-        If (dtgListado.Rows.Count > 0) Then
-            If (activeRow.Cells(0).Value.ToString.Length <> 0) Then
-                If activeRow.Band.Index = 0 Then
+        Try
+            Dim activeRow As Infragistics.Win.UltraWinGrid.UltraGridRow = dtgListado.ActiveRow
+            If (dtgListado.Rows.Count > 0) Then
+                If (activeRow.Cells(0).Value.ToString.Length <> 0) Then
+                    If activeRow.Band.Index = 0 Then
 
-                    If (MessageBox.Show("¿ESTÁ SEGURO DE ELIMINAR ESTA ENFERMEDAD?", "Aprobar Requerimiento", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.No) Then
-                        Return
-                    End If
+                        If (MessageBox.Show("¿ESTÁ SEGURO DE ELIMINAR ESTA ENFERMEDAD?", "Aprobar Requerimiento", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.No) Then
+                            Return
+                        End If
 
-                    Dim obj As New coEnfermedad With {
-                        .Codigo = activeRow.Cells(0).Value.ToString()
-                    }
+                        Dim obj As New coEnfermedad With {
+                            .Codigo = activeRow.Cells(0).Value.ToString()
+                        }
 
-                    Dim MensajeBgWk As String = cn.Cn_EliminarEnfermedad(obj)
-                    If (obj.Coderror = 0) Then
-                        msj_ok(MensajeBgWk)
-                        Consultar()
+                        Dim MensajeBgWk As String = cn.Cn_EliminarEnfermedad(obj)
+                        If (obj.Coderror = 0) Then
+                            msj_ok(MensajeBgWk)
+                            Consultar()
+                        Else
+                            msj_advert(MensajeBgWk)
+                        End If
                     Else
-                        msj_advert(MensajeBgWk)
+                        msj_advert(MensajesSistema.mensajesGenerales("SELECCION_FILA_CONTENEDOR"))
                     End If
                 Else
-                    msj_advert(MensajesSistema.mensajesGenerales("SELECCION_FILA_CONTENEDOR"))
+                    msj_advert(MensajesSistema.mensajesGenerales("SELECCIONE_REGISTRO"))
                 End If
             Else
                 msj_advert(MensajesSistema.mensajesGenerales("SELECCIONE_REGISTRO"))
             End If
-        Else
-            msj_advert(MensajesSistema.mensajesGenerales("SELECCIONE_REGISTRO"))
-        End If
+        Catch ex As Exception
+            clsBasicas.controlException(Name, ex)
+        End Try
     End Sub
 
     Private Sub btnCerrar_Click(sender As Object, e As EventArgs) Handles btnCerrar.Click

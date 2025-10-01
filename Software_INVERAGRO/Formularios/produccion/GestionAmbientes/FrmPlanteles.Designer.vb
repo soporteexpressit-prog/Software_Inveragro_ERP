@@ -59,9 +59,10 @@ Partial Class FrmPlanteles
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.BtnNuevo = New System.Windows.Forms.ToolStripButton()
         Me.BtnEditar = New System.Windows.Forms.ToolStripButton()
+        Me.BtnExportarBtnMandarCamalprocontrolverracos = New System.Windows.Forms.ToolStripButton()
+        Me.BtnEliminar = New System.Windows.Forms.ToolStripButton()
         Me.btnCerrar = New System.Windows.Forms.ToolStripButton()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.BtnExportarBtnMandarCamalprocontrolverracos = New System.Windows.Forms.ToolStripButton()
         CType(Me.dtgListado, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -280,7 +281,7 @@ Partial Class FrmPlanteles
         Me.ToolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.ToolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
         Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnNuevo, Me.BtnEditar, Me.BtnExportarBtnMandarCamalprocontrolverracos, Me.btnCerrar})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnNuevo, Me.BtnEditar, Me.BtnEliminar, Me.BtnExportarBtnMandarCamalprocontrolverracos, Me.btnCerrar})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 156)
         Me.ToolStrip1.Margin = New System.Windows.Forms.Padding(2)
         Me.ToolStrip1.Name = "ToolStrip1"
@@ -315,6 +316,32 @@ Partial Class FrmPlanteles
         Me.BtnEditar.Text = "Editar"
         Me.BtnEditar.ToolTipText = "Editar"
         '
+        'BtnExportarBtnMandarCamalprocontrolverracos
+        '
+        Me.BtnExportarBtnMandarCamalprocontrolverracos.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnExportarBtnMandarCamalprocontrolverracos.ForeColor = System.Drawing.Color.White
+        Me.BtnExportarBtnMandarCamalprocontrolverracos.Image = Global.Formularios.My.Resources.Resources.exportar2
+        Me.BtnExportarBtnMandarCamalprocontrolverracos.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BtnExportarBtnMandarCamalprocontrolverracos.Margin = New System.Windows.Forms.Padding(5)
+        Me.BtnExportarBtnMandarCamalprocontrolverracos.Name = "BtnExportarBtnMandarCamalprocontrolverracos"
+        Me.BtnExportarBtnMandarCamalprocontrolverracos.Padding = New System.Windows.Forms.Padding(2)
+        Me.BtnExportarBtnMandarCamalprocontrolverracos.Size = New System.Drawing.Size(92, 28)
+        Me.BtnExportarBtnMandarCamalprocontrolverracos.Text = "Exportar"
+        Me.BtnExportarBtnMandarCamalprocontrolverracos.ToolTipText = "Exportar"
+        '
+        'BtnEliminar
+        '
+        Me.BtnEliminar.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnEliminar.ForeColor = System.Drawing.Color.White
+        Me.BtnEliminar.Image = Global.Formularios.My.Resources.Resources.eliminar24_px
+        Me.BtnEliminar.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BtnEliminar.Margin = New System.Windows.Forms.Padding(5)
+        Me.BtnEliminar.Name = "BtnEliminar"
+        Me.BtnEliminar.Padding = New System.Windows.Forms.Padding(2)
+        Me.BtnEliminar.Size = New System.Drawing.Size(89, 28)
+        Me.BtnEliminar.Text = "Eliminar"
+        Me.BtnEliminar.ToolTipText = "Cerrar"
+        '
         'btnCerrar
         '
         Me.btnCerrar.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -340,19 +367,6 @@ Partial Class FrmPlanteles
         Me.Label6.Size = New System.Drawing.Size(110, 18)
         Me.Label6.TabIndex = 128
         Me.Label6.Text = "PLANTELES"
-        '
-        'BtnExportarBtnMandarCamalprocontrolverracos
-        '
-        Me.BtnExportarBtnMandarCamalprocontrolverracos.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnExportarBtnMandarCamalprocontrolverracos.ForeColor = System.Drawing.Color.White
-        Me.BtnExportarBtnMandarCamalprocontrolverracos.Image = Global.Formularios.My.Resources.Resources.exportar2
-        Me.BtnExportarBtnMandarCamalprocontrolverracos.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.BtnExportarBtnMandarCamalprocontrolverracos.Margin = New System.Windows.Forms.Padding(5)
-        Me.BtnExportarBtnMandarCamalprocontrolverracos.Name = "BtnExportarBtnMandarCamalprocontrolverracos"
-        Me.BtnExportarBtnMandarCamalprocontrolverracos.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnExportarBtnMandarCamalprocontrolverracos.Size = New System.Drawing.Size(92, 28)
-        Me.BtnExportarBtnMandarCamalprocontrolverracos.Text = "Exportar"
-        Me.BtnExportarBtnMandarCamalprocontrolverracos.ToolTipText = "Exportar"
         '
         'FrmPlanteles
         '
@@ -390,4 +404,5 @@ Partial Class FrmPlanteles
     Friend WithEvents LblPlantelFijado As Label
     Friend WithEvents BtnNuevo As ToolStripButton
     Friend WithEvents BtnExportarBtnMandarCamalprocontrolverracos As ToolStripButton
+    Friend WithEvents BtnEliminar As ToolStripButton
 End Class

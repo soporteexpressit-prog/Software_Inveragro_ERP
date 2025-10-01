@@ -22,7 +22,6 @@ Partial Class FrmCronogramaEngordeVT
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmCronogramaEngordeVT))
         Dim Appearance1 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance2 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance3 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
@@ -62,10 +61,10 @@ Partial Class FrmCronogramaEngordeVT
         Dim Appearance37 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance38 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance39 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmCronogramaEngordeVT))
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.LblDiaPic = New System.Windows.Forms.Label()
         Me.GrupoFiltros = New System.Windows.Forms.GroupBox()
-        Me.btnBuscar = New System.Windows.Forms.Button()
         Me.CmbLote = New Infragistics.Win.UltraWinGrid.UltraCombo()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.CmbCampaña = New Infragistics.Win.UltraWinGrid.UltraCombo()
@@ -73,19 +72,20 @@ Partial Class FrmCronogramaEngordeVT
         Me.CmbAnios = New System.Windows.Forms.ComboBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.Ptbx_Cargando = New System.Windows.Forms.PictureBox()
         Me.dtgListado = New Infragistics.Win.UltraWinGrid.UltraGrid()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
-        Me.btnCerrar = New System.Windows.Forms.ToolStripButton()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
+        Me.btnBuscar = New System.Windows.Forms.Button()
+        Me.Ptbx_Cargando = New System.Windows.Forms.PictureBox()
+        Me.btnCerrar = New System.Windows.Forms.ToolStripButton()
         Me.Panel2.SuspendLayout()
         Me.GrupoFiltros.SuspendLayout()
         CType(Me.CmbLote, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CmbCampaña, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
-        CType(Me.Ptbx_Cargando, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dtgListado, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ToolStrip1.SuspendLayout()
+        CType(Me.Ptbx_Cargando, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel2
@@ -97,8 +97,9 @@ Partial Class FrmCronogramaEngordeVT
         Me.Panel2.Controls.Add(Me.ToolStrip1)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1446, 949)
+        Me.Panel2.Size = New System.Drawing.Size(964, 617)
         Me.Panel2.TabIndex = 13
         '
         'LblDiaPic
@@ -107,10 +108,10 @@ Partial Class FrmCronogramaEngordeVT
         Me.LblDiaPic.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.LblDiaPic.Font = New System.Drawing.Font("Verdana", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblDiaPic.ForeColor = System.Drawing.Color.Green
-        Me.LblDiaPic.Location = New System.Drawing.Point(31, 68)
-        Me.LblDiaPic.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.LblDiaPic.Location = New System.Drawing.Point(21, 44)
+        Me.LblDiaPic.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblDiaPic.Name = "LblDiaPic"
-        Me.LblDiaPic.Size = New System.Drawing.Size(522, 34)
+        Me.LblDiaPic.Size = New System.Drawing.Size(354, 23)
         Me.LblDiaPic.TabIndex = 241
         Me.LblDiaPic.Text = "CRONOGRAMA DE VACUNACIÓN"
         '
@@ -123,28 +124,14 @@ Partial Class FrmCronogramaEngordeVT
         Me.GrupoFiltros.Controls.Add(Me.Label5)
         Me.GrupoFiltros.Controls.Add(Me.CmbAnios)
         Me.GrupoFiltros.Controls.Add(Me.Label3)
-        Me.GrupoFiltros.Location = New System.Drawing.Point(37, 123)
+        Me.GrupoFiltros.Location = New System.Drawing.Point(25, 80)
+        Me.GrupoFiltros.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GrupoFiltros.Name = "GrupoFiltros"
-        Me.GrupoFiltros.Size = New System.Drawing.Size(1373, 145)
+        Me.GrupoFiltros.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GrupoFiltros.Size = New System.Drawing.Size(915, 94)
         Me.GrupoFiltros.TabIndex = 168
         Me.GrupoFiltros.TabStop = False
         Me.GrupoFiltros.Text = "Filtros de Búsqueda"
-        '
-        'btnBuscar
-        '
-        Me.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnBuscar.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnBuscar.Image = CType(resources.GetObject("btnBuscar.Image"), System.Drawing.Image)
-        Me.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnBuscar.Location = New System.Drawing.Point(1070, 49)
-        Me.btnBuscar.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.btnBuscar.Name = "btnBuscar"
-        Me.btnBuscar.Padding = New System.Windows.Forms.Padding(6, 0, 6, 0)
-        Me.btnBuscar.Size = New System.Drawing.Size(138, 63)
-        Me.btnBuscar.TabIndex = 185
-        Me.btnBuscar.Text = "Buscar"
-        Me.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnBuscar.UseVisualStyleBackColor = True
         '
         'CmbLote
         '
@@ -203,10 +190,9 @@ Partial Class FrmCronogramaEngordeVT
         Me.CmbLote.DisplayLayout.ScrollStyle = Infragistics.Win.UltraWinGrid.ScrollStyle.Immediate
         Me.CmbLote.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy
         Me.CmbLote.DropDownStyle = Infragistics.Win.UltraWinGrid.UltraComboStyle.DropDownList
-        Me.CmbLote.Location = New System.Drawing.Point(779, 66)
-        Me.CmbLote.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.CmbLote.Location = New System.Drawing.Point(519, 43)
         Me.CmbLote.Name = "CmbLote"
-        Me.CmbLote.Size = New System.Drawing.Size(204, 29)
+        Me.CmbLote.Size = New System.Drawing.Size(136, 22)
         Me.CmbLote.TabIndex = 183
         '
         'Label1
@@ -215,10 +201,10 @@ Partial Class FrmCronogramaEngordeVT
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(684, 69)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label1.Location = New System.Drawing.Point(456, 45)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(77, 22)
+        Me.Label1.Size = New System.Drawing.Size(52, 14)
         Me.Label1.TabIndex = 184
         Me.Label1.Text = "Lotes :"
         '
@@ -279,10 +265,9 @@ Partial Class FrmCronogramaEngordeVT
         Me.CmbCampaña.DisplayLayout.ScrollStyle = Infragistics.Win.UltraWinGrid.ScrollStyle.Immediate
         Me.CmbCampaña.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy
         Me.CmbCampaña.DropDownStyle = Infragistics.Win.UltraWinGrid.UltraComboStyle.DropDownList
-        Me.CmbCampaña.Location = New System.Drawing.Point(435, 66)
-        Me.CmbCampaña.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.CmbCampaña.Location = New System.Drawing.Point(290, 43)
         Me.CmbCampaña.Name = "CmbCampaña"
-        Me.CmbCampaña.Size = New System.Drawing.Size(204, 29)
+        Me.CmbCampaña.Size = New System.Drawing.Size(136, 22)
         Me.CmbCampaña.TabIndex = 181
         '
         'Label5
@@ -291,10 +276,10 @@ Partial Class FrmCronogramaEngordeVT
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label5.Location = New System.Drawing.Point(297, 69)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label5.Location = New System.Drawing.Point(198, 45)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(128, 22)
+        Me.Label5.Size = New System.Drawing.Size(84, 14)
         Me.Label5.TabIndex = 182
         Me.Label5.Text = "Campañas :"
         '
@@ -302,9 +287,10 @@ Partial Class FrmCronogramaEngordeVT
         '
         Me.CmbAnios.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CmbAnios.FormattingEnabled = True
-        Me.CmbAnios.Location = New System.Drawing.Point(110, 64)
+        Me.CmbAnios.Location = New System.Drawing.Point(73, 42)
+        Me.CmbAnios.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.CmbAnios.Name = "CmbAnios"
-        Me.CmbAnios.Size = New System.Drawing.Size(151, 33)
+        Me.CmbAnios.Size = New System.Drawing.Size(102, 24)
         Me.CmbAnios.TabIndex = 180
         '
         'Label3
@@ -313,10 +299,10 @@ Partial Class FrmCronogramaEngordeVT
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(34, 69)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label3.Location = New System.Drawing.Point(23, 45)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(62, 22)
+        Me.Label3.Size = New System.Drawing.Size(41, 14)
         Me.Label3.TabIndex = 179
         Me.Label3.Text = "Año :"
         '
@@ -324,25 +310,14 @@ Partial Class FrmCronogramaEngordeVT
         '
         Me.GroupBox2.Controls.Add(Me.Ptbx_Cargando)
         Me.GroupBox2.Controls.Add(Me.dtgListado)
-        Me.GroupBox2.Location = New System.Drawing.Point(12, 303)
+        Me.GroupBox2.Location = New System.Drawing.Point(8, 197)
+        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(1423, 634)
+        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox2.Size = New System.Drawing.Size(949, 412)
         Me.GroupBox2.TabIndex = 162
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Pérdida Reproductiva"
-        '
-        'Ptbx_Cargando
-        '
-        Me.Ptbx_Cargando.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Ptbx_Cargando.Image = Global.Formularios.My.Resources.Resources.loader
-        Me.Ptbx_Cargando.Location = New System.Drawing.Point(671, 254)
-        Me.Ptbx_Cargando.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.Ptbx_Cargando.Name = "Ptbx_Cargando"
-        Me.Ptbx_Cargando.Size = New System.Drawing.Size(64, 57)
-        Me.Ptbx_Cargando.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.Ptbx_Cargando.TabIndex = 177
-        Me.Ptbx_Cargando.TabStop = False
-        Me.Ptbx_Cargando.Visible = False
         '
         'dtgListado
         '
@@ -414,10 +389,9 @@ Partial Class FrmCronogramaEngordeVT
         Me.dtgListado.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy
         Me.dtgListado.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dtgListado.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dtgListado.Location = New System.Drawing.Point(3, 22)
-        Me.dtgListado.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.dtgListado.Location = New System.Drawing.Point(2, 15)
         Me.dtgListado.Name = "dtgListado"
-        Me.dtgListado.Size = New System.Drawing.Size(1417, 609)
+        Me.dtgListado.Size = New System.Drawing.Size(945, 395)
         Me.dtgListado.TabIndex = 176
         Me.dtgListado.Text = "UltraGrid1"
         '
@@ -428,12 +402,42 @@ Partial Class FrmCronogramaEngordeVT
         Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnCerrar})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.ToolStrip1.Margin = New System.Windows.Forms.Padding(3)
+        Me.ToolStrip1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Padding = New System.Windows.Forms.Padding(0, 0, 3, 0)
-        Me.ToolStrip1.Size = New System.Drawing.Size(1446, 40)
+        Me.ToolStrip1.Padding = New System.Windows.Forms.Padding(0, 0, 2, 0)
+        Me.ToolStrip1.Size = New System.Drawing.Size(964, 38)
         Me.ToolStrip1.TabIndex = 52
         Me.ToolStrip1.Text = "ToolStrip1"
+        '
+        'BackgroundWorker1
+        '
+        '
+        'btnBuscar
+        '
+        Me.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnBuscar.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnBuscar.Image = CType(resources.GetObject("btnBuscar.Image"), System.Drawing.Image)
+        Me.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnBuscar.Location = New System.Drawing.Point(713, 32)
+        Me.btnBuscar.Name = "btnBuscar"
+        Me.btnBuscar.Padding = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.btnBuscar.Size = New System.Drawing.Size(92, 41)
+        Me.btnBuscar.TabIndex = 185
+        Me.btnBuscar.Text = "Buscar"
+        Me.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnBuscar.UseVisualStyleBackColor = True
+        '
+        'Ptbx_Cargando
+        '
+        Me.Ptbx_Cargando.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Ptbx_Cargando.Image = Global.Formularios.My.Resources.Resources.loader
+        Me.Ptbx_Cargando.Location = New System.Drawing.Point(447, 165)
+        Me.Ptbx_Cargando.Name = "Ptbx_Cargando"
+        Me.Ptbx_Cargando.Size = New System.Drawing.Size(43, 37)
+        Me.Ptbx_Cargando.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.Ptbx_Cargando.TabIndex = 177
+        Me.Ptbx_Cargando.TabStop = False
+        Me.Ptbx_Cargando.Visible = False
         '
         'btnCerrar
         '
@@ -444,19 +448,17 @@ Partial Class FrmCronogramaEngordeVT
         Me.btnCerrar.Margin = New System.Windows.Forms.Padding(5)
         Me.btnCerrar.Name = "btnCerrar"
         Me.btnCerrar.Padding = New System.Windows.Forms.Padding(2)
-        Me.btnCerrar.Size = New System.Drawing.Size(84, 30)
+        Me.btnCerrar.Size = New System.Drawing.Size(66, 28)
         Me.btnCerrar.Text = "Salir"
         Me.btnCerrar.ToolTipText = "Cerrar"
         '
-        'BackgroundWorker1
-        '
-        '
         'FrmCronogramaEngordeVT
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1446, 949)
+        Me.ClientSize = New System.Drawing.Size(964, 617)
         Me.Controls.Add(Me.Panel2)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "FrmCronogramaEngordeVT"
@@ -469,10 +471,10 @@ Partial Class FrmCronogramaEngordeVT
         CType(Me.CmbLote, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CmbCampaña, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
-        CType(Me.Ptbx_Cargando, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dtgListado, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()
+        CType(Me.Ptbx_Cargando, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

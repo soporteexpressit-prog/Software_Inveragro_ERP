@@ -69,6 +69,10 @@ Public Class FrmMantenimientoPlantel
                 Return
             End If
 
+            If (MessageBox.Show("¿ESTÁ SEGURO DE ESTA ACCIÓN?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.No) Then
+                Return
+            End If
+
             Dim obj As New coUbicacion With {
                 .Operacion = _Operacion,
                 .Codigo = _IdUbicacion,

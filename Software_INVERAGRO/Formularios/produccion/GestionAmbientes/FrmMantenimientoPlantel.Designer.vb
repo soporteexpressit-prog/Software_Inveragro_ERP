@@ -23,20 +23,20 @@ Partial Class FrmMantenimientoPlantel
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
-        Me.btnGuardarPcorr = New System.Windows.Forms.ToolStripButton()
-        Me.btnCerrar = New System.Windows.Forms.ToolStripButton()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.TxtDescripcion = New System.Windows.Forms.TextBox()
-        Me.Label6 = New System.Windows.Forms.Label()
+        Me.CmbClasificacion = New System.Windows.Forms.ComboBox()
+        Me.TxtDireccion = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.NumChanchillas = New System.Windows.Forms.NumericUpDown()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.LblDensidad = New System.Windows.Forms.Label()
         Me.TxtDensidad = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.TxtDireccion = New System.Windows.Forms.TextBox()
-        Me.CmbClasificacion = New System.Windows.Forms.ComboBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.TxtDescripcion = New System.Windows.Forms.TextBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.btnGuardarPcorr = New System.Windows.Forms.ToolStripButton()
+        Me.btnCerrar = New System.Windows.Forms.ToolStripButton()
         Me.ToolStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         CType(Me.NumChanchillas, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -56,32 +56,6 @@ Partial Class FrmMantenimientoPlantel
         Me.ToolStrip1.TabIndex = 53
         Me.ToolStrip1.Text = "ToolStrip1"
         '
-        'btnGuardarPcorr
-        '
-        Me.btnGuardarPcorr.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnGuardarPcorr.ForeColor = System.Drawing.Color.White
-        Me.btnGuardarPcorr.Image = Global.Formularios.My.Resources.Resources.guardar
-        Me.btnGuardarPcorr.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.btnGuardarPcorr.Margin = New System.Windows.Forms.Padding(5)
-        Me.btnGuardarPcorr.Name = "btnGuardarPcorr"
-        Me.btnGuardarPcorr.Padding = New System.Windows.Forms.Padding(2)
-        Me.btnGuardarPcorr.Size = New System.Drawing.Size(89, 28)
-        Me.btnGuardarPcorr.Text = "Guardar"
-        Me.btnGuardarPcorr.ToolTipText = "Guardar"
-        '
-        'btnCerrar
-        '
-        Me.btnCerrar.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCerrar.ForeColor = System.Drawing.Color.White
-        Me.btnCerrar.Image = Global.Formularios.My.Resources.Resources.salir
-        Me.btnCerrar.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.btnCerrar.Margin = New System.Windows.Forms.Padding(5)
-        Me.btnCerrar.Name = "btnCerrar"
-        Me.btnCerrar.Padding = New System.Windows.Forms.Padding(2)
-        Me.btnCerrar.Size = New System.Drawing.Size(66, 28)
-        Me.btnCerrar.Text = "Salir"
-        Me.btnCerrar.ToolTipText = "Cerrar"
-        '
         'GroupBox1
         '
         Me.GroupBox1.Controls.Add(Me.CmbClasificacion)
@@ -99,43 +73,53 @@ Partial Class FrmMantenimientoPlantel
         Me.GroupBox1.Size = New System.Drawing.Size(442, 252)
         Me.GroupBox1.TabIndex = 231
         Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Información Corral"
+        Me.GroupBox1.Text = "Información Plantel"
         '
-        'Label4
+        'CmbClasificacion
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.BackColor = System.Drawing.Color.Transparent
-        Me.Label4.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label4.Location = New System.Drawing.Point(71, 36)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(93, 14)
-        Me.Label4.TabIndex = 47
-        Me.Label4.Text = "Descripción :"
+        Me.CmbClasificacion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CmbClasificacion.FormattingEnabled = True
+        Me.CmbClasificacion.Items.AddRange(New Object() {"REPRODUCCIÓN", "WEAN TO FINISH"})
+        Me.CmbClasificacion.Location = New System.Drawing.Point(171, 163)
+        Me.CmbClasificacion.Name = "CmbClasificacion"
+        Me.CmbClasificacion.Size = New System.Drawing.Size(121, 21)
+        Me.CmbClasificacion.TabIndex = 63
         '
-        'TxtDescripcion
+        'TxtDireccion
         '
-        Me.TxtDescripcion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.TxtDescripcion.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtDescripcion.Location = New System.Drawing.Point(171, 32)
-        Me.TxtDescripcion.MaxLength = 50
-        Me.TxtDescripcion.Name = "TxtDescripcion"
-        Me.TxtDescripcion.Size = New System.Drawing.Size(222, 22)
-        Me.TxtDescripcion.TabIndex = 48
+        Me.TxtDireccion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.TxtDireccion.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtDireccion.Location = New System.Drawing.Point(171, 202)
+        Me.TxtDireccion.MaxLength = 50
+        Me.TxtDireccion.Name = "TxtDireccion"
+        Me.TxtDireccion.Size = New System.Drawing.Size(222, 22)
+        Me.TxtDireccion.TabIndex = 62
         '
-        'Label6
+        'Label3
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(233, Byte), Integer))
-        Me.Label6.Font = New System.Drawing.Font("Verdana", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(49, Byte), Integer))
-        Me.Label6.Location = New System.Drawing.Point(28, 59)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(217, 18)
-        Me.Label6.TabIndex = 230
-        Me.Label6.Text = "REGISTRO DE PLANTEL"
+        Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.Label3.Location = New System.Drawing.Point(90, 206)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(74, 14)
+        Me.Label3.TabIndex = 61
+        Me.Label3.Text = "Dirección:"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.Label2.Location = New System.Drawing.Point(69, 166)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(95, 14)
+        Me.Label2.TabIndex = 60
+        Me.Label2.Text = "Clasificación:"
         '
         'NumChanchillas
         '
@@ -181,51 +165,67 @@ Partial Class FrmMantenimientoPlantel
         Me.TxtDensidad.Size = New System.Drawing.Size(121, 20)
         Me.TxtDensidad.TabIndex = 57
         '
-        'Label2
+        'Label4
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(69, 166)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(95, 14)
-        Me.Label2.TabIndex = 60
-        Me.Label2.Text = "Clasificación:"
+        Me.Label4.AutoSize = True
+        Me.Label4.BackColor = System.Drawing.Color.Transparent
+        Me.Label4.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.Label4.Location = New System.Drawing.Point(71, 36)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(93, 14)
+        Me.Label4.TabIndex = 47
+        Me.Label4.Text = "Descripción :"
         '
-        'Label3
+        'TxtDescripcion
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.BackColor = System.Drawing.Color.Transparent
-        Me.Label3.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(90, 206)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(74, 14)
-        Me.Label3.TabIndex = 61
-        Me.Label3.Text = "Dirección:"
+        Me.TxtDescripcion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.TxtDescripcion.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtDescripcion.Location = New System.Drawing.Point(171, 32)
+        Me.TxtDescripcion.MaxLength = 50
+        Me.TxtDescripcion.Name = "TxtDescripcion"
+        Me.TxtDescripcion.Size = New System.Drawing.Size(222, 22)
+        Me.TxtDescripcion.TabIndex = 48
         '
-        'TxtDireccion
+        'Label6
         '
-        Me.TxtDireccion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.TxtDireccion.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtDireccion.Location = New System.Drawing.Point(171, 202)
-        Me.TxtDireccion.MaxLength = 50
-        Me.TxtDireccion.Name = "TxtDireccion"
-        Me.TxtDireccion.Size = New System.Drawing.Size(222, 22)
-        Me.TxtDireccion.TabIndex = 62
+        Me.Label6.AutoSize = True
+        Me.Label6.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.Label6.Font = New System.Drawing.Font("Verdana", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.Label6.Location = New System.Drawing.Point(28, 59)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(217, 18)
+        Me.Label6.TabIndex = 230
+        Me.Label6.Text = "REGISTRO DE PLANTEL"
         '
-        'CmbClasificacion
+        'btnGuardarPcorr
         '
-        Me.CmbClasificacion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.CmbClasificacion.FormattingEnabled = True
-        Me.CmbClasificacion.Items.AddRange(New Object() {"REPRODUCCIÓN", "WEAN TO FINISH"})
-        Me.CmbClasificacion.Location = New System.Drawing.Point(171, 163)
-        Me.CmbClasificacion.Name = "CmbClasificacion"
-        Me.CmbClasificacion.Size = New System.Drawing.Size(121, 21)
-        Me.CmbClasificacion.TabIndex = 63
+        Me.btnGuardarPcorr.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnGuardarPcorr.ForeColor = System.Drawing.Color.White
+        Me.btnGuardarPcorr.Image = Global.Formularios.My.Resources.Resources.guardar
+        Me.btnGuardarPcorr.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btnGuardarPcorr.Margin = New System.Windows.Forms.Padding(5)
+        Me.btnGuardarPcorr.Name = "btnGuardarPcorr"
+        Me.btnGuardarPcorr.Padding = New System.Windows.Forms.Padding(2)
+        Me.btnGuardarPcorr.Size = New System.Drawing.Size(89, 28)
+        Me.btnGuardarPcorr.Text = "Guardar"
+        Me.btnGuardarPcorr.ToolTipText = "Guardar"
+        '
+        'btnCerrar
+        '
+        Me.btnCerrar.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCerrar.ForeColor = System.Drawing.Color.White
+        Me.btnCerrar.Image = Global.Formularios.My.Resources.Resources.salir
+        Me.btnCerrar.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btnCerrar.Margin = New System.Windows.Forms.Padding(5)
+        Me.btnCerrar.Name = "btnCerrar"
+        Me.btnCerrar.Padding = New System.Windows.Forms.Padding(2)
+        Me.btnCerrar.Size = New System.Drawing.Size(66, 28)
+        Me.btnCerrar.Text = "Salir"
+        Me.btnCerrar.ToolTipText = "Cerrar"
         '
         'FrmMantenimientoPlantel
         '
