@@ -76,7 +76,7 @@ Partial Class FrmControlLotes
         Me.BtnExportarControlCerdacontrollotespro = New System.Windows.Forms.ToolStripButton()
         Me.btnreporteRrhhctrlcapaci = New System.Windows.Forms.ToolStripDropDownButton()
         Me.BtnReporteGeneral = New System.Windows.Forms.ToolStripMenuItem()
-        Me.BtnReporteMortalidadPlantel = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BtnReporteMortalidadLote = New System.Windows.Forms.ToolStripMenuItem()
         Me.BtnReportePesos = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReporteDistribuciónDeCerdosXCorralToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReporteDeConsumoYDonacionesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -115,9 +115,9 @@ Partial Class FrmControlLotes
         Me.GrupoFiltros.Controls.Add(Me.btnBuscar)
         Me.GrupoFiltros.Controls.Add(Me.Label5)
         Me.GrupoFiltros.Location = New System.Drawing.Point(28, 60)
-        Me.GrupoFiltros.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GrupoFiltros.Margin = New System.Windows.Forms.Padding(2)
         Me.GrupoFiltros.Name = "GrupoFiltros"
-        Me.GrupoFiltros.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GrupoFiltros.Padding = New System.Windows.Forms.Padding(2)
         Me.GrupoFiltros.Size = New System.Drawing.Size(567, 71)
         Me.GrupoFiltros.TabIndex = 240
         Me.GrupoFiltros.TabStop = False
@@ -203,7 +203,7 @@ Partial Class FrmControlLotes
         Me.CmbAnios.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CmbAnios.FormattingEnabled = True
         Me.CmbAnios.Location = New System.Drawing.Point(301, 27)
-        Me.CmbAnios.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.CmbAnios.Margin = New System.Windows.Forms.Padding(2)
         Me.CmbAnios.Name = "CmbAnios"
         Me.CmbAnios.Size = New System.Drawing.Size(128, 28)
         Me.CmbAnios.TabIndex = 176
@@ -446,7 +446,7 @@ Partial Class FrmControlLotes
         'btnreporteRrhhctrlcapaci
         '
         Me.btnreporteRrhhctrlcapaci.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.btnreporteRrhhctrlcapaci.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnReporteGeneral, Me.BtnReporteMortalidadPlantel, Me.BtnReportePesos, Me.ReporteDistribuciónDeCerdosXCorralToolStripMenuItem, Me.ReporteDeConsumoYDonacionesToolStripMenuItem, Me.MortalidadRecríaToolStripMenuItem, Me.HistorialLoteToolStripMenuItem})
+        Me.btnreporteRrhhctrlcapaci.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnReporteGeneral, Me.BtnReporteMortalidadLote, Me.BtnReportePesos, Me.ReporteDistribuciónDeCerdosXCorralToolStripMenuItem, Me.ReporteDeConsumoYDonacionesToolStripMenuItem, Me.MortalidadRecríaToolStripMenuItem, Me.HistorialLoteToolStripMenuItem})
         Me.btnreporteRrhhctrlcapaci.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnreporteRrhhctrlcapaci.ForeColor = System.Drawing.Color.White
         Me.btnreporteRrhhctrlcapaci.Image = Global.Formularios.My.Resources.Resources.reporte
@@ -462,11 +462,11 @@ Partial Class FrmControlLotes
         Me.BtnReporteGeneral.Size = New System.Drawing.Size(280, 22)
         Me.BtnReporteGeneral.Text = "Campaña"
         '
-        'BtnReporteMortalidadPlantel
+        'BtnReporteMortalidadLote
         '
-        Me.BtnReporteMortalidadPlantel.Name = "BtnReporteMortalidadPlantel"
-        Me.BtnReporteMortalidadPlantel.Size = New System.Drawing.Size(280, 22)
-        Me.BtnReporteMortalidadPlantel.Text = "Mortalidad x Plantel"
+        Me.BtnReporteMortalidadLote.Name = "BtnReporteMortalidadLote"
+        Me.BtnReporteMortalidadLote.Size = New System.Drawing.Size(280, 22)
+        Me.BtnReporteMortalidadLote.Text = "Edad Mortalidad x Lote"
         '
         'BtnReportePesos
         '
@@ -599,7 +599,7 @@ Partial Class FrmControlLotes
         Me.Controls.Add(Me.Ptbx_Cargando)
         Me.Controls.Add(Me.dtgListado)
         Me.Controls.Add(Me.Contenedor)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "FrmControlLotes"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "CONTROL DE LOTES"
@@ -638,7 +638,7 @@ Partial Class FrmControlLotes
     Friend WithEvents BtnCancelarVenta As ToolStripButton
     Friend WithEvents btnreporteRrhhctrlcapaci As ToolStripDropDownButton
     Friend WithEvents BtnReporteGeneral As ToolStripMenuItem
-    Friend WithEvents BtnReporteMortalidadPlantel As ToolStripMenuItem
+    Friend WithEvents BtnReporteMortalidadLote As ToolStripMenuItem
     Friend WithEvents BtnReportePesos As ToolStripMenuItem
     Friend WithEvents BtnUbicarZonaEspera As ToolStripButton
     Friend WithEvents ReporteDistribuciónDeCerdosXCorralToolStripMenuItem As ToolStripMenuItem

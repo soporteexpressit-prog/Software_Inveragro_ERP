@@ -28,6 +28,12 @@ Public Class FrmReporteMortalidadRecriaEngorde
         LblPromedioMuertoEvento.Text = "(X" & ChrW(&H305) & ") Muertes x Evento:"
         RtnPeriodo.Checked = True
         RtnLotes.Checked = False
+        If (idUbicacion = 1 Or idUbicacion = 2) Then
+            CbxChanchillas.Visible = True
+        Else
+            CbxChanchillas.Visible = False
+            CbxChanchillas.Checked = False
+        End If
     End Sub
 
     Sub ListarLotes()
@@ -95,7 +101,8 @@ Public Class FrmReporteMortalidadRecriaEngorde
                 .FechaDesde = DtpFechaDesde.Value,
                 .FechaHasta = DtpFechaHasta.Value,
                 .IdPlantel = idUbicacion,
-                .IdLote = If(RtnLotes.Checked, CmbLotes.Value, 0)
+                .IdLote = If(RtnLotes.Checked, CmbLotes.Value, 0),
+                .ChanchillaEngorde = CbxChanchillas.Checked
             }
 
             BackgroundWorker1.RunWorkerAsync(obj)

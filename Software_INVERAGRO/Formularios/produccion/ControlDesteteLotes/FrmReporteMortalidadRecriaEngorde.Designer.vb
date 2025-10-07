@@ -84,6 +84,7 @@ Partial Class FrmReporteMortalidadRecriaEngorde
         Me.BtnExportar = New System.Windows.Forms.ToolStripButton()
         Me.btnCerrar = New System.Windows.Forms.ToolStripButton()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
+        Me.CbxChanchillas = New System.Windows.Forms.CheckBox()
         Me.Panel2.SuspendLayout()
         CType(Me.CmbLotes, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -96,6 +97,7 @@ Partial Class FrmReporteMortalidadRecriaEngorde
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.Panel2.Controls.Add(Me.CbxChanchillas)
         Me.Panel2.Controls.Add(Me.LblLotes)
         Me.Panel2.Controls.Add(Me.CmbLotes)
         Me.Panel2.Controls.Add(Me.CmbAnios)
@@ -114,8 +116,9 @@ Partial Class FrmReporteMortalidadRecriaEngorde
         Me.Panel2.Controls.Add(Me.ToolStrip1)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1687, 1001)
+        Me.Panel2.Size = New System.Drawing.Size(1125, 651)
         Me.Panel2.TabIndex = 12
         '
         'LblLotes
@@ -124,10 +127,10 @@ Partial Class FrmReporteMortalidadRecriaEngorde
         Me.LblLotes.BackColor = System.Drawing.Color.Transparent
         Me.LblLotes.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblLotes.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.LblLotes.Location = New System.Drawing.Point(447, 154)
-        Me.LblLotes.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.LblLotes.Location = New System.Drawing.Point(298, 100)
+        Me.LblLotes.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblLotes.Name = "LblLotes"
-        Me.LblLotes.Size = New System.Drawing.Size(77, 22)
+        Me.LblLotes.Size = New System.Drawing.Size(52, 14)
         Me.LblLotes.TabIndex = 249
         Me.LblLotes.Text = "Lotes :"
         '
@@ -188,19 +191,19 @@ Partial Class FrmReporteMortalidadRecriaEngorde
         Me.CmbLotes.DisplayLayout.ScrollStyle = Infragistics.Win.UltraWinGrid.ScrollStyle.Immediate
         Me.CmbLotes.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy
         Me.CmbLotes.DropDownStyle = Infragistics.Win.UltraWinGrid.UltraComboStyle.DropDownList
-        Me.CmbLotes.Location = New System.Drawing.Point(531, 151)
-        Me.CmbLotes.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.CmbLotes.Location = New System.Drawing.Point(354, 98)
         Me.CmbLotes.Name = "CmbLotes"
-        Me.CmbLotes.Size = New System.Drawing.Size(238, 29)
+        Me.CmbLotes.Size = New System.Drawing.Size(159, 22)
         Me.CmbLotes.TabIndex = 248
         '
         'CmbAnios
         '
         Me.CmbAnios.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CmbAnios.FormattingEnabled = True
-        Me.CmbAnios.Location = New System.Drawing.Point(207, 147)
+        Me.CmbAnios.Location = New System.Drawing.Point(138, 96)
+        Me.CmbAnios.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.CmbAnios.Name = "CmbAnios"
-        Me.CmbAnios.Size = New System.Drawing.Size(199, 37)
+        Me.CmbAnios.Size = New System.Drawing.Size(134, 28)
         Me.CmbAnios.TabIndex = 247
         '
         'LblAnio
@@ -209,19 +212,20 @@ Partial Class FrmReporteMortalidadRecriaEngorde
         Me.LblAnio.BackColor = System.Drawing.Color.Transparent
         Me.LblAnio.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblAnio.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.LblAnio.Location = New System.Drawing.Point(24, 154)
-        Me.LblAnio.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.LblAnio.Location = New System.Drawing.Point(16, 100)
+        Me.LblAnio.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblAnio.Name = "LblAnio"
-        Me.LblAnio.Size = New System.Drawing.Size(174, 22)
+        Me.LblAnio.Size = New System.Drawing.Size(115, 14)
         Me.LblAnio.TabIndex = 246
         Me.LblAnio.Text = "Seleccione año :"
         '
         'RtnLotes
         '
         Me.RtnLotes.AutoSize = True
-        Me.RtnLotes.Location = New System.Drawing.Point(1127, 168)
+        Me.RtnLotes.Location = New System.Drawing.Point(751, 109)
+        Me.RtnLotes.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.RtnLotes.Name = "RtnLotes"
-        Me.RtnLotes.Size = New System.Drawing.Size(102, 24)
+        Me.RtnLotes.Size = New System.Drawing.Size(70, 17)
         Me.RtnLotes.TabIndex = 245
         Me.RtnLotes.TabStop = True
         Me.RtnLotes.Text = "Por Lotes"
@@ -230,9 +234,10 @@ Partial Class FrmReporteMortalidadRecriaEngorde
         'RtnPeriodo
         '
         Me.RtnPeriodo.AutoSize = True
-        Me.RtnPeriodo.Location = New System.Drawing.Point(983, 168)
+        Me.RtnPeriodo.Location = New System.Drawing.Point(655, 109)
+        Me.RtnPeriodo.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.RtnPeriodo.Name = "RtnPeriodo"
-        Me.RtnPeriodo.Size = New System.Drawing.Size(116, 24)
+        Me.RtnPeriodo.Size = New System.Drawing.Size(80, 17)
         Me.RtnPeriodo.TabIndex = 244
         Me.RtnPeriodo.TabStop = True
         Me.RtnPeriodo.Text = "Por Periodo"
@@ -252,9 +257,11 @@ Partial Class FrmReporteMortalidadRecriaEngorde
         Me.GroupBox1.Controls.Add(Me.Label7)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.LblPromedioMuertoEvento)
-        Me.GroupBox1.Location = New System.Drawing.Point(15, 207)
+        Me.GroupBox1.Location = New System.Drawing.Point(10, 135)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(1645, 128)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox1.Size = New System.Drawing.Size(1097, 83)
         Me.GroupBox1.TabIndex = 243
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Indicadores"
@@ -265,10 +272,10 @@ Partial Class FrmReporteMortalidadRecriaEngorde
         Me.LblDestetadosTotales.BackColor = System.Drawing.Color.Transparent
         Me.LblDestetadosTotales.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblDestetadosTotales.ForeColor = System.Drawing.Color.Black
-        Me.LblDestetadosTotales.Location = New System.Drawing.Point(251, 35)
-        Me.LblDestetadosTotales.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.LblDestetadosTotales.Location = New System.Drawing.Point(167, 23)
+        Me.LblDestetadosTotales.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblDestetadosTotales.Name = "LblDestetadosTotales"
-        Me.LblDestetadosTotales.Size = New System.Drawing.Size(21, 22)
+        Me.LblDestetadosTotales.Size = New System.Drawing.Size(15, 14)
         Me.LblDestetadosTotales.TabIndex = 191
         Me.LblDestetadosTotales.Text = "0"
         '
@@ -278,10 +285,10 @@ Partial Class FrmReporteMortalidadRecriaEngorde
         Me.Label9.BackColor = System.Drawing.Color.Transparent
         Me.Label9.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label9.Location = New System.Drawing.Point(50, 35)
-        Me.Label9.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label9.Location = New System.Drawing.Point(33, 23)
+        Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(194, 22)
+        Me.Label9.Size = New System.Drawing.Size(138, 14)
         Me.Label9.TabIndex = 190
         Me.Label9.Text = "Destetados Totales :"
         '
@@ -291,10 +298,10 @@ Partial Class FrmReporteMortalidadRecriaEngorde
         Me.LblMotivoMasFrecuente.BackColor = System.Drawing.Color.Transparent
         Me.LblMotivoMasFrecuente.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblMotivoMasFrecuente.ForeColor = System.Drawing.Color.Black
-        Me.LblMotivoMasFrecuente.Location = New System.Drawing.Point(251, 79)
-        Me.LblMotivoMasFrecuente.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.LblMotivoMasFrecuente.Location = New System.Drawing.Point(167, 51)
+        Me.LblMotivoMasFrecuente.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblMotivoMasFrecuente.Name = "LblMotivoMasFrecuente"
-        Me.LblMotivoMasFrecuente.Size = New System.Drawing.Size(18, 22)
+        Me.LblMotivoMasFrecuente.Size = New System.Drawing.Size(12, 14)
         Me.LblMotivoMasFrecuente.TabIndex = 189
         Me.LblMotivoMasFrecuente.Text = "-"
         '
@@ -304,10 +311,10 @@ Partial Class FrmReporteMortalidadRecriaEngorde
         Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label6.Location = New System.Drawing.Point(28, 79)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label6.Location = New System.Drawing.Point(19, 51)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(216, 22)
+        Me.Label6.Size = New System.Drawing.Size(147, 14)
         Me.Label6.TabIndex = 187
         Me.Label6.Text = "Motivo (+) Frecuente :"
         '
@@ -317,10 +324,10 @@ Partial Class FrmReporteMortalidadRecriaEngorde
         Me.LblTasaMortalidadxDia.BackColor = System.Drawing.Color.Transparent
         Me.LblTasaMortalidadxDia.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblTasaMortalidadxDia.ForeColor = System.Drawing.Color.Black
-        Me.LblTasaMortalidadxDia.Location = New System.Drawing.Point(1146, 35)
-        Me.LblTasaMortalidadxDia.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.LblTasaMortalidadxDia.Location = New System.Drawing.Point(764, 23)
+        Me.LblTasaMortalidadxDia.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblTasaMortalidadxDia.Name = "LblTasaMortalidadxDia"
-        Me.LblTasaMortalidadxDia.Size = New System.Drawing.Size(21, 22)
+        Me.LblTasaMortalidadxDia.Size = New System.Drawing.Size(15, 14)
         Me.LblTasaMortalidadxDia.TabIndex = 188
         Me.LblTasaMortalidadxDia.Text = "0"
         '
@@ -330,10 +337,10 @@ Partial Class FrmReporteMortalidadRecriaEngorde
         Me.LblLoteMasAfectado.BackColor = System.Drawing.Color.Transparent
         Me.LblLoteMasAfectado.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblLoteMasAfectado.ForeColor = System.Drawing.Color.Black
-        Me.LblLoteMasAfectado.Location = New System.Drawing.Point(806, 35)
-        Me.LblLoteMasAfectado.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.LblLoteMasAfectado.Location = New System.Drawing.Point(537, 23)
+        Me.LblLoteMasAfectado.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblLoteMasAfectado.Name = "LblLoteMasAfectado"
-        Me.LblLoteMasAfectado.Size = New System.Drawing.Size(18, 22)
+        Me.LblLoteMasAfectado.Size = New System.Drawing.Size(12, 14)
         Me.LblLoteMasAfectado.TabIndex = 187
         Me.LblLoteMasAfectado.Text = "-"
         '
@@ -343,10 +350,10 @@ Partial Class FrmReporteMortalidadRecriaEngorde
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label5.Location = New System.Drawing.Point(916, 35)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label5.Location = New System.Drawing.Point(611, 23)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(218, 22)
+        Me.Label5.Size = New System.Drawing.Size(150, 14)
         Me.Label5.TabIndex = 186
         Me.Label5.Text = "Tasa Mortalidad x Día :"
         '
@@ -356,10 +363,10 @@ Partial Class FrmReporteMortalidadRecriaEngorde
         Me.LblPorcMortalidad.BackColor = System.Drawing.Color.Transparent
         Me.LblPorcMortalidad.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblPorcMortalidad.ForeColor = System.Drawing.Color.Black
-        Me.LblPorcMortalidad.Location = New System.Drawing.Point(498, 35)
-        Me.LblPorcMortalidad.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.LblPorcMortalidad.Location = New System.Drawing.Point(332, 23)
+        Me.LblPorcMortalidad.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblPorcMortalidad.Name = "LblPorcMortalidad"
-        Me.LblPorcMortalidad.Size = New System.Drawing.Size(21, 22)
+        Me.LblPorcMortalidad.Size = New System.Drawing.Size(15, 14)
         Me.LblPorcMortalidad.TabIndex = 184
         Me.LblPorcMortalidad.Text = "0"
         '
@@ -369,10 +376,10 @@ Partial Class FrmReporteMortalidadRecriaEngorde
         Me.LblPromxEvento.BackColor = System.Drawing.Color.Transparent
         Me.LblPromxEvento.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblPromxEvento.ForeColor = System.Drawing.Color.Black
-        Me.LblPromxEvento.Location = New System.Drawing.Point(1528, 35)
-        Me.LblPromxEvento.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.LblPromxEvento.Location = New System.Drawing.Point(1019, 23)
+        Me.LblPromxEvento.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblPromxEvento.Name = "LblPromxEvento"
-        Me.LblPromxEvento.Size = New System.Drawing.Size(21, 22)
+        Me.LblPromxEvento.Size = New System.Drawing.Size(15, 14)
         Me.LblPromxEvento.TabIndex = 182
         Me.LblPromxEvento.Text = "0"
         '
@@ -382,10 +389,10 @@ Partial Class FrmReporteMortalidadRecriaEngorde
         Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label7.Location = New System.Drawing.Point(610, 35)
-        Me.Label7.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label7.Location = New System.Drawing.Point(407, 23)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(184, 22)
+        Me.Label7.Size = New System.Drawing.Size(126, 14)
         Me.Label7.TabIndex = 181
         Me.Label7.Text = "Lote (+) Afectado :"
         '
@@ -395,10 +402,10 @@ Partial Class FrmReporteMortalidadRecriaEngorde
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(348, 35)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label2.Location = New System.Drawing.Point(232, 23)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(138, 22)
+        Me.Label2.Size = New System.Drawing.Size(95, 14)
         Me.Label2.TabIndex = 179
         Me.Label2.Text = "% Mortalidad:"
         '
@@ -408,10 +415,10 @@ Partial Class FrmReporteMortalidadRecriaEngorde
         Me.LblPromedioMuertoEvento.BackColor = System.Drawing.Color.Transparent
         Me.LblPromedioMuertoEvento.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblPromedioMuertoEvento.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.LblPromedioMuertoEvento.Location = New System.Drawing.Point(1308, 35)
-        Me.LblPromedioMuertoEvento.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.LblPromedioMuertoEvento.Location = New System.Drawing.Point(872, 23)
+        Me.LblPromedioMuertoEvento.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblPromedioMuertoEvento.Name = "LblPromedioMuertoEvento"
-        Me.LblPromedioMuertoEvento.Size = New System.Drawing.Size(18, 22)
+        Me.LblPromedioMuertoEvento.Size = New System.Drawing.Size(12, 14)
         Me.LblPromedioMuertoEvento.TabIndex = 178
         Me.LblPromedioMuertoEvento.Text = "-"
         '
@@ -421,11 +428,10 @@ Partial Class FrmReporteMortalidadRecriaEngorde
         Me.BtnMotivoFrecuencia.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnMotivoFrecuencia.Image = CType(resources.GetObject("BtnMotivoFrecuencia.Image"), System.Drawing.Image)
         Me.BtnMotivoFrecuencia.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnMotivoFrecuencia.Location = New System.Drawing.Point(1495, 141)
-        Me.BtnMotivoFrecuencia.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.BtnMotivoFrecuencia.Location = New System.Drawing.Point(997, 92)
         Me.BtnMotivoFrecuencia.Name = "BtnMotivoFrecuencia"
-        Me.BtnMotivoFrecuencia.Padding = New System.Windows.Forms.Padding(6, 0, 6, 0)
-        Me.BtnMotivoFrecuencia.Size = New System.Drawing.Size(165, 51)
+        Me.BtnMotivoFrecuencia.Padding = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.BtnMotivoFrecuencia.Size = New System.Drawing.Size(110, 33)
         Me.BtnMotivoFrecuencia.TabIndex = 241
         Me.BtnMotivoFrecuencia.Tag = "Muestra Motivos de Mortalidad más Frecuentes"
         Me.BtnMotivoFrecuencia.Text = "+Motivos"
@@ -438,10 +444,10 @@ Partial Class FrmReporteMortalidadRecriaEngorde
         Me.LblDiaPic.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.LblDiaPic.Font = New System.Drawing.Font("Verdana", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblDiaPic.ForeColor = System.Drawing.Color.Green
-        Me.LblDiaPic.Location = New System.Drawing.Point(41, 78)
-        Me.LblDiaPic.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.LblDiaPic.Location = New System.Drawing.Point(27, 51)
+        Me.LblDiaPic.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblDiaPic.Name = "LblDiaPic"
-        Me.LblDiaPic.Size = New System.Drawing.Size(438, 34)
+        Me.LblDiaPic.Size = New System.Drawing.Size(298, 23)
         Me.LblDiaPic.TabIndex = 240
         Me.LblDiaPic.Text = "REPORTE DE MORTALIDAD"
         '
@@ -451,11 +457,10 @@ Partial Class FrmReporteMortalidadRecriaEngorde
         Me.BtnBuscarPerdidaReproductiva.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnBuscarPerdidaReproductiva.Image = CType(resources.GetObject("BtnBuscarPerdidaReproductiva.Image"), System.Drawing.Image)
         Me.BtnBuscarPerdidaReproductiva.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnBuscarPerdidaReproductiva.Location = New System.Drawing.Point(793, 134)
-        Me.BtnBuscarPerdidaReproductiva.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.BtnBuscarPerdidaReproductiva.Location = New System.Drawing.Point(529, 87)
         Me.BtnBuscarPerdidaReproductiva.Name = "BtnBuscarPerdidaReproductiva"
-        Me.BtnBuscarPerdidaReproductiva.Padding = New System.Windows.Forms.Padding(6, 0, 6, 0)
-        Me.BtnBuscarPerdidaReproductiva.Size = New System.Drawing.Size(138, 63)
+        Me.BtnBuscarPerdidaReproductiva.Padding = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.BtnBuscarPerdidaReproductiva.Size = New System.Drawing.Size(92, 41)
         Me.BtnBuscarPerdidaReproductiva.TabIndex = 167
         Me.BtnBuscarPerdidaReproductiva.Text = "Buscar"
         Me.BtnBuscarPerdidaReproductiva.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -465,20 +470,18 @@ Partial Class FrmReporteMortalidadRecriaEngorde
         '
         Me.DtpFechaHasta.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DtpFechaHasta.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DtpFechaHasta.Location = New System.Drawing.Point(566, 151)
-        Me.DtpFechaHasta.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.DtpFechaHasta.Location = New System.Drawing.Point(377, 98)
         Me.DtpFechaHasta.Name = "DtpFechaHasta"
-        Me.DtpFechaHasta.Size = New System.Drawing.Size(183, 28)
+        Me.DtpFechaHasta.Size = New System.Drawing.Size(123, 21)
         Me.DtpFechaHasta.TabIndex = 166
         '
         'DtpFechaDesde
         '
         Me.DtpFechaDesde.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DtpFechaDesde.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DtpFechaDesde.Location = New System.Drawing.Point(201, 151)
-        Me.DtpFechaDesde.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.DtpFechaDesde.Location = New System.Drawing.Point(134, 98)
         Me.DtpFechaDesde.Name = "DtpFechaDesde"
-        Me.DtpFechaDesde.Size = New System.Drawing.Size(183, 28)
+        Me.DtpFechaDesde.Size = New System.Drawing.Size(123, 21)
         Me.DtpFechaDesde.TabIndex = 165
         '
         'LblFechaDesde
@@ -487,10 +490,10 @@ Partial Class FrmReporteMortalidadRecriaEngorde
         Me.LblFechaDesde.BackColor = System.Drawing.Color.Transparent
         Me.LblFechaDesde.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblFechaDesde.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.LblFechaDesde.Location = New System.Drawing.Point(39, 154)
-        Me.LblFechaDesde.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.LblFechaDesde.Location = New System.Drawing.Point(26, 100)
+        Me.LblFechaDesde.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblFechaDesde.Name = "LblFechaDesde"
-        Me.LblFechaDesde.Size = New System.Drawing.Size(152, 22)
+        Me.LblFechaDesde.Size = New System.Drawing.Size(100, 14)
         Me.LblFechaDesde.TabIndex = 163
         Me.LblFechaDesde.Text = "Fecha Desde :"
         '
@@ -500,10 +503,10 @@ Partial Class FrmReporteMortalidadRecriaEngorde
         Me.LblFechaHasta.BackColor = System.Drawing.Color.Transparent
         Me.LblFechaHasta.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblFechaHasta.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.LblFechaHasta.Location = New System.Drawing.Point(408, 154)
-        Me.LblFechaHasta.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.LblFechaHasta.Location = New System.Drawing.Point(272, 100)
+        Me.LblFechaHasta.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblFechaHasta.Name = "LblFechaHasta"
-        Me.LblFechaHasta.Size = New System.Drawing.Size(147, 22)
+        Me.LblFechaHasta.Size = New System.Drawing.Size(97, 14)
         Me.LblFechaHasta.TabIndex = 164
         Me.LblFechaHasta.Text = "Fecha Hasta :"
         '
@@ -511,9 +514,11 @@ Partial Class FrmReporteMortalidadRecriaEngorde
         '
         Me.GroupBox2.Controls.Add(Me.Ptbx_Cargando)
         Me.GroupBox2.Controls.Add(Me.dtgListado)
-        Me.GroupBox2.Location = New System.Drawing.Point(12, 341)
+        Me.GroupBox2.Location = New System.Drawing.Point(8, 222)
+        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(1663, 654)
+        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox2.Size = New System.Drawing.Size(1109, 425)
         Me.GroupBox2.TabIndex = 162
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Registros de Mortalidad"
@@ -522,10 +527,9 @@ Partial Class FrmReporteMortalidadRecriaEngorde
         '
         Me.Ptbx_Cargando.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Ptbx_Cargando.Image = Global.Formularios.My.Resources.Resources.loader
-        Me.Ptbx_Cargando.Location = New System.Drawing.Point(757, 275)
-        Me.Ptbx_Cargando.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Ptbx_Cargando.Location = New System.Drawing.Point(505, 179)
         Me.Ptbx_Cargando.Name = "Ptbx_Cargando"
-        Me.Ptbx_Cargando.Size = New System.Drawing.Size(64, 57)
+        Me.Ptbx_Cargando.Size = New System.Drawing.Size(43, 37)
         Me.Ptbx_Cargando.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.Ptbx_Cargando.TabIndex = 177
         Me.Ptbx_Cargando.TabStop = False
@@ -601,10 +605,9 @@ Partial Class FrmReporteMortalidadRecriaEngorde
         Me.dtgListado.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy
         Me.dtgListado.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dtgListado.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dtgListado.Location = New System.Drawing.Point(3, 22)
-        Me.dtgListado.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.dtgListado.Location = New System.Drawing.Point(2, 15)
         Me.dtgListado.Name = "dtgListado"
-        Me.dtgListado.Size = New System.Drawing.Size(1657, 629)
+        Me.dtgListado.Size = New System.Drawing.Size(1105, 408)
         Me.dtgListado.TabIndex = 176
         Me.dtgListado.Text = "UltraGrid1"
         '
@@ -615,10 +618,10 @@ Partial Class FrmReporteMortalidadRecriaEngorde
         Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnExportar, Me.btnCerrar})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.ToolStrip1.Margin = New System.Windows.Forms.Padding(3)
+        Me.ToolStrip1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Padding = New System.Windows.Forms.Padding(0, 0, 3, 0)
-        Me.ToolStrip1.Size = New System.Drawing.Size(1687, 40)
+        Me.ToolStrip1.Padding = New System.Windows.Forms.Padding(0, 0, 2, 0)
+        Me.ToolStrip1.Size = New System.Drawing.Size(1125, 38)
         Me.ToolStrip1.TabIndex = 52
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -631,7 +634,7 @@ Partial Class FrmReporteMortalidadRecriaEngorde
         Me.BtnExportar.Margin = New System.Windows.Forms.Padding(5)
         Me.BtnExportar.Name = "BtnExportar"
         Me.BtnExportar.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnExportar.Size = New System.Drawing.Size(125, 30)
+        Me.BtnExportar.Size = New System.Drawing.Size(92, 28)
         Me.BtnExportar.Text = "Exportar"
         Me.BtnExportar.ToolTipText = "Exportar"
         '
@@ -644,19 +647,30 @@ Partial Class FrmReporteMortalidadRecriaEngorde
         Me.btnCerrar.Margin = New System.Windows.Forms.Padding(5)
         Me.btnCerrar.Name = "btnCerrar"
         Me.btnCerrar.Padding = New System.Windows.Forms.Padding(2)
-        Me.btnCerrar.Size = New System.Drawing.Size(84, 30)
+        Me.btnCerrar.Size = New System.Drawing.Size(66, 28)
         Me.btnCerrar.Text = "Salir"
         Me.btnCerrar.ToolTipText = "Cerrar"
         '
         'BackgroundWorker1
         '
         '
+        'CbxChanchillas
+        '
+        Me.CbxChanchillas.AutoSize = True
+        Me.CbxChanchillas.Location = New System.Drawing.Point(655, 87)
+        Me.CbxChanchillas.Name = "CbxChanchillas"
+        Me.CbxChanchillas.Size = New System.Drawing.Size(80, 17)
+        Me.CbxChanchillas.TabIndex = 250
+        Me.CbxChanchillas.Text = "Chanchillas"
+        Me.CbxChanchillas.UseVisualStyleBackColor = True
+        '
         'FrmReporteMortalidadRecriaEngorde
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1687, 1001)
+        Me.ClientSize = New System.Drawing.Size(1125, 651)
         Me.Controls.Add(Me.Panel2)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "FrmReporteMortalidadRecriaEngorde"
@@ -710,4 +724,5 @@ Partial Class FrmReporteMortalidadRecriaEngorde
     Friend WithEvents BtnExportar As ToolStripButton
     Friend WithEvents btnCerrar As ToolStripButton
     Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
+    Friend WithEvents CbxChanchillas As CheckBox
 End Class

@@ -165,7 +165,7 @@ Public Class cnControlAnimal
     End Function
 
     Public Function Cn_ConsultarMortalidadRecriaEngorde(ByRef obj As coControlAnimal) As DataSet
-        Return cls_at.Cd_ConsultarxFechasUbicacionLoteDs("[w_pa_reporte_mortalidad_recria_engorde]", obj)
+        Return cls_at.Cd_ConsultarxMortalidadUbicacionLoteDs("[w_pa_reporte_mortalidad_recria_engorde]", obj)
     End Function
 
     Public Function Cn_EliminarPerdidaReproductiva(ByRef obj As coControlAnimal) As String

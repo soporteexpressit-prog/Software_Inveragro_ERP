@@ -628,27 +628,6 @@ Public Class FrmControlLotes
         End Try
     End Sub
 
-    Private Sub BtnReporteMortalidadPlantel_Click(sender As Object, e As EventArgs) Handles BtnReporteMortalidadPlantel.Click
-        Try
-            Dim activeRow As Infragistics.Win.UltraWinGrid.UltraGridRow = dtgListado.ActiveRow
-            If (dtgListado.Rows.Count > 0) Then
-                If (activeRow.Cells(0).Value.ToString.Length <> 0) Then
-                    Dim frm As New FrmReporteMortalidadPlantelLoteEdad With {
-                        .idPlantel = CmbUbicacion.Value,
-                        .idLote = activeRow.Cells("idLote").Value
-                    }
-                    frm.ShowDialog()
-                Else
-                    msj_advert(MensajesSistema.mensajesGenerales("SELECCIONE_REGISTRO"))
-                End If
-            Else
-                msj_advert(MensajesSistema.mensajesGenerales("SELECCIONE_REGISTRO"))
-            End If
-        Catch ex As Exception
-            clsBasicas.controlException(Name, ex)
-        End Try
-    End Sub
-
     Private Sub BtnReportePesos_Click(sender As Object, e As EventArgs) Handles BtnReportePesos.Click
         Try
             Dim frm As New FrmReporteDespachoCerdoGranja With {
@@ -833,5 +812,26 @@ Public Class FrmControlLotes
         Else
             msj_advert(MensajesSistema.mensajesGenerales("SELECCIONE_REGISTRO"))
         End If
+    End Sub
+
+    Private Sub BtnReporteMortalidadLote_Click(sender As Object, e As EventArgs) Handles BtnReporteMortalidadLote.Click
+        Try
+            Dim activeRow As Infragistics.Win.UltraWinGrid.UltraGridRow = dtgListado.ActiveRow
+            If (dtgListado.Rows.Count > 0) Then
+                If (activeRow.Cells(0).Value.ToString.Length <> 0) Then
+                    Dim frm As New FrmReporteMortalidadPlantelLoteEdad With {
+                        .idPlantel = CmbUbicacion.Value,
+                        .idLote = activeRow.Cells("idLote").Value
+                    }
+                    frm.ShowDialog()
+                Else
+                    msj_advert(MensajesSistema.mensajesGenerales("SELECCIONE_REGISTRO"))
+                End If
+            Else
+                msj_advert(MensajesSistema.mensajesGenerales("SELECCIONE_REGISTRO"))
+            End If
+        Catch ex As Exception
+            clsBasicas.controlException(Name, ex)
+        End Try
     End Sub
 End Class

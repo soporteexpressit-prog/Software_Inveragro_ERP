@@ -75,7 +75,8 @@ Public Class FrmReporteMortalidadPlantelLoteEdad
             If (dtgListado.Rows.Count = 0) Then
             Else
                 e.Layout.Bands(0).Summaries.Clear()
-                clsBasicas.Totales_Formato(dtgListado, e, 1)
+                clsBasicas.Totales_Formato(dtgListado, e, 0)
+                clsBasicas.SumarTotales_Formato(dtgListado, e, 2)
             End If
         Catch ex As Exception
             clsBasicas.controlException(Name, ex)

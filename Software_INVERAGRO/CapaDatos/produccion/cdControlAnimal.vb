@@ -837,6 +837,25 @@ Public Class cdControlAnimal
         Return ds
     End Function
 
+    Public Function Cd_ConsultarxMortalidadUbicacionLoteDs(name As String, obj As coControlAnimal) As DataSet
+        Dim ds As New DataSet
+        Try
+            con.Abrir()
+            Dim da As New SqlDataAdapter(name, con.con)
+            da.SelectCommand.CommandType = 4
+            da.SelectCommand.Parameters.AddWithValue("@fechaDesde", obj.FechaDesde)
+            da.SelectCommand.Parameters.AddWithValue("@fechaHasta", obj.FechaHasta)
+            da.SelectCommand.Parameters.AddWithValue("@idUbicacion", obj.IdPlantel)
+            da.SelectCommand.Parameters.AddWithValue("@idLote", obj.IdLote)
+            da.SelectCommand.Parameters.AddWithValue("@chanchillas", obj.ChanchillaEngorde)
+            da.Fill(ds)
+        Catch ex As Exception
+            Throw ex
+        End Try
+        con.Salir()
+        Return ds
+    End Function
+
     Public Function Cd_ConsultarxFechasUbicacionTipoLoteDt(name As String, obj As coControlAnimal) As DataTable
         Dim dt As New DataTable
         Try
