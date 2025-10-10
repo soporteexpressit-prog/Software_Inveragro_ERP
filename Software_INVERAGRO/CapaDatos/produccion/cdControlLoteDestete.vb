@@ -924,6 +924,23 @@ Public Class cdControlLoteDestete
         Return dt
     End Function
 
+    Public Function Cd_ConsultarxLoteUbicacionChanchillaDt(name As String, obj As coControlLoteDestete) As DataTable
+        Dim dt As New DataTable
+        Try
+            con.Abrir()
+            Dim da As New SqlDataAdapter(name, con.con)
+            da.SelectCommand.CommandType = 4
+            da.SelectCommand.Parameters.AddWithValue("@idLote", obj.IdLote)
+            da.SelectCommand.Parameters.AddWithValue("@idUbicacion", obj.IdPlantel)
+            da.SelectCommand.Parameters.AddWithValue("@chanchillasSinRetorno", obj.TipoFiltro)
+            da.Fill(dt)
+        Catch ex As Exception
+            Throw ex
+        End Try
+        con.Salir()
+        Return dt
+    End Function
+
     Public Function Cd_ConsultarxAnioDs(name As String, obj As coControlLoteDestete) As DataSet
         Dim ds As New DataSet
         Try

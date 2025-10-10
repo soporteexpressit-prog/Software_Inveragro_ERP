@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FrmCodificarMasivo
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class FrmCodificarMasivo
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim Appearance1 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance2 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
@@ -63,6 +63,8 @@ Partial Class FrmCodificarMasivo
         Dim Appearance38 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance39 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.BtnBloquearGenetica = New System.Windows.Forms.Button()
+        Me.BtnBloquearFecha = New System.Windows.Forms.Button()
         Me.GroupBox6 = New System.Windows.Forms.GroupBox()
         Me.Ptbx_Cargando = New System.Windows.Forms.PictureBox()
         Me.DtgListado = New Infragistics.Win.UltraWinGrid.UltraGrid()
@@ -84,8 +86,6 @@ Partial Class FrmCodificarMasivo
         Me.BtnGuardar = New System.Windows.Forms.ToolStripButton()
         Me.BtnCerrar = New System.Windows.Forms.ToolStripButton()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
-        Me.BtnBloquearFecha = New System.Windows.Forms.Button()
-        Me.BtnBloquearGenetica = New System.Windows.Forms.Button()
         Me.Panel2.SuspendLayout()
         Me.GroupBox6.SuspendLayout()
         CType(Me.Ptbx_Cargando, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -110,17 +110,54 @@ Partial Class FrmCodificarMasivo
         Me.Panel2.Controls.Add(Me.ToolStrip1)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1444, 931)
+        Me.Panel2.Size = New System.Drawing.Size(963, 605)
         Me.Panel2.TabIndex = 14
+        '
+        'BtnBloquearGenetica
+        '
+        Me.BtnBloquearGenetica.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnBloquearGenetica.AutoSize = True
+        Me.BtnBloquearGenetica.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnBloquearGenetica.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnBloquearGenetica.Image = Global.Formularios.My.Resources.Resources.candado_16px
+        Me.BtnBloquearGenetica.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnBloquearGenetica.Location = New System.Drawing.Point(877, 107)
+        Me.BtnBloquearGenetica.Name = "BtnBloquearGenetica"
+        Me.BtnBloquearGenetica.Size = New System.Drawing.Size(24, 24)
+        Me.BtnBloquearGenetica.TabIndex = 249
+        Me.BtnBloquearGenetica.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnBloquearGenetica.UseVisualStyleBackColor = True
+        '
+        'BtnBloquearFecha
+        '
+        Me.BtnBloquearFecha.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnBloquearFecha.AutoSize = True
+        Me.BtnBloquearFecha.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnBloquearFecha.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnBloquearFecha.Image = Global.Formularios.My.Resources.Resources.candado_16px
+        Me.BtnBloquearFecha.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnBloquearFecha.Location = New System.Drawing.Point(877, 57)
+        Me.BtnBloquearFecha.Name = "BtnBloquearFecha"
+        Me.BtnBloquearFecha.Size = New System.Drawing.Size(24, 24)
+        Me.BtnBloquearFecha.TabIndex = 248
+        Me.BtnBloquearFecha.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnBloquearFecha.UseVisualStyleBackColor = True
         '
         'GroupBox6
         '
         Me.GroupBox6.Controls.Add(Me.Ptbx_Cargando)
         Me.GroupBox6.Controls.Add(Me.DtgListado)
-        Me.GroupBox6.Location = New System.Drawing.Point(12, 250)
+        Me.GroupBox6.Location = New System.Drawing.Point(8, 162)
+        Me.GroupBox6.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GroupBox6.Name = "GroupBox6"
-        Me.GroupBox6.Size = New System.Drawing.Size(1420, 669)
+        Me.GroupBox6.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox6.Size = New System.Drawing.Size(947, 435)
         Me.GroupBox6.TabIndex = 238
         Me.GroupBox6.TabStop = False
         Me.GroupBox6.Text = "Chanchillas"
@@ -129,10 +166,9 @@ Partial Class FrmCodificarMasivo
         '
         Me.Ptbx_Cargando.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Ptbx_Cargando.Image = Global.Formularios.My.Resources.Resources.loader
-        Me.Ptbx_Cargando.Location = New System.Drawing.Point(657, 307)
-        Me.Ptbx_Cargando.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Ptbx_Cargando.Location = New System.Drawing.Point(438, 200)
         Me.Ptbx_Cargando.Name = "Ptbx_Cargando"
-        Me.Ptbx_Cargando.Size = New System.Drawing.Size(64, 57)
+        Me.Ptbx_Cargando.Size = New System.Drawing.Size(43, 37)
         Me.Ptbx_Cargando.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.Ptbx_Cargando.TabIndex = 208
         Me.Ptbx_Cargando.TabStop = False
@@ -208,10 +244,9 @@ Partial Class FrmCodificarMasivo
         Me.DtgListado.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy
         Me.DtgListado.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DtgListado.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DtgListado.Location = New System.Drawing.Point(3, 22)
-        Me.DtgListado.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.DtgListado.Location = New System.Drawing.Point(2, 15)
         Me.DtgListado.Name = "DtgListado"
-        Me.DtgListado.Size = New System.Drawing.Size(1414, 644)
+        Me.DtgListado.Size = New System.Drawing.Size(943, 418)
         Me.DtgListado.TabIndex = 176
         Me.DtgListado.Text = "UltraGrid1"
         '
@@ -226,9 +261,11 @@ Partial Class FrmCodificarMasivo
         Me.GroupBox1.Controls.Add(Me.RbnJaula)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.RbnCorral)
-        Me.GroupBox1.Location = New System.Drawing.Point(35, 73)
+        Me.GroupBox1.Location = New System.Drawing.Point(23, 47)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(784, 149)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox1.Size = New System.Drawing.Size(523, 97)
         Me.GroupBox1.TabIndex = 237
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Información de Ubicación"
@@ -243,10 +280,9 @@ Partial Class FrmCodificarMasivo
         Me.BtnBloquearCorral.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnBloquearCorral.Image = Global.Formularios.My.Resources.Resources.candado_16px
         Me.BtnBloquearCorral.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnBloquearCorral.Location = New System.Drawing.Point(658, 89)
-        Me.BtnBloquearCorral.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.BtnBloquearCorral.Location = New System.Drawing.Point(439, 58)
         Me.BtnBloquearCorral.Name = "BtnBloquearCorral"
-        Me.BtnBloquearCorral.Size = New System.Drawing.Size(36, 37)
+        Me.BtnBloquearCorral.Size = New System.Drawing.Size(24, 24)
         Me.BtnBloquearCorral.TabIndex = 247
         Me.BtnBloquearCorral.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.BtnBloquearCorral.UseVisualStyleBackColor = True
@@ -255,11 +291,10 @@ Partial Class FrmCodificarMasivo
         '
         Me.TxtSala.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxtSala.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtSala.Location = New System.Drawing.Point(444, 93)
-        Me.TxtSala.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.TxtSala.Location = New System.Drawing.Point(296, 60)
         Me.TxtSala.MaxLength = 50
         Me.TxtSala.Name = "TxtSala"
-        Me.TxtSala.Size = New System.Drawing.Size(140, 28)
+        Me.TxtSala.Size = New System.Drawing.Size(95, 21)
         Me.TxtSala.TabIndex = 110
         Me.TxtSala.TabStop = False
         '
@@ -269,10 +304,9 @@ Partial Class FrmCodificarMasivo
         Me.BtnBuscarJaulaCorral.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnBuscarJaulaCorral.Image = CType(resources.GetObject("BtnBuscarJaulaCorral.Image"), System.Drawing.Image)
         Me.BtnBuscarJaulaCorral.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnBuscarJaulaCorral.Location = New System.Drawing.Point(602, 85)
-        Me.BtnBuscarJaulaCorral.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.BtnBuscarJaulaCorral.Location = New System.Drawing.Point(401, 55)
         Me.BtnBuscarJaulaCorral.Name = "BtnBuscarJaulaCorral"
-        Me.BtnBuscarJaulaCorral.Size = New System.Drawing.Size(48, 45)
+        Me.BtnBuscarJaulaCorral.Size = New System.Drawing.Size(32, 29)
         Me.BtnBuscarJaulaCorral.TabIndex = 120
         Me.BtnBuscarJaulaCorral.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.BtnBuscarJaulaCorral.UseVisualStyleBackColor = True
@@ -283,10 +317,10 @@ Partial Class FrmCodificarMasivo
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(48, 45)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label2.Location = New System.Drawing.Point(32, 29)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(94, 22)
+        Me.Label2.Size = New System.Drawing.Size(62, 14)
         Me.Label2.TabIndex = 165
         Me.Label2.Text = "Galpón :"
         '
@@ -294,11 +328,10 @@ Partial Class FrmCodificarMasivo
         '
         Me.TxtJaulaCorral.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxtJaulaCorral.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtJaulaCorral.Location = New System.Drawing.Point(158, 93)
-        Me.TxtJaulaCorral.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.TxtJaulaCorral.Location = New System.Drawing.Point(105, 60)
         Me.TxtJaulaCorral.MaxLength = 50
         Me.TxtJaulaCorral.Name = "TxtJaulaCorral"
-        Me.TxtJaulaCorral.Size = New System.Drawing.Size(267, 28)
+        Me.TxtJaulaCorral.Size = New System.Drawing.Size(179, 21)
         Me.TxtJaulaCorral.TabIndex = 100
         Me.TxtJaulaCorral.TabStop = False
         '
@@ -359,18 +392,18 @@ Partial Class FrmCodificarMasivo
         Me.CmbGalpon.DisplayLayout.ScrollStyle = Infragistics.Win.UltraWinGrid.ScrollStyle.Immediate
         Me.CmbGalpon.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy
         Me.CmbGalpon.DropDownStyle = Infragistics.Win.UltraWinGrid.UltraComboStyle.DropDownList
-        Me.CmbGalpon.Location = New System.Drawing.Point(154, 41)
-        Me.CmbGalpon.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.CmbGalpon.Location = New System.Drawing.Point(103, 27)
         Me.CmbGalpon.Name = "CmbGalpon"
-        Me.CmbGalpon.Size = New System.Drawing.Size(267, 29)
+        Me.CmbGalpon.Size = New System.Drawing.Size(178, 22)
         Me.CmbGalpon.TabIndex = 60
         '
         'RbnJaula
         '
         Me.RbnJaula.AutoSize = True
-        Me.RbnJaula.Location = New System.Drawing.Point(679, 41)
+        Me.RbnJaula.Location = New System.Drawing.Point(453, 27)
+        Me.RbnJaula.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.RbnJaula.Name = "RbnJaula"
-        Me.RbnJaula.Size = New System.Drawing.Size(72, 24)
+        Me.RbnJaula.Size = New System.Drawing.Size(50, 17)
         Me.RbnJaula.TabIndex = 80
         Me.RbnJaula.TabStop = True
         Me.RbnJaula.Text = "Jaula"
@@ -382,19 +415,20 @@ Partial Class FrmCodificarMasivo
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(55, 96)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label1.Location = New System.Drawing.Point(37, 62)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(84, 22)
+        Me.Label1.Size = New System.Drawing.Size(57, 14)
         Me.Label1.TabIndex = 167
         Me.Label1.Text = "Corral :"
         '
         'RbnCorral
         '
         Me.RbnCorral.AutoSize = True
-        Me.RbnCorral.Location = New System.Drawing.Point(559, 41)
+        Me.RbnCorral.Location = New System.Drawing.Point(373, 27)
+        Me.RbnCorral.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.RbnCorral.Name = "RbnCorral"
-        Me.RbnCorral.Size = New System.Drawing.Size(76, 24)
+        Me.RbnCorral.Size = New System.Drawing.Size(52, 17)
         Me.RbnCorral.TabIndex = 70
         Me.RbnCorral.TabStop = True
         Me.RbnCorral.Text = "Corral"
@@ -458,10 +492,9 @@ Partial Class FrmCodificarMasivo
         Me.CmbGenetica.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy
         Me.CmbGenetica.DropDownStyle = Infragistics.Win.UltraWinGrid.UltraComboStyle.DropDownList
         Me.CmbGenetica.Font = New System.Drawing.Font("Verdana", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CmbGenetica.Location = New System.Drawing.Point(1089, 164)
-        Me.CmbGenetica.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.CmbGenetica.Location = New System.Drawing.Point(726, 108)
         Me.CmbGenetica.Name = "CmbGenetica"
-        Me.CmbGenetica.Size = New System.Drawing.Size(218, 30)
+        Me.CmbGenetica.Size = New System.Drawing.Size(145, 23)
         Me.CmbGenetica.TabIndex = 224
         '
         'Label11
@@ -470,10 +503,10 @@ Partial Class FrmCodificarMasivo
         Me.Label11.BackColor = System.Drawing.Color.Transparent
         Me.Label11.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label11.Location = New System.Drawing.Point(903, 168)
-        Me.Label11.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label11.Location = New System.Drawing.Point(602, 112)
+        Me.Label11.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(172, 22)
+        Me.Label11.Size = New System.Drawing.Size(114, 14)
         Me.Label11.TabIndex = 225
         Me.Label11.Text = "Línea Genética :"
         '
@@ -483,10 +516,10 @@ Partial Class FrmCodificarMasivo
         Me.Label12.BackColor = System.Drawing.Color.Transparent
         Me.Label12.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label12.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label12.Location = New System.Drawing.Point(913, 92)
-        Me.Label12.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label12.Location = New System.Drawing.Point(609, 62)
+        Me.Label12.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(162, 22)
+        Me.Label12.Size = New System.Drawing.Size(107, 14)
         Me.Label12.TabIndex = 218
         Me.Label12.Text = "Fecha Llegada:"
         '
@@ -494,10 +527,9 @@ Partial Class FrmCodificarMasivo
         '
         Me.DtpFechaLlegada.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DtpFechaLlegada.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DtpFechaLlegada.Location = New System.Drawing.Point(1089, 89)
-        Me.DtpFechaLlegada.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.DtpFechaLlegada.Location = New System.Drawing.Point(726, 59)
         Me.DtpFechaLlegada.Name = "DtpFechaLlegada"
-        Me.DtpFechaLlegada.Size = New System.Drawing.Size(218, 28)
+        Me.DtpFechaLlegada.Size = New System.Drawing.Size(147, 21)
         Me.DtpFechaLlegada.TabIndex = 219
         '
         'ToolStrip1
@@ -507,10 +539,10 @@ Partial Class FrmCodificarMasivo
         Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnGuardar, Me.BtnCerrar})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.ToolStrip1.Margin = New System.Windows.Forms.Padding(3)
+        Me.ToolStrip1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Padding = New System.Windows.Forms.Padding(0, 0, 3, 0)
-        Me.ToolStrip1.Size = New System.Drawing.Size(1444, 40)
+        Me.ToolStrip1.Padding = New System.Windows.Forms.Padding(0, 0, 2, 0)
+        Me.ToolStrip1.Size = New System.Drawing.Size(963, 38)
         Me.ToolStrip1.TabIndex = 52
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -523,7 +555,7 @@ Partial Class FrmCodificarMasivo
         Me.BtnGuardar.Margin = New System.Windows.Forms.Padding(5)
         Me.BtnGuardar.Name = "BtnGuardar"
         Me.BtnGuardar.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnGuardar.Size = New System.Drawing.Size(128, 30)
+        Me.BtnGuardar.Size = New System.Drawing.Size(94, 28)
         Me.BtnGuardar.Text = "Codificar"
         Me.BtnGuardar.ToolTipText = "Guardar"
         '
@@ -536,55 +568,20 @@ Partial Class FrmCodificarMasivo
         Me.BtnCerrar.Margin = New System.Windows.Forms.Padding(5)
         Me.BtnCerrar.Name = "BtnCerrar"
         Me.BtnCerrar.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnCerrar.Size = New System.Drawing.Size(84, 30)
+        Me.BtnCerrar.Size = New System.Drawing.Size(66, 28)
         Me.BtnCerrar.Text = "Salir"
         Me.BtnCerrar.ToolTipText = "Cerrar"
         '
         'BackgroundWorker1
         '
         '
-        'BtnBloquearFecha
-        '
-        Me.BtnBloquearFecha.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnBloquearFecha.AutoSize = True
-        Me.BtnBloquearFecha.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BtnBloquearFecha.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnBloquearFecha.Image = Global.Formularios.My.Resources.Resources.candado_16px
-        Me.BtnBloquearFecha.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnBloquearFecha.Location = New System.Drawing.Point(1315, 85)
-        Me.BtnBloquearFecha.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.BtnBloquearFecha.Name = "BtnBloquearFecha"
-        Me.BtnBloquearFecha.Size = New System.Drawing.Size(36, 37)
-        Me.BtnBloquearFecha.TabIndex = 248
-        Me.BtnBloquearFecha.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.BtnBloquearFecha.UseVisualStyleBackColor = True
-        '
-        'BtnBloquearGenetica
-        '
-        Me.BtnBloquearGenetica.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnBloquearGenetica.AutoSize = True
-        Me.BtnBloquearGenetica.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BtnBloquearGenetica.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnBloquearGenetica.Image = Global.Formularios.My.Resources.Resources.candado_16px
-        Me.BtnBloquearGenetica.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnBloquearGenetica.Location = New System.Drawing.Point(1315, 161)
-        Me.BtnBloquearGenetica.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.BtnBloquearGenetica.Name = "BtnBloquearGenetica"
-        Me.BtnBloquearGenetica.Size = New System.Drawing.Size(36, 37)
-        Me.BtnBloquearGenetica.TabIndex = 249
-        Me.BtnBloquearGenetica.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.BtnBloquearGenetica.UseVisualStyleBackColor = True
-        '
         'FrmCodificarMasivo
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1444, 931)
+        Me.ClientSize = New System.Drawing.Size(963, 605)
         Me.Controls.Add(Me.Panel2)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "FrmCodificarMasivo"

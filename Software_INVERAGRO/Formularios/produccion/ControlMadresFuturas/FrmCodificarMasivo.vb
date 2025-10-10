@@ -9,6 +9,7 @@ Public Class FrmCodificarMasivo
     Public IdLote As Integer = 0
     Dim tbtmp As New DataTable
     Public idJaulaCorral As Integer = 0
+    Public chanchillasSinBajada As String = "NO"
 
     Private Sub FrmCodificarMasivo_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
@@ -87,7 +88,8 @@ Public Class FrmCodificarMasivo
 
             Dim obj As New coControlLoteDestete With {
                 .IdLote = IdLote,
-                .IdPlantel = IdPlantel
+                .IdPlantel = IdPlantel,
+                .TipoFiltro = chanchillasSinBajada
             }
 
             BackgroundWorker1.RunWorkerAsync(obj)

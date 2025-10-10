@@ -73,6 +73,7 @@ Partial Class FrmControlLotes
         Me.BtnRegistrarBajadacontrollotespro = New System.Windows.Forms.ToolStripButton()
         Me.BtnVentaLotecontrollotespro = New System.Windows.Forms.ToolStripButton()
         Me.BtnCancelarVenta = New System.Windows.Forms.ToolStripButton()
+        Me.BtnCodificarMadreFutura = New System.Windows.Forms.ToolStripButton()
         Me.BtnExportarControlCerdacontrollotespro = New System.Windows.Forms.ToolStripButton()
         Me.btnreporteRrhhctrlcapaci = New System.Windows.Forms.ToolStripDropDownButton()
         Me.BtnReporteGeneral = New System.Windows.Forms.ToolStripMenuItem()
@@ -104,7 +105,7 @@ Partial Class FrmControlLotes
         Me.Contenedor.Location = New System.Drawing.Point(0, 0)
         Me.Contenedor.Margin = New System.Windows.Forms.Padding(2, 1, 2, 1)
         Me.Contenedor.Name = "Contenedor"
-        Me.Contenedor.Size = New System.Drawing.Size(1621, 185)
+        Me.Contenedor.Size = New System.Drawing.Size(1742, 185)
         Me.Contenedor.TabIndex = 14
         '
         'GrupoFiltros
@@ -268,12 +269,12 @@ Partial Class FrmControlLotes
         Me.BarraNavegacion.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.BarraNavegacion.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
         Me.BarraNavegacion.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.BarraNavegacion.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnClinica, Me.BtnCambiarUbicacioncontrollotespro, Me.BtnUbicarZonaEspera, Me.BtnAjustarDistribucionCerdocontrollotespro, Me.BtnMandarCamalMortalidadLotecontrollotespro, Me.BtnDepurar, Me.BtnPesos, Me.BtnMoverChanchillas, Me.BtnRegistrarBajadacontrollotespro, Me.BtnVentaLotecontrollotespro, Me.BtnCancelarVenta, Me.BtnExportarControlCerdacontrollotespro, Me.btnreporteRrhhctrlcapaci})
+        Me.BarraNavegacion.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnClinica, Me.BtnCambiarUbicacioncontrollotespro, Me.BtnUbicarZonaEspera, Me.BtnAjustarDistribucionCerdocontrollotespro, Me.BtnMandarCamalMortalidadLotecontrollotespro, Me.BtnDepurar, Me.BtnPesos, Me.BtnMoverChanchillas, Me.BtnRegistrarBajadacontrollotespro, Me.BtnVentaLotecontrollotespro, Me.BtnCancelarVenta, Me.BtnCodificarMadreFutura, Me.BtnExportarControlCerdacontrollotespro, Me.btnreporteRrhhctrlcapaci})
         Me.BarraNavegacion.Location = New System.Drawing.Point(0, 147)
         Me.BarraNavegacion.Margin = New System.Windows.Forms.Padding(2, 1, 2, 1)
         Me.BarraNavegacion.Name = "BarraNavegacion"
         Me.BarraNavegacion.Padding = New System.Windows.Forms.Padding(0, 0, 2, 0)
-        Me.BarraNavegacion.Size = New System.Drawing.Size(1621, 38)
+        Me.BarraNavegacion.Size = New System.Drawing.Size(1742, 38)
         Me.BarraNavegacion.TabIndex = 52
         Me.BarraNavegacion.Text = "Monitoreo"
         '
@@ -430,6 +431,19 @@ Partial Class FrmControlLotes
         Me.BtnCancelarVenta.Text = "Cancelar Venta"
         Me.BtnCancelarVenta.ToolTipText = "Cancelar"
         '
+        'BtnCodificarMadreFutura
+        '
+        Me.BtnCodificarMadreFutura.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnCodificarMadreFutura.ForeColor = System.Drawing.Color.White
+        Me.BtnCodificarMadreFutura.Image = Global.Formularios.My.Resources.Resources.identificador
+        Me.BtnCodificarMadreFutura.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BtnCodificarMadreFutura.Margin = New System.Windows.Forms.Padding(5)
+        Me.BtnCodificarMadreFutura.Name = "BtnCodificarMadreFutura"
+        Me.BtnCodificarMadreFutura.Padding = New System.Windows.Forms.Padding(2)
+        Me.BtnCodificarMadreFutura.Size = New System.Drawing.Size(94, 28)
+        Me.BtnCodificarMadreFutura.Text = "Codificar"
+        Me.BtnCodificarMadreFutura.ToolTipText = "Parto"
+        '
         'BtnExportarControlCerdacontrollotespro
         '
         Me.BtnExportarControlCerdacontrollotespro.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -572,7 +586,7 @@ Partial Class FrmControlLotes
         Me.dtgListado.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dtgListado.Location = New System.Drawing.Point(0, 185)
         Me.dtgListado.Name = "dtgListado"
-        Me.dtgListado.Size = New System.Drawing.Size(1621, 505)
+        Me.dtgListado.Size = New System.Drawing.Size(1742, 505)
         Me.dtgListado.TabIndex = 37
         Me.dtgListado.Text = "UltraGrid1"
         '
@@ -583,7 +597,7 @@ Partial Class FrmControlLotes
         '
         Me.Ptbx_Cargando.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Ptbx_Cargando.Image = Global.Formularios.My.Resources.Resources.loader
-        Me.Ptbx_Cargando.Location = New System.Drawing.Point(794, 400)
+        Me.Ptbx_Cargando.Location = New System.Drawing.Point(855, 400)
         Me.Ptbx_Cargando.Name = "Ptbx_Cargando"
         Me.Ptbx_Cargando.Size = New System.Drawing.Size(43, 37)
         Me.Ptbx_Cargando.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -595,7 +609,7 @@ Partial Class FrmControlLotes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1621, 690)
+        Me.ClientSize = New System.Drawing.Size(1742, 690)
         Me.Controls.Add(Me.Ptbx_Cargando)
         Me.Controls.Add(Me.dtgListado)
         Me.Controls.Add(Me.Contenedor)
@@ -651,4 +665,5 @@ Partial Class FrmControlLotes
     Friend WithEvents BtnPesosChanchillas As ToolStripMenuItem
     Friend WithEvents BtnPesosBajadas As ToolStripMenuItem
     Friend WithEvents BtnMoverChanchillas As ToolStripButton
+    Friend WithEvents BtnCodificarMadreFutura As ToolStripButton
 End Class

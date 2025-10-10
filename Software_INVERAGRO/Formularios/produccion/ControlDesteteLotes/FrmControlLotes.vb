@@ -104,6 +104,7 @@ Public Class FrmControlLotes
                 BtnVentaLotecontrollotespro.Visible = False
                 BtnCancelarVenta.Visible = False
                 BtnPesos.Visible = True
+                BtnCodificarMadreFutura.Visible = True
             Else
                 dtgListado.DisplayLayout.Bands(0).Columns("Estado Venta").Hidden = False
                 dtgListado.DisplayLayout.Bands(0).Columns("P. Salida").Hidden = False
@@ -112,6 +113,7 @@ Public Class FrmControlLotes
                 BtnVentaLotecontrollotespro.Visible = True
                 BtnCancelarVenta.Visible = True
                 BtnPesos.Visible = True
+                BtnCodificarMadreFutura.Visible = False
             End If
 
             If ds.Tables(0).Rows.Count <> 0 Then
@@ -550,7 +552,6 @@ Public Class FrmControlLotes
     Private Sub dtgListado_InitializeRow(sender As Object, e As UltraWinGrid.InitializeRowEventArgs) Handles dtgListado.InitializeRow
         If e.Row.Band.Index = 0 Then
             Dim colVerInformacion As Infragistics.Win.UltraWinGrid.UltraGridColumn
-            Dim historialMortalidad As Infragistics.Win.UltraWinGrid.UltraGridColumn
 
             If dtgListado.DisplayLayout.Bands(0).Columns.Exists("Información") Then
                 colVerInformacion = dtgListado.DisplayLayout.Bands(0).Columns("Información")
@@ -824,6 +825,41 @@ Public Class FrmControlLotes
                         .idLote = activeRow.Cells("idLote").Value
                     }
                     frm.ShowDialog()
+                Else
+                    msj_advert(MensajesSistema.mensajesGenerales("SELECCIONE_REGISTRO"))
+                End If
+            Else
+                msj_advert(MensajesSistema.mensajesGenerales("SELECCIONE_REGISTRO"))
+            End If
+        Catch ex As Exception
+            clsBasicas.controlException(Name, ex)
+        End Try
+    End Sub
+
+    Private Sub BtnCodificarMadreFutura_Click(sender As Object, e As EventArgs) Handles BtnCodificarMadreFutura.Click
+        Try
+            Dim activeRow As Infragistics.Win.UltraWinGrid.UltraGridRow = dtgListado.ActiveRow
+            If (dtgListado.Rows.Count > 0) Then
+                If (activeRow.Cells(0).Value.ToString.Length <> 0) Then
+                    If activeRow.Band.Index = 0 Then
+                        Dim totaPuras As Integer = CInt(activeRow.Cells("Total Puras").Value)
+                        Dim totalCamborough As Integer = CInt(activeRow.Cells("Total Camborough").Value)
+
+                        If totaPuras = 0 AndAlso totalCamborough = 0 Then
+                            msj_advert("No hay chanchillas para codificar en este lote")
+                            Return
+                        End If
+
+                        Dim frm As New FrmCodificarMasivo With {
+                            .IdLote = CInt(activeRow.Cells("idLote").Value),
+                            .IdPlantel = CmbUbicacion.Value,
+                            .chanchillasSinBajada = "SI"
+                        }
+                        frm.ShowDialog()
+                        Consultar()
+                    Else
+                        msj_advert(MensajesSistema.mensajesGenerales("SELECCION_FILA_CONTENEDOR"))
+                    End If
                 Else
                     msj_advert(MensajesSistema.mensajesGenerales("SELECCIONE_REGISTRO"))
                 End If

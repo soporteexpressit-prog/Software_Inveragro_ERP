@@ -175,7 +175,7 @@ Public Class cnControlLoteDestete
     End Function
 
     Public Function Cn_ConsultarMadresFuturasCodificar(ByRef obj As coControlLoteDestete) As DataTable
-        Return cls_at.Cd_ConsultarxLoteUbicacionDt("[w_pa_cons_pura_camborough_x_ubicacion]", obj)
+        Return cls_at.Cd_ConsultarxLoteUbicacionChanchillaDt("[w_pa_cons_pura_camborough_x_ubicacion]", obj)
     End Function
 
     Public Function Cn_ConsultarHistorialLote(obj As coControlLoteDestete) As DataTable
