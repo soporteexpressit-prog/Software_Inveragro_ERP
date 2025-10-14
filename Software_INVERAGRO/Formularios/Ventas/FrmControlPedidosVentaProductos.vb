@@ -172,17 +172,14 @@ Public Class FrmControlPedidosVentaProductos
                 Return
             End If
 
-            If activeRow.Cells(18).Value.ToString.Equals("SIN DESPACHO") Then
-                If activeRow.Cells(19).Value <> "PENDIENTE" Then
-                    msj_advert("Pedido de Venta no puede ser Anulado porque ya fue Enviado a Facturación")
-                Else
-                    Dim f As New FrmAnularPedidoVenta
-                    f.idordencompra = activeRow.Cells(0).Value.ToString
-                    f.ShowDialog()
-                    Consultar()
-                End If
+            If activeRow.Cells(19).Value = "FACTURADO" Then
+                msj_advert("Pedido de Venta no puede ser Anulado porque ya fue Enviado a Facturación")
             Else
-                msj_advert("Pedido de Venta no puede ser Anulada por que tiene Recepciones de Productos")
+                Dim f As New FrmAnularPedidoVenta
+                f.idordencompra = activeRow.Cells(0).Value.ToString
+                f.operacion = 4
+                f.ShowDialog()
+                Consultar()
             End If
 
         Catch ex As Exception

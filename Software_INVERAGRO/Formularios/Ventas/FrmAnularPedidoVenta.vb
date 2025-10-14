@@ -29,10 +29,10 @@ Public Class FrmAnularPedidoVenta
             Try
                 ' Crea el objeto y asigna los valores necesarios
                 Dim obj As New coVentas With {
-                .Codigo = idordencompra,
-                .Motivoanulacion = txtDescripcionAnulacion.Text,
-                .Iduser = VariablesGlobales.VP_IdUser
-            }
+             .Codigo = idordencompra,
+             .Motivoanulacion = txtDescripcionAnulacion.Text,
+             .Iduser = VariablesGlobales.VP_IdUser
+         }
 
                 ' Realiza la anulación a través de la función correspondiente
                 Dim mensaje As String
@@ -40,6 +40,8 @@ Public Class FrmAnularPedidoVenta
                     mensaje = cn.Cn_AnularPedidoguia(obj)
                 ElseIf operacion = 3 Then
                     mensaje = cn.Cn_AnularPedidoVentaKilos(obj)
+                ElseIf operacion = 4 Then
+                    mensaje = cn.Cn_AnularPedidoVentas(obj)
                 Else
                     mensaje = cn.Cn_AnularPedidoVenta(obj)
                 End If
@@ -56,7 +58,6 @@ Public Class FrmAnularPedidoVenta
             End Try
         End If
     End Sub
-
 
     Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
         Dispose()
