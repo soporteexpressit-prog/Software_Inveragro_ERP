@@ -230,7 +230,7 @@ Partial Class FrmVentaDirectaProductos
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Padding = New System.Windows.Forms.Padding(0, 0, 4, 0)
         Me.ToolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-        Me.ToolStrip1.Size = New System.Drawing.Size(780, 25)
+        Me.ToolStrip1.Size = New System.Drawing.Size(780, 38)
         Me.ToolStrip1.TabIndex = 37
         Me.ToolStrip1.TabStop = True
         Me.ToolStrip1.Text = "ToolStrip1"
@@ -871,7 +871,7 @@ Partial Class FrmVentaDirectaProductos
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(233, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1170, 991)
+        Me.ClientSize = New System.Drawing.Size(780, 721)
         Me.Controls.Add(Me.cbxalmacendestino)
         Me.Controls.Add(Me.Label20)
         Me.Controls.Add(Me.cbxalmacen_origen)
@@ -894,9 +894,9 @@ Partial Class FrmVentaDirectaProductos
         Me.Font = New System.Drawing.Font("Verdana", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.MaximizeBox = False
-        Me.MaximumSize = New System.Drawing.Size(796, 700)
+        Me.MaximumSize = New System.Drawing.Size(796, 760)
         Me.MinimizeBox = False
-        Me.MinimumSize = New System.Drawing.Size(796, 700)
+        Me.MinimumSize = New System.Drawing.Size(796, 760)
         Me.Name = "FrmVentaDirectaProductos"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "NUEVO PEDIDO DE VENTA DIRECTA DE PRODUCTOS"
