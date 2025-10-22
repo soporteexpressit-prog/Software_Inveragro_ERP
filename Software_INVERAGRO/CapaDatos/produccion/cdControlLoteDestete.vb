@@ -572,6 +572,7 @@ Public Class cdControlLoteDestete
             da.SelectCommand.Parameters.AddWithValue("@fechaDesde", obj.FechaDesde)
             da.SelectCommand.Parameters.AddWithValue("@fechaHasta", obj.FechaHasta)
             da.SelectCommand.Parameters.AddWithValue("@idUbicacion", obj.IdPlantel)
+            da.SelectCommand.Parameters.AddWithValue("@estado", obj.Estado)
             da.Fill(ds)
         Catch ex As Exception
             Throw ex

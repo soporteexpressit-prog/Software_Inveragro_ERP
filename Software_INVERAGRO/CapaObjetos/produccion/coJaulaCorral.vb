@@ -14,6 +14,7 @@
     Private _EsClinica As String
     Private _IdArea As Integer
     Private _Operacion As Integer
+    Private _IdCampaña As Integer
     Private _Coderror As Integer
     Private _Cantidad As Integer
 
@@ -148,6 +149,15 @@
         End Get
         Set(value As Integer)
             _Operacion = value
+        End Set
+    End Property
+
+    Public Property IdCampaña As Integer
+        Get
+            Return _IdCampaña
+        End Get
+        Set(value As Integer)
+            _IdCampaña = value
         End Set
     End Property
 

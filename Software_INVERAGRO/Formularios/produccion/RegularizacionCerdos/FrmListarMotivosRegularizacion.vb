@@ -22,6 +22,7 @@ Public Class FrmListarMotivosRegularizacion
             clsBasicas.Filtrar_Tabla(dtgListado, True)
             clsBasicas.Formato_Tablas_Grid(dtgListado)
             dtgListado.DataSource = cn.Cn_ConsultarTipo(obj)
+            dtgListado.DisplayLayout.Bands(0).Columns(0).Hidden = True
         Catch ex As Exception
             clsBasicas.controlException(Name, ex)
         End Try

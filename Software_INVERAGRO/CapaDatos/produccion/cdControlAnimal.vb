@@ -1122,6 +1122,8 @@ Public Class cdControlAnimal
                 .Add("@CantidadEngorde", SqlDbType.Int).Value = obj.CantidadCamalEngorde
                 .Add("@idUsuario", SqlDbType.Int).Value = obj.IdUsuario
                 .Add("@tipo", SqlDbType.VarChar).Value = obj.TipoControl
+                .Add("@idCampaña", SqlDbType.Int).Value = obj.IdCampaña
+                .Add("@idLote", SqlDbType.Int).Value = obj.IdLote
                 .Add("@msj", SqlDbType.VarChar, 100).Direction = 2
                 .Add("@coderror", SqlDbType.Int).Direction = 2
             End With

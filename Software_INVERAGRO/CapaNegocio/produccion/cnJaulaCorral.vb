@@ -24,6 +24,10 @@ Public Class cnJaulaCorral
         Return cls_at.Cd_ConsultarJaulaCorralxUbicacionTipo("[w_pa_obtener_corrales_jaulas_por_ubicacion_tipo]", obj)
     End Function
 
+    Public Function Cn_ConsultarJaulaCorralxCampaña(obj As coJaulaCorral) As DataTable
+        Return cls_at.Cd_ConsultarJaulaCorralxCampaña("[w_pa_obtener_corrales_jaulas_por_campañas]", obj)
+    End Function
+
     Public Function Cn_ConsultarAmbientesRecriaEngorde(obj As coJaulaCorral) As DataTable
         Return cls_at.Cd_ConsultarJaulaCorralxUbicacionTipo("[w_pa_obtener_ambientes_recria_engorde]", obj)
     End Function

@@ -1,4 +1,5 @@
-﻿Imports CapaNegocio
+﻿Imports CapaDatos
+Imports CapaNegocio
 Imports CapaObjetos
 Imports Infragistics.Win
 Imports Infragistics.Win.UltraWinGrid
@@ -11,12 +12,13 @@ Public Class FrmRegistrarRegularizacionSalida
     Public valorPlantel As String = ""
     Public idPlantel As Integer = 0
     Public idJaulaCorral As Integer = 0
+    Public idLote As Integer = 0
     Dim seleccionadasConCod As New List(Of Integer)
+    Dim tbtmp As New DataTable
 
     Private Sub FrmRegistrarRegularizacionCerdo_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
-            RbtCorrales.Checked = True
-
+            Inicializar()
             If idPlantel = 1 OrElse idPlantel = 2 Then
                 RbtJaulas.Enabled = True
                 RbtJaulas.Visible = True
@@ -24,46 +26,95 @@ Public Class FrmRegistrarRegularizacionSalida
                 RbtJaulas.Enabled = False
                 RbtJaulas.Visible = False
             End If
-
-            TxtMotivoMortalidad.ReadOnly = True
-            LblPlantel.Text = valorPlantel
-            TextTatuadas.ReadOnly = True
-            TxtEngorde.ReadOnly = True
-            DtpFechaControl.Value = Now.Date
-            ListarCorralesJaula()
         Catch ex As Exception
             clsBasicas.controlException(Name, ex)
         End Try
     End Sub
 
-    Private Sub ListarCorralesJaula()
-        Try
+    Private Sub Inicializar()
+        clsBasicas.LlenarComboAnios(CmbAnios)
+        TxtMotivoMortalidad.ReadOnly = True
+        LblPlantel.Text = valorPlantel
+        TextTatuadas.ReadOnly = True
+        TxtEngorde.ReadOnly = True
+        DtpFechaControl.Value = Now.Date
+        clsBasicas.Formato_Tablas_Grid(dtgListado)
+    End Sub
+
+    Sub ListarCampañas()
+        Dim cn As New cnUbicacion
+        Dim tb As New DataTable
+        Dim obj As New coUbicacion With {
+            .Codigo = idPlantel,
+            .Anio = CmbAnios.Text
+        }
+        tb = cn.Cn_ListarCampañas(obj).Copy
+        tb.TableName = "tmp"
+        tb.Columns(1).ColumnName = "Seleccione un Plantel"
+        With CmbCampañas
+            .DataSource = tb
+            .DisplayMember = tb.Columns(1).ColumnName
+            .ValueMember = tb.Columns(0).ColumnName
+            If (tb.Rows.Count > 0) Then
+                .Value = tb.Rows(0)(0)
+            End If
+        End With
+    End Sub
+
+    Private Sub BloquearControladores()
+        Ptbx_Cargando.Visible = True
+        ToolStrip1.Enabled = False
+    End Sub
+
+    Private Sub DesbloquearControladores()
+        Ptbx_Cargando.Visible = False
+        ToolStrip1.Enabled = True
+    End Sub
+
+    Sub ListarCorralesJaula()
+        If Not BackgroundWorker1.IsBusy Then
+            BloquearControladores()
+
             Dim obj As New coJaulaCorral With {
                 .IdUbicacion = idPlantel,
+                .IdCampaña = CmbCampañas.Value,
                 .Tipo = IIf(RbtCorrales.Checked, "CORRAL", "JAULA")
             }
 
-            dtgListado.DataSource = cn.Cn_ConsultarJaulaCorralxUbicacionTipo(obj)
-            clsBasicas.Formato_Tablas_Grid(dtgListado)
-            clsBasicas.Filtrar_Tabla(dtgListado, True)
-            dtgListado.DisplayLayout.Bands(0).Columns(0).Hidden = True
-            dtgListado.DisplayLayout.Bands(0).Columns(4).Hidden = True
-            dtgListado.DisplayLayout.Bands(0).Columns(7).Hidden = True
-            dtgListado.DisplayLayout.Bands(0).Columns(8).Hidden = True
-            If dtgListado.Rows.Count > 0 Then
-                LblCorralJaula.Text = dtgListado.Rows(0).Cells(1).Value.ToString
-                idJaulaCorral = dtgListado.Rows(0).Cells(0).Value
+            BackgroundWorker1.RunWorkerAsync(obj)
+        End If
+    End Sub
 
-                If (idJaulaCorral <> 0) Then
-                    ListarAnimalesJaulaCorral()
-                End If
+    Private Sub BackgroundWorker1_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorker1.DoWork
+        Try
+            Dim obj As coJaulaCorral = CType(e.Argument, coJaulaCorral)
+            tbtmp = cn.Cn_ConsultarJaulaCorralxCampaña(obj).Copy
+            tbtmp.TableName = "tmp"
+            e.Result = tbtmp
+        Catch ex As Exception
+            e.Cancel = True
+        End Try
+    End Sub
+
+    Private Sub BackgroundWorker1_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BackgroundWorker1.RunWorkerCompleted
+        DesbloquearControladores()
+        If e.Error IsNot Nothing OrElse e.Cancelled Then
+            msj_advert("Error al Cargar los Datos")
+        Else
+            dtgListado.DataSource = CType(e.Result, DataTable)
+            dtgListado.DisplayLayout.Bands(0).Columns("idJaulaCorral").Hidden = True
+            dtgListado.DisplayLayout.Bands(0).Columns("idLote").Hidden = True
+            If dtgListado.Rows.Count > 0 Then
+                dtgListado.ActiveRow = dtgListado.Rows(0)
+                idJaulaCorral = dtgListado.Rows(0).Cells("idJaulaCorral").Value
+                idLote = dtgListado.Rows(0).Cells("idLote").Value
+                LblCorralJaula.Text = dtgListado.Rows(0).Cells("Corral").Value?.ToString()
+                ListarAnimalesJaulaCorral()
             Else
+                idJaulaCorral = 0
                 LblCorralJaula.Text = "- - -"
             End If
-            Colorear()
-        Catch ex As Exception
-            clsBasicas.controlException(Name, ex)
-        End Try
+        End If
     End Sub
 
     Private Sub ListarAnimalesJaulaCorral()
@@ -92,42 +143,11 @@ Public Class FrmRegistrarRegularizacionSalida
         End Try
     End Sub
 
-    Sub Colorear()
-        If (dtgListado.Rows.Count > 0) Then
-            Dim estadoCapacidad As Integer = 6
-
-            'estadoCapacidad
-            clsBasicas.Colorear_SegunValor(dtgListado, Color.LightGreen, Color.DarkGreen, "LIBRE", estadoCapacidad)
-            clsBasicas.Colorear_SegunValor(dtgListado, Color.LightYellow, Color.DarkGoldenrod, "PARCIAL", estadoCapacidad)
-            clsBasicas.Colorear_SegunValor(dtgListado, Color.LightCoral, Color.White, "LLENO", estadoCapacidad)
-            clsBasicas.Colorear_SegunValor(dtgListado, Color.Red, Color.White, "NO DISPONIBLE", estadoCapacidad)
-
-            'centrar columnas
-            With dtgListado.DisplayLayout.Bands(0)
-                .Columns(estadoCapacidad).CellAppearance.TextHAlign = HAlign.Center
-            End With
-        End If
-    End Sub
-
-    Private Sub RbtCorrales_CheckedChanged(sender As Object, e As EventArgs) Handles RbtCorrales.CheckedChanged
-        If RbtCorrales.Checked Then
-            ListarCorralesJaula()
-            LimpiarCampoMotivoMortalidad()
-        End If
-    End Sub
-
-    Private Sub RbtJaulas_CheckedChanged(sender As Object, e As EventArgs) Handles RbtJaulas.CheckedChanged
-        If RbtJaulas.Checked Then
-            ListarCorralesJaula()
-            LimpiarCampoMotivoMortalidad()
-        End If
-    End Sub
-
     Private Sub dtgListado_ClickCell(sender As Object, e As Infragistics.Win.UltraWinGrid.ClickCellEventArgs) Handles dtgListado.ClickCell
         Dim activeRow As Infragistics.Win.UltraWinGrid.UltraGridRow = dtgListado.ActiveRow
 
         If activeRow IsNot Nothing AndAlso Not activeRow.IsFilterRow Then
-            LblCorralJaula.Text = activeRow.Cells(1).Value?.ToString()
+            LblCorralJaula.Text = activeRow.Cells("Corral").Value?.ToString()
             ConsultarAnimalesJaulaCorral()
         Else
             LblCorralJaula.Text = "- - -"
@@ -139,7 +159,8 @@ Public Class FrmRegistrarRegularizacionSalida
             Dim activeRow As UltraGridRow = dtgListado.ActiveRow
             If (dtgListado.Rows.Count > 0) Then
                 If (activeRow.Cells(0).Value.ToString.Length <> 0) Then
-                    idJaulaCorral = activeRow.Cells(0).Value
+                    idJaulaCorral = activeRow.Cells("idJaulaCorral").Value
+                    idLote = activeRow.Cells("idLote").Value
                     Dim obj As New coControlLoteDestete With {
                         .IdJaulaCorral = idJaulaCorral
                     }
@@ -237,6 +258,8 @@ Public Class FrmRegistrarRegularizacionSalida
                 .CantidadCamalTatuaje = NumCamborough.Value,
                 .CantidadCamalEngorde = NumEngorde.Value,
                 .IdUsuario = VP_IdUser,
+                .IdCampaña = If(CmbCampañas.Value, 0),
+                .IdLote = idLote,
                 .TipoControl = "SALIDA"
             }
 
@@ -266,6 +289,18 @@ Public Class FrmRegistrarRegularizacionSalida
 
         Return seleccionados
     End Function
+
+    Private Sub CmbAnios_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CmbAnios.SelectedIndexChanged
+        If CmbAnios.Text.Length > 0 Then
+            ListarCampañas()
+        End If
+    End Sub
+
+    Private Sub CmbCampañas_ValueChanged(sender As Object, e As EventArgs) Handles CmbCampañas.ValueChanged
+        If CmbCampañas.Value IsNot Nothing AndAlso CmbCampañas.Value.ToString().Length > 0 Then
+            ListarCorralesJaula()
+        End If
+    End Sub
 
     Private Sub BtnCerrar_Click(sender As Object, e As EventArgs) Handles BtnCerrar.Click
         Dispose()

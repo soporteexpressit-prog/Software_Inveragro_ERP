@@ -104,6 +104,23 @@ Public Class cdJaulaCorral
         Return dt
     End Function
 
+    Public Function Cd_ConsultarJaulaCorralxCampaña(name As String, obj As coJaulaCorral) As DataTable
+        Dim dt As New DataTable
+        Try
+            con.Abrir()
+            Dim da As New SqlDataAdapter(name, con.con)
+            da.SelectCommand.CommandType = 4
+            da.SelectCommand.Parameters.AddWithValue("@idUbicacion", obj.IdUbicacion)
+            da.SelectCommand.Parameters.AddWithValue("@idCampaña", obj.IdCampaña)
+            da.SelectCommand.Parameters.AddWithValue("@tipo", obj.Tipo)
+            da.Fill(dt)
+        Catch ex As Exception
+            Throw ex
+        End Try
+        con.Salir()
+        Return dt
+    End Function
+
     Public Function Cd_ConsultarJaulaCorralxArea(name As String, obj As coJaulaCorral) As DataTable
         Dim dt As New DataTable
         Try

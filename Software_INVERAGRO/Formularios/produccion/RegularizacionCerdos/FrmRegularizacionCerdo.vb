@@ -18,6 +18,7 @@ Public Class FrmRegularizacionCerdo
 
     Private Sub Inicializar()
         Me.KeyPreview = True
+        CmbEstado.SelectedIndex = 0
         dtpFechaDesde.Value = Now.Date
         dtpFechaHasta.Value = Now.Date
         clsBasicas.Formato_Tablas_Grid(dtgListado)
@@ -63,7 +64,8 @@ Public Class FrmRegularizacionCerdo
             Dim obj As New coControlLoteDestete With {
                 .FechaDesde = dtpFechaDesde.Value,
                 .FechaHasta = dtpFechaHasta.Value,
-                .IdPlantel = CmbUbicacion.Value
+                .IdPlantel = CmbUbicacion.Value,
+                .Estado = CmbEstado.Text
             }
 
             BackgroundWorker1.RunWorkerAsync(obj)
@@ -98,8 +100,8 @@ Public Class FrmRegularizacionCerdo
 
     Sub Colorear()
         If (dtgListado.Rows.Count > 0) Then
-            Dim tipo As Integer = 8
-            Dim estado As Integer = 9
+            Dim tipo As Integer = 10
+            Dim estado As Integer = 11
 
             'estado
             clsBasicas.Colorear_SegunValor(dtgListado, Color.Green, Color.White, "ACTIVO", estado)
@@ -172,6 +174,11 @@ Public Class FrmRegularizacionCerdo
 
     Private Sub BtnNuevoregularizaciondecerdospro_Click(sender As Object, e As EventArgs) Handles BtnNuevoregularizaciondecerdospro.Click
         Try
+            If CmbUbicacion.Value = 1 OrElse CmbUbicacion.Value = 2 Then
+                msj_advert("ESTA EN DESARROLLO PARA PLANTEL 1 Y 2.")
+                Return
+            End If
+
             Dim frm As New FrmRegistrarRegularizacionSalida With {
                 .valorPlantel = CmbUbicacion.Text,
                 .idPlantel = CmbUbicacion.Value

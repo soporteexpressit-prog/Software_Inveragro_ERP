@@ -121,19 +121,22 @@
   <data name="BtnMotivoMortalidad.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vAAADrwBlbxySQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAHlSURBVEhLtZW/
-        TxRBFMeHDgsDGloLiQWhMOjdvmFv3hxXECKxkcTj5o1KUKLxD5AY/gAaCgKF/4ANhJbSBrDwvzAhuVhI
-        QgUEQviRN3tL7nYG9sLdFZ9mvjvvszs/9gkhhBiv6ZdAuAeEp0B41SFcY69oyi+4dlr8LPBgp5w5SePN
-        s2G32GFBN5blNk5ZkB28jf9g8Tgwfid5grq0+GVsvjLoNkwIEb+PnwGpFSA8CTzvcZfgNxeuzFf6weKc
-        JPwREa5FhK+EEH1gVBEI/wXmtSWoo8VH8p0eBYN/vdzgtvqkHkakJ4DwwsvzBJHRn+Nq/AAs7mezGyz+
-        5CUDwi0vyxFcFKgyJAk/BrJmLiNTfhKRmg1kN4QEB/xm0uJ6IGvF4EzjovpZg5Dg0H26VauBrIViTU3f
-        R3AVWRwGo19nx1uweFyoTg6AUV+9rImgAIxa5qMoCX95WYrF78lxxT9e1kRYQHgkST9PjiJu8Ia2ZmrJ
-        LWNyF7Jz2xIwdaBS7Ap9KD+VRr+VtdJUXI0fp39hdxiM+haY25aAOZdWbwLpNwWKR9yGWrXAt5xzLp4n
-        yRPkkkqA9GI2YzoWJOhFd/MDP8AuCRxecYYFPW84vW2Z3Jh71fQjWxpzXSqRqN0uLRfX2EmLXwOFYLNl
-        yVSvvQAAAABJRU5ErkJggg==
+        vAAADrwBlbxySQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAHnSURBVEhLtZY9
+        SwMxGMfbTQfxBVcHxUEcpNrendcktYOI4qKgNokv+ILiB7CIH8DFQXTwC7goro4utQ5+C0EoDgpOKoq0
+        9XnSWq7e0xbs9eDH5fJPnn/uSXK5EF7jKTFmK54FPoFik2CMbEwmRr3BvzwNguLLmEABR041CIIMGgSR
+        llp8ogElUDzbmr8T9XVpZJBzNN+JrCe7zITB5a64g7ZiR6B9/GlLUs/gDgMn15NtMPI1R/EzS/ETYBp8
+        wrZkMWjz9KePj1oGOa55t7Mshm3JH3y65Ndsk3VYSkzAc96neyANLCm23UW3HUb+SOkGzc8xZVC+8mke
+        KIN8VCV7ISUbhOalYMlEn6XYEqFVoAxecGQwuaeEVo3k8+WNSusAZfBqXl2zY0KrIpZiM/8xKFqaD9hS
+        zFJaBdgT0cXJTlhNu6RehjSATofwEmGYhxtSRzTfxzaQpntSL0MbKP7mKDFSWor8Ap4L1Ro7MGks7QVv
+        Px+1DJCcreKuCbSa6HekWHBS8SlYvj1Yh7nHuyPZHtG3Qj0D5NvR4tJWYi6q3CEzoZptQf0d6hi8kUkj
+        g4b8msAg0pTetEEJkTY7n/gABmRgIL+uaNDyA6e1RyYezFBoyaFv6XgEF0DZhN1CZVC/LZlS8FDoB4Vg
+        s2W4H4MnAAAAAElFTkSuQmCC
 </value>
   </data>
   <metadata name="ToolStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
+  </metadata>
+  <metadata name="BackgroundWorker1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>123, 17</value>
   </metadata>
 </root>
