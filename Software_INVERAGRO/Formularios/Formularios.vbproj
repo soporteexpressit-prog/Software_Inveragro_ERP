@@ -1746,6 +1746,12 @@
     <Compile Include="produccion\RegularizacionCerdos\FrmListarMotivosRegularizacion.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="produccion\RegularizacionCerdos\FrmMotivosRegularizacionReproduccion.Designer.vb">
+      <DependentUpon>FrmMotivosRegularizacionReproduccion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="produccion\RegularizacionCerdos\FrmMotivosRegularizacionReproduccion.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="produccion\RegularizacionCerdos\FrmRegistrarRegularizacionSalida.Designer.vb">
       <DependentUpon>FrmRegistrarRegularizacionSalida.vb</DependentUpon>
     </Compile>
@@ -1756,6 +1762,12 @@
       <DependentUpon>FrmRegularizacionCerdo.vb</DependentUpon>
     </Compile>
     <Compile Include="produccion\RegularizacionCerdos\FrmRegularizacionCerdo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="produccion\RegularizacionCerdos\FrmRegularizarCerdosReproduccion.Designer.vb">
+      <DependentUpon>FrmRegularizarCerdosReproduccion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="produccion\RegularizacionCerdos\FrmRegularizarCerdosReproduccion.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="RecursosHumanos\AnularPago.Designer.vb">
@@ -4580,11 +4592,17 @@
     <EmbeddedResource Include="produccion\RegularizacionCerdos\FrmListarMotivosRegularizacion.resx">
       <DependentUpon>FrmListarMotivosRegularizacion.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="produccion\RegularizacionCerdos\FrmMotivosRegularizacionReproduccion.resx">
+      <DependentUpon>FrmMotivosRegularizacionReproduccion.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="produccion\RegularizacionCerdos\FrmRegistrarRegularizacionSalida.resx">
       <DependentUpon>FrmRegistrarRegularizacionSalida.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="produccion\RegularizacionCerdos\FrmRegularizacionCerdo.resx">
       <DependentUpon>FrmRegularizacionCerdo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="produccion\RegularizacionCerdos\FrmRegularizarCerdosReproduccion.resx">
+      <DependentUpon>FrmRegularizarCerdosReproduccion.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RecursosHumanos\AnularPago.resx">
       <DependentUpon>AnularPago.vb</DependentUpon>

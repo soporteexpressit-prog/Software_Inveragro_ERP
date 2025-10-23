@@ -17,6 +17,7 @@
     Private _IdCampaña As Integer
     Private _Coderror As Integer
     Private _Cantidad As Integer
+    Private _Anio As Integer
 
     Public Property Codigo As Integer
         Get
@@ -176,6 +177,15 @@
         End Get
         Set(value As Integer)
             _Cantidad = value
+        End Set
+    End Property
+
+    Public Property Anio As Integer
+        Get
+            Return _Anio
+        End Get
+        Set(value As Integer)
+            _Anio = value
         End Set
     End Property
 End Class

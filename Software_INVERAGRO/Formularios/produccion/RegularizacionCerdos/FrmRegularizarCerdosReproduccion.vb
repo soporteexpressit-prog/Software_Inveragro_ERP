@@ -2,7 +2,7 @@
 Imports CapaObjetos
 Imports Infragistics.Win.UltraWinGrid
 
-Public Class FrmRegistrarRegularizacionSalida
+Public Class FrmRegularizarCerdosReproduccion
     Dim cnLote As New cnControlLoteDestete
     Dim cnAnimal As New cnControlAnimal
     Dim cn As New cnJaulaCorral
@@ -14,16 +14,9 @@ Public Class FrmRegistrarRegularizacionSalida
     Dim seleccionadasConCod As New List(Of Integer)
     Dim tbtmp As New DataTable
 
-    Private Sub FrmRegistrarRegularizacionCerdo_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub FrmRegularizarCerdosReproduccion_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
             Inicializar()
-            If idPlantel = 1 OrElse idPlantel = 2 Then
-                RbtJaulas.Enabled = True
-                RbtJaulas.Visible = True
-            Else
-                RbtJaulas.Enabled = False
-                RbtJaulas.Visible = False
-            End If
         Catch ex As Exception
             clsBasicas.controlException(Name, ex)
         End Try
@@ -37,26 +30,6 @@ Public Class FrmRegistrarRegularizacionSalida
         TxtEngorde.ReadOnly = True
         DtpFechaControl.Value = Now.Date
         clsBasicas.Formato_Tablas_Grid(dtgListado)
-    End Sub
-
-    Sub ListarCampañas()
-        Dim cn As New cnUbicacion
-        Dim tb As New DataTable
-        Dim obj As New coUbicacion With {
-            .Codigo = idPlantel,
-            .Anio = CmbAnios.Text
-        }
-        tb = cn.Cn_ListarCampañas(obj).Copy
-        tb.TableName = "tmp"
-        tb.Columns(1).ColumnName = "Seleccione un Plantel"
-        With CmbCampañas
-            .DataSource = tb
-            .DisplayMember = tb.Columns(1).ColumnName
-            .ValueMember = tb.Columns(0).ColumnName
-            If (tb.Rows.Count > 0) Then
-                .Value = tb.Rows(0)(0)
-            End If
-        End With
     End Sub
 
     Private Sub BloquearControladores()
@@ -75,7 +48,7 @@ Public Class FrmRegistrarRegularizacionSalida
 
             Dim obj As New coJaulaCorral With {
                 .IdUbicacion = idPlantel,
-                .IdCampaña = CmbCampañas.Value,
+                .Anio = CInt(CmbAnios.Text),
                 .Tipo = IIf(RbtCorrales.Checked, "CORRAL", "JAULA")
             }
 
@@ -86,7 +59,7 @@ Public Class FrmRegistrarRegularizacionSalida
     Private Sub BackgroundWorker1_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorker1.DoWork
         Try
             Dim obj As coJaulaCorral = CType(e.Argument, coJaulaCorral)
-            tbtmp = cn.Cn_ConsultarJaulaCorralxCampaña(obj).Copy
+            tbtmp = cn.Cn_ConsultarJaulaCorralUbicacionAnio(obj).Copy
             tbtmp.TableName = "tmp"
             e.Result = tbtmp
         Catch ex As Exception
@@ -188,7 +161,7 @@ Public Class FrmRegistrarRegularizacionSalida
 
     Private Sub BtnMotivoMortalidad_Click(sender As Object, e As EventArgs) Handles BtnMotivoMortalidad.Click
         Try
-            Dim frm As New FrmListarMotivosRegularizacion(Me)
+            Dim frm As New FrmMotivosRegularizacionReproduccion(Me)
             frm.ShowDialog()
         Catch ex As Exception
             clsBasicas.controlException(Name, ex)
@@ -256,7 +229,7 @@ Public Class FrmRegistrarRegularizacionSalida
                 .CantidadCamalTatuaje = NumCamborough.Value,
                 .CantidadCamalEngorde = NumEngorde.Value,
                 .IdUsuario = VP_IdUser,
-                .IdCampaña = If(CmbCampañas.Value, 0),
+                .IdCampaña = 0,
                 .IdLote = idLote,
                 .TipoControl = "SALIDA"
             }
@@ -290,12 +263,6 @@ Public Class FrmRegistrarRegularizacionSalida
 
     Private Sub CmbAnios_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CmbAnios.SelectedIndexChanged
         If CmbAnios.Text.Length > 0 Then
-            ListarCampañas()
-        End If
-    End Sub
-
-    Private Sub CmbCampañas_ValueChanged(sender As Object, e As EventArgs) Handles CmbCampañas.ValueChanged
-        If CmbCampañas.Value IsNot Nothing AndAlso CmbCampañas.Value.ToString().Length > 0 Then
             ListarCorralesJaula()
         End If
     End Sub
@@ -310,6 +277,18 @@ Public Class FrmRegistrarRegularizacionSalida
         Catch ex As Exception
             clsBasicas.controlException(Name, ex)
         End Try
+    End Sub
+
+    Private Sub RbtCorrales_CheckedChanged(sender As Object, e As EventArgs) Handles RbtCorrales.CheckedChanged
+        If RbtCorrales.Checked And CmbAnios.Text.Length > 0 Then
+            ListarCorralesJaula()
+        End If
+    End Sub
+
+    Private Sub RbtJaulas_CheckedChanged(sender As Object, e As EventArgs) Handles RbtJaulas.CheckedChanged
+        If RbtJaulas.Checked And CmbAnios.Text.Length > 0 Then
+            ListarCorralesJaula()
+        End If
     End Sub
 
     Private Sub DtgListadoCerdos_InitializeLayout(sender As Object, e As InitializeLayoutEventArgs) Handles DtgListadoCerdos.InitializeLayout

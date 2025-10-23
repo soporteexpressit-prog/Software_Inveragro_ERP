@@ -94,6 +94,11 @@ Public Class FrmRegularizacionCerdo
         Else
             dtgListado.DataSource = ds.Tables(0)
             DesbloquearControladores()
+            If CmbUbicacion.Value = 1 Or CmbUbicacion.Value = 2 Then
+                dtgListado.DisplayLayout.Bands(0).Columns("Campaña").Hidden = True
+            Else
+                dtgListado.DisplayLayout.Bands(0).Columns("Campaña").Hidden = False
+            End If
             Colorear()
         End If
     End Sub
@@ -175,15 +180,19 @@ Public Class FrmRegularizacionCerdo
     Private Sub BtnNuevoregularizaciondecerdospro_Click(sender As Object, e As EventArgs) Handles BtnNuevoregularizaciondecerdospro.Click
         Try
             If CmbUbicacion.Value = 1 OrElse CmbUbicacion.Value = 2 Then
-                msj_advert("ESTA EN DESARROLLO PARA PLANTEL 1 Y 2.")
-                Return
+                Dim frm As New FrmRegularizarCerdosReproduccion With {
+                    .valorPlantel = CmbUbicacion.Text,
+                    .idPlantel = CmbUbicacion.Value
+                }
+                frm.ShowDialog()
+            Else
+                Dim frm As New FrmRegistrarRegularizacionSalida With {
+                    .valorPlantel = CmbUbicacion.Text,
+                    .idPlantel = CmbUbicacion.Value
+                }
+                frm.ShowDialog()
             End If
 
-            Dim frm As New FrmRegistrarRegularizacionSalida With {
-                .valorPlantel = CmbUbicacion.Text,
-                .idPlantel = CmbUbicacion.Value
-            }
-            frm.ShowDialog()
             Consultar()
         Catch ex As Exception
             clsBasicas.controlException(Name, ex)
