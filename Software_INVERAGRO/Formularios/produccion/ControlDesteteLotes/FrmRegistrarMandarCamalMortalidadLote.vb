@@ -15,10 +15,15 @@ Public Class FrmRegistrarMandarCamalMortalidadLote
     Public idPlantel As Integer = 0
     Public idLoteOriginal As Integer = 0
     Dim cantCerdaDisponibleCamborEngorde As Decimal = 0
+    Public habilitarOpcionChanchilla As Boolean = False
 
     Private Sub FrmRegistrarMortalidadLote_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Inicializar()
-        ListarDetalleCorralesLote()
+        Try
+            Inicializar()
+            ListarDetalleCorralesLote()
+        Catch ex As Exception
+            clsBasicas.controlException(Name, ex)
+        End Try
     End Sub
 
     Private Sub Inicializar()
@@ -28,6 +33,11 @@ Public Class FrmRegistrarMandarCamalMortalidadLote
         LblPlantel.Text = valorPlantel
         LblPeso.Visible = False
         TxtPeso.Visible = False
+        FiltroEnvioAnimales.Visible = habilitarOpcionChanchilla
+        FiltroEnvioAnimales.Enabled = habilitarOpcionChanchilla
+        If (habilitarOpcionChanchilla) Then
+            RbnLechon.Checked = True
+        End If
         NoVisibleCantCerdosNoReg()
         NoVisibleCantCerdosTatuados()
     End Sub
@@ -459,6 +469,7 @@ Public Class FrmRegistrarMandarCamalMortalidadLote
                         .observacion = TxtObservacion.Text,
                         .fecha = DtpFecha.Value,
                         .peso = If(TxtPeso.Text = "", 0, CDec(TxtPeso.Text)),
+                        .esChanchilla = RbnChanchilla.Checked,
                         .frmMandarCamal = Me
                     }
                     frm.ShowDialog()

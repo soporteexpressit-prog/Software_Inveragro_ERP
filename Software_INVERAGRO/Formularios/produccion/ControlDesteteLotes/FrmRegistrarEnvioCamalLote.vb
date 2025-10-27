@@ -16,6 +16,7 @@ Public Class FrmRegistrarEnvioCamalLote
     Public fecha As Date
     Public peso As Decimal
     Public frmMandarCamal As FrmRegistrarMandarCamalMortalidadLote
+    Public esChanchilla As Boolean = False
 
     Private Sub BtnGuardar_Click(sender As Object, e As EventArgs) Handles BtnGuardar.Click
         Try
@@ -39,7 +40,8 @@ Public Class FrmRegistrarEnvioCamalLote
                 .IdJaulaCorral = idJaulaCorral,
                 .Observacion = observacion,
                 .FechaControl = fecha,
-                .Peso = peso
+                .Peso = peso,
+                .EsChanchilla = esChanchilla
             }
 
             If (MessageBox.Show("¿ESTÁ SEGURO DE ENVIAR A CAMAL A ESTOS CERDOS?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.No) Then
@@ -73,9 +75,5 @@ Public Class FrmRegistrarEnvioCamalLote
 
     Private Sub BtnCerrar_Click(sender As Object, e As EventArgs) Handles BtnCerrar.Click
         Me.Close()
-    End Sub
-
-    Private Sub FrmRegistrarEnvioCamalLote_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
     End Sub
 End Class

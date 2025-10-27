@@ -234,7 +234,8 @@ Public Class FrmControlLotes
                         .valorPlantel = activeRow.Cells("Plantel").Value.ToString,
                         .valorLote = activeRow.Cells("Lote").Value.ToString,
                         .idPlantel = CmbUbicacion.Value,
-                        .idLoteOriginal = CInt(dtgListado.ActiveRow.Cells("idLote").Value)
+                        .idLoteOriginal = CInt(dtgListado.ActiveRow.Cells("idLote").Value),
+                        .habilitarOpcionChanchilla = If(CmbUbicacion.Value = 1 Or CmbUbicacion.Value = 2, True, False)
                     }
                     frm.ShowDialog()
                     Consultar()

@@ -720,6 +720,7 @@ Public Class cdControlAnimal
                 .AddWithValue("@observacion", SqlDbType.VarChar).Value = obj.Observacion
                 .AddWithValue("@fechaControl", SqlDbType.Date).Value = obj.FechaControl
                 .AddWithValue("@peso", SqlDbType.Decimal).Value = obj.Peso
+                .AddWithValue("@esEnvioCamalChanchilla", SqlDbType.Bit).Value = obj.EsChanchilla
                 .Add("@msj", SqlDbType.VarChar, 100).Direction = 2
                 .Add("@coderror", SqlDbType.Int).Direction = 2
             End With
