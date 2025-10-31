@@ -3670,13 +3670,13 @@ Public Class FrmControlAsistencia
             btnImportar.Enabled = False
             btnProcesar.Enabled = False
 
-            If idPlantelSeleccionado = 12 Or idPlantelSeleccionado = 13 Or idPlantelSeleccionado = 16 Then
-                cbxListarPlanteles.Value = idPlantelSeleccionado
-                cbxListarPlanteles.ReadOnly = True
-            Else
-                cbxListarPlanteles.Value = 12
-                cbxListarPlanteles.ReadOnly = False
-            End If
+            'If idPlantelSeleccionado = 12 Or idPlantelSeleccionado = 13 Or idPlantelSeleccionado = 16 Then
+            '    cbxListarPlanteles.Value = idPlantelSeleccionado
+            '    cbxListarPlanteles.ReadOnly = True
+            'Else
+            '    cbxListarPlanteles.Value = 12
+            '    cbxListarPlanteles.ReadOnly = False
+            'End If
 
             generadoEnOperario = True
             BloquearItemsUltraCombo()
@@ -3720,9 +3720,9 @@ Public Class FrmControlAsistencia
             ' Iterar sobre las filas del UltraCombo
             For Each row As Infragistics.Win.UltraWinGrid.UltraGridRow In cbxListarPlanteles.Rows
                 ' Bloquear todos excepto el valor 12, 13 y 16
-                If row.Cells(0).Value <> 12 AndAlso row.Cells(0).Value <> 13 AndAlso row.Cells(0).Value <> 16 Then
-                    row.Activation = Infragistics.Win.UltraWinGrid.Activation.Disabled
-                End If
+                'If row.Cells(0).Value <> 12 AndAlso row.Cells(0).Value <> 13 AndAlso row.Cells(0).Value <> 16 Then
+                '    row.Activation = Infragistics.Win.UltraWinGrid.Activation.Disabled
+                'End If
             Next
         Else
             For Each row As Infragistics.Win.UltraWinGrid.UltraGridRow In cbxListarPlanteles.Rows
