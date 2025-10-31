@@ -4,13 +4,14 @@ Imports Infragistics.Win
 
 Public Class FrmHistoricoMortalidad
     Dim cn As New cnControlAnimal
+    Dim tbtmp As New DataTable
     Dim ds As New DataSet
 
     Private Sub FrmHistoricoMortalidad_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
             ListarPlanteles()
             Inicializar()
-            Consultar()
+            Consultar1()
         Catch ex As Exception
             clsBasicas.controlException(Name, ex)
         End Try
@@ -51,7 +52,8 @@ Public Class FrmHistoricoMortalidad
         End With
     End Sub
 
-    Sub Consultar()
+    Sub Consultar1()
+        dtgListado.DataSource = Nothing
         If dtpFechaDesde.Value > dtpFechaHasta.Value Then
             msj_advert(MensajesSistema.mensajesGenerales("FECHA_INICIO_MAYOR_FIN"))
             Return
@@ -111,7 +113,53 @@ Public Class FrmHistoricoMortalidad
     End Sub
 
     Private Sub BtnBuscar_Click(sender As Object, e As EventArgs) Handles BtnBuscar.Click
-        Consultar()
+        If CbxChanchillaMarrana.Checked Then
+            Consultar2()
+        Else
+            Consultar1()
+        End If
+    End Sub
+
+    Sub Consultar2()
+        dtgListado.DataSource = Nothing
+        If dtpFechaDesde.Value > dtpFechaHasta.Value Then
+            msj_advert(MensajesSistema.mensajesGenerales("FECHA_INICIO_MAYOR_FIN"))
+            Return
+        End If
+
+        If Not BackgroundWorker2.IsBusy Then
+            BloquearControles()
+
+            Dim obj As New coControlAnimal With {
+                .FechaDesde = dtpFechaDesde.Value,
+                .FechaHasta = dtpFechaHasta.Value,
+                .IdPlantel = CmbUbicacion.Value
+            }
+
+            BackgroundWorker2.RunWorkerAsync(obj)
+        End If
+    End Sub
+
+    Private Sub BackgroundWorker2_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorker2.DoWork
+        Try
+            Dim obj As coControlAnimal = CType(e.Argument, coControlAnimal)
+            tbtmp = cn.Cn_ConsultarMortalidadChanchillasMarranas(obj).Copy
+            tbtmp.TableName = "tmp"
+            e.Result = tbtmp
+        Catch ex As Exception
+            e.Cancel = True
+        End Try
+    End Sub
+
+    Private Sub BackgroundWorker2_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BackgroundWorker2.RunWorkerCompleted
+        DesbloquearControles()
+        If e.Error IsNot Nothing OrElse e.Cancelled Then
+            msj_advert("Error al Cargar los Datos")
+        Else
+            dtgListado.DataSource = CType(e.Result, DataTable)
+            dtgListado.DisplayLayout.Bands(0).Columns("idAnimal").Hidden = True
+            Colorear()
+        End If
     End Sub
 
     Private Sub BtnExportarControlMD_Click(sender As Object, e As EventArgs) Handles BtnExportarhistoricomortalidad.Click
@@ -191,6 +239,10 @@ Public Class FrmHistoricoMortalidad
             BtnBuscar.PerformClick()
             e.SuppressKeyPress = True
         End If
+    End Sub
+
+    Private Sub CbxChanchillaMarrana_CheckedChanged(sender As Object, e As EventArgs) Handles CbxChanchillaMarrana.CheckedChanged
+
     End Sub
 
     Private Sub BtnCerrar_Click(sender As Object, e As EventArgs) Handles BtnCerrar.Click

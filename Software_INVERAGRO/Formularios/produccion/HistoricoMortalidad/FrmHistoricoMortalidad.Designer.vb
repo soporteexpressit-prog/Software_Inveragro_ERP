@@ -68,6 +68,8 @@ Partial Class FrmHistoricoMortalidad
         Me.BtnCerrar = New System.Windows.Forms.ToolStripButton()
         Me.BtnReporteMortalidadLote = New System.Windows.Forms.ToolStripButton()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
+        Me.CbxChanchillaMarrana = New System.Windows.Forms.CheckBox()
+        Me.BackgroundWorker2 = New System.ComponentModel.BackgroundWorker()
         Me.PanelContenedor.SuspendLayout()
         CType(Me.Ptbx_Cargando, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dtgListado, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -85,18 +87,18 @@ Partial Class FrmHistoricoMortalidad
         Me.PanelContenedor.Controls.Add(Me.Panel1)
         Me.PanelContenedor.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PanelContenedor.Location = New System.Drawing.Point(0, 0)
+        Me.PanelContenedor.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.PanelContenedor.Name = "PanelContenedor"
-        Me.PanelContenedor.Size = New System.Drawing.Size(1815, 877)
+        Me.PanelContenedor.Size = New System.Drawing.Size(1210, 570)
         Me.PanelContenedor.TabIndex = 14
         '
         'Ptbx_Cargando
         '
         Me.Ptbx_Cargando.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Ptbx_Cargando.Image = Global.Formularios.My.Resources.Resources.loader
-        Me.Ptbx_Cargando.Location = New System.Drawing.Point(801, 506)
-        Me.Ptbx_Cargando.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Ptbx_Cargando.Location = New System.Drawing.Point(534, 329)
         Me.Ptbx_Cargando.Name = "Ptbx_Cargando"
-        Me.Ptbx_Cargando.Size = New System.Drawing.Size(64, 57)
+        Me.Ptbx_Cargando.Size = New System.Drawing.Size(43, 37)
         Me.Ptbx_Cargando.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.Ptbx_Cargando.TabIndex = 30
         Me.Ptbx_Cargando.TabStop = False
@@ -174,10 +176,9 @@ Partial Class FrmHistoricoMortalidad
         Me.dtgListado.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy
         Me.dtgListado.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dtgListado.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dtgListado.Location = New System.Drawing.Point(0, 325)
-        Me.dtgListado.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.dtgListado.Location = New System.Drawing.Point(0, 211)
         Me.dtgListado.Name = "dtgListado"
-        Me.dtgListado.Size = New System.Drawing.Size(1815, 552)
+        Me.dtgListado.Size = New System.Drawing.Size(1210, 359)
         Me.dtgListado.TabIndex = 29
         Me.dtgListado.Text = "UltraGrid1"
         '
@@ -189,9 +190,9 @@ Partial Class FrmHistoricoMortalidad
         Me.Panel1.Controls.Add(Me.ToolStrip1)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(2, 1, 2, 1)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1815, 325)
+        Me.Panel1.Size = New System.Drawing.Size(1210, 211)
         Me.Panel1.TabIndex = 15
         '
         'Label6
@@ -200,14 +201,16 @@ Partial Class FrmHistoricoMortalidad
         Me.Label6.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(233, Byte), Integer))
         Me.Label6.Font = New System.Drawing.Font("Verdana", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(49, Byte), Integer))
-        Me.Label6.Location = New System.Drawing.Point(28, 35)
+        Me.Label6.Location = New System.Drawing.Point(19, 23)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(565, 29)
+        Me.Label6.Size = New System.Drawing.Size(377, 18)
         Me.Label6.TabIndex = 128
         Me.Label6.Text = "HISTORICO DE MORTALIDAD DE CERDOS"
         '
         'GrupoFiltros
         '
+        Me.GrupoFiltros.Controls.Add(Me.CbxChanchillaMarrana)
         Me.GrupoFiltros.Controls.Add(Me.BtnBuscar)
         Me.GrupoFiltros.Controls.Add(Me.Label2)
         Me.GrupoFiltros.Controls.Add(Me.dtpFechaDesde)
@@ -215,9 +218,11 @@ Partial Class FrmHistoricoMortalidad
         Me.GrupoFiltros.Controls.Add(Me.Label7)
         Me.GrupoFiltros.Controls.Add(Me.Label9)
         Me.GrupoFiltros.Controls.Add(Me.dtpFechaHasta)
-        Me.GrupoFiltros.Location = New System.Drawing.Point(34, 89)
+        Me.GrupoFiltros.Location = New System.Drawing.Point(23, 58)
+        Me.GrupoFiltros.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GrupoFiltros.Name = "GrupoFiltros"
-        Me.GrupoFiltros.Size = New System.Drawing.Size(1675, 160)
+        Me.GrupoFiltros.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GrupoFiltros.Size = New System.Drawing.Size(1117, 104)
         Me.GrupoFiltros.TabIndex = 179
         Me.GrupoFiltros.TabStop = False
         Me.GrupoFiltros.Text = "Filtros de Búsqueda"
@@ -228,11 +233,10 @@ Partial Class FrmHistoricoMortalidad
         Me.BtnBuscar.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnBuscar.Image = CType(resources.GetObject("BtnBuscar.Image"), System.Drawing.Image)
         Me.BtnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnBuscar.Location = New System.Drawing.Point(1486, 67)
-        Me.BtnBuscar.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.BtnBuscar.Location = New System.Drawing.Point(991, 44)
         Me.BtnBuscar.Name = "BtnBuscar"
-        Me.BtnBuscar.Padding = New System.Windows.Forms.Padding(6, 0, 6, 0)
-        Me.BtnBuscar.Size = New System.Drawing.Size(138, 63)
+        Me.BtnBuscar.Padding = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.BtnBuscar.Size = New System.Drawing.Size(92, 41)
         Me.BtnBuscar.TabIndex = 174
         Me.BtnBuscar.Text = "Buscar"
         Me.BtnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -244,20 +248,19 @@ Partial Class FrmHistoricoMortalidad
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(882, 43)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label2.Location = New System.Drawing.Point(588, 28)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(93, 22)
+        Me.Label2.Size = New System.Drawing.Size(62, 14)
         Me.Label2.TabIndex = 178
         Me.Label2.Text = "Plantel :"
         '
         'dtpFechaDesde
         '
         Me.dtpFechaDesde.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dtpFechaDesde.Location = New System.Drawing.Point(334, 40)
-        Me.dtpFechaDesde.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.dtpFechaDesde.Location = New System.Drawing.Point(223, 26)
         Me.dtpFechaDesde.Name = "dtpFechaDesde"
-        Me.dtpFechaDesde.Size = New System.Drawing.Size(358, 28)
+        Me.dtpFechaDesde.Size = New System.Drawing.Size(240, 21)
         Me.dtpFechaDesde.TabIndex = 170
         '
         'CmbUbicacion
@@ -317,10 +320,9 @@ Partial Class FrmHistoricoMortalidad
         Me.CmbUbicacion.DisplayLayout.ScrollStyle = Infragistics.Win.UltraWinGrid.ScrollStyle.Immediate
         Me.CmbUbicacion.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy
         Me.CmbUbicacion.DropDownStyle = Infragistics.Win.UltraWinGrid.UltraComboStyle.DropDownList
-        Me.CmbUbicacion.Location = New System.Drawing.Point(988, 40)
-        Me.CmbUbicacion.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.CmbUbicacion.Location = New System.Drawing.Point(659, 26)
         Me.CmbUbicacion.Name = "CmbUbicacion"
-        Me.CmbUbicacion.Size = New System.Drawing.Size(228, 29)
+        Me.CmbUbicacion.Size = New System.Drawing.Size(152, 22)
         Me.CmbUbicacion.TabIndex = 177
         '
         'Label7
@@ -329,10 +331,10 @@ Partial Class FrmHistoricoMortalidad
         Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label7.Location = New System.Drawing.Point(68, 43)
-        Me.Label7.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label7.Location = New System.Drawing.Point(45, 28)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(243, 22)
+        Me.Label7.Size = New System.Drawing.Size(159, 14)
         Me.Label7.TabIndex = 172
         Me.Label7.Text = "Fecha Registro Desde :"
         '
@@ -342,20 +344,19 @@ Partial Class FrmHistoricoMortalidad
         Me.Label9.BackColor = System.Drawing.Color.Transparent
         Me.Label9.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label9.Location = New System.Drawing.Point(74, 108)
-        Me.Label9.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label9.Location = New System.Drawing.Point(49, 69)
+        Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(238, 22)
+        Me.Label9.Size = New System.Drawing.Size(156, 14)
         Me.Label9.TabIndex = 173
         Me.Label9.Text = "Fecha Registro Hasta :"
         '
         'dtpFechaHasta
         '
         Me.dtpFechaHasta.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dtpFechaHasta.Location = New System.Drawing.Point(334, 102)
-        Me.dtpFechaHasta.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.dtpFechaHasta.Location = New System.Drawing.Point(223, 66)
         Me.dtpFechaHasta.Name = "dtpFechaHasta"
-        Me.dtpFechaHasta.Size = New System.Drawing.Size(358, 28)
+        Me.dtpFechaHasta.Size = New System.Drawing.Size(240, 21)
         Me.dtpFechaHasta.TabIndex = 171
         '
         'ToolStrip1
@@ -365,11 +366,11 @@ Partial Class FrmHistoricoMortalidad
         Me.ToolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
         Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnExportarhistoricomortalidad, Me.BtnCerrar, Me.BtnReporteMortalidadLote})
-        Me.ToolStrip1.Location = New System.Drawing.Point(0, 285)
-        Me.ToolStrip1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.ToolStrip1.Location = New System.Drawing.Point(0, 173)
+        Me.ToolStrip1.Margin = New System.Windows.Forms.Padding(2, 1, 2, 1)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Padding = New System.Windows.Forms.Padding(0, 0, 3, 0)
-        Me.ToolStrip1.Size = New System.Drawing.Size(1815, 40)
+        Me.ToolStrip1.Padding = New System.Windows.Forms.Padding(0, 0, 2, 0)
+        Me.ToolStrip1.Size = New System.Drawing.Size(1210, 38)
         Me.ToolStrip1.TabIndex = 52
         Me.ToolStrip1.Text = "Monitoreo"
         '
@@ -382,7 +383,7 @@ Partial Class FrmHistoricoMortalidad
         Me.BtnExportarhistoricomortalidad.Margin = New System.Windows.Forms.Padding(5)
         Me.BtnExportarhistoricomortalidad.Name = "BtnExportarhistoricomortalidad"
         Me.BtnExportarhistoricomortalidad.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnExportarhistoricomortalidad.Size = New System.Drawing.Size(125, 30)
+        Me.BtnExportarhistoricomortalidad.Size = New System.Drawing.Size(92, 28)
         Me.BtnExportarhistoricomortalidad.Text = "Exportar"
         Me.BtnExportarhistoricomortalidad.ToolTipText = "Exportar"
         '
@@ -395,7 +396,7 @@ Partial Class FrmHistoricoMortalidad
         Me.BtnCerrar.Margin = New System.Windows.Forms.Padding(5)
         Me.BtnCerrar.Name = "BtnCerrar"
         Me.BtnCerrar.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnCerrar.Size = New System.Drawing.Size(84, 30)
+        Me.BtnCerrar.Size = New System.Drawing.Size(66, 28)
         Me.BtnCerrar.Text = "Salir"
         '
         'BtnReporteMortalidadLote
@@ -409,18 +410,29 @@ Partial Class FrmHistoricoMortalidad
         Me.BtnReporteMortalidadLote.Margin = New System.Windows.Forms.Padding(5)
         Me.BtnReporteMortalidadLote.Name = "BtnReporteMortalidadLote"
         Me.BtnReporteMortalidadLote.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnReporteMortalidadLote.Size = New System.Drawing.Size(299, 30)
+        Me.BtnReporteMortalidadLote.Size = New System.Drawing.Size(206, 28)
         Me.BtnReporteMortalidadLote.Text = "Reporte Mortalidad x Lote"
         '
         'BackgroundWorker1
         '
         '
+        'CbxChanchillaMarrana
+        '
+        Me.CbxChanchillaMarrana.AutoSize = True
+        Me.CbxChanchillaMarrana.Location = New System.Drawing.Point(588, 68)
+        Me.CbxChanchillaMarrana.Name = "CbxChanchillaMarrana"
+        Me.CbxChanchillaMarrana.Size = New System.Drawing.Size(179, 17)
+        Me.CbxChanchillaMarrana.TabIndex = 179
+        Me.CbxChanchillaMarrana.Text = "Apartado Chanchilla / Marranas "
+        Me.CbxChanchillaMarrana.UseVisualStyleBackColor = True
+        '
         'FrmHistoricoMortalidad
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1815, 877)
+        Me.ClientSize = New System.Drawing.Size(1210, 570)
         Me.Controls.Add(Me.PanelContenedor)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "FrmHistoricoMortalidad"
@@ -457,4 +469,6 @@ Partial Class FrmHistoricoMortalidad
     Friend WithEvents Ptbx_Cargando As PictureBox
     Friend WithEvents dtgListado As Infragistics.Win.UltraWinGrid.UltraGrid
     Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
+    Friend WithEvents CbxChanchillaMarrana As CheckBox
+    Friend WithEvents BackgroundWorker2 As System.ComponentModel.BackgroundWorker
 End Class
