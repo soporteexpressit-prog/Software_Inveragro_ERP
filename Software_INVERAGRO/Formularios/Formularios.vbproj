@@ -1728,6 +1728,12 @@
     <Compile Include="produccion\GestionMaterialGenetico\FrmAplicarParticion.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="produccion\HistoricoDepuraciones\FrmHistoricoDepuraciones.Designer.vb">
+      <DependentUpon>FrmHistoricoDepuraciones.vb</DependentUpon>
+    </Compile>
+    <Compile Include="produccion\HistoricoDepuraciones\FrmHistoricoDepuraciones.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="produccion\HistoricoMortalidad\FrmReporteMortalidadLoteCompleto.Designer.vb">
       <DependentUpon>FrmReporteMortalidadLoteCompleto.vb</DependentUpon>
     </Compile>
@@ -4582,6 +4588,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="produccion\GestionMaterialGenetico\FrmAplicarParticion.resx">
       <DependentUpon>FrmAplicarParticion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="produccion\HistoricoDepuraciones\FrmHistoricoDepuraciones.resx">
+      <DependentUpon>FrmHistoricoDepuraciones.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="produccion\HistoricoMortalidad\FrmReporteMortalidadLoteCompleto.resx">
       <DependentUpon>FrmReporteMortalidadLoteCompleto.vb</DependentUpon>

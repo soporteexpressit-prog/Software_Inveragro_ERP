@@ -55,6 +55,7 @@
     Private _PesoDestete As Decimal
     Private _Ca As Decimal
     Private _PresentacionSacos As Decimal
+    Private _EsChanchilla As Boolean
 
     Public Property Operacion As Integer
         Get
@@ -557,6 +558,15 @@
         End Get
         Set(value As Decimal)
             _PresentacionSacos = value
+        End Set
+    End Property
+
+    Public Property EsChanchilla As Boolean
+        Get
+            Return _EsChanchilla
+        End Get
+        Set(value As Boolean)
+            _EsChanchilla = value
         End Set
     End Property
 End Class

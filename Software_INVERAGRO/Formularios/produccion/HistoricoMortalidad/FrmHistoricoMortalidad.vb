@@ -93,11 +93,11 @@ Public Class FrmHistoricoMortalidad
             DesbloquearControles()
             dtgListado.DisplayLayout.Bands(0).Columns(0).Hidden = True
             dtgListado.DisplayLayout.Bands(1).Columns(0).Hidden = True
-            Colorear()
+            Colorear1()
         End If
     End Sub
 
-    Sub Colorear()
+    Sub Colorear1()
         If (dtgListado.Rows.Count > 0) Then
             Dim estadoPdf As Integer = 13
 
@@ -157,8 +157,23 @@ Public Class FrmHistoricoMortalidad
             msj_advert("Error al Cargar los Datos")
         Else
             dtgListado.DataSource = CType(e.Result, DataTable)
-            dtgListado.DisplayLayout.Bands(0).Columns("idAnimal").Hidden = True
-            Colorear()
+            dtgListado.DisplayLayout.Bands(0).Columns("idControlFicha").Hidden = True
+            Colorear2()
+        End If
+    End Sub
+
+    Sub Colorear2()
+        If (dtgListado.Rows.Count > 0) Then
+            Dim estadoPdf As Integer = 11
+
+            'estadoPdf
+            clsBasicas.Colorear_SegunValor(dtgListado, Color.Green, Color.White, "CON EVIDENCIA", estadoPdf)
+            clsBasicas.Colorear_SegunValor(dtgListado, Color.Red, Color.White, "SIN EVIDENCIA", estadoPdf)
+
+            'centrar columnas
+            With dtgListado.DisplayLayout.Bands(0)
+                .Columns(estadoPdf).CellAppearance.TextHAlign = HAlign.Center
+            End With
         End If
     End Sub
 
@@ -239,10 +254,6 @@ Public Class FrmHistoricoMortalidad
             BtnBuscar.PerformClick()
             e.SuppressKeyPress = True
         End If
-    End Sub
-
-    Private Sub CbxChanchillaMarrana_CheckedChanged(sender As Object, e As EventArgs) Handles CbxChanchillaMarrana.CheckedChanged
-
     End Sub
 
     Private Sub BtnCerrar_Click(sender As Object, e As EventArgs) Handles BtnCerrar.Click

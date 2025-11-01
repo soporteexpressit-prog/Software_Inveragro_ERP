@@ -16,6 +16,7 @@ Public Class FrmRegistrarMortalidadLote
     Public idJaulaCorral As Integer = 0
     Public fecha As Date
     Public frmMortalidad As FrmRegistrarMandarCamalMortalidadLote
+    Public esChanchilla As Boolean = False
 
     Private Sub BtnSeleccionarEvidencia_Click(sender As Object, e As EventArgs) Handles BtnSeleccionarEvidencia.Click
         Dim ofd As New OpenFileDialog With {
@@ -59,7 +60,8 @@ Public Class FrmRegistrarMortalidadLote
                         .IdJaulaCorral = idJaulaCorral,
                         .IdUsuario = VP_IdUser,
                         .ArchivoFotoMortalidad = If(loadNewImageFoto AndAlso imagefoto IsNot Nothing, imagefoto, Nothing),
-                        .FechaControl = fecha
+                        .FechaControl = fecha,
+                        .EsChanchilla = esChanchilla
                 }
 
                 If (MessageBox.Show("¿ESTÁ SEGURO DE REGISTRAR LA MORTALIDAD DE LOS ANIMALES?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.No) Then
@@ -78,9 +80,5 @@ Public Class FrmRegistrarMortalidadLote
         Catch ex As Exception
             clsBasicas.controlException(Name, ex)
         End Try
-    End Sub
-
-    Private Sub FrmRegistrarMortalidadLote_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
     End Sub
 End Class

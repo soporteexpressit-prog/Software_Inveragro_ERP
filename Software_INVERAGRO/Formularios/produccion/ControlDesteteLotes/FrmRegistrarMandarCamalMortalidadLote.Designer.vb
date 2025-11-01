@@ -54,6 +54,9 @@ Partial Class FrmRegistrarMandarCamalMortalidadLote
         Dim Appearance29 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance30 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.FiltroEnvioAnimales = New System.Windows.Forms.GroupBox()
+        Me.RbnChanchilla = New System.Windows.Forms.RadioButton()
+        Me.RbnLechon = New System.Windows.Forms.RadioButton()
         Me.LblPlantel = New System.Windows.Forms.Label()
         Me.LblLote = New System.Windows.Forms.Label()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
@@ -81,17 +84,14 @@ Partial Class FrmRegistrarMandarCamalMortalidadLote
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.BtnGuardar = New System.Windows.Forms.ToolStripButton()
         Me.BtnCerrar = New System.Windows.Forms.ToolStripButton()
-        Me.FiltroEnvioAnimales = New System.Windows.Forms.GroupBox()
-        Me.RbnLechon = New System.Windows.Forms.RadioButton()
-        Me.RbnChanchilla = New System.Windows.Forms.RadioButton()
         Me.Panel2.SuspendLayout()
+        Me.FiltroEnvioAnimales.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DtgListadoCerdos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
         CType(Me.DtgListadoCorrales, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ToolStrip1.SuspendLayout()
-        Me.FiltroEnvioAnimales.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel2
@@ -105,10 +105,41 @@ Partial Class FrmRegistrarMandarCamalMortalidadLote
         Me.Panel2.Controls.Add(Me.ToolStrip1)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(1029, 672)
         Me.Panel2.TabIndex = 10
+        '
+        'FiltroEnvioAnimales
+        '
+        Me.FiltroEnvioAnimales.Controls.Add(Me.RbnChanchilla)
+        Me.FiltroEnvioAnimales.Controls.Add(Me.RbnLechon)
+        Me.FiltroEnvioAnimales.Location = New System.Drawing.Point(790, 46)
+        Me.FiltroEnvioAnimales.Name = "FiltroEnvioAnimales"
+        Me.FiltroEnvioAnimales.Size = New System.Drawing.Size(232, 45)
+        Me.FiltroEnvioAnimales.TabIndex = 182
+        Me.FiltroEnvioAnimales.TabStop = False
+        Me.FiltroEnvioAnimales.Text = "Envío"
+        '
+        'RbnChanchilla
+        '
+        Me.RbnChanchilla.AutoSize = True
+        Me.RbnChanchilla.Location = New System.Drawing.Point(125, 16)
+        Me.RbnChanchilla.Name = "RbnChanchilla"
+        Me.RbnChanchilla.Size = New System.Drawing.Size(74, 17)
+        Me.RbnChanchilla.TabIndex = 1
+        Me.RbnChanchilla.Text = "Chanchilla"
+        Me.RbnChanchilla.UseVisualStyleBackColor = True
+        '
+        'RbnLechon
+        '
+        Me.RbnLechon.AutoSize = True
+        Me.RbnLechon.Location = New System.Drawing.Point(44, 16)
+        Me.RbnLechon.Name = "RbnLechon"
+        Me.RbnLechon.Size = New System.Drawing.Size(61, 17)
+        Me.RbnLechon.TabIndex = 0
+        Me.RbnLechon.Text = "Lechón"
+        Me.RbnLechon.UseVisualStyleBackColor = True
         '
         'LblPlantel
         '
@@ -157,9 +188,9 @@ Partial Class FrmRegistrarMandarCamalMortalidadLote
         Me.GroupBox4.Controls.Add(Me.TxtObservacion)
         Me.GroupBox4.Controls.Add(Me.Label1)
         Me.GroupBox4.Location = New System.Drawing.Point(337, 93)
-        Me.GroupBox4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox4.Margin = New System.Windows.Forms.Padding(2)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox4.Padding = New System.Windows.Forms.Padding(2)
         Me.GroupBox4.Size = New System.Drawing.Size(685, 572)
         Me.GroupBox4.TabIndex = 180
         Me.GroupBox4.TabStop = False
@@ -255,7 +286,7 @@ Partial Class FrmRegistrarMandarCamalMortalidadLote
         '
         Me.TxtMotivoMortalidad.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtMotivoMortalidad.Location = New System.Drawing.Point(121, 482)
-        Me.TxtMotivoMortalidad.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TxtMotivoMortalidad.Margin = New System.Windows.Forms.Padding(2)
         Me.TxtMotivoMortalidad.MaxLength = 200
         Me.TxtMotivoMortalidad.Name = "TxtMotivoMortalidad"
         Me.TxtMotivoMortalidad.Size = New System.Drawing.Size(224, 44)
@@ -305,9 +336,9 @@ Partial Class FrmRegistrarMandarCamalMortalidadLote
         '
         Me.GroupBox1.Controls.Add(Me.DtgListadoCerdos)
         Me.GroupBox1.Location = New System.Drawing.Point(4, 66)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2)
         Me.GroupBox1.Size = New System.Drawing.Size(674, 350)
         Me.GroupBox1.TabIndex = 178
         Me.GroupBox1.TabStop = False
@@ -393,7 +424,7 @@ Partial Class FrmRegistrarMandarCamalMortalidadLote
         '
         Me.RbtMandarCamal.AutoSize = True
         Me.RbtMandarCamal.Location = New System.Drawing.Point(147, 34)
-        Me.RbtMandarCamal.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.RbtMandarCamal.Margin = New System.Windows.Forms.Padding(2)
         Me.RbtMandarCamal.Name = "RbtMandarCamal"
         Me.RbtMandarCamal.Size = New System.Drawing.Size(102, 17)
         Me.RbtMandarCamal.TabIndex = 179
@@ -405,7 +436,7 @@ Partial Class FrmRegistrarMandarCamalMortalidadLote
         '
         Me.RbtMortalidad.AutoSize = True
         Me.RbtMortalidad.Location = New System.Drawing.Point(39, 34)
-        Me.RbtMortalidad.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.RbtMortalidad.Margin = New System.Windows.Forms.Padding(2)
         Me.RbtMortalidad.Name = "RbtMortalidad"
         Me.RbtMortalidad.Size = New System.Drawing.Size(74, 17)
         Me.RbtMortalidad.TabIndex = 178
@@ -443,7 +474,7 @@ Partial Class FrmRegistrarMandarCamalMortalidadLote
         '
         Me.TxtObservacion.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtObservacion.Location = New System.Drawing.Point(475, 482)
-        Me.TxtObservacion.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TxtObservacion.Margin = New System.Windows.Forms.Padding(2)
         Me.TxtObservacion.MaxLength = 200
         Me.TxtObservacion.Name = "TxtObservacion"
         Me.TxtObservacion.Size = New System.Drawing.Size(202, 44)
@@ -467,9 +498,9 @@ Partial Class FrmRegistrarMandarCamalMortalidadLote
         '
         Me.GroupBox2.Controls.Add(Me.DtgListadoCorrales)
         Me.GroupBox2.Location = New System.Drawing.Point(8, 93)
-        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(2)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(2)
         Me.GroupBox2.Size = New System.Drawing.Size(325, 572)
         Me.GroupBox2.TabIndex = 173
         Me.GroupBox2.TabStop = False
@@ -558,7 +589,7 @@ Partial Class FrmRegistrarMandarCamalMortalidadLote
         Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnGuardar, Me.BtnCerrar})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.ToolStrip1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.ToolStrip1.Margin = New System.Windows.Forms.Padding(2)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Padding = New System.Windows.Forms.Padding(0, 0, 2, 0)
         Me.ToolStrip1.Size = New System.Drawing.Size(1029, 38)
@@ -591,46 +622,13 @@ Partial Class FrmRegistrarMandarCamalMortalidadLote
         Me.BtnCerrar.Text = "Salir"
         Me.BtnCerrar.ToolTipText = "Cerrar"
         '
-        'FiltroEnvioAnimales
-        '
-        Me.FiltroEnvioAnimales.Controls.Add(Me.RbnChanchilla)
-        Me.FiltroEnvioAnimales.Controls.Add(Me.RbnLechon)
-        Me.FiltroEnvioAnimales.Location = New System.Drawing.Point(790, 46)
-        Me.FiltroEnvioAnimales.Name = "FiltroEnvioAnimales"
-        Me.FiltroEnvioAnimales.Size = New System.Drawing.Size(232, 45)
-        Me.FiltroEnvioAnimales.TabIndex = 182
-        Me.FiltroEnvioAnimales.TabStop = False
-        Me.FiltroEnvioAnimales.Text = "Envío"
-        '
-        'RbnLechon
-        '
-        Me.RbnLechon.AutoSize = True
-        Me.RbnLechon.Location = New System.Drawing.Point(44, 16)
-        Me.RbnLechon.Name = "RbnLechon"
-        Me.RbnLechon.Size = New System.Drawing.Size(61, 17)
-        Me.RbnLechon.TabIndex = 0
-        Me.RbnLechon.TabStop = True
-        Me.RbnLechon.Text = "Lechón"
-        Me.RbnLechon.UseVisualStyleBackColor = True
-        '
-        'RbnChanchilla
-        '
-        Me.RbnChanchilla.AutoSize = True
-        Me.RbnChanchilla.Location = New System.Drawing.Point(125, 16)
-        Me.RbnChanchilla.Name = "RbnChanchilla"
-        Me.RbnChanchilla.Size = New System.Drawing.Size(74, 17)
-        Me.RbnChanchilla.TabIndex = 1
-        Me.RbnChanchilla.TabStop = True
-        Me.RbnChanchilla.Text = "Chanchilla"
-        Me.RbnChanchilla.UseVisualStyleBackColor = True
-        '
         'FrmRegistrarMandarCamalMortalidadLote
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1029, 672)
         Me.Controls.Add(Me.Panel2)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "FrmRegistrarMandarCamalMortalidadLote"
@@ -639,6 +637,8 @@ Partial Class FrmRegistrarMandarCamalMortalidadLote
         Me.Text = "MORTALIDAD DE CERDOS"
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
+        Me.FiltroEnvioAnimales.ResumeLayout(False)
+        Me.FiltroEnvioAnimales.PerformLayout()
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox4.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
@@ -647,8 +647,6 @@ Partial Class FrmRegistrarMandarCamalMortalidadLote
         CType(Me.DtgListadoCorrales, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()
-        Me.FiltroEnvioAnimales.ResumeLayout(False)
-        Me.FiltroEnvioAnimales.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub

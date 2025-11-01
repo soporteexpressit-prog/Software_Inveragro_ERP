@@ -41,10 +41,10 @@ Partial Class FrmRegistrarMortalidadLote
         Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnGuardar, Me.BtnCerrar})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.ToolStrip1.Margin = New System.Windows.Forms.Padding(3)
+        Me.ToolStrip1.Margin = New System.Windows.Forms.Padding(2)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Padding = New System.Windows.Forms.Padding(0, 0, 3, 0)
-        Me.ToolStrip1.Size = New System.Drawing.Size(404, 40)
+        Me.ToolStrip1.Padding = New System.Windows.Forms.Padding(0, 0, 2, 0)
+        Me.ToolStrip1.Size = New System.Drawing.Size(269, 38)
         Me.ToolStrip1.TabIndex = 53
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -57,7 +57,7 @@ Partial Class FrmRegistrarMortalidadLote
         Me.BtnGuardar.Margin = New System.Windows.Forms.Padding(5)
         Me.BtnGuardar.Name = "BtnGuardar"
         Me.BtnGuardar.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnGuardar.Size = New System.Drawing.Size(121, 30)
+        Me.BtnGuardar.Size = New System.Drawing.Size(89, 28)
         Me.BtnGuardar.Text = "Guardar"
         Me.BtnGuardar.ToolTipText = "Guardar"
         '
@@ -70,7 +70,7 @@ Partial Class FrmRegistrarMortalidadLote
         Me.BtnCerrar.Margin = New System.Windows.Forms.Padding(5)
         Me.BtnCerrar.Name = "BtnCerrar"
         Me.BtnCerrar.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnCerrar.Size = New System.Drawing.Size(84, 30)
+        Me.BtnCerrar.Size = New System.Drawing.Size(66, 28)
         Me.BtnCerrar.Text = "Salir"
         Me.BtnCerrar.ToolTipText = "Cerrar"
         '
@@ -79,9 +79,11 @@ Partial Class FrmRegistrarMortalidadLote
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.BtnSeleccionarEvidencia)
         Me.GroupBox1.Controls.Add(Me.picFoto)
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 79)
+        Me.GroupBox1.Location = New System.Drawing.Point(8, 51)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(370, 359)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2)
+        Me.GroupBox1.Size = New System.Drawing.Size(247, 233)
         Me.GroupBox1.TabIndex = 161
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "EVIDENCIA DE MORTALIDAD"
@@ -92,20 +94,20 @@ Partial Class FrmRegistrarMortalidadLote
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(34, 44)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label1.Location = New System.Drawing.Point(23, 29)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(120, 22)
+        Me.Label1.Size = New System.Drawing.Size(79, 14)
         Me.Label1.TabIndex = 199
         Me.Label1.Text = "Evidencia :"
         '
         'BtnSeleccionarEvidencia
         '
         Me.BtnSeleccionarEvidencia.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.BtnSeleccionarEvidencia.Location = New System.Drawing.Point(34, 292)
-        Me.BtnSeleccionarEvidencia.Margin = New System.Windows.Forms.Padding(3, 6, 3, 6)
+        Me.BtnSeleccionarEvidencia.Location = New System.Drawing.Point(23, 190)
+        Me.BtnSeleccionarEvidencia.Margin = New System.Windows.Forms.Padding(2, 4, 2, 4)
         Me.BtnSeleccionarEvidencia.Name = "BtnSeleccionarEvidencia"
-        Me.BtnSeleccionarEvidencia.Size = New System.Drawing.Size(306, 40)
+        Me.BtnSeleccionarEvidencia.Size = New System.Drawing.Size(204, 26)
         Me.BtnSeleccionarEvidencia.TabIndex = 198
         Me.BtnSeleccionarEvidencia.Text = "Subir Foto"
         Me.BtnSeleccionarEvidencia.UseVisualStyleBackColor = True
@@ -114,22 +116,23 @@ Partial Class FrmRegistrarMortalidadLote
         '
         Me.picFoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.picFoto.Image = Global.Formularios.My.Resources.Resources.sinimagen
-        Me.picFoto.Location = New System.Drawing.Point(34, 86)
-        Me.picFoto.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
+        Me.picFoto.Location = New System.Drawing.Point(23, 56)
+        Me.picFoto.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.picFoto.Name = "picFoto"
-        Me.picFoto.Size = New System.Drawing.Size(306, 195)
+        Me.picFoto.Size = New System.Drawing.Size(205, 127)
         Me.picFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.picFoto.TabIndex = 197
         Me.picFoto.TabStop = False
         '
         'FrmRegistrarMortalidadLote
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(233, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(404, 450)
+        Me.ClientSize = New System.Drawing.Size(269, 292)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.ToolStrip1)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "FrmRegistrarMortalidadLote"

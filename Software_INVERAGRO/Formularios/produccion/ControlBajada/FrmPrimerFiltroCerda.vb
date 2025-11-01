@@ -15,6 +15,7 @@ Public Class FrmPrimerFiltroCerda
     Public idPlantel As Integer = 0
     Public numFiltroDescarte As Integer = 0
     Public SelectedPuras As New HashSet(Of Integer)
+    Public esChanchilla As Boolean = False
 
     Private Sub FrmPrimerFiltroCerda_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
@@ -37,6 +38,13 @@ Public Class FrmPrimerFiltroCerda
         CmbTipoCerda.SelectedIndex = 0
         DtpFechaDepuracion.Value = Now.Date
         clsBasicas.Formato_Tablas_Grid(DtgListado)
+        If numFiltroDescarte = 1 Then
+            FiltroEnvioAnimales.Visible = True
+            RbnLechon.Checked = True
+        Else
+            FiltroEnvioAnimales.Visible = False
+            RbnChanchilla.Checked = True
+        End If
         OcultarCamposSegunTipoCerda()
     End Sub
 
@@ -250,7 +258,8 @@ Public Class FrmPrimerFiltroCerda
                 .IdPlantel = idPlantel,
                 .IdUsuario = VP_IdUser,
                 .NumDepuracion = numFiltroDescarte,
-                .FechaControl = DtpFechaDepuracion.Value
+                .FechaControl = DtpFechaDepuracion.Value,
+                .esChanchilla = RbnChanchilla.Checked
             }
 
             Dim mensaje As String = cn.Cn_RegistrarControlDescarteMadreFutura(obj)

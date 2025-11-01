@@ -71,7 +71,7 @@ Public Class FrmInformacionDepuracionMadreFutura
 
     Sub Colorear()
         If (DtgListado.Rows.Count > 0) Then
-            Dim ambiente As Integer = 7
+            Dim ambiente As Integer = 8
 
             'ambiente
             clsBasicas.Colorear_SegunValor(DtgListado, Color.LightGreen, Color.DarkGreen, "REPRODUCTOR", ambiente)

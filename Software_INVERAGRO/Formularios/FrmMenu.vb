@@ -1397,4 +1397,8 @@ GetType(FrmUnidadMedida)}
     Private Sub CAMPAÑASToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CAMPAÑASToolStripMenuItem.Click
         AbrirFormulario("FrmDespachosCerdosVenta")
     End Sub
+
+    Private Sub HISTORICODEDEPURACIÓNToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HISTORICODEDEPURACIÓNToolStripMenuItem.Click
+        AbrirFormulario("FrmHistoricoDepuraciones")
+    End Sub
 End Class

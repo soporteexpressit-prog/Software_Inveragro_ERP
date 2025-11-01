@@ -498,6 +498,7 @@ Public Class cdControlAnimal
                 .AddWithValue("@idUsuario", SqlDbType.Int).Value = obj.IdUsuario
                 .AddWithValue("@archivoFoto", SqlDbType.VarBinary).Value = If(obj.ArchivoFotoMortalidad Is Nothing, DBNull.Value, obj.ArchivoFotoMortalidad)
                 .AddWithValue("@fechaControl", SqlDbType.Date).Value = obj.FechaControl
+                .AddWithValue("@esEnvioCamalChanchilla", SqlDbType.Bit).Value = obj.EsChanchilla
                 .Add("@msj", SqlDbType.VarChar, 100).Direction = 2
                 .Add("@coderror", SqlDbType.Int).Direction = 2
             End With

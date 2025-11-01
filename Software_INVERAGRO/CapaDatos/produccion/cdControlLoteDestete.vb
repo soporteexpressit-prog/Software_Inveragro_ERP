@@ -438,6 +438,7 @@ Public Class cdControlLoteDestete
                 .AddWithValue("@idUbicacion", SqlDbType.Int).Value = obj.IdPlantel
                 .AddWithValue("@numDepuracion", SqlDbType.Int).Value = obj.NumDepuracion
                 .AddWithValue("@fControl", SqlDbType.Date).Value = obj.FechaControl
+                .AddWithValue("@esEnvioCamalChanchilla", SqlDbType.Bit).Value = obj.EsChanchilla
                 .Add("@msj", SqlDbType.VarChar, 100).Direction = 2
                 .Add("@coderror", SqlDbType.Int).Direction = 2
             End With
@@ -916,6 +917,23 @@ Public Class cdControlLoteDestete
             Dim da As New SqlDataAdapter(name, con.con)
             da.SelectCommand.CommandType = 4
             da.SelectCommand.Parameters.AddWithValue("@idLote", obj.IdLote)
+            da.SelectCommand.Parameters.AddWithValue("@idUbicacion", obj.IdPlantel)
+            da.Fill(dt)
+        Catch ex As Exception
+            Throw ex
+        End Try
+        con.Salir()
+        Return dt
+    End Function
+
+    Public Function Cd_ConsultarDepuracionHistorico(name As String, obj As coControlLoteDestete) As DataTable
+        Dim dt As New DataTable
+        Try
+            con.Abrir()
+            Dim da As New SqlDataAdapter(name, con.con)
+            da.SelectCommand.CommandType = 4
+            da.SelectCommand.Parameters.AddWithValue("@fechaDesde", obj.FechaDesde)
+            da.SelectCommand.Parameters.AddWithValue("@fechaHasta", obj.FechaHasta)
             da.SelectCommand.Parameters.AddWithValue("@idUbicacion", obj.IdPlantel)
             da.Fill(dt)
         Catch ex As Exception

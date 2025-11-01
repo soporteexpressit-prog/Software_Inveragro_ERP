@@ -134,6 +134,10 @@ Public Class cnControlLoteDestete
         Return cls_at.Cd_ConsultarxLoteUbicacionDt("[w_pa_cons_depuracion_cerda]", obj)
     End Function
 
+    Public Function Cd_ConsultarDepuracionHistorico(ByRef obj As coControlLoteDestete) As DataTable
+        Return cls_at.Cd_ConsultarDepuracionHistorico("[w_pa_cons_depuracion_cerda_historico]", obj)
+    End Function
+
     Public Function Cn_ConsultarCriasMortalidadLote(ByRef obj As coControlLoteDestete) As DataSet
         Return cls_at.Cd_ConsCriasMortalidadLote("[r_pa_cons_crias_mortalidad_lote]", obj)
     End Function

@@ -441,6 +441,7 @@ Public Class FrmRegistrarMandarCamalMortalidadLote
                         .idMotivoMortalidad = idMotivoMortalidad,
                         .idJaulaCorral = idJaulaCorral,
                         .fecha = DtpFecha.Value,
+                        .esChanchilla = RbnChanchilla.Checked,
                         .frmMortalidad = Me
                     }
                     frm.ShowDialog()
