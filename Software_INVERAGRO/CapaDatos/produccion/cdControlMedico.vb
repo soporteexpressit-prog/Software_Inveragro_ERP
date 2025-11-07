@@ -259,6 +259,7 @@ Public Class cdControlMedico
                 Else
                     .Add("@archivo", SqlDbType.VarBinary, -1).Value = DBNull.Value
                 End If
+                .Add("@nombreVacunaComercial", SqlDbType.VarChar, 50).Value = obj.NombreVacunaComercial
                 .Add("@msj", SqlDbType.VarChar, 100).Direction = ParameterDirection.Output
                 .Add("@coderror", SqlDbType.Int).Direction = ParameterDirection.Output
             End With

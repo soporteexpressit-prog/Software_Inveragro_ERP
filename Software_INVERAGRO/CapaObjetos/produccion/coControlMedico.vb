@@ -40,6 +40,7 @@
     Private _NumSemana As Integer
     Private _MlAnimal As Decimal
     Private _GestacionIndividual As Integer
+    Private _NombreVacunaComercial As String
 
     Public Property Operacion As Integer
         Get
@@ -408,6 +409,15 @@
         End Get
         Set(value As Integer)
             _GestacionIndividual = value
+        End Set
+    End Property
+
+    Public Property NombreVacunaComercial As String
+        Get
+            Return _NombreVacunaComercial
+        End Get
+        Set(value As String)
+            _NombreVacunaComercial = value
         End Set
     End Property
 End Class

@@ -190,6 +190,7 @@ Public Class FrmHistoricoEnfermedadesGranja
                     Dim costoPrograma As String = activeRow.Cells("Costo Programa").Value.ToString
                     Dim metodo As String = activeRow.Cells("Método").Value.ToString
                     Dim fechaRegistro As Date = CDate(activeRow.Cells("Fecha Registro").Value)
+                    Dim nombreComercial As String = activeRow.Cells("Nombre Comercial Vacuna").Value.ToString
 
                     Dim frm As New FrmMantHistoricoEnfermedades With {
                         .operacion = 1,
@@ -200,7 +201,8 @@ Public Class FrmHistoricoEnfermedadesGranja
                         .enfermedad = enfermedad,
                         .costoPrograma = costoPrograma,
                         .metodo = metodo,
-                        .fecha = fechaRegistro
+                        .fecha = fechaRegistro,
+                        .nombreComercialVacuna = nombreComercial
                     }
                     frm.ShowDialog()
                     Consultar()

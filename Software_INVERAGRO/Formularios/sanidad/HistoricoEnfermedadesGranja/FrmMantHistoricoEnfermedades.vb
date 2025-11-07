@@ -16,6 +16,7 @@ Public Class FrmMantHistoricoEnfermedades
     Public costoPrograma As String = ""
     Public metodo As String = ""
     Public fecha As Date = Now.Date
+    Public nombreComercialVacuna As String = ""
 
     Private Sub FrmMantHistoricoEnfermedades_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
@@ -48,6 +49,7 @@ Public Class FrmMantHistoricoEnfermedades
             TxtEnfermedad.Text = enfermedad
             TxtObservacion.Text = metodo
             DtpFechaHistorico.Value = fecha
+            TxtNombreComercialVacuna.Text = nombreComercialVacuna
         End If
     End Sub
 
@@ -149,7 +151,8 @@ Public Class FrmMantHistoricoEnfermedades
                 .Operacion = operacion,
                 .Codigo = codigo,
                 .IdUsuario = VP_IdUser,
-                .CostoPrograma = TxtCostoPrograma.Text
+                .CostoPrograma = TxtCostoPrograma.Text,
+                .NombreVacunaComercial = TxtNombreComercialVacuna.Text.Trim()
             }
 
             If Not String.IsNullOrEmpty(TxtArchivo.Text) Then

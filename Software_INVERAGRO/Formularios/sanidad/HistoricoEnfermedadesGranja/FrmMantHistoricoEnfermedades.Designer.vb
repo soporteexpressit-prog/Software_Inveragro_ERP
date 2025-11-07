@@ -68,6 +68,8 @@ Partial Class FrmMantHistoricoEnfermedades
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.BtnGuardar = New System.Windows.Forms.ToolStripButton()
         Me.BtnCerrar = New System.Windows.Forms.ToolStripButton()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.TxtNombreComercialVacuna = New System.Windows.Forms.TextBox()
         Me.Panel2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         CType(Me.CmbUbicacion, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -82,12 +84,15 @@ Partial Class FrmMantHistoricoEnfermedades
         Me.Panel2.Controls.Add(Me.ToolStrip1)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1066, 488)
+        Me.Panel2.Size = New System.Drawing.Size(706, 360)
         Me.Panel2.TabIndex = 13
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.TxtNombreComercialVacuna)
+        Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.btnarchivoadjunto)
         Me.GroupBox1.Controls.Add(Me.TxtArchivo)
         Me.GroupBox1.Controls.Add(Me.Label5)
@@ -104,9 +109,11 @@ Partial Class FrmMantHistoricoEnfermedades
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label10)
         Me.GroupBox1.Controls.Add(Me.TxtObservacion)
-        Me.GroupBox1.Location = New System.Drawing.Point(20, 76)
+        Me.GroupBox1.Location = New System.Drawing.Point(13, 49)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(1019, 396)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox1.Size = New System.Drawing.Size(679, 302)
         Me.GroupBox1.TabIndex = 160
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "INFORMACIÓN DE HISTORIAL"
@@ -117,10 +124,10 @@ Partial Class FrmMantHistoricoEnfermedades
         Me.btnarchivoadjunto.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnarchivoadjunto.Image = Global.Formularios.My.Resources.Resources.adjunto_archivo
         Me.btnarchivoadjunto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnarchivoadjunto.Location = New System.Drawing.Point(508, 180)
-        Me.btnarchivoadjunto.Margin = New System.Windows.Forms.Padding(6, 8, 6, 8)
+        Me.btnarchivoadjunto.Location = New System.Drawing.Point(339, 117)
+        Me.btnarchivoadjunto.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.btnarchivoadjunto.Name = "btnarchivoadjunto"
-        Me.btnarchivoadjunto.Size = New System.Drawing.Size(132, 46)
+        Me.btnarchivoadjunto.Size = New System.Drawing.Size(88, 30)
         Me.btnarchivoadjunto.TabIndex = 385
         Me.btnarchivoadjunto.Text = "Adjuntar"
         Me.btnarchivoadjunto.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -130,11 +137,10 @@ Partial Class FrmMantHistoricoEnfermedades
         '
         Me.TxtArchivo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxtArchivo.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtArchivo.Location = New System.Drawing.Point(201, 187)
-        Me.TxtArchivo.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.TxtArchivo.Location = New System.Drawing.Point(134, 122)
         Me.TxtArchivo.MaxLength = 50
         Me.TxtArchivo.Name = "TxtArchivo"
-        Me.TxtArchivo.Size = New System.Drawing.Size(297, 28)
+        Me.TxtArchivo.Size = New System.Drawing.Size(199, 21)
         Me.TxtArchivo.TabIndex = 203
         '
         'Label5
@@ -143,18 +149,19 @@ Partial Class FrmMantHistoricoEnfermedades
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label5.Location = New System.Drawing.Point(91, 187)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label5.Location = New System.Drawing.Point(52, 122)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(100, 22)
+        Me.Label5.Size = New System.Drawing.Size(66, 14)
         Me.Label5.TabIndex = 202
         Me.Label5.Text = "Archivo :"
         '
         'TxtCostoPrograma
         '
-        Me.TxtCostoPrograma.Location = New System.Drawing.Point(811, 115)
+        Me.TxtCostoPrograma.Location = New System.Drawing.Point(541, 75)
+        Me.TxtCostoPrograma.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TxtCostoPrograma.Name = "TxtCostoPrograma"
-        Me.TxtCostoPrograma.Size = New System.Drawing.Size(192, 26)
+        Me.TxtCostoPrograma.Size = New System.Drawing.Size(129, 20)
         Me.TxtCostoPrograma.TabIndex = 201
         '
         'CmbUbicacion
@@ -214,10 +221,9 @@ Partial Class FrmMantHistoricoEnfermedades
         Me.CmbUbicacion.DisplayLayout.ScrollStyle = Infragistics.Win.UltraWinGrid.ScrollStyle.Immediate
         Me.CmbUbicacion.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy
         Me.CmbUbicacion.DropDownStyle = Infragistics.Win.UltraWinGrid.UltraComboStyle.DropDownList
-        Me.CmbUbicacion.Location = New System.Drawing.Point(201, 43)
-        Me.CmbUbicacion.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.CmbUbicacion.Location = New System.Drawing.Point(134, 28)
         Me.CmbUbicacion.Name = "CmbUbicacion"
-        Me.CmbUbicacion.Size = New System.Drawing.Size(192, 29)
+        Me.CmbUbicacion.Size = New System.Drawing.Size(128, 22)
         Me.CmbUbicacion.TabIndex = 200
         '
         'Label3
@@ -226,10 +232,10 @@ Partial Class FrmMantHistoricoEnfermedades
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(84, 46)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label3.Location = New System.Drawing.Point(56, 30)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(93, 22)
+        Me.Label3.Size = New System.Drawing.Size(62, 14)
         Me.Label3.TabIndex = 199
         Me.Label3.Text = "Plantel :"
         '
@@ -239,10 +245,10 @@ Partial Class FrmMantHistoricoEnfermedades
         Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label6.Location = New System.Drawing.Point(712, 116)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label6.Location = New System.Drawing.Point(475, 75)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(79, 22)
+        Me.Label6.Size = New System.Drawing.Size(53, 14)
         Me.Label6.TabIndex = 196
         Me.Label6.Text = "Costo :"
         '
@@ -303,10 +309,9 @@ Partial Class FrmMantHistoricoEnfermedades
         Me.cmbArea.DisplayLayout.ScrollStyle = Infragistics.Win.UltraWinGrid.ScrollStyle.Immediate
         Me.cmbArea.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy
         Me.cmbArea.DropDownStyle = Infragistics.Win.UltraWinGrid.UltraComboStyle.DropDownList
-        Me.cmbArea.Location = New System.Drawing.Point(811, 180)
-        Me.cmbArea.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.cmbArea.Location = New System.Drawing.Point(541, 117)
         Me.cmbArea.Name = "cmbArea"
-        Me.cmbArea.Size = New System.Drawing.Size(192, 29)
+        Me.cmbArea.Size = New System.Drawing.Size(128, 22)
         Me.cmbArea.TabIndex = 195
         '
         'Label7
@@ -315,19 +320,20 @@ Partial Class FrmMantHistoricoEnfermedades
         Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label7.Location = New System.Drawing.Point(721, 180)
-        Me.Label7.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label7.Location = New System.Drawing.Point(481, 117)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(70, 22)
+        Me.Label7.Size = New System.Drawing.Size(47, 14)
         Me.Label7.TabIndex = 194
         Me.Label7.Text = "Área :"
         '
         'DtpFechaHistorico
         '
         Me.DtpFechaHistorico.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DtpFechaHistorico.Location = New System.Drawing.Point(811, 46)
+        Me.DtpFechaHistorico.Location = New System.Drawing.Point(541, 30)
+        Me.DtpFechaHistorico.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.DtpFechaHistorico.Name = "DtpFechaHistorico"
-        Me.DtpFechaHistorico.Size = New System.Drawing.Size(192, 26)
+        Me.DtpFechaHistorico.Size = New System.Drawing.Size(129, 20)
         Me.DtpFechaHistorico.TabIndex = 184
         '
         'Label4
@@ -336,10 +342,10 @@ Partial Class FrmMantHistoricoEnfermedades
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label4.Location = New System.Drawing.Point(712, 48)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label4.Location = New System.Drawing.Point(475, 31)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(83, 22)
+        Me.Label4.Size = New System.Drawing.Size(55, 14)
         Me.Label4.TabIndex = 183
         Me.Label4.Text = "Fecha :"
         '
@@ -349,10 +355,9 @@ Partial Class FrmMantHistoricoEnfermedades
         Me.BtnBuscarEnfermedad.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnBuscarEnfermedad.Image = CType(resources.GetObject("BtnBuscarEnfermedad.Image"), System.Drawing.Image)
         Me.BtnBuscarEnfermedad.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnBuscarEnfermedad.Location = New System.Drawing.Point(506, 102)
-        Me.BtnBuscarEnfermedad.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.BtnBuscarEnfermedad.Location = New System.Drawing.Point(337, 66)
         Me.BtnBuscarEnfermedad.Name = "BtnBuscarEnfermedad"
-        Me.BtnBuscarEnfermedad.Size = New System.Drawing.Size(48, 45)
+        Me.BtnBuscarEnfermedad.Size = New System.Drawing.Size(32, 29)
         Me.BtnBuscarEnfermedad.TabIndex = 192
         Me.BtnBuscarEnfermedad.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.BtnBuscarEnfermedad.UseVisualStyleBackColor = True
@@ -361,11 +366,10 @@ Partial Class FrmMantHistoricoEnfermedades
         '
         Me.TxtEnfermedad.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxtEnfermedad.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtEnfermedad.Location = New System.Drawing.Point(201, 110)
-        Me.TxtEnfermedad.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.TxtEnfermedad.Location = New System.Drawing.Point(134, 72)
         Me.TxtEnfermedad.MaxLength = 50
         Me.TxtEnfermedad.Name = "TxtEnfermedad"
-        Me.TxtEnfermedad.Size = New System.Drawing.Size(297, 28)
+        Me.TxtEnfermedad.Size = New System.Drawing.Size(199, 21)
         Me.TxtEnfermedad.TabIndex = 191
         '
         'Label2
@@ -374,10 +378,10 @@ Partial Class FrmMantHistoricoEnfermedades
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(84, 266)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label2.Location = New System.Drawing.Point(50, 170)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(103, 22)
+        Me.Label2.Size = New System.Drawing.Size(68, 14)
         Me.Label2.TabIndex = 182
         Me.Label2.Text = "Método : "
         '
@@ -387,20 +391,21 @@ Partial Class FrmMantHistoricoEnfermedades
         Me.Label10.BackColor = System.Drawing.Color.Transparent
         Me.Label10.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label10.Location = New System.Drawing.Point(39, 113)
-        Me.Label10.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label10.Location = New System.Drawing.Point(19, 73)
+        Me.Label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(152, 22)
+        Me.Label10.Size = New System.Drawing.Size(99, 14)
         Me.Label10.TabIndex = 190
         Me.Label10.Text = "Enfermedad  :"
         '
         'TxtObservacion
         '
         Me.TxtObservacion.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtObservacion.Location = New System.Drawing.Point(211, 266)
+        Me.TxtObservacion.Location = New System.Drawing.Point(134, 170)
+        Me.TxtObservacion.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TxtObservacion.MaxLength = 200
         Me.TxtObservacion.Name = "TxtObservacion"
-        Me.TxtObservacion.Size = New System.Drawing.Size(723, 92)
+        Me.TxtObservacion.Size = New System.Drawing.Size(535, 61)
         Me.TxtObservacion.TabIndex = 181
         Me.TxtObservacion.Text = "NINGUNA"
         '
@@ -411,10 +416,10 @@ Partial Class FrmMantHistoricoEnfermedades
         Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnGuardar, Me.BtnCerrar})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.ToolStrip1.Margin = New System.Windows.Forms.Padding(3)
+        Me.ToolStrip1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Padding = New System.Windows.Forms.Padding(0, 0, 3, 0)
-        Me.ToolStrip1.Size = New System.Drawing.Size(1066, 40)
+        Me.ToolStrip1.Padding = New System.Windows.Forms.Padding(0, 0, 2, 0)
+        Me.ToolStrip1.Size = New System.Drawing.Size(706, 38)
         Me.ToolStrip1.TabIndex = 52
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -427,7 +432,7 @@ Partial Class FrmMantHistoricoEnfermedades
         Me.BtnGuardar.Margin = New System.Windows.Forms.Padding(5)
         Me.BtnGuardar.Name = "BtnGuardar"
         Me.BtnGuardar.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnGuardar.Size = New System.Drawing.Size(121, 30)
+        Me.BtnGuardar.Size = New System.Drawing.Size(89, 28)
         Me.BtnGuardar.Text = "Guardar"
         Me.BtnGuardar.ToolTipText = "Guardar"
         '
@@ -440,16 +445,42 @@ Partial Class FrmMantHistoricoEnfermedades
         Me.BtnCerrar.Margin = New System.Windows.Forms.Padding(5)
         Me.BtnCerrar.Name = "BtnCerrar"
         Me.BtnCerrar.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnCerrar.Size = New System.Drawing.Size(84, 30)
+        Me.BtnCerrar.Size = New System.Drawing.Size(66, 28)
         Me.BtnCerrar.Text = "Salir"
         Me.BtnCerrar.ToolTipText = "Cerrar"
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.Label1.Location = New System.Drawing.Point(26, 256)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(194, 14)
+        Me.Label1.TabIndex = 386
+        Me.Label1.Text = "Nombre Comercial Vacuna  :"
+        '
+        'TxtNombreComercialVacuna
+        '
+        Me.TxtNombreComercialVacuna.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.TxtNombreComercialVacuna.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtNombreComercialVacuna.Location = New System.Drawing.Point(239, 253)
+        Me.TxtNombreComercialVacuna.MaxLength = 50
+        Me.TxtNombreComercialVacuna.Name = "TxtNombreComercialVacuna"
+        Me.TxtNombreComercialVacuna.Size = New System.Drawing.Size(302, 21)
+        Me.TxtNombreComercialVacuna.TabIndex = 387
+        '
         'FrmMantHistoricoEnfermedades
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1066, 488)
+        Me.ClientSize = New System.Drawing.Size(706, 360)
         Me.Controls.Add(Me.Panel2)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "FrmMantHistoricoEnfermedades"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "HISTÓRICO DE ENFERMEDADES"
@@ -486,4 +517,6 @@ Partial Class FrmMantHistoricoEnfermedades
     Friend WithEvents Label5 As Label
     Friend WithEvents TxtArchivo As TextBox
     Friend WithEvents btnarchivoadjunto As Button
+    Friend WithEvents Label1 As Label
+    Friend WithEvents TxtNombreComercialVacuna As TextBox
 End Class
