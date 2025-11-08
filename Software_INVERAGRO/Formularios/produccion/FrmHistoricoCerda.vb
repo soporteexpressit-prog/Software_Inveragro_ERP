@@ -62,13 +62,18 @@ Public Class FrmHistoricoCerda
 
     Private Sub DtgListadoHistorico_InitializeRow(sender As Object, e As UltraWinGrid.InitializeRowEventArgs) Handles DtgListadoHistorico.InitializeRow
         Try
-            If e.Row.Cells(3).Value IsNot Nothing AndAlso e.Row.Cells(3).Value.ToString().ToUpper() = "DESTETE" Then
-                e.Row.Cells("Editar").ButtonAppearance.Image = My.Resources.buscar16px
+            If e.Row.Cells(3).Value IsNot Nothing Then
+                Dim tipoControl As String = e.Row.Cells(3).Value.ToString().ToUpper()
+
+                If tipoControl = "DESTETE" OrElse tipoControl = "ENVÍO AL CAMAL" Then
+                    e.Row.Cells("Editar").ButtonAppearance.Image = My.Resources.buscar16px
+                End If
             End If
         Catch ex As Exception
             clsBasicas.controlException(Name, ex)
         End Try
     End Sub
+
 
     Private Sub DtgListadoHistorico_ClickCellButton(sender As Object, e As CellEventArgs) Handles DtgListadoHistorico.ClickCellButton
         Dim cn As New cnControlGestacion
@@ -85,6 +90,12 @@ Public Class FrmHistoricoCerda
 
             If valorColumna = "DESTETE" Then
                 Dim frm As New FrmVisualizarDesteteHembra()
+                Dim idFicha As Integer = Convert.ToInt32(e.Cell.Row.Cells("idControlFicha").Value)
+                frm.idControlFicha = idFicha
+                frm.ShowDialog()
+                Return
+            ElseIf valorColumna = "ENVÍO AL CAMAL" Then
+                Dim frm As New FrmVisualizarEnvioCamalHembra()
                 Dim idFicha As Integer = Convert.ToInt32(e.Cell.Row.Cells("idControlFicha").Value)
                 frm.idControlFicha = idFicha
                 frm.ShowDialog()

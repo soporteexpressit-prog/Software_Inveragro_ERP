@@ -1692,6 +1692,12 @@
     <Compile Include="produccion\FrmVisualizarDesteteHembra.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="produccion\FrmVisualizarEnvioCamalHembra.Designer.vb">
+      <DependentUpon>FrmVisualizarEnvioCamalHembra.vb</DependentUpon>
+    </Compile>
+    <Compile Include="produccion\FrmVisualizarEnvioCamalHembra.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="produccion\GestionAmbientes\FrmMantenimientoGalpon.Designer.vb">
       <DependentUpon>FrmMantenimientoGalpon.vb</DependentUpon>
     </Compile>
@@ -4570,6 +4576,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="produccion\FrmVisualizarDesteteHembra.resx">
       <DependentUpon>FrmVisualizarDesteteHembra.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="produccion\FrmVisualizarEnvioCamalHembra.resx">
+      <DependentUpon>FrmVisualizarEnvioCamalHembra.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="produccion\GestionAmbientes\FrmMantenimientoGalpon.resx">
       <DependentUpon>FrmMantenimientoGalpon.vb</DependentUpon>

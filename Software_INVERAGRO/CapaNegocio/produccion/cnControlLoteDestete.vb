@@ -393,4 +393,8 @@ Public Class cnControlLoteDestete
     Public Function Cn_ReporteEngordeCampana(ByRef obj As coControlLoteDestete) As DataTable
         Return cls_at.Cd_ReporteEngordeCampana("[w_pa_reporte_ambientes_x_campaña]", obj)
     End Function
+
+    Public Function Cn_ConsultarInformacionCamal(ByRef obj As coControlLoteDestete) As DataTable
+        Return cls_at.Cd_ConsultarxIdControlFicha("[w_pa_cons_envio_camal_x_idcontrolficha]", obj)
+    End Function
 End Class
