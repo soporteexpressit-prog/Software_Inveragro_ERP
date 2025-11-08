@@ -91,15 +91,20 @@ Public Class FrmRegistrarPesosChanchillas
                 If dt.Tables(1).Rows.Count > 0 Then
                     Dim fechaControl As Date = CDate(dt.Tables(1).Rows(0)("fPesoChanchilla"))
                     DtpFecha.Value = fechaControl
-                    LblEdadChanchillas.Text = CInt(dt.Tables(1).Rows(0)("edad"))
+                    LblEdadChanchillas.Text = CInt(dt.Tables(1).Rows(0)("edadPesaje"))
+                    LblFecNacimiento.Text = CInt(dt.Tables(1).Rows(0)("fNacimiento"))
                     LblEdad.Visible = True
                     LblEdadChanchillas.Visible = True
+                    LblFNacimiento.Visible = True
+                    LblFecNacimiento.Visible = True
                     LblFecha.Visible = True
                     DtpFecha.Visible = True
                 End If
             Else
                 LblEdad.Visible = False
                 LblEdadChanchillas.Visible = False
+                LblFNacimiento.Visible = False
+                LblFecNacimiento.Visible = False
                 LblFecha.Visible = False
                 DtpFecha.Visible = False
                 DtpFecha.Value = Date.Now

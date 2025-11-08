@@ -46,8 +46,8 @@ Public Class FrmRegistrarFormula
     Private Sub CargarTablaEnUltraGrid()
         Try
             Dim obj As New coControlFormulacion With {
-            .IdNutricionista = idNutricionista
-        }
+                .IdNutricionista = idNutricionista
+            }
 
             Dim resultado As Object = cn.Cn_ConsultarInsumosFormula(obj)
 

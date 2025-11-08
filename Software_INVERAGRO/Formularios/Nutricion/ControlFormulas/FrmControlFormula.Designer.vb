@@ -80,8 +80,9 @@ Partial Class FrmControlFormula
         Me.Panel2.Controls.Add(Me.BarraOpciones)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(2120, 310)
+        Me.Panel2.Size = New System.Drawing.Size(1299, 202)
         Me.Panel2.TabIndex = 9
         '
         'Label6
@@ -90,9 +91,10 @@ Partial Class FrmControlFormula
         Me.Label6.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(233, Byte), Integer))
         Me.Label6.Font = New System.Drawing.Font("Verdana", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(49, Byte), Integer))
-        Me.Label6.Location = New System.Drawing.Point(39, 40)
+        Me.Label6.Location = New System.Drawing.Point(26, 26)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(340, 29)
+        Me.Label6.Size = New System.Drawing.Size(228, 18)
         Me.Label6.TabIndex = 128
         Me.Label6.Text = "CONTROL DE FÓRMULAS"
         '
@@ -105,9 +107,11 @@ Partial Class FrmControlFormula
         Me.GrupoFiltros.Controls.Add(Me.Label3)
         Me.GrupoFiltros.Controls.Add(Me.dtpFechaHasta)
         Me.GrupoFiltros.Controls.Add(Me.dtpFechaDesde)
-        Me.GrupoFiltros.Location = New System.Drawing.Point(25, 89)
+        Me.GrupoFiltros.Location = New System.Drawing.Point(17, 58)
+        Me.GrupoFiltros.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GrupoFiltros.Name = "GrupoFiltros"
-        Me.GrupoFiltros.Size = New System.Drawing.Size(1293, 148)
+        Me.GrupoFiltros.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GrupoFiltros.Size = New System.Drawing.Size(862, 96)
         Me.GrupoFiltros.TabIndex = 169
         Me.GrupoFiltros.TabStop = False
         Me.GrupoFiltros.Text = "Filtros de Búsqueda"
@@ -118,10 +122,10 @@ Partial Class FrmControlFormula
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(690, 51)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label1.Location = New System.Drawing.Point(460, 33)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(91, 22)
+        Me.Label1.Size = New System.Drawing.Size(60, 14)
         Me.Label1.TabIndex = 165
         Me.Label1.Text = "Estado :"
         '
@@ -131,11 +135,10 @@ Partial Class FrmControlFormula
         Me.BtnBuscar.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnBuscar.Image = CType(resources.GetObject("BtnBuscar.Image"), System.Drawing.Image)
         Me.BtnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnBuscar.Location = New System.Drawing.Point(1101, 56)
-        Me.BtnBuscar.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.BtnBuscar.Location = New System.Drawing.Point(734, 36)
         Me.BtnBuscar.Name = "BtnBuscar"
-        Me.BtnBuscar.Padding = New System.Windows.Forms.Padding(6, 0, 6, 0)
-        Me.BtnBuscar.Size = New System.Drawing.Size(138, 62)
+        Me.BtnBuscar.Padding = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.BtnBuscar.Size = New System.Drawing.Size(92, 40)
         Me.BtnBuscar.TabIndex = 162
         Me.BtnBuscar.Text = "Buscar"
         Me.BtnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -146,9 +149,10 @@ Partial Class FrmControlFormula
         Me.CmbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CmbEstado.FormattingEnabled = True
         Me.CmbEstado.Items.AddRange(New Object() {"ACTIVO", "FINALIZADO", "CANCELADO"})
-        Me.CmbEstado.Location = New System.Drawing.Point(796, 48)
+        Me.CmbEstado.Location = New System.Drawing.Point(531, 31)
+        Me.CmbEstado.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.CmbEstado.Name = "CmbEstado"
-        Me.CmbEstado.Size = New System.Drawing.Size(166, 28)
+        Me.CmbEstado.Size = New System.Drawing.Size(112, 21)
         Me.CmbEstado.TabIndex = 164
         '
         'Label4
@@ -157,10 +161,10 @@ Partial Class FrmControlFormula
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label4.Location = New System.Drawing.Point(53, 93)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label4.Location = New System.Drawing.Point(35, 60)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(141, 22)
+        Me.Label4.Size = New System.Drawing.Size(93, 14)
         Me.Label4.TabIndex = 47
         Me.Label4.Text = "Fecha Hasta:"
         '
@@ -170,36 +174,36 @@ Partial Class FrmControlFormula
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(47, 51)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label3.Location = New System.Drawing.Point(31, 33)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(146, 22)
+        Me.Label3.Size = New System.Drawing.Size(96, 14)
         Me.Label3.TabIndex = 46
         Me.Label3.Text = "Fecha Desde:"
         '
         'dtpFechaHasta
         '
         Me.dtpFechaHasta.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dtpFechaHasta.Location = New System.Drawing.Point(214, 90)
-        Me.dtpFechaHasta.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.dtpFechaHasta.Location = New System.Drawing.Point(143, 58)
         Me.dtpFechaHasta.Name = "dtpFechaHasta"
-        Me.dtpFechaHasta.Size = New System.Drawing.Size(358, 28)
+        Me.dtpFechaHasta.Size = New System.Drawing.Size(240, 21)
         Me.dtpFechaHasta.TabIndex = 159
         '
         'dtpFechaDesde
         '
         Me.dtpFechaDesde.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dtpFechaDesde.Location = New System.Drawing.Point(214, 48)
-        Me.dtpFechaDesde.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.dtpFechaDesde.Location = New System.Drawing.Point(143, 31)
         Me.dtpFechaDesde.Name = "dtpFechaDesde"
-        Me.dtpFechaDesde.Size = New System.Drawing.Size(358, 28)
+        Me.dtpFechaDesde.Size = New System.Drawing.Size(240, 21)
         Me.dtpFechaDesde.TabIndex = 158
         '
         'GroupBox1
         '
-        Me.GroupBox1.Location = New System.Drawing.Point(513, 293)
+        Me.GroupBox1.Location = New System.Drawing.Point(342, 190)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(8, 8)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox1.Size = New System.Drawing.Size(5, 5)
         Me.GroupBox1.TabIndex = 168
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "GroupBox1"
@@ -211,11 +215,11 @@ Partial Class FrmControlFormula
         Me.BarraOpciones.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
         Me.BarraOpciones.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.BarraOpciones.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnNutricionista, Me.BtnAccesoVisualizacion, Me.btnNuevaNucleoNctrfor, Me.btnInsumosNctrfor, Me.btnCrearFormulaNctrfor, Me.btnAsignarFormulaNctrfor, Me.BtnVerFormulamolinocontrolformula, Me.BtnRacionesAsignadasMolinocontrolform, Me.BtnActivar, Me.BtnCancelarnutricionmodulo, Me.btnexportarNctrfor})
-        Me.BarraOpciones.Location = New System.Drawing.Point(0, 270)
-        Me.BarraOpciones.Margin = New System.Windows.Forms.Padding(3)
+        Me.BarraOpciones.Location = New System.Drawing.Point(0, 164)
+        Me.BarraOpciones.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.BarraOpciones.Name = "BarraOpciones"
-        Me.BarraOpciones.Padding = New System.Windows.Forms.Padding(0, 0, 3, 0)
-        Me.BarraOpciones.Size = New System.Drawing.Size(2120, 40)
+        Me.BarraOpciones.Padding = New System.Windows.Forms.Padding(0, 0, 2, 0)
+        Me.BarraOpciones.Size = New System.Drawing.Size(1299, 38)
         Me.BarraOpciones.TabIndex = 52
         Me.BarraOpciones.Text = "ToolStrip1"
         '
@@ -228,7 +232,7 @@ Partial Class FrmControlFormula
         Me.BtnNutricionista.Margin = New System.Windows.Forms.Padding(5)
         Me.BtnNutricionista.Name = "BtnNutricionista"
         Me.BtnNutricionista.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnNutricionista.Size = New System.Drawing.Size(168, 30)
+        Me.BtnNutricionista.Size = New System.Drawing.Size(119, 28)
         Me.BtnNutricionista.Text = "Nutricionista"
         '
         'BtnAccesoVisualizacion
@@ -240,7 +244,7 @@ Partial Class FrmControlFormula
         Me.BtnAccesoVisualizacion.Margin = New System.Windows.Forms.Padding(5)
         Me.BtnAccesoVisualizacion.Name = "BtnAccesoVisualizacion"
         Me.BtnAccesoVisualizacion.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnAccesoVisualizacion.Size = New System.Drawing.Size(270, 30)
+        Me.BtnAccesoVisualizacion.Size = New System.Drawing.Size(186, 28)
         Me.BtnAccesoVisualizacion.Text = "Ver Ración x Ubicación"
         '
         'btnNuevaNucleoNctrfor
@@ -252,7 +256,7 @@ Partial Class FrmControlFormula
         Me.btnNuevaNucleoNctrfor.Margin = New System.Windows.Forms.Padding(5)
         Me.btnNuevaNucleoNctrfor.Name = "btnNuevaNucleoNctrfor"
         Me.btnNuevaNucleoNctrfor.Padding = New System.Windows.Forms.Padding(2)
-        Me.btnNuevaNucleoNctrfor.Size = New System.Drawing.Size(263, 30)
+        Me.btnNuevaNucleoNctrfor.Size = New System.Drawing.Size(180, 28)
         Me.btnNuevaNucleoNctrfor.Text = "Mantenimiento Ración"
         '
         'btnInsumosNctrfor
@@ -264,7 +268,7 @@ Partial Class FrmControlFormula
         Me.btnInsumosNctrfor.Margin = New System.Windows.Forms.Padding(5)
         Me.btnInsumosNctrfor.Name = "btnInsumosNctrfor"
         Me.btnInsumosNctrfor.Padding = New System.Windows.Forms.Padding(2)
-        Me.btnInsumosNctrfor.Size = New System.Drawing.Size(241, 30)
+        Me.btnInsumosNctrfor.Size = New System.Drawing.Size(165, 28)
         Me.btnInsumosNctrfor.Text = "Gestión de Insumos"
         '
         'btnCrearFormulaNctrfor
@@ -276,7 +280,7 @@ Partial Class FrmControlFormula
         Me.btnCrearFormulaNctrfor.Margin = New System.Windows.Forms.Padding(5)
         Me.btnCrearFormulaNctrfor.Name = "btnCrearFormulaNctrfor"
         Me.btnCrearFormulaNctrfor.Padding = New System.Windows.Forms.Padding(2)
-        Me.btnCrearFormulaNctrfor.Size = New System.Drawing.Size(191, 30)
+        Me.btnCrearFormulaNctrfor.Size = New System.Drawing.Size(135, 28)
         Me.btnCrearFormulaNctrfor.Text = "Nueva Fórmula"
         '
         'btnAsignarFormulaNctrfor
@@ -288,7 +292,7 @@ Partial Class FrmControlFormula
         Me.btnAsignarFormulaNctrfor.Margin = New System.Windows.Forms.Padding(5)
         Me.btnAsignarFormulaNctrfor.Name = "btnAsignarFormulaNctrfor"
         Me.btnAsignarFormulaNctrfor.Padding = New System.Windows.Forms.Padding(2)
-        Me.btnAsignarFormulaNctrfor.Size = New System.Drawing.Size(116, 30)
+        Me.btnAsignarFormulaNctrfor.Size = New System.Drawing.Size(85, 28)
         Me.btnAsignarFormulaNctrfor.Text = "Asignar"
         '
         'BtnVerFormulamolinocontrolformula
@@ -300,7 +304,7 @@ Partial Class FrmControlFormula
         Me.BtnVerFormulamolinocontrolformula.Margin = New System.Windows.Forms.Padding(5)
         Me.BtnVerFormulamolinocontrolformula.Name = "BtnVerFormulamolinocontrolformula"
         Me.BtnVerFormulamolinocontrolformula.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnVerFormulamolinocontrolformula.Size = New System.Drawing.Size(189, 30)
+        Me.BtnVerFormulamolinocontrolformula.Size = New System.Drawing.Size(134, 28)
         Me.BtnVerFormulamolinocontrolformula.Text = "Fórmula/Costo"
         Me.BtnVerFormulamolinocontrolformula.ToolTipText = "Ver Fórmula"
         '
@@ -313,7 +317,7 @@ Partial Class FrmControlFormula
         Me.BtnRacionesAsignadasMolinocontrolform.Margin = New System.Windows.Forms.Padding(5)
         Me.BtnRacionesAsignadasMolinocontrolform.Name = "BtnRacionesAsignadasMolinocontrolform"
         Me.BtnRacionesAsignadasMolinocontrolform.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnRacionesAsignadasMolinocontrolform.Size = New System.Drawing.Size(240, 30)
+        Me.BtnRacionesAsignadasMolinocontrolform.Size = New System.Drawing.Size(165, 28)
         Me.BtnRacionesAsignadasMolinocontrolform.Text = "Raciones Asignadas"
         Me.BtnRacionesAsignadasMolinocontrolform.ToolTipText = "Raciones"
         '
@@ -326,7 +330,7 @@ Partial Class FrmControlFormula
         Me.BtnActivar.Margin = New System.Windows.Forms.Padding(5)
         Me.BtnActivar.Name = "BtnActivar"
         Me.BtnActivar.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnActivar.Size = New System.Drawing.Size(110, 30)
+        Me.BtnActivar.Size = New System.Drawing.Size(82, 28)
         Me.BtnActivar.Text = "Activar"
         Me.BtnActivar.ToolTipText = "Solo para activar fórmulas en estado Finalizado"
         '
@@ -339,7 +343,7 @@ Partial Class FrmControlFormula
         Me.BtnCancelarnutricionmodulo.Margin = New System.Windows.Forms.Padding(5)
         Me.BtnCancelarnutricionmodulo.Name = "BtnCancelarnutricionmodulo"
         Me.BtnCancelarnutricionmodulo.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnCancelarnutricionmodulo.Size = New System.Drawing.Size(126, 30)
+        Me.BtnCancelarnutricionmodulo.Size = New System.Drawing.Size(93, 28)
         Me.BtnCancelarnutricionmodulo.Text = "Cancelar"
         '
         'btnexportarNctrfor
@@ -351,7 +355,7 @@ Partial Class FrmControlFormula
         Me.btnexportarNctrfor.Margin = New System.Windows.Forms.Padding(5)
         Me.btnexportarNctrfor.Name = "btnexportarNctrfor"
         Me.btnexportarNctrfor.Padding = New System.Windows.Forms.Padding(2)
-        Me.btnexportarNctrfor.Size = New System.Drawing.Size(125, 30)
+        Me.btnexportarNctrfor.Size = New System.Drawing.Size(92, 28)
         Me.btnexportarNctrfor.Text = "Exportar"
         Me.btnexportarNctrfor.ToolTipText = "Exportar"
         '
@@ -425,10 +429,9 @@ Partial Class FrmControlFormula
         Me.dtgListado.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy
         Me.dtgListado.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dtgListado.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dtgListado.Location = New System.Drawing.Point(0, 310)
-        Me.dtgListado.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.dtgListado.Location = New System.Drawing.Point(0, 202)
         Me.dtgListado.Name = "dtgListado"
-        Me.dtgListado.Size = New System.Drawing.Size(2120, 512)
+        Me.dtgListado.Size = New System.Drawing.Size(1299, 332)
         Me.dtgListado.TabIndex = 10
         Me.dtgListado.Text = "UltraGrid1"
         '
@@ -439,10 +442,9 @@ Partial Class FrmControlFormula
         '
         Me.Ptbx_Cargando.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Ptbx_Cargando.Image = Global.Formularios.My.Resources.Resources.loader
-        Me.Ptbx_Cargando.Location = New System.Drawing.Point(1005, 545)
-        Me.Ptbx_Cargando.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Ptbx_Cargando.Location = New System.Drawing.Point(678, 354)
         Me.Ptbx_Cargando.Name = "Ptbx_Cargando"
-        Me.Ptbx_Cargando.Size = New System.Drawing.Size(64, 57)
+        Me.Ptbx_Cargando.Size = New System.Drawing.Size(43, 37)
         Me.Ptbx_Cargando.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.Ptbx_Cargando.TabIndex = 27
         Me.Ptbx_Cargando.TabStop = False
@@ -450,12 +452,13 @@ Partial Class FrmControlFormula
         '
         'FrmControlFormula
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(2120, 822)
+        Me.ClientSize = New System.Drawing.Size(1299, 534)
         Me.Controls.Add(Me.Ptbx_Cargando)
         Me.Controls.Add(Me.dtgListado)
         Me.Controls.Add(Me.Panel2)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "FrmControlFormula"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "CONTROL DE FORMULAS"

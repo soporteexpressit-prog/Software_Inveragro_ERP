@@ -133,8 +133,12 @@ Public Class FrmControlFormula
     End Sub
 
     Private Sub btnNuevaNucleo_Click(sender As Object, e As EventArgs) Handles btnNuevaNucleoNctrfor.Click
-        Dim f As New FrmMantNucleo
-        f.ShowDialog()
+        Try
+            Dim f As New FrmMantNucleo
+            f.ShowDialog()
+        Catch ex As Exception
+            clsBasicas.controlException(Name, ex)
+        End Try
     End Sub
 
     Private Sub btnAsignarFormula_Click(sender As Object, e As EventArgs) Handles btnAsignarFormulaNctrfor.Click
