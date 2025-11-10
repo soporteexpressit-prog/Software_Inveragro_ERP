@@ -78,6 +78,7 @@ Partial Class FrmControlAlimentoCerda
         Me.dtgListado = New Infragistics.Win.UltraWinGrid.UltraGrid()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         Me.Ptbx_Cargando = New System.Windows.Forms.PictureBox()
+        Me.BtnModificarCampaña = New System.Windows.Forms.ToolStripButton()
         Me.Panel1.SuspendLayout()
         Me.GrupoFiltros.SuspendLayout()
         CType(Me.CmbUbicacion, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -94,9 +95,9 @@ Partial Class FrmControlAlimentoCerda
         Me.Panel1.Controls.Add(Me.BarraOpciones)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(2, 1, 2, 1)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(2022, 325)
+        Me.Panel1.Size = New System.Drawing.Size(1283, 211)
         Me.Panel1.TabIndex = 17
         '
         'Label6
@@ -105,9 +106,10 @@ Partial Class FrmControlAlimentoCerda
         Me.Label6.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(233, Byte), Integer))
         Me.Label6.Font = New System.Drawing.Font("Verdana", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(49, Byte), Integer))
-        Me.Label6.Location = New System.Drawing.Point(28, 35)
+        Me.Label6.Location = New System.Drawing.Point(19, 23)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(650, 29)
+        Me.Label6.Size = New System.Drawing.Size(433, 18)
         Me.Label6.TabIndex = 128
         Me.Label6.Text = "CONTROL DE SALIDA DE ALIMENTO DE CERDOS"
         '
@@ -122,9 +124,11 @@ Partial Class FrmControlAlimentoCerda
         Me.GrupoFiltros.Controls.Add(Me.Label7)
         Me.GrupoFiltros.Controls.Add(Me.Label9)
         Me.GrupoFiltros.Controls.Add(Me.dtpFechaHasta)
-        Me.GrupoFiltros.Location = New System.Drawing.Point(34, 89)
+        Me.GrupoFiltros.Location = New System.Drawing.Point(23, 58)
+        Me.GrupoFiltros.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GrupoFiltros.Name = "GrupoFiltros"
-        Me.GrupoFiltros.Size = New System.Drawing.Size(1691, 160)
+        Me.GrupoFiltros.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GrupoFiltros.Size = New System.Drawing.Size(1127, 104)
         Me.GrupoFiltros.TabIndex = 179
         Me.GrupoFiltros.TabStop = False
         Me.GrupoFiltros.Text = "Filtros de Búsqueda"
@@ -135,10 +139,9 @@ Partial Class FrmControlAlimentoCerda
         Me.CmbEstado.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CmbEstado.FormattingEnabled = True
         Me.CmbEstado.Items.AddRange(New Object() {"ACTIVO", "ANULADO"})
-        Me.CmbEstado.Location = New System.Drawing.Point(975, 102)
-        Me.CmbEstado.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.CmbEstado.Location = New System.Drawing.Point(650, 66)
         Me.CmbEstado.Name = "CmbEstado"
-        Me.CmbEstado.Size = New System.Drawing.Size(164, 28)
+        Me.CmbEstado.Size = New System.Drawing.Size(111, 21)
         Me.CmbEstado.TabIndex = 180
         '
         'Label1
@@ -147,10 +150,10 @@ Partial Class FrmControlAlimentoCerda
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(872, 105)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label1.Location = New System.Drawing.Point(581, 68)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(91, 22)
+        Me.Label1.Size = New System.Drawing.Size(60, 14)
         Me.Label1.TabIndex = 179
         Me.Label1.Text = "Estado :"
         '
@@ -160,11 +163,10 @@ Partial Class FrmControlAlimentoCerda
         Me.BtnBuscar.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnBuscar.Image = CType(resources.GetObject("BtnBuscar.Image"), System.Drawing.Image)
         Me.BtnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnBuscar.Location = New System.Drawing.Point(1458, 66)
-        Me.BtnBuscar.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.BtnBuscar.Location = New System.Drawing.Point(972, 43)
         Me.BtnBuscar.Name = "BtnBuscar"
-        Me.BtnBuscar.Padding = New System.Windows.Forms.Padding(6, 0, 6, 0)
-        Me.BtnBuscar.Size = New System.Drawing.Size(138, 63)
+        Me.BtnBuscar.Padding = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.BtnBuscar.Size = New System.Drawing.Size(92, 41)
         Me.BtnBuscar.TabIndex = 174
         Me.BtnBuscar.Text = "Buscar"
         Me.BtnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -176,20 +178,19 @@ Partial Class FrmControlAlimentoCerda
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(870, 43)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label2.Location = New System.Drawing.Point(580, 28)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(93, 22)
+        Me.Label2.Size = New System.Drawing.Size(62, 14)
         Me.Label2.TabIndex = 178
         Me.Label2.Text = "Plantel :"
         '
         'dtpFechaDesde
         '
         Me.dtpFechaDesde.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dtpFechaDesde.Location = New System.Drawing.Point(334, 40)
-        Me.dtpFechaDesde.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.dtpFechaDesde.Location = New System.Drawing.Point(223, 26)
         Me.dtpFechaDesde.Name = "dtpFechaDesde"
-        Me.dtpFechaDesde.Size = New System.Drawing.Size(358, 28)
+        Me.dtpFechaDesde.Size = New System.Drawing.Size(240, 21)
         Me.dtpFechaDesde.TabIndex = 170
         '
         'CmbUbicacion
@@ -249,10 +250,9 @@ Partial Class FrmControlAlimentoCerda
         Me.CmbUbicacion.DisplayLayout.ScrollStyle = Infragistics.Win.UltraWinGrid.ScrollStyle.Immediate
         Me.CmbUbicacion.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy
         Me.CmbUbicacion.DropDownStyle = Infragistics.Win.UltraWinGrid.UltraComboStyle.DropDownList
-        Me.CmbUbicacion.Location = New System.Drawing.Point(975, 43)
-        Me.CmbUbicacion.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.CmbUbicacion.Location = New System.Drawing.Point(650, 28)
         Me.CmbUbicacion.Name = "CmbUbicacion"
-        Me.CmbUbicacion.Size = New System.Drawing.Size(267, 29)
+        Me.CmbUbicacion.Size = New System.Drawing.Size(178, 22)
         Me.CmbUbicacion.TabIndex = 177
         '
         'Label7
@@ -261,10 +261,10 @@ Partial Class FrmControlAlimentoCerda
         Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label7.Location = New System.Drawing.Point(68, 43)
-        Me.Label7.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label7.Location = New System.Drawing.Point(45, 28)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(243, 22)
+        Me.Label7.Size = New System.Drawing.Size(159, 14)
         Me.Label7.TabIndex = 172
         Me.Label7.Text = "Fecha Registro Desde :"
         '
@@ -274,20 +274,19 @@ Partial Class FrmControlAlimentoCerda
         Me.Label9.BackColor = System.Drawing.Color.Transparent
         Me.Label9.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label9.Location = New System.Drawing.Point(74, 108)
-        Me.Label9.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label9.Location = New System.Drawing.Point(49, 70)
+        Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(238, 22)
+        Me.Label9.Size = New System.Drawing.Size(156, 14)
         Me.Label9.TabIndex = 173
         Me.Label9.Text = "Fecha Registro Hasta :"
         '
         'dtpFechaHasta
         '
         Me.dtpFechaHasta.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dtpFechaHasta.Location = New System.Drawing.Point(334, 102)
-        Me.dtpFechaHasta.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.dtpFechaHasta.Location = New System.Drawing.Point(223, 66)
         Me.dtpFechaHasta.Name = "dtpFechaHasta"
-        Me.dtpFechaHasta.Size = New System.Drawing.Size(358, 28)
+        Me.dtpFechaHasta.Size = New System.Drawing.Size(240, 21)
         Me.dtpFechaHasta.TabIndex = 171
         '
         'BarraOpciones
@@ -296,12 +295,12 @@ Partial Class FrmControlAlimentoCerda
         Me.BarraOpciones.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.BarraOpciones.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
         Me.BarraOpciones.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.BarraOpciones.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnNuevoNutricionSaalice, Me.BtnAnularNutricionSaalice, Me.BtnPermisoVisualizacion, Me.BtnExportarNutricionSaalice, Me.BtnCerrar, Me.btnreporteRrhhctrlcapaci, Me.ToolStripDropDownButton1})
-        Me.BarraOpciones.Location = New System.Drawing.Point(0, 285)
-        Me.BarraOpciones.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.BarraOpciones.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnNuevoNutricionSaalice, Me.BtnAnularNutricionSaalice, Me.BtnPermisoVisualizacion, Me.BtnExportarNutricionSaalice, Me.BtnModificarCampaña, Me.BtnCerrar, Me.btnreporteRrhhctrlcapaci, Me.ToolStripDropDownButton1})
+        Me.BarraOpciones.Location = New System.Drawing.Point(0, 173)
+        Me.BarraOpciones.Margin = New System.Windows.Forms.Padding(2, 1, 2, 1)
         Me.BarraOpciones.Name = "BarraOpciones"
-        Me.BarraOpciones.Padding = New System.Windows.Forms.Padding(0, 0, 3, 0)
-        Me.BarraOpciones.Size = New System.Drawing.Size(2022, 40)
+        Me.BarraOpciones.Padding = New System.Windows.Forms.Padding(0, 0, 2, 0)
+        Me.BarraOpciones.Size = New System.Drawing.Size(1283, 38)
         Me.BarraOpciones.TabIndex = 52
         Me.BarraOpciones.Text = "Monitoreo"
         '
@@ -314,7 +313,7 @@ Partial Class FrmControlAlimentoCerda
         Me.BtnNuevoNutricionSaalice.Margin = New System.Windows.Forms.Padding(5)
         Me.BtnNuevoNutricionSaalice.Name = "BtnNuevoNutricionSaalice"
         Me.BtnNuevoNutricionSaalice.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnNuevoNutricionSaalice.Size = New System.Drawing.Size(102, 30)
+        Me.BtnNuevoNutricionSaalice.Size = New System.Drawing.Size(77, 28)
         Me.BtnNuevoNutricionSaalice.Text = "Nuevo"
         Me.BtnNuevoNutricionSaalice.ToolTipText = "Nuevo"
         '
@@ -327,7 +326,7 @@ Partial Class FrmControlAlimentoCerda
         Me.BtnAnularNutricionSaalice.Margin = New System.Windows.Forms.Padding(5)
         Me.BtnAnularNutricionSaalice.Name = "BtnAnularNutricionSaalice"
         Me.BtnAnularNutricionSaalice.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnAnularNutricionSaalice.Size = New System.Drawing.Size(105, 30)
+        Me.BtnAnularNutricionSaalice.Size = New System.Drawing.Size(78, 28)
         Me.BtnAnularNutricionSaalice.Text = "Anular"
         Me.BtnAnularNutricionSaalice.ToolTipText = "Exportar"
         '
@@ -340,7 +339,7 @@ Partial Class FrmControlAlimentoCerda
         Me.BtnPermisoVisualizacion.Margin = New System.Windows.Forms.Padding(5)
         Me.BtnPermisoVisualizacion.Name = "BtnPermisoVisualizacion"
         Me.BtnPermisoVisualizacion.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnPermisoVisualizacion.Size = New System.Drawing.Size(245, 30)
+        Me.BtnPermisoVisualizacion.Size = New System.Drawing.Size(169, 28)
         Me.BtnPermisoVisualizacion.Text = "Ver Ali. Presupuesto"
         Me.BtnPermisoVisualizacion.ToolTipText = "Exportar"
         '
@@ -353,7 +352,7 @@ Partial Class FrmControlAlimentoCerda
         Me.BtnExportarNutricionSaalice.Margin = New System.Windows.Forms.Padding(5)
         Me.BtnExportarNutricionSaalice.Name = "BtnExportarNutricionSaalice"
         Me.BtnExportarNutricionSaalice.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnExportarNutricionSaalice.Size = New System.Drawing.Size(125, 30)
+        Me.BtnExportarNutricionSaalice.Size = New System.Drawing.Size(92, 28)
         Me.BtnExportarNutricionSaalice.Text = "Exportar"
         Me.BtnExportarNutricionSaalice.ToolTipText = "Exportar"
         '
@@ -366,7 +365,7 @@ Partial Class FrmControlAlimentoCerda
         Me.BtnCerrar.Margin = New System.Windows.Forms.Padding(5)
         Me.BtnCerrar.Name = "BtnCerrar"
         Me.BtnCerrar.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnCerrar.Size = New System.Drawing.Size(84, 30)
+        Me.BtnCerrar.Size = New System.Drawing.Size(66, 28)
         Me.BtnCerrar.Text = "Salir"
         '
         'btnreporteRrhhctrlcapaci
@@ -379,25 +378,25 @@ Partial Class FrmControlAlimentoCerda
         Me.btnreporteRrhhctrlcapaci.Margin = New System.Windows.Forms.Padding(5)
         Me.btnreporteRrhhctrlcapaci.Name = "btnreporteRrhhctrlcapaci"
         Me.btnreporteRrhhctrlcapaci.Padding = New System.Windows.Forms.Padding(2)
-        Me.btnreporteRrhhctrlcapaci.Size = New System.Drawing.Size(143, 30)
+        Me.btnreporteRrhhctrlcapaci.Size = New System.Drawing.Size(103, 28)
         Me.btnreporteRrhhctrlcapaci.Text = "Reportes"
         '
         'BtnReporteAlimentovsMolino
         '
         Me.BtnReporteAlimentovsMolino.Name = "BtnReporteAlimentovsMolino"
-        Me.BtnReporteAlimentovsMolino.Size = New System.Drawing.Size(533, 34)
+        Me.BtnReporteAlimentovsMolino.Size = New System.Drawing.Size(347, 22)
         Me.BtnReporteAlimentovsMolino.Text = "Alimento vs Molino"
         '
         'BtnReportePresupuestoAlimenticio
         '
         Me.BtnReportePresupuestoAlimenticio.Name = "BtnReportePresupuestoAlimenticio"
-        Me.BtnReportePresupuestoAlimenticio.Size = New System.Drawing.Size(533, 34)
+        Me.BtnReportePresupuestoAlimenticio.Size = New System.Drawing.Size(347, 22)
         Me.BtnReportePresupuestoAlimenticio.Text = "Cumplimiento de Presupuesto Alimenticio"
         '
         'BtnReporteConsumoDiario
         '
         Me.BtnReporteConsumoDiario.Name = "BtnReporteConsumoDiario"
-        Me.BtnReporteConsumoDiario.Size = New System.Drawing.Size(533, 34)
+        Me.BtnReporteConsumoDiario.Size = New System.Drawing.Size(347, 22)
         Me.BtnReporteConsumoDiario.Text = "Consumo Diario"
         '
         'ToolStripDropDownButton1
@@ -410,19 +409,19 @@ Partial Class FrmControlAlimentoCerda
         Me.ToolStripDropDownButton1.Margin = New System.Windows.Forms.Padding(5)
         Me.ToolStripDropDownButton1.Name = "ToolStripDropDownButton1"
         Me.ToolStripDropDownButton1.Padding = New System.Windows.Forms.Padding(2)
-        Me.ToolStripDropDownButton1.Size = New System.Drawing.Size(335, 30)
+        Me.ToolStripDropDownButton1.Size = New System.Drawing.Size(227, 28)
         Me.ToolStripDropDownButton1.Text = "Alimentación y Presupuesto"
         '
         'BtnGenerarGrupos
         '
         Me.BtnGenerarGrupos.Name = "BtnGenerarGrupos"
-        Me.BtnGenerarGrupos.Size = New System.Drawing.Size(271, 34)
+        Me.BtnGenerarGrupos.Size = New System.Drawing.Size(179, 22)
         Me.BtnGenerarGrupos.Text = "Generar Grupos"
         '
         'BtnVerPresupuesto
         '
         Me.BtnVerPresupuesto.Name = "BtnVerPresupuesto"
-        Me.BtnVerPresupuesto.Size = New System.Drawing.Size(271, 34)
+        Me.BtnVerPresupuesto.Size = New System.Drawing.Size(179, 22)
         Me.BtnVerPresupuesto.Text = "Presupuesto"
         '
         'dtgListado
@@ -497,10 +496,9 @@ Partial Class FrmControlAlimentoCerda
         Me.dtgListado.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy
         Me.dtgListado.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dtgListado.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dtgListado.Location = New System.Drawing.Point(0, 325)
-        Me.dtgListado.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.dtgListado.Location = New System.Drawing.Point(0, 211)
         Me.dtgListado.Name = "dtgListado"
-        Me.dtgListado.Size = New System.Drawing.Size(2022, 537)
+        Me.dtgListado.Size = New System.Drawing.Size(1283, 349)
         Me.dtgListado.TabIndex = 32
         Me.dtgListado.Text = "UltraGrid1"
         '
@@ -511,24 +509,34 @@ Partial Class FrmControlAlimentoCerda
         '
         Me.Ptbx_Cargando.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Ptbx_Cargando.Image = CType(resources.GetObject("Ptbx_Cargando.Image"), System.Drawing.Image)
-        Me.Ptbx_Cargando.Location = New System.Drawing.Point(981, 468)
-        Me.Ptbx_Cargando.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Ptbx_Cargando.Location = New System.Drawing.Point(654, 304)
         Me.Ptbx_Cargando.Name = "Ptbx_Cargando"
-        Me.Ptbx_Cargando.Size = New System.Drawing.Size(64, 57)
+        Me.Ptbx_Cargando.Size = New System.Drawing.Size(43, 37)
         Me.Ptbx_Cargando.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.Ptbx_Cargando.TabIndex = 33
         Me.Ptbx_Cargando.TabStop = False
         Me.Ptbx_Cargando.Visible = False
         '
+        'BtnModificarCampaña
+        '
+        Me.BtnModificarCampaña.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnModificarCampaña.ForeColor = System.Drawing.Color.White
+        Me.BtnModificarCampaña.Image = Global.Formularios.My.Resources.Resources.registro
+        Me.BtnModificarCampaña.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BtnModificarCampaña.Margin = New System.Windows.Forms.Padding(5)
+        Me.BtnModificarCampaña.Name = "BtnModificarCampaña"
+        Me.BtnModificarCampaña.Padding = New System.Windows.Forms.Padding(2)
+        Me.BtnModificarCampaña.Size = New System.Drawing.Size(161, 28)
+        Me.BtnModificarCampaña.Text = "Modificar Campaña"
+        '
         'FrmControlAlimentoCerda
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(2022, 862)
+        Me.ClientSize = New System.Drawing.Size(1283, 560)
         Me.Controls.Add(Me.Ptbx_Cargando)
         Me.Controls.Add(Me.dtgListado)
         Me.Controls.Add(Me.Panel1)
-        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "FrmControlAlimentoCerda"
@@ -575,4 +583,5 @@ Partial Class FrmControlAlimentoCerda
     Friend WithEvents ToolStripDropDownButton1 As ToolStripDropDownButton
     Friend WithEvents BtnGenerarGrupos As ToolStripMenuItem
     Friend WithEvents BtnVerPresupuesto As ToolStripMenuItem
+    Friend WithEvents BtnModificarCampaña As ToolStripButton
 End Class

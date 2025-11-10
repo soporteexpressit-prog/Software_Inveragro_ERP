@@ -82,6 +82,7 @@ Public Class FrmControlPedidoAlimento
             Dim relation1 As New DataRelation("tb_relacion1", ds.Tables(0).Columns(0), ds.Tables(1).Columns(0), False)
             ds.Relations.Add(relation1)
             ds.Tables(0).Columns(0).ColumnMapping = MappingType.Hidden
+            ds.Tables(0).Columns("idUbicacion").ColumnMapping = MappingType.Hidden
             ds.Tables(1).Columns(0).ColumnMapping = MappingType.Hidden
             ds.Tables(1).Columns(1).ColumnMapping = MappingType.Hidden
             e.Result = ds
@@ -271,7 +272,35 @@ Public Class FrmControlPedidoAlimento
         End Try
     End Sub
 
+    Private Sub BtnModificarCampaña_Click(sender As Object, e As EventArgs) Handles BtnModificarCampaña.Click
+        Dim activeRow As Infragistics.Win.UltraWinGrid.UltraGridRow = dtgListado.ActiveRow
+        If (dtgListado.Rows.Count > 0) Then
+            If (activeRow.Cells(0).Value.ToString.Length <> 0) Then
+                If activeRow.Band.Index = 0 Then
+                    Dim idUbicacion As Integer = Convert.ToInt32(activeRow.Cells("idUbicacion").Value)
+                    Dim valorPlantel As String = activeRow.Cells("Destino").Value.ToString()
+                    Dim idPedido As Integer = Convert.ToInt32(activeRow.Cells(0).Value)
+
+                    Dim f As New FrmModificarCampaña With {
+                        .idUbicacion = idUbicacion,
+                        .valorPlantel = valorPlantel,
+                        .idPedido = idPedido
+                    }
+                    f.ShowDialog()
+                    Consultar()
+                Else
+                    msj_advert(MensajesSistema.mensajesGenerales("SELECCION_FILA_CONTENEDOR"))
+                End If
+            Else
+                msj_advert(MensajesSistema.mensajesGenerales("SELECCIONE_REGISTRO"))
+            End If
+        Else
+            msj_advert(MensajesSistema.mensajesGenerales("SELECCIONE_REGISTRO"))
+        End If
+    End Sub
+
     Private Sub btncerrar_Click(sender As Object, e As EventArgs) Handles btncerrar.Click
         Dispose()
     End Sub
+
 End Class

@@ -164,4 +164,42 @@ Public Class FrmControlAlimento
     Private Sub btncerrar_Click(sender As Object, e As EventArgs) Handles btncerrar.Click
         Dispose()
     End Sub
+
+    Private Sub btnAsignarUnidadesMedida_Click(sender As Object, e As EventArgs) Handles btnAsignarUnidadesMedida.Click
+        Try
+            Dim frm As New FrmAsignarUnidadesMedida
+            frm.ShowDialog()
+            Consultar()
+        Catch ex As Exception
+            clsBasicas.controlException(Name, ex)
+        End Try
+    End Sub
+
+    Private Sub BtnEditarUnidadMedida_Click(sender As Object, e As EventArgs) Handles BtnEditarUnidadMedida.Click
+        Try
+            Dim activeRow As UltraWinGrid.UltraGridRow = dtgListado.ActiveRow
+            If (dtgListado.Rows.Count > 0) Then
+                If (activeRow.Cells(0).Value.ToString.Length <> 0) Then
+                    Dim idProducto As String = activeRow.Cells(0).Value.ToString
+                    Dim nombreProducto As String = activeRow.Cells(1).Value.ToString
+                    Dim presentacion As String = activeRow.Cells(5).Value.ToString
+
+                    Dim frm As New FrmAsignarUnidadesMedida With {
+                        .operacion = 1,
+                        .idProducto = idProducto,
+                        .producto = nombreProducto,
+                        .presentacion = presentacion
+                    }
+                    frm.ShowDialog()
+                    Consultar()
+                Else
+                    msj_advert(MensajesSistema.mensajesGenerales("SELECCIONE_REGISTRO"))
+                End If
+            Else
+                msj_advert(MensajesSistema.mensajesGenerales("SELECCIONE_REGISTRO"))
+            End If
+        Catch ex As Exception
+            clsBasicas.controlException(Name, ex)
+        End Try
+    End Sub
 End Class

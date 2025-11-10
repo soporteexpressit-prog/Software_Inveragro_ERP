@@ -43,12 +43,13 @@ Partial Class FrmControlCampaña
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
+        Me.dtgListado = New Infragistics.Win.UltraWinGrid.UltraGrid()
+        Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
+        Me.Ptbx_Cargando = New System.Windows.Forms.PictureBox()
         Me.BtnExportar = New System.Windows.Forms.ToolStripButton()
+        Me.BtnFinalizarVenta = New System.Windows.Forms.ToolStripButton()
         Me.BtnCerrar = New System.Windows.Forms.ToolStripButton()
         Me.BtnReporteEngorde = New System.Windows.Forms.ToolStripButton()
-        Me.dtgListado = New Infragistics.Win.UltraWinGrid.UltraGrid()
-        Me.Ptbx_Cargando = New System.Windows.Forms.PictureBox()
-        Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         Me.Panel2.SuspendLayout()
         Me.GrupoFiltros.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
@@ -124,7 +125,7 @@ Partial Class FrmControlCampaña
         Me.ToolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.ToolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
         Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnExportar, Me.BtnCerrar, Me.BtnReporteEngorde})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnExportar, Me.BtnFinalizarVenta, Me.BtnCerrar, Me.BtnReporteEngorde})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 149)
         Me.ToolStrip1.Margin = New System.Windows.Forms.Padding(2, 1, 2, 1)
         Me.ToolStrip1.Name = "ToolStrip1"
@@ -132,45 +133,6 @@ Partial Class FrmControlCampaña
         Me.ToolStrip1.Size = New System.Drawing.Size(1131, 38)
         Me.ToolStrip1.TabIndex = 52
         Me.ToolStrip1.Text = "ToolStrip1"
-        '
-        'BtnExportar
-        '
-        Me.BtnExportar.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnExportar.ForeColor = System.Drawing.Color.White
-        Me.BtnExportar.Image = Global.Formularios.My.Resources.Resources.exportar2
-        Me.BtnExportar.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.BtnExportar.Margin = New System.Windows.Forms.Padding(5)
-        Me.BtnExportar.Name = "BtnExportar"
-        Me.BtnExportar.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnExportar.Size = New System.Drawing.Size(92, 28)
-        Me.BtnExportar.Text = "Exportar"
-        Me.BtnExportar.ToolTipText = "Exportar"
-        '
-        'BtnCerrar
-        '
-        Me.BtnCerrar.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnCerrar.ForeColor = System.Drawing.Color.White
-        Me.BtnCerrar.Image = Global.Formularios.My.Resources.Resources.salir
-        Me.BtnCerrar.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.BtnCerrar.Margin = New System.Windows.Forms.Padding(5)
-        Me.BtnCerrar.Name = "BtnCerrar"
-        Me.BtnCerrar.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnCerrar.Size = New System.Drawing.Size(66, 28)
-        Me.BtnCerrar.Text = "Salir"
-        '
-        'BtnReporteEngorde
-        '
-        Me.BtnReporteEngorde.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.BtnReporteEngorde.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.BtnReporteEngorde.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnReporteEngorde.ForeColor = System.Drawing.Color.White
-        Me.BtnReporteEngorde.Image = Global.Formularios.My.Resources.Resources.Reporte_24_px
-        Me.BtnReporteEngorde.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.BtnReporteEngorde.Margin = New System.Windows.Forms.Padding(5)
-        Me.BtnReporteEngorde.Name = "BtnReporteEngorde"
-        Me.BtnReporteEngorde.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnReporteEngorde.Size = New System.Drawing.Size(145, 28)
-        Me.BtnReporteEngorde.Text = "Reporte Engorde"
         '
         'dtgListado
         '
@@ -250,6 +212,9 @@ Partial Class FrmControlCampaña
         Me.dtgListado.TabIndex = 29
         Me.dtgListado.Text = "UltraGrid1"
         '
+        'BackgroundWorker1
+        '
+        '
         'Ptbx_Cargando
         '
         Me.Ptbx_Cargando.Anchor = System.Windows.Forms.AnchorStyles.None
@@ -262,8 +227,57 @@ Partial Class FrmControlCampaña
         Me.Ptbx_Cargando.TabStop = False
         Me.Ptbx_Cargando.Visible = False
         '
-        'BackgroundWorker1
+        'BtnExportar
         '
+        Me.BtnExportar.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnExportar.ForeColor = System.Drawing.Color.White
+        Me.BtnExportar.Image = Global.Formularios.My.Resources.Resources.exportar2
+        Me.BtnExportar.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BtnExportar.Margin = New System.Windows.Forms.Padding(5)
+        Me.BtnExportar.Name = "BtnExportar"
+        Me.BtnExportar.Padding = New System.Windows.Forms.Padding(2)
+        Me.BtnExportar.Size = New System.Drawing.Size(92, 28)
+        Me.BtnExportar.Text = "Exportar"
+        Me.BtnExportar.ToolTipText = "Exportar"
+        '
+        'BtnFinalizarVenta
+        '
+        Me.BtnFinalizarVenta.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnFinalizarVenta.ForeColor = System.Drawing.Color.White
+        Me.BtnFinalizarVenta.Image = Global.Formularios.My.Resources.Resources.fin__1_
+        Me.BtnFinalizarVenta.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BtnFinalizarVenta.Margin = New System.Windows.Forms.Padding(5)
+        Me.BtnFinalizarVenta.Name = "BtnFinalizarVenta"
+        Me.BtnFinalizarVenta.Padding = New System.Windows.Forms.Padding(2)
+        Me.BtnFinalizarVenta.Size = New System.Drawing.Size(134, 28)
+        Me.BtnFinalizarVenta.Text = "Finalizar Venta"
+        Me.BtnFinalizarVenta.ToolTipText = "Finalizar Venta"
+        '
+        'BtnCerrar
+        '
+        Me.BtnCerrar.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnCerrar.ForeColor = System.Drawing.Color.White
+        Me.BtnCerrar.Image = Global.Formularios.My.Resources.Resources.salir
+        Me.BtnCerrar.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BtnCerrar.Margin = New System.Windows.Forms.Padding(5)
+        Me.BtnCerrar.Name = "BtnCerrar"
+        Me.BtnCerrar.Padding = New System.Windows.Forms.Padding(2)
+        Me.BtnCerrar.Size = New System.Drawing.Size(66, 28)
+        Me.BtnCerrar.Text = "Salir"
+        '
+        'BtnReporteEngorde
+        '
+        Me.BtnReporteEngorde.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.BtnReporteEngorde.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.BtnReporteEngorde.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnReporteEngorde.ForeColor = System.Drawing.Color.White
+        Me.BtnReporteEngorde.Image = Global.Formularios.My.Resources.Resources.Reporte_24_px
+        Me.BtnReporteEngorde.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BtnReporteEngorde.Margin = New System.Windows.Forms.Padding(5)
+        Me.BtnReporteEngorde.Name = "BtnReporteEngorde"
+        Me.BtnReporteEngorde.Padding = New System.Windows.Forms.Padding(2)
+        Me.BtnReporteEngorde.Size = New System.Drawing.Size(145, 28)
+        Me.BtnReporteEngorde.Text = "Reporte Engorde"
         '
         'FrmControlCampaña
         '
@@ -303,4 +317,5 @@ Partial Class FrmControlCampaña
     Friend WithEvents Label3 As Label
     Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
     Friend WithEvents GrupoFiltros As GroupBox
+    Friend WithEvents BtnFinalizarVenta As ToolStripButton
 End Class

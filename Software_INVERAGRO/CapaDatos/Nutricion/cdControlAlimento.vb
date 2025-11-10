@@ -887,4 +887,30 @@ Public Class cdControlAlimento
         con.Salir()
         Return dt
     End Function
+
+    Public Function Cd_ModificarCampañaPedido(name As String, obj As coControlAlimento) As String
+        Dim mensaje As String
+        Dim cmd As New SqlCommand(name, con.con)
+        Try
+            con.Abrir()
+            cmd.CommandType = CommandType.StoredProcedure
+
+            With cmd.Parameters
+                .AddWithValue("@idSalida", SqlDbType.Int).Value = obj.Codigo
+                .AddWithValue("@idCampaña", SqlDbType.Int).Value = obj.IdCampana
+                .Add("@msj", SqlDbType.VarChar, 100).Direction = 2
+                .Add("@coderror", SqlDbType.Int).Direction = 2
+            End With
+
+            cmd.ExecuteNonQuery()
+
+            mensaje = cmd.Parameters("@msj").Value.ToString()
+            obj.Coderror = Convert.ToInt32(cmd.Parameters("@coderror").Value)
+
+            con.Salir()
+            Return mensaje
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Function
 End Class

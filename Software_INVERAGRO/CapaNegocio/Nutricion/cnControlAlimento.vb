@@ -197,4 +197,8 @@ Public Class cnControlAlimento
     Public Function Cn_ReporteSemanalPedidoAlimento(obj As coControlAlimento) As DataTable
         Return cls_at.Cd_ReporteSemanalPedidoAlimento("[w_pa_reporte_semanal_pedidos_alimento_consolidado]", obj)
     End Function
+
+    Public Function Cn_ModificarCampañaPedido(ByRef obj As coControlAlimento) As String
+        Return cls_at.Cd_ModificarCampañaPedido("[w_pa_modificar_campaña_pedido]", obj)
+    End Function
 End Class

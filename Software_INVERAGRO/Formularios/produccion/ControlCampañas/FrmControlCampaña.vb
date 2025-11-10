@@ -1,4 +1,5 @@
-﻿Imports CapaNegocio
+﻿Imports CapaDatos
+Imports CapaNegocio
 Imports CapaObjetos
 Imports Infragistics.Win
 
@@ -126,6 +127,31 @@ Public Class FrmControlCampaña
         Else
             msj_advert(MensajesSistema.mensajesGenerales("SELECCIONE_REGISTRO"))
         End If
+    End Sub
+
+    Private Sub BtnFinalizarVenta_Click(sender As Object, e As EventArgs) Handles BtnFinalizarVenta.Click
+        Try
+            Dim activeRow As UltraWinGrid.UltraGridRow = dtgListado.ActiveRow
+            If (dtgListado.Rows.Count > 0) Then
+                If (activeRow.Cells(0).Value.ToString.Length <> 0) Then
+                    Dim idCampaña As Integer = dtgListado.ActiveRow.Cells("idcampaña").Value
+                    Dim nombrePlantel As String = dtgListado.ActiveRow.Cells("Plantel").Value
+
+                    Dim frm As New FrmFinalizarVenta With {
+                        .idCampaña = idCampaña,
+                        .nombrePlantel = nombrePlantel
+                    }
+                    frm.ShowDialog()
+                    Consultar()
+                Else
+                    msj_advert(MensajesSistema.mensajesGenerales("SELECCIONE_REGISTRO"))
+                End If
+            Else
+                msj_advert(MensajesSistema.mensajesGenerales("SELECCIONE_REGISTRO"))
+            End If
+        Catch ex As Exception
+            clsBasicas.controlException(Name, ex)
+        End Try
     End Sub
 
     Private Sub BtnCerrar_Click(sender As Object, e As EventArgs) Handles BtnCerrar.Click

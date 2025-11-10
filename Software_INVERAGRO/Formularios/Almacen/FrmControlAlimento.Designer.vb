@@ -41,8 +41,11 @@ Partial Class FrmControlAlimento
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.BtnKardexAlmacenali = New System.Windows.Forms.ToolStripButton()
         Me.btnConsolidadoalmacenali = New System.Windows.Forms.ToolStripButton()
+        Me.BtnVerFormula = New System.Windows.Forms.ToolStripButton()
         Me.BtnPedidoAlimentoalmacenali = New System.Windows.Forms.ToolStripButton()
         Me.btnExportaralmacenali = New System.Windows.Forms.ToolStripButton()
+        Me.btnAsignarUnidadesMedida = New System.Windows.Forms.ToolStripButton()
+        Me.BtnEditarUnidadMedida = New System.Windows.Forms.ToolStripButton()
         Me.btncerrar = New System.Windows.Forms.ToolStripButton()
         Me.btnreporteRrhhctrlcapaci = New System.Windows.Forms.ToolStripDropDownButton()
         Me.BtnReporteAnual = New System.Windows.Forms.ToolStripMenuItem()
@@ -56,7 +59,6 @@ Partial Class FrmControlAlimento
         Me.dtgListado = New Infragistics.Win.UltraWinGrid.UltraGrid()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         Me.Ptbx_Cargando = New System.Windows.Forms.PictureBox()
-        Me.BtnVerFormula = New System.Windows.Forms.ToolStripButton()
         Me.ToolStrip1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -70,12 +72,12 @@ Partial Class FrmControlAlimento
         Me.ToolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.ToolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
         Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnKardexAlmacenali, Me.btnConsolidadoalmacenali, Me.BtnVerFormula, Me.BtnPedidoAlimentoalmacenali, Me.btnExportaralmacenali, Me.btncerrar, Me.btnreporteRrhhctrlcapaci})
-        Me.ToolStrip1.Location = New System.Drawing.Point(0, 239)
-        Me.ToolStrip1.Margin = New System.Windows.Forms.Padding(2)
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnKardexAlmacenali, Me.btnConsolidadoalmacenali, Me.BtnVerFormula, Me.BtnPedidoAlimentoalmacenali, Me.btnExportaralmacenali, Me.btnAsignarUnidadesMedida, Me.BtnEditarUnidadMedida, Me.btncerrar, Me.btnreporteRrhhctrlcapaci})
+        Me.ToolStrip1.Location = New System.Drawing.Point(0, 143)
+        Me.ToolStrip1.Margin = New System.Windows.Forms.Padding(1)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Padding = New System.Windows.Forms.Padding(0, 0, 3, 0)
-        Me.ToolStrip1.Size = New System.Drawing.Size(1977, 40)
+        Me.ToolStrip1.Padding = New System.Windows.Forms.Padding(0, 0, 2, 0)
+        Me.ToolStrip1.Size = New System.Drawing.Size(1283, 38)
         Me.ToolStrip1.TabIndex = 52
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -88,7 +90,7 @@ Partial Class FrmControlAlimento
         Me.BtnKardexAlmacenali.Margin = New System.Windows.Forms.Padding(5)
         Me.BtnKardexAlmacenali.Name = "BtnKardexAlmacenali"
         Me.BtnKardexAlmacenali.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnKardexAlmacenali.Size = New System.Drawing.Size(110, 30)
+        Me.BtnKardexAlmacenali.Size = New System.Drawing.Size(82, 28)
         Me.BtnKardexAlmacenali.Text = "Kardex"
         '
         'btnConsolidadoalmacenali
@@ -100,8 +102,20 @@ Partial Class FrmControlAlimento
         Me.btnConsolidadoalmacenali.Margin = New System.Windows.Forms.Padding(5)
         Me.btnConsolidadoalmacenali.Name = "btnConsolidadoalmacenali"
         Me.btnConsolidadoalmacenali.Padding = New System.Windows.Forms.Padding(2)
-        Me.btnConsolidadoalmacenali.Size = New System.Drawing.Size(161, 30)
+        Me.btnConsolidadoalmacenali.Size = New System.Drawing.Size(115, 28)
         Me.btnConsolidadoalmacenali.Text = "Consolidado"
+        '
+        'BtnVerFormula
+        '
+        Me.BtnVerFormula.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnVerFormula.ForeColor = System.Drawing.Color.White
+        Me.BtnVerFormula.Image = Global.Formularios.My.Resources.Resources.ver24px
+        Me.BtnVerFormula.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BtnVerFormula.Margin = New System.Windows.Forms.Padding(5)
+        Me.BtnVerFormula.Name = "BtnVerFormula"
+        Me.BtnVerFormula.Padding = New System.Windows.Forms.Padding(2)
+        Me.BtnVerFormula.Size = New System.Drawing.Size(116, 28)
+        Me.BtnVerFormula.Text = "Ver Fórmula"
         '
         'BtnPedidoAlimentoalmacenali
         '
@@ -112,7 +126,7 @@ Partial Class FrmControlAlimento
         Me.BtnPedidoAlimentoalmacenali.Margin = New System.Windows.Forms.Padding(5)
         Me.BtnPedidoAlimentoalmacenali.Name = "BtnPedidoAlimentoalmacenali"
         Me.BtnPedidoAlimentoalmacenali.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnPedidoAlimentoalmacenali.Size = New System.Drawing.Size(223, 30)
+        Me.BtnPedidoAlimentoalmacenali.Size = New System.Drawing.Size(155, 28)
         Me.BtnPedidoAlimentoalmacenali.Text = "Pedidos de Ración"
         '
         'btnExportaralmacenali
@@ -124,9 +138,37 @@ Partial Class FrmControlAlimento
         Me.btnExportaralmacenali.Margin = New System.Windows.Forms.Padding(5)
         Me.btnExportaralmacenali.Name = "btnExportaralmacenali"
         Me.btnExportaralmacenali.Padding = New System.Windows.Forms.Padding(2)
-        Me.btnExportaralmacenali.Size = New System.Drawing.Size(125, 30)
+        Me.btnExportaralmacenali.Size = New System.Drawing.Size(92, 28)
         Me.btnExportaralmacenali.Text = "Exportar"
         Me.btnExportaralmacenali.ToolTipText = "Exportar"
+        '
+        'btnAsignarUnidadesMedida
+        '
+        Me.btnAsignarUnidadesMedida.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.btnAsignarUnidadesMedida.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAsignarUnidadesMedida.ForeColor = System.Drawing.Color.White
+        Me.btnAsignarUnidadesMedida.Image = Global.Formularios.My.Resources.Resources.sincronizar
+        Me.btnAsignarUnidadesMedida.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btnAsignarUnidadesMedida.Margin = New System.Windows.Forms.Padding(5)
+        Me.btnAsignarUnidadesMedida.Name = "btnAsignarUnidadesMedida"
+        Me.btnAsignarUnidadesMedida.Padding = New System.Windows.Forms.Padding(2)
+        Me.btnAsignarUnidadesMedida.Size = New System.Drawing.Size(114, 28)
+        Me.btnAsignarUnidadesMedida.Text = "Asignar U.M"
+        Me.btnAsignarUnidadesMedida.ToolTipText = "Asignar U.M"
+        '
+        'BtnEditarUnidadMedida
+        '
+        Me.BtnEditarUnidadMedida.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.BtnEditarUnidadMedida.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnEditarUnidadMedida.ForeColor = System.Drawing.Color.White
+        Me.BtnEditarUnidadMedida.Image = Global.Formularios.My.Resources.Resources.editar_texto
+        Me.BtnEditarUnidadMedida.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BtnEditarUnidadMedida.Margin = New System.Windows.Forms.Padding(5)
+        Me.BtnEditarUnidadMedida.Name = "BtnEditarUnidadMedida"
+        Me.BtnEditarUnidadMedida.Padding = New System.Windows.Forms.Padding(2)
+        Me.BtnEditarUnidadMedida.Size = New System.Drawing.Size(103, 28)
+        Me.BtnEditarUnidadMedida.Text = "Editar U.M"
+        Me.BtnEditarUnidadMedida.ToolTipText = "Asignar U.M"
         '
         'btncerrar
         '
@@ -137,7 +179,7 @@ Partial Class FrmControlAlimento
         Me.btncerrar.Margin = New System.Windows.Forms.Padding(5)
         Me.btncerrar.Name = "btncerrar"
         Me.btncerrar.Padding = New System.Windows.Forms.Padding(2)
-        Me.btncerrar.Size = New System.Drawing.Size(84, 30)
+        Me.btncerrar.Size = New System.Drawing.Size(66, 28)
         Me.btncerrar.Text = "Salir"
         '
         'btnreporteRrhhctrlcapaci
@@ -150,25 +192,25 @@ Partial Class FrmControlAlimento
         Me.btnreporteRrhhctrlcapaci.Margin = New System.Windows.Forms.Padding(5)
         Me.btnreporteRrhhctrlcapaci.Name = "btnreporteRrhhctrlcapaci"
         Me.btnreporteRrhhctrlcapaci.Padding = New System.Windows.Forms.Padding(2)
-        Me.btnreporteRrhhctrlcapaci.Size = New System.Drawing.Size(143, 30)
+        Me.btnreporteRrhhctrlcapaci.Size = New System.Drawing.Size(103, 28)
         Me.btnreporteRrhhctrlcapaci.Text = "Reportes"
         '
         'BtnReporteAnual
         '
         Me.BtnReporteAnual.Name = "BtnReporteAnual"
-        Me.BtnReporteAnual.Size = New System.Drawing.Size(371, 34)
+        Me.BtnReporteAnual.Size = New System.Drawing.Size(243, 22)
         Me.BtnReporteAnual.Text = "Alimento Anual"
         '
         'BtnReporteSemanal
         '
         Me.BtnReporteSemanal.Name = "BtnReporteSemanal"
-        Me.BtnReporteSemanal.Size = New System.Drawing.Size(371, 34)
+        Me.BtnReporteSemanal.Size = New System.Drawing.Size(243, 22)
         Me.BtnReporteSemanal.Text = "Alimento Semanal"
         '
         'ReporteRecepcionesDespachos
         '
         Me.ReporteRecepcionesDespachos.Name = "ReporteRecepcionesDespachos"
-        Me.ReporteRecepcionesDespachos.Size = New System.Drawing.Size(371, 34)
+        Me.ReporteRecepcionesDespachos.Size = New System.Drawing.Size(243, 22)
         Me.ReporteRecepcionesDespachos.Text = "Despachos y Recepciones"
         '
         'Panel2
@@ -179,17 +221,20 @@ Partial Class FrmControlAlimento
         Me.Panel2.Controls.Add(Me.ToolStrip1)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1977, 279)
+        Me.Panel2.Size = New System.Drawing.Size(1283, 181)
         Me.Panel2.TabIndex = 9
         '
         'GroupBox1
         '
         Me.GroupBox1.Controls.Add(Me.lblalmacen)
         Me.GroupBox1.Controls.Add(Me.cbxalmacen)
-        Me.GroupBox1.Location = New System.Drawing.Point(44, 87)
+        Me.GroupBox1.Location = New System.Drawing.Point(29, 57)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(808, 118)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2)
+        Me.GroupBox1.Size = New System.Drawing.Size(539, 77)
         Me.GroupBox1.TabIndex = 129
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Filtro de Búsqueda"
@@ -202,10 +247,9 @@ Partial Class FrmControlAlimento
         Appearance17.TextVAlignAsString = "Middle"
         Me.lblalmacen.Appearance = Appearance17
         Me.lblalmacen.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblalmacen.Location = New System.Drawing.Point(44, 52)
-        Me.lblalmacen.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.lblalmacen.Location = New System.Drawing.Point(29, 34)
         Me.lblalmacen.Name = "lblalmacen"
-        Me.lblalmacen.Size = New System.Drawing.Size(110, 31)
+        Me.lblalmacen.Size = New System.Drawing.Size(73, 20)
         Me.lblalmacen.TabIndex = 181
         Me.lblalmacen.Text = "Almacen :"
         '
@@ -213,10 +257,9 @@ Partial Class FrmControlAlimento
         '
         Me.cbxalmacen.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbxalmacen.FormattingEnabled = True
-        Me.cbxalmacen.Location = New System.Drawing.Point(162, 53)
-        Me.cbxalmacen.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.cbxalmacen.Location = New System.Drawing.Point(108, 34)
         Me.cbxalmacen.Name = "cbxalmacen"
-        Me.cbxalmacen.Size = New System.Drawing.Size(561, 28)
+        Me.cbxalmacen.Size = New System.Drawing.Size(375, 21)
         Me.cbxalmacen.TabIndex = 182
         '
         'Label6
@@ -225,9 +268,10 @@ Partial Class FrmControlAlimento
         Me.Label6.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(233, Byte), Integer))
         Me.Label6.Font = New System.Drawing.Font("Verdana", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(49, Byte), Integer))
-        Me.Label6.Location = New System.Drawing.Point(16, 29)
+        Me.Label6.Location = New System.Drawing.Point(11, 19)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(478, 29)
+        Me.Label6.Size = New System.Drawing.Size(322, 18)
         Me.Label6.TabIndex = 128
         Me.Label6.Text = "CONTROL DE ALIMENTO DE CERDO"
         '
@@ -303,10 +347,9 @@ Partial Class FrmControlAlimento
         Me.dtgListado.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy
         Me.dtgListado.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dtgListado.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dtgListado.Location = New System.Drawing.Point(0, 279)
-        Me.dtgListado.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.dtgListado.Location = New System.Drawing.Point(0, 181)
         Me.dtgListado.Name = "dtgListado"
-        Me.dtgListado.Size = New System.Drawing.Size(1977, 629)
+        Me.dtgListado.Size = New System.Drawing.Size(1283, 409)
         Me.dtgListado.TabIndex = 10
         Me.dtgListado.Text = "UltraGrid1"
         '
@@ -317,35 +360,23 @@ Partial Class FrmControlAlimento
         '
         Me.Ptbx_Cargando.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Ptbx_Cargando.Image = Global.Formularios.My.Resources.Resources.loader
-        Me.Ptbx_Cargando.Location = New System.Drawing.Point(1002, 435)
-        Me.Ptbx_Cargando.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Ptbx_Cargando.Location = New System.Drawing.Point(668, 283)
         Me.Ptbx_Cargando.Name = "Ptbx_Cargando"
-        Me.Ptbx_Cargando.Size = New System.Drawing.Size(64, 57)
+        Me.Ptbx_Cargando.Size = New System.Drawing.Size(43, 37)
         Me.Ptbx_Cargando.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.Ptbx_Cargando.TabIndex = 27
         Me.Ptbx_Cargando.TabStop = False
         Me.Ptbx_Cargando.Visible = False
         '
-        'BtnVerFormula
-        '
-        Me.BtnVerFormula.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnVerFormula.ForeColor = System.Drawing.Color.White
-        Me.BtnVerFormula.Image = Global.Formularios.My.Resources.Resources.ver24px
-        Me.BtnVerFormula.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.BtnVerFormula.Margin = New System.Windows.Forms.Padding(5)
-        Me.BtnVerFormula.Name = "BtnVerFormula"
-        Me.BtnVerFormula.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnVerFormula.Size = New System.Drawing.Size(162, 30)
-        Me.BtnVerFormula.Text = "Ver Fórmula"
-        '
         'FrmControlAlimento
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1977, 908)
+        Me.ClientSize = New System.Drawing.Size(1283, 590)
         Me.Controls.Add(Me.Ptbx_Cargando)
         Me.Controls.Add(Me.dtgListado)
         Me.Controls.Add(Me.Panel2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "FrmControlAlimento"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "CONTROL DE ALIMENTOS"
@@ -379,4 +410,6 @@ Partial Class FrmControlAlimento
     Friend WithEvents BtnReporteSemanal As ToolStripMenuItem
     Friend WithEvents ReporteRecepcionesDespachos As ToolStripMenuItem
     Friend WithEvents BtnVerFormula As ToolStripButton
+    Friend WithEvents btnAsignarUnidadesMedida As ToolStripButton
+    Friend WithEvents BtnEditarUnidadMedida As ToolStripButton
 End Class

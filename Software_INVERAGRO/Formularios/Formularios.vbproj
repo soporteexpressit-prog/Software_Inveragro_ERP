@@ -1062,6 +1062,12 @@
     <Compile Include="Nutricion\ControlPedidoAlimento\FrmListaMedicacionesPorRacion.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Nutricion\ControlPedidoAlimento\FrmModificarCampaña.Designer.vb">
+      <DependentUpon>FrmModificarCampaña.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Nutricion\ControlPedidoAlimento\FrmModificarCampaña.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Nutricion\ControlPedidoAlimento\FrmReporteSemanalAlimentoxRacion.Designer.vb">
       <DependentUpon>FrmReporteSemanalAlimentoxRacion.vb</DependentUpon>
     </Compile>
@@ -1228,6 +1234,12 @@
       <DependentUpon>FrmAlimentacionPresupuesto.vb</DependentUpon>
     </Compile>
     <Compile Include="Nutricion\ControlSalidaAlimentoCerdo\FrmAlimentacionPresupuesto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="produccion\ControlCampañas\FrmFinalizarVenta.Designer.vb">
+      <DependentUpon>FrmFinalizarVenta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="produccion\ControlCampañas\FrmFinalizarVenta.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="produccion\ControlCampañas\FrmReporteEngordeCampana.Designer.vb">
@@ -4264,6 +4276,9 @@
     <EmbeddedResource Include="Nutricion\ControlPedidoAlimento\FrmListaMedicacionesPorRacion.resx">
       <DependentUpon>FrmListaMedicacionesPorRacion.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Nutricion\ControlPedidoAlimento\FrmModificarCampaña.resx">
+      <DependentUpon>FrmModificarCampaña.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Nutricion\ControlPedidoAlimento\FrmReporteSemanalAlimentoxRacion.resx">
       <DependentUpon>FrmReporteSemanalAlimentoxRacion.vb</DependentUpon>
     </EmbeddedResource>
@@ -4351,6 +4366,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Nutricion\ControlSalidaAlimentoCerdo\FrmAlimentacionPresupuesto.resx">
       <DependentUpon>FrmAlimentacionPresupuesto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="produccion\ControlCampañas\FrmFinalizarVenta.resx">
+      <DependentUpon>FrmFinalizarVenta.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="produccion\ControlCampañas\FrmReporteEngordeCampana.resx">
       <DependentUpon>FrmReporteEngordeCampana.vb</DependentUpon>
@@ -6016,6 +6034,8 @@
     <None Include="Resources\kilo.png" />
     <None Include="Resources\personal.png" />
     <None Include="Resources\division_alimento.png" />
+    <None Include="Resources\fin.png" />
+    <None Include="Resources\fin %281%29.png" />
     <Content Include="Resources\saco.png" />
     <None Include="Resources\salida.png" />
     <None Include="Resources\salida %281%29.png" />
