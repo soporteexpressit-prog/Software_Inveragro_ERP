@@ -1,6 +1,8 @@
-﻿Imports CapaObjetos
+﻿Imports CapaNegocio
+Imports CapaObjetos
 
 Public Class FrmFinalizarVenta
+    Dim cn As New cnControlLoteDestete
     Public idCampaña As Integer = 0
     Public nombrePlantel As String = ""
 
@@ -19,25 +21,18 @@ Public Class FrmFinalizarVenta
                 Return
             End If
 
-            'Dim obj As New coControlLoteDestete With {
-            '    .Operacion = operacion,
-            '    .IdLote = idLote,
-            '    .Anio = CInt(CmbAnios.Text),
-            '    .FechaDesde = DtpFechaApertura.Value,
-            '    .FechaHasta = DtpFechaCierre.Value,
-            '    .NumeroLote = NumeroLote.Value,
-            '    .Estado = CmbEstado.Text,
-            '    .IdPlantel = CmbUbicacion.Value
-            '}
+            Dim obj As New coControlLoteDestete With {
+                .FechaControl = DtpFechaFinVenta.Value,
+                .IdCampana = idCampaña
+            }
 
-            'Dim _mensaje As String = cn.Cn_MantenimientoLote(obj)
-            'If (obj.Coderror = 0) Then
-            '    msj_ok(_mensaje)
-            '    Dispose()
-            'Else
-            '    msj_advert(_mensaje)
-            'End If
-
+            Dim _mensaje As String = cn.Cn_FinalizarVentaxCampaña(obj)
+            If (obj.Coderror = 0) Then
+                msj_ok(_mensaje)
+                Dispose()
+            Else
+                msj_advert(_mensaje)
+            End If
         Catch ex As Exception
             clsBasicas.controlException(Name, ex)
         End Try
