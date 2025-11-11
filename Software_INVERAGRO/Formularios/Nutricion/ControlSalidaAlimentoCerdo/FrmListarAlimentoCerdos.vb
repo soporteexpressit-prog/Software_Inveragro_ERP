@@ -24,6 +24,7 @@ Public Class FrmListarAlimentoCerdos
         Dim dt As DataTable = cn.Cn_ListarAlimentoCerdoActivo(idPlantel)
         dtgListado.DataSource = dt
         dtgListado.DisplayLayout.Bands(0).Columns(0).Hidden = True
+        dtgListado.DisplayLayout.Bands(0).Columns("idUnidadMedida").Hidden = True
         clsBasicas.Filtrar_Tabla(dtgListado, True)
         clsBasicas.Formato_Tablas_Grid(dtgListado)
     End Sub
@@ -35,8 +36,8 @@ Public Class FrmListarAlimentoCerdos
                 If (dtgListado.ActiveRow.Cells(0).Value.ToString.Length <> 0) Then
                     Dim codigo As Integer = e.Cell.Row.Cells(0).Value
                     Dim descripcion As String = e.Cell.Row.Cells(1).Value
-                    Dim unidadMedida As String = e.Cell.Row.Cells(2).Value
                     Dim stock As String = e.Cell.Row.Cells(3).Value
+                    Dim idUnidadMedida As Integer = e.Cell.Row.Cells(4).Value
 
                     Dim stockDecimal As Double
                     If Double.TryParse(stock, stockDecimal) Then
@@ -49,7 +50,7 @@ Public Class FrmListarAlimentoCerdos
                         Return
                     End If
 
-                    _frmNuevoAlimento.LlenarCamposAlimento(codigo, descripcion, unidadMedida, stock)
+                    _frmNuevoAlimento.LlenarCamposAlimento(codigo, descripcion, idUnidadMedida, stock)
                     Me.Close()
                 Else
                     msj_advert(MensajesSistema.mensajesGenerales("SELECCIONE_REGISTRO"))

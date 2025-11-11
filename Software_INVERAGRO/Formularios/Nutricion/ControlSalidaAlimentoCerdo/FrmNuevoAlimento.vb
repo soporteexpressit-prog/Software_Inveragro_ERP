@@ -1,4 +1,5 @@
-﻿Imports CapaNegocio
+﻿Imports CapaDatos
+Imports CapaNegocio
 Imports CapaObjetos
 
 Public Class FrmNuevoAlimento
@@ -11,6 +12,7 @@ Public Class FrmNuevoAlimento
     Dim idLote As Integer = 0
     Public SelectedGalponCorral As New HashSet(Of Integer)
     Private actualizarDesdeCodigo As Boolean = False
+    Private idUnidadMedida As Integer = 0
 
 
     Private Sub FrmNuevoAlimento_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -110,16 +112,17 @@ Public Class FrmNuevoAlimento
         frm.ShowDialog()
     End Sub
 
-    Public Sub LlenarCamposAlimento(codigo As Integer, descripcion As String, unidadMedida As String, stock As Decimal)
+    Public Sub LlenarCamposAlimento(codigo As Integer, descripcion As String, idUniMedida As Integer, stock As Decimal)
         codAlimento = codigo
         txtAlimento.Text = descripcion
         LblStock.Text = Convert.ToDecimal(stock).ToString("N4")
+        idUnidadMedida = idUniMedida
 
-        CalcularKilogramos()
+        CalcularKilogramos(idUnidadMedida)
     End Sub
 
     Private Sub txtStock_TextChanged(sender As Object, e As EventArgs)
-        CalcularKilogramos()
+        CalcularKilogramos(idUnidadMedida)
     End Sub
 
     Private Sub BtnAgregarGalpon_Click(sender As Object, e As EventArgs)
@@ -133,8 +136,15 @@ Public Class FrmNuevoAlimento
         End Try
     End Sub
 
-    Private Sub CalcularKilogramos()
+    Private Sub CalcularKilogramos(idUnidadMedida As Integer)
         Try
+            Dim idUnidadMedidaKg As Integer = 6
+            Dim idUnidadMedidaTonelada As Integer = 3
+
+            If idUnidadMedida = idUnidadMedidaKg Then
+                Return
+            End If
+
             If Not String.IsNullOrEmpty(LblStock.Text) AndAlso IsNumeric(LblStock.Text) Then
                 Dim cantidadToneladas As Decimal = Decimal.Parse(LblStock.Text)
                 Dim cantidadKilogramos As Decimal = cantidadToneladas * 1000D ' 1 tonelada = 1000 kg
@@ -146,7 +156,6 @@ Public Class FrmNuevoAlimento
             msj_advert("Error al calcular los kilogramos: " & ex.Message)
         End Try
     End Sub
-
 
     Private Sub BtnGuardar_Click(sender As Object, e As EventArgs) Handles BtnGuardar.Click
         Try

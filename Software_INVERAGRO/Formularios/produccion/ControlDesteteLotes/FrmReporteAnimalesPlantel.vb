@@ -85,12 +85,12 @@ Public Class FrmReporteAnimalesPlantel
                 LblEdadPromedioLote.Text = Convert.ToDecimal(dtgListado.Rows(0).Cells("edadPromedioLote").Value).ToString("F2")
                 LblPromedioPesoVenta.Text = Convert.ToDecimal(dtgListado.Rows(0).Cells("pesoPromedioVentaLote").Value).ToString("F2")
                 LblCampaña.Text = dtgListado.Rows(0).Cells("Campaña").Value.ToString()
+                LblConsumoAlimentoTotalCampaña.Text = Convert.ToDecimal(dtgListado.Rows(0).Cells("consumo").Value).ToString("N0")
                 Dim valor As Decimal = 0
 
                 If CInt(LblEdadPromedioLote.Text) <> 0 Then
                     valor = Convert.ToDecimal(
-                        (dtgListado.Rows(0).Cells("consumo").Value +
-                         dtgListado.Rows(0).Cells("pesoConsumoDonacion").Value) /
+                        (dtgListado.Rows(0).Cells("consumo").Value) /
                         (CDec(LblPesoVenta.Text) - pesoTotalBajada)
                     )
                 End If
@@ -269,6 +269,7 @@ Public Class FrmReporteAnimalesPlantel
                     clsBasicas.SumarTotales_Formato(dtgListado, e, 9)
                     clsBasicas.SumarTotales_Formato(dtgListado, e, 10)
                     clsBasicas.SumarTotales_Formato(dtgListado, e, 11)
+                    clsBasicas.SumarTotales_Formato(dtgListado, e, 20)
                 Else
                     clsBasicas.PromedioTotales_Formato(dtgListado, e, 4)
                 End If

@@ -42,6 +42,8 @@ Partial Class FrmReporteAnimalesPlantel
         Me.BtnExportar = New System.Windows.Forms.ToolStripButton()
         Me.btnSalir = New System.Windows.Forms.ToolStripButton()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.LblConsumoAlimentoTotalCampaña = New System.Windows.Forms.Label()
+        Me.Label17 = New System.Windows.Forms.Label()
         Me.LblAproxVentaSemana = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.LblCampaña = New System.Windows.Forms.Label()
@@ -162,10 +164,9 @@ Partial Class FrmReporteAnimalesPlantel
         Me.dtgListado.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy
         Me.dtgListado.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dtgListado.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dtgListado.Location = New System.Drawing.Point(0, 351)
-        Me.dtgListado.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.dtgListado.Location = New System.Drawing.Point(0, 275)
         Me.dtgListado.Name = "dtgListado"
-        Me.dtgListado.Size = New System.Drawing.Size(2220, 660)
+        Me.dtgListado.Size = New System.Drawing.Size(1283, 382)
         Me.dtgListado.TabIndex = 180
         Me.dtgListado.Text = "UltraGrid1"
         '
@@ -176,10 +177,10 @@ Partial Class FrmReporteAnimalesPlantel
         Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnExportar, Me.btnSalir})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.ToolStrip1.Margin = New System.Windows.Forms.Padding(3)
+        Me.ToolStrip1.Margin = New System.Windows.Forms.Padding(2)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Padding = New System.Windows.Forms.Padding(0, 0, 3, 0)
-        Me.ToolStrip1.Size = New System.Drawing.Size(2220, 40)
+        Me.ToolStrip1.Padding = New System.Windows.Forms.Padding(0, 0, 2, 0)
+        Me.ToolStrip1.Size = New System.Drawing.Size(1283, 38)
         Me.ToolStrip1.TabIndex = 179
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -192,7 +193,7 @@ Partial Class FrmReporteAnimalesPlantel
         Me.BtnExportar.Margin = New System.Windows.Forms.Padding(5)
         Me.BtnExportar.Name = "BtnExportar"
         Me.BtnExportar.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnExportar.Size = New System.Drawing.Size(125, 30)
+        Me.BtnExportar.Size = New System.Drawing.Size(92, 28)
         Me.BtnExportar.Text = "Exportar"
         Me.BtnExportar.ToolTipText = "Exportar"
         '
@@ -205,13 +206,15 @@ Partial Class FrmReporteAnimalesPlantel
         Me.btnSalir.Margin = New System.Windows.Forms.Padding(5)
         Me.btnSalir.Name = "btnSalir"
         Me.btnSalir.Padding = New System.Windows.Forms.Padding(2)
-        Me.btnSalir.Size = New System.Drawing.Size(84, 30)
+        Me.btnSalir.Size = New System.Drawing.Size(66, 28)
         Me.btnSalir.Text = "Salir"
         Me.btnSalir.ToolTipText = "Editar"
         '
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.Panel2.Controls.Add(Me.LblConsumoAlimentoTotalCampaña)
+        Me.Panel2.Controls.Add(Me.Label17)
         Me.Panel2.Controls.Add(Me.LblAproxVentaSemana)
         Me.Panel2.Controls.Add(Me.Label4)
         Me.Panel2.Controls.Add(Me.LblCampaña)
@@ -220,10 +223,37 @@ Partial Class FrmReporteAnimalesPlantel
         Me.Panel2.Controls.Add(Me.Label3)
         Me.Panel2.Controls.Add(Me.LblTotalAnimales)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel2.Location = New System.Drawing.Point(0, 40)
+        Me.Panel2.Location = New System.Drawing.Point(0, 38)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(2220, 311)
+        Me.Panel2.Size = New System.Drawing.Size(1283, 237)
         Me.Panel2.TabIndex = 181
+        '
+        'LblConsumoAlimentoTotalCampaña
+        '
+        Me.LblConsumoAlimentoTotalCampaña.AutoSize = True
+        Me.LblConsumoAlimentoTotalCampaña.BackColor = System.Drawing.Color.Transparent
+        Me.LblConsumoAlimentoTotalCampaña.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblConsumoAlimentoTotalCampaña.ForeColor = System.Drawing.Color.Green
+        Me.LblConsumoAlimentoTotalCampaña.Location = New System.Drawing.Point(318, 202)
+        Me.LblConsumoAlimentoTotalCampaña.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblConsumoAlimentoTotalCampaña.Name = "LblConsumoAlimentoTotalCampaña"
+        Me.LblConsumoAlimentoTotalCampaña.Size = New System.Drawing.Size(16, 14)
+        Me.LblConsumoAlimentoTotalCampaña.TabIndex = 258
+        Me.LblConsumoAlimentoTotalCampaña.Text = "0"
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.BackColor = System.Drawing.Color.Transparent
+        Me.Label17.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label17.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.Label17.Location = New System.Drawing.Point(21, 202)
+        Me.Label17.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(291, 14)
+        Me.Label17.TabIndex = 258
+        Me.Label17.Text = "Consumo Alimento Total de la Campaña (kg):"
         '
         'LblAproxVentaSemana
         '
@@ -231,10 +261,10 @@ Partial Class FrmReporteAnimalesPlantel
         Me.LblAproxVentaSemana.BackColor = System.Drawing.Color.Transparent
         Me.LblAproxVentaSemana.Font = New System.Drawing.Font("Verdana", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblAproxVentaSemana.ForeColor = System.Drawing.Color.Black
-        Me.LblAproxVentaSemana.Location = New System.Drawing.Point(1620, 30)
-        Me.LblAproxVentaSemana.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.LblAproxVentaSemana.Location = New System.Drawing.Point(1080, 20)
+        Me.LblAproxVentaSemana.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblAproxVentaSemana.Name = "LblAproxVentaSemana"
-        Me.LblAproxVentaSemana.Size = New System.Drawing.Size(30, 29)
+        Me.LblAproxVentaSemana.Size = New System.Drawing.Size(19, 18)
         Me.LblAproxVentaSemana.TabIndex = 239
         Me.LblAproxVentaSemana.Text = "0"
         '
@@ -244,10 +274,10 @@ Partial Class FrmReporteAnimalesPlantel
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Font = New System.Drawing.Font("Verdana", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label4.Location = New System.Drawing.Point(1169, 30)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label4.Location = New System.Drawing.Point(779, 20)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(439, 29)
+        Me.Label4.Size = New System.Drawing.Size(296, 18)
         Me.Label4.TabIndex = 238
         Me.Label4.Text = "CANT. APROX. VENTAS X SEMANA :"
         '
@@ -257,10 +287,10 @@ Partial Class FrmReporteAnimalesPlantel
         Me.LblCampaña.BackColor = System.Drawing.Color.Transparent
         Me.LblCampaña.Font = New System.Drawing.Font("Verdana", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblCampaña.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.LblCampaña.Location = New System.Drawing.Point(46, 30)
-        Me.LblCampaña.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.LblCampaña.Location = New System.Drawing.Point(31, 20)
+        Me.LblCampaña.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblCampaña.Name = "LblCampaña"
-        Me.LblCampaña.Size = New System.Drawing.Size(25, 29)
+        Me.LblCampaña.Size = New System.Drawing.Size(16, 18)
         Me.LblCampaña.TabIndex = 237
         Me.LblCampaña.Text = "-"
         '
@@ -296,9 +326,11 @@ Partial Class FrmReporteAnimalesPlantel
         Me.GroupBox2.Controls.Add(Me.PorcentajeMortalidadCampana)
         Me.GroupBox2.Controls.Add(Me.Label1)
         Me.GroupBox2.Controls.Add(Me.LblTotalMortalidad)
-        Me.GroupBox2.Location = New System.Drawing.Point(12, 82)
+        Me.GroupBox2.Location = New System.Drawing.Point(8, 53)
+        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(2)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(2010, 196)
+        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(2)
+        Me.GroupBox2.Size = New System.Drawing.Size(1340, 127)
         Me.GroupBox2.TabIndex = 232
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Información"
@@ -309,10 +341,10 @@ Partial Class FrmReporteAnimalesPlantel
         Me.LblPesoTotalVentaConsDona.BackColor = System.Drawing.Color.Transparent
         Me.LblPesoTotalVentaConsDona.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblPesoTotalVentaConsDona.ForeColor = System.Drawing.Color.Green
-        Me.LblPesoTotalVentaConsDona.Location = New System.Drawing.Point(1833, 146)
-        Me.LblPesoTotalVentaConsDona.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.LblPesoTotalVentaConsDona.Location = New System.Drawing.Point(1222, 95)
+        Me.LblPesoTotalVentaConsDona.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblPesoTotalVentaConsDona.Name = "LblPesoTotalVentaConsDona"
-        Me.LblPesoTotalVentaConsDona.Size = New System.Drawing.Size(23, 22)
+        Me.LblPesoTotalVentaConsDona.Size = New System.Drawing.Size(16, 14)
         Me.LblPesoTotalVentaConsDona.TabIndex = 257
         Me.LblPesoTotalVentaConsDona.Text = "0"
         '
@@ -322,10 +354,10 @@ Partial Class FrmReporteAnimalesPlantel
         Me.Label14.BackColor = System.Drawing.Color.Transparent
         Me.Label14.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label14.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label14.Location = New System.Drawing.Point(1657, 146)
-        Me.Label14.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label14.Location = New System.Drawing.Point(1105, 95)
+        Me.Label14.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(170, 22)
+        Me.Label14.Size = New System.Drawing.Size(119, 14)
         Me.Label14.TabIndex = 256
         Me.Label14.Text = "Peso Total Salida:"
         '
@@ -335,10 +367,10 @@ Partial Class FrmReporteAnimalesPlantel
         Me.LblTotalConsDona.BackColor = System.Drawing.Color.Transparent
         Me.LblTotalConsDona.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblTotalConsDona.ForeColor = System.Drawing.Color.Green
-        Me.LblTotalConsDona.Location = New System.Drawing.Point(1833, 91)
-        Me.LblTotalConsDona.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.LblTotalConsDona.Location = New System.Drawing.Point(1222, 59)
+        Me.LblTotalConsDona.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblTotalConsDona.Name = "LblTotalConsDona"
-        Me.LblTotalConsDona.Size = New System.Drawing.Size(23, 22)
+        Me.LblTotalConsDona.Size = New System.Drawing.Size(16, 14)
         Me.LblTotalConsDona.TabIndex = 255
         Me.LblTotalConsDona.Text = "0"
         '
@@ -348,10 +380,10 @@ Partial Class FrmReporteAnimalesPlantel
         Me.Label18.BackColor = System.Drawing.Color.Transparent
         Me.Label18.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label18.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label18.Location = New System.Drawing.Point(1649, 91)
-        Me.Label18.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label18.Location = New System.Drawing.Point(1099, 59)
+        Me.Label18.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(178, 22)
+        Me.Label18.Size = New System.Drawing.Size(123, 14)
         Me.Label18.TabIndex = 254
         Me.Label18.Text = "Total Cons. Dona.:"
         '
@@ -361,10 +393,10 @@ Partial Class FrmReporteAnimalesPlantel
         Me.LblPesoTotalConsDona.BackColor = System.Drawing.Color.Transparent
         Me.LblPesoTotalConsDona.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblPesoTotalConsDona.ForeColor = System.Drawing.Color.Green
-        Me.LblPesoTotalConsDona.Location = New System.Drawing.Point(1833, 37)
-        Me.LblPesoTotalConsDona.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.LblPesoTotalConsDona.Location = New System.Drawing.Point(1222, 24)
+        Me.LblPesoTotalConsDona.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblPesoTotalConsDona.Name = "LblPesoTotalConsDona"
-        Me.LblPesoTotalConsDona.Size = New System.Drawing.Size(23, 22)
+        Me.LblPesoTotalConsDona.Size = New System.Drawing.Size(16, 14)
         Me.LblPesoTotalConsDona.TabIndex = 253
         Me.LblPesoTotalConsDona.Text = "0"
         '
@@ -374,10 +406,10 @@ Partial Class FrmReporteAnimalesPlantel
         Me.Label16.BackColor = System.Drawing.Color.Transparent
         Me.Label16.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label16.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label16.Location = New System.Drawing.Point(1557, 37)
-        Me.Label16.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label16.Location = New System.Drawing.Point(1038, 24)
+        Me.Label16.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(270, 22)
+        Me.Label16.Size = New System.Drawing.Size(187, 14)
         Me.Label16.TabIndex = 252
         Me.Label16.Text = "Peso Total Cons. Dona. (kg):"
         '
@@ -387,10 +419,10 @@ Partial Class FrmReporteAnimalesPlantel
         Me.LblConversionAlimenticia.BackColor = System.Drawing.Color.Transparent
         Me.LblConversionAlimenticia.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblConversionAlimenticia.ForeColor = System.Drawing.Color.Green
-        Me.LblConversionAlimenticia.Location = New System.Drawing.Point(1402, 37)
-        Me.LblConversionAlimenticia.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.LblConversionAlimenticia.Location = New System.Drawing.Point(935, 24)
+        Me.LblConversionAlimenticia.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblConversionAlimenticia.Name = "LblConversionAlimenticia"
-        Me.LblConversionAlimenticia.Size = New System.Drawing.Size(23, 22)
+        Me.LblConversionAlimenticia.Size = New System.Drawing.Size(16, 14)
         Me.LblConversionAlimenticia.TabIndex = 251
         Me.LblConversionAlimenticia.Text = "0"
         '
@@ -400,10 +432,10 @@ Partial Class FrmReporteAnimalesPlantel
         Me.GananciaDiariaPeso.BackColor = System.Drawing.Color.Transparent
         Me.GananciaDiariaPeso.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GananciaDiariaPeso.ForeColor = System.Drawing.Color.Green
-        Me.GananciaDiariaPeso.Location = New System.Drawing.Point(1402, 91)
-        Me.GananciaDiariaPeso.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.GananciaDiariaPeso.Location = New System.Drawing.Point(935, 59)
+        Me.GananciaDiariaPeso.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.GananciaDiariaPeso.Name = "GananciaDiariaPeso"
-        Me.GananciaDiariaPeso.Size = New System.Drawing.Size(23, 22)
+        Me.GananciaDiariaPeso.Size = New System.Drawing.Size(16, 14)
         Me.GananciaDiariaPeso.TabIndex = 250
         Me.GananciaDiariaPeso.Text = "0"
         '
@@ -413,10 +445,10 @@ Partial Class FrmReporteAnimalesPlantel
         Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label7.Location = New System.Drawing.Point(1189, 91)
-        Me.Label7.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label7.Location = New System.Drawing.Point(793, 59)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(209, 22)
+        Me.Label7.Size = New System.Drawing.Size(145, 14)
         Me.Label7.TabIndex = 249
         Me.Label7.Text = "Ganancia Diaria Peso:"
         '
@@ -426,10 +458,10 @@ Partial Class FrmReporteAnimalesPlantel
         Me.Label12.BackColor = System.Drawing.Color.Transparent
         Me.Label12.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label12.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label12.Location = New System.Drawing.Point(1174, 37)
-        Me.Label12.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label12.Location = New System.Drawing.Point(783, 24)
+        Me.Label12.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(224, 22)
+        Me.Label12.Size = New System.Drawing.Size(153, 14)
         Me.Label12.TabIndex = 248
         Me.Label12.Text = "Conversión Alimenticia:"
         '
@@ -439,10 +471,10 @@ Partial Class FrmReporteAnimalesPlantel
         Me.PorcentajeEmergenciaCampaña.BackColor = System.Drawing.Color.Transparent
         Me.PorcentajeEmergenciaCampaña.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.PorcentajeEmergenciaCampaña.ForeColor = System.Drawing.Color.Green
-        Me.PorcentajeEmergenciaCampaña.Location = New System.Drawing.Point(999, 91)
-        Me.PorcentajeEmergenciaCampaña.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.PorcentajeEmergenciaCampaña.Location = New System.Drawing.Point(666, 59)
+        Me.PorcentajeEmergenciaCampaña.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.PorcentajeEmergenciaCampaña.Name = "PorcentajeEmergenciaCampaña"
-        Me.PorcentajeEmergenciaCampaña.Size = New System.Drawing.Size(23, 22)
+        Me.PorcentajeEmergenciaCampaña.Size = New System.Drawing.Size(16, 14)
         Me.PorcentajeEmergenciaCampaña.TabIndex = 247
         Me.PorcentajeEmergenciaCampaña.Text = "0"
         '
@@ -452,10 +484,10 @@ Partial Class FrmReporteAnimalesPlantel
         Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label6.Location = New System.Drawing.Point(794, 91)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label6.Location = New System.Drawing.Point(529, 59)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(198, 22)
+        Me.Label6.Size = New System.Drawing.Size(136, 14)
         Me.Label6.TabIndex = 246
         Me.Label6.Text = "% Emergencia Total:"
         '
@@ -465,10 +497,10 @@ Partial Class FrmReporteAnimalesPlantel
         Me.LblRetorno.BackColor = System.Drawing.Color.Transparent
         Me.LblRetorno.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblRetorno.ForeColor = System.Drawing.Color.Black
-        Me.LblRetorno.Location = New System.Drawing.Point(163, 91)
-        Me.LblRetorno.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.LblRetorno.Location = New System.Drawing.Point(109, 59)
+        Me.LblRetorno.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblRetorno.Name = "LblRetorno"
-        Me.LblRetorno.Size = New System.Drawing.Size(23, 22)
+        Me.LblRetorno.Size = New System.Drawing.Size(16, 14)
         Me.LblRetorno.TabIndex = 244
         Me.LblRetorno.Text = "0"
         '
@@ -478,10 +510,10 @@ Partial Class FrmReporteAnimalesPlantel
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label5.Location = New System.Drawing.Point(20, 91)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label5.Location = New System.Drawing.Point(13, 59)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(139, 22)
+        Me.Label5.Size = New System.Drawing.Size(96, 14)
         Me.Label5.TabIndex = 245
         Me.Label5.Text = "Total Retorno:"
         '
@@ -491,10 +523,10 @@ Partial Class FrmReporteAnimalesPlantel
         Me.LblIngreso.BackColor = System.Drawing.Color.Transparent
         Me.LblIngreso.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblIngreso.ForeColor = System.Drawing.Color.Black
-        Me.LblIngreso.Location = New System.Drawing.Point(163, 37)
-        Me.LblIngreso.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.LblIngreso.Location = New System.Drawing.Point(109, 24)
+        Me.LblIngreso.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblIngreso.Name = "LblIngreso"
-        Me.LblIngreso.Size = New System.Drawing.Size(23, 22)
+        Me.LblIngreso.Size = New System.Drawing.Size(16, 14)
         Me.LblIngreso.TabIndex = 238
         Me.LblIngreso.Text = "0"
         '
@@ -504,10 +536,10 @@ Partial Class FrmReporteAnimalesPlantel
         Me.Label10.BackColor = System.Drawing.Color.Transparent
         Me.Label10.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label10.Location = New System.Drawing.Point(23, 37)
-        Me.Label10.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label10.Location = New System.Drawing.Point(15, 24)
+        Me.Label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(136, 22)
+        Me.Label10.Size = New System.Drawing.Size(95, 14)
         Me.Label10.TabIndex = 243
         Me.Label10.Text = "Total Ingreso:"
         '
@@ -517,10 +549,10 @@ Partial Class FrmReporteAnimalesPlantel
         Me.LblEmergencia.BackColor = System.Drawing.Color.Transparent
         Me.LblEmergencia.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblEmergencia.ForeColor = System.Drawing.Color.Green
-        Me.LblEmergencia.Location = New System.Drawing.Point(999, 37)
-        Me.LblEmergencia.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.LblEmergencia.Location = New System.Drawing.Point(666, 24)
+        Me.LblEmergencia.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblEmergencia.Name = "LblEmergencia"
-        Me.LblEmergencia.Size = New System.Drawing.Size(23, 22)
+        Me.LblEmergencia.Size = New System.Drawing.Size(16, 14)
         Me.LblEmergencia.TabIndex = 242
         Me.LblEmergencia.Text = "0"
         '
@@ -530,10 +562,10 @@ Partial Class FrmReporteAnimalesPlantel
         Me.Label15.BackColor = System.Drawing.Color.Transparent
         Me.Label15.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label15.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label15.Location = New System.Drawing.Point(868, 37)
-        Me.Label15.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label15.Location = New System.Drawing.Point(579, 24)
+        Me.Label15.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(124, 22)
+        Me.Label15.Size = New System.Drawing.Size(85, 14)
         Me.Label15.TabIndex = 241
         Me.Label15.Text = "Emergencia:"
         '
@@ -543,10 +575,10 @@ Partial Class FrmReporteAnimalesPlantel
         Me.LblEdadPromedioLote.BackColor = System.Drawing.Color.Transparent
         Me.LblEdadPromedioLote.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblEdadPromedioLote.ForeColor = System.Drawing.Color.Green
-        Me.LblEdadPromedioLote.Location = New System.Drawing.Point(1402, 146)
-        Me.LblEdadPromedioLote.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.LblEdadPromedioLote.Location = New System.Drawing.Point(935, 95)
+        Me.LblEdadPromedioLote.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblEdadPromedioLote.Name = "LblEdadPromedioLote"
-        Me.LblEdadPromedioLote.Size = New System.Drawing.Size(23, 22)
+        Me.LblEdadPromedioLote.Size = New System.Drawing.Size(16, 14)
         Me.LblEdadPromedioLote.TabIndex = 240
         Me.LblEdadPromedioLote.Text = "0"
         '
@@ -556,10 +588,10 @@ Partial Class FrmReporteAnimalesPlantel
         Me.Label13.BackColor = System.Drawing.Color.Transparent
         Me.Label13.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label13.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label13.Location = New System.Drawing.Point(1187, 146)
-        Me.Label13.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label13.Location = New System.Drawing.Point(791, 95)
+        Me.Label13.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(211, 22)
+        Me.Label13.Size = New System.Drawing.Size(147, 14)
         Me.Label13.TabIndex = 239
         Me.Label13.Text = "Edad Promedio Venta:"
         '
@@ -569,10 +601,10 @@ Partial Class FrmReporteAnimalesPlantel
         Me.LblPromedioPesoVenta.BackColor = System.Drawing.Color.Transparent
         Me.LblPromedioPesoVenta.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblPromedioPesoVenta.ForeColor = System.Drawing.Color.Green
-        Me.LblPromedioPesoVenta.Location = New System.Drawing.Point(1000, 146)
-        Me.LblPromedioPesoVenta.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.LblPromedioPesoVenta.Location = New System.Drawing.Point(667, 95)
+        Me.LblPromedioPesoVenta.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblPromedioPesoVenta.Name = "LblPromedioPesoVenta"
-        Me.LblPromedioPesoVenta.Size = New System.Drawing.Size(23, 22)
+        Me.LblPromedioPesoVenta.Size = New System.Drawing.Size(16, 14)
         Me.LblPromedioPesoVenta.TabIndex = 238
         Me.LblPromedioPesoVenta.Text = "0"
         '
@@ -582,10 +614,10 @@ Partial Class FrmReporteAnimalesPlantel
         Me.Label11.BackColor = System.Drawing.Color.Transparent
         Me.Label11.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label11.Location = New System.Drawing.Point(739, 146)
-        Me.Label11.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label11.Location = New System.Drawing.Point(493, 95)
+        Me.Label11.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(253, 22)
+        Me.Label11.Size = New System.Drawing.Size(175, 14)
         Me.Label11.TabIndex = 237
         Me.Label11.Text = "Peso Promedio Venta (kg):"
         '
@@ -595,10 +627,10 @@ Partial Class FrmReporteAnimalesPlantel
         Me.LblPesoVenta.BackColor = System.Drawing.Color.Transparent
         Me.LblPesoVenta.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblPesoVenta.ForeColor = System.Drawing.Color.Green
-        Me.LblPesoVenta.Location = New System.Drawing.Point(566, 146)
-        Me.LblPesoVenta.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.LblPesoVenta.Location = New System.Drawing.Point(377, 95)
+        Me.LblPesoVenta.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblPesoVenta.Name = "LblPesoVenta"
-        Me.LblPesoVenta.Size = New System.Drawing.Size(23, 22)
+        Me.LblPesoVenta.Size = New System.Drawing.Size(16, 14)
         Me.LblPesoVenta.TabIndex = 236
         Me.LblPesoVenta.Text = "0"
         '
@@ -608,10 +640,10 @@ Partial Class FrmReporteAnimalesPlantel
         Me.Label9.BackColor = System.Drawing.Color.Transparent
         Me.Label9.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label9.Location = New System.Drawing.Point(350, 146)
-        Me.Label9.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label9.Location = New System.Drawing.Point(233, 95)
+        Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(210, 22)
+        Me.Label9.Size = New System.Drawing.Size(146, 14)
         Me.Label9.TabIndex = 235
         Me.Label9.Text = "Peso Total Venta (kg):"
         '
@@ -621,10 +653,10 @@ Partial Class FrmReporteAnimalesPlantel
         Me.LblVendidos.BackColor = System.Drawing.Color.Transparent
         Me.LblVendidos.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblVendidos.ForeColor = System.Drawing.Color.Green
-        Me.LblVendidos.Location = New System.Drawing.Point(163, 146)
-        Me.LblVendidos.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.LblVendidos.Location = New System.Drawing.Point(109, 95)
+        Me.LblVendidos.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblVendidos.Name = "LblVendidos"
-        Me.LblVendidos.Size = New System.Drawing.Size(23, 22)
+        Me.LblVendidos.Size = New System.Drawing.Size(16, 14)
         Me.LblVendidos.TabIndex = 234
         Me.LblVendidos.Text = "0"
         '
@@ -634,10 +666,10 @@ Partial Class FrmReporteAnimalesPlantel
         Me.Label8.BackColor = System.Drawing.Color.Transparent
         Me.Label8.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label8.Location = New System.Drawing.Point(61, 146)
-        Me.Label8.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label8.Location = New System.Drawing.Point(41, 95)
+        Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(98, 22)
+        Me.Label8.Size = New System.Drawing.Size(69, 14)
         Me.Label8.TabIndex = 233
         Me.Label8.Text = "Vendidos:"
         '
@@ -647,10 +679,10 @@ Partial Class FrmReporteAnimalesPlantel
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(373, 91)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label2.Location = New System.Drawing.Point(249, 59)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(187, 22)
+        Me.Label2.Size = New System.Drawing.Size(129, 14)
         Me.Label2.TabIndex = 231
         Me.Label2.Text = "% Mortalidad Total:"
         '
@@ -660,10 +692,10 @@ Partial Class FrmReporteAnimalesPlantel
         Me.PorcentajeMortalidadCampana.BackColor = System.Drawing.Color.Transparent
         Me.PorcentajeMortalidadCampana.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.PorcentajeMortalidadCampana.ForeColor = System.Drawing.Color.Red
-        Me.PorcentajeMortalidadCampana.Location = New System.Drawing.Point(566, 91)
-        Me.PorcentajeMortalidadCampana.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.PorcentajeMortalidadCampana.Location = New System.Drawing.Point(377, 59)
+        Me.PorcentajeMortalidadCampana.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.PorcentajeMortalidadCampana.Name = "PorcentajeMortalidadCampana"
-        Me.PorcentajeMortalidadCampana.Size = New System.Drawing.Size(23, 22)
+        Me.PorcentajeMortalidadCampana.Size = New System.Drawing.Size(16, 14)
         Me.PorcentajeMortalidadCampana.TabIndex = 232
         Me.PorcentajeMortalidadCampana.Text = "0"
         '
@@ -673,10 +705,10 @@ Partial Class FrmReporteAnimalesPlantel
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(406, 37)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label1.Location = New System.Drawing.Point(271, 24)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(154, 22)
+        Me.Label1.Size = New System.Drawing.Size(107, 14)
         Me.Label1.TabIndex = 211
         Me.Label1.Text = "Motalidad Total:"
         '
@@ -686,10 +718,10 @@ Partial Class FrmReporteAnimalesPlantel
         Me.LblTotalMortalidad.BackColor = System.Drawing.Color.Transparent
         Me.LblTotalMortalidad.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblTotalMortalidad.ForeColor = System.Drawing.Color.Red
-        Me.LblTotalMortalidad.Location = New System.Drawing.Point(566, 37)
-        Me.LblTotalMortalidad.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.LblTotalMortalidad.Location = New System.Drawing.Point(377, 24)
+        Me.LblTotalMortalidad.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblTotalMortalidad.Name = "LblTotalMortalidad"
-        Me.LblTotalMortalidad.Size = New System.Drawing.Size(23, 22)
+        Me.LblTotalMortalidad.Size = New System.Drawing.Size(16, 14)
         Me.LblTotalMortalidad.TabIndex = 228
         Me.LblTotalMortalidad.Text = "0"
         '
@@ -697,9 +729,11 @@ Partial Class FrmReporteAnimalesPlantel
         '
         Me.GroupBox1.Controls.Add(Me.RtnMortalidad)
         Me.GroupBox1.Controls.Add(Me.RtnGeneral)
-        Me.GroupBox1.Location = New System.Drawing.Point(2038, 82)
+        Me.GroupBox1.Location = New System.Drawing.Point(1359, 53)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(167, 196)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2)
+        Me.GroupBox1.Size = New System.Drawing.Size(111, 127)
         Me.GroupBox1.TabIndex = 231
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Búsqueda"
@@ -707,9 +741,10 @@ Partial Class FrmReporteAnimalesPlantel
         'RtnMortalidad
         '
         Me.RtnMortalidad.AutoSize = True
-        Me.RtnMortalidad.Location = New System.Drawing.Point(34, 124)
+        Me.RtnMortalidad.Location = New System.Drawing.Point(23, 81)
+        Me.RtnMortalidad.Margin = New System.Windows.Forms.Padding(2)
         Me.RtnMortalidad.Name = "RtnMortalidad"
-        Me.RtnMortalidad.Size = New System.Drawing.Size(108, 24)
+        Me.RtnMortalidad.Size = New System.Drawing.Size(74, 17)
         Me.RtnMortalidad.TabIndex = 2
         Me.RtnMortalidad.TabStop = True
         Me.RtnMortalidad.Text = "Mortalidad"
@@ -718,9 +753,10 @@ Partial Class FrmReporteAnimalesPlantel
         'RtnGeneral
         '
         Me.RtnGeneral.AutoSize = True
-        Me.RtnGeneral.Location = New System.Drawing.Point(34, 53)
+        Me.RtnGeneral.Location = New System.Drawing.Point(23, 34)
+        Me.RtnGeneral.Margin = New System.Windows.Forms.Padding(2)
         Me.RtnGeneral.Name = "RtnGeneral"
-        Me.RtnGeneral.Size = New System.Drawing.Size(91, 24)
+        Me.RtnGeneral.Size = New System.Drawing.Size(62, 17)
         Me.RtnGeneral.TabIndex = 0
         Me.RtnGeneral.TabStop = True
         Me.RtnGeneral.Text = "General"
@@ -732,10 +768,10 @@ Partial Class FrmReporteAnimalesPlantel
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Verdana", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(593, 30)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label3.Location = New System.Drawing.Point(395, 20)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(355, 29)
+        Me.Label3.Size = New System.Drawing.Size(240, 18)
         Me.Label3.TabIndex = 229
         Me.Label3.Text = "DISPONIBLES PARA VENTA :"
         '
@@ -745,10 +781,10 @@ Partial Class FrmReporteAnimalesPlantel
         Me.LblTotalAnimales.BackColor = System.Drawing.Color.Transparent
         Me.LblTotalAnimales.Font = New System.Drawing.Font("Verdana", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblTotalAnimales.ForeColor = System.Drawing.Color.Black
-        Me.LblTotalAnimales.Location = New System.Drawing.Point(960, 30)
-        Me.LblTotalAnimales.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.LblTotalAnimales.Location = New System.Drawing.Point(640, 20)
+        Me.LblTotalAnimales.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblTotalAnimales.Name = "LblTotalAnimales"
-        Me.LblTotalAnimales.Size = New System.Drawing.Size(30, 29)
+        Me.LblTotalAnimales.Size = New System.Drawing.Size(19, 18)
         Me.LblTotalAnimales.TabIndex = 230
         Me.LblTotalAnimales.Text = "0"
         '
@@ -762,10 +798,9 @@ Partial Class FrmReporteAnimalesPlantel
         '
         Me.Ptbx_Cargando.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Ptbx_Cargando.Image = Global.Formularios.My.Resources.Resources.loader
-        Me.Ptbx_Cargando.Location = New System.Drawing.Point(1074, 583)
-        Me.Ptbx_Cargando.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Ptbx_Cargando.Location = New System.Drawing.Point(716, 379)
         Me.Ptbx_Cargando.Name = "Ptbx_Cargando"
-        Me.Ptbx_Cargando.Size = New System.Drawing.Size(64, 57)
+        Me.Ptbx_Cargando.Size = New System.Drawing.Size(43, 37)
         Me.Ptbx_Cargando.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.Ptbx_Cargando.TabIndex = 182
         Me.Ptbx_Cargando.TabStop = False
@@ -773,13 +808,14 @@ Partial Class FrmReporteAnimalesPlantel
         '
         'FrmReporteAnimalesPlantel
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(2220, 1011)
+        Me.ClientSize = New System.Drawing.Size(1283, 657)
         Me.Controls.Add(Me.Ptbx_Cargando)
         Me.Controls.Add(Me.dtgListado)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.ToolStrip1)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "FrmReporteAnimalesPlantel"
@@ -847,4 +883,6 @@ Partial Class FrmReporteAnimalesPlantel
     Friend WithEvents Label18 As Label
     Friend WithEvents LblPesoTotalVentaConsDona As Label
     Friend WithEvents Label14 As Label
+    Friend WithEvents LblConsumoAlimentoTotalCampaña As Label
+    Friend WithEvents Label17 As Label
 End Class
