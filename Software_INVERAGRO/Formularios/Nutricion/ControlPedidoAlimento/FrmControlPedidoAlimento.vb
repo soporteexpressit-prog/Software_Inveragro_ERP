@@ -84,7 +84,7 @@ Public Class FrmControlPedidoAlimento
             ds.Tables(0).Columns(0).ColumnMapping = MappingType.Hidden
             ds.Tables(0).Columns("idUbicacion").ColumnMapping = MappingType.Hidden
             ds.Tables(1).Columns(0).ColumnMapping = MappingType.Hidden
-            ds.Tables(1).Columns(1).ColumnMapping = MappingType.Hidden
+            'ds.Tables(1).Columns(1).ColumnMapping = MappingType.Hidden
             e.Result = ds
         Catch ex As Exception
             e.Cancel = True
