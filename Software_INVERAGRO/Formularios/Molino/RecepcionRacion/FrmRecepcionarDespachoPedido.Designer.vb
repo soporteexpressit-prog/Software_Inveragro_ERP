@@ -38,6 +38,7 @@ Partial Class FrmRecepcionarDespachoPedido
         Dim Appearance14 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance15 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
@@ -48,7 +49,6 @@ Partial Class FrmRecepcionarDespachoPedido
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.btnGuardar = New System.Windows.Forms.ToolStripButton()
         Me.btnCerrar = New System.Windows.Forms.ToolStripButton()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel2.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -69,9 +69,23 @@ Partial Class FrmRecepcionarDespachoPedido
         Me.Panel2.Controls.Add(Me.ToolStrip1)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1164, 697)
+        Me.Panel2.Size = New System.Drawing.Size(776, 453)
         Me.Panel2.TabIndex = 9
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.Label1.Font = New System.Drawing.Font("Verdana", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.Label1.Location = New System.Drawing.Point(517, 74)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(235, 13)
+        Me.Label1.TabIndex = 245
+        Me.Label1.Text = "expresado en unidad de sacos de 50 kg"
         '
         'Label5
         '
@@ -79,10 +93,10 @@ Partial Class FrmRecepcionarDespachoPedido
         Me.Label5.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.Label5.Font = New System.Drawing.Font("Verdana", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label5.Location = New System.Drawing.Point(775, 81)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label5.Location = New System.Drawing.Point(517, 53)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(290, 18)
+        Me.Label5.Size = New System.Drawing.Size(204, 13)
         Me.Label5.TabIndex = 244
         Me.Label5.Text = "El campo ""Sacos Excedentes"" esta"
         '
@@ -92,10 +106,10 @@ Partial Class FrmRecepcionarDespachoPedido
         Me.Label8.BackColor = System.Drawing.Color.Transparent
         Me.Label8.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label8.Location = New System.Drawing.Point(112, 652)
-        Me.Label8.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label8.Location = New System.Drawing.Point(75, 424)
+        Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(334, 22)
+        Me.Label8.Size = New System.Drawing.Size(229, 14)
         Me.Label8.TabIndex = 243
         Me.Label8.Text = "___   ___   ___   ___   ___   ___"
         '
@@ -103,9 +117,10 @@ Partial Class FrmRecepcionarDespachoPedido
         '
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PictureBox1.Image = Global.Formularios.My.Resources.Resources.camion_de_carga__1_
-        Me.PictureBox1.Location = New System.Drawing.Point(23, 610)
+        Me.PictureBox1.Location = New System.Drawing.Point(15, 396)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(64, 64)
+        Me.PictureBox1.Size = New System.Drawing.Size(43, 42)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 242
         Me.PictureBox1.TabStop = False
@@ -116,10 +131,10 @@ Partial Class FrmRecepcionarDespachoPedido
         Me.Label12.BackColor = System.Drawing.Color.Transparent
         Me.Label12.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label12.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label12.Location = New System.Drawing.Point(25, 94)
-        Me.Label12.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label12.Location = New System.Drawing.Point(17, 61)
+        Me.Label12.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(193, 22)
+        Me.Label12.Size = New System.Drawing.Size(126, 14)
         Me.Label12.TabIndex = 216
         Me.Label12.Text = "Fecha Recepción :"
         '
@@ -127,18 +142,19 @@ Partial Class FrmRecepcionarDespachoPedido
         '
         Me.DtpFechaRecepcion.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DtpFechaRecepcion.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DtpFechaRecepcion.Location = New System.Drawing.Point(229, 91)
-        Me.DtpFechaRecepcion.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.DtpFechaRecepcion.Location = New System.Drawing.Point(153, 59)
         Me.DtpFechaRecepcion.Name = "DtpFechaRecepcion"
-        Me.DtpFechaRecepcion.Size = New System.Drawing.Size(170, 28)
+        Me.DtpFechaRecepcion.Size = New System.Drawing.Size(115, 21)
         Me.DtpFechaRecepcion.TabIndex = 217
         '
         'GroupBox1
         '
         Me.GroupBox1.Controls.Add(Me.dtgListado)
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 160)
+        Me.GroupBox1.Location = New System.Drawing.Point(8, 104)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(1141, 422)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox1.Size = New System.Drawing.Size(761, 274)
         Me.GroupBox1.TabIndex = 183
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Detalle de Alimento Enviado"
@@ -213,10 +229,9 @@ Partial Class FrmRecepcionarDespachoPedido
         Me.dtgListado.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy
         Me.dtgListado.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dtgListado.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dtgListado.Location = New System.Drawing.Point(3, 22)
-        Me.dtgListado.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.dtgListado.Location = New System.Drawing.Point(2, 15)
         Me.dtgListado.Name = "dtgListado"
-        Me.dtgListado.Size = New System.Drawing.Size(1135, 397)
+        Me.dtgListado.Size = New System.Drawing.Size(757, 257)
         Me.dtgListado.TabIndex = 175
         Me.dtgListado.Text = "UltraGrid1"
         '
@@ -227,10 +242,10 @@ Partial Class FrmRecepcionarDespachoPedido
         Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnGuardar, Me.btnCerrar})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.ToolStrip1.Margin = New System.Windows.Forms.Padding(3)
+        Me.ToolStrip1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Padding = New System.Windows.Forms.Padding(0, 0, 3, 0)
-        Me.ToolStrip1.Size = New System.Drawing.Size(1164, 40)
+        Me.ToolStrip1.Padding = New System.Windows.Forms.Padding(0, 0, 2, 0)
+        Me.ToolStrip1.Size = New System.Drawing.Size(776, 38)
         Me.ToolStrip1.TabIndex = 52
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -243,7 +258,7 @@ Partial Class FrmRecepcionarDespachoPedido
         Me.btnGuardar.Margin = New System.Windows.Forms.Padding(5)
         Me.btnGuardar.Name = "btnGuardar"
         Me.btnGuardar.Padding = New System.Windows.Forms.Padding(2)
-        Me.btnGuardar.Size = New System.Drawing.Size(163, 30)
+        Me.btnGuardar.Size = New System.Drawing.Size(116, 28)
         Me.btnGuardar.Text = "Recepcionar"
         Me.btnGuardar.ToolTipText = "Recepcionar"
         '
@@ -256,29 +271,17 @@ Partial Class FrmRecepcionarDespachoPedido
         Me.btnCerrar.Margin = New System.Windows.Forms.Padding(5)
         Me.btnCerrar.Name = "btnCerrar"
         Me.btnCerrar.Padding = New System.Windows.Forms.Padding(2)
-        Me.btnCerrar.Size = New System.Drawing.Size(84, 30)
+        Me.btnCerrar.Size = New System.Drawing.Size(66, 28)
         Me.btnCerrar.Text = "Salir"
         Me.btnCerrar.ToolTipText = "Cerrar"
         '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.Label1.Font = New System.Drawing.Font("Verdana", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(775, 114)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(334, 18)
-        Me.Label1.TabIndex = 245
-        Me.Label1.Text = "expresado en unidad de sacos de 50 kg"
-        '
         'FrmRecepcionarDespachoPedido
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1164, 697)
+        Me.ClientSize = New System.Drawing.Size(776, 453)
         Me.Controls.Add(Me.Panel2)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "FrmRecepcionarDespachoPedido"

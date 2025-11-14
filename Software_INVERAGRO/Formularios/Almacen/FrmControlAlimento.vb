@@ -161,10 +161,6 @@ Public Class FrmControlAlimento
         End Try
     End Sub
 
-    Private Sub btncerrar_Click(sender As Object, e As EventArgs) Handles btncerrar.Click
-        Dispose()
-    End Sub
-
     Private Sub btnAsignarUnidadesMedida_Click(sender As Object, e As EventArgs) Handles btnAsignarUnidadesMedida.Click
         Try
             Dim frm As New FrmAsignarUnidadesMedida
@@ -201,5 +197,9 @@ Public Class FrmControlAlimento
         Catch ex As Exception
             clsBasicas.controlException(Name, ex)
         End Try
+    End Sub
+
+    Private Sub btncerrar_Click(sender As Object, e As EventArgs) Handles btncerrar.Click
+        Dispose()
     End Sub
 End Class

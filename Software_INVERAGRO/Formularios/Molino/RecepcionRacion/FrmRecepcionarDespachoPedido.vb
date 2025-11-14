@@ -1,4 +1,5 @@
-﻿Imports CapaNegocio
+﻿Imports System.Windows
+Imports CapaNegocio
 Imports CapaObjetos
 Imports Infragistics.Win.UltraWinGrid
 
@@ -16,10 +17,32 @@ Public Class FrmRecepcionarDespachoPedido
             Dim obj As New coControlRecepcionAlimento With {
                 .Codigo = idRecepcion
             }
-            clsBasicas.Formato_Tablas_Grid_DosUltimasColumnaEditable(dtgListado)
+            clsBasicas.Formato_Tablas_Grid_TresUltimasColumnaEditable(dtgListado)
             dtgListado.DataSource = cn.Cn_ConsultarDetalleRecepcionAlimentoxId(obj)
             dtgListado.DisplayLayout.Bands(0).Columns("iddetrecepcion").Hidden = True
+            ConfigurarColumnaPresentacionSacos()
             FormatoColumnas()
+        Catch ex As Exception
+            clsBasicas.controlException(Name, ex)
+        End Try
+    End Sub
+
+    Private Sub ConfigurarColumnaPresentacionSacos()
+        Try
+            If dtgListado.DisplayLayout.Bands(0).Columns.Exists("Pres. Sacos") Then
+                Dim columna As UltraGridColumn = dtgListado.DisplayLayout.Bands(0).Columns("Pres. Sacos")
+
+                ' Configurar como DropDownList
+                columna.Style = Infragistics.Win.UltraWinGrid.ColumnStyle.DropDownList
+
+                ' Crear la lista de valores
+                Dim valueList As Infragistics.Win.ValueList = dtgListado.DisplayLayout.ValueLists.Add("PresentacionSacos")
+                valueList.ValueListItems.Add(25, "25")
+                valueList.ValueListItems.Add(50, "50")
+
+                ' Asignar la lista a la columna
+                columna.ValueList = valueList
+            End If
         Catch ex As Exception
             clsBasicas.controlException(Name, ex)
         End Try
@@ -36,6 +59,8 @@ Public Class FrmRecepcionarDespachoPedido
                         fila.Cells("Cant. Recibida").Appearance.FontData.Bold = Infragistics.Win.DefaultableBoolean.True
                         fila.Cells("Sacos Extra Recibido").Appearance.BackColor = colorCantidadRecibida
                         fila.Cells("Sacos Extra Recibido").Appearance.FontData.Bold = Infragistics.Win.DefaultableBoolean.True
+                        fila.Cells("Pres. Sacos").Appearance.BackColor = colorCantidadRecibida
+                        fila.Cells("Pres. Sacos").Appearance.FontData.Bold = Infragistics.Win.DefaultableBoolean.True
                     End If
                 Next
                 dtgListado.Refresh()
@@ -185,7 +210,8 @@ Public Class FrmRecepcionarDespachoPedido
                         array_valvulas = array_valvulas &
                             .Cells("iddetrecepcion").Value.ToString.Trim & "+" &
                             .Cells("Cant. Recibida").Value.ToString.Trim & "+" &
-                            .Cells("Sacos Extra Recibido").Value.ToString.Trim & ","
+                            .Cells("Sacos Extra Recibido").Value.ToString.Trim & "+" &
+                            .Cells("Pres. Sacos").Value.ToString.Trim & ","
                     End With
                 End If
             Next
