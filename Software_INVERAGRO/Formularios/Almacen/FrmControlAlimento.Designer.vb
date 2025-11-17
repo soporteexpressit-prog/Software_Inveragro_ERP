@@ -22,7 +22,7 @@ Partial Class FrmControlAlimento
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim Appearance17 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance1 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance2 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance3 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance4 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
@@ -241,11 +241,11 @@ Partial Class FrmControlAlimento
         '
         'lblalmacen
         '
-        Appearance17.BackColor = System.Drawing.Color.Transparent
-        Appearance17.FontData.SizeInPoints = 9.0!
-        Appearance17.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Appearance17.TextVAlignAsString = "Middle"
-        Me.lblalmacen.Appearance = Appearance17
+        Appearance1.BackColor = System.Drawing.Color.Transparent
+        Appearance1.FontData.SizeInPoints = 9.0!
+        Appearance1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
+        Appearance1.TextVAlignAsString = "Middle"
+        Me.lblalmacen.Appearance = Appearance1
         Me.lblalmacen.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblalmacen.Location = New System.Drawing.Point(29, 34)
         Me.lblalmacen.Name = "lblalmacen"

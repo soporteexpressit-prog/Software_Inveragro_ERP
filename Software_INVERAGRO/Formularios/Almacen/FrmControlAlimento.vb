@@ -54,7 +54,7 @@ Public Class FrmControlAlimento
 
     Sub Colorear()
         If (dtgListado.Rows.Count > 0) Then
-            Dim estado As Integer = 7
+            Dim estado As Integer = 8
 
             'tipoAdquisicion
             clsBasicas.Colorear_SegunValor(dtgListado, Color.Red, Color.White, "INACTIVO", estado)
@@ -193,6 +193,18 @@ Public Class FrmControlAlimento
                 End If
             Else
                 msj_advert(MensajesSistema.mensajesGenerales("SELECCIONE_REGISTRO"))
+            End If
+        Catch ex As Exception
+            clsBasicas.controlException(Name, ex)
+        End Try
+    End Sub
+
+    Private Sub dtgListado_InitializeLayout(sender As Object, e As UltraWinGrid.InitializeLayoutEventArgs) Handles dtgListado.InitializeLayout
+        Try
+            If (dtgListado.Rows.Count = 0) Then
+            Else
+                e.Layout.Bands(0).Summaries.Clear()
+                clsBasicas.Totales_Formato(dtgListado, e, 1)
             End If
         Catch ex As Exception
             clsBasicas.controlException(Name, ex)
