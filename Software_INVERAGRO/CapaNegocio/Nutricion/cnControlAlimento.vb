@@ -12,6 +12,14 @@ Public Class cnControlAlimento
         Return cls_at.Cd_ListarRequerimientoAlimento("[w_pa_listar_requerimientos_alimento]", obj)
     End Function
 
+    Public Function Cn_ListarRequerimientoAlimentoReportePreparacion(obj As coControlAlimento) As DataSet
+        Return cls_at.Cd_ListarRequerimientoAlimento("[w_pa_requerimientos_alimento_reporte_preparaciones]", obj)
+    End Function
+
+    Public Function Cn_InsumosUtilizadoPreparacionxIdSalida(obj As coControlAlimento) As DataTable
+        Return cls_at.Cd_InsumosUtilizadoPreparacionxIdSalida("[w_pa_reporte_alimento_preparado_semana_x_ids_salida]", obj)
+    End Function
+
     Public Function Cn_ObtenerRequerimientoAlimentoxId(obj As coControlAlimento) As DataTable
         Return cls_at.Cd_ObtenerRequerimientoAlimentoxId("[w_pa_obtener_requerimiento_alimento_x_id]", obj)
     End Function

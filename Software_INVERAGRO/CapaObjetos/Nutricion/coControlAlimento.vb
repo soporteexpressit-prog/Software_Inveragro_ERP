@@ -21,6 +21,7 @@
     Private _ListaDestinadoGalponCorral As String
     Private _ListaAlimentoCerdo As String
     Private _idsdetallesalida As String
+    Private _IdsSalida As String
     Private _IdUbicacion As Integer
     Private _IdSalida As Integer
     Private _Tipo As String
@@ -83,6 +84,15 @@
         End Get
         Set(value As String)
             _idsdetallesalida = value
+        End Set
+    End Property
+
+    Public Property IdsSalida As String
+        Get
+            Return _IdsSalida
+        End Get
+        Set(value As String)
+            _IdsSalida = value
         End Set
     End Property
 

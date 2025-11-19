@@ -52,6 +52,21 @@ Public Class cdControlAlimento
         Return ds
     End Function
 
+    Public Function Cd_InsumosUtilizadoPreparacionxIdSalida(name As String, obj As coControlAlimento) As DataTable
+        Dim dt As New DataTable
+        Try
+            con.Abrir()
+            Dim da As New SqlDataAdapter(name, con.con)
+            da.SelectCommand.CommandType = 4
+            da.SelectCommand.Parameters.AddWithValue("@idsSalida", obj.IdsSalida)
+            da.Fill(dt)
+        Catch ex As Exception
+            Throw ex
+        End Try
+        con.Salir()
+        Return dt
+    End Function
+
     Public Function Cd_ObtenerRequerimientoAlimentoxId(name As String, obj As coControlAlimento) As DataTable
         Dim dt As New DataTable
         Try

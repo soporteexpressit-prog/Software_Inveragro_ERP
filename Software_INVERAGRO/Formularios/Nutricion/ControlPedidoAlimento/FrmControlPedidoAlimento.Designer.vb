@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FrmControlPedidoAlimento
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,8 +20,9 @@ Partial Class FrmControlPedidoAlimento
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmControlPedidoAlimento))
         Dim Appearance1 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance2 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance3 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
@@ -37,10 +38,20 @@ Partial Class FrmControlPedidoAlimento
         Dim Appearance13 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance14 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance15 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmControlPedidoAlimento))
         Me.BarraOpciones = New System.Windows.Forms.ToolStrip()
+        Me.btnNuevoNpea = New System.Windows.Forms.ToolStripButton()
+        Me.btnAprobarNpea = New System.Windows.Forms.ToolStripButton()
+        Me.btnCancelarNpea = New System.Windows.Forms.ToolStripButton()
+        Me.BtnConsolidadoRacionmodulonutricion = New System.Windows.Forms.ToolStripButton()
+        Me.btnExportarNpea = New System.Windows.Forms.ToolStripButton()
+        Me.BtnModificarCampaña = New System.Windows.Forms.ToolStripButton()
+        Me.btncerrar = New System.Windows.Forms.ToolStripButton()
+        Me.btnreporteRrhhctrlcapaci = New System.Windows.Forms.ToolStripDropDownButton()
+        Me.BtnReportePreparaciones = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BtnReporteSemanal = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.GrupoFiltros = New System.Windows.Forms.GroupBox()
+        Me.btnBuscar = New System.Windows.Forms.Button()
         Me.dtpFechaHasta = New System.Windows.Forms.DateTimePicker()
         Me.cmbEstado = New System.Windows.Forms.ComboBox()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -51,15 +62,7 @@ Partial Class FrmControlPedidoAlimento
         Me.dtgListado = New Infragistics.Win.UltraWinGrid.UltraGrid()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         Me.Ptbx_Cargando = New System.Windows.Forms.PictureBox()
-        Me.btnBuscar = New System.Windows.Forms.Button()
-        Me.btnNuevoNpea = New System.Windows.Forms.ToolStripButton()
-        Me.btnAprobarNpea = New System.Windows.Forms.ToolStripButton()
-        Me.btnCancelarNpea = New System.Windows.Forms.ToolStripButton()
-        Me.BtnConsolidadoRacionmodulonutricion = New System.Windows.Forms.ToolStripButton()
-        Me.BtnReporteSemanal = New System.Windows.Forms.ToolStripButton()
-        Me.btnExportarNpea = New System.Windows.Forms.ToolStripButton()
-        Me.btncerrar = New System.Windows.Forms.ToolStripButton()
-        Me.BtnModificarCampaña = New System.Windows.Forms.ToolStripButton()
+        Me.BtnHistoricoPreparaciones = New System.Windows.Forms.ToolStripMenuItem()
         Me.BarraOpciones.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.GrupoFiltros.SuspendLayout()
@@ -73,14 +76,126 @@ Partial Class FrmControlPedidoAlimento
         Me.BarraOpciones.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.BarraOpciones.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
         Me.BarraOpciones.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.BarraOpciones.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnNuevoNpea, Me.btnAprobarNpea, Me.btnCancelarNpea, Me.BtnConsolidadoRacionmodulonutricion, Me.BtnReporteSemanal, Me.btnExportarNpea, Me.BtnModificarCampaña, Me.btncerrar})
+        Me.BarraOpciones.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnNuevoNpea, Me.btnAprobarNpea, Me.btnCancelarNpea, Me.BtnConsolidadoRacionmodulonutricion, Me.btnExportarNpea, Me.BtnModificarCampaña, Me.btncerrar, Me.btnreporteRrhhctrlcapaci})
         Me.BarraOpciones.Location = New System.Drawing.Point(0, 165)
-        Me.BarraOpciones.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.BarraOpciones.Margin = New System.Windows.Forms.Padding(2)
         Me.BarraOpciones.Name = "BarraOpciones"
         Me.BarraOpciones.Padding = New System.Windows.Forms.Padding(0, 0, 2, 0)
-        Me.BarraOpciones.Size = New System.Drawing.Size(1283, 38)
+        Me.BarraOpciones.Size = New System.Drawing.Size(1425, 38)
         Me.BarraOpciones.TabIndex = 52
         Me.BarraOpciones.Text = "ToolStrip1"
+        '
+        'btnNuevoNpea
+        '
+        Me.btnNuevoNpea.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnNuevoNpea.ForeColor = System.Drawing.Color.White
+        Me.btnNuevoNpea.Image = Global.Formularios.My.Resources.Resources.nuevo
+        Me.btnNuevoNpea.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btnNuevoNpea.Margin = New System.Windows.Forms.Padding(5)
+        Me.btnNuevoNpea.Name = "btnNuevoNpea"
+        Me.btnNuevoNpea.Padding = New System.Windows.Forms.Padding(2)
+        Me.btnNuevoNpea.Size = New System.Drawing.Size(81, 28)
+        Me.btnNuevoNpea.Text = "Nuevo "
+        Me.btnNuevoNpea.ToolTipText = "Nuevo "
+        '
+        'btnAprobarNpea
+        '
+        Me.btnAprobarNpea.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAprobarNpea.ForeColor = System.Drawing.Color.White
+        Me.btnAprobarNpea.Image = Global.Formularios.My.Resources.Resources.aprobado__1_
+        Me.btnAprobarNpea.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btnAprobarNpea.Margin = New System.Windows.Forms.Padding(5)
+        Me.btnAprobarNpea.Name = "btnAprobarNpea"
+        Me.btnAprobarNpea.Padding = New System.Windows.Forms.Padding(2)
+        Me.btnAprobarNpea.Size = New System.Drawing.Size(88, 28)
+        Me.btnAprobarNpea.Text = "Aprobar"
+        '
+        'btnCancelarNpea
+        '
+        Me.btnCancelarNpea.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCancelarNpea.ForeColor = System.Drawing.Color.White
+        Me.btnCancelarNpea.Image = Global.Formularios.My.Resources.Resources.cancelar
+        Me.btnCancelarNpea.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btnCancelarNpea.Margin = New System.Windows.Forms.Padding(5)
+        Me.btnCancelarNpea.Name = "btnCancelarNpea"
+        Me.btnCancelarNpea.Padding = New System.Windows.Forms.Padding(2)
+        Me.btnCancelarNpea.Size = New System.Drawing.Size(78, 28)
+        Me.btnCancelarNpea.Text = "Anular"
+        '
+        'BtnConsolidadoRacionmodulonutricion
+        '
+        Me.BtnConsolidadoRacionmodulonutricion.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnConsolidadoRacionmodulonutricion.ForeColor = System.Drawing.Color.White
+        Me.BtnConsolidadoRacionmodulonutricion.Image = Global.Formularios.My.Resources.Resources.consolidar
+        Me.BtnConsolidadoRacionmodulonutricion.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BtnConsolidadoRacionmodulonutricion.Margin = New System.Windows.Forms.Padding(5)
+        Me.BtnConsolidadoRacionmodulonutricion.Name = "BtnConsolidadoRacionmodulonutricion"
+        Me.BtnConsolidadoRacionmodulonutricion.Padding = New System.Windows.Forms.Padding(2)
+        Me.BtnConsolidadoRacionmodulonutricion.Size = New System.Drawing.Size(239, 28)
+        Me.BtnConsolidadoRacionmodulonutricion.Text = "Consolidado de Pedidos Ración"
+        Me.BtnConsolidadoRacionmodulonutricion.ToolTipText = "Consolidado"
+        '
+        'btnExportarNpea
+        '
+        Me.btnExportarNpea.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnExportarNpea.ForeColor = System.Drawing.Color.White
+        Me.btnExportarNpea.Image = Global.Formularios.My.Resources.Resources.exportar2
+        Me.btnExportarNpea.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btnExportarNpea.Margin = New System.Windows.Forms.Padding(5)
+        Me.btnExportarNpea.Name = "btnExportarNpea"
+        Me.btnExportarNpea.Padding = New System.Windows.Forms.Padding(2)
+        Me.btnExportarNpea.Size = New System.Drawing.Size(92, 28)
+        Me.btnExportarNpea.Text = "Exportar"
+        Me.btnExportarNpea.ToolTipText = "Exportar"
+        '
+        'BtnModificarCampaña
+        '
+        Me.BtnModificarCampaña.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnModificarCampaña.ForeColor = System.Drawing.Color.White
+        Me.BtnModificarCampaña.Image = Global.Formularios.My.Resources.Resources.registro
+        Me.BtnModificarCampaña.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BtnModificarCampaña.Margin = New System.Windows.Forms.Padding(5)
+        Me.BtnModificarCampaña.Name = "BtnModificarCampaña"
+        Me.BtnModificarCampaña.Padding = New System.Windows.Forms.Padding(2)
+        Me.BtnModificarCampaña.Size = New System.Drawing.Size(161, 28)
+        Me.BtnModificarCampaña.Text = "Modificar Campaña"
+        '
+        'btncerrar
+        '
+        Me.btncerrar.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btncerrar.ForeColor = System.Drawing.Color.White
+        Me.btncerrar.Image = Global.Formularios.My.Resources.Resources.salir
+        Me.btncerrar.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btncerrar.Margin = New System.Windows.Forms.Padding(5)
+        Me.btncerrar.Name = "btncerrar"
+        Me.btncerrar.Padding = New System.Windows.Forms.Padding(2)
+        Me.btncerrar.Size = New System.Drawing.Size(66, 28)
+        Me.btncerrar.Text = "Salir"
+        '
+        'btnreporteRrhhctrlcapaci
+        '
+        Me.btnreporteRrhhctrlcapaci.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.btnreporteRrhhctrlcapaci.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnReportePreparaciones, Me.BtnHistoricoPreparaciones, Me.BtnReporteSemanal})
+        Me.btnreporteRrhhctrlcapaci.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnreporteRrhhctrlcapaci.ForeColor = System.Drawing.Color.White
+        Me.btnreporteRrhhctrlcapaci.Image = Global.Formularios.My.Resources.Resources.reporte
+        Me.btnreporteRrhhctrlcapaci.Margin = New System.Windows.Forms.Padding(5)
+        Me.btnreporteRrhhctrlcapaci.Name = "btnreporteRrhhctrlcapaci"
+        Me.btnreporteRrhhctrlcapaci.Padding = New System.Windows.Forms.Padding(2)
+        Me.btnreporteRrhhctrlcapaci.Size = New System.Drawing.Size(103, 28)
+        Me.btnreporteRrhhctrlcapaci.Text = "Reportes"
+        '
+        'BtnReportePreparaciones
+        '
+        Me.BtnReportePreparaciones.Name = "BtnReportePreparaciones"
+        Me.BtnReportePreparaciones.Size = New System.Drawing.Size(252, 22)
+        Me.BtnReportePreparaciones.Text = "Reporte Preparaciones"
+        '
+        'BtnReporteSemanal
+        '
+        Me.BtnReporteSemanal.Name = "BtnReporteSemanal"
+        Me.BtnReporteSemanal.Size = New System.Drawing.Size(252, 22)
+        Me.BtnReporteSemanal.Text = "Reporte Semanal"
         '
         'Panel2
         '
@@ -90,9 +205,9 @@ Partial Class FrmControlPedidoAlimento
         Me.Panel2.Controls.Add(Me.BarraOpciones)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1283, 203)
+        Me.Panel2.Size = New System.Drawing.Size(1425, 203)
         Me.Panel2.TabIndex = 8
         '
         'GrupoFiltros
@@ -105,13 +220,28 @@ Partial Class FrmControlPedidoAlimento
         Me.GrupoFiltros.Controls.Add(Me.Label3)
         Me.GrupoFiltros.Controls.Add(Me.dtpFechaDesde)
         Me.GrupoFiltros.Location = New System.Drawing.Point(19, 51)
-        Me.GrupoFiltros.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GrupoFiltros.Margin = New System.Windows.Forms.Padding(2)
         Me.GrupoFiltros.Name = "GrupoFiltros"
-        Me.GrupoFiltros.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GrupoFiltros.Padding = New System.Windows.Forms.Padding(2)
         Me.GrupoFiltros.Size = New System.Drawing.Size(832, 106)
         Me.GrupoFiltros.TabIndex = 159
         Me.GrupoFiltros.TabStop = False
         Me.GrupoFiltros.Text = "Filtros de Búsqueda"
+        '
+        'btnBuscar
+        '
+        Me.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnBuscar.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnBuscar.Image = CType(resources.GetObject("btnBuscar.Image"), System.Drawing.Image)
+        Me.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnBuscar.Location = New System.Drawing.Point(681, 46)
+        Me.btnBuscar.Name = "btnBuscar"
+        Me.btnBuscar.Padding = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.btnBuscar.Size = New System.Drawing.Size(101, 40)
+        Me.btnBuscar.TabIndex = 162
+        Me.btnBuscar.Text = "Buscar"
+        Me.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnBuscar.UseVisualStyleBackColor = True
         '
         'dtpFechaHasta
         '
@@ -266,7 +396,7 @@ Partial Class FrmControlPedidoAlimento
         Me.dtgListado.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dtgListado.Location = New System.Drawing.Point(0, 203)
         Me.dtgListado.Name = "dtgListado"
-        Me.dtgListado.Size = New System.Drawing.Size(1283, 305)
+        Me.dtgListado.Size = New System.Drawing.Size(1425, 305)
         Me.dtgListado.TabIndex = 9
         Me.dtgListado.Text = "UltraGrid1"
         '
@@ -277,7 +407,7 @@ Partial Class FrmControlPedidoAlimento
         '
         Me.Ptbx_Cargando.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Ptbx_Cargando.Image = Global.Formularios.My.Resources.Resources.loader
-        Me.Ptbx_Cargando.Location = New System.Drawing.Point(689, 319)
+        Me.Ptbx_Cargando.Location = New System.Drawing.Point(760, 319)
         Me.Ptbx_Cargando.Name = "Ptbx_Cargando"
         Me.Ptbx_Cargando.Size = New System.Drawing.Size(43, 37)
         Me.Ptbx_Cargando.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -285,131 +415,21 @@ Partial Class FrmControlPedidoAlimento
         Me.Ptbx_Cargando.TabStop = False
         Me.Ptbx_Cargando.Visible = False
         '
-        'btnBuscar
+        'BtnHistoricoPreparaciones
         '
-        Me.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnBuscar.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnBuscar.Image = CType(resources.GetObject("btnBuscar.Image"), System.Drawing.Image)
-        Me.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnBuscar.Location = New System.Drawing.Point(681, 46)
-        Me.btnBuscar.Name = "btnBuscar"
-        Me.btnBuscar.Padding = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.btnBuscar.Size = New System.Drawing.Size(101, 40)
-        Me.btnBuscar.TabIndex = 162
-        Me.btnBuscar.Text = "Buscar"
-        Me.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnBuscar.UseVisualStyleBackColor = True
-        '
-        'btnNuevoNpea
-        '
-        Me.btnNuevoNpea.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnNuevoNpea.ForeColor = System.Drawing.Color.White
-        Me.btnNuevoNpea.Image = Global.Formularios.My.Resources.Resources.nuevo
-        Me.btnNuevoNpea.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.btnNuevoNpea.Margin = New System.Windows.Forms.Padding(5)
-        Me.btnNuevoNpea.Name = "btnNuevoNpea"
-        Me.btnNuevoNpea.Padding = New System.Windows.Forms.Padding(2)
-        Me.btnNuevoNpea.Size = New System.Drawing.Size(81, 28)
-        Me.btnNuevoNpea.Text = "Nuevo "
-        Me.btnNuevoNpea.ToolTipText = "Nuevo "
-        '
-        'btnAprobarNpea
-        '
-        Me.btnAprobarNpea.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAprobarNpea.ForeColor = System.Drawing.Color.White
-        Me.btnAprobarNpea.Image = Global.Formularios.My.Resources.Resources.aprobado__1_
-        Me.btnAprobarNpea.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.btnAprobarNpea.Margin = New System.Windows.Forms.Padding(5)
-        Me.btnAprobarNpea.Name = "btnAprobarNpea"
-        Me.btnAprobarNpea.Padding = New System.Windows.Forms.Padding(2)
-        Me.btnAprobarNpea.Size = New System.Drawing.Size(88, 28)
-        Me.btnAprobarNpea.Text = "Aprobar"
-        '
-        'btnCancelarNpea
-        '
-        Me.btnCancelarNpea.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCancelarNpea.ForeColor = System.Drawing.Color.White
-        Me.btnCancelarNpea.Image = Global.Formularios.My.Resources.Resources.cancelar
-        Me.btnCancelarNpea.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.btnCancelarNpea.Margin = New System.Windows.Forms.Padding(5)
-        Me.btnCancelarNpea.Name = "btnCancelarNpea"
-        Me.btnCancelarNpea.Padding = New System.Windows.Forms.Padding(2)
-        Me.btnCancelarNpea.Size = New System.Drawing.Size(78, 28)
-        Me.btnCancelarNpea.Text = "Anular"
-        '
-        'BtnConsolidadoRacionmodulonutricion
-        '
-        Me.BtnConsolidadoRacionmodulonutricion.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnConsolidadoRacionmodulonutricion.ForeColor = System.Drawing.Color.White
-        Me.BtnConsolidadoRacionmodulonutricion.Image = Global.Formularios.My.Resources.Resources.consolidar
-        Me.BtnConsolidadoRacionmodulonutricion.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.BtnConsolidadoRacionmodulonutricion.Margin = New System.Windows.Forms.Padding(5)
-        Me.BtnConsolidadoRacionmodulonutricion.Name = "BtnConsolidadoRacionmodulonutricion"
-        Me.BtnConsolidadoRacionmodulonutricion.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnConsolidadoRacionmodulonutricion.Size = New System.Drawing.Size(239, 28)
-        Me.BtnConsolidadoRacionmodulonutricion.Text = "Consolidado de Pedidos Ración"
-        Me.BtnConsolidadoRacionmodulonutricion.ToolTipText = "Consolidado"
-        '
-        'BtnReporteSemanal
-        '
-        Me.BtnReporteSemanal.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.BtnReporteSemanal.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnReporteSemanal.ForeColor = System.Drawing.Color.White
-        Me.BtnReporteSemanal.Image = Global.Formularios.My.Resources.Resources.Reporte_24_px
-        Me.BtnReporteSemanal.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.BtnReporteSemanal.Margin = New System.Windows.Forms.Padding(5)
-        Me.BtnReporteSemanal.Name = "BtnReporteSemanal"
-        Me.BtnReporteSemanal.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnReporteSemanal.Size = New System.Drawing.Size(148, 28)
-        Me.BtnReporteSemanal.Text = "Reporte Semanal"
-        Me.BtnReporteSemanal.ToolTipText = "Exportar"
-        '
-        'btnExportarNpea
-        '
-        Me.btnExportarNpea.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnExportarNpea.ForeColor = System.Drawing.Color.White
-        Me.btnExportarNpea.Image = Global.Formularios.My.Resources.Resources.exportar2
-        Me.btnExportarNpea.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.btnExportarNpea.Margin = New System.Windows.Forms.Padding(5)
-        Me.btnExportarNpea.Name = "btnExportarNpea"
-        Me.btnExportarNpea.Padding = New System.Windows.Forms.Padding(2)
-        Me.btnExportarNpea.Size = New System.Drawing.Size(92, 28)
-        Me.btnExportarNpea.Text = "Exportar"
-        Me.btnExportarNpea.ToolTipText = "Exportar"
-        '
-        'btncerrar
-        '
-        Me.btncerrar.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btncerrar.ForeColor = System.Drawing.Color.White
-        Me.btncerrar.Image = Global.Formularios.My.Resources.Resources.salir
-        Me.btncerrar.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.btncerrar.Margin = New System.Windows.Forms.Padding(5)
-        Me.btncerrar.Name = "btncerrar"
-        Me.btncerrar.Padding = New System.Windows.Forms.Padding(2)
-        Me.btncerrar.Size = New System.Drawing.Size(66, 28)
-        Me.btncerrar.Text = "Salir"
-        '
-        'BtnModificarCampaña
-        '
-        Me.BtnModificarCampaña.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnModificarCampaña.ForeColor = System.Drawing.Color.White
-        Me.BtnModificarCampaña.Image = Global.Formularios.My.Resources.Resources.registro
-        Me.BtnModificarCampaña.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.BtnModificarCampaña.Margin = New System.Windows.Forms.Padding(5)
-        Me.BtnModificarCampaña.Name = "BtnModificarCampaña"
-        Me.BtnModificarCampaña.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnModificarCampaña.Size = New System.Drawing.Size(161, 28)
-        Me.BtnModificarCampaña.Text = "Modificar Campaña"
+        Me.BtnHistoricoPreparaciones.Name = "BtnHistoricoPreparaciones"
+        Me.BtnHistoricoPreparaciones.Size = New System.Drawing.Size(252, 22)
+        Me.BtnHistoricoPreparaciones.Text = "Histórico de Preparaciones"
         '
         'FrmControlPedidoAlimento
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1283, 508)
+        Me.ClientSize = New System.Drawing.Size(1425, 508)
         Me.Controls.Add(Me.Ptbx_Cargando)
         Me.Controls.Add(Me.dtgListado)
         Me.Controls.Add(Me.Panel2)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "FrmControlPedidoAlimento"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "CONTROL DE PEDIDO DE ALIMENTO"
@@ -445,6 +465,9 @@ Partial Class FrmControlPedidoAlimento
     Friend WithEvents btnCancelarNpea As ToolStripButton
     Friend WithEvents BtnConsolidadoRacionmodulonutricion As ToolStripButton
     Friend WithEvents GrupoFiltros As GroupBox
-    Friend WithEvents BtnReporteSemanal As ToolStripButton
     Friend WithEvents BtnModificarCampaña As ToolStripButton
+    Friend WithEvents btnreporteRrhhctrlcapaci As ToolStripDropDownButton
+    Friend WithEvents BtnReportePreparaciones As ToolStripMenuItem
+    Friend WithEvents BtnReporteSemanal As ToolStripMenuItem
+    Friend WithEvents BtnHistoricoPreparaciones As ToolStripMenuItem
 End Class

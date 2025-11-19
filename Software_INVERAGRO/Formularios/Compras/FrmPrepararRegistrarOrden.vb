@@ -1,6 +1,5 @@
 ﻿Imports CapaNegocio
 Imports CapaObjetos
-Imports Infragistics.Win
 Imports Infragistics.Win.UltraWinGrid
 
 Public Class FrmPrepararRegistrarOrden

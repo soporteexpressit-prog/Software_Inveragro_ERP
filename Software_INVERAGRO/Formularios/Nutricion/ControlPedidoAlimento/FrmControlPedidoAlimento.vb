@@ -263,15 +263,6 @@ Public Class FrmControlPedidoAlimento
         End If
     End Sub
 
-    Private Sub BtnReporteSemanal_Click(sender As Object, e As EventArgs) Handles BtnReporteSemanal.Click
-        Try
-            Dim frm As New FrmReporteSemanalAlimentoxRacion
-            frm.ShowDialog()
-        Catch ex As Exception
-            clsBasicas.controlException(Name, ex)
-        End Try
-    End Sub
-
     Private Sub BtnModificarCampaña_Click(sender As Object, e As EventArgs) Handles BtnModificarCampaña.Click
         Dim activeRow As Infragistics.Win.UltraWinGrid.UltraGridRow = dtgListado.ActiveRow
         If (dtgListado.Rows.Count > 0) Then
@@ -299,8 +290,34 @@ Public Class FrmControlPedidoAlimento
         End If
     End Sub
 
+    Private Sub BtnReportePreparaciones_Click(sender As Object, e As EventArgs) Handles BtnReportePreparaciones.Click
+        Try
+            Dim frm As New FrmReportePreparacionesAlimento
+            frm.ShowDialog()
+        Catch ex As Exception
+            clsBasicas.controlException(Name, ex)
+        End Try
+    End Sub
+
+    Private Sub BtnReporteSemanal_Click(sender As Object, e As EventArgs) Handles BtnReporteSemanal.Click
+        Try
+            Dim frm As New FrmReporteSemanalAlimentoxRacion
+            frm.ShowDialog()
+        Catch ex As Exception
+            clsBasicas.controlException(Name, ex)
+        End Try
+    End Sub
+
+    Private Sub BtnHistoricoPreparaciones_Click(sender As Object, e As EventArgs) Handles BtnHistoricoPreparaciones.Click
+        Try
+            Dim frm As New FrmHistoricoPreparaciones
+            frm.ShowDialog()
+        Catch ex As Exception
+            clsBasicas.controlException(Name, ex)
+        End Try
+    End Sub
+
     Private Sub btncerrar_Click(sender As Object, e As EventArgs) Handles btncerrar.Click
         Dispose()
     End Sub
-
 End Class

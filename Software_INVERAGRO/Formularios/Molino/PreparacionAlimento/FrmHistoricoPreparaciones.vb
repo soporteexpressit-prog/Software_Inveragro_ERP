@@ -80,7 +80,7 @@ Public Class FrmHistoricoPreparaciones
 
     Sub Colorear()
         If (dtgListadoRacionesPreparado.Rows.Count > 0) Then
-            Dim estado As Integer = 5
+            Dim estado As Integer = 6
 
             'estadoRepetidora
             clsBasicas.Colorear_SegunValor(dtgListadoRacionesPreparado, Color.Green, Color.White, "REALIZADO", estado)
@@ -163,6 +163,7 @@ Public Class FrmHistoricoPreparaciones
                 e.Layout.Bands(0).Summaries.Clear()
                 clsBasicas.Totales_Formato(dtgListadoRacionesPreparado, e, 1)
                 clsBasicas.SumarTotales_Formato(dtgListadoRacionesPreparado, e, 2)
+                clsBasicas.SumarTotales_Formato(dtgListadoRacionesPreparado, e, 5)
             End If
         Catch ex As Exception
             clsBasicas.controlException(Name, ex)
