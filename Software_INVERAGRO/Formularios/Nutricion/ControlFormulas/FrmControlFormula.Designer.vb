@@ -80,9 +80,9 @@ Partial Class FrmControlFormula
         Me.Panel2.Controls.Add(Me.BarraOpciones)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1299, 202)
+        Me.Panel2.Size = New System.Drawing.Size(1484, 202)
         Me.Panel2.TabIndex = 9
         '
         'Label6
@@ -108,9 +108,9 @@ Partial Class FrmControlFormula
         Me.GrupoFiltros.Controls.Add(Me.dtpFechaHasta)
         Me.GrupoFiltros.Controls.Add(Me.dtpFechaDesde)
         Me.GrupoFiltros.Location = New System.Drawing.Point(17, 58)
-        Me.GrupoFiltros.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GrupoFiltros.Margin = New System.Windows.Forms.Padding(2)
         Me.GrupoFiltros.Name = "GrupoFiltros"
-        Me.GrupoFiltros.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GrupoFiltros.Padding = New System.Windows.Forms.Padding(2)
         Me.GrupoFiltros.Size = New System.Drawing.Size(862, 96)
         Me.GrupoFiltros.TabIndex = 169
         Me.GrupoFiltros.TabStop = False
@@ -150,7 +150,7 @@ Partial Class FrmControlFormula
         Me.CmbEstado.FormattingEnabled = True
         Me.CmbEstado.Items.AddRange(New Object() {"ACTIVO", "FINALIZADO", "CANCELADO"})
         Me.CmbEstado.Location = New System.Drawing.Point(531, 31)
-        Me.CmbEstado.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.CmbEstado.Margin = New System.Windows.Forms.Padding(2)
         Me.CmbEstado.Name = "CmbEstado"
         Me.CmbEstado.Size = New System.Drawing.Size(112, 21)
         Me.CmbEstado.TabIndex = 164
@@ -200,9 +200,9 @@ Partial Class FrmControlFormula
         'GroupBox1
         '
         Me.GroupBox1.Location = New System.Drawing.Point(342, 190)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2)
         Me.GroupBox1.Size = New System.Drawing.Size(5, 5)
         Me.GroupBox1.TabIndex = 168
         Me.GroupBox1.TabStop = False
@@ -216,10 +216,10 @@ Partial Class FrmControlFormula
         Me.BarraOpciones.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.BarraOpciones.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnNutricionista, Me.BtnAccesoVisualizacion, Me.btnNuevaNucleoNctrfor, Me.btnInsumosNctrfor, Me.btnCrearFormulaNctrfor, Me.btnAsignarFormulaNctrfor, Me.BtnVerFormulamolinocontrolformula, Me.BtnRacionesAsignadasMolinocontrolform, Me.BtnActivar, Me.BtnCancelarnutricionmodulo, Me.btnexportarNctrfor})
         Me.BarraOpciones.Location = New System.Drawing.Point(0, 164)
-        Me.BarraOpciones.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.BarraOpciones.Margin = New System.Windows.Forms.Padding(2)
         Me.BarraOpciones.Name = "BarraOpciones"
         Me.BarraOpciones.Padding = New System.Windows.Forms.Padding(0, 0, 2, 0)
-        Me.BarraOpciones.Size = New System.Drawing.Size(1299, 38)
+        Me.BarraOpciones.Size = New System.Drawing.Size(1484, 38)
         Me.BarraOpciones.TabIndex = 52
         Me.BarraOpciones.Text = "ToolStrip1"
         '
@@ -431,7 +431,7 @@ Partial Class FrmControlFormula
         Me.dtgListado.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dtgListado.Location = New System.Drawing.Point(0, 202)
         Me.dtgListado.Name = "dtgListado"
-        Me.dtgListado.Size = New System.Drawing.Size(1299, 332)
+        Me.dtgListado.Size = New System.Drawing.Size(1484, 332)
         Me.dtgListado.TabIndex = 10
         Me.dtgListado.Text = "UltraGrid1"
         '
@@ -442,7 +442,7 @@ Partial Class FrmControlFormula
         '
         Me.Ptbx_Cargando.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Ptbx_Cargando.Image = Global.Formularios.My.Resources.Resources.loader
-        Me.Ptbx_Cargando.Location = New System.Drawing.Point(678, 354)
+        Me.Ptbx_Cargando.Location = New System.Drawing.Point(771, 354)
         Me.Ptbx_Cargando.Name = "Ptbx_Cargando"
         Me.Ptbx_Cargando.Size = New System.Drawing.Size(43, 37)
         Me.Ptbx_Cargando.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -454,11 +454,11 @@ Partial Class FrmControlFormula
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1299, 534)
+        Me.ClientSize = New System.Drawing.Size(1484, 534)
         Me.Controls.Add(Me.Ptbx_Cargando)
         Me.Controls.Add(Me.dtgListado)
         Me.Controls.Add(Me.Panel2)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "FrmControlFormula"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "CONTROL DE FORMULAS"

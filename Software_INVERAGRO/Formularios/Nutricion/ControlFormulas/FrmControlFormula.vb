@@ -94,7 +94,7 @@ Public Class FrmControlFormula
 
     Sub Colorear()
         If (dtgListado.Rows.Count > 0) Then
-            Dim estado As Integer = 7
+            Dim estado As Integer = 8
 
             'estado
             clsBasicas.Colorear_SegunValor(dtgListado, Color.Green, Color.White, "ACTIVO", estado)

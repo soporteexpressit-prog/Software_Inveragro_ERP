@@ -80,7 +80,7 @@ Public Class FrmHistoricoPreparaciones
 
     Sub Colorear()
         If (dtgListadoRacionesPreparado.Rows.Count > 0) Then
-            Dim estado As Integer = 6
+            Dim estado As Integer = 7
 
             'estadoRepetidora
             clsBasicas.Colorear_SegunValor(dtgListadoRacionesPreparado, Color.Green, Color.White, "REALIZADO", estado)

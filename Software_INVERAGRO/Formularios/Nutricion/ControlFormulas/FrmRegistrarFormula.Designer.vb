@@ -93,6 +93,7 @@ Partial Class FrmRegistrarFormula
         Me.HeaderEncabezado = New Infragistics.Win.Misc.UltraGroupBox()
         Me.dtgListadoInsumos = New Infragistics.Win.UltraWinGrid.UltraGrid()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
+        Me.Label10 = New System.Windows.Forms.Label()
         CType(Me.dtgListadoExcel, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ToolStrip1.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -178,10 +179,9 @@ Partial Class FrmRegistrarFormula
         Me.dtgListadoExcel.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy
         Me.dtgListadoExcel.Dock = System.Windows.Forms.DockStyle.Right
         Me.dtgListadoExcel.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dtgListadoExcel.Location = New System.Drawing.Point(334, 31)
-        Me.dtgListadoExcel.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.dtgListadoExcel.Location = New System.Drawing.Point(221, 23)
         Me.dtgListadoExcel.Name = "dtgListadoExcel"
-        Me.dtgListadoExcel.Size = New System.Drawing.Size(1360, 788)
+        Me.dtgListadoExcel.Size = New System.Drawing.Size(907, 508)
         Me.dtgListadoExcel.TabIndex = 180
         Me.dtgListadoExcel.Text = "UltraGrid1"
         '
@@ -192,10 +192,10 @@ Partial Class FrmRegistrarFormula
         Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnGuardar, Me.btnSalir})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.ToolStrip1.Margin = New System.Windows.Forms.Padding(3)
+        Me.ToolStrip1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Padding = New System.Windows.Forms.Padding(0, 0, 3, 0)
-        Me.ToolStrip1.Size = New System.Drawing.Size(2253, 40)
+        Me.ToolStrip1.Padding = New System.Windows.Forms.Padding(0, 0, 2, 0)
+        Me.ToolStrip1.Size = New System.Drawing.Size(1433, 38)
         Me.ToolStrip1.TabIndex = 179
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -208,7 +208,7 @@ Partial Class FrmRegistrarFormula
         Me.btnGuardar.Margin = New System.Windows.Forms.Padding(5)
         Me.btnGuardar.Name = "btnGuardar"
         Me.btnGuardar.Padding = New System.Windows.Forms.Padding(2)
-        Me.btnGuardar.Size = New System.Drawing.Size(121, 30)
+        Me.btnGuardar.Size = New System.Drawing.Size(89, 28)
         Me.btnGuardar.Text = "Guardar"
         '
         'btnSalir
@@ -220,7 +220,7 @@ Partial Class FrmRegistrarFormula
         Me.btnSalir.Margin = New System.Windows.Forms.Padding(5)
         Me.btnSalir.Name = "btnSalir"
         Me.btnSalir.Padding = New System.Windows.Forms.Padding(2)
-        Me.btnSalir.Size = New System.Drawing.Size(84, 30)
+        Me.btnSalir.Size = New System.Drawing.Size(66, 28)
         Me.btnSalir.Text = "Salir"
         Me.btnSalir.ToolTipText = "Editar"
         '
@@ -232,9 +232,10 @@ Partial Class FrmRegistrarFormula
         Me.Panel2.Controls.Add(Me.UltraGroupBox2)
         Me.Panel2.Controls.Add(Me.HeaderEncabezado)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel2.Location = New System.Drawing.Point(0, 40)
+        Me.Panel2.Location = New System.Drawing.Point(0, 38)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(2253, 1012)
+        Me.Panel2.Size = New System.Drawing.Size(1433, 646)
         Me.Panel2.TabIndex = 181
         '
         'UltraGroupBox3
@@ -253,10 +254,10 @@ Partial Class FrmRegistrarFormula
         Me.UltraGroupBox3.HeaderAppearance = Appearance17
         Me.UltraGroupBox3.HeaderBorderStyle = Infragistics.Win.UIElementBorderStyle.Rounded4Thick
         Me.UltraGroupBox3.HeaderPosition = Infragistics.Win.Misc.GroupBoxHeaderPosition.TopOnBorder
-        Me.UltraGroupBox3.Location = New System.Drawing.Point(26, 856)
-        Me.UltraGroupBox3.Margin = New System.Windows.Forms.Padding(6)
+        Me.UltraGroupBox3.Location = New System.Drawing.Point(17, 556)
+        Me.UltraGroupBox3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.UltraGroupBox3.Name = "UltraGroupBox3"
-        Me.UltraGroupBox3.Size = New System.Drawing.Size(1097, 125)
+        Me.UltraGroupBox3.Size = New System.Drawing.Size(731, 81)
         Me.UltraGroupBox3.TabIndex = 182
         Me.UltraGroupBox3.Text = "OPCIONES"
         '
@@ -266,10 +267,9 @@ Partial Class FrmRegistrarFormula
         Me.btnVerificarCantidades.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnVerificarCantidades.Image = Global.Formularios.My.Resources.Resources.Agregar_24_Px1
         Me.btnVerificarCantidades.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnVerificarCantidades.Location = New System.Drawing.Point(799, 53)
-        Me.btnVerificarCantidades.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btnVerificarCantidades.Location = New System.Drawing.Point(533, 34)
         Me.btnVerificarCantidades.Name = "btnVerificarCantidades"
-        Me.btnVerificarCantidades.Size = New System.Drawing.Size(263, 45)
+        Me.btnVerificarCantidades.Size = New System.Drawing.Size(175, 29)
         Me.btnVerificarCantidades.TabIndex = 180
         Me.btnVerificarCantidades.Text = "Verificar Cantidades"
         Me.btnVerificarCantidades.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -280,10 +280,9 @@ Partial Class FrmRegistrarFormula
         Me.btnMoveDown.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnMoveDown.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnMoveDown.Image = Global.Formularios.My.Resources.Resources.flecha_abajo
-        Me.btnMoveDown.Location = New System.Drawing.Point(614, 50)
-        Me.btnMoveDown.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btnMoveDown.Location = New System.Drawing.Point(409, 32)
         Me.btnMoveDown.Name = "btnMoveDown"
-        Me.btnMoveDown.Size = New System.Drawing.Size(51, 50)
+        Me.btnMoveDown.Size = New System.Drawing.Size(34, 32)
         Me.btnMoveDown.TabIndex = 179
         Me.btnMoveDown.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnMoveDown.UseVisualStyleBackColor = True
@@ -294,10 +293,10 @@ Partial Class FrmRegistrarFormula
         Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label6.Location = New System.Drawing.Point(379, 64)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label6.Location = New System.Drawing.Point(253, 42)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(153, 22)
+        Me.Label6.Size = New System.Drawing.Size(102, 14)
         Me.Label6.TabIndex = 178
         Me.Label6.Text = "Ordenar Filas:"
         '
@@ -306,10 +305,9 @@ Partial Class FrmRegistrarFormula
         Me.btnMoveUp.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnMoveUp.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnMoveUp.Image = Global.Formularios.My.Resources.Resources.flecha_arriba
-        Me.btnMoveUp.Location = New System.Drawing.Point(555, 50)
-        Me.btnMoveUp.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btnMoveUp.Location = New System.Drawing.Point(370, 32)
         Me.btnMoveUp.Name = "btnMoveUp"
-        Me.btnMoveUp.Size = New System.Drawing.Size(51, 50)
+        Me.btnMoveUp.Size = New System.Drawing.Size(34, 32)
         Me.btnMoveUp.TabIndex = 178
         Me.btnMoveUp.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnMoveUp.UseVisualStyleBackColor = True
@@ -320,10 +318,9 @@ Partial Class FrmRegistrarFormula
         Me.btnImportarExcel.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnImportarExcel.Image = Global.Formularios.My.Resources.Resources.Agregar_24_Px1
         Me.btnImportarExcel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnImportarExcel.Location = New System.Drawing.Point(65, 54)
-        Me.btnImportarExcel.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btnImportarExcel.Location = New System.Drawing.Point(43, 35)
         Me.btnImportarExcel.Name = "btnImportarExcel"
-        Me.btnImportarExcel.Size = New System.Drawing.Size(138, 45)
+        Me.btnImportarExcel.Size = New System.Drawing.Size(92, 29)
         Me.btnImportarExcel.TabIndex = 177
         Me.btnImportarExcel.Text = "Importar"
         Me.btnImportarExcel.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -335,6 +332,7 @@ Partial Class FrmRegistrarFormula
         Appearance18.BackColor2 = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(233, Byte), Integer))
         Me.ugbRacionAnterior.Appearance = Appearance18
         Me.ugbRacionAnterior.CaptionAlignment = Infragistics.Win.Misc.GroupBoxCaptionAlignment.Near
+        Me.ugbRacionAnterior.Controls.Add(Me.Label10)
         Me.ugbRacionAnterior.Controls.Add(Me.Label9)
         Me.ugbRacionAnterior.Controls.Add(Me.TxtMotivo)
         Me.ugbRacionAnterior.Controls.Add(Me.DtpFechaElaboracion)
@@ -347,10 +345,10 @@ Partial Class FrmRegistrarFormula
         Me.ugbRacionAnterior.HeaderAppearance = Appearance19
         Me.ugbRacionAnterior.HeaderBorderStyle = Infragistics.Win.UIElementBorderStyle.Rounded4Thick
         Me.ugbRacionAnterior.HeaderPosition = Infragistics.Win.Misc.GroupBoxHeaderPosition.TopOnBorder
-        Me.ugbRacionAnterior.Location = New System.Drawing.Point(1727, 20)
-        Me.ugbRacionAnterior.Margin = New System.Windows.Forms.Padding(6)
+        Me.ugbRacionAnterior.Location = New System.Drawing.Point(1151, 13)
+        Me.ugbRacionAnterior.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.ugbRacionAnterior.Name = "ugbRacionAnterior"
-        Me.ugbRacionAnterior.Size = New System.Drawing.Size(505, 822)
+        Me.ugbRacionAnterior.Size = New System.Drawing.Size(337, 534)
         Me.ugbRacionAnterior.TabIndex = 181
         Me.ugbRacionAnterior.Text = "MENSAJES DE CONTROL DE CANTIDAD"
         '
@@ -360,20 +358,21 @@ Partial Class FrmRegistrarFormula
         Me.Label9.BackColor = System.Drawing.Color.Transparent
         Me.Label9.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label9.Location = New System.Drawing.Point(23, 138)
-        Me.Label9.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label9.Location = New System.Drawing.Point(15, 106)
+        Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(90, 22)
+        Me.Label9.Size = New System.Drawing.Size(60, 14)
         Me.Label9.TabIndex = 187
         Me.Label9.Text = "Motivo :"
         '
         'TxtMotivo
         '
         Me.TxtMotivo.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtMotivo.Location = New System.Drawing.Point(122, 138)
+        Me.TxtMotivo.Location = New System.Drawing.Point(81, 106)
+        Me.TxtMotivo.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TxtMotivo.MaxLength = 200
         Me.TxtMotivo.Name = "TxtMotivo"
-        Me.TxtMotivo.Size = New System.Drawing.Size(361, 118)
+        Me.TxtMotivo.Size = New System.Drawing.Size(242, 78)
         Me.TxtMotivo.TabIndex = 186
         Me.TxtMotivo.Text = ""
         '
@@ -381,10 +380,9 @@ Partial Class FrmRegistrarFormula
         '
         Me.DtpFechaElaboracion.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DtpFechaElaboracion.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DtpFechaElaboracion.Location = New System.Drawing.Point(239, 68)
-        Me.DtpFechaElaboracion.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.DtpFechaElaboracion.Location = New System.Drawing.Point(159, 44)
         Me.DtpFechaElaboracion.Name = "DtpFechaElaboracion"
-        Me.DtpFechaElaboracion.Size = New System.Drawing.Size(181, 28)
+        Me.DtpFechaElaboracion.Size = New System.Drawing.Size(122, 21)
         Me.DtpFechaElaboracion.TabIndex = 185
         '
         'Label8
@@ -393,10 +391,10 @@ Partial Class FrmRegistrarFormula
         Me.Label8.BackColor = System.Drawing.Color.Transparent
         Me.Label8.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label8.Location = New System.Drawing.Point(23, 71)
-        Me.Label8.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label8.Location = New System.Drawing.Point(15, 46)
+        Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(207, 22)
+        Me.Label8.Size = New System.Drawing.Size(136, 14)
         Me.Label8.TabIndex = 184
         Me.Label8.Text = "Fecha Elaboración :"
         '
@@ -404,10 +402,9 @@ Partial Class FrmRegistrarFormula
         '
         Me.Ptbx_Cargando.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Ptbx_Cargando.Image = Global.Formularios.My.Resources.Resources.loader
-        Me.Ptbx_Cargando.Location = New System.Drawing.Point(224, 549)
-        Me.Ptbx_Cargando.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Ptbx_Cargando.Location = New System.Drawing.Point(149, 357)
         Me.Ptbx_Cargando.Name = "Ptbx_Cargando"
-        Me.Ptbx_Cargando.Size = New System.Drawing.Size(64, 57)
+        Me.Ptbx_Cargando.Size = New System.Drawing.Size(43, 37)
         Me.Ptbx_Cargando.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.Ptbx_Cargando.TabIndex = 183
         Me.Ptbx_Cargando.TabStop = False
@@ -419,18 +416,19 @@ Partial Class FrmRegistrarFormula
         Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label7.Location = New System.Drawing.Point(14, 306)
-        Me.Label7.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label7.Location = New System.Drawing.Point(9, 211)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(339, 22)
+        Me.Label7.Size = New System.Drawing.Size(221, 14)
         Me.Label7.TabIndex = 175
         Me.Label7.Text = "Con respecto a la última formula"
         '
         'tvResultados
         '
-        Me.tvResultados.Location = New System.Drawing.Point(18, 350)
+        Me.tvResultados.Location = New System.Drawing.Point(12, 239)
+        Me.tvResultados.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.tvResultados.Name = "tvResultados"
-        Me.tvResultados.Size = New System.Drawing.Size(465, 457)
+        Me.tvResultados.Size = New System.Drawing.Size(311, 286)
         Me.tvResultados.TabIndex = 48
         '
         'UltraGroupBox2
@@ -454,10 +452,10 @@ Partial Class FrmRegistrarFormula
         Me.UltraGroupBox2.HeaderAppearance = Appearance21
         Me.UltraGroupBox2.HeaderBorderStyle = Infragistics.Win.UIElementBorderStyle.Rounded4Thick
         Me.UltraGroupBox2.HeaderPosition = Infragistics.Win.Misc.GroupBoxHeaderPosition.TopOnBorder
-        Me.UltraGroupBox2.Location = New System.Drawing.Point(1135, 856)
-        Me.UltraGroupBox2.Margin = New System.Windows.Forms.Padding(6)
+        Me.UltraGroupBox2.Location = New System.Drawing.Point(757, 556)
+        Me.UltraGroupBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.UltraGroupBox2.Name = "UltraGroupBox2"
-        Me.UltraGroupBox2.Size = New System.Drawing.Size(1094, 125)
+        Me.UltraGroupBox2.Size = New System.Drawing.Size(729, 81)
         Me.UltraGroupBox2.TabIndex = 181
         Me.UltraGroupBox2.Text = "HOLGURA DE CANTIDAD DE INSUMO POR RACIÓN"
         '
@@ -465,33 +463,30 @@ Partial Class FrmRegistrarFormula
         '
         Me.txtSuperior.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtSuperior.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtSuperior.Location = New System.Drawing.Point(816, 77)
-        Me.txtSuperior.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtSuperior.Location = New System.Drawing.Point(544, 50)
         Me.txtSuperior.MaxLength = 50
         Me.txtSuperior.Name = "txtSuperior"
-        Me.txtSuperior.Size = New System.Drawing.Size(121, 28)
+        Me.txtSuperior.Size = New System.Drawing.Size(82, 21)
         Me.txtSuperior.TabIndex = 177
         '
         'txtCantidad
         '
         Me.txtCantidad.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtCantidad.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCantidad.Location = New System.Drawing.Point(660, 77)
-        Me.txtCantidad.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtCantidad.Location = New System.Drawing.Point(440, 50)
         Me.txtCantidad.MaxLength = 50
         Me.txtCantidad.Name = "txtCantidad"
-        Me.txtCantidad.Size = New System.Drawing.Size(121, 28)
+        Me.txtCantidad.Size = New System.Drawing.Size(82, 21)
         Me.txtCantidad.TabIndex = 176
         '
         'txtInferior
         '
         Me.txtInferior.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtInferior.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtInferior.Location = New System.Drawing.Point(505, 77)
-        Me.txtInferior.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtInferior.Location = New System.Drawing.Point(337, 50)
         Me.txtInferior.MaxLength = 50
         Me.txtInferior.Name = "txtInferior"
-        Me.txtInferior.Size = New System.Drawing.Size(121, 28)
+        Me.txtInferior.Size = New System.Drawing.Size(82, 21)
         Me.txtInferior.TabIndex = 175
         '
         'Label5
@@ -500,10 +495,10 @@ Partial Class FrmRegistrarFormula
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label5.Location = New System.Drawing.Point(794, 48)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label5.Location = New System.Drawing.Point(529, 31)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(165, 22)
+        Me.Label5.Size = New System.Drawing.Size(109, 14)
         Me.Label5.TabIndex = 174
         Me.Label5.Text = "Limite Superior"
         '
@@ -513,10 +508,10 @@ Partial Class FrmRegistrarFormula
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(487, 48)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label3.Location = New System.Drawing.Point(325, 31)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(157, 22)
+        Me.Label3.Size = New System.Drawing.Size(103, 14)
         Me.Label3.TabIndex = 173
         Me.Label3.Text = "Límite Inferior"
         '
@@ -526,10 +521,10 @@ Partial Class FrmRegistrarFormula
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(671, 48)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label1.Location = New System.Drawing.Point(447, 31)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(98, 22)
+        Me.Label1.Size = New System.Drawing.Size(63, 14)
         Me.Label1.TabIndex = 172
         Me.Label1.Text = "cantidad"
         '
@@ -537,22 +532,20 @@ Partial Class FrmRegistrarFormula
         '
         Me.txtLimSuperior.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtLimSuperior.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtLimSuperior.Location = New System.Drawing.Point(239, 77)
-        Me.txtLimSuperior.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtLimSuperior.Location = New System.Drawing.Point(159, 50)
         Me.txtLimSuperior.MaxLength = 50
         Me.txtLimSuperior.Name = "txtLimSuperior"
-        Me.txtLimSuperior.Size = New System.Drawing.Size(73, 28)
+        Me.txtLimSuperior.Size = New System.Drawing.Size(50, 21)
         Me.txtLimSuperior.TabIndex = 171
         '
         'txtLimInferior
         '
         Me.txtLimInferior.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtLimInferior.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtLimInferior.Location = New System.Drawing.Point(79, 77)
-        Me.txtLimInferior.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtLimInferior.Location = New System.Drawing.Point(53, 50)
         Me.txtLimInferior.MaxLength = 50
         Me.txtLimInferior.Name = "txtLimInferior"
-        Me.txtLimInferior.Size = New System.Drawing.Size(73, 28)
+        Me.txtLimInferior.Size = New System.Drawing.Size(50, 21)
         Me.txtLimInferior.TabIndex = 170
         '
         'Label2
@@ -561,10 +554,10 @@ Partial Class FrmRegistrarFormula
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(203, 48)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label2.Location = New System.Drawing.Point(135, 31)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(144, 22)
+        Me.Label2.Size = New System.Drawing.Size(96, 14)
         Me.Label2.TabIndex = 169
         Me.Label2.Text = "Máximo (%):"
         '
@@ -574,10 +567,10 @@ Partial Class FrmRegistrarFormula
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label4.Location = New System.Drawing.Point(46, 48)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label4.Location = New System.Drawing.Point(31, 31)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(139, 22)
+        Me.Label4.Size = New System.Drawing.Size(92, 14)
         Me.Label4.TabIndex = 168
         Me.Label4.Text = "Mínimo (%):"
         '
@@ -594,10 +587,10 @@ Partial Class FrmRegistrarFormula
         Me.HeaderEncabezado.HeaderAppearance = Appearance38
         Me.HeaderEncabezado.HeaderBorderStyle = Infragistics.Win.UIElementBorderStyle.Rounded4Thick
         Me.HeaderEncabezado.HeaderPosition = Infragistics.Win.Misc.GroupBoxHeaderPosition.TopOnBorder
-        Me.HeaderEncabezado.Location = New System.Drawing.Point(18, 20)
-        Me.HeaderEncabezado.Margin = New System.Windows.Forms.Padding(6)
+        Me.HeaderEncabezado.Location = New System.Drawing.Point(12, 13)
+        Me.HeaderEncabezado.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.HeaderEncabezado.Name = "HeaderEncabezado"
-        Me.HeaderEncabezado.Size = New System.Drawing.Size(1697, 822)
+        Me.HeaderEncabezado.Size = New System.Drawing.Size(1131, 534)
         Me.HeaderEncabezado.TabIndex = 159
         Me.HeaderEncabezado.Text = "-"
         '
@@ -671,23 +664,36 @@ Partial Class FrmRegistrarFormula
         Me.dtgListadoInsumos.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy
         Me.dtgListadoInsumos.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dtgListadoInsumos.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dtgListadoInsumos.Location = New System.Drawing.Point(3, 31)
-        Me.dtgListadoInsumos.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.dtgListadoInsumos.Location = New System.Drawing.Point(3, 23)
         Me.dtgListadoInsumos.Name = "dtgListadoInsumos"
-        Me.dtgListadoInsumos.Size = New System.Drawing.Size(331, 788)
+        Me.dtgListadoInsumos.Size = New System.Drawing.Size(218, 508)
         Me.dtgListadoInsumos.TabIndex = 181
         Me.dtgListadoInsumos.Text = "UltraGrid1"
         '
         'BackgroundWorker1
         '
         '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.BackColor = System.Drawing.Color.Yellow
+        Me.Label10.Font = New System.Drawing.Font("Verdana", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.ForeColor = System.Drawing.Color.Black
+        Me.Label10.Location = New System.Drawing.Point(10, 72)
+        Me.Label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(217, 12)
+        Me.Label10.TabIndex = 181
+        Me.Label10.Text = "*Fecha que nutricionista mando la fórmula"
+        '
         'FrmRegistrarFormula
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(2253, 1052)
+        Me.ClientSize = New System.Drawing.Size(1433, 684)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.ToolStrip1)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "FrmRegistrarFormula"
@@ -748,4 +754,5 @@ Partial Class FrmRegistrarFormula
     Friend WithEvents Label8 As Label
     Friend WithEvents Label9 As Label
     Friend WithEvents TxtMotivo As RichTextBox
+    Friend WithEvents Label10 As Label
 End Class
