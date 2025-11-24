@@ -32,6 +32,7 @@ Public Class cdProducto
                 .AddWithValue("@vender", SqlDbType.VarChar).Value = obj.Vender
                 .AddWithValue("@esmolino", SqlDbType.VarChar).Value = obj.esmolino
                 .AddWithValue("@esRacionExterna", SqlDbType.Bit).Value = obj.EsRacionExterna
+                .AddWithValue("@idProductoEquivalencia", SqlDbType.Int).Value = obj.IdProductoEquivalencia
                 .Add("@msj", SqlDbType.VarChar, 100).Direction = ParameterDirection.Output
                 .Add("@coderror", SqlDbType.Int).Direction = ParameterDirection.Output
             End With

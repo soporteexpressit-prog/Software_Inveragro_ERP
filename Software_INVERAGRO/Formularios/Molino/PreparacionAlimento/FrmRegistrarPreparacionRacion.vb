@@ -16,6 +16,9 @@ Public Class FrmRegistrarPreparacionRacion
     Public tipoRacion As String
     Dim ds As New DataSet
 
+    ' Diccionario para guardar los valores originales de cada fila
+    Private valoresOriginales As New Dictionary(Of Integer, Dictionary(Of String, Object))
+
     Private Sub FrmRegistrarPreparacionRacion_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
             lblNombreAlimento.Text = nombreAlimento & " = " & cantidad.ToString() & "TN"
@@ -75,9 +78,17 @@ Public Class FrmRegistrarPreparacionRacion
                 Dispose()
             Else
                 dtgListadoCantidadInsumos.DataSource = CType(resultado, DataTable)
-                dtgListadoCantidadInsumos.DisplayLayout.Bands(0).Columns("idProducto").Hidden = True
-                dtgListadoCantidadInsumos.DisplayLayout.Bands(0).Columns("Tipo de Premixero").Hidden = True
-                clsBasicas.Formato_Tablas_Grid(dtgListadoCantidadInsumos)
+
+                ' Ocultar las columnas de equivalencia que no son necesarias visualmente
+                With dtgListadoCantidadInsumos.DisplayLayout.Bands(0)
+                    .Columns("idProducto").Hidden = True
+                    .Columns("idProductoEquivalencia").Hidden = True
+                    .Columns("nombreProductoEquivalencia").Hidden = True
+                    .Columns("equivalencia").Hidden = True
+                End With
+
+                clsBasicas.Formato_Tablas_Grid_UltimaColumnaEditable(dtgListadoCantidadInsumos)
+                GuardarValoresOriginales()
                 Colorear()
             End If
         Catch ex As Exception
@@ -85,17 +96,120 @@ Public Class FrmRegistrarPreparacionRacion
         End Try
     End Sub
 
+    ' Guardar los valores originales de cada fila al cargar
+    Private Sub GuardarValoresOriginales()
+        Try
+            valoresOriginales.Clear()
+
+            For Each row As UltraGridRow In dtgListadoCantidadInsumos.Rows
+                If Not row.IsFilteredOut Then
+                    Dim rowIndex As Integer = row.Index
+                    Dim valores As New Dictionary(Of String, Object)
+
+                    valores.Add("idProducto", row.Cells("idProducto").Value)
+                    valores.Add("Nombre del Producto", row.Cells("Nombre del Producto").Value)
+                    valores.Add("Total", row.Cells("Total").Value)
+                    valores.Add("idProductoEquivalencia", row.Cells("idProductoEquivalencia").Value)
+                    valores.Add("nombreProductoEquivalencia", row.Cells("nombreProductoEquivalencia").Value)
+                    valores.Add("equivalencia", row.Cells("equivalencia").Value)
+
+                    valoresOriginales.Add(rowIndex, valores)
+                End If
+            Next
+        Catch ex As Exception
+            clsBasicas.controlException(Name, ex)
+        End Try
+    End Sub
+
+    ' Evento que se dispara cuando cambia el valor de una celda
+    Private Sub dtgListadoCantidadInsumos_CellChange(sender As Object, e As CellEventArgs) Handles dtgListadoCantidadInsumos.CellChange
+        Try
+            ' Verificar que sea la columna "Utilizar Eq."
+            If e.Cell.Column.Key = "Utilizar Eq." Then
+                ' Forzar salida del modo edición para obtener el valor actualizado
+                dtgListadoCantidadInsumos.PerformAction(Infragistics.Win.UltraWinGrid.UltraGridAction.ExitEditMode)
+
+                Dim row As UltraGridRow = e.Cell.Row
+                ' Obtener el valor DESPUÉS del cambio
+                Dim utilizarEquivalencia As Boolean = CBool(e.Cell.Value)
+
+                AplicarEquivalencia(row, utilizarEquivalencia)
+            End If
+        Catch ex As Exception
+            clsBasicas.controlException(Name, ex)
+        End Try
+    End Sub
+
+    ' Aplicar o revertir la equivalencia según el estado del checkbox
+    Private Sub AplicarEquivalencia(row As UltraGridRow, utilizarEquivalencia As Boolean)
+        Try
+            Dim rowIndex As Integer = row.Index
+
+            If Not valoresOriginales.ContainsKey(rowIndex) Then
+                Return
+            End If
+
+            Dim valoresOriginalesRow As Dictionary(Of String, Object) = valoresOriginales(rowIndex)
+
+            If utilizarEquivalencia Then
+                ' VALIDAR TIPO DE PREMIXERO ANTES DE APLICAR EQUIVALENCIA
+                Dim tipoPremixero As String = row.Cells("Tipo de Premixero").Value?.ToString()
+
+                If String.IsNullOrEmpty(tipoPremixero) OrElse tipoPremixero.Trim().ToUpper() <> "PREMIXERO 3" Then
+                    msj_advert("Solo se puede utilizar equivalencia para productos de tipo PREMIXERO 3")
+                    row.Cells("Utilizar Eq.").Value = False
+                    Return
+                End If
+
+                ' MARCAR CHECK: Aplicar equivalencia
+                Dim idProductoEq As Object = valoresOriginalesRow("idProductoEquivalencia")
+                Dim nombreProductoEq As Object = valoresOriginalesRow("nombreProductoEquivalencia")
+                Dim equivalencia As Object = valoresOriginalesRow("equivalencia")
+
+                If IsDBNull(idProductoEq) OrElse IsDBNull(nombreProductoEq) OrElse IsDBNull(equivalencia) OrElse
+                   String.IsNullOrEmpty(idProductoEq?.ToString()) OrElse
+                   String.IsNullOrEmpty(nombreProductoEq?.ToString()) OrElse
+                   CDec(equivalencia) = 0 Then
+
+                    msj_advert("No hay producto de equivalencia disponible para este insumo")
+                    row.Cells("Utilizar Eq.").Value = False
+                    Return
+                End If
+
+                ' Cambiar a producto equivalente
+                row.Cells("idProducto").Value = idProductoEq
+                row.Cells("Nombre del Producto").Value = nombreProductoEq
+
+                Dim totalOriginal As Decimal = CDec(valoresOriginalesRow("Total"))
+                Dim factorEquivalencia As Decimal = CDec(equivalencia)
+                Dim nuevoTotal As Decimal = totalOriginal / factorEquivalencia
+
+                row.Cells("Total").Value = Math.Round(nuevoTotal, 2)
+            Else
+                ' DESMARCAR CHECK: Revertir a valores originales
+                row.Cells("idProducto").Value = valoresOriginalesRow("idProducto")
+                row.Cells("Nombre del Producto").Value = valoresOriginalesRow("Nombre del Producto")
+                row.Cells("Total").Value = valoresOriginalesRow("Total")
+            End If
+
+            ' Refrescar la fila
+            row.Refresh()
+        Catch ex As Exception
+            clsBasicas.controlException(Name, ex)
+        End Try
+    End Sub
+
     Sub Colorear()
         If (dtgListadoCantidadInsumos.Rows.Count > 0) Then
-            Dim disponeStock As Integer = 5
+            Dim disposeStock As Integer = 5
 
             'estadoRepetidora
-            clsBasicas.Colorear_SegunValor(dtgListadoCantidadInsumos, Color.LightGreen, Color.DarkGreen, "DISPONIBLE", disponeStock)
-            clsBasicas.Colorear_SegunValor(dtgListadoCantidadInsumos, Color.LightCoral, Color.White, "NO DISPONIBLE", disponeStock)
+            clsBasicas.Colorear_SegunValor(dtgListadoCantidadInsumos, Color.LightGreen, Color.DarkGreen, "DISPONIBLE", disposeStock)
+            clsBasicas.Colorear_SegunValor(dtgListadoCantidadInsumos, Color.LightCoral, Color.White, "NO DISPONIBLE", disposeStock)
 
             'centrar columnas
             With dtgListadoCantidadInsumos.DisplayLayout.Bands(0)
-                .Columns(disponeStock).CellAppearance.TextHAlign = HAlign.Center
+                .Columns(disposeStock).CellAppearance.TextHAlign = HAlign.Center
             End With
         End If
     End Sub

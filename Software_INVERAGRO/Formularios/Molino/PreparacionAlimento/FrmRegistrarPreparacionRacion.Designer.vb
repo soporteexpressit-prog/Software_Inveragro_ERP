@@ -59,9 +59,6 @@ Partial Class FrmRegistrarPreparacionRacion
         Dim Appearance34 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance35 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
-        Me.btnIniciarPreparacion = New System.Windows.Forms.ToolStripButton()
-        Me.BtnImprimirReceta = New System.Windows.Forms.ToolStripButton()
-        Me.btnCerrar = New System.Windows.Forms.ToolStripButton()
         Me.UltraGroupBox5 = New Infragistics.Win.Misc.UltraGroupBox()
         Me.dtgListadoConsolidado = New Infragistics.Win.UltraWinGrid.UltraGrid()
         Me.UltraGroupBox6 = New Infragistics.Win.Misc.UltraGroupBox()
@@ -72,6 +69,9 @@ Partial Class FrmRegistrarPreparacionRacion
         Me.lblNombreAlimento = New System.Windows.Forms.Label()
         Me.UltraGroupBox3 = New Infragistics.Win.Misc.UltraGroupBox()
         Me.dtgListadoCantidadInsumos = New Infragistics.Win.UltraWinGrid.UltraGrid()
+        Me.btnIniciarPreparacion = New System.Windows.Forms.ToolStripButton()
+        Me.BtnImprimirReceta = New System.Windows.Forms.ToolStripButton()
+        Me.btnCerrar = New System.Windows.Forms.ToolStripButton()
         Me.ToolStrip1.SuspendLayout()
         CType(Me.UltraGroupBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.UltraGroupBox5.SuspendLayout()
@@ -90,51 +90,12 @@ Partial Class FrmRegistrarPreparacionRacion
         Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnIniciarPreparacion, Me.BtnImprimirReceta, Me.btnCerrar})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.ToolStrip1.Margin = New System.Windows.Forms.Padding(3)
+        Me.ToolStrip1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Padding = New System.Windows.Forms.Padding(0, 0, 3, 0)
-        Me.ToolStrip1.Size = New System.Drawing.Size(900, 40)
+        Me.ToolStrip1.Padding = New System.Windows.Forms.Padding(0, 0, 2, 0)
+        Me.ToolStrip1.Size = New System.Drawing.Size(659, 38)
         Me.ToolStrip1.TabIndex = 53
         Me.ToolStrip1.Text = "ToolStrip1"
-        '
-        'btnIniciarPreparacion
-        '
-        Me.btnIniciarPreparacion.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnIniciarPreparacion.ForeColor = System.Drawing.Color.White
-        Me.btnIniciarPreparacion.Image = Global.Formularios.My.Resources.Resources.guardar
-        Me.btnIniciarPreparacion.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.btnIniciarPreparacion.Margin = New System.Windows.Forms.Padding(5)
-        Me.btnIniciarPreparacion.Name = "btnIniciarPreparacion"
-        Me.btnIniciarPreparacion.Padding = New System.Windows.Forms.Padding(2)
-        Me.btnIniciarPreparacion.Size = New System.Drawing.Size(233, 30)
-        Me.btnIniciarPreparacion.Text = "Iniciar Preparación"
-        Me.btnIniciarPreparacion.ToolTipText = "ActivarFormula"
-        '
-        'BtnImprimirReceta
-        '
-        Me.BtnImprimirReceta.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnImprimirReceta.ForeColor = System.Drawing.Color.White
-        Me.BtnImprimirReceta.Image = Global.Formularios.My.Resources.Resources.imprimir
-        Me.BtnImprimirReceta.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.BtnImprimirReceta.Margin = New System.Windows.Forms.Padding(5)
-        Me.BtnImprimirReceta.Name = "BtnImprimirReceta"
-        Me.BtnImprimirReceta.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnImprimirReceta.Size = New System.Drawing.Size(204, 30)
-        Me.BtnImprimirReceta.Text = "Imprimir Receta"
-        Me.BtnImprimirReceta.ToolTipText = "Imprimir"
-        '
-        'btnCerrar
-        '
-        Me.btnCerrar.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCerrar.ForeColor = System.Drawing.Color.White
-        Me.btnCerrar.Image = Global.Formularios.My.Resources.Resources.salir
-        Me.btnCerrar.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.btnCerrar.Margin = New System.Windows.Forms.Padding(5)
-        Me.btnCerrar.Name = "btnCerrar"
-        Me.btnCerrar.Padding = New System.Windows.Forms.Padding(2)
-        Me.btnCerrar.Size = New System.Drawing.Size(84, 30)
-        Me.btnCerrar.Text = "Salir"
-        Me.btnCerrar.ToolTipText = "Cerrar"
         '
         'UltraGroupBox5
         '
@@ -149,10 +110,10 @@ Partial Class FrmRegistrarPreparacionRacion
         Me.UltraGroupBox5.HeaderAppearance = Appearance17
         Me.UltraGroupBox5.HeaderBorderStyle = Infragistics.Win.UIElementBorderStyle.Rounded4Thick
         Me.UltraGroupBox5.HeaderPosition = Infragistics.Win.Misc.GroupBoxHeaderPosition.TopOnBorder
-        Me.UltraGroupBox5.Location = New System.Drawing.Point(0, 236)
-        Me.UltraGroupBox5.Margin = New System.Windows.Forms.Padding(6)
+        Me.UltraGroupBox5.Location = New System.Drawing.Point(0, 148)
+        Me.UltraGroupBox5.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.UltraGroupBox5.Name = "UltraGroupBox5"
-        Me.UltraGroupBox5.Size = New System.Drawing.Size(900, 144)
+        Me.UltraGroupBox5.Size = New System.Drawing.Size(659, 94)
         Me.UltraGroupBox5.TabIndex = 179
         Me.UltraGroupBox5.Text = "REQUERIMIENTOS"
         '
@@ -226,10 +187,9 @@ Partial Class FrmRegistrarPreparacionRacion
         Me.dtgListadoConsolidado.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy
         Me.dtgListadoConsolidado.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dtgListadoConsolidado.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dtgListadoConsolidado.Location = New System.Drawing.Point(3, 31)
-        Me.dtgListadoConsolidado.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.dtgListadoConsolidado.Location = New System.Drawing.Point(3, 23)
         Me.dtgListadoConsolidado.Name = "dtgListadoConsolidado"
-        Me.dtgListadoConsolidado.Size = New System.Drawing.Size(894, 110)
+        Me.dtgListadoConsolidado.Size = New System.Drawing.Size(653, 68)
         Me.dtgListadoConsolidado.TabIndex = 176
         Me.dtgListadoConsolidado.Text = "UltraGrid2"
         '
@@ -250,10 +210,10 @@ Partial Class FrmRegistrarPreparacionRacion
         Me.UltraGroupBox6.HeaderAppearance = Appearance19
         Me.UltraGroupBox6.HeaderBorderStyle = Infragistics.Win.UIElementBorderStyle.None
         Me.UltraGroupBox6.HeaderPosition = Infragistics.Win.Misc.GroupBoxHeaderPosition.TopOnBorder
-        Me.UltraGroupBox6.Location = New System.Drawing.Point(0, 40)
-        Me.UltraGroupBox6.Margin = New System.Windows.Forms.Padding(6)
+        Me.UltraGroupBox6.Location = New System.Drawing.Point(0, 38)
+        Me.UltraGroupBox6.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.UltraGroupBox6.Name = "UltraGroupBox6"
-        Me.UltraGroupBox6.Size = New System.Drawing.Size(900, 196)
+        Me.UltraGroupBox6.Size = New System.Drawing.Size(659, 110)
         Me.UltraGroupBox6.TabIndex = 180
         Me.UltraGroupBox6.Text = "Ración"
         '
@@ -261,10 +221,9 @@ Partial Class FrmRegistrarPreparacionRacion
         '
         Me.DtpFecha.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DtpFecha.Location = New System.Drawing.Point(477, 120)
-        Me.DtpFecha.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.DtpFecha.Location = New System.Drawing.Point(318, 78)
         Me.DtpFecha.Name = "DtpFecha"
-        Me.DtpFecha.Size = New System.Drawing.Size(172, 28)
+        Me.DtpFecha.Size = New System.Drawing.Size(116, 21)
         Me.DtpFecha.TabIndex = 194
         '
         'Label9
@@ -273,10 +232,10 @@ Partial Class FrmRegistrarPreparacionRacion
         Me.Label9.BackColor = System.Drawing.Color.Transparent
         Me.Label9.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label9.Location = New System.Drawing.Point(383, 123)
-        Me.Label9.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label9.Location = New System.Drawing.Point(255, 80)
+        Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(83, 22)
+        Me.Label9.Size = New System.Drawing.Size(55, 14)
         Me.Label9.TabIndex = 193
         Me.Label9.Text = "Fecha :"
         '
@@ -284,11 +243,10 @@ Partial Class FrmRegistrarPreparacionRacion
         '
         Me.txtPreparacion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtPreparacion.Font = New System.Drawing.Font("Verdana", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPreparacion.Location = New System.Drawing.Point(238, 116)
-        Me.txtPreparacion.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtPreparacion.Location = New System.Drawing.Point(159, 75)
         Me.txtPreparacion.MaxLength = 4
         Me.txtPreparacion.Name = "txtPreparacion"
-        Me.txtPreparacion.Size = New System.Drawing.Size(71, 37)
+        Me.txtPreparacion.Size = New System.Drawing.Size(49, 27)
         Me.txtPreparacion.TabIndex = 183
         Me.txtPreparacion.Text = "5"
         '
@@ -298,10 +256,10 @@ Partial Class FrmRegistrarPreparacionRacion
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(31, 123)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label1.Location = New System.Drawing.Point(21, 80)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(197, 22)
+        Me.Label1.Size = New System.Drawing.Size(129, 14)
         Me.Label1.TabIndex = 182
         Me.Label1.Text = "Diseño de Ración: "
         '
@@ -311,10 +269,10 @@ Partial Class FrmRegistrarPreparacionRacion
         Me.lblNombreAlimento.BackColor = System.Drawing.Color.Transparent
         Me.lblNombreAlimento.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblNombreAlimento.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.lblNombreAlimento.Location = New System.Drawing.Point(31, 55)
-        Me.lblNombreAlimento.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.lblNombreAlimento.Location = New System.Drawing.Point(21, 36)
+        Me.lblNombreAlimento.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblNombreAlimento.Name = "lblNombreAlimento"
-        Me.lblNombreAlimento.Size = New System.Drawing.Size(116, 22)
+        Me.lblNombreAlimento.Size = New System.Drawing.Size(78, 14)
         Me.lblNombreAlimento.TabIndex = 181
         Me.lblNombreAlimento.Text = "ALIMENTO"
         '
@@ -331,10 +289,10 @@ Partial Class FrmRegistrarPreparacionRacion
         Me.UltraGroupBox3.HeaderAppearance = Appearance36
         Me.UltraGroupBox3.HeaderBorderStyle = Infragistics.Win.UIElementBorderStyle.Rounded4Thick
         Me.UltraGroupBox3.HeaderPosition = Infragistics.Win.Misc.GroupBoxHeaderPosition.TopOnBorder
-        Me.UltraGroupBox3.Location = New System.Drawing.Point(0, 380)
-        Me.UltraGroupBox3.Margin = New System.Windows.Forms.Padding(6)
+        Me.UltraGroupBox3.Location = New System.Drawing.Point(0, 242)
+        Me.UltraGroupBox3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.UltraGroupBox3.Name = "UltraGroupBox3"
-        Me.UltraGroupBox3.Size = New System.Drawing.Size(900, 690)
+        Me.UltraGroupBox3.Size = New System.Drawing.Size(659, 448)
         Me.UltraGroupBox3.TabIndex = 180
         Me.UltraGroupBox3.Text = "LISTA DE CANTIDADES DE INSUMOS A UTILIZAR"
         '
@@ -408,22 +366,61 @@ Partial Class FrmRegistrarPreparacionRacion
         Me.dtgListadoCantidadInsumos.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy
         Me.dtgListadoCantidadInsumos.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dtgListadoCantidadInsumos.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dtgListadoCantidadInsumos.Location = New System.Drawing.Point(3, 31)
-        Me.dtgListadoCantidadInsumos.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.dtgListadoCantidadInsumos.Location = New System.Drawing.Point(3, 23)
         Me.dtgListadoCantidadInsumos.Name = "dtgListadoCantidadInsumos"
-        Me.dtgListadoCantidadInsumos.Size = New System.Drawing.Size(894, 656)
+        Me.dtgListadoCantidadInsumos.Size = New System.Drawing.Size(653, 422)
         Me.dtgListadoCantidadInsumos.TabIndex = 175
         Me.dtgListadoCantidadInsumos.Text = "UltraGrid1"
         '
+        'btnIniciarPreparacion
+        '
+        Me.btnIniciarPreparacion.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnIniciarPreparacion.ForeColor = System.Drawing.Color.White
+        Me.btnIniciarPreparacion.Image = Global.Formularios.My.Resources.Resources.guardar
+        Me.btnIniciarPreparacion.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btnIniciarPreparacion.Margin = New System.Windows.Forms.Padding(5)
+        Me.btnIniciarPreparacion.Name = "btnIniciarPreparacion"
+        Me.btnIniciarPreparacion.Padding = New System.Windows.Forms.Padding(2)
+        Me.btnIniciarPreparacion.Size = New System.Drawing.Size(162, 28)
+        Me.btnIniciarPreparacion.Text = "Iniciar Preparación"
+        Me.btnIniciarPreparacion.ToolTipText = "ActivarFormula"
+        '
+        'BtnImprimirReceta
+        '
+        Me.BtnImprimirReceta.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnImprimirReceta.ForeColor = System.Drawing.Color.White
+        Me.BtnImprimirReceta.Image = Global.Formularios.My.Resources.Resources.imprimir
+        Me.BtnImprimirReceta.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BtnImprimirReceta.Margin = New System.Windows.Forms.Padding(5)
+        Me.BtnImprimirReceta.Name = "BtnImprimirReceta"
+        Me.BtnImprimirReceta.Padding = New System.Windows.Forms.Padding(2)
+        Me.BtnImprimirReceta.Size = New System.Drawing.Size(142, 28)
+        Me.BtnImprimirReceta.Text = "Imprimir Receta"
+        Me.BtnImprimirReceta.ToolTipText = "Imprimir"
+        '
+        'btnCerrar
+        '
+        Me.btnCerrar.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCerrar.ForeColor = System.Drawing.Color.White
+        Me.btnCerrar.Image = Global.Formularios.My.Resources.Resources.salir
+        Me.btnCerrar.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btnCerrar.Margin = New System.Windows.Forms.Padding(5)
+        Me.btnCerrar.Name = "btnCerrar"
+        Me.btnCerrar.Padding = New System.Windows.Forms.Padding(2)
+        Me.btnCerrar.Size = New System.Drawing.Size(66, 28)
+        Me.btnCerrar.Text = "Salir"
+        Me.btnCerrar.ToolTipText = "Cerrar"
+        '
         'FrmRegistrarPreparacionRacion
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(900, 1070)
+        Me.ClientSize = New System.Drawing.Size(659, 690)
         Me.Controls.Add(Me.UltraGroupBox6)
         Me.Controls.Add(Me.UltraGroupBox5)
         Me.Controls.Add(Me.UltraGroupBox3)
         Me.Controls.Add(Me.ToolStrip1)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "FrmRegistrarPreparacionRacion"

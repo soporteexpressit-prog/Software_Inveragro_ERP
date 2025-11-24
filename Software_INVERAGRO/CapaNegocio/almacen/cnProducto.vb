@@ -120,4 +120,7 @@ Public Class cnProducto
     Public Function Cn_ListarUnidadesMedidaPorProducto(ByRef obj As coProductos) As DataTable
         Return cls_at.Cd_ListarUnidadesMedidaPorProducto("[r_pa_listar_unidades_medida_x_producto]", obj)
     End Function
+    Public Function Cn_ListarProductoEquivalencia() As DataTable
+        Return cls_at.Cd_ListadoGeneral("[w_pa_const_producto_equivalencia]")
+    End Function
 End Class

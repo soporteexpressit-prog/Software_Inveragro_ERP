@@ -17,7 +17,7 @@ Public Class FrmProducto
     Private _idunidadamedida As Integer
     Private _idpresentacion As Integer
     Dim vista As New DataView
-
+    Dim codProductoEq As Integer = 0
 
     Sub Mantenimiento()
         Try
@@ -136,6 +136,7 @@ Public Class FrmProducto
             obj.Vender = _Vender
             obj.esmolino = _esmolino
             obj.EsRacionExterna = _esRacionExterna
+            obj.IdProductoEquivalencia = codProductoEq
             _mensajeBgWk = cn_item.Cn_Mantenimiento(obj)
 
             e.Result = obj.Coderror
@@ -221,11 +222,15 @@ Public Class FrmProducto
         cbesmolino.Text = tb.Rows(0)(16).ToString()
         txtvalorcantidadporpresentacion.Text = tb.Rows(0)(17).ToString()
         CbxRacionExterna.Checked = If(tb.Rows(0)(18).ToString(), True, False)
-
+        codProductoEq = tb.Rows(0)("idProductoEquivalencia").ToString()
+        TxtNombreEqProducto.Text = tb.Rows(0)("nombreProductoEq").ToString()
+        TxtEqProducto.Text = tb.Rows(0)("equivalenciaProEq").ToString()
     End Sub
 
     Private Sub FrmItem_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
+            TxtNombreEqProducto.ReadOnly = True
+            TxtEqProducto.ReadOnly = True
             ListarCategorias()
             ListarUnidadMedida()
             ListarPresentacion()
@@ -237,14 +242,9 @@ Public Class FrmProducto
             Else
                 cbxEstado.Enabled = False
             End If
-
         Catch ex As Exception
             clsBasicas.controlException(Name, ex)
         End Try
-    End Sub
-
-    Private Sub bcerrar_Click(sender As Object, e As EventArgs) Handles btnCerrar.Click
-        Close()
     End Sub
 
     Private Sub ToolStripButton1_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
@@ -426,5 +426,30 @@ Public Class FrmProducto
         End If
     End Sub
 
+    Private Sub BtnProductoEquivalencia_Click(sender As Object, e As EventArgs) Handles BtnProductoEquivalencia.Click
+        Try
+            Dim frm As New FrmListaProductoEquivalencia(Me)
+            frm.ShowDialog()
+        Catch ex As Exception
+            clsBasicas.controlException(Name, ex)
+        End Try
+    End Sub
 
+    Public Sub LlenarCamposProductoEquivalencia(codigo As Integer, nombre As String, equivalencia As String)
+        codProductoEq = codigo
+        TxtNombreEqProducto.Text = nombre
+        TxtEqProducto.Text = equivalencia
+    End Sub
+
+    Private Sub CbxQuitarEquivalencia_CheckedChanged(sender As Object, e As EventArgs) Handles CbxQuitarEquivalencia.CheckedChanged
+        If CbxQuitarEquivalencia.Checked Then
+            codProductoEq = 0
+            TxtNombreEqProducto.Text = ""
+            TxtEqProducto.Text = ""
+        End If
+    End Sub
+
+    Private Sub bcerrar_Click(sender As Object, e As EventArgs) Handles btnCerrar.Click
+        Close()
+    End Sub
 End Class

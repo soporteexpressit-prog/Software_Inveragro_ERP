@@ -28,6 +28,8 @@
     Private _Vender As String
     Private _esmolino As String
     Private _EsRacionExterna As Boolean
+    Private _IdProductoEquivalencia As Integer
+
     Public Property Idproducto As Integer
         Get
             Return _Idproducto
@@ -284,6 +286,15 @@
         End Get
         Set(value As Boolean)
             _EsRacionExterna = value
+        End Set
+    End Property
+
+    Public Property IdProductoEquivalencia As Integer
+        Get
+            Return _IdProductoEquivalencia
+        End Get
+        Set(value As Integer)
+            _IdProductoEquivalencia = value
         End Set
     End Property
 End Class
