@@ -135,6 +135,7 @@ Public Class FrmRegistrarPesosBajada
                 DesbloquearControladores()
             Else
                 msj_advert(MensajeBgWk)
+                Close()
             End If
             CalcularCantidadesLabels()
         Catch ex As Exception
@@ -163,6 +164,7 @@ Public Class FrmRegistrarPesosBajada
                     ConsultarxIdLote()
                 Else
                     msj_advert(MensajeBgWk)
+                    Close()
                 End If
 
                 CalcularCantidadesLabels()

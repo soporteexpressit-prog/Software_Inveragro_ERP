@@ -230,6 +230,10 @@ Public Class cnControlLoteDestete
         Return cls_at.Cd_RegistrarPesoBajada("[w_pa_registrar_peso_bajada]", obj)
     End Function
 
+    Public Function Cn_CancelarPesosBajada(ByRef obj As coControlLoteDestete) As String
+        Return cls_at.Cd_CancelarPesosBajada("[w_pa_cancelar_pesos_bajada]", obj)
+    End Function
+
     Public Function Cn_RegistrarVentaLote(ByRef obj As coControlLoteDestete) As String
         Return cls_at.Cd_RegistrarVentaLote("[w_pa_reg_venta_lote]", obj)
     End Function

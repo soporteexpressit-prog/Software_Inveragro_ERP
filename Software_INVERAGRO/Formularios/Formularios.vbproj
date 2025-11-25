@@ -931,6 +931,18 @@
     <Compile Include="GlobalReferences.vb" />
     <Compile Include="MailService.vb" />
     <Compile Include="MensajesSistema.vb" />
+    <Compile Include="Molino\ControlExcedente\FrmListaRacionesExcedente.Designer.vb">
+      <DependentUpon>FrmListaRacionesExcedente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Molino\ControlExcedente\FrmListaRacionesExcedente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Molino\ControlExcedente\FrmRegistrarExcedentexRacion.Designer.vb">
+      <DependentUpon>FrmRegistrarExcedentexRacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Molino\ControlExcedente\FrmRegistrarExcedentexRacion.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Molino\FrmReporteDespachosRecepciones.Designer.vb">
       <DependentUpon>FrmReporteDespachosRecepciones.vb</DependentUpon>
     </Compile>
@@ -4224,6 +4236,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="contabilidad\FrmReporteCtaBanco.resx">
       <DependentUpon>FrmReporteCtaBanco.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Molino\ControlExcedente\FrmListaRacionesExcedente.resx">
+      <DependentUpon>FrmListaRacionesExcedente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Molino\ControlExcedente\FrmRegistrarExcedentexRacion.resx">
+      <DependentUpon>FrmRegistrarExcedentexRacion.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Molino\FrmReporteDespachosRecepciones.resx">
       <DependentUpon>FrmReporteDespachosRecepciones.vb</DependentUpon>

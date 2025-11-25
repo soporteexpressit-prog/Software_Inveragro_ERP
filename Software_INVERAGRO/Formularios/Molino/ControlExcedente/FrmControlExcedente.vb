@@ -147,13 +147,23 @@ Public Class FrmControlExcedente
         End Try
     End Sub
 
-    Private Sub btncerrar_Click(sender As Object, e As EventArgs) Handles btncerrar.Click
-        Dispose()
-    End Sub
-
     Private Sub ToolStripButton1_Click(sender As Object, e As EventArgs) Handles ToolStripButton1.Click
         Dim isFilterActive As Boolean = Not ToolStripButton1.Checked
         ToolStripButton1.Checked = isFilterActive
         clsBasicas.Filtrar_Tabla(dtgListadoInsumoExcedente, isFilterActive)
+    End Sub
+
+    Private Sub BtnNuevoxRacion_Click(sender As Object, e As EventArgs) Handles BtnNuevoxRacion.Click
+        Try
+            Dim f As New FrmRegistrarExcedentexRacion
+            f.ShowDialog()
+            Consultar()
+        Catch ex As Exception
+            clsBasicas.controlException(Name, ex)
+        End Try
+    End Sub
+
+    Private Sub btncerrar_Click(sender As Object, e As EventArgs) Handles btncerrar.Click
+        Dispose()
     End Sub
 End Class

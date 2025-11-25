@@ -390,39 +390,6 @@ Public Class FrmControlBajada
         End Try
     End Sub
 
-    Private Sub BtnConfirmarPeso_Click(sender As Object, e As EventArgs) Handles BtnConfirmarPeso.Click
-        Try
-            Dim filaSeleccionada As UltraGridRow = dtgListado.ActiveRow
-            Dim activeRow As Infragistics.Win.UltraWinGrid.UltraGridRow = dtgListado.ActiveRow
-
-            If filaSeleccionada Is Nothing Then
-                msj_advert(MensajesSistema.mensajesGenerales("SELECCIONE_REGISTRO"))
-                Exit Sub
-            End If
-
-            If Not filaSeleccionada.IsDataRow Then
-                msj_advert(MensajesSistema.mensajesGenerales("SELECCIONE_REGISTRO"))
-            ElseIf filaSeleccionada.Band.Index = 0 Then
-                msj_advert(MensajesSistema.mensajesGenerales("SELECCION_FILAS_CONTENIDAS"))
-            Else
-                Dim idLote As Integer = CInt(filaSeleccionada.Cells("idLoteOrigen").Value)
-                Dim idUbicacionSalida As String = CInt(filaSeleccionada.Cells("idUbicacionSalida").Value)
-                Dim idMovimientoBajada As Integer = CInt(filaSeleccionada.Cells("idMovimientoBajada").Value)
-                ConsultarxIdCorral(idMovimientoBajada)
-
-                Dim frm As New FrmRegistrarPesoBajada With {
-                    .cantidadAnimales = totalAnimales,
-                    .idLote = idLote,
-                    .idPlantelSalida = idUbicacionSalida
-                }
-                frm.ShowDialog()
-                Consultar()
-            End If
-        Catch ex As Exception
-            clsBasicas.controlException(Name, ex)
-        End Try
-    End Sub
-
     Sub ConsultarxIdCorral(idMovimientoBajada As Integer)
         Try
             Dim obj As New coControlLoteDestete With {
@@ -498,6 +465,77 @@ Public Class FrmControlBajada
         Try
             Dim frm As New FrmReporteBajada
             frm.ShowDialog()
+        Catch ex As Exception
+            clsBasicas.controlException(Name, ex)
+        End Try
+    End Sub
+
+    Private Sub BtnConfirmarPeso_Click(sender As Object, e As EventArgs) Handles BtnConfirmarPeso.Click
+        Try
+            Dim filaSeleccionada As UltraGridRow = dtgListado.ActiveRow
+            Dim activeRow As Infragistics.Win.UltraWinGrid.UltraGridRow = dtgListado.ActiveRow
+
+            If filaSeleccionada Is Nothing Then
+                msj_advert(MensajesSistema.mensajesGenerales("SELECCIONE_REGISTRO"))
+                Exit Sub
+            End If
+
+            If Not filaSeleccionada.IsDataRow Then
+                msj_advert(MensajesSistema.mensajesGenerales("SELECCIONE_REGISTRO"))
+            ElseIf filaSeleccionada.Band.Index = 0 Then
+                msj_advert(MensajesSistema.mensajesGenerales("SELECCION_FILAS_CONTENIDAS"))
+            Else
+                Dim idLote As Integer = CInt(filaSeleccionada.Cells("idLoteOrigen").Value)
+                Dim idUbicacionSalida As String = CInt(filaSeleccionada.Cells("idUbicacionSalida").Value)
+                Dim idMovimientoBajada As Integer = CInt(filaSeleccionada.Cells("idMovimientoBajada").Value)
+                ConsultarxIdCorral(idMovimientoBajada)
+
+                Dim frm As New FrmRegistrarPesoBajada With {
+                    .cantidadAnimales = totalAnimales,
+                    .idLote = idLote,
+                    .idPlantelSalida = idUbicacionSalida
+                }
+                frm.ShowDialog()
+                Consultar()
+            End If
+        Catch ex As Exception
+            clsBasicas.controlException(Name, ex)
+        End Try
+    End Sub
+
+    Private Sub BtnCancelarPeso_Click(sender As Object, e As EventArgs) Handles BtnCancelarPeso.Click
+        Try
+            Dim filaSeleccionada As UltraGridRow = dtgListado.ActiveRow
+            Dim activeRow As Infragistics.Win.UltraWinGrid.UltraGridRow = dtgListado.ActiveRow
+
+            If filaSeleccionada Is Nothing Then
+                msj_advert(MensajesSistema.mensajesGenerales("SELECCIONE_REGISTRO"))
+                Exit Sub
+            End If
+
+            If Not filaSeleccionada.IsDataRow Then
+                msj_advert(MensajesSistema.mensajesGenerales("SELECCIONE_REGISTRO"))
+            ElseIf filaSeleccionada.Band.Index = 0 Then
+                msj_advert(MensajesSistema.mensajesGenerales("SELECCION_FILAS_CONTENIDAS"))
+            Else
+                Dim idLote As Integer = CInt(filaSeleccionada.Cells("idLoteOrigen").Value)
+
+                If (MessageBox.Show("¿ESTÁ SEGURO DE CANCELAR PESOS BAJADA?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.No) Then
+                    Return
+                End If
+
+                Dim obj As New coControlLoteDestete With {
+                    .IdLote = idLote
+                }
+
+                Dim MensajeBgWk As String = cn.Cn_CancelarPesosBajada(obj)
+                If (obj.Coderror = 0) Then
+                    msj_ok(MensajeBgWk)
+                    Consultar()
+                Else
+                    msj_advert(MensajeBgWk)
+                End If
+            End If
         Catch ex As Exception
             clsBasicas.controlException(Name, ex)
         End Try

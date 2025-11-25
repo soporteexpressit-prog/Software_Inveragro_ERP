@@ -56,7 +56,9 @@ Partial Class FrmControlBajada
         Me.BtnConfirmarBajada = New System.Windows.Forms.ToolStripButton()
         Me.BtnCancelarConfirmacion = New System.Windows.Forms.ToolStripButton()
         Me.BtnCancelarBajada = New System.Windows.Forms.ToolStripButton()
-        Me.BtnConfirmarPeso = New System.Windows.Forms.ToolStripButton()
+        Me.BtnPesoBajada = New System.Windows.Forms.ToolStripDropDownButton()
+        Me.BtnConfirmarPeso = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BtnCancelarPeso = New System.Windows.Forms.ToolStripMenuItem()
         Me.BtnRetornarCerdascontrolbajadapro = New System.Windows.Forms.ToolStripButton()
         Me.BtnExportarControlCerdacontrolbajadapro = New System.Windows.Forms.ToolStripButton()
         Me.BtnCerrar = New System.Windows.Forms.ToolStripButton()
@@ -151,10 +153,9 @@ Partial Class FrmControlBajada
         Me.dtgListado.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy
         Me.dtgListado.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dtgListado.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dtgListado.Location = New System.Drawing.Point(0, 286)
-        Me.dtgListado.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.dtgListado.Location = New System.Drawing.Point(0, 186)
         Me.dtgListado.Name = "dtgListado"
-        Me.dtgListado.Size = New System.Drawing.Size(1965, 699)
+        Me.dtgListado.Size = New System.Drawing.Size(1391, 454)
         Me.dtgListado.TabIndex = 37
         Me.dtgListado.Tag = "   "
         Me.dtgListado.Text = "UltraGrid1"
@@ -165,9 +166,10 @@ Partial Class FrmControlBajada
         Me.Label6.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(233, Byte), Integer))
         Me.Label6.Font = New System.Drawing.Font("Verdana", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(49, Byte), Integer))
-        Me.Label6.Location = New System.Drawing.Point(62, 33)
+        Me.Label6.Location = New System.Drawing.Point(41, 21)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(869, 29)
+        Me.Label6.Size = New System.Drawing.Size(580, 18)
         Me.Label6.TabIndex = 128
         Me.Label6.Text = "CONTROL DE CERDOS EN BAJADA Y RETORNO DE CHANCHILLAS"
         '
@@ -177,12 +179,12 @@ Partial Class FrmControlBajada
         Me.BarraNavegacion.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.BarraNavegacion.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
         Me.BarraNavegacion.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.BarraNavegacion.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnConfirmarBajada, Me.BtnCancelarConfirmacion, Me.BtnCancelarBajada, Me.BtnConfirmarPeso, Me.BtnRetornarCerdascontrolbajadapro, Me.BtnExportarControlCerdacontrolbajadapro, Me.BtnCerrar, Me.btnreporteRrhhctrlcapaci})
-        Me.BarraNavegacion.Location = New System.Drawing.Point(0, 246)
-        Me.BarraNavegacion.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.BarraNavegacion.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnConfirmarBajada, Me.BtnCancelarConfirmacion, Me.BtnCancelarBajada, Me.BtnPesoBajada, Me.BtnRetornarCerdascontrolbajadapro, Me.BtnExportarControlCerdacontrolbajadapro, Me.BtnCerrar, Me.btnreporteRrhhctrlcapaci})
+        Me.BarraNavegacion.Location = New System.Drawing.Point(0, 148)
+        Me.BarraNavegacion.Margin = New System.Windows.Forms.Padding(2, 1, 2, 1)
         Me.BarraNavegacion.Name = "BarraNavegacion"
-        Me.BarraNavegacion.Padding = New System.Windows.Forms.Padding(0, 0, 3, 0)
-        Me.BarraNavegacion.Size = New System.Drawing.Size(1965, 40)
+        Me.BarraNavegacion.Padding = New System.Windows.Forms.Padding(0, 0, 2, 0)
+        Me.BarraNavegacion.Size = New System.Drawing.Size(1391, 38)
         Me.BarraNavegacion.TabIndex = 52
         Me.BarraNavegacion.Text = "Monitoreo"
         '
@@ -195,7 +197,7 @@ Partial Class FrmControlBajada
         Me.BtnConfirmarBajada.Margin = New System.Windows.Forms.Padding(5)
         Me.BtnConfirmarBajada.Name = "BtnConfirmarBajada"
         Me.BtnConfirmarBajada.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnConfirmarBajada.Size = New System.Drawing.Size(215, 30)
+        Me.BtnConfirmarBajada.Size = New System.Drawing.Size(151, 28)
         Me.BtnConfirmarBajada.Text = "Confirmar Bajada"
         Me.BtnConfirmarBajada.ToolTipText = "Filtrar"
         '
@@ -208,7 +210,7 @@ Partial Class FrmControlBajada
         Me.BtnCancelarConfirmacion.Margin = New System.Windows.Forms.Padding(5)
         Me.BtnCancelarConfirmacion.Name = "BtnCancelarConfirmacion"
         Me.BtnCancelarConfirmacion.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnCancelarConfirmacion.Size = New System.Drawing.Size(266, 30)
+        Me.BtnCancelarConfirmacion.Size = New System.Drawing.Size(184, 28)
         Me.BtnCancelarConfirmacion.Text = "Cancelar Confirmación"
         Me.BtnCancelarConfirmacion.ToolTipText = "Filtrar"
         '
@@ -221,22 +223,33 @@ Partial Class FrmControlBajada
         Me.BtnCancelarBajada.Margin = New System.Windows.Forms.Padding(5)
         Me.BtnCancelarBajada.Name = "BtnCancelarBajada"
         Me.BtnCancelarBajada.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnCancelarBajada.Size = New System.Drawing.Size(202, 30)
+        Me.BtnCancelarBajada.Size = New System.Drawing.Size(143, 28)
         Me.BtnCancelarBajada.Text = "Cancelar Bajada"
         Me.BtnCancelarBajada.ToolTipText = "Filtrar"
         '
+        'BtnPesoBajada
+        '
+        Me.BtnPesoBajada.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnConfirmarPeso, Me.BtnCancelarPeso})
+        Me.BtnPesoBajada.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnPesoBajada.ForeColor = System.Drawing.Color.White
+        Me.BtnPesoBajada.Image = Global.Formularios.My.Resources.Resources.peso
+        Me.BtnPesoBajada.Margin = New System.Windows.Forms.Padding(5)
+        Me.BtnPesoBajada.Name = "BtnPesoBajada"
+        Me.BtnPesoBajada.Padding = New System.Windows.Forms.Padding(2)
+        Me.BtnPesoBajada.Size = New System.Drawing.Size(126, 28)
+        Me.BtnPesoBajada.Text = "Peso Bajada"
+        '
         'BtnConfirmarPeso
         '
-        Me.BtnConfirmarPeso.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnConfirmarPeso.ForeColor = System.Drawing.Color.White
-        Me.BtnConfirmarPeso.Image = Global.Formularios.My.Resources.Resources.peso
-        Me.BtnConfirmarPeso.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.BtnConfirmarPeso.Margin = New System.Windows.Forms.Padding(5)
         Me.BtnConfirmarPeso.Name = "BtnConfirmarPeso"
-        Me.BtnConfirmarPeso.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnConfirmarPeso.Size = New System.Drawing.Size(269, 30)
-        Me.BtnConfirmarPeso.Text = "Confirmar Peso Bajada"
-        Me.BtnConfirmarPeso.ToolTipText = "Peso"
+        Me.BtnConfirmarPeso.Size = New System.Drawing.Size(180, 22)
+        Me.BtnConfirmarPeso.Text = "Confirmar"
+        '
+        'BtnCancelarPeso
+        '
+        Me.BtnCancelarPeso.Name = "BtnCancelarPeso"
+        Me.BtnCancelarPeso.Size = New System.Drawing.Size(180, 22)
+        Me.BtnCancelarPeso.Text = "Cancelar"
         '
         'BtnRetornarCerdascontrolbajadapro
         '
@@ -247,7 +260,7 @@ Partial Class FrmControlBajada
         Me.BtnRetornarCerdascontrolbajadapro.Margin = New System.Windows.Forms.Padding(5)
         Me.BtnRetornarCerdascontrolbajadapro.Name = "BtnRetornarCerdascontrolbajadapro"
         Me.BtnRetornarCerdascontrolbajadapro.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnRetornarCerdascontrolbajadapro.Size = New System.Drawing.Size(249, 30)
+        Me.BtnRetornarCerdascontrolbajadapro.Size = New System.Drawing.Size(172, 28)
         Me.BtnRetornarCerdascontrolbajadapro.Text = "Retornar Chanchillas"
         Me.BtnRetornarCerdascontrolbajadapro.ToolTipText = "Parto"
         '
@@ -260,7 +273,7 @@ Partial Class FrmControlBajada
         Me.BtnExportarControlCerdacontrolbajadapro.Margin = New System.Windows.Forms.Padding(5)
         Me.BtnExportarControlCerdacontrolbajadapro.Name = "BtnExportarControlCerdacontrolbajadapro"
         Me.BtnExportarControlCerdacontrolbajadapro.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnExportarControlCerdacontrolbajadapro.Size = New System.Drawing.Size(125, 30)
+        Me.BtnExportarControlCerdacontrolbajadapro.Size = New System.Drawing.Size(92, 28)
         Me.BtnExportarControlCerdacontrolbajadapro.Text = "Exportar"
         Me.BtnExportarControlCerdacontrolbajadapro.ToolTipText = "Exportar"
         '
@@ -273,7 +286,7 @@ Partial Class FrmControlBajada
         Me.BtnCerrar.Margin = New System.Windows.Forms.Padding(5)
         Me.BtnCerrar.Name = "BtnCerrar"
         Me.BtnCerrar.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnCerrar.Size = New System.Drawing.Size(84, 30)
+        Me.BtnCerrar.Size = New System.Drawing.Size(66, 28)
         Me.BtnCerrar.Text = "Salir"
         '
         'btnreporteRrhhctrlcapaci
@@ -286,13 +299,13 @@ Partial Class FrmControlBajada
         Me.btnreporteRrhhctrlcapaci.Margin = New System.Windows.Forms.Padding(5)
         Me.btnreporteRrhhctrlcapaci.Name = "btnreporteRrhhctrlcapaci"
         Me.btnreporteRrhhctrlcapaci.Padding = New System.Windows.Forms.Padding(2)
-        Me.btnreporteRrhhctrlcapaci.Size = New System.Drawing.Size(143, 30)
+        Me.btnreporteRrhhctrlcapaci.Size = New System.Drawing.Size(103, 28)
         Me.btnreporteRrhhctrlcapaci.Text = "Reportes"
         '
         'BtnReporteGeneral
         '
         Me.BtnReporteGeneral.Name = "BtnReporteGeneral"
-        Me.BtnReporteGeneral.Size = New System.Drawing.Size(247, 34)
+        Me.BtnReporteGeneral.Size = New System.Drawing.Size(165, 22)
         Me.BtnReporteGeneral.Text = "Bajada x Lote"
         '
         'Panel2
@@ -303,9 +316,9 @@ Partial Class FrmControlBajada
         Me.Panel2.Controls.Add(Me.BarraNavegacion)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(2, 1, 2, 1)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1965, 286)
+        Me.Panel2.Size = New System.Drawing.Size(1391, 186)
         Me.Panel2.TabIndex = 14
         '
         'GrupoFiltros
@@ -315,9 +328,11 @@ Partial Class FrmControlBajada
         Me.GrupoFiltros.Controls.Add(Me.CmbAnios)
         Me.GrupoFiltros.Controls.Add(Me.Label5)
         Me.GrupoFiltros.Controls.Add(Me.CmbUbicacion)
-        Me.GrupoFiltros.Location = New System.Drawing.Point(38, 98)
+        Me.GrupoFiltros.Location = New System.Drawing.Point(25, 64)
+        Me.GrupoFiltros.Margin = New System.Windows.Forms.Padding(2)
         Me.GrupoFiltros.Name = "GrupoFiltros"
-        Me.GrupoFiltros.Size = New System.Drawing.Size(984, 111)
+        Me.GrupoFiltros.Padding = New System.Windows.Forms.Padding(2)
+        Me.GrupoFiltros.Size = New System.Drawing.Size(656, 72)
         Me.GrupoFiltros.TabIndex = 183
         Me.GrupoFiltros.TabStop = False
         Me.GrupoFiltros.Text = "Filtros de Búsqueda"
@@ -328,11 +343,10 @@ Partial Class FrmControlBajada
         Me.btnBuscar.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBuscar.Image = CType(resources.GetObject("btnBuscar.Image"), System.Drawing.Image)
         Me.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnBuscar.Location = New System.Drawing.Point(778, 27)
-        Me.btnBuscar.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btnBuscar.Location = New System.Drawing.Point(519, 18)
         Me.btnBuscar.Name = "btnBuscar"
-        Me.btnBuscar.Padding = New System.Windows.Forms.Padding(6, 0, 6, 0)
-        Me.btnBuscar.Size = New System.Drawing.Size(138, 63)
+        Me.btnBuscar.Padding = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.btnBuscar.Size = New System.Drawing.Size(92, 41)
         Me.btnBuscar.TabIndex = 182
         Me.btnBuscar.Text = "Buscar"
         Me.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -344,10 +358,10 @@ Partial Class FrmControlBajada
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(383, 47)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label3.Location = New System.Drawing.Point(255, 31)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(174, 22)
+        Me.Label3.Size = New System.Drawing.Size(115, 14)
         Me.Label3.TabIndex = 177
         Me.Label3.Text = "Seleccione año :"
         '
@@ -355,9 +369,10 @@ Partial Class FrmControlBajada
         '
         Me.CmbAnios.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CmbAnios.FormattingEnabled = True
-        Me.CmbAnios.Location = New System.Drawing.Point(567, 40)
+        Me.CmbAnios.Location = New System.Drawing.Point(378, 26)
+        Me.CmbAnios.Margin = New System.Windows.Forms.Padding(2)
         Me.CmbAnios.Name = "CmbAnios"
-        Me.CmbAnios.Size = New System.Drawing.Size(140, 37)
+        Me.CmbAnios.Size = New System.Drawing.Size(95, 28)
         Me.CmbAnios.TabIndex = 178
         '
         'Label5
@@ -366,10 +381,10 @@ Partial Class FrmControlBajada
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label5.Location = New System.Drawing.Point(44, 47)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label5.Location = New System.Drawing.Point(29, 31)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(93, 22)
+        Me.Label5.Size = New System.Drawing.Size(62, 14)
         Me.Label5.TabIndex = 181
         Me.Label5.Text = "Plantel :"
         '
@@ -430,10 +445,9 @@ Partial Class FrmControlBajada
         Me.CmbUbicacion.DisplayLayout.ScrollStyle = Infragistics.Win.UltraWinGrid.ScrollStyle.Immediate
         Me.CmbUbicacion.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy
         Me.CmbUbicacion.DropDownStyle = Infragistics.Win.UltraWinGrid.UltraComboStyle.DropDownList
-        Me.CmbUbicacion.Location = New System.Drawing.Point(143, 44)
-        Me.CmbUbicacion.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.CmbUbicacion.Location = New System.Drawing.Point(95, 29)
         Me.CmbUbicacion.Name = "CmbUbicacion"
-        Me.CmbUbicacion.Size = New System.Drawing.Size(182, 29)
+        Me.CmbUbicacion.Size = New System.Drawing.Size(121, 22)
         Me.CmbUbicacion.TabIndex = 180
         '
         'BackgroundWorker1
@@ -443,10 +457,9 @@ Partial Class FrmControlBajada
         '
         Me.Ptbx_Cargando.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Ptbx_Cargando.Image = Global.Formularios.My.Resources.Resources.loader
-        Me.Ptbx_Cargando.Location = New System.Drawing.Point(939, 551)
-        Me.Ptbx_Cargando.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Ptbx_Cargando.Location = New System.Drawing.Point(680, 358)
         Me.Ptbx_Cargando.Name = "Ptbx_Cargando"
-        Me.Ptbx_Cargando.Size = New System.Drawing.Size(64, 57)
+        Me.Ptbx_Cargando.Size = New System.Drawing.Size(43, 37)
         Me.Ptbx_Cargando.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.Ptbx_Cargando.TabIndex = 38
         Me.Ptbx_Cargando.TabStop = False
@@ -454,12 +467,13 @@ Partial Class FrmControlBajada
         '
         'FrmControlBajada
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1965, 985)
+        Me.ClientSize = New System.Drawing.Size(1391, 640)
         Me.Controls.Add(Me.Ptbx_Cargando)
         Me.Controls.Add(Me.dtgListado)
         Me.Controls.Add(Me.Panel2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "FrmControlBajada"
@@ -494,8 +508,10 @@ Partial Class FrmControlBajada
     Friend WithEvents BtnConfirmarBajada As ToolStripButton
     Friend WithEvents BtnCancelarBajada As ToolStripButton
     Friend WithEvents BtnCancelarConfirmacion As ToolStripButton
-    Friend WithEvents BtnConfirmarPeso As ToolStripButton
     Friend WithEvents btnreporteRrhhctrlcapaci As ToolStripDropDownButton
     Friend WithEvents BtnReporteGeneral As ToolStripMenuItem
     Friend WithEvents GrupoFiltros As GroupBox
+    Friend WithEvents BtnPesoBajada As ToolStripDropDownButton
+    Friend WithEvents BtnConfirmarPeso As ToolStripMenuItem
+    Friend WithEvents BtnCancelarPeso As ToolStripMenuItem
 End Class

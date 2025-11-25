@@ -39,15 +39,17 @@ Partial Class FrmControlExcedente
         Dim Appearance14 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance15 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.btnBuscar = New System.Windows.Forms.Button()
-        Me.cmbEstado = New System.Windows.Forms.ComboBox()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.dtpFechaHasta = New System.Windows.Forms.DateTimePicker()
-        Me.dtpFechaDesde = New System.Windows.Forms.DateTimePicker()
-        Me.Label3 = New System.Windows.Forms.Label()
+        Me.cmbEstado = New System.Windows.Forms.ComboBox()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.dtpFechaDesde = New System.Windows.Forms.DateTimePicker()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
+        Me.BtnNuevoxRacion = New System.Windows.Forms.ToolStripButton()
         Me.btnNuevoMolinoinexce = New System.Windows.Forms.ToolStripButton()
         Me.btnAnularMolinoinexce = New System.Windows.Forms.ToolStripButton()
         Me.btnExportarMolinoinexce = New System.Windows.Forms.ToolStripButton()
@@ -56,12 +58,11 @@ Partial Class FrmControlExcedente
         Me.dtgListadoInsumoExcedente = New Infragistics.Win.UltraWinGrid.UltraGrid()
         Me.Ptbx_Cargando = New System.Windows.Forms.PictureBox()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Panel2.SuspendLayout()
+        Me.GroupBox1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
         CType(Me.dtgListadoInsumoExcedente, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Ptbx_Cargando, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel2
@@ -72,10 +73,28 @@ Partial Class FrmControlExcedente
         Me.Panel2.Controls.Add(Me.ToolStrip1)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(2, 1, 2, 1)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1948, 326)
+        Me.Panel2.Size = New System.Drawing.Size(1283, 212)
         Me.Panel2.TabIndex = 9
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.btnBuscar)
+        Me.GroupBox1.Controls.Add(Me.dtpFechaHasta)
+        Me.GroupBox1.Controls.Add(Me.cmbEstado)
+        Me.GroupBox1.Controls.Add(Me.Label4)
+        Me.GroupBox1.Controls.Add(Me.Label1)
+        Me.GroupBox1.Controls.Add(Me.Label3)
+        Me.GroupBox1.Controls.Add(Me.dtpFechaDesde)
+        Me.GroupBox1.Location = New System.Drawing.Point(15, 54)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2)
+        Me.GroupBox1.Size = New System.Drawing.Size(792, 103)
+        Me.GroupBox1.TabIndex = 159
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Filtros de Búsqueda"
         '
         'btnBuscar
         '
@@ -83,15 +102,22 @@ Partial Class FrmControlExcedente
         Me.btnBuscar.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBuscar.Image = CType(resources.GetObject("btnBuscar.Image"), System.Drawing.Image)
         Me.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnBuscar.Location = New System.Drawing.Point(992, 70)
-        Me.btnBuscar.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btnBuscar.Location = New System.Drawing.Point(661, 46)
         Me.btnBuscar.Name = "btnBuscar"
-        Me.btnBuscar.Padding = New System.Windows.Forms.Padding(6, 0, 6, 0)
-        Me.btnBuscar.Size = New System.Drawing.Size(138, 63)
+        Me.btnBuscar.Padding = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.btnBuscar.Size = New System.Drawing.Size(92, 41)
         Me.btnBuscar.TabIndex = 170
         Me.btnBuscar.Text = "Buscar"
         Me.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnBuscar.UseVisualStyleBackColor = True
+        '
+        'dtpFechaHasta
+        '
+        Me.dtpFechaHasta.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dtpFechaHasta.Location = New System.Drawing.Point(133, 68)
+        Me.dtpFechaHasta.Name = "dtpFechaHasta"
+        Me.dtpFechaHasta.Size = New System.Drawing.Size(240, 21)
+        Me.dtpFechaHasta.TabIndex = 167
         '
         'cmbEstado
         '
@@ -99,55 +125,10 @@ Partial Class FrmControlExcedente
         Me.cmbEstado.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbEstado.FormattingEnabled = True
         Me.cmbEstado.Items.AddRange(New Object() {"TODOS", "ACTIVO", "CANCELADO"})
-        Me.cmbEstado.Location = New System.Drawing.Point(699, 47)
-        Me.cmbEstado.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.cmbEstado.Location = New System.Drawing.Point(466, 31)
         Me.cmbEstado.Name = "cmbEstado"
-        Me.cmbEstado.Size = New System.Drawing.Size(194, 28)
+        Me.cmbEstado.Size = New System.Drawing.Size(131, 21)
         Me.cmbEstado.TabIndex = 169
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(598, 50)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(91, 22)
-        Me.Label1.TabIndex = 168
-        Me.Label1.Text = "Estado :"
-        '
-        'dtpFechaHasta
-        '
-        Me.dtpFechaHasta.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dtpFechaHasta.Location = New System.Drawing.Point(200, 105)
-        Me.dtpFechaHasta.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.dtpFechaHasta.Name = "dtpFechaHasta"
-        Me.dtpFechaHasta.Size = New System.Drawing.Size(358, 28)
-        Me.dtpFechaHasta.TabIndex = 167
-        '
-        'dtpFechaDesde
-        '
-        Me.dtpFechaDesde.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dtpFechaDesde.Location = New System.Drawing.Point(200, 45)
-        Me.dtpFechaDesde.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.dtpFechaDesde.Name = "dtpFechaDesde"
-        Me.dtpFechaDesde.Size = New System.Drawing.Size(358, 28)
-        Me.dtpFechaDesde.TabIndex = 166
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.BackColor = System.Drawing.Color.Transparent
-        Me.Label3.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(33, 47)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(152, 22)
-        Me.Label3.TabIndex = 164
-        Me.Label3.Text = "Fecha Desde :"
         '
         'Label4
         '
@@ -155,12 +136,46 @@ Partial Class FrmControlExcedente
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label4.Location = New System.Drawing.Point(38, 107)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label4.Location = New System.Drawing.Point(25, 70)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(147, 22)
+        Me.Label4.Size = New System.Drawing.Size(97, 14)
         Me.Label4.TabIndex = 165
         Me.Label4.Text = "Fecha Hasta :"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.Label1.Location = New System.Drawing.Point(399, 32)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(60, 14)
+        Me.Label1.TabIndex = 168
+        Me.Label1.Text = "Estado :"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.Label3.Location = New System.Drawing.Point(22, 31)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(100, 14)
+        Me.Label3.TabIndex = 164
+        Me.Label3.Text = "Fecha Desde :"
+        '
+        'dtpFechaDesde
+        '
+        Me.dtpFechaDesde.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dtpFechaDesde.Location = New System.Drawing.Point(133, 29)
+        Me.dtpFechaDesde.Name = "dtpFechaDesde"
+        Me.dtpFechaDesde.Size = New System.Drawing.Size(240, 21)
+        Me.dtpFechaDesde.TabIndex = 166
         '
         'Label6
         '
@@ -168,9 +183,10 @@ Partial Class FrmControlExcedente
         Me.Label6.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(233, Byte), Integer))
         Me.Label6.Font = New System.Drawing.Font("Verdana", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(49, Byte), Integer))
-        Me.Label6.Location = New System.Drawing.Point(45, 27)
+        Me.Label6.Location = New System.Drawing.Point(30, 18)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(501, 29)
+        Me.Label6.Size = New System.Drawing.Size(337, 18)
         Me.Label6.TabIndex = 128
         Me.Label6.Text = "CONTROL DE INSUMOS EXCEDENTES"
         '
@@ -180,14 +196,27 @@ Partial Class FrmControlExcedente
         Me.ToolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.ToolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
         Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnNuevoMolinoinexce, Me.btnAnularMolinoinexce, Me.btnExportarMolinoinexce, Me.btncerrar, Me.ToolStripButton1})
-        Me.ToolStrip1.Location = New System.Drawing.Point(0, 286)
-        Me.ToolStrip1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnNuevoxRacion, Me.btnNuevoMolinoinexce, Me.btnAnularMolinoinexce, Me.btnExportarMolinoinexce, Me.btncerrar, Me.ToolStripButton1})
+        Me.ToolStrip1.Location = New System.Drawing.Point(0, 174)
+        Me.ToolStrip1.Margin = New System.Windows.Forms.Padding(2, 1, 2, 1)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Padding = New System.Windows.Forms.Padding(0, 0, 3, 0)
-        Me.ToolStrip1.Size = New System.Drawing.Size(1948, 40)
+        Me.ToolStrip1.Padding = New System.Windows.Forms.Padding(0, 0, 2, 0)
+        Me.ToolStrip1.Size = New System.Drawing.Size(1283, 38)
         Me.ToolStrip1.TabIndex = 52
         Me.ToolStrip1.Text = "ToolStrip1"
+        '
+        'BtnNuevoxRacion
+        '
+        Me.BtnNuevoxRacion.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnNuevoxRacion.ForeColor = System.Drawing.Color.White
+        Me.BtnNuevoxRacion.Image = Global.Formularios.My.Resources.Resources.nuevo
+        Me.BtnNuevoxRacion.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BtnNuevoxRacion.Margin = New System.Windows.Forms.Padding(5)
+        Me.BtnNuevoxRacion.Name = "BtnNuevoxRacion"
+        Me.BtnNuevoxRacion.Padding = New System.Windows.Forms.Padding(2)
+        Me.BtnNuevoxRacion.Size = New System.Drawing.Size(137, 28)
+        Me.BtnNuevoxRacion.Text = "Nuevo x Ración"
+        Me.BtnNuevoxRacion.ToolTipText = "Nuevo "
         '
         'btnNuevoMolinoinexce
         '
@@ -198,9 +227,9 @@ Partial Class FrmControlExcedente
         Me.btnNuevoMolinoinexce.Margin = New System.Windows.Forms.Padding(5)
         Me.btnNuevoMolinoinexce.Name = "btnNuevoMolinoinexce"
         Me.btnNuevoMolinoinexce.Padding = New System.Windows.Forms.Padding(2)
-        Me.btnNuevoMolinoinexce.Size = New System.Drawing.Size(108, 30)
-        Me.btnNuevoMolinoinexce.Text = "Nuevo "
-        Me.btnNuevoMolinoinexce.ToolTipText = "Nuevo "
+        Me.btnNuevoMolinoinexce.Size = New System.Drawing.Size(142, 28)
+        Me.btnNuevoMolinoinexce.Text = "Nuevo x Insumo"
+        Me.btnNuevoMolinoinexce.ToolTipText = "Nuevo"
         '
         'btnAnularMolinoinexce
         '
@@ -211,7 +240,7 @@ Partial Class FrmControlExcedente
         Me.btnAnularMolinoinexce.Margin = New System.Windows.Forms.Padding(5)
         Me.btnAnularMolinoinexce.Name = "btnAnularMolinoinexce"
         Me.btnAnularMolinoinexce.Padding = New System.Windows.Forms.Padding(2)
-        Me.btnAnularMolinoinexce.Size = New System.Drawing.Size(105, 30)
+        Me.btnAnularMolinoinexce.Size = New System.Drawing.Size(78, 28)
         Me.btnAnularMolinoinexce.Text = "Anular"
         '
         'btnExportarMolinoinexce
@@ -223,7 +252,7 @@ Partial Class FrmControlExcedente
         Me.btnExportarMolinoinexce.Margin = New System.Windows.Forms.Padding(5)
         Me.btnExportarMolinoinexce.Name = "btnExportarMolinoinexce"
         Me.btnExportarMolinoinexce.Padding = New System.Windows.Forms.Padding(2)
-        Me.btnExportarMolinoinexce.Size = New System.Drawing.Size(125, 30)
+        Me.btnExportarMolinoinexce.Size = New System.Drawing.Size(92, 28)
         Me.btnExportarMolinoinexce.Text = "Exportar"
         Me.btnExportarMolinoinexce.ToolTipText = "Exportar"
         '
@@ -236,7 +265,7 @@ Partial Class FrmControlExcedente
         Me.btncerrar.Margin = New System.Windows.Forms.Padding(5)
         Me.btncerrar.Name = "btncerrar"
         Me.btncerrar.Padding = New System.Windows.Forms.Padding(2)
-        Me.btncerrar.Size = New System.Drawing.Size(84, 30)
+        Me.btncerrar.Size = New System.Drawing.Size(66, 28)
         Me.btncerrar.Text = "Salir"
         '
         'ToolStripButton1
@@ -250,7 +279,7 @@ Partial Class FrmControlExcedente
         Me.ToolStripButton1.Margin = New System.Windows.Forms.Padding(5)
         Me.ToolStripButton1.Name = "ToolStripButton1"
         Me.ToolStripButton1.Padding = New System.Windows.Forms.Padding(2)
-        Me.ToolStripButton1.Size = New System.Drawing.Size(102, 30)
+        Me.ToolStripButton1.Size = New System.Drawing.Size(77, 28)
         Me.ToolStripButton1.Text = "Filtros"
         '
         'dtgListadoInsumoExcedente
@@ -325,10 +354,9 @@ Partial Class FrmControlExcedente
         Me.dtgListadoInsumoExcedente.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy
         Me.dtgListadoInsumoExcedente.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dtgListadoInsumoExcedente.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dtgListadoInsumoExcedente.Location = New System.Drawing.Point(0, 326)
-        Me.dtgListadoInsumoExcedente.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.dtgListadoInsumoExcedente.Location = New System.Drawing.Point(0, 212)
         Me.dtgListadoInsumoExcedente.Name = "dtgListadoInsumoExcedente"
-        Me.dtgListadoInsumoExcedente.Size = New System.Drawing.Size(1948, 689)
+        Me.dtgListadoInsumoExcedente.Size = New System.Drawing.Size(1283, 448)
         Me.dtgListadoInsumoExcedente.TabIndex = 29
         Me.dtgListadoInsumoExcedente.Text = "UltraGrid1"
         '
@@ -336,10 +364,9 @@ Partial Class FrmControlExcedente
         '
         Me.Ptbx_Cargando.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Ptbx_Cargando.Image = Global.Formularios.My.Resources.Resources.loader
-        Me.Ptbx_Cargando.Location = New System.Drawing.Point(933, 578)
-        Me.Ptbx_Cargando.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Ptbx_Cargando.Location = New System.Drawing.Point(622, 376)
         Me.Ptbx_Cargando.Name = "Ptbx_Cargando"
-        Me.Ptbx_Cargando.Size = New System.Drawing.Size(64, 57)
+        Me.Ptbx_Cargando.Size = New System.Drawing.Size(43, 37)
         Me.Ptbx_Cargando.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.Ptbx_Cargando.TabIndex = 30
         Me.Ptbx_Cargando.TabStop = False
@@ -348,30 +375,15 @@ Partial Class FrmControlExcedente
         'BackgroundWorker1
         '
         '
-        'GroupBox1
-        '
-        Me.GroupBox1.Controls.Add(Me.btnBuscar)
-        Me.GroupBox1.Controls.Add(Me.dtpFechaHasta)
-        Me.GroupBox1.Controls.Add(Me.cmbEstado)
-        Me.GroupBox1.Controls.Add(Me.Label4)
-        Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Controls.Add(Me.Label3)
-        Me.GroupBox1.Controls.Add(Me.dtpFechaDesde)
-        Me.GroupBox1.Location = New System.Drawing.Point(23, 83)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(1188, 158)
-        Me.GroupBox1.TabIndex = 159
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Filtros de Búsqueda"
-        '
         'FrmControlExcedente
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1948, 1015)
+        Me.ClientSize = New System.Drawing.Size(1283, 660)
         Me.Controls.Add(Me.Ptbx_Cargando)
         Me.Controls.Add(Me.dtgListadoInsumoExcedente)
         Me.Controls.Add(Me.Panel2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "FrmControlExcedente"
@@ -379,12 +391,12 @@ Partial Class FrmControlExcedente
         Me.Text = "CONTROL DE EXCEDENTES"
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()
         CType(Me.dtgListadoInsumoExcedente, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Ptbx_Cargando, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -408,4 +420,5 @@ Partial Class FrmControlExcedente
     Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
     Friend WithEvents ToolStripButton1 As ToolStripButton
     Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents BtnNuevoxRacion As ToolStripButton
 End Class
