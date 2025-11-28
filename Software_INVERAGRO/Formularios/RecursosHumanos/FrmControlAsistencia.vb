@@ -425,7 +425,7 @@ Public Class FrmControlAsistencia
                                                     resultado = "PM"
 
                                                     ' Prioridad 2: Descanso o Vacaciones
-                                                ElseIf observacion = "DESCANSO" Then
+                                                ElseIf observacion.IndexOf("DESCANSO", StringComparison.OrdinalIgnoreCase) >= 0 Then
                                                     resultado = "D"
 
                                                 ElseIf observacion = "VACACIONES" Then
@@ -549,7 +549,7 @@ Public Class FrmControlAsistencia
                                                     resultado = "PM"
 
                                                     ' Prioridad 2: Descanso o Vacaciones
-                                                ElseIf observacion = "DESCANSO" Then
+                                                ElseIf observacion.IndexOf("DESCANSO", StringComparison.OrdinalIgnoreCase) >= 0 Then
                                                     resultado = "D"
 
                                                 ElseIf observacion = "VACACIONES" Then
@@ -667,7 +667,7 @@ Public Class FrmControlAsistencia
                                                 resultado = "PM"
 
                                                 ' Prioridad 2: Descanso o Vacaciones
-                                            ElseIf observacion = "DESCANSO" Then
+                                            ElseIf observacion.IndexOf("DESCANSO", StringComparison.OrdinalIgnoreCase) >= 0 Then
                                                 resultado = "D"
 
                                             ElseIf observacion = "VACACIONES" Then
@@ -1104,7 +1104,7 @@ Public Class FrmControlAsistencia
                             nuevoValor = "PM"
                         End If
 
-                        If frmEditarHorarios.Observacion.Trim() = "DESCANSO" Then
+                        If frmEditarHorarios.Observacion.Trim().IndexOf("DESCANSO", StringComparison.OrdinalIgnoreCase) >= 0 Then
                             nuevoValor = "D"
                         End If
 
@@ -1270,7 +1270,7 @@ Public Class FrmControlAsistencia
                                 nuevoValor = "PM"
                             End If
 
-                            If frmEditarHorarios.Observacion.Trim() = "DESCANSO" Then
+                            If frmEditarHorarios.Observacion.Trim().IndexOf("DESCANSO", StringComparison.OrdinalIgnoreCase) >= 0 Then
                                 nuevoValor = "D"
                             End If
 
@@ -1432,7 +1432,7 @@ Public Class FrmControlAsistencia
                                 nuevoValor = "PM"
                             End If
 
-                            If frmEditarHorarios.Observacion.Trim() = "DESCANSO" Then
+                            If frmEditarHorarios.Observacion.Trim().IndexOf("DESCANSO", StringComparison.OrdinalIgnoreCase) >= 0 Then
                                 nuevoValor = "D"
                             End If
 
