@@ -326,7 +326,7 @@ Public Class FrmVerAsistencia
                         ElseIf feriadoTrabajado = "NO" Then
                             resultado = "FNT"
                             feriadosDict(dni)(dia) = feriadoTrabajado
-                        ElseIf observacion = "DESCANSO" Then
+                        ElseIf observacion.IndexOf("DESCANSO", StringComparison.OrdinalIgnoreCase) >= 0 Then
                             resultado = "D"
                             horasTrabajadasDict(dni)(dia) = horasTrabajadas
                         ElseIf String.IsNullOrWhiteSpace(horaEntrada) AndAlso String.IsNullOrWhiteSpace(horaSalida) Then
@@ -357,7 +357,7 @@ Public Class FrmVerAsistencia
                         ElseIf feriadoTrabajado = "NO" Then
                             resultado = "FNT"
                             feriadosDict(dni)(dia) = feriadoTrabajado
-                        ElseIf observacion = "DESCANSO" Then
+                        ElseIf observacion.IndexOf("DESCANSO", StringComparison.OrdinalIgnoreCase) >= 0 Then
                             resultado = "D"
                             horasTrabajadasDict(dni)(dia) = horasTrabajadas
                         ElseIf observacion = "VACACIONES" Then
@@ -392,7 +392,7 @@ Public Class FrmVerAsistencia
                     ElseIf feriadoTrabajado = "NO" Then
                         resultado = "FNT"
                         feriadosDict(dni)(dia) = feriadoTrabajado
-                    ElseIf observacion = "DESCANSO" Then
+                    ElseIf observacion.IndexOf("DESCANSO", StringComparison.OrdinalIgnoreCase) >= 0 Then
                         resultado = "D"
                         horasTrabajadasDict(dni)(dia) = horasTrabajadas
                     ElseIf observacion = "VACACIONES" Then
