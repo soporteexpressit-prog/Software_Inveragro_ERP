@@ -73,6 +73,18 @@ Public Class FrmListarAlimentos
         Return If(Integer.TryParse(value, result), result, 0)
     End Function
 
+    Private Sub dtgListado_InitializeLayout(sender As Object, e As Infragistics.Win.UltraWinGrid.InitializeLayoutEventArgs) Handles dtgListado.InitializeLayout
+        Try
+            If (dtgListado.Rows.Count = 0) Then
+            Else
+                e.Layout.Bands(0).Summaries.Clear()
+                clsBasicas.Totales_Formato(dtgListado, e, 1)
+            End If
+        Catch ex As Exception
+            clsBasicas.controlException(Name, ex)
+        End Try
+    End Sub
+
     Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
         Dispose()
     End Sub

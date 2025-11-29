@@ -2,8 +2,8 @@
 Imports CapaObjetos
 
 Public Class FrmListaRacionesExcedente
+    Public IdUbicacionDestino As Integer = 0
     Dim cn As New cnNucleo
-    Dim idUbicacion As Integer = 6
 
     Private ReadOnly _frmRegistrarExcedentexRacion As FrmRegistrarExcedentexRacion
 
@@ -18,53 +18,65 @@ Public Class FrmListaRacionesExcedente
 
     Private Sub ListarRaciones()
         Try
-            Dim obj As New coNucleo With {
-                .IdUbicacion = idUbicacion
-            }
-            DtgListado.DataSource = cn.Cn_ConsultarRaciones(obj)
-            DtgListado.DisplayLayout.Bands(0).Columns(0).Hidden = True
-            DtgListado.DisplayLayout.Bands(0).Columns(2).Hidden = True
             clsBasicas.Formato_Tablas_Grid(DtgListado)
+            ListarAlimentos()
+            DtgListado.DisplayLayout.Bands(0).Columns(0).Hidden = True
+            DtgListado.DisplayLayout.Bands(0).Columns("idAnti").Hidden = True
+            DtgListado.DisplayLayout.Bands(0).Columns("idPlanMedicado").Hidden = True
+            DtgListado.DisplayLayout.Bands(0).Columns("idPeriodoMedicacion").Hidden = True
+            DtgListado.DisplayLayout.Bands(0).Columns("totalMedicacionesActivas").Hidden = True
+            DtgListado.DisplayLayout.Bands(0).Columns("idPeriodoPlus").Hidden = True
+            DtgListado.DisplayLayout.Bands(0).Columns("totalPlusActivas").Hidden = True
+        Catch ex As Exception
+            clsBasicas.controlException(Name, ex)
+        End Try
+    End Sub
+
+    Sub ListarAlimentos()
+        Try
+            Dim obj As New coNucleo With {
+            .IdUbicacion = IdUbicacionDestino
+            }
+            DtgListado.DataSource = cn.Cn_ListarRacionesAntiMedicadas(obj)
         Catch ex As Exception
             clsBasicas.controlException(Name, ex)
         End Try
     End Sub
 
     Private Sub dtgListado_DoubleClickCell(sender As Object, e As Infragistics.Win.UltraWinGrid.DoubleClickCellEventArgs) Handles DtgListado.DoubleClickCell
-        If DtgListado.Rows.Count = 0 Then
-            msj_advert(MensajesSistema.mensajesGenerales("SELECCIONE_REGISTRO"))
-            Return
-        End If
-
-        ' Validamos que haya una fila seleccionada
-        If e.Cell Is Nothing OrElse e.Cell.Row Is Nothing Then
-            msj_advert(MensajesSistema.mensajesGenerales("SELECCIONE_REGISTRO"))
-            Return
-        End If
-
-        ' Validamos que el índice sea válido
-        If e.Cell.Row.Index < 0 Then
-            msj_advert(MensajesSistema.mensajesGenerales("SELECCIONE_REGISTRO"))
-            Return
-        End If
         Try
-            If (DtgListado.Rows.Count > 0) Then
-                If (DtgListado.ActiveRow.Cells(0).Value.ToString.Length <> 0) Then
-                    Dim codigo As String = e.Cell.Row.Cells(0).Value.ToString()
-                    Dim nombre As String = e.Cell.Row.Cells(1).Value.ToString()
-
-                    _frmRegistrarExcedentexRacion.LlenarCamposRacion(codigo, nombre)
-                    Me.Close()
-                Else
-                    msj_advert(MensajesSistema.mensajesGenerales("SELECCIONE_REGISTRO"))
-                End If
-            Else
+            If DtgListado.Rows.Count = 0 OrElse e.Cell.Row Is Nothing OrElse e.Cell.Row.Cells(0).Value Is Nothing Then
                 msj_advert(MensajesSistema.mensajesGenerales("SELECCIONE_REGISTRO"))
+                Return
             End If
+
+            Dim cells = e.Cell.Row.Cells
+            Dim codigo = SafeGetString(cells, 0)
+            Dim descripcion = SafeGetString(cells, 1)
+            Dim idAnti = SafeGetInteger(cells, 2)
+            Dim idPlanMedicado = SafeGetInteger(cells, 3)
+            Dim idPeriodoMedicacion = SafeGetInteger(cells, 4)
+            Dim totalMedicacionesActivas = SafeGetInteger(cells, 5)
+            Dim idPlus = SafeGetInteger(cells, 6)
+            Dim totalPlus = SafeGetInteger(cells, 7)
+
+            _frmRegistrarExcedentexRacion.LlenarCamposAlimento(codigo, descripcion, idAnti, idPlanMedicado, idPeriodoMedicacion, totalMedicacionesActivas, idPlus, totalPlus)
+            Dispose()
+
         Catch ex As Exception
             clsBasicas.controlException(Name, ex)
         End Try
     End Sub
+
+    Private Function SafeGetString(cells As Infragistics.Win.UltraWinGrid.CellsCollection, index As Integer) As String
+        Return If(index < cells.Count AndAlso cells(index).Value IsNot Nothing, cells(index).Value.ToString(), String.Empty)
+    End Function
+
+    Private Function SafeGetInteger(cells As Infragistics.Win.UltraWinGrid.CellsCollection, index As Integer) As Integer
+        Dim value = SafeGetString(cells, index)
+        Dim result As Integer
+        Return If(Integer.TryParse(value, result), result, 0)
+    End Function
 
     Private Sub dtgListado_InitializeLayout(sender As Object, e As Infragistics.Win.UltraWinGrid.InitializeLayoutEventArgs) Handles DtgListado.InitializeLayout
         Try

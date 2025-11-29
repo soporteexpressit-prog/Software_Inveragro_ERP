@@ -931,6 +931,12 @@
     <Compile Include="GlobalReferences.vb" />
     <Compile Include="MailService.vb" />
     <Compile Include="MensajesSistema.vb" />
+    <Compile Include="Molino\ControlExcedente\FrmListaMedicacionesExcedente.Designer.vb">
+      <DependentUpon>FrmListaMedicacionesExcedente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Molino\ControlExcedente\FrmListaMedicacionesExcedente.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Molino\ControlExcedente\FrmListaRacionesExcedente.Designer.vb">
       <DependentUpon>FrmListaRacionesExcedente.vb</DependentUpon>
     </Compile>
@@ -4236,6 +4242,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="contabilidad\FrmReporteCtaBanco.resx">
       <DependentUpon>FrmReporteCtaBanco.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Molino\ControlExcedente\FrmListaMedicacionesExcedente.resx">
+      <DependentUpon>FrmListaMedicacionesExcedente.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Molino\ControlExcedente\FrmListaRacionesExcedente.resx">
       <DependentUpon>FrmListaRacionesExcedente.vb</DependentUpon>

@@ -54,7 +54,7 @@ Partial Class FrmListaRacionesExcedente
         Me.ToolStrip1.Margin = New System.Windows.Forms.Padding(2)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Padding = New System.Windows.Forms.Padding(0, 0, 2, 0)
-        Me.ToolStrip1.Size = New System.Drawing.Size(244, 38)
+        Me.ToolStrip1.Size = New System.Drawing.Size(229, 38)
         Me.ToolStrip1.TabIndex = 173
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -143,7 +143,7 @@ Partial Class FrmListaRacionesExcedente
         Me.DtgListado.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DtgListado.Location = New System.Drawing.Point(0, 38)
         Me.DtgListado.Name = "DtgListado"
-        Me.DtgListado.Size = New System.Drawing.Size(244, 349)
+        Me.DtgListado.Size = New System.Drawing.Size(229, 306)
         Me.DtgListado.TabIndex = 176
         Me.DtgListado.Text = "UltraGrid1"
         '
@@ -151,7 +151,7 @@ Partial Class FrmListaRacionesExcedente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(244, 387)
+        Me.ClientSize = New System.Drawing.Size(229, 344)
         Me.Controls.Add(Me.DtgListado)
         Me.Controls.Add(Me.ToolStrip1)
         Me.MaximizeBox = False

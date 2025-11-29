@@ -45,6 +45,16 @@ Public Class cnControlFormulacion
         End If
     End Function
 
+    Public Function Cn_ConsultarInsumosFormulaRacionUnidad(ByRef obj As coControlFormulacion) As Object
+        Dim resultado As Object = cls_at.Cd_ConsultarInsumosFormulaRacionUnidad("[w_pa_obtener_formula_racion_unidad]", obj)
+
+        If TypeOf resultado Is String Then
+            Return resultado
+        Else
+            Return CType(resultado, DataTable)
+        End If
+    End Function
+
     Public Function Cn_ObtenerInsumosxFormulaNucleo(ByRef obj As coControlFormulacion) As DataTable
         Return cls_at.Cd_ObtenerInsumosxFormulaNucleo("[w_pa_obtener_insumos_x_formulacion_nucleo]", obj)
     End Function

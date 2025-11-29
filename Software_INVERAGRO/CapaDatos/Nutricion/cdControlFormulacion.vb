@@ -387,6 +387,38 @@ Public Class cdControlFormulacion
         Return dt
     End Function
 
+    Public Function Cd_ConsultarInsumosFormulaRacionUnidad(name As String, obj As coControlFormulacion) As Object
+        Dim dt As New DataTable
+        Dim mensaje As String
+        Dim coderror As Integer
+        Try
+            con.Abrir()
+            Dim cmd As New SqlCommand(name, con.con)
+            cmd.CommandType = CommandType.StoredProcedure
+            cmd.Parameters.AddWithValue("@idRacion", obj.IdNucleo)
+            cmd.Parameters.AddWithValue("@Tipo", obj.Tipo)
+            cmd.Parameters.AddWithValue("@idPeriodoMedicacion", obj.IdPeriodoMedicion)
+            cmd.Parameters.AddWithValue("@idPeriodoPlus", obj.IdPeriodoPlus)
+            cmd.Parameters.Add("@msj", SqlDbType.VarChar, 100).Direction = ParameterDirection.Output
+            cmd.Parameters.Add("@coderror", SqlDbType.Int).Direction = ParameterDirection.Output
+            Dim da As New SqlDataAdapter(cmd)
+            da.Fill(dt)
+
+            mensaje = cmd.Parameters("@msj").Value.ToString()
+            coderror = Convert.ToInt32(cmd.Parameters("@coderror").Value)
+
+            If coderror <> 0 Then
+                Return mensaje
+            End If
+
+        Catch ex As Exception
+            Throw ex
+        Finally
+            con.Salir()
+        End Try
+        Return dt
+    End Function
+
     Public Function Cd_ObtenerPreparacionFormulaTotal(name As String, obj As coControlFormulacion) As DataSet
         Dim dt As New DataSet
         Try
