@@ -119,7 +119,7 @@ Public Class FrmControlExcedente
         Consultar()
     End Sub
 
-    Private Sub btnNuevo_Click(sender As Object, e As EventArgs) Handles btnNuevoMolinoinexce.Click
+    Private Sub btnNuevo_Click(sender As Object, e As EventArgs) 
         Try
             Dim f As New FrmRegistrarInsumoExcedente
             f.ShowDialog()
@@ -129,7 +129,7 @@ Public Class FrmControlExcedente
         End Try
     End Sub
 
-    Private Sub btnAnular_Click(sender As Object, e As EventArgs) Handles btnAnularMolinoinexce.Click
+    Private Sub btnAnular_Click(sender As Object, e As EventArgs) 
         Try
             Dim activeRow As Infragistics.Win.UltraWinGrid.UltraGridRow = dtgListadoInsumoExcedente.ActiveRow
             If (dtgListadoInsumoExcedente.Rows.Count > 0) Then
