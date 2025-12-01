@@ -652,6 +652,7 @@ Public Class cdControlAlimento
             da.SelectCommand.CommandType = 4
             da.SelectCommand.Parameters.AddWithValue("@fechaDesde", obj.FechaDesde)
             da.SelectCommand.Parameters.AddWithValue("@fechaHasta", obj.FechaHasta)
+            da.SelectCommand.Parameters.AddWithValue("@tipo", obj.Tipo)
             da.SelectCommand.Parameters.AddWithValue("@estado", obj.Estado)
             da.Fill(ds)
         Catch ex As Exception

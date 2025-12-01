@@ -11,6 +11,8 @@
     Private _Coderror As Integer
     Private _FechaDesde As Date?
     Private _FechaHasta As Date?
+    Private _Cantidad As Double
+    Private _IdUbicacionDestino As Integer
 
     Public Property Codigo As Integer
         Get
@@ -117,6 +119,24 @@
         End Get
         Set(value As String)
             _Tipo = value
+        End Set
+    End Property
+
+    Public Property Cantidad As Double
+        Get
+            Return _Cantidad
+        End Get
+        Set(value As Double)
+            _Cantidad = value
+        End Set
+    End Property
+
+    Public Property IdUbicacionDestino As Integer
+        Get
+            Return _IdUbicacionDestino
+        End Get
+        Set(value As Integer)
+            _IdUbicacionDestino = value
         End Set
     End Property
 End Class

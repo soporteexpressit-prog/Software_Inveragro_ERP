@@ -40,6 +40,7 @@ Public Class FrmHistoricoPreparaciones
                 Dim obj As New coControlAlimento With {
                     .FechaDesde = DtpFechaDesde.Value,
                     .FechaHasta = DtpFechaHasta.Value,
+                    .Tipo = "PREPARACION",
                     .Estado = CmbEstado.Text
                 }
 
@@ -59,6 +60,7 @@ Public Class FrmHistoricoPreparaciones
             Dim relation1 As New DataRelation("tb_relacion1", ds.Tables(0).Columns(0), ds.Tables(1).Columns(0), False)
             ds.Relations.Add(relation1)
             ds.Tables(0).Columns(0).ColumnMapping = MappingType.Hidden
+            ds.Tables(0).Columns("Origen").ColumnMapping = MappingType.Hidden
             ds.Tables(1).Columns(0).ColumnMapping = MappingType.Hidden
             e.Result = ds
         Catch ex As Exception
@@ -80,7 +82,7 @@ Public Class FrmHistoricoPreparaciones
 
     Sub Colorear()
         If (dtgListadoRacionesPreparado.Rows.Count > 0) Then
-            Dim estado As Integer = 7
+            Dim estado As Integer = 8
 
             'estadoRepetidora
             clsBasicas.Colorear_SegunValor(dtgListadoRacionesPreparado, Color.Green, Color.White, "REALIZADO", estado)

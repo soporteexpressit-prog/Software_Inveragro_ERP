@@ -3,47 +3,72 @@ Imports CapaObjetos
 Imports Infragistics.Win
 
 Public Class FrmControlExcedente
-    Dim cn As New cnControlExcedente
+    Dim cnAlimento As New cnControlAlimento
     Dim ds As New DataSet
+    Dim search As Boolean = True
 
     Private Sub FrmControlExcedente_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
-            WindowState = Windows.Forms.FormWindowState.Maximized
+            cmbEstado.SelectedIndex = 0
+            dtpFechaDesde.Value = Now.Date
+            dtpFechaHasta.Value = Now.Date
             clsBasicas.Formato_Tablas_Grid(dtgListadoInsumoExcedente)
-            Inicializar()
+            clsBasicas.Filtrar_Tabla(dtgListadoInsumoExcedente, True)
             Consultar()
         Catch ex As Exception
-            MsgBox(ex.Message)
+            clsBasicas.controlException(Name, ex)
         End Try
     End Sub
 
-    Public Sub Inicializar()
-        Ptbx_Cargando.Visible = True
-        dtpFechaDesde.Value = Now.Date
-        dtpFechaHasta.Value = Now.Date
-        cmbEstado.SelectedIndex = 0
+    Private Sub FrmHistoricoPreparaciones_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Try
+            cmbEstado.SelectedIndex = 0
+            dtpFechaDesde.Value = Now.Date
+            dtpFechaHasta.Value = Now.Date
+            clsBasicas.Formato_Tablas_Grid(dtgListadoInsumoExcedente)
+            clsBasicas.Filtrar_Tabla(dtgListadoInsumoExcedente, True)
+            Consultar()
+        Catch ex As Exception
+            clsBasicas.controlException(Name, ex)
+        End Try
     End Sub
 
     Sub Consultar()
-        If Not BackgroundWorker1.IsBusy Then
-            Ptbx_Cargando.Visible = True
-            btnBuscar.Enabled = False
+        Try
+            If dtpFechaDesde.Value > dtpFechaHasta.Value Then
+                msj_advert(MensajesSistema.mensajesGenerales("FECHA_INICIO_MAYOR_FIN"))
+                Return
+            End If
+            If Not BackgroundWorker1.IsBusy Then
+                Ptbx_Cargando.Visible = True
+                btnBuscar.Enabled = False
+                BarraOpciones.Enabled = False
 
-            Dim obj As New coControlExcedente With {
-                .FechaDesde = dtpFechaDesde.Value,
-                .FechaHasta = dtpFechaHasta.Value,
-                .Estado = cmbEstado.Text
-            }
+                If search Then
+                    Dim intervalo = ObtenerIntervaloSemana(Now.Date)
+                    dtpFechaDesde.Value = intervalo.Item1
+                    dtpFechaHasta.Value = intervalo.Item2
+                End If
 
-            BackgroundWorker1.RunWorkerAsync(obj)
-        End If
+                Dim obj As New coControlAlimento With {
+                    .FechaDesde = dtpFechaDesde.Value,
+                    .FechaHasta = dtpFechaHasta.Value,
+                    .Tipo = "EXCEDENTE",
+                    .Estado = cmbEstado.Text
+                }
+
+                BackgroundWorker1.RunWorkerAsync(obj)
+            End If
+        Catch ex As Exception
+            clsBasicas.controlException(Name, ex)
+        End Try
     End Sub
 
     Private Sub BackgroundWorker1_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorker1.DoWork
         Try
-            Dim obj As coControlExcedente = CType(e.Argument, coControlExcedente)
+            Dim obj As coControlAlimento = CType(e.Argument, coControlAlimento)
 
-            ds = cn.Cn_ConsultarInsumoExcedenteAlimentoCerdo(obj).Copy
+            ds = cnAlimento.Cn_ObtenerHistorioPreparaciones(obj).Copy
             ds.DataSetName = "tmp"
             Dim relation1 As New DataRelation("tb_relacion1", ds.Tables(0).Columns(0), ds.Tables(1).Columns(0), False)
             ds.Relations.Add(relation1)
@@ -60,8 +85,9 @@ Public Class FrmControlExcedente
         If e.Error IsNot Nothing OrElse e.Cancelled Then
             msj_advert("Error al Cargar los Datos")
         Else
-            dtgListadoInsumoExcedente.DataSource = ds.Tables(0)
             btnBuscar.Enabled = True
+            BarraOpciones.Enabled = True
+            dtgListadoInsumoExcedente.DataSource = ds.Tables(0)
             Colorear()
         End If
     End Sub
@@ -70,9 +96,9 @@ Public Class FrmControlExcedente
         If (dtgListadoInsumoExcedente.Rows.Count > 0) Then
             Dim estado As Integer = 8
 
-            'estado
-            clsBasicas.Colorear_SegunValor(dtgListadoInsumoExcedente, Color.Red, Color.White, "ANULADO", estado)
-            clsBasicas.Colorear_SegunValor(dtgListadoInsumoExcedente, Color.Green, Color.White, "ACTIVO", estado)
+            'estadoRepetidora
+            clsBasicas.Colorear_SegunValor(dtgListadoInsumoExcedente, Color.Green, Color.White, "REALIZADO", estado)
+            clsBasicas.Colorear_SegunValor(dtgListadoInsumoExcedente, Color.Red, Color.White, "CANCELADO", estado)
 
             'centrar columnas
             With dtgListadoInsumoExcedente.DisplayLayout.Bands(0)
@@ -81,16 +107,16 @@ Public Class FrmControlExcedente
         End If
     End Sub
 
+    Public Function ObtenerIntervaloSemana(ByVal fecha As Date) As Tuple(Of Date, Date)
+        Dim primerDiaSemana As Date = fecha.AddDays(-(fecha.DayOfWeek))
+        Dim ultimoDiaSemana As Date = primerDiaSemana.AddDays(6)
+
+        Return New Tuple(Of Date, Date)(primerDiaSemana, ultimoDiaSemana)
+    End Function
+
     Private Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
-        Try
-            If dtpFechaDesde.Value > dtpFechaHasta.Value Then
-                msj_advert(MensajesSistema.mensajesGenerales("FECHA_INICIO_MAYOR_FIN"))
-                Return
-            End If
-            Consultar()
-        Catch ex As Exception
-            clsBasicas.controlException(Name, ex)
-        End Try
+        search = False
+        Consultar()
     End Sub
 
     Private Sub btnNuevo_Click(sender As Object, e As EventArgs) Handles btnNuevoMolinoinexce.Click
@@ -161,6 +187,44 @@ Public Class FrmControlExcedente
         Catch ex As Exception
             clsBasicas.controlException(Name, ex)
         End Try
+    End Sub
+
+    Private Sub BtnCancelar_Click(sender As Object, e As EventArgs) Handles BtnCancelar.Click
+        Dim activeRow As Infragistics.Win.UltraWinGrid.UltraGridRow = dtgListadoInsumoExcedente.ActiveRow
+        If (dtgListadoInsumoExcedente.Rows.Count > 0) Then
+            If (activeRow.Cells(0).Value.ToString.Length <> 0) Then
+                If activeRow.Band.Index = 0 Then
+                    Dim estado As String = activeRow.Cells("Estado").Value.ToString()
+
+                    If estado = "CANCELADO" Then
+                        msj_advert("LA PREPARACIÓN DE ALIMENTO YA FUE CANCELADO")
+                        Return
+                    End If
+
+                    If (MessageBox.Show("¿ESTÁ SEGURO DE CANCELAR LA PREPARACIÓN?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.No) Then
+                        Return
+                    End If
+
+                    Dim obj As New coControlAlimento With {
+                        .IdPreparacionAlimento = activeRow.Cells("idPreparacionAlimento").Value
+                    }
+
+                    Dim MensajeBgWk As String = cnAlimento.Cn_CancelarPreparacionAlimentoExcedente(obj)
+                    If (obj.Coderror = 0) Then
+                        msj_ok(MensajeBgWk)
+                        Consultar()
+                    Else
+                        msj_advert(MensajeBgWk)
+                    End If
+                Else
+                    msj_advert(MensajesSistema.mensajesGenerales("SELECCION_FILA_CONTENEDOR"))
+                End If
+            Else
+                msj_advert(MensajesSistema.mensajesGenerales("SELECCIONE_REGISTRO"))
+            End If
+        Else
+            msj_advert(MensajesSistema.mensajesGenerales("SELECCIONE_REGISTRO"))
+        End If
     End Sub
 
     Private Sub btncerrar_Click(sender As Object, e As EventArgs) Handles btncerrar.Click

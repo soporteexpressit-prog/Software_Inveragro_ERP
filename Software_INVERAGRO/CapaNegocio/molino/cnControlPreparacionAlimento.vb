@@ -8,6 +8,10 @@ Public Class cnControlPreparacionAlimento
         Return cls_at.Cd_RegistrarSalidaInsumoYIngresoRecepcionAlimento("[w_pa_reg_salida_insumos_y_ingreso_recepcion_alimento]", obj)
     End Function
 
+    Public Function Cn_RegistrarSalidaInsumosExcedente(obj As coControlPreparacionAlimento) As String
+        Return cls_at.Cd_RegistrarSalidaInsumosExcedente("[w_reg_salida_insumos_excedente]", obj)
+    End Function
+
     Public Function Cn_ConsultarAlimentoPreparado(obj As coControlPreparacionAlimento) As DataTable
         Return cls_at.Cd_ConsultarAlimentoPreparado("[w_pa_cons_requerimiento_alimento_preparados]", obj)
     End Function

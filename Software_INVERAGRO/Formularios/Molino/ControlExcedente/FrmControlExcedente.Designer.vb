@@ -48,8 +48,9 @@ Partial Class FrmControlExcedente
         Me.Label3 = New System.Windows.Forms.Label()
         Me.dtpFechaDesde = New System.Windows.Forms.DateTimePicker()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
+        Me.BarraOpciones = New System.Windows.Forms.ToolStrip()
         Me.BtnNuevoxRacion = New System.Windows.Forms.ToolStripButton()
+        Me.BtnCancelar = New System.Windows.Forms.ToolStripButton()
         Me.btnNuevoMolinoinexce = New System.Windows.Forms.ToolStripButton()
         Me.btnAnularMolinoinexce = New System.Windows.Forms.ToolStripButton()
         Me.btnExportarMolinoinexce = New System.Windows.Forms.ToolStripButton()
@@ -60,7 +61,7 @@ Partial Class FrmControlExcedente
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         Me.Panel2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
-        Me.ToolStrip1.SuspendLayout()
+        Me.BarraOpciones.SuspendLayout()
         CType(Me.dtgListadoInsumoExcedente, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Ptbx_Cargando, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -70,7 +71,7 @@ Partial Class FrmControlExcedente
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(233, Byte), Integer))
         Me.Panel2.Controls.Add(Me.GroupBox1)
         Me.Panel2.Controls.Add(Me.Label6)
-        Me.Panel2.Controls.Add(Me.ToolStrip1)
+        Me.Panel2.Controls.Add(Me.BarraOpciones)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
         Me.Panel2.Margin = New System.Windows.Forms.Padding(2, 1, 2, 1)
@@ -124,7 +125,7 @@ Partial Class FrmControlExcedente
         Me.cmbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbEstado.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbEstado.FormattingEnabled = True
-        Me.cmbEstado.Items.AddRange(New Object() {"TODOS", "ACTIVO", "CANCELADO"})
+        Me.cmbEstado.Items.AddRange(New Object() {"REALIZADO", "CANCELADO"})
         Me.cmbEstado.Location = New System.Drawing.Point(466, 31)
         Me.cmbEstado.Name = "cmbEstado"
         Me.cmbEstado.Size = New System.Drawing.Size(131, 21)
@@ -190,20 +191,20 @@ Partial Class FrmControlExcedente
         Me.Label6.TabIndex = 128
         Me.Label6.Text = "CONTROL DE INSUMOS EXCEDENTES"
         '
-        'ToolStrip1
+        'BarraOpciones
         '
-        Me.ToolStrip1.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.ToolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.ToolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
-        Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnNuevoxRacion, Me.btnNuevoMolinoinexce, Me.btnAnularMolinoinexce, Me.btnExportarMolinoinexce, Me.btncerrar, Me.ToolStripButton1})
-        Me.ToolStrip1.Location = New System.Drawing.Point(0, 174)
-        Me.ToolStrip1.Margin = New System.Windows.Forms.Padding(2, 1, 2, 1)
-        Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Padding = New System.Windows.Forms.Padding(0, 0, 2, 0)
-        Me.ToolStrip1.Size = New System.Drawing.Size(1283, 38)
-        Me.ToolStrip1.TabIndex = 52
-        Me.ToolStrip1.Text = "ToolStrip1"
+        Me.BarraOpciones.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.BarraOpciones.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.BarraOpciones.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
+        Me.BarraOpciones.ImageScalingSize = New System.Drawing.Size(20, 20)
+        Me.BarraOpciones.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnNuevoxRacion, Me.BtnCancelar, Me.btnNuevoMolinoinexce, Me.btnAnularMolinoinexce, Me.btnExportarMolinoinexce, Me.btncerrar, Me.ToolStripButton1})
+        Me.BarraOpciones.Location = New System.Drawing.Point(0, 174)
+        Me.BarraOpciones.Margin = New System.Windows.Forms.Padding(2, 1, 2, 1)
+        Me.BarraOpciones.Name = "BarraOpciones"
+        Me.BarraOpciones.Padding = New System.Windows.Forms.Padding(0, 0, 2, 0)
+        Me.BarraOpciones.Size = New System.Drawing.Size(1283, 38)
+        Me.BarraOpciones.TabIndex = 52
+        Me.BarraOpciones.Text = "ToolStrip1"
         '
         'BtnNuevoxRacion
         '
@@ -218,6 +219,18 @@ Partial Class FrmControlExcedente
         Me.BtnNuevoxRacion.Text = "Nuevo x Ración"
         Me.BtnNuevoxRacion.ToolTipText = "Nuevo "
         '
+        'BtnCancelar
+        '
+        Me.BtnCancelar.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnCancelar.ForeColor = System.Drawing.Color.White
+        Me.BtnCancelar.Image = Global.Formularios.My.Resources.Resources.cancelar
+        Me.BtnCancelar.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BtnCancelar.Margin = New System.Windows.Forms.Padding(5)
+        Me.BtnCancelar.Name = "BtnCancelar"
+        Me.BtnCancelar.Padding = New System.Windows.Forms.Padding(2)
+        Me.BtnCancelar.Size = New System.Drawing.Size(93, 28)
+        Me.BtnCancelar.Text = "Cancelar"
+        '
         'btnNuevoMolinoinexce
         '
         Me.btnNuevoMolinoinexce.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -230,6 +243,7 @@ Partial Class FrmControlExcedente
         Me.btnNuevoMolinoinexce.Size = New System.Drawing.Size(142, 28)
         Me.btnNuevoMolinoinexce.Text = "Nuevo x Insumo"
         Me.btnNuevoMolinoinexce.ToolTipText = "Nuevo"
+        Me.btnNuevoMolinoinexce.Visible = False
         '
         'btnAnularMolinoinexce
         '
@@ -242,6 +256,7 @@ Partial Class FrmControlExcedente
         Me.btnAnularMolinoinexce.Padding = New System.Windows.Forms.Padding(2)
         Me.btnAnularMolinoinexce.Size = New System.Drawing.Size(78, 28)
         Me.btnAnularMolinoinexce.Text = "Anular"
+        Me.btnAnularMolinoinexce.Visible = False
         '
         'btnExportarMolinoinexce
         '
@@ -393,8 +408,8 @@ Partial Class FrmControlExcedente
         Me.Panel2.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
-        Me.ToolStrip1.ResumeLayout(False)
-        Me.ToolStrip1.PerformLayout()
+        Me.BarraOpciones.ResumeLayout(False)
+        Me.BarraOpciones.PerformLayout()
         CType(Me.dtgListadoInsumoExcedente, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Ptbx_Cargando, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -403,7 +418,7 @@ Partial Class FrmControlExcedente
 
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Label6 As Label
-    Friend WithEvents ToolStrip1 As ToolStrip
+    Friend WithEvents BarraOpciones As ToolStrip
     Friend WithEvents btnExportarMolinoinexce As ToolStripButton
     Friend WithEvents btncerrar As ToolStripButton
     Friend WithEvents Ptbx_Cargando As PictureBox
@@ -421,4 +436,5 @@ Partial Class FrmControlExcedente
     Friend WithEvents ToolStripButton1 As ToolStripButton
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents BtnNuevoxRacion As ToolStripButton
+    Friend WithEvents BtnCancelar As ToolStripButton
 End Class

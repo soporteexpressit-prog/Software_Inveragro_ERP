@@ -36,6 +36,38 @@ Public Class cdControlPreparacionAlimento
         End Try
     End Function
 
+    Public Function Cd_RegistrarSalidaInsumosExcedente(name As String, obj As coControlPreparacionAlimento) As String
+        Dim mensaje As String
+        Dim cmd As New SqlCommand(name, con.con)
+        Try
+            con.Abrir()
+            cmd.CommandType = CommandType.StoredProcedure
+
+            With cmd.Parameters
+                .AddWithValue("@idRacion", SqlDbType.Int).Value = obj.Codigo
+                .AddWithValue("@cantidadRacion", SqlDbType.Decimal).Value = obj.Cantidad
+                .AddWithValue("@idUsuario", SqlDbType.Int).Value = obj.IdUsuario
+                .AddWithValue("@idUbicacion", SqlDbType.Int).Value = obj.IdUbicacion
+                .AddWithValue("@idPlantelDestino", SqlDbType.Int).Value = obj.IdUbicacionDestino
+                .AddWithValue("@listaInsumosPreparacion", SqlDbType.VarChar).Value = obj.ListaInsumoPreparacion
+                .AddWithValue("@fecha", SqlDbType.Date).Value = obj.Fecha
+                .AddWithValue("@tipo", SqlDbType.VarChar).Value = obj.Tipo
+                .Add("@msj", SqlDbType.VarChar, 100).Direction = ParameterDirection.Output
+                .Add("@coderror", SqlDbType.Int).Direction = ParameterDirection.Output
+            End With
+
+            cmd.ExecuteNonQuery()
+
+            mensaje = cmd.Parameters("@msj").Value.ToString()
+            obj.Coderror = Convert.ToInt32(cmd.Parameters("@coderror").Value)
+
+            con.Salir()
+            Return mensaje
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Function
+
     Public Function Cd_ConsultarAlimentoPreparado(name As String, obj As coControlPreparacionAlimento) As DataTable
         Dim dt As New DataTable
         Try

@@ -1,7 +1,9 @@
 ﻿Imports CapaNegocio
 Imports CapaObjetos
+Imports Infragistics.Win.UltraWinGrid
 
 Public Class FrmRegistrarExcedentexRacion
+    Dim cnControlPreparacionAlimento As New cnControlPreparacionAlimento
     Dim cn As New cnControlFormulacion
     Dim codRacion As Integer = 0
     Dim idAntiValor As Integer = 0
@@ -9,6 +11,7 @@ Public Class FrmRegistrarExcedentexRacion
     Dim codPeriodoPlus As Integer = 0
     Dim valorMedicacion As String = "MEDICADO"
     Dim valorPlus As String = "PLUS"
+    Dim valorTipoRacion As String = "" ' Variable de clase para guardar el tipo de ración
 
     ' Variables para guardar los valores originales
     Dim idAntiOriginal As Integer = 0
@@ -238,45 +241,16 @@ Public Class FrmRegistrarExcedentexRacion
             End If
 
             ' Construir el tipo de ración usando los valores ACTUALES según los checkboxes
-            Dim valorTipo As String = ""
+            valorTipoRacion = ObtenerTipoRacion()
+
+            ' Crear objeto con los parámetros según el estado de los checkboxes
             Dim idAntiActual As Integer = If(ChkAnti.Checked, idAntiValor, 0)
             Dim codMedicacionActual As Integer = If(ChkMedicacion.Checked, codPeriodoMedicacion, 0)
             Dim codPlusActual As Integer = If(ChkPlus.Checked, codPeriodoPlus, 0)
 
-            If idAntiActual <> 0 Then
-                If codMedicacionActual <> 0 Then
-                    If codPlusActual <> 0 Then
-                        valorTipo = "ANTI-" & valorMedicacion & "-" & valorPlus
-                    Else
-                        valorTipo = "ANTI-" & valorMedicacion
-                    End If
-                Else
-                    If codPlusActual <> 0 Then
-                        valorTipo = "ANTI-" & valorPlus
-                    Else
-                        valorTipo = "ANTI"
-                    End If
-                End If
-            Else
-                If codMedicacionActual <> 0 Then
-                    If codPlusActual <> 0 Then
-                        valorTipo = valorMedicacion & "-" & valorPlus
-                    Else
-                        valorTipo = valorMedicacion
-                    End If
-                Else
-                    If codPlusActual <> 0 Then
-                        valorTipo = valorPlus
-                    Else
-                        valorTipo = "NORMAL"
-                    End If
-                End If
-            End If
-
-            ' Crear objeto con los parámetros según el estado de los checkboxes
             Dim obj As New coControlFormulacion With {
                 .IdNucleo = codRacion,
-                .Tipo = valorTipo,
+                .Tipo = valorTipoRacion,
                 .IdNutricionista = 1,
                 .IdPeriodoMedicion = codMedicacionActual,
                 .IdPeriodoPlus = codPlusActual
@@ -318,6 +292,46 @@ Public Class FrmRegistrarExcedentexRacion
         End Try
     End Sub
 
+    ' Método para obtener el tipo de ración según los checkboxes
+    Private Function ObtenerTipoRacion() As String
+        Dim valorTipo As String = ""
+        Dim idAntiActual As Integer = If(ChkAnti.Checked, idAntiValor, 0)
+        Dim codMedicacionActual As Integer = If(ChkMedicacion.Checked, codPeriodoMedicacion, 0)
+        Dim codPlusActual As Integer = If(ChkPlus.Checked, codPeriodoPlus, 0)
+
+        If idAntiActual <> 0 Then
+            If codMedicacionActual <> 0 Then
+                If codPlusActual <> 0 Then
+                    valorTipo = "ANTI-" & valorMedicacion & "-" & valorPlus
+                Else
+                    valorTipo = "ANTI-" & valorMedicacion
+                End If
+            Else
+                If codPlusActual <> 0 Then
+                    valorTipo = "ANTI-" & valorPlus
+                Else
+                    valorTipo = "ANTI"
+                End If
+            End If
+        Else
+            If codMedicacionActual <> 0 Then
+                If codPlusActual <> 0 Then
+                    valorTipo = valorMedicacion & "-" & valorPlus
+                Else
+                    valorTipo = valorMedicacion
+                End If
+            Else
+                If codPlusActual <> 0 Then
+                    valorTipo = valorPlus
+                Else
+                    valorTipo = "NORMAL"
+                End If
+            End If
+        End If
+
+        Return valorTipo
+    End Function
+
     ' Método para recalcular la columna [Cantidad Total]
     Private Sub RecalcularCantidadTotal()
         Try
@@ -334,14 +348,20 @@ Public Class FrmRegistrarExcedentexRacion
 
             ' Obtener el multiplicador del TextBox (mínimo 1)
             Dim multiplicador As Decimal = 1
-            If Not String.IsNullOrWhiteSpace(TxtCantidad.Text) AndAlso IsNumeric(TxtCantidad.Text) Then
+
+            ' Si el texto está vacío o solo es un punto, no hacer nada (dejar que el usuario termine de escribir)
+            If String.IsNullOrWhiteSpace(TxtCantidad.Text) OrElse TxtCantidad.Text = "." OrElse TxtCantidad.Text = "0." Then
+                Return
+            End If
+
+            If IsNumeric(TxtCantidad.Text) Then
                 multiplicador = CDec(TxtCantidad.Text)
-                If multiplicador < 1 Then
-                    multiplicador = 1
-                    TxtCantidad.Text = ""
+                ' Permitir cualquier valor positivo, no forzar mínimo de 1
+                If multiplicador <= 0 Then
+                    Return ' No hacer nada si es 0 o negativo
                 End If
             Else
-                TxtCantidad.Text = ""
+                Return ' No hacer nada si no es numérico
             End If
 
             ' Recalcular cada fila
@@ -374,7 +394,41 @@ Public Class FrmRegistrarExcedentexRacion
 
     ' Validar que solo se ingresen números decimales en TxtCantidad
     Private Sub TxtCantidad_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtCantidad.KeyPress
-        clsBasicas.ValidarDecimalEstricto(sender, e)
+        ' Obtener el TextBox
+        Dim textBox As TextBox = CType(sender, TextBox)
+
+        ' Permitir control keys (backspace, delete, etc.)
+        If Char.IsControl(e.KeyChar) Then
+            Return
+        End If
+
+        ' Permitir números
+        If Char.IsDigit(e.KeyChar) Then
+            Return
+        End If
+
+        ' Permitir punto decimal
+        If e.KeyChar = "."c Then
+            ' Si ya tiene un punto, no permitir otro
+            If textBox.Text.Contains(".") Then
+                e.Handled = True
+                Return
+            End If
+
+            ' Si el texto está vacío, agregar automáticamente "0." antes del punto
+            If String.IsNullOrWhiteSpace(textBox.Text) Then
+                textBox.Text = "0."
+                textBox.SelectionStart = textBox.Text.Length
+                e.Handled = True
+                Return
+            End If
+
+            ' Permitir el punto en cualquier otra posición
+            Return
+        End If
+
+        ' Bloquear cualquier otro carácter
+        e.Handled = True
     End Sub
 
     Private Sub dtgListadoInsumo_InitializeLayout(sender As Object, e As Infragistics.Win.UltraWinGrid.InitializeLayoutEventArgs) Handles dtgListadoInsumo.InitializeLayout
@@ -388,6 +442,80 @@ Public Class FrmRegistrarExcedentexRacion
             clsBasicas.controlException(Name, ex)
         End Try
     End Sub
+
+    Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
+        Try
+            ' Validar que se haya seleccionado una ración
+            If codRacion = 0 Then
+                msj_advert("Debe seleccionar una ración")
+                Return
+            End If
+
+            ' Validar que se haya calculado los insumos
+            If dtgListadoInsumo.DataSource Is Nothing OrElse dtgListadoInsumo.Rows.Count = 0 Then
+                msj_advert("Debe calcular los insumos antes de guardar")
+                Return
+            End If
+
+            ' Validar que TxtCantidad tenga un valor válido
+            If String.IsNullOrWhiteSpace(TxtCantidad.Text) OrElse Not IsNumeric(TxtCantidad.Text) Then
+                msj_advert("Debe ingresar una cantidad válida")
+                TxtCantidad.Focus()
+                Return
+            End If
+
+            Dim cantidadDecimal As Decimal = CDec(TxtCantidad.Text)
+            If cantidadDecimal <= 0 Then
+                msj_advert("La cantidad debe ser mayor a 0")
+                TxtCantidad.Focus()
+                Return
+            End If
+
+            If DtpFecha.Value.Date > Now.Date Then
+                msj_advert("La fecha no puede ser mayor a la actual")
+                Return
+            End If
+
+            If Not MsgBox("¿ESTÁ SEGURO DE REGISTRAR LA SALIDA DE INSUMOS POR EXCEDENTE?", MsgBoxStyle.YesNo Or MsgBoxStyle.Information, "Salida de Insumos") = MsgBoxResult.Yes Then
+                Return
+            End If
+
+            Dim obj As New coControlPreparacionAlimento With {
+                .Codigo = codRacion,
+                .IdUsuario = VP_IdUser,
+                .IdUbicacion = 6,
+                .idUbicacionDestino = CmbUbicacion.Value,
+                .ListaInsumoPreparacion = InsumosNecesariosRacionString(),
+                .Fecha = DtpFecha.Value,
+                .Cantidad = cantidadDecimal,
+                .Tipo = valorTipoRacion
+            }
+
+            Dim MensajeBgWk As String = cnControlPreparacionAlimento.Cn_RegistrarSalidaInsumosExcedente(obj)
+            If (obj.Coderror = 0) Then
+                msj_ok(MensajeBgWk)
+                Dispose()
+            Else
+                msj_advert(MensajeBgWk)
+            End If
+        Catch ex As Exception
+            clsBasicas.controlException(Name, ex)
+        End Try
+    End Sub
+
+    Function InsumosNecesariosRacionString() As String
+        Dim resultados As New List(Of String)
+
+        For Each row As Infragistics.Win.UltraWinGrid.UltraGridRow In dtgListadoInsumo.Rows
+            If Not row.IsFilteredOut Then
+                Dim total As String = row.Cells("Cantidad Total").Value.ToString()
+                Dim insumo As String = row.Cells("idProducto").Value.ToString()
+                resultados.Add($"{total}+{insumo}")
+            End If
+        Next
+
+        Return String.Join(",", resultados)
+    End Function
 
     Private Sub BtnCerrar_Click(sender As Object, e As EventArgs) Handles BtnCerrar.Click
         Dispose()

@@ -51,6 +51,8 @@ Partial Class FrmRegistrarExcedentexRacion
         Dim Appearance26 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance27 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.TxtCantidad = New System.Windows.Forms.TextBox()
         Me.BtnCalcularInsumos = New System.Windows.Forms.Button()
         Me.ChkPlus = New System.Windows.Forms.CheckBox()
         Me.ChkAnti = New System.Windows.Forms.CheckBox()
@@ -72,8 +74,8 @@ Partial Class FrmRegistrarExcedentexRacion
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.btnGuardar = New System.Windows.Forms.ToolStripButton()
         Me.BtnCerrar = New System.Windows.Forms.ToolStripButton()
-        Me.TxtCantidad = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.DtpFecha = New System.Windows.Forms.DateTimePicker()
+        Me.Label9 = New System.Windows.Forms.Label()
         Me.Panel2.SuspendLayout()
         CType(Me.CmbUbicacion, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
@@ -85,6 +87,8 @@ Partial Class FrmRegistrarExcedentexRacion
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.Panel2.Controls.Add(Me.DtpFecha)
+        Me.Panel2.Controls.Add(Me.Label9)
         Me.Panel2.Controls.Add(Me.Label1)
         Me.Panel2.Controls.Add(Me.TxtCantidad)
         Me.Panel2.Controls.Add(Me.BtnCalcularInsumos)
@@ -108,8 +112,32 @@ Partial Class FrmRegistrarExcedentexRacion
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
         Me.Panel2.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(459, 581)
+        Me.Panel2.Size = New System.Drawing.Size(508, 581)
         Me.Panel2.TabIndex = 11
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.Label1.Location = New System.Drawing.Point(308, 100)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(50, 14)
+        Me.Label1.TabIndex = 242
+        Me.Label1.Text = "Cant. :"
+        '
+        'TxtCantidad
+        '
+        Me.TxtCantidad.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.TxtCantidad.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtCantidad.Location = New System.Drawing.Point(366, 97)
+        Me.TxtCantidad.MaxLength = 50
+        Me.TxtCantidad.Name = "TxtCantidad"
+        Me.TxtCantidad.Size = New System.Drawing.Size(116, 21)
+        Me.TxtCantidad.TabIndex = 241
+        Me.TxtCantidad.TabStop = False
         '
         'BtnCalcularInsumos
         '
@@ -162,7 +190,7 @@ Partial Class FrmRegistrarExcedentexRacion
         Me.LblSeleccionadoPlus.BackColor = System.Drawing.Color.Transparent
         Me.LblSeleccionadoPlus.Font = New System.Drawing.Font("Verdana", 7.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblSeleccionadoPlus.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.LblSeleccionadoPlus.Location = New System.Drawing.Point(314, 212)
+        Me.LblSeleccionadoPlus.Location = New System.Drawing.Point(379, 212)
         Me.LblSeleccionadoPlus.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblSeleccionadoPlus.Name = "LblSeleccionadoPlus"
         Me.LblSeleccionadoPlus.Size = New System.Drawing.Size(10, 12)
@@ -174,7 +202,7 @@ Partial Class FrmRegistrarExcedentexRacion
         Me.LblPlus.AutoSize = True
         Me.LblPlus.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblPlus.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.LblPlus.Location = New System.Drawing.Point(331, 189)
+        Me.LblPlus.Location = New System.Drawing.Point(396, 189)
         Me.LblPlus.Name = "LblPlus"
         Me.LblPlus.Size = New System.Drawing.Size(44, 14)
         Me.LblPlus.TabIndex = 235
@@ -186,7 +214,7 @@ Partial Class FrmRegistrarExcedentexRacion
         Me.BtnBuscarPlus.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnBuscarPlus.Image = CType(resources.GetObject("BtnBuscarPlus.Image"), System.Drawing.Image)
         Me.BtnBuscarPlus.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnBuscarPlus.Location = New System.Drawing.Point(385, 182)
+        Me.BtnBuscarPlus.Location = New System.Drawing.Point(450, 182)
         Me.BtnBuscarPlus.Name = "BtnBuscarPlus"
         Me.BtnBuscarPlus.Size = New System.Drawing.Size(32, 29)
         Me.BtnBuscarPlus.TabIndex = 234
@@ -199,7 +227,7 @@ Partial Class FrmRegistrarExcedentexRacion
         Me.LblSeleccionadoMedicado.BackColor = System.Drawing.Color.Transparent
         Me.LblSeleccionadoMedicado.Font = New System.Drawing.Font("Verdana", 7.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblSeleccionadoMedicado.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.LblSeleccionadoMedicado.Location = New System.Drawing.Point(314, 166)
+        Me.LblSeleccionadoMedicado.Location = New System.Drawing.Point(379, 166)
         Me.LblSeleccionadoMedicado.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblSeleccionadoMedicado.Name = "LblSeleccionadoMedicado"
         Me.LblSeleccionadoMedicado.Size = New System.Drawing.Size(10, 12)
@@ -211,7 +239,7 @@ Partial Class FrmRegistrarExcedentexRacion
         Me.LblMedicaciones.AutoSize = True
         Me.LblMedicaciones.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblMedicaciones.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.LblMedicaciones.Location = New System.Drawing.Point(274, 142)
+        Me.LblMedicaciones.Location = New System.Drawing.Point(339, 142)
         Me.LblMedicaciones.Name = "LblMedicaciones"
         Me.LblMedicaciones.Size = New System.Drawing.Size(104, 14)
         Me.LblMedicaciones.TabIndex = 232
@@ -223,7 +251,7 @@ Partial Class FrmRegistrarExcedentexRacion
         Me.BtnBuscarMedicacion.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnBuscarMedicacion.Image = CType(resources.GetObject("BtnBuscarMedicacion.Image"), System.Drawing.Image)
         Me.BtnBuscarMedicacion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnBuscarMedicacion.Location = New System.Drawing.Point(385, 135)
+        Me.BtnBuscarMedicacion.Location = New System.Drawing.Point(450, 135)
         Me.BtnBuscarMedicacion.Name = "BtnBuscarMedicacion"
         Me.BtnBuscarMedicacion.Size = New System.Drawing.Size(32, 29)
         Me.BtnBuscarMedicacion.TabIndex = 231
@@ -298,7 +326,7 @@ Partial Class FrmRegistrarExcedentexRacion
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label5.Location = New System.Drawing.Point(23, 63)
+        Me.Label5.Location = New System.Drawing.Point(23, 65)
         Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(62, 14)
@@ -337,7 +365,7 @@ Partial Class FrmRegistrarExcedentexRacion
         Me.GroupBox2.Margin = New System.Windows.Forms.Padding(2)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Padding = New System.Windows.Forms.Padding(2)
-        Me.GroupBox2.Size = New System.Drawing.Size(436, 305)
+        Me.GroupBox2.Size = New System.Drawing.Size(486, 305)
         Me.GroupBox2.TabIndex = 189
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Insumos a Utilizar"
@@ -346,7 +374,7 @@ Partial Class FrmRegistrarExcedentexRacion
         '
         Me.Ptbx_Cargando.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Ptbx_Cargando.Image = Global.Formularios.My.Resources.Resources.loader
-        Me.Ptbx_Cargando.Location = New System.Drawing.Point(201, 129)
+        Me.Ptbx_Cargando.Location = New System.Drawing.Point(226, 129)
         Me.Ptbx_Cargando.Name = "Ptbx_Cargando"
         Me.Ptbx_Cargando.Size = New System.Drawing.Size(43, 37)
         Me.Ptbx_Cargando.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -428,7 +456,7 @@ Partial Class FrmRegistrarExcedentexRacion
         Me.dtgListadoInsumo.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dtgListadoInsumo.Location = New System.Drawing.Point(2, 15)
         Me.dtgListadoInsumo.Name = "dtgListadoInsumo"
-        Me.dtgListadoInsumo.Size = New System.Drawing.Size(432, 288)
+        Me.dtgListadoInsumo.Size = New System.Drawing.Size(482, 288)
         Me.dtgListadoInsumo.TabIndex = 30
         Me.dtgListadoInsumo.Text = "UltraGrid1"
         '
@@ -455,7 +483,7 @@ Partial Class FrmRegistrarExcedentexRacion
         Me.ToolStrip1.Margin = New System.Windows.Forms.Padding(2)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Padding = New System.Windows.Forms.Padding(0, 0, 2, 0)
-        Me.ToolStrip1.Size = New System.Drawing.Size(459, 38)
+        Me.ToolStrip1.Size = New System.Drawing.Size(508, 38)
         Me.ToolStrip1.TabIndex = 52
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -485,35 +513,33 @@ Partial Class FrmRegistrarExcedentexRacion
         Me.BtnCerrar.Text = "Salir"
         Me.BtnCerrar.ToolTipText = "Cerrar"
         '
-        'TxtCantidad
+        'DtpFecha
         '
-        Me.TxtCantidad.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.TxtCantidad.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtCantidad.Location = New System.Drawing.Point(366, 97)
-        Me.TxtCantidad.MaxLength = 50
-        Me.TxtCantidad.Name = "TxtCantidad"
-        Me.TxtCantidad.Size = New System.Drawing.Size(51, 21)
-        Me.TxtCantidad.TabIndex = 241
-        Me.TxtCantidad.TabStop = False
+        Me.DtpFecha.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DtpFecha.Location = New System.Drawing.Point(366, 62)
+        Me.DtpFecha.Name = "DtpFecha"
+        Me.DtpFecha.Size = New System.Drawing.Size(116, 21)
+        Me.DtpFecha.TabIndex = 244
         '
-        'Label1
+        'Label9
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(308, 100)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(50, 14)
-        Me.Label1.TabIndex = 242
-        Me.Label1.Text = "Cant. :"
+        Me.Label9.AutoSize = True
+        Me.Label9.BackColor = System.Drawing.Color.Transparent
+        Me.Label9.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.Label9.Location = New System.Drawing.Point(303, 65)
+        Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(55, 14)
+        Me.Label9.TabIndex = 243
+        Me.Label9.Text = "Fecha :"
         '
         'FrmRegistrarExcedentexRacion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(459, 581)
+        Me.ClientSize = New System.Drawing.Size(508, 581)
         Me.Controls.Add(Me.Panel2)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
@@ -556,4 +582,6 @@ Partial Class FrmRegistrarExcedentexRacion
     Friend WithEvents ChkMedicacion As CheckBox
     Friend WithEvents Label1 As Label
     Friend WithEvents TxtCantidad As TextBox
+    Friend WithEvents DtpFecha As DateTimePicker
+    Friend WithEvents Label9 As Label
 End Class

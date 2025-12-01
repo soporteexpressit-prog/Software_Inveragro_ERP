@@ -154,6 +154,10 @@ Public Class cnControlAlimento
         Return cls_at.Cd_CancelarPreparacionAlimento("[w_pa_cancelar_preparacion_alimento]", obj)
     End Function
 
+    Public Function Cn_CancelarPreparacionAlimentoExcedente(ByRef obj As coControlAlimento) As String
+        Return cls_at.Cd_CancelarPreparacionAlimento("[w_pa_cancelar_salida_insumos_excedente]", obj)
+    End Function
+
     Public Function Cn_ListarDetalleCorrales(ByRef obj As coControlAlimento) As DataTable
         Return cls_at.Cd_ListarDetalleCorrales("[r_pa_detalle_corrales_x_alimento]", obj)
     End Function
