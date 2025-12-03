@@ -439,7 +439,7 @@ Public Class FrmEditarAsistencia
                                 horasExtrasDict(dni)(dia) = horasExtras + horasExtrasMarranas
                             ElseIf feriadoTrabajado = "NO" Then
                                 resultado = "FNT"
-                            ElseIf observacion.Equals("DESCANSO", StringComparison.OrdinalIgnoreCase) Then
+                            ElseIf observacion.IndexOf("DESCANSO", StringComparison.OrdinalIgnoreCase) >= 0 Then
                                 resultado = "D"
                                 horasTrabajadasDict(dni)(dia) = horasTrabajadas
                             ElseIf String.IsNullOrWhiteSpace(horaEntrada) AndAlso String.IsNullOrWhiteSpace(horaSalida) Then
@@ -469,7 +469,7 @@ Public Class FrmEditarAsistencia
                                 horasExtrasDict(dni)(dia) = horasExtras + horasExtrasMarranas
                             ElseIf feriadoTrabajado = "NO" Then
                                 resultado = "FNT"
-                            ElseIf observacion.Equals("DESCANSO", StringComparison.OrdinalIgnoreCase) Then
+                            ElseIf observacion.IndexOf("DESCANSO", StringComparison.OrdinalIgnoreCase) >= 0 Then
                                 resultado = "D"
                                 horasTrabajadasDict(dni)(dia) = horasTrabajadas
                             ElseIf String.IsNullOrWhiteSpace(horaEntrada) AndAlso String.IsNullOrWhiteSpace(horaSalida) Then
@@ -499,7 +499,7 @@ Public Class FrmEditarAsistencia
                             horasExtrasDict(dni)(dia) = horasExtras + horasExtrasMarranas
                         ElseIf feriadoTrabajado = "NO" Then
                             resultado = "FNT"
-                        ElseIf observacion.Equals("DESCANSO", StringComparison.OrdinalIgnoreCase) Then
+                        ElseIf observacion.IndexOf("DESCANSO", StringComparison.OrdinalIgnoreCase) >= 0 Then
                             resultado = "D"
                             horasTrabajadasDict(dni)(dia) = horasTrabajadas
                         ElseIf observacion = "VACACIONES" Then
@@ -532,7 +532,7 @@ Public Class FrmEditarAsistencia
                         horasExtrasDict(dni)(dia) = horasExtras + horasExtrasMarranas
                     ElseIf feriadoTrabajado = "NO" Then
                         resultado = "FNT"
-                    ElseIf observacion.Equals("DESCANSO", StringComparison.OrdinalIgnoreCase) Then
+                    ElseIf observacion.IndexOf("DESCANSO", StringComparison.OrdinalIgnoreCase) >= 0 Then
                         resultado = "D"
                         horasTrabajadasDict(dni)(dia) = horasTrabajadas
                     ElseIf observacion = "VACACIONES" Then
@@ -1034,7 +1034,7 @@ Public Class FrmEditarAsistencia
                         nuevoValor = "PM"
                     End If
 
-                    If frmEditarHorarios.Observacion.Trim().Equals("DESCANSO", StringComparison.OrdinalIgnoreCase) Then
+                    If frmEditarHorarios.Observacion.Trim().IndexOf("DESCANSO", StringComparison.OrdinalIgnoreCase) >= 0 Then
                         nuevoValor = "D"
                     End If
 
