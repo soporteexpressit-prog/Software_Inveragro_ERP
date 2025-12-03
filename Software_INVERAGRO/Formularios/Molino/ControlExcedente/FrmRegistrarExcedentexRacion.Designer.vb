@@ -51,6 +51,8 @@ Partial Class FrmRegistrarExcedentexRacion
         Dim Appearance26 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance27 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.DtpFecha = New System.Windows.Forms.DateTimePicker()
+        Me.Label9 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TxtCantidad = New System.Windows.Forms.TextBox()
         Me.BtnCalcularInsumos = New System.Windows.Forms.Button()
@@ -74,8 +76,6 @@ Partial Class FrmRegistrarExcedentexRacion
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.btnGuardar = New System.Windows.Forms.ToolStripButton()
         Me.BtnCerrar = New System.Windows.Forms.ToolStripButton()
-        Me.DtpFecha = New System.Windows.Forms.DateTimePicker()
-        Me.Label9 = New System.Windows.Forms.Label()
         Me.Panel2.SuspendLayout()
         CType(Me.CmbUbicacion, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
@@ -115,6 +115,28 @@ Partial Class FrmRegistrarExcedentexRacion
         Me.Panel2.Size = New System.Drawing.Size(508, 581)
         Me.Panel2.TabIndex = 11
         '
+        'DtpFecha
+        '
+        Me.DtpFecha.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DtpFecha.Location = New System.Drawing.Point(366, 62)
+        Me.DtpFecha.Name = "DtpFecha"
+        Me.DtpFecha.Size = New System.Drawing.Size(116, 21)
+        Me.DtpFecha.TabIndex = 244
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.BackColor = System.Drawing.Color.Transparent
+        Me.Label9.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.Label9.Location = New System.Drawing.Point(303, 65)
+        Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(55, 14)
+        Me.Label9.TabIndex = 243
+        Me.Label9.Text = "Fecha :"
+        '
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -124,18 +146,18 @@ Partial Class FrmRegistrarExcedentexRacion
         Me.Label1.Location = New System.Drawing.Point(308, 100)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(50, 14)
+        Me.Label1.Size = New System.Drawing.Size(81, 14)
         Me.Label1.TabIndex = 242
-        Me.Label1.Text = "Cant. :"
+        Me.Label1.Text = "Cant. (tn) :"
         '
         'TxtCantidad
         '
         Me.TxtCantidad.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxtCantidad.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtCantidad.Location = New System.Drawing.Point(366, 97)
+        Me.TxtCantidad.Location = New System.Drawing.Point(396, 97)
         Me.TxtCantidad.MaxLength = 50
         Me.TxtCantidad.Name = "TxtCantidad"
-        Me.TxtCantidad.Size = New System.Drawing.Size(116, 21)
+        Me.TxtCantidad.Size = New System.Drawing.Size(86, 21)
         Me.TxtCantidad.TabIndex = 241
         Me.TxtCantidad.TabStop = False
         '
@@ -512,28 +534,6 @@ Partial Class FrmRegistrarExcedentexRacion
         Me.BtnCerrar.Size = New System.Drawing.Size(66, 28)
         Me.BtnCerrar.Text = "Salir"
         Me.BtnCerrar.ToolTipText = "Cerrar"
-        '
-        'DtpFecha
-        '
-        Me.DtpFecha.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DtpFecha.Location = New System.Drawing.Point(366, 62)
-        Me.DtpFecha.Name = "DtpFecha"
-        Me.DtpFecha.Size = New System.Drawing.Size(116, 21)
-        Me.DtpFecha.TabIndex = 244
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.BackColor = System.Drawing.Color.Transparent
-        Me.Label9.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label9.Location = New System.Drawing.Point(303, 65)
-        Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(55, 14)
-        Me.Label9.TabIndex = 243
-        Me.Label9.Text = "Fecha :"
         '
         'FrmRegistrarExcedentexRacion
         '

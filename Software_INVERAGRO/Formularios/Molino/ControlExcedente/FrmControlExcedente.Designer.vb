@@ -39,7 +39,8 @@ Partial Class FrmControlExcedente
         Dim Appearance14 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance15 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.GrupoFiltros = New System.Windows.Forms.GroupBox()
+        Me.ChkVisualizarxInsumo = New System.Windows.Forms.CheckBox()
         Me.btnBuscar = New System.Windows.Forms.Button()
         Me.dtpFechaHasta = New System.Windows.Forms.DateTimePicker()
         Me.cmbEstado = New System.Windows.Forms.ComboBox()
@@ -50,15 +51,18 @@ Partial Class FrmControlExcedente
         Me.Label6 = New System.Windows.Forms.Label()
         Me.BarraOpciones = New System.Windows.Forms.ToolStrip()
         Me.BtnNuevoxRacion = New System.Windows.Forms.ToolStripButton()
-        Me.BtnCancelar = New System.Windows.Forms.ToolStripButton()
+        Me.BtnCancelarxRacion = New System.Windows.Forms.ToolStripButton()
+        Me.BtnNuevoxInsumo = New System.Windows.Forms.ToolStripButton()
+        Me.BtnCancelarxInsumo = New System.Windows.Forms.ToolStripButton()
         Me.btnExportarMolinoinexce = New System.Windows.Forms.ToolStripButton()
         Me.btncerrar = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
         Me.dtgListadoInsumoExcedente = New Infragistics.Win.UltraWinGrid.UltraGrid()
         Me.Ptbx_Cargando = New System.Windows.Forms.PictureBox()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
+        Me.BackgroundWorker2 = New System.ComponentModel.BackgroundWorker()
         Me.Panel2.SuspendLayout()
-        Me.GroupBox1.SuspendLayout()
+        Me.GrupoFiltros.SuspendLayout()
         Me.BarraOpciones.SuspendLayout()
         CType(Me.dtgListadoInsumoExcedente, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Ptbx_Cargando, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -67,7 +71,7 @@ Partial Class FrmControlExcedente
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(233, Byte), Integer))
-        Me.Panel2.Controls.Add(Me.GroupBox1)
+        Me.Panel2.Controls.Add(Me.GrupoFiltros)
         Me.Panel2.Controls.Add(Me.Label6)
         Me.Panel2.Controls.Add(Me.BarraOpciones)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
@@ -77,23 +81,35 @@ Partial Class FrmControlExcedente
         Me.Panel2.Size = New System.Drawing.Size(1283, 212)
         Me.Panel2.TabIndex = 9
         '
-        'GroupBox1
+        'GrupoFiltros
         '
-        Me.GroupBox1.Controls.Add(Me.btnBuscar)
-        Me.GroupBox1.Controls.Add(Me.dtpFechaHasta)
-        Me.GroupBox1.Controls.Add(Me.cmbEstado)
-        Me.GroupBox1.Controls.Add(Me.Label4)
-        Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Controls.Add(Me.Label3)
-        Me.GroupBox1.Controls.Add(Me.dtpFechaDesde)
-        Me.GroupBox1.Location = New System.Drawing.Point(15, 54)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2)
-        Me.GroupBox1.Size = New System.Drawing.Size(792, 103)
-        Me.GroupBox1.TabIndex = 159
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Filtros de Búsqueda"
+        Me.GrupoFiltros.Controls.Add(Me.ChkVisualizarxInsumo)
+        Me.GrupoFiltros.Controls.Add(Me.btnBuscar)
+        Me.GrupoFiltros.Controls.Add(Me.dtpFechaHasta)
+        Me.GrupoFiltros.Controls.Add(Me.cmbEstado)
+        Me.GrupoFiltros.Controls.Add(Me.Label4)
+        Me.GrupoFiltros.Controls.Add(Me.Label1)
+        Me.GrupoFiltros.Controls.Add(Me.Label3)
+        Me.GrupoFiltros.Controls.Add(Me.dtpFechaDesde)
+        Me.GrupoFiltros.Location = New System.Drawing.Point(15, 54)
+        Me.GrupoFiltros.Margin = New System.Windows.Forms.Padding(2)
+        Me.GrupoFiltros.Name = "GrupoFiltros"
+        Me.GrupoFiltros.Padding = New System.Windows.Forms.Padding(2)
+        Me.GrupoFiltros.Size = New System.Drawing.Size(1045, 103)
+        Me.GrupoFiltros.TabIndex = 159
+        Me.GrupoFiltros.TabStop = False
+        Me.GrupoFiltros.Text = "Filtros de Búsqueda"
+        '
+        'ChkVisualizarxInsumo
+        '
+        Me.ChkVisualizarxInsumo.AutoSize = True
+        Me.ChkVisualizarxInsumo.Location = New System.Drawing.Point(863, 70)
+        Me.ChkVisualizarxInsumo.Margin = New System.Windows.Forms.Padding(2)
+        Me.ChkVisualizarxInsumo.Name = "ChkVisualizarxInsumo"
+        Me.ChkVisualizarxInsumo.Size = New System.Drawing.Size(161, 17)
+        Me.ChkVisualizarxInsumo.TabIndex = 173
+        Me.ChkVisualizarxInsumo.Text = "Visualizar Apartado x Insumo"
+        Me.ChkVisualizarxInsumo.UseVisualStyleBackColor = True
         '
         'btnBuscar
         '
@@ -195,7 +211,7 @@ Partial Class FrmControlExcedente
         Me.BarraOpciones.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.BarraOpciones.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
         Me.BarraOpciones.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.BarraOpciones.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnNuevoxRacion, Me.BtnCancelar, Me.btnExportarMolinoinexce, Me.btncerrar, Me.ToolStripButton1})
+        Me.BarraOpciones.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnNuevoxRacion, Me.BtnCancelarxRacion, Me.BtnNuevoxInsumo, Me.BtnCancelarxInsumo, Me.btnExportarMolinoinexce, Me.btncerrar, Me.ToolStripButton1})
         Me.BarraOpciones.Location = New System.Drawing.Point(0, 174)
         Me.BarraOpciones.Margin = New System.Windows.Forms.Padding(2, 1, 2, 1)
         Me.BarraOpciones.Name = "BarraOpciones"
@@ -213,21 +229,46 @@ Partial Class FrmControlExcedente
         Me.BtnNuevoxRacion.Margin = New System.Windows.Forms.Padding(5)
         Me.BtnNuevoxRacion.Name = "BtnNuevoxRacion"
         Me.BtnNuevoxRacion.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnNuevoxRacion.Size = New System.Drawing.Size(137, 28)
-        Me.BtnNuevoxRacion.Text = "Nuevo x Ración"
+        Me.BtnNuevoxRacion.Size = New System.Drawing.Size(163, 28)
+        Me.BtnNuevoxRacion.Text = "Excedente x Ración"
         Me.BtnNuevoxRacion.ToolTipText = "Nuevo "
         '
-        'BtnCancelar
+        'BtnCancelarxRacion
         '
-        Me.BtnCancelar.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnCancelar.ForeColor = System.Drawing.Color.White
-        Me.BtnCancelar.Image = Global.Formularios.My.Resources.Resources.cancelar
-        Me.BtnCancelar.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.BtnCancelar.Margin = New System.Windows.Forms.Padding(5)
-        Me.BtnCancelar.Name = "BtnCancelar"
-        Me.BtnCancelar.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnCancelar.Size = New System.Drawing.Size(93, 28)
-        Me.BtnCancelar.Text = "Cancelar"
+        Me.BtnCancelarxRacion.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnCancelarxRacion.ForeColor = System.Drawing.Color.White
+        Me.BtnCancelarxRacion.Image = Global.Formularios.My.Resources.Resources.cancelar
+        Me.BtnCancelarxRacion.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BtnCancelarxRacion.Margin = New System.Windows.Forms.Padding(5)
+        Me.BtnCancelarxRacion.Name = "BtnCancelarxRacion"
+        Me.BtnCancelarxRacion.Padding = New System.Windows.Forms.Padding(2)
+        Me.BtnCancelarxRacion.Size = New System.Drawing.Size(93, 28)
+        Me.BtnCancelarxRacion.Text = "Cancelar"
+        '
+        'BtnNuevoxInsumo
+        '
+        Me.BtnNuevoxInsumo.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnNuevoxInsumo.ForeColor = System.Drawing.Color.White
+        Me.BtnNuevoxInsumo.Image = Global.Formularios.My.Resources.Resources.nuevo
+        Me.BtnNuevoxInsumo.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BtnNuevoxInsumo.Margin = New System.Windows.Forms.Padding(5)
+        Me.BtnNuevoxInsumo.Name = "BtnNuevoxInsumo"
+        Me.BtnNuevoxInsumo.Padding = New System.Windows.Forms.Padding(2)
+        Me.BtnNuevoxInsumo.Size = New System.Drawing.Size(168, 28)
+        Me.BtnNuevoxInsumo.Text = "Excedente x Insumo"
+        Me.BtnNuevoxInsumo.ToolTipText = "Nuevo "
+        '
+        'BtnCancelarxInsumo
+        '
+        Me.BtnCancelarxInsumo.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnCancelarxInsumo.ForeColor = System.Drawing.Color.White
+        Me.BtnCancelarxInsumo.Image = Global.Formularios.My.Resources.Resources.cancelar
+        Me.BtnCancelarxInsumo.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BtnCancelarxInsumo.Margin = New System.Windows.Forms.Padding(5)
+        Me.BtnCancelarxInsumo.Name = "BtnCancelarxInsumo"
+        Me.BtnCancelarxInsumo.Padding = New System.Windows.Forms.Padding(2)
+        Me.BtnCancelarxInsumo.Size = New System.Drawing.Size(93, 28)
+        Me.BtnCancelarxInsumo.Text = "Cancelar"
         '
         'btnExportarMolinoinexce
         '
@@ -377,8 +418,8 @@ Partial Class FrmControlExcedente
         Me.Text = "CONTROL DE EXCEDENTES"
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
+        Me.GrupoFiltros.ResumeLayout(False)
+        Me.GrupoFiltros.PerformLayout()
         Me.BarraOpciones.ResumeLayout(False)
         Me.BarraOpciones.PerformLayout()
         CType(Me.dtgListadoInsumoExcedente, System.ComponentModel.ISupportInitialize).EndInit()
@@ -403,7 +444,11 @@ Partial Class FrmControlExcedente
     Friend WithEvents Label4 As Label
     Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
     Friend WithEvents ToolStripButton1 As ToolStripButton
-    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents GrupoFiltros As GroupBox
     Friend WithEvents BtnNuevoxRacion As ToolStripButton
-    Friend WithEvents BtnCancelar As ToolStripButton
+    Friend WithEvents BtnCancelarxRacion As ToolStripButton
+    Friend WithEvents ChkVisualizarxInsumo As CheckBox
+    Friend WithEvents BackgroundWorker2 As System.ComponentModel.BackgroundWorker
+    Friend WithEvents BtnNuevoxInsumo As ToolStripButton
+    Friend WithEvents BtnCancelarxInsumo As ToolStripButton
 End Class
