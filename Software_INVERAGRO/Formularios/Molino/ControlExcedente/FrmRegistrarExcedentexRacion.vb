@@ -234,6 +234,8 @@ Public Class FrmRegistrarExcedentexRacion
 
     Private Sub BtnCalcularInsumos_Click(sender As Object, e As EventArgs) Handles BtnCalcularInsumos.Click
         Try
+            clsBasicas.Formato_Tablas_Grid_UltimaColumnaEditable(dtgListadoInsumo)
+
             ' Validar que se haya seleccionado una ración
             If codRacion = 0 Then
                 msj_advert("Debe seleccionar una ración")
@@ -274,8 +276,6 @@ Public Class FrmRegistrarExcedentexRacion
                     ' Ocultar la primera columna (índice 0)
                     dtgListadoInsumo.DisplayLayout.Bands(0).Columns("idProducto").Hidden = True
                     dtgListadoInsumo.DisplayLayout.Bands(0).Columns("Tipo de Premixero").Hidden = True
-
-                    clsBasicas.Formato_Tablas_Grid(dtgListadoInsumo)
 
                     ' Establecer valor por defecto de TxtCantidad si está vacío
                     If String.IsNullOrWhiteSpace(TxtCantidad.Text) Then
@@ -445,6 +445,8 @@ Public Class FrmRegistrarExcedentexRacion
 
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
         Try
+            dtgListadoInsumo.PerformAction(Infragistics.Win.UltraWinGrid.UltraGridAction.ExitEditMode)
+
             ' Validar que se haya seleccionado una ración
             If codRacion = 0 Then
                 msj_advert("Debe seleccionar una ración")
@@ -484,7 +486,7 @@ Public Class FrmRegistrarExcedentexRacion
                 .Codigo = codRacion,
                 .IdUsuario = VP_IdUser,
                 .IdUbicacion = 6,
-                .idUbicacionDestino = CmbUbicacion.Value,
+                .IdUbicacionDestino = CmbUbicacion.Value,
                 .ListaInsumoPreparacion = InsumosNecesariosRacionString(),
                 .Fecha = DtpFecha.Value,
                 .Cantidad = cantidadDecimal,
@@ -508,9 +510,17 @@ Public Class FrmRegistrarExcedentexRacion
 
         For Each row As Infragistics.Win.UltraWinGrid.UltraGridRow In dtgListadoInsumo.Rows
             If Not row.IsFilteredOut Then
-                Dim total As String = row.Cells("Cantidad Total").Value.ToString()
-                Dim insumo As String = row.Cells("idProducto").Value.ToString()
-                resultados.Add($"{total}+{insumo}")
+                ' Verificar que la columna "Incluir" exista y esté marcada
+                If row.Cells.Exists("Incluir") AndAlso TypeOf row.Cells("Incluir").Value Is Boolean Then
+                    Dim incluir As Boolean = CBool(row.Cells("Incluir").Value)
+
+                    ' Solo agregar si el checkbox está marcado
+                    If incluir Then
+                        Dim total As String = row.Cells("Cantidad Total").Value.ToString()
+                        Dim insumo As String = row.Cells("idProducto").Value.ToString()
+                        resultados.Add($"{total}+{insumo}")
+                    End If
+                End If
             End If
         Next
 

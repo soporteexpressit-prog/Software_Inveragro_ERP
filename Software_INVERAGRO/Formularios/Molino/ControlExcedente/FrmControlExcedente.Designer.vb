@@ -201,9 +201,9 @@ Partial Class FrmControlExcedente
         Me.Label6.Location = New System.Drawing.Point(30, 18)
         Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(337, 18)
+        Me.Label6.Size = New System.Drawing.Size(453, 18)
         Me.Label6.TabIndex = 128
-        Me.Label6.Text = "CONTROL DE INSUMOS EXCEDENTES"
+        Me.Label6.Text = "CONTROL DE INSUMOS Y RACIONES EXCEDENTES"
         '
         'BarraOpciones
         '
@@ -400,6 +400,9 @@ Partial Class FrmControlExcedente
         Me.Ptbx_Cargando.Visible = False
         '
         'BackgroundWorker1
+        '
+        '
+        'BackgroundWorker2
         '
         '
         'FrmControlExcedente
