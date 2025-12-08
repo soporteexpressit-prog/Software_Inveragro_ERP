@@ -75,8 +75,8 @@ Public Class FrmControlCampaña
 
     Sub Colorear()
         If (dtgListado.Rows.Count > 0) Then
-            Dim estadoLlenado As Integer = 7
-            Dim estadoCampaña As Integer = 8
+            Dim estadoLlenado As Integer = 8
+            Dim estadoCampaña As Integer = 9
 
             'estadoLlenado
             clsBasicas.Colorear_SegunValor(dtgListado, Color.LightGreen, Color.DarkGreen, "APERTURADO", estadoLlenado)

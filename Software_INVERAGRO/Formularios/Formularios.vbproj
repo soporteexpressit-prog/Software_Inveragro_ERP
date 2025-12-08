@@ -1290,6 +1290,12 @@
     <Compile Include="Nutricion\ControlSalidaAlimentoCerdo\FrmListaRacionesPresupuesto.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="produccion\ControlDesteteLotes\FrmEditarDestete.Designer.vb">
+      <DependentUpon>FrmEditarDestete.vb</DependentUpon>
+    </Compile>
+    <Compile Include="produccion\ControlDesteteLotes\FrmEditarDestete.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="produccion\ControlDesteteLotes\FrmMovimientoAmbienteChanchillas.Designer.vb">
       <DependentUpon>FrmMovimientoAmbienteChanchillas.vb</DependentUpon>
     </Compile>
@@ -4432,6 +4438,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Nutricion\ControlSalidaAlimentoCerdo\FrmListaRacionesPresupuesto.resx">
       <DependentUpon>FrmListaRacionesPresupuesto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="produccion\ControlDesteteLotes\FrmEditarDestete.resx">
+      <DependentUpon>FrmEditarDestete.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="produccion\ControlDesteteLotes\FrmMovimientoAmbienteChanchillas.resx">
       <DependentUpon>FrmMovimientoAmbienteChanchillas.vb</DependentUpon>

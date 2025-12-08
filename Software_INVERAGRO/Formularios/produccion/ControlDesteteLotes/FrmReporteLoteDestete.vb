@@ -106,6 +106,7 @@ Public Class FrmReporteLoteDestete
             DtgConsolidadEdad.DataSource = dsResult.Tables(1)
             dtgListado.DisplayLayout.Bands(0).Columns("idLote").Hidden = True
             dtgListado.DisplayLayout.Bands(0).Columns("fNacimiento").Hidden = True
+            dtgListado.DisplayLayout.Bands(0).Columns("idControlFicha").Hidden = True
             DtgConsolidadEdad.DisplayLayout.Bands(0).Columns("EdadLote").Hidden = True
             LblLechones.Text = SumarLechones().ToString()
             LblMarranas.Text = dtgListado.Rows.Count.ToString()
@@ -195,8 +196,15 @@ Public Class FrmReporteLoteDestete
 
     Private Sub dtgListado_InitializeLayout(sender As Object, e As UltraWinGrid.InitializeLayoutEventArgs) Handles dtgListado.InitializeLayout
         Try
-            If (dtgListado.Rows.Count = 0) Then
-            Else
+            With e.Layout.Bands(0)
+                .Columns("Editar").Style = UltraWinGrid.ColumnStyle.Button
+                .Columns("Editar").CellButtonAppearance.Image = My.Resources.lapiz
+                .Columns("Editar").ButtonDisplayStyle = UltraWinGrid.ButtonDisplayStyle.Always
+                .Columns("Editar").CellClickAction = UltraWinGrid.CellClickAction.EditAndSelectText
+                .Columns("Editar").CellButtonAppearance.ImageHAlign = HAlign.Center
+                .Columns("Editar").Width = 50
+            End With
+            If (dtgListado.Rows.Count <> 0) Then
                 e.Layout.Bands(0).Summaries.Clear()
                 clsBasicas.Totales_Formato(dtgListado, e, 1)
                 clsBasicas.SumarTotales_Formato(dtgListado, e, 6)
@@ -228,6 +236,21 @@ Public Class FrmReporteLoteDestete
                 .idLote = CmbLotes.Value
             }
             frm.ShowDialog()
+        Catch ex As Exception
+            clsBasicas.controlException(Name, ex)
+        End Try
+    End Sub
+
+    Private Sub dtgListado_ClickCellButton(sender As Object, e As UltraWinGrid.CellEventArgs) Handles dtgListado.ClickCellButton
+        Try
+            If e.Cell.Column.Key = "Editar" Then
+                Dim frm As New FrmEditarDestete With {
+                    .idControlFicha = e.Cell.Row.Cells("idControlFicha").Value,
+                    .peso = e.Cell.Row.Cells("P.T Camada").Value
+                }
+                frm.ShowDialog()
+                Consultar()
+            End If
         Catch ex As Exception
             clsBasicas.controlException(Name, ex)
         End Try

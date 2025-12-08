@@ -405,4 +405,8 @@ Public Class cnControlLoteDestete
     Public Function Cn_FinalizarVentaxCampaña(ByRef obj As coControlLoteDestete) As String
         Return cls_at.Cd_FinalizarVentaxCampaña("[w_pa_finalizar_venta_x_campaña]", obj)
     End Function
+
+    Public Function Cn_ActualizarPesoDestete(ByRef obj As coControlLoteDestete) As String
+        Return cls_at.Cd_ActualizarPesoDestete("[w_pa_actualizar_peso_destete]", obj)
+    End Function
 End Class
