@@ -27,7 +27,7 @@ Public Class FrmNuevoAlimento
     End Sub
 
     Private Sub Inicializar()
-        CbxAnti.Checked = False
+        CmbTipoAlimento.SelectedIndex = 0
         txtAlimento.ReadOnly = True
         lblPlantel.Text = valorPlantel
         LblLote.Visible = False
@@ -159,18 +159,6 @@ Public Class FrmNuevoAlimento
 
     Private Sub BtnGuardar_Click(sender As Object, e As EventArgs) Handles BtnGuardar.Click
         Try
-            Dim tipo As String
-
-            If CbxAnti.Checked And CbxMedicado.Checked Then
-                tipo = "ANTI-MEDICADO"
-            ElseIf CbxAnti.Checked Then
-                tipo = "ANTI"
-            ElseIf CbxMedicado.Checked Then
-                tipo = "MEDICADO"
-            Else
-                tipo = "NORMAL"
-            End If
-
             If DtpFechaAlimento.Value.Date > Date.Now.Date Then
                 msj_advert("La fecha de salida de alimento no puede ser mayor a la fecha actual")
                 DtpFechaAlimento.Value = Date.Now.Date
@@ -198,7 +186,7 @@ Public Class FrmNuevoAlimento
             End If
 
             Dim cantidadEnKg As Decimal = ValidarDecimal(txtCantidadTotal.Text)
-            Dim cantidadEnToneladas As Decimal = Math.Round(cantidadEnKg / 1000D, 4)
+            Dim cantidadEnToneladas As Decimal = Math.Round(cantidadEnKg / 1000D, 5)
 
             If (MessageBox.Show("¿ESTÁ SEGURO DE REGISTRAR EL ALIMENTO PARA LA CERDA?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.No) Then
                 Return
@@ -212,7 +200,7 @@ Public Class FrmNuevoAlimento
                 .IdProducto = codAlimento,
                 .Codigo = If(CbxLote.Checked, idLote, CmbGalpones.Value),
                 .Cantidad = cantidadEnToneladas,
-                .TipoAlimento = tipo,
+                .TipoAlimento = CmbTipoAlimento.Text,
                 .Tipo = If(CbxLote.Checked, "LOTE", "GALPON"),
                 .IdCampana = If(idPlantel = 1 Or idPlantel = 2, 0, CmbCampaña.Value),
                 .IdArea = If(idPlantel = 1 Or idPlantel = 2, cmbArea.Value, 0)

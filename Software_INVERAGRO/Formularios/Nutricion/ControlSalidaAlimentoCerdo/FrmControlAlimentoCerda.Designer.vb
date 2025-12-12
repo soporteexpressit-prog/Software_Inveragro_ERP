@@ -66,19 +66,20 @@ Partial Class FrmControlAlimentoCerda
         Me.BtnNuevoNutricionSaalice = New System.Windows.Forms.ToolStripButton()
         Me.BtnAnularNutricionSaalice = New System.Windows.Forms.ToolStripButton()
         Me.BtnPermisoVisualizacion = New System.Windows.Forms.ToolStripButton()
+        Me.BtnModificarCampaña = New System.Windows.Forms.ToolStripButton()
         Me.BtnExportarNutricionSaalice = New System.Windows.Forms.ToolStripButton()
         Me.BtnCerrar = New System.Windows.Forms.ToolStripButton()
         Me.btnreporteRrhhctrlcapaci = New System.Windows.Forms.ToolStripDropDownButton()
         Me.BtnReporteAlimentovsMolino = New System.Windows.Forms.ToolStripMenuItem()
         Me.BtnReportePresupuestoAlimenticio = New System.Windows.Forms.ToolStripMenuItem()
         Me.BtnReporteConsumoDiario = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BtnRptConsumoPresupuestoRecria = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripDropDownButton1 = New System.Windows.Forms.ToolStripDropDownButton()
         Me.BtnGenerarGrupos = New System.Windows.Forms.ToolStripMenuItem()
         Me.BtnVerPresupuesto = New System.Windows.Forms.ToolStripMenuItem()
         Me.dtgListado = New Infragistics.Win.UltraWinGrid.UltraGrid()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         Me.Ptbx_Cargando = New System.Windows.Forms.PictureBox()
-        Me.BtnModificarCampaña = New System.Windows.Forms.ToolStripButton()
         Me.Panel1.SuspendLayout()
         Me.GrupoFiltros.SuspendLayout()
         CType(Me.CmbUbicacion, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -125,9 +126,9 @@ Partial Class FrmControlAlimentoCerda
         Me.GrupoFiltros.Controls.Add(Me.Label9)
         Me.GrupoFiltros.Controls.Add(Me.dtpFechaHasta)
         Me.GrupoFiltros.Location = New System.Drawing.Point(23, 58)
-        Me.GrupoFiltros.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GrupoFiltros.Margin = New System.Windows.Forms.Padding(2)
         Me.GrupoFiltros.Name = "GrupoFiltros"
-        Me.GrupoFiltros.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GrupoFiltros.Padding = New System.Windows.Forms.Padding(2)
         Me.GrupoFiltros.Size = New System.Drawing.Size(1127, 104)
         Me.GrupoFiltros.TabIndex = 179
         Me.GrupoFiltros.TabStop = False
@@ -295,7 +296,7 @@ Partial Class FrmControlAlimentoCerda
         Me.BarraOpciones.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.BarraOpciones.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
         Me.BarraOpciones.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.BarraOpciones.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnNuevoNutricionSaalice, Me.BtnAnularNutricionSaalice, Me.BtnPermisoVisualizacion, Me.BtnExportarNutricionSaalice, Me.BtnModificarCampaña, Me.BtnCerrar, Me.btnreporteRrhhctrlcapaci, Me.ToolStripDropDownButton1})
+        Me.BarraOpciones.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnNuevoNutricionSaalice, Me.BtnAnularNutricionSaalice, Me.BtnPermisoVisualizacion, Me.BtnModificarCampaña, Me.BtnExportarNutricionSaalice, Me.BtnCerrar, Me.btnreporteRrhhctrlcapaci, Me.ToolStripDropDownButton1})
         Me.BarraOpciones.Location = New System.Drawing.Point(0, 173)
         Me.BarraOpciones.Margin = New System.Windows.Forms.Padding(2, 1, 2, 1)
         Me.BarraOpciones.Name = "BarraOpciones"
@@ -343,6 +344,18 @@ Partial Class FrmControlAlimentoCerda
         Me.BtnPermisoVisualizacion.Text = "Ver Ali. Presupuesto"
         Me.BtnPermisoVisualizacion.ToolTipText = "Exportar"
         '
+        'BtnModificarCampaña
+        '
+        Me.BtnModificarCampaña.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnModificarCampaña.ForeColor = System.Drawing.Color.White
+        Me.BtnModificarCampaña.Image = Global.Formularios.My.Resources.Resources.registro
+        Me.BtnModificarCampaña.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BtnModificarCampaña.Margin = New System.Windows.Forms.Padding(5)
+        Me.BtnModificarCampaña.Name = "BtnModificarCampaña"
+        Me.BtnModificarCampaña.Padding = New System.Windows.Forms.Padding(2)
+        Me.BtnModificarCampaña.Size = New System.Drawing.Size(161, 28)
+        Me.BtnModificarCampaña.Text = "Modificar Campaña"
+        '
         'BtnExportarNutricionSaalice
         '
         Me.BtnExportarNutricionSaalice.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -371,7 +384,7 @@ Partial Class FrmControlAlimentoCerda
         'btnreporteRrhhctrlcapaci
         '
         Me.btnreporteRrhhctrlcapaci.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.btnreporteRrhhctrlcapaci.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnReporteAlimentovsMolino, Me.BtnReportePresupuestoAlimenticio, Me.BtnReporteConsumoDiario})
+        Me.btnreporteRrhhctrlcapaci.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnReporteAlimentovsMolino, Me.BtnReportePresupuestoAlimenticio, Me.BtnReporteConsumoDiario, Me.BtnRptConsumoPresupuestoRecria})
         Me.btnreporteRrhhctrlcapaci.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnreporteRrhhctrlcapaci.ForeColor = System.Drawing.Color.White
         Me.btnreporteRrhhctrlcapaci.Image = Global.Formularios.My.Resources.Resources.reporte
@@ -398,6 +411,12 @@ Partial Class FrmControlAlimentoCerda
         Me.BtnReporteConsumoDiario.Name = "BtnReporteConsumoDiario"
         Me.BtnReporteConsumoDiario.Size = New System.Drawing.Size(347, 22)
         Me.BtnReporteConsumoDiario.Text = "Consumo Diario"
+        '
+        'BtnRptConsumoPresupuestoRecria
+        '
+        Me.BtnRptConsumoPresupuestoRecria.Name = "BtnRptConsumoPresupuestoRecria"
+        Me.BtnRptConsumoPresupuestoRecria.Size = New System.Drawing.Size(347, 22)
+        Me.BtnRptConsumoPresupuestoRecria.Text = "Consumo Presupuesto Recría"
         '
         'ToolStripDropDownButton1
         '
@@ -517,18 +536,6 @@ Partial Class FrmControlAlimentoCerda
         Me.Ptbx_Cargando.TabStop = False
         Me.Ptbx_Cargando.Visible = False
         '
-        'BtnModificarCampaña
-        '
-        Me.BtnModificarCampaña.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnModificarCampaña.ForeColor = System.Drawing.Color.White
-        Me.BtnModificarCampaña.Image = Global.Formularios.My.Resources.Resources.registro
-        Me.BtnModificarCampaña.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.BtnModificarCampaña.Margin = New System.Windows.Forms.Padding(5)
-        Me.BtnModificarCampaña.Name = "BtnModificarCampaña"
-        Me.BtnModificarCampaña.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnModificarCampaña.Size = New System.Drawing.Size(161, 28)
-        Me.BtnModificarCampaña.Text = "Modificar Campaña"
-        '
         'FrmControlAlimentoCerda
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -584,4 +591,5 @@ Partial Class FrmControlAlimentoCerda
     Friend WithEvents BtnGenerarGrupos As ToolStripMenuItem
     Friend WithEvents BtnVerPresupuesto As ToolStripMenuItem
     Friend WithEvents BtnModificarCampaña As ToolStripButton
+    Friend WithEvents BtnRptConsumoPresupuestoRecria As ToolStripMenuItem
 End Class

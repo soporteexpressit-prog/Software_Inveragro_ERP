@@ -27,6 +27,7 @@ Public Class FrmListaRacionesPresupuesto
             }
             dtgListado.DataSource = cn.Cn_ListarRacionesPresupuesto(obj)
             dtgListado.DisplayLayout.Bands(0).Columns(0).Hidden = True
+            dtgListado.DisplayLayout.Bands(0).Columns("idUnidadMedida").Hidden = True
         Catch ex As Exception
             clsBasicas.controlException(Name, ex)
         End Try
@@ -42,8 +43,11 @@ Public Class FrmListaRacionesPresupuesto
             Dim cells = e.Cell.Row.Cells
             Dim codigo = SafeGetString(cells, 0)
             Dim descripcion = SafeGetString(cells, 1)
+            Dim stock As Decimal = Convert.ToDecimal(SafeGetString(cells, 2))
+            Dim um As String = SafeGetString(cells, 3)
+            Dim idUm As Integer = SafeGetInteger(cells, 4)
 
-            _frmAlimentacionPresupuesto.LlenarCamposAlimento(codigo, descripcion)
+            _frmAlimentacionPresupuesto.LlenarCamposAlimento(codigo, descripcion, stock, um, idUm)
             Me.Close()
 
         Catch ex As Exception

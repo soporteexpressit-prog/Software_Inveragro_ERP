@@ -69,8 +69,6 @@ Partial Class FrmNuevoAlimento
         Me.Label1 = New System.Windows.Forms.Label()
         Me.LblStock = New System.Windows.Forms.Label()
         Me.LblStockKg = New System.Windows.Forms.Label()
-        Me.CbxMedicado = New System.Windows.Forms.CheckBox()
-        Me.CbxAnti = New System.Windows.Forms.CheckBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.DtpFechaAlimento = New System.Windows.Forms.DateTimePicker()
         Me.CmbGalpones = New Infragistics.Win.UltraWinGrid.UltraCombo()
@@ -89,6 +87,7 @@ Partial Class FrmNuevoAlimento
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.LblCampaña = New System.Windows.Forms.Label()
         Me.CmbCampaña = New Infragistics.Win.UltraWinGrid.UltraCombo()
+        Me.CmbTipoAlimento = New System.Windows.Forms.ComboBox()
         Me.GroupBox1.SuspendLayout()
         CType(Me.cmbArea, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CmbGalpones, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -99,6 +98,7 @@ Partial Class FrmNuevoAlimento
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.CmbTipoAlimento)
         Me.GroupBox1.Controls.Add(Me.cmbArea)
         Me.GroupBox1.Controls.Add(Me.LblArea)
         Me.GroupBox1.Controls.Add(Me.TxtLote)
@@ -108,8 +108,6 @@ Partial Class FrmNuevoAlimento
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.LblStock)
         Me.GroupBox1.Controls.Add(Me.LblStockKg)
-        Me.GroupBox1.Controls.Add(Me.CbxMedicado)
-        Me.GroupBox1.Controls.Add(Me.CbxAnti)
         Me.GroupBox1.Controls.Add(Me.Label8)
         Me.GroupBox1.Controls.Add(Me.DtpFechaAlimento)
         Me.GroupBox1.Controls.Add(Me.CmbGalpones)
@@ -117,9 +115,11 @@ Partial Class FrmNuevoAlimento
         Me.GroupBox1.Controls.Add(Me.LblGalpon)
         Me.GroupBox1.Controls.Add(Me.txtAlimento)
         Me.GroupBox1.Controls.Add(Me.BtnBuscarAlimento)
-        Me.GroupBox1.Location = New System.Drawing.Point(16, 147)
+        Me.GroupBox1.Location = New System.Drawing.Point(11, 96)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(633, 295)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox1.Size = New System.Drawing.Size(422, 192)
         Me.GroupBox1.TabIndex = 161
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Información de Alimento"
@@ -181,10 +181,9 @@ Partial Class FrmNuevoAlimento
         Me.cmbArea.DisplayLayout.ScrollStyle = Infragistics.Win.UltraWinGrid.ScrollStyle.Immediate
         Me.cmbArea.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy
         Me.cmbArea.DropDownStyle = Infragistics.Win.UltraWinGrid.UltraComboStyle.DropDownList
-        Me.cmbArea.Location = New System.Drawing.Point(430, 44)
-        Me.cmbArea.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.cmbArea.Location = New System.Drawing.Point(287, 29)
         Me.cmbArea.Name = "cmbArea"
-        Me.cmbArea.Size = New System.Drawing.Size(160, 29)
+        Me.cmbArea.Size = New System.Drawing.Size(107, 22)
         Me.cmbArea.TabIndex = 236
         '
         'LblArea
@@ -193,10 +192,10 @@ Partial Class FrmNuevoAlimento
         Me.LblArea.BackColor = System.Drawing.Color.Transparent
         Me.LblArea.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblArea.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.LblArea.Location = New System.Drawing.Point(350, 47)
-        Me.LblArea.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.LblArea.Location = New System.Drawing.Point(233, 31)
+        Me.LblArea.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblArea.Name = "LblArea"
-        Me.LblArea.Size = New System.Drawing.Size(70, 22)
+        Me.LblArea.Size = New System.Drawing.Size(47, 14)
         Me.LblArea.TabIndex = 234
         Me.LblArea.Text = "Área :"
         '
@@ -204,11 +203,10 @@ Partial Class FrmNuevoAlimento
         '
         Me.TxtLote.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxtLote.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtLote.Location = New System.Drawing.Point(161, 102)
-        Me.TxtLote.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.TxtLote.Location = New System.Drawing.Point(107, 66)
         Me.TxtLote.MaxLength = 50
         Me.TxtLote.Name = "TxtLote"
-        Me.TxtLote.Size = New System.Drawing.Size(232, 28)
+        Me.TxtLote.Size = New System.Drawing.Size(156, 21)
         Me.TxtLote.TabIndex = 232
         '
         'BtnBuscarLote
@@ -217,10 +215,9 @@ Partial Class FrmNuevoAlimento
         Me.BtnBuscarLote.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnBuscarLote.Image = CType(resources.GetObject("BtnBuscarLote.Image"), System.Drawing.Image)
         Me.BtnBuscarLote.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnBuscarLote.Location = New System.Drawing.Point(407, 94)
-        Me.BtnBuscarLote.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.BtnBuscarLote.Location = New System.Drawing.Point(271, 61)
         Me.BtnBuscarLote.Name = "BtnBuscarLote"
-        Me.BtnBuscarLote.Size = New System.Drawing.Size(48, 45)
+        Me.BtnBuscarLote.Size = New System.Drawing.Size(32, 29)
         Me.BtnBuscarLote.TabIndex = 233
         Me.BtnBuscarLote.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.BtnBuscarLote.UseVisualStyleBackColor = True
@@ -231,19 +228,20 @@ Partial Class FrmNuevoAlimento
         Me.LblLote.BackColor = System.Drawing.Color.Transparent
         Me.LblLote.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblLote.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.LblLote.Location = New System.Drawing.Point(85, 105)
-        Me.LblLote.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.LblLote.Location = New System.Drawing.Point(57, 68)
+        Me.LblLote.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblLote.Name = "LblLote"
-        Me.LblLote.Size = New System.Drawing.Size(66, 22)
+        Me.LblLote.Size = New System.Drawing.Size(45, 14)
         Me.LblLote.TabIndex = 231
         Me.LblLote.Text = "Lote :"
         '
         'CbxLote
         '
         Me.CbxLote.AutoSize = True
-        Me.CbxLote.Location = New System.Drawing.Point(487, 101)
+        Me.CbxLote.Location = New System.Drawing.Point(325, 66)
+        Me.CbxLote.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.CbxLote.Name = "CbxLote"
-        Me.CbxLote.Size = New System.Drawing.Size(95, 24)
+        Me.CbxLote.Size = New System.Drawing.Size(66, 17)
         Me.CbxLote.TabIndex = 230
         Me.CbxLote.Text = "Por Lote"
         Me.CbxLote.UseVisualStyleBackColor = True
@@ -254,10 +252,10 @@ Partial Class FrmNuevoAlimento
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(85, 243)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label1.Location = New System.Drawing.Point(57, 158)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(66, 22)
+        Me.Label1.Size = New System.Drawing.Size(44, 14)
         Me.Label1.TabIndex = 229
         Me.Label1.Text = "Tipo :"
         '
@@ -267,10 +265,10 @@ Partial Class FrmNuevoAlimento
         Me.LblStock.BackColor = System.Drawing.Color.Transparent
         Me.LblStock.Font = New System.Drawing.Font("Verdana", 7.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblStock.ForeColor = System.Drawing.Color.DarkGreen
-        Me.LblStock.Location = New System.Drawing.Point(275, 193)
-        Me.LblStock.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.LblStock.Location = New System.Drawing.Point(183, 125)
+        Me.LblStock.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblStock.Name = "LblStock"
-        Me.LblStock.Size = New System.Drawing.Size(18, 17)
+        Me.LblStock.Size = New System.Drawing.Size(12, 12)
         Me.LblStock.TabIndex = 228
         Me.LblStock.Text = "0"
         '
@@ -280,32 +278,12 @@ Partial Class FrmNuevoAlimento
         Me.LblStockKg.BackColor = System.Drawing.Color.Transparent
         Me.LblStockKg.Font = New System.Drawing.Font("Verdana", 7.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblStockKg.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.LblStockKg.Location = New System.Drawing.Point(161, 193)
-        Me.LblStockKg.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.LblStockKg.Location = New System.Drawing.Point(107, 125)
+        Me.LblStockKg.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblStockKg.Name = "LblStockKg"
-        Me.LblStockKg.Size = New System.Drawing.Size(102, 17)
+        Me.LblStockKg.Size = New System.Drawing.Size(71, 12)
         Me.LblStockKg.TabIndex = 227
         Me.LblStockKg.Text = "Stock (kg) :"
-        '
-        'CbxMedicado
-        '
-        Me.CbxMedicado.AutoSize = True
-        Me.CbxMedicado.Location = New System.Drawing.Point(161, 242)
-        Me.CbxMedicado.Name = "CbxMedicado"
-        Me.CbxMedicado.Size = New System.Drawing.Size(104, 24)
-        Me.CbxMedicado.TabIndex = 221
-        Me.CbxMedicado.Text = "Medicado"
-        Me.CbxMedicado.UseVisualStyleBackColor = True
-        '
-        'CbxAnti
-        '
-        Me.CbxAnti.AutoSize = True
-        Me.CbxAnti.Location = New System.Drawing.Point(286, 242)
-        Me.CbxAnti.Name = "CbxAnti"
-        Me.CbxAnti.Size = New System.Drawing.Size(63, 24)
-        Me.CbxAnti.TabIndex = 220
-        Me.CbxAnti.Text = "Anti"
-        Me.CbxAnti.UseVisualStyleBackColor = True
         '
         'Label8
         '
@@ -313,10 +291,10 @@ Partial Class FrmNuevoAlimento
         Me.Label8.BackColor = System.Drawing.Color.Transparent
         Me.Label8.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label8.Location = New System.Drawing.Point(68, 47)
-        Me.Label8.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label8.Location = New System.Drawing.Point(45, 31)
+        Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(83, 22)
+        Me.Label8.Size = New System.Drawing.Size(55, 14)
         Me.Label8.TabIndex = 219
         Me.Label8.Text = "Fecha :"
         '
@@ -324,10 +302,9 @@ Partial Class FrmNuevoAlimento
         '
         Me.DtpFechaAlimento.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DtpFechaAlimento.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DtpFechaAlimento.Location = New System.Drawing.Point(161, 44)
-        Me.DtpFechaAlimento.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.DtpFechaAlimento.Location = New System.Drawing.Point(107, 29)
         Me.DtpFechaAlimento.Name = "DtpFechaAlimento"
-        Me.DtpFechaAlimento.Size = New System.Drawing.Size(163, 28)
+        Me.DtpFechaAlimento.Size = New System.Drawing.Size(110, 21)
         Me.DtpFechaAlimento.TabIndex = 218
         '
         'CmbGalpones
@@ -387,10 +364,9 @@ Partial Class FrmNuevoAlimento
         Me.CmbGalpones.DisplayLayout.ScrollStyle = Infragistics.Win.UltraWinGrid.ScrollStyle.Immediate
         Me.CmbGalpones.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy
         Me.CmbGalpones.DropDownStyle = Infragistics.Win.UltraWinGrid.UltraComboStyle.DropDownList
-        Me.CmbGalpones.Location = New System.Drawing.Point(161, 102)
-        Me.CmbGalpones.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.CmbGalpones.Location = New System.Drawing.Point(107, 66)
         Me.CmbGalpones.Name = "CmbGalpones"
-        Me.CmbGalpones.Size = New System.Drawing.Size(244, 29)
+        Me.CmbGalpones.Size = New System.Drawing.Size(163, 22)
         Me.CmbGalpones.TabIndex = 207
         '
         'Label2
@@ -399,10 +375,10 @@ Partial Class FrmNuevoAlimento
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(38, 160)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label2.Location = New System.Drawing.Point(25, 104)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(113, 22)
+        Me.Label2.Size = New System.Drawing.Size(74, 14)
         Me.Label2.TabIndex = 204
         Me.Label2.Text = "Alimento :"
         '
@@ -412,10 +388,10 @@ Partial Class FrmNuevoAlimento
         Me.LblGalpon.BackColor = System.Drawing.Color.Transparent
         Me.LblGalpon.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblGalpon.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.LblGalpon.Location = New System.Drawing.Point(57, 105)
-        Me.LblGalpon.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.LblGalpon.Location = New System.Drawing.Point(38, 68)
+        Me.LblGalpon.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblGalpon.Name = "LblGalpon"
-        Me.LblGalpon.Size = New System.Drawing.Size(94, 22)
+        Me.LblGalpon.Size = New System.Drawing.Size(62, 14)
         Me.LblGalpon.TabIndex = 196
         Me.LblGalpon.Text = "Galpón :"
         '
@@ -423,11 +399,10 @@ Partial Class FrmNuevoAlimento
         '
         Me.txtAlimento.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtAlimento.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtAlimento.Location = New System.Drawing.Point(161, 157)
-        Me.txtAlimento.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtAlimento.Location = New System.Drawing.Point(107, 102)
         Me.txtAlimento.MaxLength = 50
         Me.txtAlimento.Name = "txtAlimento"
-        Me.txtAlimento.Size = New System.Drawing.Size(232, 28)
+        Me.txtAlimento.Size = New System.Drawing.Size(156, 21)
         Me.txtAlimento.TabIndex = 200
         '
         'BtnBuscarAlimento
@@ -436,10 +411,9 @@ Partial Class FrmNuevoAlimento
         Me.BtnBuscarAlimento.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnBuscarAlimento.Image = CType(resources.GetObject("BtnBuscarAlimento.Image"), System.Drawing.Image)
         Me.BtnBuscarAlimento.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnBuscarAlimento.Location = New System.Drawing.Point(407, 149)
-        Me.BtnBuscarAlimento.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.BtnBuscarAlimento.Location = New System.Drawing.Point(271, 97)
         Me.BtnBuscarAlimento.Name = "BtnBuscarAlimento"
-        Me.BtnBuscarAlimento.Size = New System.Drawing.Size(48, 45)
+        Me.BtnBuscarAlimento.Size = New System.Drawing.Size(32, 29)
         Me.BtnBuscarAlimento.TabIndex = 201
         Me.BtnBuscarAlimento.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.BtnBuscarAlimento.UseVisualStyleBackColor = True
@@ -447,10 +421,11 @@ Partial Class FrmNuevoAlimento
         'txtObservacion
         '
         Me.txtObservacion.Font = New System.Drawing.Font("Verdana", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtObservacion.Location = New System.Drawing.Point(203, 99)
+        Me.txtObservacion.Location = New System.Drawing.Point(135, 64)
+        Me.txtObservacion.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtObservacion.MaxLength = 200
         Me.txtObservacion.Name = "txtObservacion"
-        Me.txtObservacion.Size = New System.Drawing.Size(329, 80)
+        Me.txtObservacion.Size = New System.Drawing.Size(221, 53)
         Me.txtObservacion.TabIndex = 217
         Me.txtObservacion.Text = "NINGUNA"
         '
@@ -460,10 +435,10 @@ Partial Class FrmNuevoAlimento
         Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label7.Location = New System.Drawing.Point(118, 99)
-        Me.Label7.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label7.Location = New System.Drawing.Point(79, 64)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(70, 22)
+        Me.Label7.Size = New System.Drawing.Size(47, 14)
         Me.Label7.TabIndex = 216
         Me.Label7.Text = "Nota :"
         '
@@ -471,11 +446,10 @@ Partial Class FrmNuevoAlimento
         '
         Me.txtCantidadTotal.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtCantidadTotal.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCantidadTotal.Location = New System.Drawing.Point(203, 50)
-        Me.txtCantidadTotal.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtCantidadTotal.Location = New System.Drawing.Point(135, 32)
         Me.txtCantidadTotal.MaxLength = 50
         Me.txtCantidadTotal.Name = "txtCantidadTotal"
-        Me.txtCantidadTotal.Size = New System.Drawing.Size(175, 28)
+        Me.txtCantidadTotal.Size = New System.Drawing.Size(118, 21)
         Me.txtCantidadTotal.TabIndex = 211
         '
         'Label5
@@ -484,10 +458,10 @@ Partial Class FrmNuevoAlimento
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label5.Location = New System.Drawing.Point(24, 53)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label5.Location = New System.Drawing.Point(16, 34)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(164, 22)
+        Me.Label5.Size = New System.Drawing.Size(108, 14)
         Me.Label5.TabIndex = 208
         Me.Label5.Text = "Cantidad (kg) :"
         '
@@ -497,10 +471,10 @@ Partial Class FrmNuevoAlimento
         Me.lblPlantel.BackColor = System.Drawing.Color.Transparent
         Me.lblPlantel.Font = New System.Drawing.Font("Verdana", 11.0!, System.Drawing.FontStyle.Bold)
         Me.lblPlantel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.lblPlantel.Location = New System.Drawing.Point(33, 84)
-        Me.lblPlantel.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.lblPlantel.Location = New System.Drawing.Point(22, 55)
+        Me.lblPlantel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblPlantel.Name = "lblPlantel"
-        Me.lblPlantel.Size = New System.Drawing.Size(122, 26)
+        Me.lblPlantel.Size = New System.Drawing.Size(83, 18)
         Me.lblPlantel.TabIndex = 195
         Me.lblPlantel.Text = "PLANTEL"
         '
@@ -511,10 +485,10 @@ Partial Class FrmNuevoAlimento
         Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnGuardar, Me.BtnCerrar})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.ToolStrip1.Margin = New System.Windows.Forms.Padding(3)
+        Me.ToolStrip1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Padding = New System.Windows.Forms.Padding(0, 0, 3, 0)
-        Me.ToolStrip1.Size = New System.Drawing.Size(663, 40)
+        Me.ToolStrip1.Padding = New System.Windows.Forms.Padding(0, 0, 2, 0)
+        Me.ToolStrip1.Size = New System.Drawing.Size(442, 38)
         Me.ToolStrip1.TabIndex = 162
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -527,7 +501,7 @@ Partial Class FrmNuevoAlimento
         Me.BtnGuardar.Margin = New System.Windows.Forms.Padding(5)
         Me.BtnGuardar.Name = "BtnGuardar"
         Me.BtnGuardar.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnGuardar.Size = New System.Drawing.Size(121, 30)
+        Me.BtnGuardar.Size = New System.Drawing.Size(89, 28)
         Me.BtnGuardar.Text = "Guardar"
         Me.BtnGuardar.ToolTipText = "Guardar"
         '
@@ -540,7 +514,7 @@ Partial Class FrmNuevoAlimento
         Me.BtnCerrar.Margin = New System.Windows.Forms.Padding(5)
         Me.BtnCerrar.Name = "BtnCerrar"
         Me.BtnCerrar.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnCerrar.Size = New System.Drawing.Size(84, 30)
+        Me.BtnCerrar.Size = New System.Drawing.Size(66, 28)
         Me.BtnCerrar.Text = "Salir"
         Me.BtnCerrar.ToolTipText = "Cerrar"
         '
@@ -550,9 +524,11 @@ Partial Class FrmNuevoAlimento
         Me.GroupBox2.Controls.Add(Me.Label5)
         Me.GroupBox2.Controls.Add(Me.txtObservacion)
         Me.GroupBox2.Controls.Add(Me.Label7)
-        Me.GroupBox2.Location = New System.Drawing.Point(16, 448)
+        Me.GroupBox2.Location = New System.Drawing.Point(11, 291)
+        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(633, 199)
+        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox2.Size = New System.Drawing.Size(422, 129)
         Me.GroupBox2.TabIndex = 218
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Detalle de Salida de Alimento"
@@ -562,10 +538,9 @@ Partial Class FrmNuevoAlimento
         Me.LblCampaña.AutoSize = True
         Me.LblCampaña.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblCampaña.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.LblCampaña.Location = New System.Drawing.Point(285, 86)
-        Me.LblCampaña.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.LblCampaña.Location = New System.Drawing.Point(190, 56)
         Me.LblCampaña.Name = "LblCampaña"
-        Me.LblCampaña.Size = New System.Drawing.Size(117, 22)
+        Me.LblCampaña.Size = New System.Drawing.Size(77, 14)
         Me.LblCampaña.TabIndex = 235
         Me.LblCampaña.Text = "Campaña :"
         '
@@ -627,24 +602,34 @@ Partial Class FrmNuevoAlimento
         Me.CmbCampaña.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy
         Me.CmbCampaña.DropDownStyle = Infragistics.Win.UltraWinGrid.UltraComboStyle.DropDownList
         Me.CmbCampaña.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CmbCampaña.Location = New System.Drawing.Point(411, 81)
-        Me.CmbCampaña.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.CmbCampaña.Location = New System.Drawing.Point(274, 53)
         Me.CmbCampaña.Name = "CmbCampaña"
-        Me.CmbCampaña.Size = New System.Drawing.Size(217, 33)
+        Me.CmbCampaña.Size = New System.Drawing.Size(145, 25)
         Me.CmbCampaña.TabIndex = 236
+        '
+        'CmbTipoAlimento
+        '
+        Me.CmbTipoAlimento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CmbTipoAlimento.FormattingEnabled = True
+        Me.CmbTipoAlimento.Items.AddRange(New Object() {"NORMAL", "ANTI", "MEDICADO", "ANTI-MEDICADO"})
+        Me.CmbTipoAlimento.Location = New System.Drawing.Point(107, 155)
+        Me.CmbTipoAlimento.Name = "CmbTipoAlimento"
+        Me.CmbTipoAlimento.Size = New System.Drawing.Size(121, 21)
+        Me.CmbTipoAlimento.TabIndex = 237
         '
         'FrmNuevoAlimento
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(233, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(663, 660)
+        Me.ClientSize = New System.Drawing.Size(442, 429)
         Me.Controls.Add(Me.LblCampaña)
         Me.Controls.Add(Me.CmbCampaña)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.ToolStrip1)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.lblPlantel)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "FrmNuevoAlimento"
@@ -680,8 +665,6 @@ Partial Class FrmNuevoAlimento
     Friend WithEvents Label7 As Label
     Friend WithEvents DtpFechaAlimento As DateTimePicker
     Friend WithEvents Label8 As Label
-    Friend WithEvents CbxAnti As CheckBox
-    Friend WithEvents CbxMedicado As CheckBox
     Friend WithEvents LblStockKg As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents LblStock As Label
@@ -694,4 +677,5 @@ Partial Class FrmNuevoAlimento
     Friend WithEvents CmbCampaña As Infragistics.Win.UltraWinGrid.UltraCombo
     Friend WithEvents LblArea As Label
     Friend WithEvents cmbArea As Infragistics.Win.UltraWinGrid.UltraCombo
+    Friend WithEvents CmbTipoAlimento As ComboBox
 End Class

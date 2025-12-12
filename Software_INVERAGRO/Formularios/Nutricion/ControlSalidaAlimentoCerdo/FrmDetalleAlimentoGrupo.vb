@@ -7,6 +7,9 @@ Public Class FrmDetalleAlimentoGrupo
     Public IdUbicacion As Integer = 0
     Dim cn As New cnControlAlimento
 
+    ' Propiedad para indicar si se eliminó exitosamente
+    Public Property EliminadoExitoso As Boolean = False
+
     Private Sub FrmDetalleAlimentoGrupo_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
             clsBasicas.Formato_Tablas_Grid(dtgListado)
@@ -51,11 +54,13 @@ Public Class FrmDetalleAlimentoGrupo
                 Dim idDetGrupo As Integer = Convert.ToInt32(e.Cell.Row.Cells(0).Value)
 
                 Dim obj As New coControlAlimento With {
-                    .Codigo = idDetGrupo
+                    .Codigo = idDetGrupo,
+                    .IdUsuario = VP_IdUser
                 }
 
                 Dim MensajeBgWk As String = cn.Cn_EliminarDetalleAlimentoGrupo(obj)
                 If (obj.Coderror = 0) Then
+                    EliminadoExitoso = True ' Marcar como eliminado exitosamente
                     ListarAlimentos()
                 Else
                     msj_advert(MensajeBgWk)

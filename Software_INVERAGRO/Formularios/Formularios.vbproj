@@ -1218,6 +1218,12 @@
     <Compile Include="Nutricion\ControlSalidaAlimentoCerdo\FrmReporteCumplimientoPresupuesto.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Nutricion\ControlSalidaAlimentoCerdo\FrmReportePresupuestoRecria.Designer.vb">
+      <DependentUpon>FrmReportePresupuestoRecria.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Nutricion\ControlSalidaAlimentoCerdo\FrmReportePresupuestoRecria.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="produccion\ControlAplicacionInseminacion\FrmEditarInseminacion.Designer.vb">
       <DependentUpon>FrmEditarInseminacion.vb</DependentUpon>
     </Compile>
@@ -4390,6 +4396,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Nutricion\ControlSalidaAlimentoCerdo\FrmReporteCumplimientoPresupuesto.resx">
       <DependentUpon>FrmReporteCumplimientoPresupuesto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nutricion\ControlSalidaAlimentoCerdo\FrmReportePresupuestoRecria.resx">
+      <DependentUpon>FrmReportePresupuestoRecria.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="produccion\ControlAplicacionInseminacion\FrmEditarInseminacion.resx">
       <DependentUpon>FrmEditarInseminacion.vb</DependentUpon>

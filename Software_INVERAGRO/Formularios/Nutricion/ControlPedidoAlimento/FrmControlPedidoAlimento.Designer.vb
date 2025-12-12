@@ -48,6 +48,7 @@ Partial Class FrmControlPedidoAlimento
         Me.btncerrar = New System.Windows.Forms.ToolStripButton()
         Me.btnreporteRrhhctrlcapaci = New System.Windows.Forms.ToolStripDropDownButton()
         Me.BtnReportePreparaciones = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BtnHistoricoPreparaciones = New System.Windows.Forms.ToolStripMenuItem()
         Me.BtnReporteSemanal = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.GrupoFiltros = New System.Windows.Forms.GroupBox()
@@ -62,7 +63,6 @@ Partial Class FrmControlPedidoAlimento
         Me.dtgListado = New Infragistics.Win.UltraWinGrid.UltraGrid()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         Me.Ptbx_Cargando = New System.Windows.Forms.PictureBox()
-        Me.BtnHistoricoPreparaciones = New System.Windows.Forms.ToolStripMenuItem()
         Me.BarraOpciones.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.GrupoFiltros.SuspendLayout()
@@ -76,7 +76,7 @@ Partial Class FrmControlPedidoAlimento
         Me.BarraOpciones.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.BarraOpciones.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
         Me.BarraOpciones.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.BarraOpciones.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnNuevoNpea, Me.btnAprobarNpea, Me.btnCancelarNpea, Me.BtnConsolidadoRacionmodulonutricion, Me.btnExportarNpea, Me.BtnModificarCampaña, Me.btncerrar, Me.btnreporteRrhhctrlcapaci})
+        Me.BarraOpciones.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnNuevoNpea, Me.btnAprobarNpea, Me.btnCancelarNpea, Me.BtnConsolidadoRacionmodulonutricion, Me.BtnModificarCampaña, Me.btnExportarNpea, Me.btncerrar, Me.btnreporteRrhhctrlcapaci})
         Me.BarraOpciones.Location = New System.Drawing.Point(0, 165)
         Me.BarraOpciones.Margin = New System.Windows.Forms.Padding(2)
         Me.BarraOpciones.Name = "BarraOpciones"
@@ -190,6 +190,12 @@ Partial Class FrmControlPedidoAlimento
         Me.BtnReportePreparaciones.Name = "BtnReportePreparaciones"
         Me.BtnReportePreparaciones.Size = New System.Drawing.Size(252, 22)
         Me.BtnReportePreparaciones.Text = "Reporte Preparaciones"
+        '
+        'BtnHistoricoPreparaciones
+        '
+        Me.BtnHistoricoPreparaciones.Name = "BtnHistoricoPreparaciones"
+        Me.BtnHistoricoPreparaciones.Size = New System.Drawing.Size(252, 22)
+        Me.BtnHistoricoPreparaciones.Text = "Histórico de Preparaciones"
         '
         'BtnReporteSemanal
         '
@@ -414,12 +420,6 @@ Partial Class FrmControlPedidoAlimento
         Me.Ptbx_Cargando.TabIndex = 26
         Me.Ptbx_Cargando.TabStop = False
         Me.Ptbx_Cargando.Visible = False
-        '
-        'BtnHistoricoPreparaciones
-        '
-        Me.BtnHistoricoPreparaciones.Name = "BtnHistoricoPreparaciones"
-        Me.BtnHistoricoPreparaciones.Size = New System.Drawing.Size(252, 22)
-        Me.BtnHistoricoPreparaciones.Text = "Histórico de Preparaciones"
         '
         'FrmControlPedidoAlimento
         '

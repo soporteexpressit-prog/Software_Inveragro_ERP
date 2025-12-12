@@ -213,4 +213,8 @@ Public Class cnControlAlimento
     Public Function Cn_ModificarCampañaPedido(ByRef obj As coControlAlimento) As String
         Return cls_at.Cd_ModificarCampañaPedido("[w_pa_modificar_campaña_pedido]", obj)
     End Function
+
+    Public Function Cn_ReporteConsumoPresupuestoRecria(ByRef obj As coControlAlimento) As DataSet
+        Return cls_at.Cd_ReporteConsumoPresupuestoRecria("[w_pa_reporte_consumo_presupuesto_recria]", obj)
+    End Function
 End Class

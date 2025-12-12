@@ -817,6 +817,9 @@ Public Class cdControlAlimento
                 .AddWithValue("@idLote", SqlDbType.Int).Value = obj.IdLote
                 .AddWithValue("@idGrupo", SqlDbType.Int).Value = obj.IdGrupo
                 .AddWithValue("@idUbicacion", SqlDbType.Int).Value = obj.IdUbicacion
+                .AddWithValue("@idArea", SqlDbType.Int).Value = obj.IdArea
+                .AddWithValue("@idUsuario", SqlDbType.Int).Value = obj.IdUsuario
+                .AddWithValue("@tipoAlimento", SqlDbType.VarChar).Value = obj.TipoAlimento
                 .Add("@msj", SqlDbType.VarChar, 100).Direction = 2
                 .Add("@coderror", SqlDbType.Int).Direction = 2
             End With
@@ -874,6 +877,7 @@ Public Class cdControlAlimento
 
             With cmd.Parameters
                 .AddWithValue("@idDetGrupo", SqlDbType.Int).Value = obj.Codigo
+                .AddWithValue("@idUsuario", SqlDbType.Int).Value = obj.IdUsuario
                 .Add("@msj", SqlDbType.VarChar, 100).Direction = 2
                 .Add("@coderror", SqlDbType.Int).Direction = 2
             End With
@@ -928,5 +932,26 @@ Public Class cdControlAlimento
         Catch ex As Exception
             Throw ex
         End Try
+    End Function
+
+
+    Public Function Cd_ReporteConsumoPresupuestoRecria(name As String, obj As coControlAlimento) As DataSet
+        Dim ds As New DataSet
+        Try
+            con.Abrir()
+            Dim da As New SqlDataAdapter(name, con.con)
+            da.SelectCommand.CommandType = CommandType.StoredProcedure
+            da.SelectCommand.Parameters.AddWithValue("@fechaDesde", obj.FechaDesde)
+            da.SelectCommand.Parameters.AddWithValue("@fechaHasta", obj.FechaHasta)
+            da.SelectCommand.Parameters.AddWithValue("@estado", obj.Estado)
+            da.SelectCommand.Parameters.AddWithValue("@tipo", obj.Tipo)
+            da.SelectCommand.Parameters.AddWithValue("@idUbicacion", obj.IdUbicacion)
+            da.SelectCommand.Parameters.AddWithValue("@anio", obj.Anio)
+            da.Fill(ds)
+        Catch ex As Exception
+            Throw ex
+        End Try
+        con.Salir()
+        Return ds
     End Function
 End Class

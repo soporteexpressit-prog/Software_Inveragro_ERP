@@ -279,6 +279,7 @@ Public Class FrmControlAlimentoCerda
                     .idPlantel = CmbUbicacion.Value
                 }
                 frm.ShowDialog()
+                Consultar()
             Else
                 msj_advert("Solo esta disponible para P1 y P2")
                 Return
@@ -313,6 +314,22 @@ Public Class FrmControlAlimentoCerda
         Else
             msj_advert(MensajesSistema.mensajesGenerales("SELECCIONE_REGISTRO"))
         End If
+    End Sub
+
+    Private Sub BtnRptConsumoPresupuestoRecria_Click(sender As Object, e As EventArgs) Handles BtnRptConsumoPresupuestoRecria.Click
+        Try
+            If CmbUbicacion.Value = 1 Or CmbUbicacion.Value = 2 Then
+                Dim frm As New FrmReportePresupuestoRecria With {
+                    .idUbicacion = CmbUbicacion.Value
+                }
+                frm.ShowDialog()
+            Else
+                msj_advert("Solo esta disponible para P1 y P2")
+                Return
+            End If
+        Catch ex As Exception
+            clsBasicas.controlException(Name, ex)
+        End Try
     End Sub
 
     Private Sub BtnCerrar_Click(sender As Object, e As EventArgs) Handles BtnCerrar.Click

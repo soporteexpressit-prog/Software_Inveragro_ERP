@@ -7,6 +7,9 @@ Public Class FrmAlimentacionPresupuesto
     Public idPlantel As Integer = 0
     Dim idRacion As Integer = 0
     Dim idGrupo As Integer = 0
+    Dim stockDisponible As Decimal = 0
+    Dim unidadMedida As String = ""
+    Dim idUnidadMedida As Integer = 0
     Dim ds As New DataSet
 
     Private Sub FrmAlimentacionPresupuesto_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -70,9 +73,12 @@ Public Class FrmAlimentacionPresupuesto
         End Try
     End Sub
 
-    Public Sub LlenarCamposAlimento(codigo As Integer, descripcion As String)
+    Public Sub LlenarCamposAlimento(codigo As Integer, descripcion As String, stock As Decimal, um As String, idUm As Integer)
         idRacion = codigo
         txtDescripcionAlimento.Text = descripcion
+        stockDisponible = stock
+        unidadMedida = um
+        idUnidadMedida = idUm
 
         If idRacion <> 0 Then
             ConsultarPresupuestoAlimento()
@@ -264,15 +270,44 @@ Public Class FrmAlimentacionPresupuesto
                 Return
             End If
 
+            If stockDisponible = 0 Then
+                msj_advert("El alimento seleccionado no cuenta con stock disponible")
+                Return
+            End If
+
             Dim frm As New FrmAlimentarGrupoDestete With {
                 .nombreGrupo = TxtGrupo.Text,
                 .nombreAlimento = txtDescripcionAlimento.Text,
                 .idLote = CmbLotes.Value,
                 .idGrupo = idGrupo,
                 .idProducto = idRacion,
-                .idUbicacion = idPlantel
+                .idUbicacion = idPlantel,
+                .stockDisponible = stockDisponible,
+                .unidadMedida = unidadMedida,
+                .idUnidadMedida = idUnidadMedida
             }
             frm.ShowDialog()
+
+            ' Verificar si se guardó exitosamente
+            If frm.GuardadoExitoso Then
+                ' Limpiar los datos del alimento seleccionado
+                idRacion = 0
+                txtDescripcionAlimento.Text = ""
+                stockDisponible = 0
+                unidadMedida = ""
+                idUnidadMedida = 0
+
+                ' Limpiar los campos de presupuesto
+                TxtObjetivo.Text = ""
+                TxtPesoDestete.Text = ""
+                TxtCa.Text = ""
+                TxtPresentacionSacos.Text = ""
+                TxtConsumoAlimento.Text = ""
+                LblResultado.Text = ""
+                TxtTotalAlimento.Text = ""
+            End If
+
+            ' Actualizar el consumo del grupo
             ConsultarPresupuestoAlimento()
         Catch ex As Exception
             clsBasicas.controlException(Name, ex)
@@ -297,6 +332,27 @@ Public Class FrmAlimentacionPresupuesto
                 .IdUbicacion = idPlantel
             }
             frm.ShowDialog()
+
+            ' Verificar si se eliminó exitosamente
+            If frm.EliminadoExitoso Then
+                ' Limpiar los datos del alimento seleccionado
+                idRacion = 0
+                txtDescripcionAlimento.Text = ""
+                stockDisponible = 0
+                unidadMedida = ""
+                idUnidadMedida = 0
+
+                ' Limpiar los campos de presupuesto
+                TxtObjetivo.Text = ""
+                TxtPesoDestete.Text = ""
+                TxtCa.Text = ""
+                TxtPresentacionSacos.Text = ""
+                TxtConsumoAlimento.Text = ""
+                LblResultado.Text = ""
+                TxtTotalAlimento.Text = ""
+            End If
+
+            ' Actualizar el consumo del grupo
             ConsultarPresupuestoAlimento()
         Catch ex As Exception
             clsBasicas.controlException(Name, ex)
