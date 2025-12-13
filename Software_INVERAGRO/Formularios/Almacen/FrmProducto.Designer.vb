@@ -882,7 +882,7 @@ Partial Class FrmProducto
         Me.txtvalorcantidadporpresentacion.Name = "txtvalorcantidadporpresentacion"
         Me.txtvalorcantidadporpresentacion.Size = New System.Drawing.Size(57, 20)
         Me.txtvalorcantidadporpresentacion.TabIndex = 177
-        Me.txtvalorcantidadporpresentacion.Visible = False
+        Me.txtvalorcantidadporpresentacion.Text = "1"
         '
         'Label20
         '
@@ -896,7 +896,6 @@ Partial Class FrmProducto
         Me.Label20.Size = New System.Drawing.Size(94, 14)
         Me.Label20.TabIndex = 176
         Me.Label20.Text = "Equivalencia :"
-        Me.Label20.Visible = False
         '
         'Label19
         '
