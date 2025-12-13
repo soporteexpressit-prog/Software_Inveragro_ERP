@@ -300,6 +300,8 @@ Public Class FrmRegistrarMandarCamalMortalidadLote
             LblTipo.Text = "Mortalidad"
             LblTipo2.Text = "Mortalidad"
             tipoRegistro = "MORTALIDAD"
+            RbnChanchillaEngorde.Visible = False
+            RbnLechon.Checked = True
             LimpiarCamposIncidencia()
 
             LimpiarSelecciones()
@@ -311,6 +313,8 @@ Public Class FrmRegistrarMandarCamalMortalidadLote
             LblTipo.Text = "Mandar Camal"
             LblTipo2.Text = "Mandar Camal"
             tipoRegistro = "EMERGENCIA"
+            RbnChanchillaEngorde.Visible = True
+            RbnLechon.Checked = True
             LimpiarCamposIncidencia()
 
             LimpiarSelecciones()
@@ -330,6 +334,18 @@ Public Class FrmRegistrarMandarCamalMortalidadLote
 
     Private Sub BtnGuardar_Click(sender As Object, e As EventArgs) Handles BtnGuardar.Click
         Try
+            Dim tipoEnvioCamal As Integer = 0
+
+            If RbnLechon.Checked Then
+                tipoEnvioCamal = 0 ' ENVIO LECHÓN
+            Else
+                If RbnChanchilla.Checked Then
+                    tipoEnvioCamal = 1 ' ENVIO CHANCHILLA
+                Else
+                    tipoEnvioCamal = 2 ' ENVIO CHANCHILLA ENGORDE
+                End If
+            End If
+
             If (TxtObservacion.Text = "") Then
                 msj_advert("Debe ingresar una observación")
                 Exit Sub
@@ -470,15 +486,15 @@ Public Class FrmRegistrarMandarCamalMortalidadLote
                         .observacion = TxtObservacion.Text,
                         .fecha = DtpFecha.Value,
                         .peso = If(TxtPeso.Text = "", 0, CDec(TxtPeso.Text)),
-                        .esChanchilla = RbnChanchilla.Checked,
+                        .tipoEnvioCamal = tipoEnvioCamal,
                         .frmMandarCamal = Me
                     }
                     frm.ShowDialog()
-                        LimpiarCampos()
-                        listaIdCerdosReg.Clear()
-                        ListarDetalleCorralesLote()
-                    End If
+                    LimpiarCampos()
+                    listaIdCerdosReg.Clear()
+                    ListarDetalleCorralesLote()
                 End If
+            End If
         Catch ex As Exception
             clsBasicas.controlException(Name, ex)
         End Try
@@ -492,6 +508,8 @@ Public Class FrmRegistrarMandarCamalMortalidadLote
         TxtPeso.Text = "0"
         TxtPeso.Visible = False
         LblPeso.Visible = False
+        RbnLechon.Checked = True
+        RbnChanchillaEngorde.Checked = False
         NoVisibleCantCerdosNoReg()
         NoVisibleCantCerdosTatuados()
     End Sub

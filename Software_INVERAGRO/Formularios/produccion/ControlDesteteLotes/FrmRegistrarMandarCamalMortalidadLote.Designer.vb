@@ -84,6 +84,7 @@ Partial Class FrmRegistrarMandarCamalMortalidadLote
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.BtnGuardar = New System.Windows.Forms.ToolStripButton()
         Me.BtnCerrar = New System.Windows.Forms.ToolStripButton()
+        Me.RbnChanchillaEngorde = New System.Windows.Forms.RadioButton()
         Me.Panel2.SuspendLayout()
         Me.FiltroEnvioAnimales.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
@@ -112,11 +113,12 @@ Partial Class FrmRegistrarMandarCamalMortalidadLote
         '
         'FiltroEnvioAnimales
         '
+        Me.FiltroEnvioAnimales.Controls.Add(Me.RbnChanchillaEngorde)
         Me.FiltroEnvioAnimales.Controls.Add(Me.RbnChanchilla)
         Me.FiltroEnvioAnimales.Controls.Add(Me.RbnLechon)
-        Me.FiltroEnvioAnimales.Location = New System.Drawing.Point(790, 46)
+        Me.FiltroEnvioAnimales.Location = New System.Drawing.Point(711, 46)
         Me.FiltroEnvioAnimales.Name = "FiltroEnvioAnimales"
-        Me.FiltroEnvioAnimales.Size = New System.Drawing.Size(232, 45)
+        Me.FiltroEnvioAnimales.Size = New System.Drawing.Size(302, 45)
         Me.FiltroEnvioAnimales.TabIndex = 182
         Me.FiltroEnvioAnimales.TabStop = False
         Me.FiltroEnvioAnimales.Text = "Envío"
@@ -124,7 +126,7 @@ Partial Class FrmRegistrarMandarCamalMortalidadLote
         'RbnChanchilla
         '
         Me.RbnChanchilla.AutoSize = True
-        Me.RbnChanchilla.Location = New System.Drawing.Point(125, 16)
+        Me.RbnChanchilla.Location = New System.Drawing.Point(91, 16)
         Me.RbnChanchilla.Name = "RbnChanchilla"
         Me.RbnChanchilla.Size = New System.Drawing.Size(74, 17)
         Me.RbnChanchilla.TabIndex = 1
@@ -134,7 +136,7 @@ Partial Class FrmRegistrarMandarCamalMortalidadLote
         'RbnLechon
         '
         Me.RbnLechon.AutoSize = True
-        Me.RbnLechon.Location = New System.Drawing.Point(44, 16)
+        Me.RbnLechon.Location = New System.Drawing.Point(15, 16)
         Me.RbnLechon.Name = "RbnLechon"
         Me.RbnLechon.Size = New System.Drawing.Size(61, 17)
         Me.RbnLechon.TabIndex = 0
@@ -423,7 +425,7 @@ Partial Class FrmRegistrarMandarCamalMortalidadLote
         'RbtMandarCamal
         '
         Me.RbtMandarCamal.AutoSize = True
-        Me.RbtMandarCamal.Location = New System.Drawing.Point(147, 34)
+        Me.RbtMandarCamal.Location = New System.Drawing.Point(147, 32)
         Me.RbtMandarCamal.Margin = New System.Windows.Forms.Padding(2)
         Me.RbtMandarCamal.Name = "RbtMandarCamal"
         Me.RbtMandarCamal.Size = New System.Drawing.Size(102, 17)
@@ -435,7 +437,7 @@ Partial Class FrmRegistrarMandarCamalMortalidadLote
         'RbtMortalidad
         '
         Me.RbtMortalidad.AutoSize = True
-        Me.RbtMortalidad.Location = New System.Drawing.Point(39, 34)
+        Me.RbtMortalidad.Location = New System.Drawing.Point(39, 32)
         Me.RbtMortalidad.Margin = New System.Windows.Forms.Padding(2)
         Me.RbtMortalidad.Name = "RbtMortalidad"
         Me.RbtMortalidad.Size = New System.Drawing.Size(74, 17)
@@ -622,6 +624,16 @@ Partial Class FrmRegistrarMandarCamalMortalidadLote
         Me.BtnCerrar.Text = "Salir"
         Me.BtnCerrar.ToolTipText = "Cerrar"
         '
+        'RbnChanchillaEngorde
+        '
+        Me.RbnChanchillaEngorde.AutoSize = True
+        Me.RbnChanchillaEngorde.Location = New System.Drawing.Point(180, 16)
+        Me.RbnChanchillaEngorde.Name = "RbnChanchillaEngorde"
+        Me.RbnChanchillaEngorde.Size = New System.Drawing.Size(117, 17)
+        Me.RbnChanchillaEngorde.TabIndex = 2
+        Me.RbnChanchillaEngorde.Text = "Chanchilla Engorde"
+        Me.RbnChanchillaEngorde.UseVisualStyleBackColor = True
+        '
         'FrmRegistrarMandarCamalMortalidadLote
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -682,4 +694,5 @@ Partial Class FrmRegistrarMandarCamalMortalidadLote
     Friend WithEvents FiltroEnvioAnimales As GroupBox
     Friend WithEvents RbnChanchilla As RadioButton
     Friend WithEvents RbnLechon As RadioButton
+    Friend WithEvents RbnChanchillaEngorde As RadioButton
 End Class

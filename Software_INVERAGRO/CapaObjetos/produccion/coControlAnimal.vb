@@ -81,6 +81,7 @@
     Private _ChanchillaEngorde As Boolean
     Private _IdCampaña As Integer
     Private _EsChanchilla As Boolean
+    Private _TipoEnvioCamal As Integer
 
     Public Property Operacion As Integer
         Get
@@ -808,6 +809,15 @@
         End Get
         Set(value As Boolean)
             _EsChanchilla = value
+        End Set
+    End Property
+
+    Public Property TipoEnvioCamal As Integer
+        Get
+            Return _TipoEnvioCamal
+        End Get
+        Set(value As Integer)
+            _TipoEnvioCamal = value
         End Set
     End Property
 End Class

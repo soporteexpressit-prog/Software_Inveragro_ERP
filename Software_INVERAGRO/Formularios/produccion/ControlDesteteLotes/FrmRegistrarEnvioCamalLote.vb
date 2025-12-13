@@ -16,7 +16,7 @@ Public Class FrmRegistrarEnvioCamalLote
     Public fecha As Date
     Public peso As Decimal
     Public frmMandarCamal As FrmRegistrarMandarCamalMortalidadLote
-    Public esChanchilla As Boolean = False
+    Public tipoEnvioCamal As Integer = 0
 
     Private Sub BtnGuardar_Click(sender As Object, e As EventArgs) Handles BtnGuardar.Click
         Try
@@ -41,7 +41,7 @@ Public Class FrmRegistrarEnvioCamalLote
                 .Observacion = observacion,
                 .FechaControl = fecha,
                 .Peso = peso,
-                .EsChanchilla = esChanchilla
+                .TipoEnvioCamal = tipoEnvioCamal
             }
 
             If (MessageBox.Show("¿ESTÁ SEGURO DE ENVIAR A CAMAL A ESTOS CERDOS?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.No) Then
