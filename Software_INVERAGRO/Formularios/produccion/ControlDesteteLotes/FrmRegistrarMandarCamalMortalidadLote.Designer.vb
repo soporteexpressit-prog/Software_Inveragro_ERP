@@ -55,6 +55,7 @@ Partial Class FrmRegistrarMandarCamalMortalidadLote
         Dim Appearance30 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.FiltroEnvioAnimales = New System.Windows.Forms.GroupBox()
+        Me.RbnChanchillaEngorde = New System.Windows.Forms.RadioButton()
         Me.RbnChanchilla = New System.Windows.Forms.RadioButton()
         Me.RbnLechon = New System.Windows.Forms.RadioButton()
         Me.LblPlantel = New System.Windows.Forms.Label()
@@ -84,7 +85,6 @@ Partial Class FrmRegistrarMandarCamalMortalidadLote
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.BtnGuardar = New System.Windows.Forms.ToolStripButton()
         Me.BtnCerrar = New System.Windows.Forms.ToolStripButton()
-        Me.RbnChanchillaEngorde = New System.Windows.Forms.RadioButton()
         Me.Panel2.SuspendLayout()
         Me.FiltroEnvioAnimales.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
@@ -122,6 +122,16 @@ Partial Class FrmRegistrarMandarCamalMortalidadLote
         Me.FiltroEnvioAnimales.TabIndex = 182
         Me.FiltroEnvioAnimales.TabStop = False
         Me.FiltroEnvioAnimales.Text = "Envío"
+        '
+        'RbnChanchillaEngorde
+        '
+        Me.RbnChanchillaEngorde.AutoSize = True
+        Me.RbnChanchillaEngorde.Location = New System.Drawing.Point(180, 16)
+        Me.RbnChanchillaEngorde.Name = "RbnChanchillaEngorde"
+        Me.RbnChanchillaEngorde.Size = New System.Drawing.Size(117, 17)
+        Me.RbnChanchillaEngorde.TabIndex = 2
+        Me.RbnChanchillaEngorde.Text = "Chanchilla Engorde"
+        Me.RbnChanchillaEngorde.UseVisualStyleBackColor = True
         '
         'RbnChanchilla
         '
@@ -623,16 +633,6 @@ Partial Class FrmRegistrarMandarCamalMortalidadLote
         Me.BtnCerrar.Size = New System.Drawing.Size(66, 28)
         Me.BtnCerrar.Text = "Salir"
         Me.BtnCerrar.ToolTipText = "Cerrar"
-        '
-        'RbnChanchillaEngorde
-        '
-        Me.RbnChanchillaEngorde.AutoSize = True
-        Me.RbnChanchillaEngorde.Location = New System.Drawing.Point(180, 16)
-        Me.RbnChanchillaEngorde.Name = "RbnChanchillaEngorde"
-        Me.RbnChanchillaEngorde.Size = New System.Drawing.Size(117, 17)
-        Me.RbnChanchillaEngorde.TabIndex = 2
-        Me.RbnChanchillaEngorde.Text = "Chanchilla Engorde"
-        Me.RbnChanchillaEngorde.UseVisualStyleBackColor = True
         '
         'FrmRegistrarMandarCamalMortalidadLote
         '

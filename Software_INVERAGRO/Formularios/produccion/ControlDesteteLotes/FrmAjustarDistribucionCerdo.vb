@@ -539,6 +539,18 @@ Public Class FrmAjustarDistribucionCerdo
         CalcularTotalCriasCorral()
     End Sub
 
+    Private Sub DtgListadoCorrales_InitializeLayout(sender As Object, e As InitializeLayoutEventArgs) Handles DtgListadoCorrales.InitializeLayout
+        Try
+            If (DtgListadoCorrales.Rows.Count = 0) Then
+            Else
+                clsBasicas.Totales_Formato(DtgListadoCorrales, e, 1)
+                clsBasicas.SumarTotales_Formato(DtgListadoCorrales, e, 5)
+            End If
+        Catch ex As Exception
+            clsBasicas.controlException(Name, ex)
+        End Try
+    End Sub
+
     Private Sub BtnCerrar_Click(sender As Object, e As EventArgs) Handles BtnCerrar.Click
         Dispose()
     End Sub

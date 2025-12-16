@@ -350,7 +350,7 @@ Public Class FrmRegistrarMandarCamalMortalidadLote
                 msj_advert("Debe ingresar una observación")
                 Exit Sub
             ElseIf (idMotivoMortalidad = 0) Then
-                msj_advert("Debe seleccionar un motivo de mortalidad")
+                msj_advert("Debe seleccionar un motivo")
                 Exit Sub
             Else
                 If (TxtCantidadCerdosEngorde.Visible = True) Then
@@ -532,6 +532,18 @@ Public Class FrmRegistrarMandarCamalMortalidadLote
 
     Private Sub TxtPeso_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtPeso.KeyPress
         clsBasicas.ValidarDecimalEstricto(sender, e)
+    End Sub
+
+    Private Sub DtgListadoCorrales_InitializeLayout(sender As Object, e As InitializeLayoutEventArgs) Handles DtgListadoCorrales.InitializeLayout
+        Try
+            If (DtgListadoCorrales.Rows.Count = 0) Then
+            Else
+                clsBasicas.Totales_Formato(DtgListadoCorrales, e, 1)
+                clsBasicas.SumarTotales_Formato(DtgListadoCorrales, e, 3)
+            End If
+        Catch ex As Exception
+            clsBasicas.controlException(Name, ex)
+        End Try
     End Sub
 
     Private Sub BtnCerrar_Click(sender As Object, e As EventArgs) Handles BtnCerrar.Click

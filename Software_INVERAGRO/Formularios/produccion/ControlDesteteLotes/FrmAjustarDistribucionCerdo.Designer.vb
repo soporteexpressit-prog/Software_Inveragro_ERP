@@ -119,8 +119,9 @@ Partial Class FrmAjustarDistribucionCerdo
         Me.Panel2.Controls.Add(Me.ToolStrip1)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1742, 981)
+        Me.Panel2.Size = New System.Drawing.Size(1161, 638)
         Me.Panel2.TabIndex = 11
         '
         'LblTotalPorAjustarEngorde
@@ -129,10 +130,10 @@ Partial Class FrmAjustarDistribucionCerdo
         Me.LblTotalPorAjustarEngorde.BackColor = System.Drawing.Color.Transparent
         Me.LblTotalPorAjustarEngorde.Font = New System.Drawing.Font("Verdana", 7.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblTotalPorAjustarEngorde.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.LblTotalPorAjustarEngorde.Location = New System.Drawing.Point(1155, 120)
-        Me.LblTotalPorAjustarEngorde.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.LblTotalPorAjustarEngorde.Location = New System.Drawing.Point(770, 78)
+        Me.LblTotalPorAjustarEngorde.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblTotalPorAjustarEngorde.Name = "LblTotalPorAjustarEngorde"
-        Me.LblTotalPorAjustarEngorde.Size = New System.Drawing.Size(18, 17)
+        Me.LblTotalPorAjustarEngorde.Size = New System.Drawing.Size(12, 12)
         Me.LblTotalPorAjustarEngorde.TabIndex = 232
         Me.LblTotalPorAjustarEngorde.Text = "0"
         '
@@ -142,10 +143,10 @@ Partial Class FrmAjustarDistribucionCerdo
         Me.LblAjustadoEngorde.BackColor = System.Drawing.Color.Transparent
         Me.LblAjustadoEngorde.Font = New System.Drawing.Font("Verdana", 7.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblAjustadoEngorde.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.LblAjustadoEngorde.Location = New System.Drawing.Point(1040, 120)
-        Me.LblAjustadoEngorde.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.LblAjustadoEngorde.Location = New System.Drawing.Point(693, 78)
+        Me.LblAjustadoEngorde.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblAjustadoEngorde.Name = "LblAjustadoEngorde"
-        Me.LblAjustadoEngorde.Size = New System.Drawing.Size(108, 17)
+        Me.LblAjustadoEngorde.Size = New System.Drawing.Size(78, 12)
         Me.LblAjustadoEngorde.TabIndex = 231
         Me.LblAjustadoEngorde.Text = "Por Ajustar :"
         '
@@ -155,10 +156,10 @@ Partial Class FrmAjustarDistribucionCerdo
         Me.LblTotalPorAjustarCambo.BackColor = System.Drawing.Color.Transparent
         Me.LblTotalPorAjustarCambo.Font = New System.Drawing.Font("Verdana", 7.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblTotalPorAjustarCambo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.LblTotalPorAjustarCambo.Location = New System.Drawing.Point(889, 120)
-        Me.LblTotalPorAjustarCambo.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.LblTotalPorAjustarCambo.Location = New System.Drawing.Point(593, 78)
+        Me.LblTotalPorAjustarCambo.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblTotalPorAjustarCambo.Name = "LblTotalPorAjustarCambo"
-        Me.LblTotalPorAjustarCambo.Size = New System.Drawing.Size(18, 17)
+        Me.LblTotalPorAjustarCambo.Size = New System.Drawing.Size(12, 12)
         Me.LblTotalPorAjustarCambo.TabIndex = 230
         Me.LblTotalPorAjustarCambo.Text = "0"
         '
@@ -168,10 +169,10 @@ Partial Class FrmAjustarDistribucionCerdo
         Me.LblAjustadoCambo.BackColor = System.Drawing.Color.Transparent
         Me.LblAjustadoCambo.Font = New System.Drawing.Font("Verdana", 7.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblAjustadoCambo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.LblAjustadoCambo.Location = New System.Drawing.Point(773, 120)
-        Me.LblAjustadoCambo.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.LblAjustadoCambo.Location = New System.Drawing.Point(515, 78)
+        Me.LblAjustadoCambo.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblAjustadoCambo.Name = "LblAjustadoCambo"
-        Me.LblAjustadoCambo.Size = New System.Drawing.Size(108, 17)
+        Me.LblAjustadoCambo.Size = New System.Drawing.Size(78, 12)
         Me.LblAjustadoCambo.TabIndex = 229
         Me.LblAjustadoCambo.Text = "Por Ajustar :"
         '
@@ -181,10 +182,10 @@ Partial Class FrmAjustarDistribucionCerdo
         Me.LblTotalPorAjustarPuras.BackColor = System.Drawing.Color.Transparent
         Me.LblTotalPorAjustarPuras.Font = New System.Drawing.Font("Verdana", 7.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblTotalPorAjustarPuras.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.LblTotalPorAjustarPuras.Location = New System.Drawing.Point(582, 120)
-        Me.LblTotalPorAjustarPuras.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.LblTotalPorAjustarPuras.Location = New System.Drawing.Point(388, 78)
+        Me.LblTotalPorAjustarPuras.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblTotalPorAjustarPuras.Name = "LblTotalPorAjustarPuras"
-        Me.LblTotalPorAjustarPuras.Size = New System.Drawing.Size(18, 17)
+        Me.LblTotalPorAjustarPuras.Size = New System.Drawing.Size(12, 12)
         Me.LblTotalPorAjustarPuras.TabIndex = 228
         Me.LblTotalPorAjustarPuras.Text = "0"
         '
@@ -194,10 +195,10 @@ Partial Class FrmAjustarDistribucionCerdo
         Me.LblAjustadoPuras.BackColor = System.Drawing.Color.Transparent
         Me.LblAjustadoPuras.Font = New System.Drawing.Font("Verdana", 7.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblAjustadoPuras.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.LblAjustadoPuras.Location = New System.Drawing.Point(467, 120)
-        Me.LblAjustadoPuras.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.LblAjustadoPuras.Location = New System.Drawing.Point(311, 78)
+        Me.LblAjustadoPuras.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblAjustadoPuras.Name = "LblAjustadoPuras"
-        Me.LblAjustadoPuras.Size = New System.Drawing.Size(108, 17)
+        Me.LblAjustadoPuras.Size = New System.Drawing.Size(78, 12)
         Me.LblAjustadoPuras.TabIndex = 227
         Me.LblAjustadoPuras.Text = "Por Ajustar :"
         '
@@ -207,10 +208,10 @@ Partial Class FrmAjustarDistribucionCerdo
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label4.Location = New System.Drawing.Point(406, 84)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label4.Location = New System.Drawing.Point(271, 55)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(68, 22)
+        Me.Label4.Size = New System.Drawing.Size(45, 14)
         Me.Label4.TabIndex = 202
         Me.Label4.Text = "Puras"
         '
@@ -220,11 +221,10 @@ Partial Class FrmAjustarDistribucionCerdo
         Me.TxtPuras.BackColor = System.Drawing.Color.White
         Me.TxtPuras.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxtPuras.Font = New System.Drawing.Font("Verdana", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtPuras.Location = New System.Drawing.Point(483, 77)
-        Me.TxtPuras.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.TxtPuras.Location = New System.Drawing.Point(322, 50)
         Me.TxtPuras.MaxLength = 10
         Me.TxtPuras.Name = "TxtPuras"
-        Me.TxtPuras.Size = New System.Drawing.Size(109, 37)
+        Me.TxtPuras.Size = New System.Drawing.Size(74, 27)
         Me.TxtPuras.TabIndex = 201
         Me.TxtPuras.TabStop = False
         '
@@ -234,10 +234,10 @@ Partial Class FrmAjustarDistribucionCerdo
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(640, 84)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label3.Location = New System.Drawing.Point(427, 55)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(139, 22)
+        Me.Label3.Size = New System.Drawing.Size(90, 14)
         Me.Label3.TabIndex = 199
         Me.Label3.Text = "Camborough"
         '
@@ -247,10 +247,10 @@ Partial Class FrmAjustarDistribucionCerdo
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(951, 84)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label2.Location = New System.Drawing.Point(634, 55)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(94, 22)
+        Me.Label2.Size = New System.Drawing.Size(61, 14)
         Me.Label2.TabIndex = 195
         Me.Label2.Text = "Engorde"
         '
@@ -260,11 +260,10 @@ Partial Class FrmAjustarDistribucionCerdo
         Me.TextTatuadas.BackColor = System.Drawing.Color.White
         Me.TextTatuadas.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TextTatuadas.Font = New System.Drawing.Font("Verdana", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextTatuadas.Location = New System.Drawing.Point(789, 77)
-        Me.TextTatuadas.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.TextTatuadas.Location = New System.Drawing.Point(526, 50)
         Me.TextTatuadas.MaxLength = 10
         Me.TextTatuadas.Name = "TextTatuadas"
-        Me.TextTatuadas.Size = New System.Drawing.Size(109, 37)
+        Me.TextTatuadas.Size = New System.Drawing.Size(74, 27)
         Me.TextTatuadas.TabIndex = 198
         Me.TextTatuadas.TabStop = False
         '
@@ -274,11 +273,10 @@ Partial Class FrmAjustarDistribucionCerdo
         Me.TxtEngorde.BackColor = System.Drawing.Color.White
         Me.TxtEngorde.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxtEngorde.Font = New System.Drawing.Font("Verdana", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtEngorde.Location = New System.Drawing.Point(1055, 77)
-        Me.TxtEngorde.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.TxtEngorde.Location = New System.Drawing.Point(703, 50)
         Me.TxtEngorde.MaxLength = 10
         Me.TxtEngorde.Name = "TxtEngorde"
-        Me.TxtEngorde.Size = New System.Drawing.Size(109, 37)
+        Me.TxtEngorde.Size = New System.Drawing.Size(74, 27)
         Me.TxtEngorde.TabIndex = 197
         Me.TxtEngorde.TabStop = False
         '
@@ -288,10 +286,10 @@ Partial Class FrmAjustarDistribucionCerdo
         Me.LblPlantel.BackColor = System.Drawing.Color.Transparent
         Me.LblPlantel.Font = New System.Drawing.Font("Verdana", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblPlantel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.LblPlantel.Location = New System.Drawing.Point(1413, 80)
-        Me.LblPlantel.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.LblPlantel.Location = New System.Drawing.Point(942, 52)
+        Me.LblPlantel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblPlantel.Name = "LblPlantel"
-        Me.LblPlantel.Size = New System.Drawing.Size(132, 29)
+        Me.LblPlantel.Size = New System.Drawing.Size(88, 18)
         Me.LblPlantel.TabIndex = 181
         Me.LblPlantel.Text = "PLANTEL"
         '
@@ -301,10 +299,10 @@ Partial Class FrmAjustarDistribucionCerdo
         Me.LblLote.BackColor = System.Drawing.Color.Transparent
         Me.LblLote.Font = New System.Drawing.Font("Verdana", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblLote.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.LblLote.Location = New System.Drawing.Point(43, 80)
-        Me.LblLote.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.LblLote.Location = New System.Drawing.Point(29, 52)
+        Me.LblLote.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblLote.Name = "LblLote"
-        Me.LblLote.Size = New System.Drawing.Size(80, 29)
+        Me.LblLote.Size = New System.Drawing.Size(55, 18)
         Me.LblLote.TabIndex = 180
         Me.LblLote.Text = "LOTE"
         '
@@ -321,9 +319,11 @@ Partial Class FrmAjustarDistribucionCerdo
         Me.GroupBox4.Controls.Add(Me.Label6)
         Me.GroupBox4.Controls.Add(Me.BtnAgregarCerdas)
         Me.GroupBox4.Controls.Add(Me.GroupBox1)
-        Me.GroupBox4.Location = New System.Drawing.Point(1031, 178)
+        Me.GroupBox4.Location = New System.Drawing.Point(687, 116)
+        Me.GroupBox4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(698, 789)
+        Me.GroupBox4.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox4.Size = New System.Drawing.Size(465, 513)
         Me.GroupBox4.TabIndex = 180
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Tag = " "
@@ -335,10 +335,10 @@ Partial Class FrmAjustarDistribucionCerdo
         Me.LblTotalCerdosCorral.BackColor = System.Drawing.Color.Transparent
         Me.LblTotalCerdosCorral.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblTotalCerdosCorral.ForeColor = System.Drawing.Color.Black
-        Me.LblTotalCerdosCorral.Location = New System.Drawing.Point(567, 736)
-        Me.LblTotalCerdosCorral.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.LblTotalCerdosCorral.Location = New System.Drawing.Point(378, 478)
+        Me.LblTotalCerdosCorral.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblTotalCerdosCorral.Name = "LblTotalCerdosCorral"
-        Me.LblTotalCerdosCorral.Size = New System.Drawing.Size(23, 22)
+        Me.LblTotalCerdosCorral.Size = New System.Drawing.Size(16, 14)
         Me.LblTotalCerdosCorral.TabIndex = 236
         Me.LblTotalCerdosCorral.Text = "0"
         '
@@ -348,10 +348,10 @@ Partial Class FrmAjustarDistribucionCerdo
         Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label7.Location = New System.Drawing.Point(510, 683)
-        Me.Label7.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label7.Location = New System.Drawing.Point(340, 444)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(136, 22)
+        Me.Label7.Size = New System.Drawing.Size(90, 14)
         Me.Label7.TabIndex = 235
         Me.Label7.Text = "Total Cerdos"
         '
@@ -361,10 +361,10 @@ Partial Class FrmAjustarDistribucionCerdo
         Me.LblTotalPurasCorral.BackColor = System.Drawing.Color.Transparent
         Me.LblTotalPurasCorral.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblTotalPurasCorral.ForeColor = System.Drawing.Color.Black
-        Me.LblTotalPurasCorral.Location = New System.Drawing.Point(598, 112)
-        Me.LblTotalPurasCorral.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.LblTotalPurasCorral.Location = New System.Drawing.Point(399, 73)
+        Me.LblTotalPurasCorral.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblTotalPurasCorral.Name = "LblTotalPurasCorral"
-        Me.LblTotalPurasCorral.Size = New System.Drawing.Size(23, 22)
+        Me.LblTotalPurasCorral.Size = New System.Drawing.Size(16, 14)
         Me.LblTotalPurasCorral.TabIndex = 234
         Me.LblTotalPurasCorral.Text = "0"
         '
@@ -374,10 +374,10 @@ Partial Class FrmAjustarDistribucionCerdo
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label5.Location = New System.Drawing.Point(505, 112)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label5.Location = New System.Drawing.Point(337, 73)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(81, 22)
+        Me.Label5.Size = New System.Drawing.Size(54, 14)
         Me.Label5.TabIndex = 233
         Me.Label5.Text = "Puras :"
         '
@@ -387,11 +387,11 @@ Partial Class FrmAjustarDistribucionCerdo
         Me.OpcionesGuardar.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
         Me.OpcionesGuardar.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.OpcionesGuardar.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnGuardar})
-        Me.OpcionesGuardar.Location = New System.Drawing.Point(3, 22)
-        Me.OpcionesGuardar.Margin = New System.Windows.Forms.Padding(3)
+        Me.OpcionesGuardar.Location = New System.Drawing.Point(2, 15)
+        Me.OpcionesGuardar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.OpcionesGuardar.Name = "OpcionesGuardar"
-        Me.OpcionesGuardar.Padding = New System.Windows.Forms.Padding(0, 0, 3, 0)
-        Me.OpcionesGuardar.Size = New System.Drawing.Size(692, 40)
+        Me.OpcionesGuardar.Padding = New System.Windows.Forms.Padding(0, 0, 2, 0)
+        Me.OpcionesGuardar.Size = New System.Drawing.Size(461, 38)
         Me.OpcionesGuardar.TabIndex = 194
         Me.OpcionesGuardar.Text = "ToolStrip2"
         '
@@ -404,24 +404,26 @@ Partial Class FrmAjustarDistribucionCerdo
         Me.BtnGuardar.Margin = New System.Windows.Forms.Padding(5)
         Me.BtnGuardar.Name = "BtnGuardar"
         Me.BtnGuardar.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnGuardar.Size = New System.Drawing.Size(121, 30)
+        Me.BtnGuardar.Size = New System.Drawing.Size(89, 28)
         Me.BtnGuardar.Text = "Guardar"
         Me.BtnGuardar.ToolTipText = "Guardar"
         '
         'NumCerdasEngorde
         '
-        Me.NumCerdasEngorde.Location = New System.Drawing.Point(255, 734)
+        Me.NumCerdasEngorde.Location = New System.Drawing.Point(170, 477)
+        Me.NumCerdasEngorde.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.NumCerdasEngorde.Maximum = New Decimal(New Integer() {5000, 0, 0, 0})
         Me.NumCerdasEngorde.Name = "NumCerdasEngorde"
-        Me.NumCerdasEngorde.Size = New System.Drawing.Size(120, 26)
+        Me.NumCerdasEngorde.Size = New System.Drawing.Size(80, 20)
         Me.NumCerdasEngorde.TabIndex = 193
         '
         'NumCerdasTatuadas
         '
-        Me.NumCerdasTatuadas.Location = New System.Drawing.Point(255, 681)
+        Me.NumCerdasTatuadas.Location = New System.Drawing.Point(170, 443)
+        Me.NumCerdasTatuadas.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.NumCerdasTatuadas.Maximum = New Decimal(New Integer() {5000, 0, 0, 0})
         Me.NumCerdasTatuadas.Name = "NumCerdasTatuadas"
-        Me.NumCerdasTatuadas.Size = New System.Drawing.Size(120, 26)
+        Me.NumCerdasTatuadas.Size = New System.Drawing.Size(80, 20)
         Me.NumCerdasTatuadas.TabIndex = 192
         '
         'Label1
@@ -430,10 +432,10 @@ Partial Class FrmAjustarDistribucionCerdo
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(103, 736)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label1.Location = New System.Drawing.Point(69, 478)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(139, 22)
+        Me.Label1.Size = New System.Drawing.Size(91, 14)
         Me.Label1.TabIndex = 190
         Me.Label1.Text = "N° Engorde :"
         '
@@ -443,10 +445,10 @@ Partial Class FrmAjustarDistribucionCerdo
         Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label6.Location = New System.Drawing.Point(60, 683)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label6.Location = New System.Drawing.Point(40, 444)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(184, 22)
+        Me.Label6.Size = New System.Drawing.Size(120, 14)
         Me.Label6.TabIndex = 188
         Me.Label6.Text = "N° Camborough :"
         '
@@ -456,10 +458,9 @@ Partial Class FrmAjustarDistribucionCerdo
         Me.BtnAgregarCerdas.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnAgregarCerdas.Image = Global.Formularios.My.Resources.Resources.Agregar_24_Px
         Me.BtnAgregarCerdas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnAgregarCerdas.Location = New System.Drawing.Point(29, 101)
-        Me.BtnAgregarCerdas.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.BtnAgregarCerdas.Location = New System.Drawing.Point(19, 66)
         Me.BtnAgregarCerdas.Name = "BtnAgregarCerdas"
-        Me.BtnAgregarCerdas.Size = New System.Drawing.Size(215, 45)
+        Me.BtnAgregarCerdas.Size = New System.Drawing.Size(143, 29)
         Me.BtnAgregarCerdas.TabIndex = 179
         Me.BtnAgregarCerdas.Text = "Añadir Cerdo"
         Me.BtnAgregarCerdas.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -468,9 +469,11 @@ Partial Class FrmAjustarDistribucionCerdo
         'GroupBox1
         '
         Me.GroupBox1.Controls.Add(Me.DtgListadoCerdos)
-        Me.GroupBox1.Location = New System.Drawing.Point(6, 172)
+        Me.GroupBox1.Location = New System.Drawing.Point(4, 112)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(685, 474)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox1.Size = New System.Drawing.Size(457, 308)
         Me.GroupBox1.TabIndex = 178
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "CERDOS REGISTRADOS"
@@ -545,19 +548,20 @@ Partial Class FrmAjustarDistribucionCerdo
         Me.DtgListadoCerdos.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy
         Me.DtgListadoCerdos.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DtgListadoCerdos.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DtgListadoCerdos.Location = New System.Drawing.Point(3, 22)
-        Me.DtgListadoCerdos.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.DtgListadoCerdos.Location = New System.Drawing.Point(2, 15)
         Me.DtgListadoCerdos.Name = "DtgListadoCerdos"
-        Me.DtgListadoCerdos.Size = New System.Drawing.Size(679, 449)
+        Me.DtgListadoCerdos.Size = New System.Drawing.Size(453, 291)
         Me.DtgListadoCerdos.TabIndex = 177
         Me.DtgListadoCerdos.Text = "UltraGrid1"
         '
         'GroupBox2
         '
         Me.GroupBox2.Controls.Add(Me.DtgListadoCorrales)
-        Me.GroupBox2.Location = New System.Drawing.Point(12, 178)
+        Me.GroupBox2.Location = New System.Drawing.Point(8, 116)
+        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(1013, 789)
+        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox2.Size = New System.Drawing.Size(675, 513)
         Me.GroupBox2.TabIndex = 173
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "CORRALES / JAULAS"
@@ -632,10 +636,9 @@ Partial Class FrmAjustarDistribucionCerdo
         Me.DtgListadoCorrales.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy
         Me.DtgListadoCorrales.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DtgListadoCorrales.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DtgListadoCorrales.Location = New System.Drawing.Point(3, 22)
-        Me.DtgListadoCorrales.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.DtgListadoCorrales.Location = New System.Drawing.Point(2, 15)
         Me.DtgListadoCorrales.Name = "DtgListadoCorrales"
-        Me.DtgListadoCorrales.Size = New System.Drawing.Size(1007, 764)
+        Me.DtgListadoCorrales.Size = New System.Drawing.Size(671, 496)
         Me.DtgListadoCorrales.TabIndex = 177
         Me.DtgListadoCorrales.Text = "UltraGrid1"
         '
@@ -646,10 +649,10 @@ Partial Class FrmAjustarDistribucionCerdo
         Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnCerrar})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.ToolStrip1.Margin = New System.Windows.Forms.Padding(3)
+        Me.ToolStrip1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Padding = New System.Windows.Forms.Padding(0, 0, 3, 0)
-        Me.ToolStrip1.Size = New System.Drawing.Size(1742, 40)
+        Me.ToolStrip1.Padding = New System.Windows.Forms.Padding(0, 0, 2, 0)
+        Me.ToolStrip1.Size = New System.Drawing.Size(1161, 38)
         Me.ToolStrip1.TabIndex = 52
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -662,16 +665,17 @@ Partial Class FrmAjustarDistribucionCerdo
         Me.BtnCerrar.Margin = New System.Windows.Forms.Padding(5)
         Me.BtnCerrar.Name = "BtnCerrar"
         Me.BtnCerrar.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnCerrar.Size = New System.Drawing.Size(84, 30)
+        Me.BtnCerrar.Size = New System.Drawing.Size(66, 28)
         Me.BtnCerrar.Text = "Salir"
         Me.BtnCerrar.ToolTipText = "Cerrar"
         '
         'FrmAjustarDistribucionCerdo
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1742, 981)
+        Me.ClientSize = New System.Drawing.Size(1161, 638)
         Me.Controls.Add(Me.Panel2)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "FrmAjustarDistribucionCerdo"
