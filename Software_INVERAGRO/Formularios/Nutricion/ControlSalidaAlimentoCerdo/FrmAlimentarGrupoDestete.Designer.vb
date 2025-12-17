@@ -70,7 +70,7 @@ Partial Class FrmAlimentarGrupoDestete
         Me.GroupBox2.Margin = New System.Windows.Forms.Padding(2)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Padding = New System.Windows.Forms.Padding(2)
-        Me.GroupBox2.Size = New System.Drawing.Size(399, 123)
+        Me.GroupBox2.Size = New System.Drawing.Size(426, 123)
         Me.GroupBox2.TabIndex = 281
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Ingresar Cantidad de Alimento"
@@ -132,7 +132,7 @@ Partial Class FrmAlimentarGrupoDestete
         Me.cmbArea.DisplayLayout.ScrollStyle = Infragistics.Win.UltraWinGrid.ScrollStyle.Immediate
         Me.cmbArea.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy
         Me.cmbArea.DropDownStyle = Infragistics.Win.UltraWinGrid.UltraComboStyle.DropDownList
-        Me.cmbArea.Location = New System.Drawing.Point(92, 35)
+        Me.cmbArea.Location = New System.Drawing.Point(122, 35)
         Me.cmbArea.Name = "cmbArea"
         Me.cmbArea.Size = New System.Drawing.Size(107, 22)
         Me.cmbArea.TabIndex = 241
@@ -143,7 +143,7 @@ Partial Class FrmAlimentarGrupoDestete
         Me.LblArea.BackColor = System.Drawing.Color.Transparent
         Me.LblArea.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblArea.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.LblArea.Location = New System.Drawing.Point(39, 39)
+        Me.LblArea.Location = New System.Drawing.Point(71, 39)
         Me.LblArea.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblArea.Name = "LblArea"
         Me.LblArea.Size = New System.Drawing.Size(47, 14)
@@ -155,7 +155,7 @@ Partial Class FrmAlimentarGrupoDestete
         Me.CmbTipoAlimento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CmbTipoAlimento.FormattingEnabled = True
         Me.CmbTipoAlimento.Items.AddRange(New Object() {"NORMAL", "ANTI", "MEDICADO", "ANTI-MEDICADO"})
-        Me.CmbTipoAlimento.Location = New System.Drawing.Point(261, 76)
+        Me.CmbTipoAlimento.Location = New System.Drawing.Point(289, 36)
         Me.CmbTipoAlimento.Name = "CmbTipoAlimento"
         Me.CmbTipoAlimento.Size = New System.Drawing.Size(121, 21)
         Me.CmbTipoAlimento.TabIndex = 239
@@ -166,7 +166,7 @@ Partial Class FrmAlimentarGrupoDestete
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(211, 79)
+        Me.Label3.Location = New System.Drawing.Point(240, 39)
         Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(44, 14)
@@ -177,7 +177,7 @@ Partial Class FrmAlimentarGrupoDestete
         '
         Me.TxtCantidadAlimento.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxtCantidadAlimento.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtCantidadAlimento.Location = New System.Drawing.Point(92, 76)
+        Me.TxtCantidadAlimento.Location = New System.Drawing.Point(122, 77)
         Me.TxtCantidadAlimento.MaxLength = 50
         Me.TxtCantidadAlimento.Name = "TxtCantidadAlimento"
         Me.TxtCantidadAlimento.Size = New System.Drawing.Size(107, 21)
@@ -189,12 +189,12 @@ Partial Class FrmAlimentarGrupoDestete
         Me.Label13.BackColor = System.Drawing.Color.Transparent
         Me.Label13.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label13.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label13.Location = New System.Drawing.Point(12, 79)
+        Me.Label13.Location = New System.Drawing.Point(9, 80)
         Me.Label13.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(74, 14)
+        Me.Label13.Size = New System.Drawing.Size(109, 14)
         Me.Label13.TabIndex = 172
-        Me.Label13.Text = "Cantidad :"
+        Me.Label13.Text = "Cantidad (Kg) :"
         '
         'Label9
         '
@@ -219,7 +219,7 @@ Partial Class FrmAlimentarGrupoDestete
         Me.ToolStrip1.Margin = New System.Windows.Forms.Padding(2, 1, 2, 1)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Padding = New System.Windows.Forms.Padding(0, 0, 2, 0)
-        Me.ToolStrip1.Size = New System.Drawing.Size(423, 38)
+        Me.ToolStrip1.Size = New System.Drawing.Size(446, 38)
         Me.ToolStrip1.TabIndex = 277
         Me.ToolStrip1.Text = "Monitoreo"
         '
@@ -352,7 +352,7 @@ Partial Class FrmAlimentarGrupoDestete
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(233, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(423, 296)
+        Me.ClientSize = New System.Drawing.Size(446, 296)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.DtpFecha)
         Me.Controls.Add(Me.LblAlimento)

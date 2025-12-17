@@ -507,6 +507,7 @@ Public Class cdControlAlimento
                 .AddWithValue("@idArea", SqlDbType.Int).Value = obj.IdArea
                 .Add("@msj", SqlDbType.VarChar, 100).Direction = 2
                 .Add("@coderror", SqlDbType.Int).Direction = 2
+                .Add("@idSalidaGenerada", SqlDbType.Int).Direction = 2
             End With
 
             cmd.ExecuteNonQuery()
