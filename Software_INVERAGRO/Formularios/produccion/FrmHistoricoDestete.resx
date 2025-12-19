@@ -118,26 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="BtnObjetivoPartos.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        gwAAAIMBYu+7WgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAMzSURBVEhLlZXL
-        TxNRFMavtMUlAUwwFP8BTYjGuDBqYhAIktqWdupGcOPK+I4bo4lQBZX4SFz5Iqx8IAaQhwqYaBSNUtSA
-        EUxLYi1NQ1tTXgURaTneM50Z7p0ZSD3Jt2im8/tmvnPmXLJaAbFtAGI/ukRsL6i+LxH7bMAkQMjoWggb
-        hegvg/B42uTYJv2dwDtyCN6QIunnygXEYk4S+x0KXKQCVgGTS6NxgxBMNGbfhj4C8JY0SRj9AmK1UtCM
-        GixLz2CyshBEeEqvJJS2aBzHKCSphrJSwyf2b2HhkOxZk1zsJpOJHhJI9pLTElqE76WAhBo4v+kERC61
-        gf/9KPj8Megf9oPn6w8Y7PwEo5Y6mL+Rp8ATLwn87VpWopc0SnCLmcK4WJKZLghf7QBvaAa843FFH7/5
-        OU28LtOFL7aa+kU4Fm1oAwdf64KxtgEOvJLBh6ZSDXyuPg+iRueICMdRpFAumvC1Tl04ioWfc98D6+5d
-        4L2fB7+782GhORPi5wuU/kyZ7FvlxipwzFwdiy84BdGaZpjdcRZCOVUQKK4G98UGMJutUFRySjHEnrAD
-        EDM4mgiFPmcNIpfbNPC57WeU63jj9fUuEb6n+CT3RkMdA5xB2OiMoIFPvhmF08IaRN3NyjWUDC/PsUGg
-        pJozGKDTxRqEjMICGsRZAI4ia4CxyNce5DqW4QjIPcgZ4AizBmMm1xIacOOpMdi5bHArqwIOZKfg6RgE
-        TYJo4JUBKE1EF54o11As4GdpDWegE9EfbZPrWjkDvSaLN2dXgeeLjzMYavdwBmKTgVQcYQ3mNx7XH1P6
-        JhgXjik+uRqO8YyW13IGMYPwkBo4CiiYW8vh+nbOgBULZTXYxY8oSvzQsJLEdpc1wD0UbPGkbfDZ44NA
-        ViUHp/EMi3AsegbkU7Bm2UWuPF112WEs4pOr4Dg9E8RZKOFTRXtRRsHadU17EqltAX+fT1nXOC1DHR5N
-        5rJiGU63hOUrdf7+34GjFp7TEk6/6JtYKGhaDZalB0VhLLEMoUbCrF5A9q2jjb9JgWkd+rj7J4l9s3R7
-        +oUnHY3tMAU/oxqhiuN+wS8UPyK6jh8po6hbhPwD2vQSk4jO6twAAAAASUVORK5CYII=
-</value>
-  </data>
   <data name="btnBuscar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
@@ -153,13 +133,10 @@
         s2W4H4MnAAAAAElFTkSuQmCC
 </value>
   </data>
-  <metadata name="ToolStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="BarraOpciones.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
   <metadata name="BackgroundWorker1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>163, 17</value>
-  </metadata>
-  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>74</value>
+    <value>148, 17</value>
   </metadata>
 </root>

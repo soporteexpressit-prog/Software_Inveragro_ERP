@@ -1686,6 +1686,12 @@
     <Compile Include="produccion\FrmHistoricoCerda.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="produccion\FrmHistoricoDestete.Designer.vb">
+      <DependentUpon>FrmHistoricoDestete.vb</DependentUpon>
+    </Compile>
+    <Compile Include="produccion\FrmHistoricoDestete.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="produccion\FrmHistoricoParaDescarte.Designer.vb">
       <DependentUpon>FrmHistoricoParaDescarte.vb</DependentUpon>
     </Compile>
@@ -4627,6 +4633,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="produccion\FrmHistoricoCerda.resx">
       <DependentUpon>FrmHistoricoCerda.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="produccion\FrmHistoricoDestete.resx">
+      <DependentUpon>FrmHistoricoDestete.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="produccion\FrmHistoricoParaDescarte.resx">
       <DependentUpon>FrmHistoricoParaDescarte.vb</DependentUpon>

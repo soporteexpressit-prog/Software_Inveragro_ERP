@@ -137,9 +137,9 @@ Partial Class FrmControlMaternidadDestete
         Me.GrupoFiltros.Controls.Add(Me.CmbUbicacion)
         Me.GrupoFiltros.Controls.Add(Me.Label3)
         Me.GrupoFiltros.Location = New System.Drawing.Point(20, 55)
-        Me.GrupoFiltros.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GrupoFiltros.Margin = New System.Windows.Forms.Padding(2)
         Me.GrupoFiltros.Name = "GrupoFiltros"
-        Me.GrupoFiltros.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GrupoFiltros.Padding = New System.Windows.Forms.Padding(2)
         Me.GrupoFiltros.Size = New System.Drawing.Size(707, 62)
         Me.GrupoFiltros.TabIndex = 176
         Me.GrupoFiltros.TabStop = False
@@ -540,7 +540,7 @@ Partial Class FrmControlMaternidadDestete
         Me.Controls.Add(Me.Ptbx_Cargando)
         Me.Controls.Add(Me.dtgListado)
         Me.Controls.Add(Me.Panel2)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "FrmControlMaternidadDestete"
         Me.Text = "ETAPA MATERNIDAD "
         Me.Panel2.ResumeLayout(False)

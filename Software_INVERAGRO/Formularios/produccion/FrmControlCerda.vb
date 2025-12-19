@@ -478,6 +478,17 @@ Public Class FrmControlCerda
         End If
     End Sub
 
+    Private Sub HistoricoDeDesteteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HistoricoDeDesteteToolStripMenuItem.Click
+        Try
+            Dim frm As New FrmHistoricoDestete With {
+                .idUbicacion = CmbUbicacion.Value
+            }
+            frm.ShowDialog()
+        Catch ex As Exception
+            clsBasicas.controlException(Name, ex)
+        End Try
+    End Sub
+
     Private Sub BtnCerrar_Click(sender As Object, e As EventArgs) Handles BtnCerrar.Click
         Dispose()
     End Sub
