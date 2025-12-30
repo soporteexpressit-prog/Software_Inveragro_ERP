@@ -1384,4 +1384,26 @@ Public Class cdControlLoteDestete
             Throw ex
         End Try
     End Function
+
+    Public Function Cd_CierreLlenadoCampana(name As String, obj As coControlLoteDestete) As String
+        Dim mensaje As String
+        Dim cmd As New SqlCommand(name, con.con)
+        Try
+            con.Abrir()
+            cmd.CommandType = 4
+
+            With cmd.Parameters
+                .AddWithValue("@idCampaña", SqlDbType.Int).Value = obj.IdCampana
+                .Add("@msj", SqlDbType.VarChar, 100).Direction = 2
+                .Add("@coderror", SqlDbType.Int).Direction = 2
+            End With
+            cmd.ExecuteNonQuery()
+            mensaje = cmd.Parameters("@msj").Value.ToString
+            obj.Coderror = cmd.Parameters("@coderror").Value.ToString
+            con.Salir()
+            Return mensaje
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Function
 End Class

@@ -154,6 +154,39 @@ Public Class FrmControlCampaña
         End Try
     End Sub
 
+    Private Sub BtnCerrarCampaña_Click(sender As Object, e As EventArgs) Handles BtnCerrarCampaña.Click
+        Try
+            Dim activeRow As UltraWinGrid.UltraGridRow = dtgListado.ActiveRow
+            If (dtgListado.Rows.Count > 0) Then
+                If (activeRow.Cells(0).Value.ToString.Length <> 0) Then
+                    Dim idCampaña As Integer = dtgListado.ActiveRow.Cells("idcampaña").Value
+
+                    If (MessageBox.Show("¿ESTÁ SEGURO DE CERRAR LLENADO DE CAMPAÑA?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.No) Then
+                        Return
+                    End If
+
+                    Dim obj As New coControlLoteDestete With {
+                        .IdCampana = idCampaña
+                    }
+
+                    Dim _mensaje As String = cn.Cn_CierreLlenadoCampana(obj)
+                    If (obj.Coderror = 0) Then
+                        msj_ok(_mensaje)
+                        Consultar()
+                    Else
+                        msj_advert(_mensaje)
+                    End If
+                Else
+                    msj_advert(MensajesSistema.mensajesGenerales("SELECCIONE_REGISTRO"))
+                End If
+            Else
+                msj_advert(MensajesSistema.mensajesGenerales("SELECCIONE_REGISTRO"))
+            End If
+        Catch ex As Exception
+            clsBasicas.controlException(Name, ex)
+        End Try
+    End Sub
+
     Private Sub BtnCerrar_Click(sender As Object, e As EventArgs) Handles BtnCerrar.Click
         Dispose()
     End Sub

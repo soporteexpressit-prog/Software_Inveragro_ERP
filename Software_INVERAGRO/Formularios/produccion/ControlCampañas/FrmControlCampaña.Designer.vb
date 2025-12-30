@@ -38,20 +38,21 @@ Partial Class FrmControlCampaña
         Dim Appearance14 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance15 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.GrupoFiltros = New System.Windows.Forms.GroupBox()
         Me.CmbAnios = New System.Windows.Forms.ComboBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.BtnExportar = New System.Windows.Forms.ToolStripButton()
+        Me.BtnCerrarCampaña = New System.Windows.Forms.ToolStripButton()
         Me.BtnFinalizarVenta = New System.Windows.Forms.ToolStripButton()
         Me.BtnCerrar = New System.Windows.Forms.ToolStripButton()
         Me.BtnReporteEngorde = New System.Windows.Forms.ToolStripButton()
         Me.dtgListado = New Infragistics.Win.UltraWinGrid.UltraGrid()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         Me.Ptbx_Cargando = New System.Windows.Forms.PictureBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel2.SuspendLayout()
         Me.GrupoFiltros.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
@@ -73,6 +74,26 @@ Partial Class FrmControlCampaña
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(1131, 187)
         Me.Panel2.TabIndex = 10
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(450, 119)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(343, 13)
+        Me.Label2.TabIndex = 181
+        Me.Label2.Text = "** El día, mes y año corresponde a la fecha de apertura de la Campaña"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Yellow
+        Me.Label1.ForeColor = System.Drawing.Color.Black
+        Me.Label1.Location = New System.Drawing.Point(450, 94)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(309, 13)
+        Me.Label1.TabIndex = 180
+        Me.Label1.Text = "Alias: Conformado por 'C' + DÍA + MES + AÑO + ""-"" + PLANTEL"
         '
         'GrupoFiltros
         '
@@ -129,7 +150,7 @@ Partial Class FrmControlCampaña
         Me.ToolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.ToolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
         Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnExportar, Me.BtnFinalizarVenta, Me.BtnCerrar, Me.BtnReporteEngorde})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnExportar, Me.BtnCerrarCampaña, Me.BtnFinalizarVenta, Me.BtnCerrar, Me.BtnReporteEngorde})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 149)
         Me.ToolStrip1.Margin = New System.Windows.Forms.Padding(2, 1, 2, 1)
         Me.ToolStrip1.Name = "ToolStrip1"
@@ -150,6 +171,19 @@ Partial Class FrmControlCampaña
         Me.BtnExportar.Size = New System.Drawing.Size(92, 28)
         Me.BtnExportar.Text = "Exportar"
         Me.BtnExportar.ToolTipText = "Exportar"
+        '
+        'BtnCerrarCampaña
+        '
+        Me.BtnCerrarCampaña.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnCerrarCampaña.ForeColor = System.Drawing.Color.White
+        Me.BtnCerrarCampaña.Image = Global.Formularios.My.Resources.Resources.cerrar
+        Me.BtnCerrarCampaña.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BtnCerrarCampaña.Margin = New System.Windows.Forms.Padding(5)
+        Me.BtnCerrarCampaña.Name = "BtnCerrarCampaña"
+        Me.BtnCerrarCampaña.Padding = New System.Windows.Forms.Padding(2)
+        Me.BtnCerrarCampaña.Size = New System.Drawing.Size(143, 28)
+        Me.BtnCerrarCampaña.Text = "Cerrar Campaña"
+        Me.BtnCerrarCampaña.ToolTipText = "Finalizar Venta"
         '
         'BtnFinalizarVenta
         '
@@ -283,26 +317,6 @@ Partial Class FrmControlCampaña
         Me.Ptbx_Cargando.TabStop = False
         Me.Ptbx_Cargando.Visible = False
         '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.Yellow
-        Me.Label1.ForeColor = System.Drawing.Color.Black
-        Me.Label1.Location = New System.Drawing.Point(450, 94)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(309, 13)
-        Me.Label1.TabIndex = 180
-        Me.Label1.Text = "Alias: Conformado por 'C' + DÍA + MES + AÑO + ""-"" + PLANTEL"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(450, 119)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(343, 13)
-        Me.Label2.TabIndex = 181
-        Me.Label2.Text = "** El día, mes y año corresponde a la fecha de apertura de la Campaña"
-        '
         'FrmControlCampaña
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -344,4 +358,5 @@ Partial Class FrmControlCampaña
     Friend WithEvents BtnFinalizarVenta As ToolStripButton
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
+    Friend WithEvents BtnCerrarCampaña As ToolStripButton
 End Class
