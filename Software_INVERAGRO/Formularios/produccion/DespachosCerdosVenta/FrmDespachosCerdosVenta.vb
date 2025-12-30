@@ -59,7 +59,7 @@ Public Class FrmDespachosCerdosVenta
             }
             ds = New DataSet
             ds = cn.Cn_ConsultarPedidoVentasCerdo(obj).Copy
-            'ds.Tables(0).Columns("Codigo").ColumnMapping = MappingType.Hidden
+            ds.Tables(0).Columns("Codigo").ColumnMapping = MappingType.Hidden
             ds.Tables(0).Columns("Producto").ColumnMapping = MappingType.Hidden
             ds.Tables(0).Columns("idUbicacion").ColumnMapping = MappingType.Hidden
             ds.Tables(0).Columns("idMotivoTransaccion").ColumnMapping = MappingType.Hidden
