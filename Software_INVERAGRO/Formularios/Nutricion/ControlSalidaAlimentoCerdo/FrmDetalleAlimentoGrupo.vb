@@ -75,6 +75,7 @@ Public Class FrmDetalleAlimentoGrupo
             Else
                 e.Layout.Bands(0).Summaries.Clear()
                 clsBasicas.Totales_Formato(dtgListado, e, 1)
+                clsBasicas.SumarTotales_Formato(dtgListado, e, 3)
             End If
         Catch ex As Exception
             clsBasicas.controlException(Name, ex)

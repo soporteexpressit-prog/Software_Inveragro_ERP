@@ -434,13 +434,13 @@ Partial Class FrmControlAlimentoCerda
         'BtnGenerarGrupos
         '
         Me.BtnGenerarGrupos.Name = "BtnGenerarGrupos"
-        Me.BtnGenerarGrupos.Size = New System.Drawing.Size(179, 22)
+        Me.BtnGenerarGrupos.Size = New System.Drawing.Size(180, 22)
         Me.BtnGenerarGrupos.Text = "Generar Grupos"
         '
         'BtnVerPresupuesto
         '
         Me.BtnVerPresupuesto.Name = "BtnVerPresupuesto"
-        Me.BtnVerPresupuesto.Size = New System.Drawing.Size(179, 22)
+        Me.BtnVerPresupuesto.Size = New System.Drawing.Size(180, 22)
         Me.BtnVerPresupuesto.Text = "Presupuesto"
         '
         'dtgListado

@@ -46,6 +46,7 @@ Partial Class FrmHistoricoCerda
         Me.DtgListadoHistorico = New Infragistics.Win.UltraWinGrid.UltraGrid()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.btnCerrar = New System.Windows.Forms.ToolStripButton()
+        Me.CbxResponsables = New System.Windows.Forms.CheckBox()
         Me.Panel2.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.DtgListadoHistorico, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -55,6 +56,7 @@ Partial Class FrmHistoricoCerda
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.Panel2.Controls.Add(Me.CbxResponsables)
         Me.Panel2.Controls.Add(Me.LblEtapa)
         Me.Panel2.Controls.Add(Me.LblCodArete)
         Me.Panel2.Controls.Add(Me.LblEtapaAnimal)
@@ -63,8 +65,9 @@ Partial Class FrmHistoricoCerda
         Me.Panel2.Controls.Add(Me.ToolStrip1)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1282, 1025)
+        Me.Panel2.Size = New System.Drawing.Size(855, 666)
         Me.Panel2.TabIndex = 9
         '
         'LblEtapa
@@ -73,10 +76,10 @@ Partial Class FrmHistoricoCerda
         Me.LblEtapa.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.LblEtapa.Font = New System.Drawing.Font("Verdana", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblEtapa.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.LblEtapa.Location = New System.Drawing.Point(160, 138)
-        Me.LblEtapa.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.LblEtapa.Location = New System.Drawing.Point(107, 90)
+        Me.LblEtapa.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblEtapa.Name = "LblEtapa"
-        Me.LblEtapa.Size = New System.Drawing.Size(65, 29)
+        Me.LblEtapa.Size = New System.Drawing.Size(42, 18)
         Me.LblEtapa.TabIndex = 216
         Me.LblEtapa.Text = "- - -"
         '
@@ -86,10 +89,10 @@ Partial Class FrmHistoricoCerda
         Me.LblCodArete.BackColor = System.Drawing.Color.Yellow
         Me.LblCodArete.Font = New System.Drawing.Font("Verdana", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblCodArete.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.LblCodArete.Location = New System.Drawing.Point(160, 82)
-        Me.LblCodArete.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.LblCodArete.Location = New System.Drawing.Point(107, 53)
+        Me.LblCodArete.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblCodArete.Name = "LblCodArete"
-        Me.LblCodArete.Size = New System.Drawing.Size(65, 29)
+        Me.LblCodArete.Size = New System.Drawing.Size(42, 18)
         Me.LblCodArete.TabIndex = 215
         Me.LblCodArete.Text = "- - -"
         '
@@ -99,10 +102,10 @@ Partial Class FrmHistoricoCerda
         Me.LblEtapaAnimal.BackColor = System.Drawing.Color.Transparent
         Me.LblEtapaAnimal.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblEtapaAnimal.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.LblEtapaAnimal.Location = New System.Drawing.Point(56, 141)
-        Me.LblEtapaAnimal.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.LblEtapaAnimal.Location = New System.Drawing.Point(37, 92)
+        Me.LblEtapaAnimal.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblEtapaAnimal.Name = "LblEtapaAnimal"
-        Me.LblEtapaAnimal.Size = New System.Drawing.Size(80, 22)
+        Me.LblEtapaAnimal.Size = New System.Drawing.Size(53, 14)
         Me.LblEtapaAnimal.TabIndex = 193
         Me.LblEtapaAnimal.Text = "Etapa :"
         '
@@ -112,19 +115,21 @@ Partial Class FrmHistoricoCerda
         Me.Label23.BackColor = System.Drawing.Color.Transparent
         Me.Label23.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label23.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label23.Location = New System.Drawing.Point(58, 85)
-        Me.Label23.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label23.Location = New System.Drawing.Point(39, 55)
+        Me.Label23.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(78, 22)
+        Me.Label23.Size = New System.Drawing.Size(52, 14)
         Me.Label23.TabIndex = 192
         Me.Label23.Text = "Arete :"
         '
         'GroupBox2
         '
         Me.GroupBox2.Controls.Add(Me.DtgListadoHistorico)
-        Me.GroupBox2.Location = New System.Drawing.Point(12, 204)
+        Me.GroupBox2.Location = New System.Drawing.Point(8, 133)
+        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(1258, 809)
+        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox2.Size = New System.Drawing.Size(839, 526)
         Me.GroupBox2.TabIndex = 161
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Historial"
@@ -199,10 +204,9 @@ Partial Class FrmHistoricoCerda
         Me.DtgListadoHistorico.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy
         Me.DtgListadoHistorico.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DtgListadoHistorico.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DtgListadoHistorico.Location = New System.Drawing.Point(3, 22)
-        Me.DtgListadoHistorico.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.DtgListadoHistorico.Location = New System.Drawing.Point(2, 15)
         Me.DtgListadoHistorico.Name = "DtgListadoHistorico"
-        Me.DtgListadoHistorico.Size = New System.Drawing.Size(1252, 784)
+        Me.DtgListadoHistorico.Size = New System.Drawing.Size(835, 509)
         Me.DtgListadoHistorico.TabIndex = 175
         Me.DtgListadoHistorico.Text = "UltraGrid1"
         '
@@ -213,10 +217,10 @@ Partial Class FrmHistoricoCerda
         Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnCerrar})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.ToolStrip1.Margin = New System.Windows.Forms.Padding(3)
+        Me.ToolStrip1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Padding = New System.Windows.Forms.Padding(0, 0, 3, 0)
-        Me.ToolStrip1.Size = New System.Drawing.Size(1282, 40)
+        Me.ToolStrip1.Padding = New System.Windows.Forms.Padding(0, 0, 2, 0)
+        Me.ToolStrip1.Size = New System.Drawing.Size(855, 38)
         Me.ToolStrip1.TabIndex = 52
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -229,16 +233,27 @@ Partial Class FrmHistoricoCerda
         Me.btnCerrar.Margin = New System.Windows.Forms.Padding(5)
         Me.btnCerrar.Name = "btnCerrar"
         Me.btnCerrar.Padding = New System.Windows.Forms.Padding(2)
-        Me.btnCerrar.Size = New System.Drawing.Size(84, 30)
+        Me.btnCerrar.Size = New System.Drawing.Size(66, 28)
         Me.btnCerrar.Text = "Salir"
         Me.btnCerrar.ToolTipText = "Cerrar"
         '
+        'CbxResponsables
+        '
+        Me.CbxResponsables.AutoSize = True
+        Me.CbxResponsables.Location = New System.Drawing.Point(713, 85)
+        Me.CbxResponsables.Name = "CbxResponsables"
+        Me.CbxResponsables.Size = New System.Drawing.Size(93, 17)
+        Me.CbxResponsables.TabIndex = 217
+        Me.CbxResponsables.Text = "Responsables"
+        Me.CbxResponsables.UseVisualStyleBackColor = True
+        '
         'FrmHistoricoCerda
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1282, 1025)
+        Me.ClientSize = New System.Drawing.Size(855, 666)
         Me.Controls.Add(Me.Panel2)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "FrmHistoricoCerda"
@@ -263,4 +278,5 @@ Partial Class FrmHistoricoCerda
     Friend WithEvents Label23 As Label
     Friend WithEvents LblCodArete As Label
     Friend WithEvents LblEtapa As Label
+    Friend WithEvents CbxResponsables As CheckBox
 End Class

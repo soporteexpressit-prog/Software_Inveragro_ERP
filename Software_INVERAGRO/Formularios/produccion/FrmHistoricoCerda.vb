@@ -27,6 +27,8 @@ Public Class FrmHistoricoCerda
             DtgListadoHistorico.DataSource = cn.Cn_ConsultarHistoricoxIdCerda(obj).Copy
             clsBasicas.Formato_Tablas_Grid(DtgListadoHistorico)
             DtgListadoHistorico.DisplayLayout.Bands(0).Columns(0).Hidden = True
+            DtgListadoHistorico.DisplayLayout.Bands(0).Columns("Registrado Por:").Hidden = True
+            DtgListadoHistorico.DisplayLayout.Bands(0).Columns("Responsable").Hidden = True
         Catch ex As Exception
             clsBasicas.controlException(Name, ex)
         End Try
@@ -239,6 +241,16 @@ Public Class FrmHistoricoCerda
             Else
                 msj_advert("Fila no válida para eliminar")
             End If
+        End If
+    End Sub
+
+    Private Sub CbxResponsables_CheckedChanged(sender As Object, e As EventArgs) Handles CbxResponsables.CheckedChanged
+        If CbxResponsables.Checked Then
+            DtgListadoHistorico.DisplayLayout.Bands(0).Columns("Registrado Por:").Hidden = False
+            DtgListadoHistorico.DisplayLayout.Bands(0).Columns("Responsable").Hidden = False
+        Else
+            DtgListadoHistorico.DisplayLayout.Bands(0).Columns("Registrado Por:").Hidden = True
+            DtgListadoHistorico.DisplayLayout.Bands(0).Columns("Responsable").Hidden = True
         End If
     End Sub
 
