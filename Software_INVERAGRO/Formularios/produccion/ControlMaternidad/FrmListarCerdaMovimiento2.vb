@@ -38,14 +38,13 @@ Public Class FrmListarCerdaMovimiento2
                     Dim idLoteAnimal As Integer = dtgListado.ActiveRow.Cells(4).Value
 
                     If codAreteCerda1 = codigo Then
-                        msj_advert("Selecciones una cerda distinta a la seleccionada")
+                        msj_advert("SELECCIONE UNA CERDA DISTINTA A LA PRIMERA")
                         Return
                     End If
 
                     If idLoteAnimal <> idLote Then
-                        If (MessageBox.Show("¿ESTE ANIMAL SE ENCUENTRA EN OTRO LOTE ESTA SEGURO DE REALIZAR EL MOVIMIENTO?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.No) Then
-                            Return
-                        End If
+                        msj_advert("LA CERDA DEBE PERTENECER AL MISMO LOTE QUE LA CERDA SELECCIONADA")
+                        Return
                     End If
 
                     _frmRegistrarMovimientoLechon.LlenarCamposCerda2(idAnimal, codigo, numCrias, idLoteAnimal)

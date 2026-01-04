@@ -39,16 +39,15 @@ Public Class FrmListarCerdaMovimiento1
 
                     If idCerda2 <> 0 Then
                         If idCerda2 = idAnimal Then
-                            msj_advert("Selecciones una cerda distinta a la seleccionada")
+                            msj_advert("SELECCIONE UNA CERDA DISTINTA A LA SEGUNDA")
                             Return
                         End If
                     End If
 
                     If idLote <> 0 Then
                         If idLoteAnimal <> idLote Then
-                            If (MessageBox.Show("¿ESTE ANIMAL SE ENCUENTRA EN OTRO LOTE ESTA SEGURO DE REALIZAR EL MOVIMIENTO?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.No) Then
-                                Return
-                            End If
+                            msj_advert("LA CERDA DEBE PERTENECER AL MISMO LOTE QUE LA SEGUNDA CERDA SELECCIONADA")
+                            Return
                         End If
                     End If
 
