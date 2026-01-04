@@ -207,6 +207,11 @@ Public Class FrmControlAsistencia
                     obj.Tipo = tipoSeleccionado
                     obj.Tipoperiodo = tipoPeriodo
 
+                    Console.WriteLine(mesSeleccionado)
+                    Console.WriteLine(anioSeleccionado)
+                    Console.WriteLine(_idPlantel)
+                    Console.WriteLine(tipoSeleccionado)
+                    Console.WriteLine(tipoPeriodo)
 
                     MensajeBgWk = cn.Cn_Mantenimiento(obj)
                     If obj.CodeError <> 0 Then
@@ -1331,15 +1336,55 @@ Public Class FrmControlAsistencia
                     End If
                 Else
                     ' Obtener la fecha del día seleccionado (formato: "DiaDD-MM")
-                    Dim fechaStr As String = e.Cell.Column.Key.Replace("Dia", "")
-                    Dim fechaSeleccionada As DateTime = DateTime.ParseExact(fechaStr, "dd-MM", CultureInfo.InvariantCulture)
+                    'Dim fechaStr As String = e.Cell.Column.Key.Replace("Dia", "")
+                    'Dim fechaSeleccionada As DateTime = DateTime.ParseExact(fechaStr, "dd-MM", CultureInfo.InvariantCulture)
 
-                    ' Obtener el primer domingo del mes
-                    Dim primerDiaMes As DateTime = New DateTime(CInt(CmbAnios.SelectedItem), cbListaMeses.SelectedIndex + 1, 1)
+                    '' Obtener el primer domingo del mes
+                    'Dim primerDiaMes As DateTime = New DateTime(CInt(CmbAnios.SelectedItem), cbListaMeses.SelectedIndex + 1, 1)
+                    'Dim primerDomingo As DateTime = primerDiaMes
+                    'While primerDomingo.DayOfWeek <> DayOfWeek.Sunday
+                    '    primerDomingo = primerDomingo.AddDays(1)
+                    'End While
+
+                    '' Calcular el índice basado en la diferencia de días desde el primer domingo
+                    'Dim indiceDia As Integer = CInt((fechaSeleccionada - primerDomingo).TotalDays)
+                    'If indiceDia < 0 OrElse indiceDia >= horariosTrabajadoresEventuales(idTrabajador).Count Then
+                    '    msj_advert("Esta fecha está fuera del rango válido para el mes actual.")
+                    '    Exit Sub
+                    'End If
+
+                    ' Obtener la fecha del día seleccionado (formato: "DiaDD-MM")
+                    ' Obtener la fecha del día seleccionado (formato: "DiaDD-MM")
+                    Dim fechaStr As String = e.Cell.Column.Key.Replace("Dia", "")
+                    Dim partesFecha As String() = fechaStr.Split("-"c)
+                    Dim dia As Integer = Integer.Parse(partesFecha(0))
+                    Dim mes As Integer = Integer.Parse(partesFecha(1))
+
+                    ' Determinar el año correcto
+                    Dim mesSeleccionado As Integer = cbListaMeses.SelectedIndex + 1
+                    Dim anioSeleccionado As Integer = CInt(CmbAnios.SelectedItem)
+
+                    ' Obtener el primer domingo del mes PRIMERO
+                    Dim primerDiaMes As DateTime = New DateTime(anioSeleccionado, mesSeleccionado, 1)
                     Dim primerDomingo As DateTime = primerDiaMes
                     While primerDomingo.DayOfWeek <> DayOfWeek.Sunday
                         primerDomingo = primerDomingo.AddDays(1)
                     End While
+
+                    ' ✅ SOLUCIÓN: Usar el año base del primer domingo para construir la fecha
+                    Dim anioBase As Integer = primerDomingo.Year
+
+                    ' Si el mes de la celda es diferente al mes del primer domingo, ajustar el año
+                    Dim anioFecha As Integer = anioBase
+                    If mes < primerDomingo.Month AndAlso primerDomingo.Month = 12 Then
+                        ' La fecha es del año siguiente (ej: enero cuando el primer domingo es en diciembre)
+                        anioFecha = anioBase + 1
+                    ElseIf mes > primerDomingo.Month AndAlso mes = 12 Then
+                        ' La fecha es del año anterior (ej: diciembre cuando el primer domingo es en enero)
+                        anioFecha = anioBase - 1
+                    End If
+
+                    Dim fechaSeleccionada As DateTime = New DateTime(anioFecha, mes, dia)
 
                     ' Calcular el índice basado en la diferencia de días desde el primer domingo
                     Dim indiceDia As Integer = CInt((fechaSeleccionada - primerDomingo).TotalDays)
@@ -3344,6 +3389,21 @@ Public Class FrmControlAsistencia
             End If
 
             'InicializarDtgAsistenciaSemanal()
+        End If
+    End Sub
+
+    Private Sub CmbAnios_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CmbAnios.SelectedIndexChanged
+        ' Solo actualizar si hay un valor seleccionado (evitar errores al cargar el formulario)
+        If CmbAnios.SelectedItem IsNot Nothing Then
+            If rbPlanilla.Checked Then
+                InicializarDtgAsistencia()
+            ElseIf rbEventual.Checked Then
+                If generadoQuincenaEventual Then
+                    InicializarDtgAsistencia()
+                Else
+                    InicializarDtgAsistenciaSemanal()
+                End If
+            End If
         End If
     End Sub
 

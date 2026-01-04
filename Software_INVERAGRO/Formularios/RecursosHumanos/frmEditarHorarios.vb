@@ -62,41 +62,46 @@
 
         Integer.TryParse(txtHorasRefrigerio.Text, horasRefrigerio)
 
+        ' Normalizar las fechas a una fecha base para trabajar solo con horas
+        Dim fechaBase As Date = New Date(2000, 1, 1)
+        Dim entradaNormalizada As DateTime = fechaBase.Add(horaEntrada.TimeOfDay)
+        Dim salidaNormalizada As DateTime = fechaBase.Add(horaSalida.TimeOfDay)
+
         Dim diferencia As TimeSpan
-        Dim esTurnoNocturno As Boolean = False
 
         ' Comprobar si es un turno nocturno (entrada mayor que salida)
-        If horaEntrada > horaSalida Then
+        If entradaNormalizada.TimeOfDay > salidaNormalizada.TimeOfDay Then
             ' Es un turno nocturno que cruza la medianoche
-            esTurnoNocturno = True
             ' Calculamos hasta medianoche
-            Dim medianoche As DateTime = DateTime.Today.AddDays(1).Date
-            Dim hastaMedianoche As TimeSpan = medianoche - horaEntrada
+            Dim medianoche As DateTime = fechaBase.AddDays(1).Date
+            Dim hastaMedianoche As TimeSpan = medianoche - entradaNormalizada
             ' Calculamos desde medianoche hasta la salida
-            Dim desdeMedianoche As TimeSpan = horaSalida - DateTime.Today.Date
+            Dim desdeMedianoche As TimeSpan = salidaNormalizada - fechaBase
             ' Sumamos ambos periodos
             diferencia = hastaMedianoche.Add(desdeMedianoche)
         Else
             ' Turno normal dentro del mismo día
-            diferencia = horaSalida - horaEntrada
+            diferencia = salidaNormalizada - entradaNormalizada
         End If
 
-        ' Calcular horas y minutos totales
-        Dim horasTotales As Double = diferencia.TotalHours
-        Dim minutosExtra As Integer = diferencia.Minutes
+        ' Calcular horas totales brutas (antes de restar refrigerio)
+        Dim horasTotalesBrutas As Double = diferencia.TotalHours
 
         ' Restar tiempo de refrigerio
-        horasTotales = Math.Max(0, horasTotales - horasRefrigerio)
+        Dim horasTotalesNetas As Double = Math.Max(0, horasTotalesBrutas - horasRefrigerio)
 
-        ' Calcular horas normales y extras
-        Dim horasNormales As Integer = Math.Min(Math.Floor(horasTotales), 8)
-        Dim horasExtrasBase As Integer = If(horasTotales > 8, Math.Floor(horasTotales - 8), 0)
+        ' Calcular horas normales (máximo 8 horas)
+        Dim horasNormales As Integer = Math.Min(Math.Floor(horasTotalesNetas), 8)
+
+        ' Calcular horas extras base (horas completas por encima de 8)
+        Dim horasExtrasBase As Integer = If(horasTotalesNetas > 8, Math.Floor(horasTotalesNetas - 8), 0)
 
         ' Calcular la parte decimal de las horas extras
         Dim horasExtrasDecimal As Double = 0
-        If horasTotales > 8 Then
-            Dim minutosExtras As Integer = minutosExtra
-            If minutosExtras >= 30 Then
+        If horasTotalesNetas > 8 Then
+            ' Obtener los minutos restantes después de las horas completas
+            Dim minutosRestantes As Integer = CInt((horasTotalesNetas - Math.Floor(horasTotalesNetas)) * 60)
+            If minutosRestantes >= 30 Then
                 horasExtrasDecimal = 0.5
             End If
         End If
@@ -219,6 +224,11 @@
                 txtObservacion.Text = "Sin Observación"
             End If
         ElseIf cbxPermisoMedico.SelectedItem IsNot Nothing AndAlso cbxPermisoMedico.SelectedItem.ToString() = "SI" Then
+            ' Establecer horas de refrigerio ANTES de cambiar las horas
+            If String.IsNullOrWhiteSpace(txtHorasRefrigerio.Text) OrElse txtHorasRefrigerio.Text = "0" Then
+                txtHorasRefrigerio.Text = "1"
+            End If
+
             dtpHoraEntrada.Value = DateTime.Today.AddHours(8).AddMinutes(0) ' 08:00
             dtpHoraSalida.Value = DateTime.Today.AddHours(17).AddMinutes(0) ' 17:00
         End If
@@ -232,6 +242,11 @@
         ElseIf cbxFeriado.SelectedItem IsNot Nothing AndAlso cbxFeriado.SelectedItem.ToString() = "SI" Then
             If (dtpHoraEntrada.Value.Hour = 0 AndAlso dtpHoraEntrada.Value.Minute = 0) AndAlso
                 (dtpHoraSalida.Value.Hour = 0 AndAlso dtpHoraSalida.Value.Minute = 0) Then
+                ' Establecer horas de refrigerio ANTES de cambiar las horas
+                If String.IsNullOrWhiteSpace(txtHorasRefrigerio.Text) OrElse txtHorasRefrigerio.Text = "0" Then
+                    txtHorasRefrigerio.Text = "1"
+                End If
+
                 dtpHoraEntrada.Value = DateTime.Today.AddHours(8).AddMinutes(0) ' 08:00
                 dtpHoraSalida.Value = DateTime.Today.AddHours(17).AddMinutes(0) ' 17:00
             End If
@@ -251,6 +266,11 @@
 
     Private Sub cbxAsistencia_CheckedChanged(sender As Object, e As EventArgs) Handles cbxAsistencia.CheckedChanged
         If cbxAsistencia.Checked Then
+            ' Establecer horas de refrigerio ANTES de cambiar las horas
+            If String.IsNullOrWhiteSpace(txtHorasRefrigerio.Text) OrElse txtHorasRefrigerio.Text = "0" Then
+                txtHorasRefrigerio.Text = "1"
+            End If
+
             dtpHoraEntrada.Value = DateTime.Today.AddHours(8).AddMinutes(0) ' 08:00
             dtpHoraSalida.Value = DateTime.Today.AddHours(17).AddMinutes(0) ' 17:00
             txtObservacion.Text = "Sin observación"
@@ -266,8 +286,13 @@
 
     Private Sub cbxDescanso_CheckedChanged(sender As Object, e As EventArgs) Handles cbxDescanso.CheckedChanged
         If cbxDescanso.Checked Then
-            dtpHoraEntrada.Value = DateTime.Today.AddHours(8).AddMinutes(0) ' 00:00
-            dtpHoraSalida.Value = DateTime.Today.AddHours(17).AddMinutes(0) ' 00:00
+            ' Establecer horas de refrigerio ANTES de cambiar las horas
+            If String.IsNullOrWhiteSpace(txtHorasRefrigerio.Text) OrElse txtHorasRefrigerio.Text = "0" Then
+                txtHorasRefrigerio.Text = "1"
+            End If
+
+            dtpHoraEntrada.Value = DateTime.Today.AddHours(8).AddMinutes(0) ' 08:00
+            dtpHoraSalida.Value = DateTime.Today.AddHours(17).AddMinutes(0) ' 17:00
             txtObservacion.Text = "DESCANSO"
         End If
     End Sub

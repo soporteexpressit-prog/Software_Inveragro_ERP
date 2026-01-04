@@ -200,19 +200,50 @@ Public Class FrmVerAsistencia
         If tipo = "EVENTUAL" Then
             If tipoPeriodo.StartsWith("SEMANA") Then
                 ' Extraer las fechas del tipoPeriodo
+                'Dim partes As String() = tipoPeriodo.Replace("SEMANA", "").Trim().Split("-"c)
+                'Dim fechaInicio As Date = Date.ParseExact(partes(0).Trim(), "dd/MM", Globalization.CultureInfo.InvariantCulture)
+                'Dim fechaFin As Date = Date.ParseExact(partes(1).Trim(), "dd/MM", Globalization.CultureInfo.InvariantCulture)
+
+                '' Configurar el rango basado en la semana seleccionada
+                'rangoInicio = fechaInicio.Day
+                'rangoFin = fechaFin.Day
+
+                '' Agregar columnas para cada día de la semana
+                'Dim fechaActual As Date = fechaInicio
+                'While fechaActual <= fechaFin
+                '    Dim columnName As String = $"Dia{fechaActual:dd-MM}"
+                '    dtMostrar.Columns.Add(columnName, GetType(String))
+                '    fechaActual = fechaActual.AddDays(1)
+                'End While
                 Dim partes As String() = tipoPeriodo.Replace("SEMANA", "").Trim().Split("-"c)
-                Dim fechaInicio As Date = Date.ParseExact(partes(0).Trim(), "dd/MM", Globalization.CultureInfo.InvariantCulture)
-                Dim fechaFin As Date = Date.ParseExact(partes(1).Trim(), "dd/MM", Globalization.CultureInfo.InvariantCulture)
 
-                ' Configurar el rango basado en la semana seleccionada
-                rangoInicio = fechaInicio.Day
-                rangoFin = fechaFin.Day
+                ' Extraer día y mes de inicio y fin
+                Dim diaInicio As Integer = Integer.Parse(partes(0).Trim().Split("/"c)(0))
+                Dim mesInicio As Integer = Integer.Parse(partes(0).Trim().Split("/"c)(1))
+                Dim diaFin As Integer = Integer.Parse(partes(1).Trim().Split("/"c)(0))
+                Dim mesFin As Integer = Integer.Parse(partes(1).Trim().Split("/"c)(1))
 
-                ' Agregar columnas para cada día de la semana
-                Dim fechaActual As Date = fechaInicio
+                ' Determinar el año correcto para cada fecha
+                Dim anioInicio As Integer = anioActual
+                Dim anioFin As Integer = anioActual
+
+                ' Si el mes de inicio es mayor que el mes de fin, hay cruce de año
+                If mesInicio > mesFin Then anioFin = anioActual + 1
+
+                ' Si estamos viendo desde enero y el inicio es diciembre, el inicio es del año anterior
+                If mesSeleccionado = 1 And mesInicio = 12 Then anioInicio = anioActual - 1
+
+                ' Si estamos viendo desde diciembre y el fin es enero, el fin es del año siguiente
+                If mesSeleccionado = 12 And mesFin = 1 Then anioFin = anioActual + 1
+
+                ' Crear las fechas con años correctos
+                Dim fechaInicio As New Date(anioInicio, mesInicio, diaInicio)
+                Dim fechaFin As New Date(anioFin, mesFin, diaFin)
+
+                ' Agregar columnas solo para los días de la semana seleccionada
+                Dim fechaActual As DateTime = fechaInicio
                 While fechaActual <= fechaFin
-                    Dim columnName As String = $"Dia{fechaActual:dd-MM}"
-                    dtMostrar.Columns.Add(columnName, GetType(String))
+                    dtMostrar.Columns.Add($"Dia{fechaActual:dd-MM}", GetType(String))
                     fechaActual = fechaActual.AddDays(1)
                 End While
             Else
@@ -285,20 +316,81 @@ Public Class FrmVerAsistencia
             Dim columnKey As String
             If tipo = "EVENTUAL" Then
                 If tipoPeriodo.StartsWith("SEMANA") Then
-                    Dim mesDelDia As Integer = mesSeleccionado
+                    'Dim mesDelDia As Integer = mesSeleccionado
 
-                    ' Si es tipo SEMANA, verificar si el día pertenece al mes siguiente
-                    If tipoPeriodo.StartsWith("SEMANA") Then
-                        Dim partesSemana() As String = tipoPeriodo.Replace("SEMANA", "").Trim().Split("-"c)
-                        Dim fechaInicio As Date = Date.ParseExact(partesSemana(0).Trim(), "dd/MM", Globalization.CultureInfo.InvariantCulture)
+                    '' Si es tipo SEMANA, verificar si el día pertenece al mes siguiente
+                    'If tipoPeriodo.StartsWith("SEMANA") Then
+                    '    Dim partesSemana() As String = tipoPeriodo.Replace("SEMANA", "").Trim().Split("-"c)
+                    '    Dim fechaInicio As Date = Date.ParseExact(partesSemana(0).Trim(), "dd/MM", Globalization.CultureInfo.InvariantCulture)
 
-                        ' Si el día es menor que el día de inicio, pertenece al mes siguiente
-                        If dia < fechaInicio.Day Then
+                    '    ' Si el día es menor que el día de inicio, pertenece al mes siguiente
+                    '    If dia < fechaInicio.Day Then
+                    '        mesDelDia = mesSeleccionado + 1
+                    '    End If
+                    'End If
+
+                    'Dim fecha As New DateTime(anioActual, mesDelDia, dia)
+                    'columnKey = $"Dia{fecha:dd-MM}"
+
+                    Dim partesSemana() As String = tipoPeriodo.Replace("SEMANA", "").Trim().Split("-"c)
+
+                    ' Extraer día y mes de inicio y fin
+                    Dim diaInicio As Integer = Integer.Parse(partesSemana(0).Trim().Split("/"c)(0))
+                    Dim mesInicio As Integer = Integer.Parse(partesSemana(0).Trim().Split("/"c)(1))
+                    Dim diaFin As Integer = Integer.Parse(partesSemana(1).Trim().Split("/"c)(0))
+                    Dim mesFin As Integer = Integer.Parse(partesSemana(1).Trim().Split("/"c)(1))
+
+                    ' Determinar el año y mes correctos para el día actual
+                    Dim anioDelDia As Integer = anioActual
+                    Dim mesDelDia As Integer
+
+                    ' ✅ CORRECCIÓN: Detectar cruce de años
+                    If mesFin < mesInicio Then
+                        ' Hay cruce de años (ej: 28/12 - 03/01)
+                        If mesSeleccionado = mesFin Then
+                            ' Estamos viendo enero (mes de fin)
+                            If dia >= diaInicio Then
+                                ' El día pertenece a diciembre del año anterior
+                                mesDelDia = mesInicio
+                                anioDelDia = anioActual - 1
+                            Else
+                                ' El día pertenece a enero del año actual
+                                mesDelDia = mesFin
+                                anioDelDia = anioActual
+                            End If
+                        ElseIf mesSeleccionado = mesInicio Then
+                            ' Estamos viendo diciembre (mes de inicio)
+                            If dia >= diaInicio Then
+                                ' El día pertenece a diciembre del año actual
+                                mesDelDia = mesInicio
+                                anioDelDia = anioActual
+                            Else
+                                ' El día pertenece a enero del año siguiente
+                                mesDelDia = mesFin
+                                anioDelDia = anioActual + 1
+                            End If
+                        Else
+                            ' Mes fuera del rango de la semana
+                            mesDelDia = mesSeleccionado
+                        End If
+                    Else
+                        ' No hay cruce de años, solo posible cruce de meses
+                        mesDelDia = mesSeleccionado
+
+                        If dia < diaInicio Then
+                            ' El día pertenece al mes siguiente
                             mesDelDia = mesSeleccionado + 1
+
+                            ' ✅ Ajustar el año si el mes pasa de 12
+                            If mesDelDia > 12 Then
+                                mesDelDia = 1
+                                anioDelDia = anioActual + 1
+                            End If
                         End If
                     End If
 
-                    Dim fecha As New DateTime(anioActual, mesDelDia, dia)
+                    ' Crear la fecha con el año y mes correctos
+                    Dim fecha As New DateTime(anioDelDia, mesDelDia, dia)
                     columnKey = $"Dia{fecha:dd-MM}"
                 Else
                     columnKey = $"Dia{dia}"
@@ -572,9 +664,58 @@ Public Class FrmVerAsistencia
 
                 If tipoPeriodo.StartsWith("SEMANA") Then
                     ' Obtener las fechas del tipoPeriodo actual
+                    'Dim partes As String() = tipoPeriodo.Replace("SEMANA", "").Trim().Split("-"c)
+                    'Dim fechaInicio As Date = Date.ParseExact(partes(0).Trim(), "dd/MM", Globalization.CultureInfo.InvariantCulture)
+                    'Dim fechaFin As Date = Date.ParseExact(partes(1).Trim(), "dd/MM", Globalization.CultureInfo.InvariantCulture)
+
+                    '' Crear solo el grupo para la semana específica
+                    'Dim nombreGrupo As String = $"Semana ({fechaInicio:dd/MM} - {fechaFin:dd/MM})"
+                    'Dim groupSemana As UltraGridGroup = .Groups.Add(nombreGrupo, nombreGrupo)
+
+                    '' Asignar columnas solo para los días de esta semana
+                    'Dim fechaActual As DateTime = fechaInicio
+                    'While fechaActual <= fechaFin
+                    '    Dim nombreColumna As String = $"Dia{fechaActual:dd-MM}"
+                    '    If .Columns.Exists(nombreColumna) Then
+                    '        Dim col As UltraGridColumn = .Columns(nombreColumna)
+                    '        col.Header.Caption = fechaActual.Day.ToString()
+                    '        col.Width = 60
+                    '        col.CellAppearance.TextHAlign = HAlign.Center
+                    '        col.RowLayoutColumnInfo.ParentGroup = groupSemana
+                    '    End If
+                    '    fechaActual = fechaActual.AddDays(1)
+                    'End While
+
                     Dim partes As String() = tipoPeriodo.Replace("SEMANA", "").Trim().Split("-"c)
-                    Dim fechaInicio As Date = Date.ParseExact(partes(0).Trim(), "dd/MM", Globalization.CultureInfo.InvariantCulture)
-                    Dim fechaFin As Date = Date.ParseExact(partes(1).Trim(), "dd/MM", Globalization.CultureInfo.InvariantCulture)
+
+                    ' Parsear solo día y mes
+                    Dim diaInicio As Integer = Integer.Parse(partes(0).Trim().Split("/"c)(0))
+                    Dim mesInicio As Integer = Integer.Parse(partes(0).Trim().Split("/"c)(1))
+                    Dim diaFin As Integer = Integer.Parse(partes(1).Trim().Split("/"c)(0))
+                    Dim mesFin As Integer = Integer.Parse(partes(1).Trim().Split("/"c)(1))
+
+                    ' Determinar el año correcto para cada fecha
+                    Dim anioInicio As Integer = anioActual
+                    Dim anioFin As Integer = anioActual
+
+                    ' Si el mes de inicio es mayor que el mes de fin, hay cruce de año
+                    If mesInicio > mesFin Then
+                        anioFin = anioActual + 1
+                    End If
+
+                    ' Si estamos viendo desde enero y el inicio es diciembre, el inicio es del año anterior
+                    If mesSeleccionado = 1 And mesInicio = 12 Then
+                        anioInicio = anioActual - 1
+                    End If
+
+                    ' Si estamos viendo desde diciembre y el fin es enero, el fin es del año siguiente  
+                    If mesSeleccionado = 12 And mesFin = 1 Then
+                        anioFin = anioActual + 1
+                    End If
+
+                    ' Crear las fechas con los años correctos
+                    Dim fechaInicio As New Date(anioInicio, mesInicio, diaInicio)
+                    Dim fechaFin As New Date(anioFin, mesFin, diaFin)
 
                     ' Crear solo el grupo para la semana específica
                     Dim nombreGrupo As String = $"Semana ({fechaInicio:dd/MM} - {fechaFin:dd/MM})"
