@@ -32,7 +32,7 @@
           <value>Producto,System.String</value>
           <value>Cantidad,System.Decimal</value>
           <value>Precio,System.String</value>
-          <value>_x0009_Peso_x0020_Promedio,System.String</value>
+          <value>_x0009_Peso_x0020_Promedio,System.Decimal</value>
           <value>Total,System.String</value>
         </Columns>
         <Dictionary isRef="1" />
@@ -82,16 +82,15 @@
             <Text19 Ref="8" type="Text" isKey="true">
               <Brush>Transparent</Brush>
               <CanGrow>True</CanGrow>
-              <ClientRectangle>0.6,3.2,2,0.6</ClientRectangle>
+              <ClientRectangle>0,3.2,2.6,0.6</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Arial,12,Bold</Font>
               <Guid>edabb1abacce4062bd110c16913da092</Guid>
-              <HorAlignment>Right</HorAlignment>
               <Margins>0,0,0,0</Margins>
               <Name>Text19</Name>
               <Page isRef="5" />
               <Parent isRef="6" />
-              <Text>Fecha :</Text>
+              <Text>Fecha         :</Text>
               <TextBrush>Black</TextBrush>
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
               <Type>Expression</Type>
@@ -124,7 +123,6 @@
               <Conditions isList="true" count="0" />
               <Font>Arial,12,Bold</Font>
               <Guid>43f9c2e421fd43559ff249613cabfd4c</Guid>
-              <HorAlignment>Right</HorAlignment>
               <Margins>0,0,0,0</Margins>
               <Name>Text1</Name>
               <Page isRef="5" />
@@ -150,9 +148,9 @@
             </Text3>
             <Text5 Ref="13" type="Text" isKey="true">
               <Brush>Transparent</Brush>
-              <ClientRectangle>0.2,4.6,11.2,0.8</ClientRectangle>
+              <ClientRectangle>0,4.2,12.8,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
-              <Font>Arial,14,Bold</Font>
+              <Font>Arial,12,Bold</Font>
               <Margins>0,0,0,0</Margins>
               <Name>Text5</Name>
               <Page isRef="5" />
@@ -163,9 +161,9 @@
             </Text5>
             <Text6 Ref="14" type="Text" isKey="true">
               <Brush>Transparent</Brush>
-              <ClientRectangle>0.2,5.4,6,0.6</ClientRectangle>
+              <ClientRectangle>0,5,12.8,0.6</ClientRectangle>
               <Conditions isList="true" count="0" />
-              <Font>Arial,12</Font>
+              <Font>Arial,10</Font>
               <Margins>0,0,0,0</Margins>
               <Name>Text6</Name>
               <Page isRef="5" />
@@ -176,9 +174,9 @@
             </Text6>
             <Text8 Ref="15" type="Text" isKey="true">
               <Brush>Transparent</Brush>
-              <ClientRectangle>0.2,6,11.2,0.8</ClientRectangle>
+              <ClientRectangle>0,5.6,12.8,2</ClientRectangle>
               <Conditions isList="true" count="0" />
-              <Font>Arial,12</Font>
+              <Font>Arial,10</Font>
               <Margins>0,0,0,0</Margins>
               <Name>Text8</Name>
               <Page isRef="5" />
@@ -186,7 +184,6 @@
               <Text>{Table.Direccion}</Text>
               <TextBrush>Black</TextBrush>
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
-              <VertAlignment>Center</VertAlignment>
             </Text8>
             <Text9 Ref="16" type="Text" isKey="true">
               <Brush>Transparent</Brush>
@@ -301,7 +298,7 @@
           <ClientRectangle>0,9,20,0.8</ClientRectangle>
           <Components isList="true" count="5">
             <HeaderTable1_Producto2 Ref="24" type="Text" isKey="true">
-              <Border>Top, Bottom;Black;1;Solid;False;4;Black</Border>
+              <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>Transparent</Brush>
               <ClientRectangle>0,0,6.2,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
@@ -318,7 +315,7 @@
               <VertAlignment>Center</VertAlignment>
             </HeaderTable1_Producto2>
             <HeaderTable1_Cantidad2 Ref="25" type="Text" isKey="true">
-              <Border>Top, Bottom;Black;1;Solid;False;4;Black</Border>
+              <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>Transparent</Brush>
               <ClientRectangle>6.2,0,3,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
@@ -335,7 +332,7 @@
               <VertAlignment>Center</VertAlignment>
             </HeaderTable1_Cantidad2>
             <HeaderTable1_Precio2 Ref="26" type="Text" isKey="true">
-              <Border>Top, Bottom;Black;1;Solid;False;4;Black</Border>
+              <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>Transparent</Brush>
               <ClientRectangle>9.2,0,2.8,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
@@ -352,7 +349,7 @@
               <VertAlignment>Center</VertAlignment>
             </HeaderTable1_Precio2>
             <HeaderTable1__Peso_Promedio Ref="27" type="Text" isKey="true">
-              <Border>Top, Bottom;Black;1;Solid;False;4;Black</Border>
+              <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>Transparent</Brush>
               <ClientRectangle>12,0,4,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
@@ -369,7 +366,7 @@
               <VertAlignment>Center</VertAlignment>
             </HeaderTable1__Peso_Promedio>
             <HeaderTable1_Total2 Ref="28" type="Text" isKey="true">
-              <Border>Top, Bottom;Black;1;Solid;False;4;Black</Border>
+              <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>Transparent</Brush>
               <ClientRectangle>16,0,4,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
@@ -397,7 +394,7 @@
           <ClientRectangle>0,10.6,20,0.8</ClientRectangle>
           <Components isList="true" count="5">
             <DataTable1_Producto2 Ref="30" type="Text" isKey="true">
-              <Border>Bottom;Black;1;Solid;False;4;Black</Border>
+              <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>Transparent</Brush>
               <CanGrow>True</CanGrow>
               <ClientRectangle>0,0,6.2,0.8</ClientRectangle>
@@ -414,13 +411,13 @@
               <VertAlignment>Center</VertAlignment>
             </DataTable1_Producto2>
             <DataTable1_Cantidad2 Ref="31" type="Text" isKey="true">
-              <Border>Bottom;Black;1;Solid;False;4;Black</Border>
+              <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>Transparent</Brush>
               <CanGrow>True</CanGrow>
               <ClientRectangle>6.2,0,3,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Arial,9</Font>
-              <HorAlignment>Center</HorAlignment>
+              <HorAlignment>Right</HorAlignment>
               <Margins>0,0,0,0</Margins>
               <Name>DataTable1_Cantidad2</Name>
               <Page isRef="5" />
@@ -431,13 +428,13 @@
               <VertAlignment>Center</VertAlignment>
             </DataTable1_Cantidad2>
             <DataTable1_Precio2 Ref="32" type="Text" isKey="true">
-              <Border>Bottom;Black;1;Solid;False;4;Black</Border>
+              <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>Transparent</Brush>
               <CanGrow>True</CanGrow>
               <ClientRectangle>9.2,0,2.8,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Arial,9</Font>
-              <HorAlignment>Center</HorAlignment>
+              <HorAlignment>Right</HorAlignment>
               <Margins>0,0,0,0</Margins>
               <Name>DataTable1_Precio2</Name>
               <Page isRef="5" />
@@ -448,13 +445,13 @@
               <VertAlignment>Center</VertAlignment>
             </DataTable1_Precio2>
             <DataTable1__Peso_Promedio Ref="33" type="Text" isKey="true">
-              <Border>Bottom;Black;1;Solid;False;4;Black</Border>
+              <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>Transparent</Brush>
               <CanGrow>True</CanGrow>
               <ClientRectangle>12,0,4,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Arial,9</Font>
-              <HorAlignment>Center</HorAlignment>
+              <HorAlignment>Right</HorAlignment>
               <Margins>0,0,0,0</Margins>
               <Name>DataTable1__Peso_Promedio</Name>
               <Page isRef="5" />
@@ -465,13 +462,13 @@
               <VertAlignment>Center</VertAlignment>
             </DataTable1__Peso_Promedio>
             <DataTable1_Total2 Ref="34" type="Text" isKey="true">
-              <Border>Bottom;Black;1;Solid;False;4;Black</Border>
+              <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>Transparent</Brush>
               <CanGrow>True</CanGrow>
               <ClientRectangle>16,0,4,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Arial,9</Font>
-              <HorAlignment>Center</HorAlignment>
+              <HorAlignment>Right</HorAlignment>
               <Margins>0,0,0,0</Margins>
               <Name>DataTable1_Total2</Name>
               <Page isRef="5" />
@@ -496,10 +493,11 @@
           <ClientRectangle>0,12.2,20,3.8</ClientRectangle>
           <Components isList="true" count="6">
             <Text4 Ref="36" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>Transparent</Brush>
-              <ClientRectangle>15.2,0,4.8,0.8</ClientRectangle>
+              <ClientRectangle>15.2,0.4,4.8,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
-              <Font>Arial,14</Font>
+              <Font>Arial,10</Font>
               <Guid>931c613014354ef7a211d59fb7079470</Guid>
               <HorAlignment>Right</HorAlignment>
               <Margins>0,0,0,0</Margins>
@@ -511,10 +509,11 @@
               <VertAlignment>Center</VertAlignment>
             </Text4>
             <Text7 Ref="37" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>Transparent</Brush>
-              <ClientRectangle>10.2,0,5,0.8</ClientRectangle>
+              <ClientRectangle>10.2,0.4,5,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
-              <Font>Arial,14,Bold</Font>
+              <Font>Arial,10</Font>
               <Guid>f01e85987496463b868f42296faeb612</Guid>
               <HorAlignment>Right</HorAlignment>
               <Margins>0,0,0,0</Margins>
@@ -528,10 +527,11 @@
               <VertAlignment>Center</VertAlignment>
             </Text7>
             <Text10 Ref="38" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>Transparent</Brush>
-              <ClientRectangle>10.2,1,5,0.8</ClientRectangle>
+              <ClientRectangle>10.2,1.2,5,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
-              <Font>Arial,14,Bold</Font>
+              <Font>Arial,10</Font>
               <Guid>8f6fac42ba7d41e7b818b78dbf4cb10a</Guid>
               <HorAlignment>Right</HorAlignment>
               <Margins>0,0,0,0</Margins>
@@ -545,11 +545,11 @@
               <VertAlignment>Center</VertAlignment>
             </Text10>
             <Text16 Ref="39" type="Text" isKey="true">
-              <Border>Top, Bottom;Black;1;Solid;False;4;Black</Border>
+              <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>Transparent</Brush>
               <ClientRectangle>10.2,2,5,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
-              <Font>Arial,14,Bold</Font>
+              <Font>Arial,12,Bold</Font>
               <Guid>d3c211ad1daf47aeb9a7526d6ab5e33d</Guid>
               <HorAlignment>Right</HorAlignment>
               <Margins>0,0,0,0</Margins>
@@ -563,11 +563,11 @@
               <VertAlignment>Center</VertAlignment>
             </Text16>
             <Text18 Ref="40" type="Text" isKey="true">
-              <Border>None;Black;1;Solid;False;4;Black</Border>
+              <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>Transparent</Brush>
-              <ClientRectangle>15.2,1,4.6,0.8</ClientRectangle>
+              <ClientRectangle>15.2,1.2,4.8,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
-              <Font>Arial,14</Font>
+              <Font>Arial,10</Font>
               <HorAlignment>Right</HorAlignment>
               <Margins>0,0,0,0</Margins>
               <Name>Text18</Name>
@@ -578,11 +578,11 @@
               <VertAlignment>Center</VertAlignment>
             </Text18>
             <Text15 Ref="41" type="Text" isKey="true">
-              <Border>Top, Bottom;Black;1;Solid;False;4;Black</Border>
+              <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>Transparent</Brush>
-              <ClientRectangle>15.2,2,4.6,0.8</ClientRectangle>
+              <ClientRectangle>15.2,2,4.8,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
-              <Font>Arial,14</Font>
+              <Font>Arial,12</Font>
               <HorAlignment>Right</HorAlignment>
               <Margins>0,0,0,0</Margins>
               <Name>Text15</Name>
@@ -625,10 +625,10 @@
     <value>Stimulsoft.Report.Dll</value>
   </ReferencedAssemblies>
   <ReportAlias>Report</ReportAlias>
-  <ReportChanged>3/15/2025 1:02:46 PM</ReportChanged>
+  <ReportChanged>1/5/2026 11:47:25 PM</ReportChanged>
   <ReportCreated>3/1/2019 10:36:14 AM</ReportCreated>
-  <ReportFile>C:\Users\LEGION\source\repos\SoftwareINVERAGRO-Personaltools\Software_INVERAGRO\Formularios\bin\Debug\Reportes\Rpt_Factura.mrt</ReportFile>
-  <ReportGuid>ed812d72323b4304b66d89fafd92ba3b</ReportGuid>
+  <ReportFile>C:\Users\djjhi\OneDrive\Documentos\GitHub\Software_Inveragro_ERP\Software_INVERAGRO\Formularios\bin\Debug\Reportes\Rpt_Factura.mrt</ReportFile>
+  <ReportGuid>f209385121514fb291f0bd1cc0798cff</ReportGuid>
   <ReportName>Report</ReportName>
   <ReportUnit>Centimeters</ReportUnit>
   <ReportVersion>2016.1.0</ReportVersion>
