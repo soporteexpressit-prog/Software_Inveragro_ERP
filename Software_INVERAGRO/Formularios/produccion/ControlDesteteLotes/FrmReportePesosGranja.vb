@@ -225,7 +225,7 @@ Public Class FrmReportePesosGranja
 
     Private Sub BtnBusqueda_Click(sender As Object, e As EventArgs) Handles BtnBusqueda.Click
         Try
-            anio = CInt(CmbAnios.Text)
+            anio = If(Clickomitiranio.Checked, 0, CInt(CmbAnios.Text))
             mes = If(CkbOmitirMes.Checked, 0, clsBasicas.ObtenerNumeroMes(CmbMeses))
             semana = If(CkbOmitirSemana.Checked, 0, clsBasicas.ObtenerNumeroSemana(CmbSemanas))
             Consultar()
@@ -298,5 +298,19 @@ Public Class FrmReportePesosGranja
 
     Private Sub BtnCerrar_Click(sender As Object, e As EventArgs) Handles BtnCerrar.Click
         Dispose()
+    End Sub
+
+    Private Sub Clickomitiranio_CheckedChanged(sender As Object, e As EventArgs) Handles Clickomitiranio.CheckedChanged
+        If CkbOmitirMes.Checked Then
+            CmbAnios.Enabled = False
+            CmbMeses.Enabled = False
+            CmbSemanas.Enabled = False
+            CkbOmitirSemana.Checked = True
+        Else
+            CmbAnios.Enabled = True
+            CmbMeses.Enabled = True
+            CmbSemanas.Enabled = True
+            CkbOmitirSemana.Checked = False
+        End If
     End Sub
 End Class
