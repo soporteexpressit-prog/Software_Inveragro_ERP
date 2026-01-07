@@ -97,6 +97,10 @@ Public Class cnIngreso
     Public Function Cn_anularfacturacionventa(ByRef obj As coIngreso) As String
         Return cls_at.Cd_AprobarFacturacionOrdenCompra("[j_anular_facturacion_venta]", obj)
     End Function
+
+    Public Function Cn_anularinventariocreado(ByRef obj As coIngreso) As String
+        Return cls_at.Cd_AprobarFacturacionOrdenCompra("[j_anular_reg_inventario]", obj)
+    End Function
     Public Function Cn_ObtenerArchivo(idRecepcion As Integer) As Byte()
         Return cls_at.Cd_obtenerArchivo("[w_obtener_archivo_recepcion]", idRecepcion)
     End Function
