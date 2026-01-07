@@ -18,6 +18,9 @@ Public Class FrmRegistrarExcedentexRacion
     Dim codPeriodoMedicacionOriginal As Integer = 0
     Dim codPeriodoPlusOriginal As Integer = 0
 
+    ' Diccionario para guardar los valores originales de cada fila
+    Private valoresOriginales As New Dictionary(Of Integer, Dictionary(Of String, Object))
+
     Private Sub FrmRegistrarExcedentexRacion_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
             Inicializar()
@@ -234,7 +237,7 @@ Public Class FrmRegistrarExcedentexRacion
 
     Private Sub BtnCalcularInsumos_Click(sender As Object, e As EventArgs) Handles BtnCalcularInsumos.Click
         Try
-            clsBasicas.Formato_Tablas_Grid_UltimaColumnaEditable(dtgListadoInsumo)
+            clsBasicas.Formato_Tablas_Grid_CincoUltimasColumnasEditables(dtgListadoInsumo)
 
             ' Validar que se haya seleccionado una ración
             If codRacion = 0 Then
@@ -273,9 +276,13 @@ Public Class FrmRegistrarExcedentexRacion
 
                 ' Aplicar formato si hay datos
                 If dt.Rows.Count > 0 Then
-                    ' Ocultar la primera columna (índice 0)
+                    ' Ocultar las columnas de equivalencia que no son necesarias visualmente
                     dtgListadoInsumo.DisplayLayout.Bands(0).Columns("idProducto").Hidden = True
                     dtgListadoInsumo.DisplayLayout.Bands(0).Columns("Tipo de Premixero").Hidden = True
+                    dtgListadoInsumo.DisplayLayout.Bands(0).Columns("Cantidad").Hidden = True
+                    dtgListadoInsumo.DisplayLayout.Bands(0).Columns("idProductoEquivalencia").Hidden = True
+                    dtgListadoInsumo.DisplayLayout.Bands(0).Columns("nombreProductoEquivalencia").Hidden = True
+                    dtgListadoInsumo.DisplayLayout.Bands(0).Columns("equivalencia").Hidden = True
 
                     ' Establecer valor por defecto de TxtCantidad si está vacío
                     If String.IsNullOrWhiteSpace(TxtCantidad.Text) Then
@@ -284,6 +291,9 @@ Public Class FrmRegistrarExcedentexRacion
 
                     ' Recalcular las cantidades totales con el valor actual de TxtCantidad
                     RecalcularCantidadTotal()
+
+                    ' Guardar valores originales para funcionalidad de equivalencia
+                    GuardarValoresOriginales()
                 End If
             End If
 
@@ -339,13 +349,6 @@ Public Class FrmRegistrarExcedentexRacion
                 Return
             End If
 
-            Dim dt As DataTable = CType(dtgListadoInsumo.DataSource, DataTable)
-
-            ' Validar que existan las columnas necesarias
-            If Not dt.Columns.Contains("Cantidad") OrElse Not dt.Columns.Contains("Cantidad Total") Then
-                Return
-            End If
-
             ' Obtener el multiplicador del TextBox (mínimo 1)
             Dim multiplicador As Decimal = 1
 
@@ -364,11 +367,13 @@ Public Class FrmRegistrarExcedentexRacion
                 Return ' No hacer nada si no es numérico
             End If
 
-            ' Recalcular cada fila
-            For Each row As DataRow In dt.Rows
-                If Not IsDBNull(row("Cantidad")) AndAlso IsNumeric(row("Cantidad")) Then
-                    Dim cantidadBase As Decimal = CDec(row("Cantidad"))
-                    row("Cantidad Total") = Math.Round(cantidadBase * multiplicador, 2)
+            ' Recalcular cada fila usando el grid directamente para respetar equivalencias
+            For Each row As UltraGridRow In dtgListadoInsumo.Rows
+                If Not row.IsFilteredOut Then
+                    If Not IsDBNull(row.Cells("Cantidad").Value) AndAlso IsNumeric(row.Cells("Cantidad").Value) Then
+                        Dim cantidadBase As Decimal = CDec(row.Cells("Cantidad").Value)
+                        row.Cells("Cantidad Total").Value = Math.Round(cantidadBase * multiplicador, 2)
+                    End If
                 End If
             Next
 
@@ -429,6 +434,132 @@ Public Class FrmRegistrarExcedentexRacion
 
         ' Bloquear cualquier otro carácter
         e.Handled = True
+    End Sub
+
+    ' Guardar los valores originales de cada fila al cargar
+    Private Sub GuardarValoresOriginales()
+        Try
+            valoresOriginales.Clear()
+
+            For Each row As UltraGridRow In dtgListadoInsumo.Rows
+                If Not row.IsFilteredOut Then
+                    Dim rowIndex As Integer = row.Index
+                    Dim valores As New Dictionary(Of String, Object)
+
+                    valores.Add("idProducto", row.Cells("idProducto").Value)
+                    valores.Add("Nombre del Producto", row.Cells("Nombre del Producto").Value)
+                    valores.Add("Cantidad", row.Cells("Cantidad").Value)
+                    valores.Add("Cantidad Total", row.Cells("Cantidad Total").Value)
+                    valores.Add("idProductoEquivalencia", row.Cells("idProductoEquivalencia").Value)
+                    valores.Add("nombreProductoEquivalencia", row.Cells("nombreProductoEquivalencia").Value)
+                    valores.Add("equivalencia", row.Cells("equivalencia").Value)
+
+                    valoresOriginales.Add(rowIndex, valores)
+                End If
+            Next
+        Catch ex As Exception
+            clsBasicas.controlException(Name, ex)
+        End Try
+    End Sub
+
+    ' Evento que se dispara cuando cambia el valor de una celda
+    Private Sub dtgListadoInsumo_CellChange(sender As Object, e As CellEventArgs) Handles dtgListadoInsumo.CellChange
+        Try
+            ' Verificar que sea la columna "Utilizar Eq."
+            If e.Cell.Column.Key = "Utilizar Eq." Then
+                ' Forzar salida del modo edición para obtener el valor actualizado
+                dtgListadoInsumo.PerformAction(Infragistics.Win.UltraWinGrid.UltraGridAction.ExitEditMode)
+
+                Dim row As UltraGridRow = e.Cell.Row
+                ' Obtener el valor DESPUÉS del cambio
+                Dim utilizarEquivalencia As Boolean = CBool(e.Cell.Value)
+
+                AplicarEquivalencia(row, utilizarEquivalencia)
+            End If
+        Catch ex As Exception
+            clsBasicas.controlException(Name, ex)
+        End Try
+    End Sub
+
+    ' Aplicar o revertir la equivalencia según el estado del checkbox
+    Private Sub AplicarEquivalencia(row As UltraGridRow, utilizarEquivalencia As Boolean)
+        Try
+            Dim rowIndex As Integer = row.Index
+
+            If Not valoresOriginales.ContainsKey(rowIndex) Then
+                Return
+            End If
+
+            Dim valoresOriginalesRow As Dictionary(Of String, Object) = valoresOriginales(rowIndex)
+
+            If utilizarEquivalencia Then
+                ' VALIDAR TIPO DE PREMIXERO ANTES DE APLICAR EQUIVALENCIA
+                Dim tipoPremixero As String = row.Cells("Tipo de Premixero").Value?.ToString()
+
+                If String.IsNullOrEmpty(tipoPremixero) OrElse tipoPremixero.Trim().ToUpper() <> "PREMIXERO 3" Then
+                    msj_advert("Solo se puede utilizar equivalencia para productos de tipo PREMIXERO 3")
+                    row.Cells("Utilizar Eq.").Value = False
+                    Return
+                End If
+
+                ' MARCAR CHECK: Aplicar equivalencia
+                Dim idProductoEq As Object = valoresOriginalesRow("idProductoEquivalencia")
+                Dim nombreProductoEq As Object = valoresOriginalesRow("nombreProductoEquivalencia")
+                Dim equivalencia As Object = valoresOriginalesRow("equivalencia")
+
+                If IsDBNull(idProductoEq) OrElse IsDBNull(nombreProductoEq) OrElse IsDBNull(equivalencia) OrElse
+                   String.IsNullOrEmpty(idProductoEq?.ToString()) OrElse
+                   String.IsNullOrEmpty(nombreProductoEq?.ToString()) OrElse
+                   CDec(equivalencia) = 0 Then
+
+                    msj_advert("No hay producto de equivalencia disponible para este insumo")
+                    row.Cells("Utilizar Eq.").Value = False
+                    Return
+                End If
+
+                ' Cambiar a producto equivalente
+                row.Cells("idProducto").Value = idProductoEq
+                row.Cells("Nombre del Producto").Value = nombreProductoEq
+
+                ' Obtener multiplicador actual de TxtCantidad
+                Dim multiplicador As Decimal = 1
+                If Not String.IsNullOrWhiteSpace(TxtCantidad.Text) AndAlso IsNumeric(TxtCantidad.Text) Then
+                    multiplicador = CDec(TxtCantidad.Text)
+                    If multiplicador <= 0 Then
+                        multiplicador = 1
+                    End If
+                End If
+
+                Dim cantidadOriginal As Decimal = CDec(valoresOriginalesRow("Cantidad"))
+                Dim factorEquivalencia As Decimal = CDec(equivalencia)
+                Dim nuevaCantidad As Decimal = cantidadOriginal / factorEquivalencia
+
+                row.Cells("Cantidad").Value = Math.Round(nuevaCantidad, 2)
+                row.Cells("Cantidad Total").Value = Math.Round(nuevaCantidad * multiplicador, 2)
+            Else
+                ' DESMARCAR CHECK: Revertir a valores originales
+                row.Cells("idProducto").Value = valoresOriginalesRow("idProducto")
+                row.Cells("Nombre del Producto").Value = valoresOriginalesRow("Nombre del Producto")
+                row.Cells("Cantidad").Value = valoresOriginalesRow("Cantidad")
+
+                ' Recalcular Cantidad Total con el multiplicador actual
+                Dim multiplicador As Decimal = 1
+                If Not String.IsNullOrWhiteSpace(TxtCantidad.Text) AndAlso IsNumeric(TxtCantidad.Text) Then
+                    multiplicador = CDec(TxtCantidad.Text)
+                    If multiplicador <= 0 Then
+                        multiplicador = 1
+                    End If
+                End If
+
+                Dim cantidadOriginal As Decimal = CDec(valoresOriginalesRow("Cantidad"))
+                row.Cells("Cantidad Total").Value = Math.Round(cantidadOriginal * multiplicador, 2)
+            End If
+
+            ' Refrescar la fila
+            row.Refresh()
+        Catch ex As Exception
+            clsBasicas.controlException(Name, ex)
+        End Try
     End Sub
 
     Private Sub dtgListadoInsumo_InitializeLayout(sender As Object, e As Infragistics.Win.UltraWinGrid.InitializeLayoutEventArgs) Handles dtgListadoInsumo.InitializeLayout

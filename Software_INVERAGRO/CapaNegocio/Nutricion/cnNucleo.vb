@@ -24,6 +24,10 @@ Public Class cnNucleo
         Return cls_at.Cd_ListarGeneral("[w_pa_listar_racion]")
     End Function
 
+    Public Function Cn_ListarRacionesyExterna() As DataTable
+        Return cls_at.Cd_ListarGeneral("[w_pa_listar_racion_y_externa]")
+    End Function
+
     Public Function Cn_ListarRacionesSinPlanMedico() As DataTable
         Return cls_at.Cd_ListarGeneral("[w_pa_listar_racion_sin_plan_medico]")
     End Function
