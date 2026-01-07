@@ -16,7 +16,7 @@ Public Class FrmListarRacionesCerdo
 
     Sub ListarAlimentos()
         Try
-            dtgListado.DataSource = cn.Cn_ListarRaciones()
+            dtgListado.DataSource = cn.Cn_ListarRacionesyExterna()
             dtgListado.DisplayLayout.Bands(0).Columns("Código").Hidden = True
         Catch ex As Exception
             clsBasicas.controlException(Name, ex)

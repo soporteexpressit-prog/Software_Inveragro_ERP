@@ -953,6 +953,93 @@ Public Class clsBasicas
                                             End Sub
     End Sub
 
+    Public Shared Sub Formato_Tablas_Grid_CincoUltimasColumnasEditables(nombre As UltraGrid)
+        Dim color_marron As Color = Color.FromArgb(84, 64, 50)
+        Dim color_crema As Color = Color.FromArgb(224, 224, 224)
+        Dim color_seleccion As Color = Color.FromArgb(226, 242, 167)
+
+        nombre.Font = New Font("Segoe UI", 8.5!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+
+        With nombre.DisplayLayout
+            .Appearance.TextVAlign = VAlign.Middle
+            .Override.AllowDelete = DefaultableBoolean.False
+            .TabNavigation = Infragistics.Win.UltraWinGrid.TabNavigation.NextControl
+
+            .EmptyRowSettings.ShowEmptyRows = True
+
+            .RowConnectorColor = Color.Red
+            .RowConnectorStyle = RowConnectorStyle.Dashed
+
+            .ScrollStyle = ScrollStyle.Immediate
+
+            With .Appearance
+                .ImageHAlign = HAlign.Default
+                .ImageVAlign = VAlign.Middle
+                .TextHAlign = HAlign.Left
+                .TextVAlign = VAlign.Middle
+                .BackColor = color_crema
+                .BackColor2 = color_crema
+                .BorderColor = Color.Gainsboro
+                .BorderColor2 = Color.Gainsboro
+                .ForeColor = Color.Black
+            End With
+
+            With .GroupByBox
+                .BorderStyle = UIElementBorderStyle.Solid
+                .Hidden = True
+                With .Appearance
+                    .BackColor = Color.White
+                    .BackColor2 = Color.White
+                    .BackGradientStyle = GradientStyle.Vertical
+                    .BorderColor = SystemColors.Window
+                End With
+            End With
+
+            With .Override
+                .HeaderAppearance.TextHAlignAsString = "Center"
+                .HeaderAppearance.TextVAlignAsString = "Middle"
+                .HeaderAppearance.BackColor = color_crema
+                .HeaderAppearance.ForeColor = Color.Black
+
+                .RowAppearance.BackColor = SystemColors.Window
+                .RowAppearance.BorderColor = Color.Silver
+
+                .SelectedRowAppearance.BackColor = color_seleccion
+                .SelectedRowAppearance.ForeColor = Color.Black
+
+                .ActiveCellAppearance.BackColor = color_seleccion
+                .ActiveCellAppearance.ForeColor = Color.Black
+
+                .ActiveRowAppearance.BackColor = color_seleccion
+                .ActiveRowAppearance.ForeColor = Color.Black
+
+                .AllowUpdate = DefaultableBoolean.True
+            End With
+        End With
+
+        nombre.DisplayLayout.AutoFitStyle = Infragistics.Win.UltraWinGrid.AutoFitStyle.ExtendLastColumn
+
+        AddHandler nombre.InitializeLayout, Sub(sender As Object, e As InitializeLayoutEventArgs)
+                                                ' Hacer todas las columnas no editables primero
+                                                For i As Integer = 0 To e.Layout.Bands(0).Columns.Count - 1
+                                                    e.Layout.Bands(0).Columns(i).CellActivation = Activation.NoEdit
+                                                Next
+
+                                                ' Hacer editables las 5 últimas columnas
+                                                Dim totalColumnas As Integer = e.Layout.Bands(0).Columns.Count
+                                                If totalColumnas >= 5 Then
+                                                    For i As Integer = totalColumnas - 5 To totalColumnas - 1
+                                                        e.Layout.Bands(0).Columns(i).CellActivation = Activation.AllowEdit
+                                                    Next
+                                                Else
+                                                    ' Si hay menos de 5 columnas, hacer editables todas
+                                                    For i As Integer = 0 To totalColumnas - 1
+                                                        e.Layout.Bands(0).Columns(i).CellActivation = Activation.AllowEdit
+                                                    Next
+                                                End If
+                                            End Sub
+    End Sub
+
     Public Shared Sub Formato_Tablas_Grid_AntePenultimaColumnaEditable(nombre As UltraGrid)
         Dim color_marron As Color = Color.FromArgb(84, 64, 50)
         Dim color_crema As Color = Color.FromArgb(224, 224, 224)

@@ -63,6 +63,7 @@ Partial Class FrmReporteCumplimientoPresupuesto
         Dim Appearance38 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance39 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.BtnBuscar = New System.Windows.Forms.Button()
         Me.cmbGalpon = New Infragistics.Win.UltraWinGrid.UltraCombo()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -76,7 +77,6 @@ Partial Class FrmReporteCumplimientoPresupuesto
         Me.BtnExportar = New System.Windows.Forms.ToolStripButton()
         Me.btnSalir = New System.Windows.Forms.ToolStripButton()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.Panel2.SuspendLayout()
         CType(Me.cmbGalpon, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -98,10 +98,24 @@ Partial Class FrmReporteCumplimientoPresupuesto
         Me.Panel2.Controls.Add(Me.LblPlantel)
         Me.Panel2.Controls.Add(Me.CmbCampanias)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel2.Location = New System.Drawing.Point(0, 40)
+        Me.Panel2.Location = New System.Drawing.Point(0, 38)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(936, 674)
+        Me.Panel2.Size = New System.Drawing.Size(624, 426)
         Me.Panel2.TabIndex = 183
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.Label3.Location = New System.Drawing.Point(23, 107)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(120, 14)
+        Me.Label3.TabIndex = 242
+        Me.Label3.Text = "Holgura :  (±) 0.5 "
         '
         'BtnBuscar
         '
@@ -109,11 +123,10 @@ Partial Class FrmReporteCumplimientoPresupuesto
         Me.BtnBuscar.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnBuscar.Image = CType(resources.GetObject("BtnBuscar.Image"), System.Drawing.Image)
         Me.BtnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnBuscar.Location = New System.Drawing.Point(783, 148)
-        Me.BtnBuscar.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.BtnBuscar.Location = New System.Drawing.Point(522, 96)
         Me.BtnBuscar.Name = "BtnBuscar"
-        Me.BtnBuscar.Padding = New System.Windows.Forms.Padding(6, 0, 6, 0)
-        Me.BtnBuscar.Size = New System.Drawing.Size(138, 55)
+        Me.BtnBuscar.Padding = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.BtnBuscar.Size = New System.Drawing.Size(92, 36)
         Me.BtnBuscar.TabIndex = 241
         Me.BtnBuscar.Text = "Buscar"
         Me.BtnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -177,10 +190,9 @@ Partial Class FrmReporteCumplimientoPresupuesto
         Me.cmbGalpon.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy
         Me.cmbGalpon.DropDownStyle = Infragistics.Win.UltraWinGrid.UltraComboStyle.DropDownList
         Me.cmbGalpon.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmbGalpon.Location = New System.Drawing.Point(588, 85)
-        Me.cmbGalpon.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.cmbGalpon.Location = New System.Drawing.Point(392, 55)
         Me.cmbGalpon.Name = "cmbGalpon"
-        Me.cmbGalpon.Size = New System.Drawing.Size(312, 33)
+        Me.cmbGalpon.Size = New System.Drawing.Size(208, 25)
         Me.cmbGalpon.TabIndex = 240
         '
         'Label1
@@ -189,10 +201,10 @@ Partial Class FrmReporteCumplimientoPresupuesto
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(490, 90)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label1.Location = New System.Drawing.Point(327, 58)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(88, 22)
+        Me.Label1.Size = New System.Drawing.Size(58, 14)
         Me.Label1.TabIndex = 239
         Me.Label1.Text = "Galpón:"
         '
@@ -200,9 +212,11 @@ Partial Class FrmReporteCumplimientoPresupuesto
         '
         Me.GroupBox1.Controls.Add(Me.Ptbx_Cargando)
         Me.GroupBox1.Controls.Add(Me.dtgListado)
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 221)
+        Me.GroupBox1.Location = New System.Drawing.Point(8, 144)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(912, 424)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox1.Size = New System.Drawing.Size(608, 276)
         Me.GroupBox1.TabIndex = 238
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Consumo detallado por Galpón"
@@ -211,10 +225,9 @@ Partial Class FrmReporteCumplimientoPresupuesto
         '
         Me.Ptbx_Cargando.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Ptbx_Cargando.Image = Global.Formularios.My.Resources.Resources.loader
-        Me.Ptbx_Cargando.Location = New System.Drawing.Point(424, 184)
-        Me.Ptbx_Cargando.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Ptbx_Cargando.Location = New System.Drawing.Point(283, 120)
         Me.Ptbx_Cargando.Name = "Ptbx_Cargando"
-        Me.Ptbx_Cargando.Size = New System.Drawing.Size(64, 57)
+        Me.Ptbx_Cargando.Size = New System.Drawing.Size(43, 37)
         Me.Ptbx_Cargando.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.Ptbx_Cargando.TabIndex = 184
         Me.Ptbx_Cargando.TabStop = False
@@ -290,10 +303,9 @@ Partial Class FrmReporteCumplimientoPresupuesto
         Me.dtgListado.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy
         Me.dtgListado.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dtgListado.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dtgListado.Location = New System.Drawing.Point(3, 22)
-        Me.dtgListado.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.dtgListado.Location = New System.Drawing.Point(2, 15)
         Me.dtgListado.Name = "dtgListado"
-        Me.dtgListado.Size = New System.Drawing.Size(906, 399)
+        Me.dtgListado.Size = New System.Drawing.Size(604, 259)
         Me.dtgListado.TabIndex = 183
         Me.dtgListado.Text = "UltraGrid1"
         '
@@ -303,10 +315,10 @@ Partial Class FrmReporteCumplimientoPresupuesto
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(34, 90)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label2.Location = New System.Drawing.Point(23, 58)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(134, 22)
+        Me.Label2.Size = New System.Drawing.Size(88, 14)
         Me.Label2.TabIndex = 180
         Me.Label2.Text = "Campañas : "
         '
@@ -316,10 +328,10 @@ Partial Class FrmReporteCumplimientoPresupuesto
         Me.LblPlantel.BackColor = System.Drawing.Color.Transparent
         Me.LblPlantel.Font = New System.Drawing.Font("Verdana", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblPlantel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.LblPlantel.Location = New System.Drawing.Point(46, 29)
-        Me.LblPlantel.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.LblPlantel.Location = New System.Drawing.Point(31, 19)
+        Me.LblPlantel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblPlantel.Name = "LblPlantel"
-        Me.LblPlantel.Size = New System.Drawing.Size(25, 29)
+        Me.LblPlantel.Size = New System.Drawing.Size(16, 18)
         Me.LblPlantel.TabIndex = 237
         Me.LblPlantel.Text = "-"
         '
@@ -380,10 +392,9 @@ Partial Class FrmReporteCumplimientoPresupuesto
         Me.CmbCampanias.DisplayLayout.ScrollStyle = Infragistics.Win.UltraWinGrid.ScrollStyle.Immediate
         Me.CmbCampanias.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy
         Me.CmbCampanias.DropDownStyle = Infragistics.Win.UltraWinGrid.UltraComboStyle.DropDownList
-        Me.CmbCampanias.Location = New System.Drawing.Point(179, 87)
-        Me.CmbCampanias.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.CmbCampanias.Location = New System.Drawing.Point(119, 57)
         Me.CmbCampanias.Name = "CmbCampanias"
-        Me.CmbCampanias.Size = New System.Drawing.Size(228, 29)
+        Me.CmbCampanias.Size = New System.Drawing.Size(152, 22)
         Me.CmbCampanias.TabIndex = 179
         '
         'ToolStrip1
@@ -393,10 +404,10 @@ Partial Class FrmReporteCumplimientoPresupuesto
         Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnExportar, Me.btnSalir})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.ToolStrip1.Margin = New System.Windows.Forms.Padding(3)
+        Me.ToolStrip1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Padding = New System.Windows.Forms.Padding(0, 0, 3, 0)
-        Me.ToolStrip1.Size = New System.Drawing.Size(936, 40)
+        Me.ToolStrip1.Padding = New System.Windows.Forms.Padding(0, 0, 2, 0)
+        Me.ToolStrip1.Size = New System.Drawing.Size(624, 38)
         Me.ToolStrip1.TabIndex = 184
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -409,7 +420,7 @@ Partial Class FrmReporteCumplimientoPresupuesto
         Me.BtnExportar.Margin = New System.Windows.Forms.Padding(5)
         Me.BtnExportar.Name = "BtnExportar"
         Me.BtnExportar.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnExportar.Size = New System.Drawing.Size(125, 30)
+        Me.BtnExportar.Size = New System.Drawing.Size(92, 28)
         Me.BtnExportar.Text = "Exportar"
         Me.BtnExportar.ToolTipText = "Exportar"
         '
@@ -422,38 +433,26 @@ Partial Class FrmReporteCumplimientoPresupuesto
         Me.btnSalir.Margin = New System.Windows.Forms.Padding(5)
         Me.btnSalir.Name = "btnSalir"
         Me.btnSalir.Padding = New System.Windows.Forms.Padding(2)
-        Me.btnSalir.Size = New System.Drawing.Size(84, 30)
+        Me.btnSalir.Size = New System.Drawing.Size(66, 28)
         Me.btnSalir.Text = "Salir"
         Me.btnSalir.ToolTipText = "Editar"
         '
         'BackgroundWorker1
         '
         '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.BackColor = System.Drawing.Color.Transparent
-        Me.Label3.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(34, 164)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(179, 22)
-        Me.Label3.TabIndex = 242
-        Me.Label3.Text = "Holgura :  (±) 0.5 "
-        '
         'FrmReporteCumplimientoPresupuesto
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(936, 714)
+        Me.ClientSize = New System.Drawing.Size(624, 464)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.ToolStrip1)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "FrmReporteCumplimientoPresupuesto"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "REPORTE DE CONSUMO DIARIO"
+        Me.Text = "REPORTE DE CUMPLIMIENTO DE PRESUPUESTO"
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         CType(Me.cmbGalpon, System.ComponentModel.ISupportInitialize).EndInit()
