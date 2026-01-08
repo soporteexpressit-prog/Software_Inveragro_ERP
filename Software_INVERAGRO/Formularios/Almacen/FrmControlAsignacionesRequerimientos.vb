@@ -6,7 +6,6 @@ Imports System.IO
 Public Class FrmControlAsignacionesRequerimientos
     Dim cn As New cnVentas
     Private WithEvents BackgroundWorker1 As New System.ComponentModel.BackgroundWorker
-
     Dim ds As New DataSet
 
     Private Sub FrmControlAsignacionesRequerimientos_Load(sender As Object, e As EventArgs) Handles MyBase.Load

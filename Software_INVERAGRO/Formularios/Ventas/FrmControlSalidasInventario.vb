@@ -139,24 +139,15 @@ Public Class FrmControlSalidasInventario
         Try
             If (dtgListado.Rows.Count > 0) Then
                 If (dtgListado.ActiveRow.Cells(0).Value.ToString.Length <> 0) Then
-                    If dtgListado.ActiveRow.Cells(18).Value.ToString.Equals("SIN DESPACHO") Then
-                        If dtgListado.ActiveRow.Cells(19).Value <> "PENDIENTE" Then
-                            msj_advert("Salida de Producto no puede ser Anulada por que ya fue " & dtgListado.ActiveRow.Cells(19).Value.ToString)
-                        Else
-                            Dim f As New FrmAnularOrdendeCompra
-                            f.idordencompra = dtgListado.ActiveRow.Cells(0).Value.ToString
-                            f.ShowDialog()
-                            Consultar()
-                        End If
-                    Else
-                        msj_advert("Salida de Producto no puede ser Anulada por que tiene Recepciones de Productos")
-                    End If
+                    Dim f As New FrmAnularAsignacionrequerimiento
+                    f.idordencompra = dtgListado.ActiveRow.Cells(0).Value.ToString
+                    f.operacion = 1
+                    f.ShowDialog()
+                    Consultar()
                 End If
-
             End If
-
         Catch ex As Exception
-            clsBasicas.controlException(Name, ex)
+            msj_advert("Seleccione un Registro Correcto")
         End Try
     End Sub
 

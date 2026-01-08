@@ -4,6 +4,7 @@ Imports CapaObjetos
 Public Class FrmAnularAsignacionrequerimiento
     Public idordencompra As Integer
     Dim cn As New cnIngreso
+    Public operacion As Integer
 
     Private Sub FrmAnularEntregaEpp_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         txtDescripcionAnulacion.Text = ""
@@ -22,7 +23,11 @@ Public Class FrmAnularAsignacionrequerimiento
                 obj.Motivoanulacion = txtDescripcionAnulacion.Text
                 obj.Iduser = GlobalReferences.ActiveSessionId
                 Dim MensajeBgWk As String = ""
-                MensajeBgWk = cn.Cn_Anularasignacionrequerimiento(obj)
+                If operacion = 1 Then
+                    MensajeBgWk = cn.Cn_Anularnuevasalidaregularizacion(obj)
+                Else
+                    MensajeBgWk = cn.Cn_Anularasignacionrequerimiento(obj)
+                End If
                 If (obj.Coderror = 0) Then
                     msj_ok(MensajeBgWk)
                     Dispose()
