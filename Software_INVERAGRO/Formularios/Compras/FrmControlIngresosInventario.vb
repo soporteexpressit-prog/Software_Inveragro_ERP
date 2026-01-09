@@ -147,21 +147,15 @@ Public Class FrmControlIngresosInventario
         Try
             If (dtgListado.Rows.Count > 0) Then
                 If (dtgListado.ActiveRow.Cells(0).Value.ToString.Length <> 0) Then
-                    Dim obj As New coCotizacion
-                    obj.Codigo = dtgListado.ActiveRow.Cells(0).Value.ToString
-                    Dim MensajeBgWk As String = ""
-                    'MensajeBgWk = cn.Cn_Anular(obj)
-                    If (obj.Coderror = 0) Then
-                        msj_ok(MensajeBgWk)
-                        Consultar()
-                    Else
-                        msj_advert(MensajeBgWk)
-                    End If
+                    Dim f As New FrmAnularAsignacionrequerimiento
+                    f.idordencompra = dtgListado.ActiveRow.Cells(0).Value.ToString
+                    f.operacion = 2
+                    f.ShowDialog()
+                    Consultar()
                 End If
             End If
-
         Catch ex As Exception
-            clsBasicas.controlException(Name, ex)
+            msj_advert("Seleccione un Registro Correcto")
         End Try
     End Sub
 

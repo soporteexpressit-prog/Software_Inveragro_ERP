@@ -24,9 +24,11 @@ Public Class FrmAnularAsignacionrequerimiento
                 obj.Iduser = GlobalReferences.ActiveSessionId
                 Dim MensajeBgWk As String = ""
                 If operacion = 1 Then
-                    MensajeBgWk = cn.Cn_Anularnuevasalidaregularizacion(obj)
+                    MensajeBgWk = cn.Cn_Anularnuevasalidaregularizacion(obj) 'eliminar la salida creada
+                ElseIf operacion = 2 Then
+                    MensajeBgWk = cn.Cn_Anularnuevoingreso_reg(obj) ' eliminar el nuevo ingreso creado
                 Else
-                    MensajeBgWk = cn.Cn_Anularasignacionrequerimiento(obj)
+                    MensajeBgWk = cn.Cn_Anularasignacionrequerimiento(obj) 'eliminar la asignacion de requerimientos
                 End If
                 If (obj.Coderror = 0) Then
                     msj_ok(MensajeBgWk)

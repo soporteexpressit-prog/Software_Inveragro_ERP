@@ -37,13 +37,13 @@ Public Class FrmAnularPedidoVenta
                 ' Realiza la anulación a través de la función correspondiente
                 Dim mensaje As String
                 If operacion = 1 Then
-                    mensaje = cn.Cn_AnularPedidoguia(obj)
+                    mensaje = cn.Cn_AnularPedidoguia(obj) 'anular la guia creada. modulo guia de conductores
                 ElseIf operacion = 3 Then
-                    mensaje = cn.Cn_AnularPedidoVentaKilos(obj)
+                    mensaje = cn.Cn_AnularPedidoVentaKilos(obj) 'anular pedido de venta por kilos modulo venta de cerdos
                 ElseIf operacion = 4 Then
-                    mensaje = cn.Cn_AnularPedidoVentas(obj)
+                    mensaje = cn.Cn_AnularPedidoVentas(obj) 'anular pedido de venta modulo venta de productos
                 Else
-                    mensaje = cn.Cn_AnularPedidoVenta(obj)
+                    mensaje = cn.Cn_AnularPedidoVenta(obj) 'anular pedido creado sin despachar modulo ventas
                 End If
 
                 ' Verifica el resultado de la operación

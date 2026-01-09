@@ -595,6 +595,33 @@ Public Class cdIngreso
             Throw ex
         End Try
     End Function
+    Public Function Cd_Anularingreso_regularizacion(name As String, obj As coIngreso) As String
+        Dim mensaje As String
+        Dim cmd As New SqlCommand(name, con.con)
+        Try
+            con.Abrir()
+            cmd.CommandType = CommandType.StoredProcedure
+
+            With cmd.Parameters
+                .AddWithValue("@idingreso", SqlDbType.Int).Value = obj.Codigo
+                .AddWithValue("@motivo_anulacion", SqlDbType.VarChar).Value = obj.Motivoanulacion
+                .AddWithValue("@idusuario", SqlDbType.Int).Value = obj.Iduser
+                .Add("@msj", SqlDbType.VarChar, 100).Direction = ParameterDirection.Output
+                .Add("@coderror", SqlDbType.Int).Direction = ParameterDirection.Output
+            End With
+
+
+            cmd.ExecuteNonQuery()
+
+            mensaje = cmd.Parameters("@msj").Value.ToString()
+            obj.Coderror = Convert.ToInt32(cmd.Parameters("@coderror").Value)
+
+            con.Salir()
+            Return mensaje
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Function
 
     Public Function Cd_ConsultarRecepcionProductos(name As String, obj As coIngreso) As DataTable
         Dim dt As New DataTable
