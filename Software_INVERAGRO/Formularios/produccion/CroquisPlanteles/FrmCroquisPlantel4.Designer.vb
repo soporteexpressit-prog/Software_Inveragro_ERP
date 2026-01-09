@@ -23,6 +23,9 @@ Partial Class FrmCroquisPlantel4
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.PanelPrincipal = New System.Windows.Forms.Panel()
+        Me.LblTotalCorrGalpon9 = New System.Windows.Forms.Label()
+        Me.LblTotalAniGalpon9 = New System.Windows.Forms.Label()
+        Me.Galpon09 = New System.Windows.Forms.FlowLayoutPanel()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
@@ -63,9 +66,6 @@ Partial Class FrmCroquisPlantel4
         Me.Galpon08 = New System.Windows.Forms.FlowLayoutPanel()
         Me.Galpon01 = New System.Windows.Forms.FlowLayoutPanel()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
-        Me.LblTotalCorrGalpon9 = New System.Windows.Forms.Label()
-        Me.LblTotalAniGalpon9 = New System.Windows.Forms.Label()
-        Me.Galpon09 = New System.Windows.Forms.FlowLayoutPanel()
         Me.PanelPrincipal.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.Ptbx_Cargando, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -106,9 +106,45 @@ Partial Class FrmCroquisPlantel4
         Me.PanelPrincipal.Controls.Add(Me.Galpon01)
         Me.PanelPrincipal.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PanelPrincipal.Location = New System.Drawing.Point(0, 0)
+        Me.PanelPrincipal.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.PanelPrincipal.Name = "PanelPrincipal"
-        Me.PanelPrincipal.Size = New System.Drawing.Size(2526, 1206)
+        Me.PanelPrincipal.Size = New System.Drawing.Size(1746, 772)
         Me.PanelPrincipal.TabIndex = 180
+        '
+        'LblTotalCorrGalpon9
+        '
+        Me.LblTotalCorrGalpon9.AutoSize = True
+        Me.LblTotalCorrGalpon9.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(115, Byte), Integer), CType(CType(102, Byte), Integer))
+        Me.LblTotalCorrGalpon9.Font = New System.Drawing.Font("Sans Serif Collection", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblTotalCorrGalpon9.ForeColor = System.Drawing.Color.White
+        Me.LblTotalCorrGalpon9.Location = New System.Drawing.Point(1523, 164)
+        Me.LblTotalCorrGalpon9.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.LblTotalCorrGalpon9.Name = "LblTotalCorrGalpon9"
+        Me.LblTotalCorrGalpon9.Size = New System.Drawing.Size(23, 27)
+        Me.LblTotalCorrGalpon9.TabIndex = 67
+        Me.LblTotalCorrGalpon9.Text = "0"
+        '
+        'LblTotalAniGalpon9
+        '
+        Me.LblTotalAniGalpon9.AutoSize = True
+        Me.LblTotalAniGalpon9.BackColor = System.Drawing.Color.Lime
+        Me.LblTotalAniGalpon9.Font = New System.Drawing.Font("Sans Serif Collection", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblTotalAniGalpon9.ForeColor = System.Drawing.Color.Black
+        Me.LblTotalAniGalpon9.Location = New System.Drawing.Point(1523, 202)
+        Me.LblTotalAniGalpon9.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.LblTotalAniGalpon9.Name = "LblTotalAniGalpon9"
+        Me.LblTotalAniGalpon9.Size = New System.Drawing.Size(23, 27)
+        Me.LblTotalAniGalpon9.TabIndex = 66
+        Me.LblTotalAniGalpon9.Text = "0"
+        '
+        'Galpon09
+        '
+        Me.Galpon09.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.Galpon09.Location = New System.Drawing.Point(1022, 141)
+        Me.Galpon09.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Galpon09.Name = "Galpon09"
+        Me.Galpon09.Size = New System.Drawing.Size(497, 98)
+        Me.Galpon09.TabIndex = 65
         '
         'Panel1
         '
@@ -126,10 +162,9 @@ Partial Class FrmCroquisPlantel4
         Me.Panel1.Controls.Add(Me.LblCapacidadTotal)
         Me.Panel1.Controls.Add(Me.Label6)
         Me.Panel1.Controls.Add(Me.LblTotalAniGranja)
-        Me.Panel1.Location = New System.Drawing.Point(6, 8)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Panel1.Location = New System.Drawing.Point(4, 5)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(819, 180)
+        Me.Panel1.Size = New System.Drawing.Size(546, 117)
         Me.Panel1.TabIndex = 64
         '
         'Label1
@@ -138,9 +173,10 @@ Partial Class FrmCroquisPlantel4
         Me.Label1.BackColor = System.Drawing.Color.White
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold)
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(115, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(3, 6)
+        Me.Label1.Location = New System.Drawing.Point(2, 4)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(216, 37)
+        Me.Label1.Size = New System.Drawing.Size(146, 25)
         Me.Label1.TabIndex = 8
         Me.Label1.Text = "PLANTEL 04"
         '
@@ -149,9 +185,10 @@ Partial Class FrmCroquisPlantel4
         Me.Label10.AutoSize = True
         Me.Label10.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(115, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.Label10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(115, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.Label10.Location = New System.Drawing.Point(644, 100)
+        Me.Label10.Location = New System.Drawing.Point(429, 65)
+        Me.Label10.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(44, 20)
+        Me.Label10.Size = New System.Drawing.Size(28, 13)
         Me.Label10.TabIndex = 58
         Me.Label10.Text = "-------"
         '
@@ -160,9 +197,10 @@ Partial Class FrmCroquisPlantel4
         Me.Label9.AutoSize = True
         Me.Label9.BackColor = System.Drawing.Color.Lime
         Me.Label9.ForeColor = System.Drawing.Color.Lime
-        Me.Label9.Location = New System.Drawing.Point(644, 134)
+        Me.Label9.Location = New System.Drawing.Point(429, 87)
+        Me.Label9.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(44, 20)
+        Me.Label9.Size = New System.Drawing.Size(28, 13)
         Me.Label9.TabIndex = 56
         Me.Label9.Text = "-------"
         '
@@ -171,9 +209,10 @@ Partial Class FrmCroquisPlantel4
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.Label2.ForeColor = System.Drawing.Color.Black
-        Me.Label2.Location = New System.Drawing.Point(150, 58)
+        Me.Label2.Location = New System.Drawing.Point(100, 38)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(168, 25)
+        Me.Label2.Size = New System.Drawing.Size(114, 16)
         Me.Label2.TabIndex = 9
         Me.Label2.Text = "Total de Corrales:"
         '
@@ -182,9 +221,10 @@ Partial Class FrmCroquisPlantel4
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.Label3.ForeColor = System.Drawing.Color.Black
-        Me.Label3.Location = New System.Drawing.Point(124, 94)
+        Me.Label3.Location = New System.Drawing.Point(83, 61)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(192, 25)
+        Me.Label3.Size = New System.Drawing.Size(131, 16)
         Me.Label3.TabIndex = 10
         Me.Label3.Text = "Densidad por Corral:"
         '
@@ -193,9 +233,10 @@ Partial Class FrmCroquisPlantel4
         Me.LblTotalCorrales.AutoSize = True
         Me.LblTotalCorrales.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblTotalCorrales.ForeColor = System.Drawing.Color.Black
-        Me.LblTotalCorrales.Location = New System.Drawing.Point(327, 58)
+        Me.LblTotalCorrales.Location = New System.Drawing.Point(218, 38)
+        Me.LblTotalCorrales.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.LblTotalCorrales.Name = "LblTotalCorrales"
-        Me.LblTotalCorrales.Size = New System.Drawing.Size(24, 25)
+        Me.LblTotalCorrales.Size = New System.Drawing.Size(17, 17)
         Me.LblTotalCorrales.TabIndex = 38
         Me.LblTotalCorrales.Text = "0"
         '
@@ -204,9 +245,10 @@ Partial Class FrmCroquisPlantel4
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.Label7.ForeColor = System.Drawing.Color.Black
-        Me.Label7.Location = New System.Drawing.Point(462, 128)
+        Me.Label7.Location = New System.Drawing.Point(308, 83)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(153, 25)
+        Me.Label7.Size = New System.Drawing.Size(103, 16)
         Me.Label7.TabIndex = 56
         Me.Label7.Text = "Total Animales :"
         '
@@ -215,9 +257,10 @@ Partial Class FrmCroquisPlantel4
         Me.LblDensidadxCorral.AutoSize = True
         Me.LblDensidadxCorral.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblDensidadxCorral.ForeColor = System.Drawing.Color.Black
-        Me.LblDensidadxCorral.Location = New System.Drawing.Point(327, 94)
+        Me.LblDensidadxCorral.Location = New System.Drawing.Point(218, 61)
+        Me.LblDensidadxCorral.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.LblDensidadxCorral.Name = "LblDensidadxCorral"
-        Me.LblDensidadxCorral.Size = New System.Drawing.Size(24, 25)
+        Me.LblDensidadxCorral.Size = New System.Drawing.Size(17, 17)
         Me.LblDensidadxCorral.TabIndex = 40
         Me.LblDensidadxCorral.Text = "0"
         '
@@ -226,9 +269,10 @@ Partial Class FrmCroquisPlantel4
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.Label8.ForeColor = System.Drawing.Color.Black
-        Me.Label8.Location = New System.Drawing.Point(470, 91)
+        Me.Label8.Location = New System.Drawing.Point(313, 59)
+        Me.Label8.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(146, 25)
+        Me.Label8.Size = New System.Drawing.Size(98, 16)
         Me.Label8.TabIndex = 57
         Me.Label8.Text = "Total Corrales :"
         '
@@ -237,9 +281,10 @@ Partial Class FrmCroquisPlantel4
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.Label4.ForeColor = System.Drawing.Color.Black
-        Me.Label4.Location = New System.Drawing.Point(87, 137)
+        Me.Label4.Location = New System.Drawing.Point(58, 89)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(227, 25)
+        Me.Label4.Size = New System.Drawing.Size(156, 16)
         Me.Label4.TabIndex = 11
         Me.Label4.Text = "Capacidad Toda Granja:"
         '
@@ -248,9 +293,10 @@ Partial Class FrmCroquisPlantel4
         Me.LblCapacidadTotal.AutoSize = True
         Me.LblCapacidadTotal.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblCapacidadTotal.ForeColor = System.Drawing.Color.Black
-        Me.LblCapacidadTotal.Location = New System.Drawing.Point(327, 140)
+        Me.LblCapacidadTotal.Location = New System.Drawing.Point(218, 91)
+        Me.LblCapacidadTotal.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.LblCapacidadTotal.Name = "LblCapacidadTotal"
-        Me.LblCapacidadTotal.Size = New System.Drawing.Size(24, 25)
+        Me.LblCapacidadTotal.Size = New System.Drawing.Size(17, 17)
         Me.LblCapacidadTotal.TabIndex = 39
         Me.LblCapacidadTotal.Text = "0"
         '
@@ -259,9 +305,10 @@ Partial Class FrmCroquisPlantel4
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.Label6.ForeColor = System.Drawing.Color.Black
-        Me.Label6.Location = New System.Drawing.Point(402, 55)
+        Me.Label6.Location = New System.Drawing.Point(268, 36)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(211, 25)
+        Me.Label6.Size = New System.Drawing.Size(143, 16)
         Me.Label6.TabIndex = 53
         Me.Label6.Text = "Total Animales Granja:"
         '
@@ -270,9 +317,10 @@ Partial Class FrmCroquisPlantel4
         Me.LblTotalAniGranja.AutoSize = True
         Me.LblTotalAniGranja.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblTotalAniGranja.ForeColor = System.Drawing.Color.Black
-        Me.LblTotalAniGranja.Location = New System.Drawing.Point(626, 55)
+        Me.LblTotalAniGranja.Location = New System.Drawing.Point(417, 36)
+        Me.LblTotalAniGranja.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.LblTotalAniGranja.Name = "LblTotalAniGranja"
-        Me.LblTotalAniGranja.Size = New System.Drawing.Size(24, 25)
+        Me.LblTotalAniGranja.Size = New System.Drawing.Size(17, 17)
         Me.LblTotalAniGranja.TabIndex = 54
         Me.LblTotalAniGranja.Text = "0"
         '
@@ -282,9 +330,10 @@ Partial Class FrmCroquisPlantel4
         Me.LblTotalCorrGalpon1.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(115, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.LblTotalCorrGalpon1.Font = New System.Drawing.Font("Sans Serif Collection", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblTotalCorrGalpon1.ForeColor = System.Drawing.Color.White
-        Me.LblTotalCorrGalpon1.Location = New System.Drawing.Point(1444, 1023)
+        Me.LblTotalCorrGalpon1.Location = New System.Drawing.Point(963, 665)
+        Me.LblTotalCorrGalpon1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.LblTotalCorrGalpon1.Name = "LblTotalCorrGalpon1"
-        Me.LblTotalCorrGalpon1.Size = New System.Drawing.Size(36, 58)
+        Me.LblTotalCorrGalpon1.Size = New System.Drawing.Size(23, 27)
         Me.LblTotalCorrGalpon1.TabIndex = 63
         Me.LblTotalCorrGalpon1.Text = "0"
         '
@@ -294,9 +343,10 @@ Partial Class FrmCroquisPlantel4
         Me.LblTotalCorrGalpon2.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(115, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.LblTotalCorrGalpon2.Font = New System.Drawing.Font("Sans Serif Collection", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblTotalCorrGalpon2.ForeColor = System.Drawing.Color.White
-        Me.LblTotalCorrGalpon2.Location = New System.Drawing.Point(592, 860)
+        Me.LblTotalCorrGalpon2.Location = New System.Drawing.Point(395, 559)
+        Me.LblTotalCorrGalpon2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.LblTotalCorrGalpon2.Name = "LblTotalCorrGalpon2"
-        Me.LblTotalCorrGalpon2.Size = New System.Drawing.Size(36, 58)
+        Me.LblTotalCorrGalpon2.Size = New System.Drawing.Size(23, 27)
         Me.LblTotalCorrGalpon2.TabIndex = 62
         Me.LblTotalCorrGalpon2.Text = "0"
         '
@@ -306,9 +356,10 @@ Partial Class FrmCroquisPlantel4
         Me.LblTotalCorrGalpon3.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(115, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.LblTotalCorrGalpon3.Font = New System.Drawing.Font("Sans Serif Collection", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblTotalCorrGalpon3.ForeColor = System.Drawing.Color.White
-        Me.LblTotalCorrGalpon3.Location = New System.Drawing.Point(1754, 608)
+        Me.LblTotalCorrGalpon3.Location = New System.Drawing.Point(1169, 395)
+        Me.LblTotalCorrGalpon3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.LblTotalCorrGalpon3.Name = "LblTotalCorrGalpon3"
-        Me.LblTotalCorrGalpon3.Size = New System.Drawing.Size(36, 58)
+        Me.LblTotalCorrGalpon3.Size = New System.Drawing.Size(23, 27)
         Me.LblTotalCorrGalpon3.TabIndex = 61
         Me.LblTotalCorrGalpon3.Text = "0"
         '
@@ -318,9 +369,10 @@ Partial Class FrmCroquisPlantel4
         Me.LblTotalCorrGalpon4.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(115, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.LblTotalCorrGalpon4.Font = New System.Drawing.Font("Sans Serif Collection", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblTotalCorrGalpon4.ForeColor = System.Drawing.Color.White
-        Me.LblTotalCorrGalpon4.Location = New System.Drawing.Point(956, 605)
+        Me.LblTotalCorrGalpon4.Location = New System.Drawing.Point(637, 393)
+        Me.LblTotalCorrGalpon4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.LblTotalCorrGalpon4.Name = "LblTotalCorrGalpon4"
-        Me.LblTotalCorrGalpon4.Size = New System.Drawing.Size(36, 58)
+        Me.LblTotalCorrGalpon4.Size = New System.Drawing.Size(23, 27)
         Me.LblTotalCorrGalpon4.TabIndex = 60
         Me.LblTotalCorrGalpon4.Text = "0"
         '
@@ -330,9 +382,10 @@ Partial Class FrmCroquisPlantel4
         Me.LblTotalCorrGalpon5.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(115, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.LblTotalCorrGalpon5.Font = New System.Drawing.Font("Sans Serif Collection", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblTotalCorrGalpon5.ForeColor = System.Drawing.Color.White
-        Me.LblTotalCorrGalpon5.Location = New System.Drawing.Point(39, 605)
+        Me.LblTotalCorrGalpon5.Location = New System.Drawing.Point(26, 393)
+        Me.LblTotalCorrGalpon5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.LblTotalCorrGalpon5.Name = "LblTotalCorrGalpon5"
-        Me.LblTotalCorrGalpon5.Size = New System.Drawing.Size(36, 58)
+        Me.LblTotalCorrGalpon5.Size = New System.Drawing.Size(23, 27)
         Me.LblTotalCorrGalpon5.TabIndex = 59
         Me.LblTotalCorrGalpon5.Text = "0"
         '
@@ -342,9 +395,10 @@ Partial Class FrmCroquisPlantel4
         Me.LblTotalCorrGalpon6.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(115, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.LblTotalCorrGalpon6.Font = New System.Drawing.Font("Sans Serif Collection", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblTotalCorrGalpon6.ForeColor = System.Drawing.Color.White
-        Me.LblTotalCorrGalpon6.Location = New System.Drawing.Point(39, 417)
+        Me.LblTotalCorrGalpon6.Location = New System.Drawing.Point(26, 271)
+        Me.LblTotalCorrGalpon6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.LblTotalCorrGalpon6.Name = "LblTotalCorrGalpon6"
-        Me.LblTotalCorrGalpon6.Size = New System.Drawing.Size(36, 58)
+        Me.LblTotalCorrGalpon6.Size = New System.Drawing.Size(23, 27)
         Me.LblTotalCorrGalpon6.TabIndex = 58
         Me.LblTotalCorrGalpon6.Text = "0"
         '
@@ -354,9 +408,10 @@ Partial Class FrmCroquisPlantel4
         Me.LblTotalCorrGalpon7.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(115, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.LblTotalCorrGalpon7.Font = New System.Drawing.Font("Sans Serif Collection", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblTotalCorrGalpon7.ForeColor = System.Drawing.Color.White
-        Me.LblTotalCorrGalpon7.Location = New System.Drawing.Point(1411, 252)
+        Me.LblTotalCorrGalpon7.Location = New System.Drawing.Point(941, 164)
+        Me.LblTotalCorrGalpon7.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.LblTotalCorrGalpon7.Name = "LblTotalCorrGalpon7"
-        Me.LblTotalCorrGalpon7.Size = New System.Drawing.Size(36, 58)
+        Me.LblTotalCorrGalpon7.Size = New System.Drawing.Size(23, 27)
         Me.LblTotalCorrGalpon7.TabIndex = 57
         Me.LblTotalCorrGalpon7.Text = "0"
         '
@@ -366,9 +421,10 @@ Partial Class FrmCroquisPlantel4
         Me.LblTotalCorrGalpon8.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(115, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.LblTotalCorrGalpon8.Font = New System.Drawing.Font("Sans Serif Collection", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblTotalCorrGalpon8.ForeColor = System.Drawing.Color.White
-        Me.LblTotalCorrGalpon8.Location = New System.Drawing.Point(1714, 51)
+        Me.LblTotalCorrGalpon8.Location = New System.Drawing.Point(1143, 33)
+        Me.LblTotalCorrGalpon8.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.LblTotalCorrGalpon8.Name = "LblTotalCorrGalpon8"
-        Me.LblTotalCorrGalpon8.Size = New System.Drawing.Size(36, 58)
+        Me.LblTotalCorrGalpon8.Size = New System.Drawing.Size(23, 27)
         Me.LblTotalCorrGalpon8.TabIndex = 56
         Me.LblTotalCorrGalpon8.Text = "0"
         '
@@ -378,9 +434,10 @@ Partial Class FrmCroquisPlantel4
         Me.LblTotalAniGalpon1.BackColor = System.Drawing.Color.Lime
         Me.LblTotalAniGalpon1.Font = New System.Drawing.Font("Sans Serif Collection", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblTotalAniGalpon1.ForeColor = System.Drawing.Color.Black
-        Me.LblTotalAniGalpon1.Location = New System.Drawing.Point(1444, 1083)
+        Me.LblTotalAniGalpon1.Location = New System.Drawing.Point(963, 704)
+        Me.LblTotalAniGalpon1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.LblTotalAniGalpon1.Name = "LblTotalAniGalpon1"
-        Me.LblTotalAniGalpon1.Size = New System.Drawing.Size(36, 58)
+        Me.LblTotalAniGalpon1.Size = New System.Drawing.Size(23, 27)
         Me.LblTotalAniGalpon1.TabIndex = 52
         Me.LblTotalAniGalpon1.Text = "0"
         '
@@ -390,9 +447,10 @@ Partial Class FrmCroquisPlantel4
         Me.LblTotalAniGalpon2.BackColor = System.Drawing.Color.Lime
         Me.LblTotalAniGalpon2.Font = New System.Drawing.Font("Sans Serif Collection", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblTotalAniGalpon2.ForeColor = System.Drawing.Color.Black
-        Me.LblTotalAniGalpon2.Location = New System.Drawing.Point(592, 917)
+        Me.LblTotalAniGalpon2.Location = New System.Drawing.Point(395, 596)
+        Me.LblTotalAniGalpon2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.LblTotalAniGalpon2.Name = "LblTotalAniGalpon2"
-        Me.LblTotalAniGalpon2.Size = New System.Drawing.Size(36, 58)
+        Me.LblTotalAniGalpon2.Size = New System.Drawing.Size(23, 27)
         Me.LblTotalAniGalpon2.TabIndex = 51
         Me.LblTotalAniGalpon2.Text = "0"
         '
@@ -402,9 +460,10 @@ Partial Class FrmCroquisPlantel4
         Me.LblTotalAniGalpon3.BackColor = System.Drawing.Color.Lime
         Me.LblTotalAniGalpon3.Font = New System.Drawing.Font("Sans Serif Collection", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblTotalAniGalpon3.ForeColor = System.Drawing.Color.Black
-        Me.LblTotalAniGalpon3.Location = New System.Drawing.Point(1754, 662)
+        Me.LblTotalAniGalpon3.Location = New System.Drawing.Point(1169, 430)
+        Me.LblTotalAniGalpon3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.LblTotalAniGalpon3.Name = "LblTotalAniGalpon3"
-        Me.LblTotalAniGalpon3.Size = New System.Drawing.Size(36, 58)
+        Me.LblTotalAniGalpon3.Size = New System.Drawing.Size(23, 27)
         Me.LblTotalAniGalpon3.TabIndex = 50
         Me.LblTotalAniGalpon3.Text = "0"
         '
@@ -414,9 +473,10 @@ Partial Class FrmCroquisPlantel4
         Me.LblTotalAniGalpon4.BackColor = System.Drawing.Color.Lime
         Me.LblTotalAniGalpon4.Font = New System.Drawing.Font("Sans Serif Collection", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblTotalAniGalpon4.ForeColor = System.Drawing.Color.Black
-        Me.LblTotalAniGalpon4.Location = New System.Drawing.Point(956, 662)
+        Me.LblTotalAniGalpon4.Location = New System.Drawing.Point(637, 430)
+        Me.LblTotalAniGalpon4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.LblTotalAniGalpon4.Name = "LblTotalAniGalpon4"
-        Me.LblTotalAniGalpon4.Size = New System.Drawing.Size(36, 58)
+        Me.LblTotalAniGalpon4.Size = New System.Drawing.Size(23, 27)
         Me.LblTotalAniGalpon4.TabIndex = 49
         Me.LblTotalAniGalpon4.Text = "0"
         '
@@ -426,9 +486,10 @@ Partial Class FrmCroquisPlantel4
         Me.LblTotalAniGalpon5.BackColor = System.Drawing.Color.Lime
         Me.LblTotalAniGalpon5.Font = New System.Drawing.Font("Sans Serif Collection", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblTotalAniGalpon5.ForeColor = System.Drawing.Color.Black
-        Me.LblTotalAniGalpon5.Location = New System.Drawing.Point(39, 660)
+        Me.LblTotalAniGalpon5.Location = New System.Drawing.Point(26, 429)
+        Me.LblTotalAniGalpon5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.LblTotalAniGalpon5.Name = "LblTotalAniGalpon5"
-        Me.LblTotalAniGalpon5.Size = New System.Drawing.Size(36, 58)
+        Me.LblTotalAniGalpon5.Size = New System.Drawing.Size(23, 27)
         Me.LblTotalAniGalpon5.TabIndex = 48
         Me.LblTotalAniGalpon5.Text = "0"
         '
@@ -438,9 +499,10 @@ Partial Class FrmCroquisPlantel4
         Me.LblTotalAniGalpon6.BackColor = System.Drawing.Color.Lime
         Me.LblTotalAniGalpon6.Font = New System.Drawing.Font("Sans Serif Collection", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblTotalAniGalpon6.ForeColor = System.Drawing.Color.Black
-        Me.LblTotalAniGalpon6.Location = New System.Drawing.Point(39, 475)
+        Me.LblTotalAniGalpon6.Location = New System.Drawing.Point(26, 309)
+        Me.LblTotalAniGalpon6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.LblTotalAniGalpon6.Name = "LblTotalAniGalpon6"
-        Me.LblTotalAniGalpon6.Size = New System.Drawing.Size(36, 58)
+        Me.LblTotalAniGalpon6.Size = New System.Drawing.Size(23, 27)
         Me.LblTotalAniGalpon6.TabIndex = 46
         Me.LblTotalAniGalpon6.Text = "0"
         '
@@ -450,9 +512,10 @@ Partial Class FrmCroquisPlantel4
         Me.LblTotalAniGalpon7.BackColor = System.Drawing.Color.Lime
         Me.LblTotalAniGalpon7.Font = New System.Drawing.Font("Sans Serif Collection", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblTotalAniGalpon7.ForeColor = System.Drawing.Color.Black
-        Me.LblTotalAniGalpon7.Location = New System.Drawing.Point(1411, 310)
+        Me.LblTotalAniGalpon7.Location = New System.Drawing.Point(941, 202)
+        Me.LblTotalAniGalpon7.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.LblTotalAniGalpon7.Name = "LblTotalAniGalpon7"
-        Me.LblTotalAniGalpon7.Size = New System.Drawing.Size(36, 58)
+        Me.LblTotalAniGalpon7.Size = New System.Drawing.Size(23, 27)
         Me.LblTotalAniGalpon7.TabIndex = 44
         Me.LblTotalAniGalpon7.Text = "0"
         '
@@ -462,9 +525,10 @@ Partial Class FrmCroquisPlantel4
         Me.LblTotalAniGalpon8.BackColor = System.Drawing.Color.Lime
         Me.LblTotalAniGalpon8.Font = New System.Drawing.Font("Sans Serif Collection", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblTotalAniGalpon8.ForeColor = System.Drawing.Color.Black
-        Me.LblTotalAniGalpon8.Location = New System.Drawing.Point(1714, 111)
+        Me.LblTotalAniGalpon8.Location = New System.Drawing.Point(1143, 72)
+        Me.LblTotalAniGalpon8.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.LblTotalAniGalpon8.Name = "LblTotalAniGalpon8"
-        Me.LblTotalAniGalpon8.Size = New System.Drawing.Size(36, 58)
+        Me.LblTotalAniGalpon8.Size = New System.Drawing.Size(23, 27)
         Me.LblTotalAniGalpon8.TabIndex = 42
         Me.LblTotalAniGalpon8.Text = "0"
         '
@@ -472,10 +536,9 @@ Partial Class FrmCroquisPlantel4
         '
         Me.Ptbx_Cargando.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Ptbx_Cargando.Image = Global.Formularios.My.Resources.Resources.loader
-        Me.Ptbx_Cargando.Location = New System.Drawing.Point(2210, 495)
-        Me.Ptbx_Cargando.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Ptbx_Cargando.Location = New System.Drawing.Point(1504, 316)
         Me.Ptbx_Cargando.Name = "Ptbx_Cargando"
-        Me.Ptbx_Cargando.Size = New System.Drawing.Size(64, 57)
+        Me.Ptbx_Cargando.Size = New System.Drawing.Size(43, 37)
         Me.Ptbx_Cargando.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.Ptbx_Cargando.TabIndex = 37
         Me.Ptbx_Cargando.TabStop = False
@@ -484,108 +547,85 @@ Partial Class FrmCroquisPlantel4
         'Galpon06
         '
         Me.Galpon06.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Galpon06.Location = New System.Drawing.Point(98, 403)
+        Me.Galpon06.Location = New System.Drawing.Point(65, 262)
+        Me.Galpon06.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Galpon06.Name = "Galpon06"
-        Me.Galpon06.Size = New System.Drawing.Size(792, 151)
+        Me.Galpon06.Size = New System.Drawing.Size(528, 98)
         Me.Galpon06.TabIndex = 7
         '
         'Galpon05
         '
         Me.Galpon05.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Galpon05.Location = New System.Drawing.Point(98, 583)
+        Me.Galpon05.Location = New System.Drawing.Point(65, 379)
+        Me.Galpon05.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Galpon05.Name = "Galpon05"
-        Me.Galpon05.Size = New System.Drawing.Size(792, 217)
+        Me.Galpon05.Size = New System.Drawing.Size(528, 141)
         Me.Galpon05.TabIndex = 7
         '
         'Galpon04
         '
         Me.Galpon04.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Galpon04.Location = New System.Drawing.Point(998, 583)
+        Me.Galpon04.Location = New System.Drawing.Point(665, 379)
+        Me.Galpon04.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Galpon04.Name = "Galpon04"
-        Me.Galpon04.Size = New System.Drawing.Size(688, 217)
+        Me.Galpon04.Size = New System.Drawing.Size(459, 141)
         Me.Galpon04.TabIndex = 7
         '
         'Galpon02
         '
         Me.Galpon02.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Galpon02.Location = New System.Drawing.Point(640, 828)
+        Me.Galpon02.Location = New System.Drawing.Point(427, 538)
+        Me.Galpon02.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Galpon02.Name = "Galpon02"
-        Me.Galpon02.Size = New System.Drawing.Size(1792, 151)
+        Me.Galpon02.Size = New System.Drawing.Size(1195, 98)
         Me.Galpon02.TabIndex = 7
         '
         'Galpon03
         '
         Me.Galpon03.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Galpon03.Location = New System.Drawing.Point(1798, 583)
+        Me.Galpon03.Location = New System.Drawing.Point(1199, 379)
+        Me.Galpon03.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Galpon03.Name = "Galpon03"
-        Me.Galpon03.Size = New System.Drawing.Size(711, 217)
+        Me.Galpon03.Size = New System.Drawing.Size(474, 141)
         Me.Galpon03.TabIndex = 7
         '
         'Galpon07
         '
         Me.Galpon07.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Galpon07.Location = New System.Drawing.Point(568, 217)
+        Me.Galpon07.Location = New System.Drawing.Point(379, 141)
+        Me.Galpon07.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Galpon07.Name = "Galpon07"
-        Me.Galpon07.Size = New System.Drawing.Size(834, 151)
+        Me.Galpon07.Size = New System.Drawing.Size(556, 98)
         Me.Galpon07.TabIndex = 7
         '
         'Galpon08
         '
         Me.Galpon08.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Galpon08.Location = New System.Drawing.Point(957, 26)
+        Me.Galpon08.Location = New System.Drawing.Point(638, 17)
+        Me.Galpon08.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Galpon08.Name = "Galpon08"
-        Me.Galpon08.Size = New System.Drawing.Size(752, 152)
+        Me.Galpon08.Size = New System.Drawing.Size(501, 99)
         Me.Galpon08.TabIndex = 7
         '
         'Galpon01
         '
         Me.Galpon01.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Galpon01.Location = New System.Drawing.Point(1486, 1002)
+        Me.Galpon01.Location = New System.Drawing.Point(991, 651)
+        Me.Galpon01.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Galpon01.Name = "Galpon01"
-        Me.Galpon01.Size = New System.Drawing.Size(770, 151)
+        Me.Galpon01.Size = New System.Drawing.Size(513, 98)
         Me.Galpon01.TabIndex = 6
         '
         'BackgroundWorker1
         '
         '
-        'LblTotalCorrGalpon9
-        '
-        Me.LblTotalCorrGalpon9.AutoSize = True
-        Me.LblTotalCorrGalpon9.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(115, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.LblTotalCorrGalpon9.Font = New System.Drawing.Font("Sans Serif Collection", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblTotalCorrGalpon9.ForeColor = System.Drawing.Color.White
-        Me.LblTotalCorrGalpon9.Location = New System.Drawing.Point(2285, 252)
-        Me.LblTotalCorrGalpon9.Name = "LblTotalCorrGalpon9"
-        Me.LblTotalCorrGalpon9.Size = New System.Drawing.Size(36, 58)
-        Me.LblTotalCorrGalpon9.TabIndex = 67
-        Me.LblTotalCorrGalpon9.Text = "0"
-        '
-        'LblTotalAniGalpon9
-        '
-        Me.LblTotalAniGalpon9.AutoSize = True
-        Me.LblTotalAniGalpon9.BackColor = System.Drawing.Color.Lime
-        Me.LblTotalAniGalpon9.Font = New System.Drawing.Font("Sans Serif Collection", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblTotalAniGalpon9.ForeColor = System.Drawing.Color.Black
-        Me.LblTotalAniGalpon9.Location = New System.Drawing.Point(2285, 310)
-        Me.LblTotalAniGalpon9.Name = "LblTotalAniGalpon9"
-        Me.LblTotalAniGalpon9.Size = New System.Drawing.Size(36, 58)
-        Me.LblTotalAniGalpon9.TabIndex = 66
-        Me.LblTotalAniGalpon9.Text = "0"
-        '
-        'Galpon09
-        '
-        Me.Galpon09.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Galpon09.Location = New System.Drawing.Point(1533, 217)
-        Me.Galpon09.Name = "Galpon09"
-        Me.Galpon09.Size = New System.Drawing.Size(746, 151)
-        Me.Galpon09.TabIndex = 65
-        '
         'FrmCroquisPlantel4
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(2526, 1206)
+        Me.ClientSize = New System.Drawing.Size(1746, 772)
         Me.Controls.Add(Me.PanelPrincipal)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "FrmCroquisPlantel4"

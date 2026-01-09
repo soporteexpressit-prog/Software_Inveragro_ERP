@@ -280,6 +280,10 @@ Public Class cnControlAnimal
         Return cls_at.Cd_ListarCerdasMaternidadGestacion("[w_pa_cons_cerdas_maternidad_gestacion]", obj)
     End Function
 
+    Public Function Cn_ConsultarInfoCerdaGestacion(ByRef obj As coControlAnimal) As DataTable
+        Return cls_at.Cd_ConsultarInfoCerdaGestacion("[w_pa_cons_info_cerda_gestacion]", obj)
+    End Function
+
     Public Function Cn_ConsultarControlFichaMortalidadCrias(ByRef obj As coControlAnimal) As DataSet
         Return cls_at.Cd_ConsultarControlFichaDs("[w_pa_cons_mortalidad_crias_x_id]", obj)
     End Function

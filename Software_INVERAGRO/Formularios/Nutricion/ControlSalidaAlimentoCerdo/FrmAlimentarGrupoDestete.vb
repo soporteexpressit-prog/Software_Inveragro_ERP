@@ -72,7 +72,7 @@ Public Class FrmAlimentarGrupoDestete
 
                 'LblStockAlimento.Text = stockDiferencia.ToString("N2")
                 CalcularKilogramos(idUnidadMedida)
-                LblConsumoAlimento.Text = stockConsumidoGrupo.ToString("N3")
+                LblConsumoAlimento.Text = (stockConsumidoGrupo * 1000).ToString("N2") 'Convertimos a Kg
             Else
                 LblAlimento.Text = "-"
                 LblStockAlimento.Text = "0.00"
