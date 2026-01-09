@@ -295,9 +295,9 @@ Partial Class FrmAlimentarGrupoDestete
         Me.Label6.Location = New System.Drawing.Point(220, 116)
         Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(115, 14)
+        Me.Label6.Size = New System.Drawing.Size(118, 14)
         Me.Label6.TabIndex = 297
-        Me.Label6.Text = "Consumido (tn):"
+        Me.Label6.Text = "Consumido (kg):"
         '
         'LblAlimento
         '

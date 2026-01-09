@@ -10,6 +10,9 @@ Public Class FrmMonitoreoCondicionCorporal
     Private Sub FrmMonitoreoCondicionCorporal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
             ListarMonitoreoCondCorporalGestacion()
+            If tipoControl = "LACTANTE" Then
+                GroupBox3.Visible = False
+            End If
         Catch ex As Exception
             clsBasicas.controlException(Name, ex)
         End Try
@@ -24,10 +27,86 @@ Public Class FrmMonitoreoCondicionCorporal
     End Sub
 
     Public Sub LlenarCamposCerda(id As Integer, codigo As String, diasEtapa As Integer, condicionCorporal As Decimal)
-        idCerda = id
-        LblCodArete.Text = codigo
-        LblDiasEtapa.Text = diasEtapa
-        TxtCondCorporal.Text = condicionCorporal.ToString("0.00")
+        Try
+            idCerda = id
+            LblCodArete.Text = codigo
+            LblDiasEtapa.Text = diasEtapa
+            TxtCondCorporal.Text = condicionCorporal.ToString("0.00")
+
+            ' Consultar información adicional de gestación
+            If tipoControl = "GESTANTE" Then
+                ConsultarInfoGestacion()
+            End If
+        Catch ex As Exception
+            clsBasicas.controlException(Name, ex)
+        End Try
+    End Sub
+
+    Private Sub ConsultarInfoGestacion()
+        Try
+            If idCerda = 0 Then
+                ' Limpiar labels si no hay cerda seleccionada
+                LblNumSemana.Text = "-"
+                LblNumLote.Text = "-"
+                LblFechaInicio.Text = "-"
+                LblFechaFin.Text = "-"
+                Return
+            End If
+
+            Dim obj As New coControlAnimal With {
+                .Codigo = idCerda
+            }
+
+            Dim dt As DataTable = cn.Cn_ConsultarInfoCerdaGestacion(obj)
+
+            If dt IsNot Nothing AndAlso dt.Rows.Count > 0 Then
+                ' Setear los valores en los labels correspondientes
+                Dim row As DataRow = dt.Rows(0)
+
+                ' NumSemana
+                If Not IsDBNull(row("numeroSemana")) Then
+                    LblNumSemana.Text = row("numeroSemana").ToString()
+                Else
+                    LblNumSemana.Text = "-"
+                End If
+
+                ' NumLote
+                If Not IsDBNull(row("numLoteParto")) Then
+                    LblNumLote.Text = row("numLoteParto").ToString()
+                Else
+                    LblNumLote.Text = "-"
+                End If
+
+                ' FechaInicio
+                If Not IsDBNull(row("fechaDesde")) Then
+                    Dim fechaInicio As Date = Convert.ToDateTime(row("fechaDesde"))
+                    LblFechaInicio.Text = fechaInicio.ToString("dd/MM/yyyy")
+                Else
+                    LblFechaInicio.Text = "-"
+                End If
+
+                ' FechaFin
+                If Not IsDBNull(row("fechaHasta")) Then
+                    Dim fechaFin As Date = Convert.ToDateTime(row("fechaHasta"))
+                    LblFechaFin.Text = fechaFin.ToString("dd/MM/yyyy")
+                Else
+                    LblFechaFin.Text = "-"
+                End If
+            Else
+                ' Si no hay datos, limpiar los labels
+                LblNumSemana.Text = "-"
+                LblNumLote.Text = "-"
+                LblFechaInicio.Text = "-"
+                LblFechaFin.Text = "-"
+            End If
+        Catch ex As Exception
+            ' En caso de error, limpiar los labels
+            LblNumSemana.Text = "-"
+            LblNumLote.Text = "-"
+            LblFechaInicio.Text = "-"
+            LblFechaFin.Text = "-"
+            clsBasicas.controlException(Name, ex)
+        End Try
     End Sub
 
     Private Sub BtnGuardar_Click(sender As Object, e As EventArgs) Handles BtnGuardar.Click

@@ -1348,4 +1348,19 @@ Public Class cdControlAnimal
         con.Salir()
         Return dt
     End Function
+
+    Public Function Cd_ConsultarInfoCerdaGestacion(name As String, obj As coControlAnimal) As DataTable
+        Dim dt As New DataTable
+        Try
+            con.Abrir()
+            Dim da As New SqlDataAdapter(name, con.con)
+            da.SelectCommand.CommandType = 4
+            da.SelectCommand.Parameters.AddWithValue("@idAnimal", obj.Codigo)
+            da.Fill(dt)
+        Catch ex As Exception
+            Throw ex
+        End Try
+        con.Salir()
+        Return dt
+    End Function
 End Class
