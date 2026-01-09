@@ -9,11 +9,11 @@ Public Class FrmControlInventario
 
     Private Sub FrmControlEpp_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         WindowState = Windows.Forms.FormWindowState.Maximized
-        cbxestado.SelectedIndex = 0
+        cbxestado.SelectedIndex = 1
         dtpFechaDesde.Value = Now.Date
         dtpFechaHasta.Value = Now.Date
         clsBasicas.Formato_Tablas_Grid(dtgListado)
-        cbxestado.SelectedIndex = 0
+        cbxestado.SelectedIndex = 1
         Consultar()
         cbxtipodocumento.SelectedValue = 10
     End Sub
@@ -150,6 +150,31 @@ Public Class FrmControlInventario
             Dim f As New FrmSalidaProducto
             f.ShowDialog()
             Consultar()
+        Catch ex As Exception
+            clsBasicas.controlException(Name, ex)
+        End Try
+    End Sub
+
+    Private Sub btnAnular_Click(sender As Object, e As EventArgs) Handles btnAnular.Click
+        Try
+            If dtgListado.ActiveRow IsNot Nothing AndAlso dtgListado.ActiveRow.Cells(0).Value IsNot Nothing Then
+                ' Pregunta de confirmación
+                Dim respuesta As DialogResult = MessageBox.Show("¿Realmente desea anular el registro de inventario seleccionado?", "Confirmar Anulación", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+                If respuesta = DialogResult.Yes Then
+                    Dim cn As New cnIngreso
+                    Dim obj As New coIngreso
+                    obj.Codigo = dtgListado.ActiveRow.Cells(0).Value.ToString()
+                    Dim mensaje As String = cn.Cn_anularinventariocreado(obj)
+                    If obj.Coderror = 0 Then
+                        msj_ok(mensaje)
+                        Consultar() ' Refresca la grilla si fue exitoso
+                    Else
+                        msj_advert(mensaje)
+                    End If
+                End If
+            Else
+                msj_advert("Seleccione un registro válido.")
+            End If
         Catch ex As Exception
             clsBasicas.controlException(Name, ex)
         End Try

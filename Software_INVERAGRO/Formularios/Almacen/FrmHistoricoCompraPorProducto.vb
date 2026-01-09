@@ -42,4 +42,15 @@ Public Class FrmHistoricoCompraPorProducto
     Private Sub GroupBox2_Enter(sender As Object, e As EventArgs) Handles GroupBox2.Enter
 
     End Sub
+
+    Private Sub dtgListado_InitializeLayout(sender As Object, e As Infragistics.Win.UltraWinGrid.InitializeLayoutEventArgs) Handles dtgListado.InitializeLayout
+        Try
+            e.Layout.Bands(0).Summaries.Clear()
+            clsBasicas.Totales_Formato(dtgListado, e, 1)
+            clsBasicas.SumarTotales_Formato(dtgListado, e, 2)
+            clsBasicas.SumarTotales_Formato(dtgListado, e, 8)
+        Catch ex As Exception
+            clsBasicas.controlException(Name, ex)
+        End Try
+    End Sub
 End Class

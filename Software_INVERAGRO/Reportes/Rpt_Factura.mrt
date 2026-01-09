@@ -64,10 +64,10 @@
         <PageHeaderBand1 Ref="6" type="PageHeaderBand" isKey="true">
           <Brush>Transparent</Brush>
           <ClientRectangle>0,0.4,20,7.8</ClientRectangle>
-          <Components isList="true" count="9">
+          <Components isList="true" count="7">
             <Image2 Ref="7" type="Image" isKey="true">
               <Brush>White</Brush>
-              <ClientRectangle>13.2,0.4,6.4,4</ClientRectangle>
+              <ClientRectangle>13.6,0.2,6.4,4</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Guid>4b882cbee4c04df8ad76fd8cd1533d60</Guid>
               <HorAlignment>Center</HorAlignment>
@@ -82,7 +82,7 @@
             <Text19 Ref="8" type="Text" isKey="true">
               <Brush>Transparent</Brush>
               <CanGrow>True</CanGrow>
-              <ClientRectangle>0,3.2,2.6,0.6</ClientRectangle>
+              <ClientRectangle>0,3,2.6,0.6</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Arial,12,Bold</Font>
               <Guid>edabb1abacce4062bd110c16913da092</Guid>
@@ -99,7 +99,7 @@
             <Text21 Ref="9" type="Text" isKey="true">
               <Brush>Transparent</Brush>
               <CanGrow>True</CanGrow>
-              <ClientRectangle>2.6,3.2,3.8,0.6</ClientRectangle>
+              <ClientRectangle>2.6,3,3.8,0.6</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Arial,12,Bold</Font>
               <Guid>9000545db5f342b18b5c362933b39168</Guid>
@@ -116,39 +116,9 @@
               <Type>Expression</Type>
               <VertAlignment>Center</VertAlignment>
             </Text21>
-            <Text1 Ref="11" type="Text" isKey="true">
+            <Text5 Ref="11" type="Text" isKey="true">
               <Brush>Transparent</Brush>
-              <CanGrow>True</CanGrow>
-              <ClientRectangle>0,2.4,2.6,0.6</ClientRectangle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,12,Bold</Font>
-              <Guid>43f9c2e421fd43559ff249613cabfd4c</Guid>
-              <Margins>0,0,0,0</Margins>
-              <Name>Text1</Name>
-              <Page isRef="5" />
-              <Parent isRef="6" />
-              <Text>Factura n° : </Text>
-              <TextBrush>Black</TextBrush>
-              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
-              <Type>Expression</Type>
-              <VertAlignment>Center</VertAlignment>
-            </Text1>
-            <Text3 Ref="12" type="Text" isKey="true">
-              <Brush>Transparent</Brush>
-              <ClientRectangle>2.6,2.4,3.8,0.6</ClientRectangle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,12,Bold</Font>
-              <Margins>0,0,0,0</Margins>
-              <Name>Text3</Name>
-              <Page isRef="5" />
-              <Parent isRef="6" />
-              <Text>{Table.serie}</Text>
-              <TextBrush>Black</TextBrush>
-              <VertAlignment>Center</VertAlignment>
-            </Text3>
-            <Text5 Ref="13" type="Text" isKey="true">
-              <Brush>Transparent</Brush>
-              <ClientRectangle>0,4.2,12.8,0.8</ClientRectangle>
+              <ClientRectangle>0,3.6,12.8,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Arial,12,Bold</Font>
               <Margins>0,0,0,0</Margins>
@@ -159,9 +129,9 @@
               <TextBrush>Black</TextBrush>
               <VertAlignment>Center</VertAlignment>
             </Text5>
-            <Text6 Ref="14" type="Text" isKey="true">
+            <Text6 Ref="12" type="Text" isKey="true">
               <Brush>Transparent</Brush>
-              <ClientRectangle>0,5,12.8,0.6</ClientRectangle>
+              <ClientRectangle>0,4.4,12.8,0.6</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Arial,10</Font>
               <Margins>0,0,0,0</Margins>
@@ -172,9 +142,9 @@
               <TextBrush>Black</TextBrush>
               <VertAlignment>Center</VertAlignment>
             </Text6>
-            <Text8 Ref="15" type="Text" isKey="true">
+            <Text8 Ref="13" type="Text" isKey="true">
               <Brush>Transparent</Brush>
-              <ClientRectangle>0,5.6,12.8,2</ClientRectangle>
+              <ClientRectangle>0,5,12.8,2</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Arial,10</Font>
               <Margins>0,0,0,0</Margins>
@@ -185,9 +155,9 @@
               <TextBrush>Black</TextBrush>
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
             </Text8>
-            <Text9 Ref="16" type="Text" isKey="true">
+            <Text9 Ref="14" type="Text" isKey="true">
               <Brush>Transparent</Brush>
-              <ClientRectangle>1,0.4,11.8,1.8</ClientRectangle>
+              <ClientRectangle>1.2,0.8,11.8,1.8</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Arial,20,Bold</Font>
               <HorAlignment>Center</HorAlignment>
@@ -206,11 +176,11 @@
           <Page isRef="5" />
           <Parent isRef="5" />
         </PageHeaderBand1>
-        <PageFooterBand1 Ref="17" type="PageFooterBand" isKey="true">
+        <PageFooterBand1 Ref="15" type="PageFooterBand" isKey="true">
           <Brush>Transparent</Brush>
           <ClientRectangle>0,24.7,20,3</ClientRectangle>
           <Components isList="true" count="5">
-            <Text13 Ref="18" type="Text" isKey="true">
+            <Text13 Ref="16" type="Text" isKey="true">
               <Brush>White</Brush>
               <ClientRectangle>0.2,1.6,8.6,0.6</ClientRectangle>
               <Conditions isList="true" count="0" />
@@ -219,13 +189,13 @@
               <Margins>0,0,0,0</Margins>
               <Name>Text13</Name>
               <Page isRef="5" />
-              <Parent isRef="17" />
+              <Parent isRef="15" />
               <Text>CELULAR: 949924090</Text>
               <TextBrush>Black</TextBrush>
               <Type>Expression</Type>
               <VertAlignment>Center</VertAlignment>
             </Text13>
-            <Text2 Ref="19" type="Text" isKey="true">
+            <Text2 Ref="17" type="Text" isKey="true">
               <Brush>White</Brush>
               <ClientRectangle>0.2,-0.1,8.6,0.6</ClientRectangle>
               <Conditions isList="true" count="0" />
@@ -234,13 +204,13 @@
               <Margins>0,0,0,0</Margins>
               <Name>Text2</Name>
               <Page isRef="5" />
-              <Parent isRef="17" />
+              <Parent isRef="15" />
               <Text>CONTACTO</Text>
               <TextBrush>Black</TextBrush>
               <Type>Expression</Type>
               <VertAlignment>Center</VertAlignment>
             </Text2>
-            <Text11 Ref="20" type="Text" isKey="true">
+            <Text11 Ref="18" type="Text" isKey="true">
               <Brush>White</Brush>
               <ClientRectangle>0.2,0.5,9.4,0.6</ClientRectangle>
               <Conditions isList="true" count="0" />
@@ -249,13 +219,13 @@
               <Margins>0,0,0,0</Margins>
               <Name>Text11</Name>
               <Page isRef="5" />
-              <Parent isRef="17" />
+              <Parent isRef="15" />
               <Text>INVERAGRO SAN MARTIN DE PORRAS S.A.C</Text>
               <TextBrush>Black</TextBrush>
               <Type>Expression</Type>
               <VertAlignment>Center</VertAlignment>
             </Text11>
-            <Text12 Ref="21" type="Text" isKey="true">
+            <Text12 Ref="19" type="Text" isKey="true">
               <Brush>White</Brush>
               <ClientRectangle>0.2,1.1,8.6,0.6</ClientRectangle>
               <Conditions isList="true" count="0" />
@@ -264,13 +234,13 @@
               <Margins>0,0,0,0</Margins>
               <Name>Text12</Name>
               <Page isRef="5" />
-              <Parent isRef="17" />
+              <Parent isRef="15" />
               <Text>RUC: 20479862738</Text>
               <TextBrush>Black</TextBrush>
               <Type>Expression</Type>
               <VertAlignment>Center</VertAlignment>
             </Text12>
-            <Text14 Ref="22" type="Text" isKey="true">
+            <Text14 Ref="20" type="Text" isKey="true">
               <Brush>White</Brush>
               <ClientRectangle>0.2,2.2,19.6,0.6</ClientRectangle>
               <Conditions isList="true" count="0" />
@@ -279,7 +249,7 @@
               <Margins>0,0,0,0</Margins>
               <Name>Text14</Name>
               <Page isRef="5" />
-              <Parent isRef="17" />
+              <Parent isRef="15" />
               <Text>DIRECCIÓN : CAR. FERNANDO BELAUNDE TERRY NRO. 0 INT. A BARRIO EL EDEN (KM. 296+ 400)
 </Text>
               <TextBrush>Black</TextBrush>
@@ -293,11 +263,11 @@
           <Page isRef="5" />
           <Parent isRef="5" />
         </PageFooterBand1>
-        <HeaderTable12 Ref="23" type="HeaderBand" isKey="true">
+        <HeaderTable12 Ref="21" type="HeaderBand" isKey="true">
           <Brush>Transparent</Brush>
           <ClientRectangle>0,9,20,0.8</ClientRectangle>
           <Components isList="true" count="5">
-            <HeaderTable1_Producto2 Ref="24" type="Text" isKey="true">
+            <HeaderTable1_Producto2 Ref="22" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>Transparent</Brush>
               <ClientRectangle>0,0,6.2,0.8</ClientRectangle>
@@ -307,14 +277,14 @@
               <Margins>0,0,0,0</Margins>
               <Name>HeaderTable1_Producto2</Name>
               <Page isRef="5" />
-              <Parent isRef="23" />
+              <Parent isRef="21" />
               <Text>PRODUCTO</Text>
               <TextBrush>Black</TextBrush>
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
               <Type>Expression</Type>
               <VertAlignment>Center</VertAlignment>
             </HeaderTable1_Producto2>
-            <HeaderTable1_Cantidad2 Ref="25" type="Text" isKey="true">
+            <HeaderTable1_Cantidad2 Ref="23" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>Transparent</Brush>
               <ClientRectangle>6.2,0,3,0.8</ClientRectangle>
@@ -324,14 +294,14 @@
               <Margins>0,0,0,0</Margins>
               <Name>HeaderTable1_Cantidad2</Name>
               <Page isRef="5" />
-              <Parent isRef="23" />
+              <Parent isRef="21" />
               <Text>CANTIDAD</Text>
               <TextBrush>Black</TextBrush>
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
               <Type>Expression</Type>
               <VertAlignment>Center</VertAlignment>
             </HeaderTable1_Cantidad2>
-            <HeaderTable1_Precio2 Ref="26" type="Text" isKey="true">
+            <HeaderTable1_Precio2 Ref="24" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>Transparent</Brush>
               <ClientRectangle>9.2,0,2.8,0.8</ClientRectangle>
@@ -341,14 +311,14 @@
               <Margins>0,0,0,0</Margins>
               <Name>HeaderTable1_Precio2</Name>
               <Page isRef="5" />
-              <Parent isRef="23" />
+              <Parent isRef="21" />
               <Text>PRECIO</Text>
               <TextBrush>Black</TextBrush>
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
               <Type>Expression</Type>
               <VertAlignment>Center</VertAlignment>
             </HeaderTable1_Precio2>
-            <HeaderTable1__Peso_Promedio Ref="27" type="Text" isKey="true">
+            <HeaderTable1__Peso_Promedio Ref="25" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>Transparent</Brush>
               <ClientRectangle>12,0,4,0.8</ClientRectangle>
@@ -358,14 +328,14 @@
               <Margins>0,0,0,0</Margins>
               <Name>HeaderTable1__Peso_Promedio</Name>
               <Page isRef="5" />
-              <Parent isRef="23" />
+              <Parent isRef="21" />
               <Text>PESO PROMEDIO</Text>
               <TextBrush>Black</TextBrush>
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
               <Type>Expression</Type>
               <VertAlignment>Center</VertAlignment>
             </HeaderTable1__Peso_Promedio>
-            <HeaderTable1_Total2 Ref="28" type="Text" isKey="true">
+            <HeaderTable1_Total2 Ref="26" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>Transparent</Brush>
               <ClientRectangle>16,0,4,0.8</ClientRectangle>
@@ -375,7 +345,7 @@
               <Margins>0,0,0,0</Margins>
               <Name>HeaderTable1_Total2</Name>
               <Page isRef="5" />
-              <Parent isRef="23" />
+              <Parent isRef="21" />
               <Text>TOTAL</Text>
               <TextBrush>Black</TextBrush>
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
@@ -388,12 +358,12 @@
           <Page isRef="5" />
           <Parent isRef="5" />
         </HeaderTable12>
-        <DataTable12 Ref="29" type="DataBand" isKey="true">
+        <DataTable12 Ref="27" type="DataBand" isKey="true">
           <Brush>Transparent</Brush>
           <BusinessObjectGuid isNull="true" />
           <ClientRectangle>0,10.6,20,0.8</ClientRectangle>
           <Components isList="true" count="5">
-            <DataTable1_Producto2 Ref="30" type="Text" isKey="true">
+            <DataTable1_Producto2 Ref="28" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>Transparent</Brush>
               <CanGrow>True</CanGrow>
@@ -404,13 +374,13 @@
               <Margins>0,0,0,0</Margins>
               <Name>DataTable1_Producto2</Name>
               <Page isRef="5" />
-              <Parent isRef="29" />
+              <Parent isRef="27" />
               <Text>{Table1.Producto}</Text>
               <TextBrush>Black</TextBrush>
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
               <VertAlignment>Center</VertAlignment>
             </DataTable1_Producto2>
-            <DataTable1_Cantidad2 Ref="31" type="Text" isKey="true">
+            <DataTable1_Cantidad2 Ref="29" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>Transparent</Brush>
               <CanGrow>True</CanGrow>
@@ -421,13 +391,13 @@
               <Margins>0,0,0,0</Margins>
               <Name>DataTable1_Cantidad2</Name>
               <Page isRef="5" />
-              <Parent isRef="29" />
+              <Parent isRef="27" />
               <Text>{Table1.Cantidad}</Text>
               <TextBrush>Black</TextBrush>
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
               <VertAlignment>Center</VertAlignment>
             </DataTable1_Cantidad2>
-            <DataTable1_Precio2 Ref="32" type="Text" isKey="true">
+            <DataTable1_Precio2 Ref="30" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>Transparent</Brush>
               <CanGrow>True</CanGrow>
@@ -438,13 +408,13 @@
               <Margins>0,0,0,0</Margins>
               <Name>DataTable1_Precio2</Name>
               <Page isRef="5" />
-              <Parent isRef="29" />
+              <Parent isRef="27" />
               <Text>{Table1.Precio}</Text>
               <TextBrush>Black</TextBrush>
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
               <VertAlignment>Center</VertAlignment>
             </DataTable1_Precio2>
-            <DataTable1__Peso_Promedio Ref="33" type="Text" isKey="true">
+            <DataTable1__Peso_Promedio Ref="31" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>Transparent</Brush>
               <CanGrow>True</CanGrow>
@@ -455,13 +425,13 @@
               <Margins>0,0,0,0</Margins>
               <Name>DataTable1__Peso_Promedio</Name>
               <Page isRef="5" />
-              <Parent isRef="29" />
+              <Parent isRef="27" />
               <Text>{Table1._Peso_Promedio}</Text>
               <TextBrush>Black</TextBrush>
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
               <VertAlignment>Center</VertAlignment>
             </DataTable1__Peso_Promedio>
-            <DataTable1_Total2 Ref="34" type="Text" isKey="true">
+            <DataTable1_Total2 Ref="32" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>Transparent</Brush>
               <CanGrow>True</CanGrow>
@@ -472,7 +442,7 @@
               <Margins>0,0,0,0</Margins>
               <Name>DataTable1_Total2</Name>
               <Page isRef="5" />
-              <Parent isRef="29" />
+              <Parent isRef="27" />
               <Text>{Table1.Total}</Text>
               <TextBrush>Black</TextBrush>
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
@@ -487,12 +457,12 @@
           <Parent isRef="5" />
           <Sort isList="true" count="0" />
         </DataTable12>
-        <ReportSummaryBand1 Ref="35" type="ReportSummaryBand" isKey="true">
+        <ReportSummaryBand1 Ref="33" type="ReportSummaryBand" isKey="true">
           <Border>Top;Black;1;Solid;False;4;Black</Border>
           <Brush>Transparent</Brush>
           <ClientRectangle>0,12.2,20,3.8</ClientRectangle>
           <Components isList="true" count="6">
-            <Text4 Ref="36" type="Text" isKey="true">
+            <Text4 Ref="34" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>Transparent</Brush>
               <ClientRectangle>15.2,0.4,4.8,0.8</ClientRectangle>
@@ -503,12 +473,12 @@
               <Margins>0,0,0,0</Margins>
               <Name>Text4</Name>
               <Page isRef="5" />
-              <Parent isRef="35" />
+              <Parent isRef="33" />
               <Text>{Table2.TotalGeneral}</Text>
               <TextBrush>Black</TextBrush>
               <VertAlignment>Center</VertAlignment>
             </Text4>
-            <Text7 Ref="37" type="Text" isKey="true">
+            <Text7 Ref="35" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>Transparent</Brush>
               <ClientRectangle>10.2,0.4,5,0.8</ClientRectangle>
@@ -519,14 +489,14 @@
               <Margins>0,0,0,0</Margins>
               <Name>Text7</Name>
               <Page isRef="5" />
-              <Parent isRef="35" />
+              <Parent isRef="33" />
               <Text>Subtotal : </Text>
               <TextBrush>Black</TextBrush>
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
               <Type>Expression</Type>
               <VertAlignment>Center</VertAlignment>
             </Text7>
-            <Text10 Ref="38" type="Text" isKey="true">
+            <Text10 Ref="36" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>Transparent</Brush>
               <ClientRectangle>10.2,1.2,5,0.8</ClientRectangle>
@@ -537,14 +507,14 @@
               <Margins>0,0,0,0</Margins>
               <Name>Text10</Name>
               <Page isRef="5" />
-              <Parent isRef="35" />
+              <Parent isRef="33" />
               <Text>Impuestos : </Text>
               <TextBrush>Black</TextBrush>
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
               <Type>Expression</Type>
               <VertAlignment>Center</VertAlignment>
             </Text10>
-            <Text16 Ref="39" type="Text" isKey="true">
+            <Text16 Ref="37" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>Transparent</Brush>
               <ClientRectangle>10.2,2,5,0.8</ClientRectangle>
@@ -555,14 +525,14 @@
               <Margins>0,0,0,0</Margins>
               <Name>Text16</Name>
               <Page isRef="5" />
-              <Parent isRef="35" />
+              <Parent isRef="33" />
               <Text>Total : </Text>
               <TextBrush>Black</TextBrush>
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
               <Type>Expression</Type>
               <VertAlignment>Center</VertAlignment>
             </Text16>
-            <Text18 Ref="40" type="Text" isKey="true">
+            <Text18 Ref="38" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>Transparent</Brush>
               <ClientRectangle>15.2,1.2,4.8,0.8</ClientRectangle>
@@ -572,12 +542,12 @@
               <Margins>0,0,0,0</Margins>
               <Name>Text18</Name>
               <Page isRef="5" />
-              <Parent isRef="35" />
+              <Parent isRef="33" />
               <Text>{Table.igv}</Text>
               <TextBrush>Black</TextBrush>
               <VertAlignment>Center</VertAlignment>
             </Text18>
-            <Text15 Ref="41" type="Text" isKey="true">
+            <Text15 Ref="39" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>Transparent</Brush>
               <ClientRectangle>15.2,2,4.8,0.8</ClientRectangle>
@@ -587,7 +557,7 @@
               <Margins>0,0,0,0</Margins>
               <Name>Text15</Name>
               <Page isRef="5" />
-              <Parent isRef="35" />
+              <Parent isRef="33" />
               <Text>{Table.total}</Text>
               <TextBrush>Black</TextBrush>
               <VertAlignment>Center</VertAlignment>
@@ -606,14 +576,14 @@
       <PageHeight>29.7</PageHeight>
       <PageWidth>21</PageWidth>
       <Report isRef="0" />
-      <Watermark Ref="42" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
+      <Watermark Ref="40" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
         <Font>Arial,100</Font>
         <TextBrush>[50:0:0:0]</TextBrush>
       </Watermark>
     </Page1>
   </Pages>
   <PreviewSettings>268435455</PreviewSettings>
-  <PrinterSettings Ref="43" type="Stimulsoft.Report.Print.StiPrinterSettings" isKey="true" />
+  <PrinterSettings Ref="41" type="Stimulsoft.Report.Print.StiPrinterSettings" isKey="true" />
   <ReferencedAssemblies isList="true" count="8">
     <value>System.Dll</value>
     <value>System.Drawing.Dll</value>
@@ -625,10 +595,10 @@
     <value>Stimulsoft.Report.Dll</value>
   </ReferencedAssemblies>
   <ReportAlias>Report</ReportAlias>
-  <ReportChanged>1/5/2026 11:47:25 PM</ReportChanged>
+  <ReportChanged>1/7/2026 11:18:35 PM</ReportChanged>
   <ReportCreated>3/1/2019 10:36:14 AM</ReportCreated>
   <ReportFile>C:\Users\djjhi\OneDrive\Documentos\GitHub\Software_Inveragro_ERP\Software_INVERAGRO\Formularios\bin\Debug\Reportes\Rpt_Factura.mrt</ReportFile>
-  <ReportGuid>f209385121514fb291f0bd1cc0798cff</ReportGuid>
+  <ReportGuid>62a63a7959684c5caa2d0f67bcae0b02</ReportGuid>
   <ReportName>Report</ReportName>
   <ReportUnit>Centimeters</ReportUnit>
   <ReportVersion>2016.1.0</ReportVersion>
