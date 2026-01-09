@@ -2585,7 +2585,9 @@
     <Compile Include="produccion\CroquisPlanteles\FrmCroquisPlantel4.Designer.vb">
       <DependentUpon>FrmCroquisPlantel4.vb</DependentUpon>
     </Compile>
-    <Compile Include="produccion\CroquisPlanteles\FrmCroquisPlantel4.vb" />
+    <Compile Include="produccion\CroquisPlanteles\FrmCroquisPlantel4.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="produccion\DespachosCerdosVenta\FrmAtenderPedidoCerdoVenta.Designer.vb">
       <DependentUpon>FrmAtenderPedidoCerdoVenta.vb</DependentUpon>
     </Compile>
