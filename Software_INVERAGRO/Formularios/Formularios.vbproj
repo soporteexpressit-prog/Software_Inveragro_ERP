@@ -2083,6 +2083,12 @@
     <Compile Include="Ventas\FrmBuscarProductoparaVentas.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Ventas\FrmCambiarFechaPedido.Designer.vb">
+      <DependentUpon>FrmCambiarFechaPedido.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ventas\FrmCambiarFechaPedido.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ventas\FrmConfirmarTransferencia.Designer.vb">
       <DependentUpon>FrmConfirmarTransferencia.vb</DependentUpon>
     </Compile>
@@ -4833,6 +4839,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ventas\FrmBuscarProductoparaVentas.resx">
       <DependentUpon>FrmBuscarProductoparaVentas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventas\FrmCambiarFechaPedido.resx">
+      <DependentUpon>FrmCambiarFechaPedido.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventas\FrmConfirmarTransferencia.resx">
       <DependentUpon>FrmConfirmarTransferencia.vb</DependentUpon>

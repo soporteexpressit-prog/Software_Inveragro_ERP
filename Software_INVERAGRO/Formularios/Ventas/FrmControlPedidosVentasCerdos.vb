@@ -895,4 +895,31 @@ Public Class FrmControlPedidosVentasCerdos
             clsBasicas.controlException(Name, ex)
         End Try
     End Sub
+
+    Private Sub EditarFechaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EditarFechaToolStripMenuItem.Click
+        Try
+            Dim activeRow As Infragistics.Win.UltraWinGrid.UltraGridRow = Nothing
+
+            If dtgListado.ActiveRow IsNot Nothing Then
+                Dim codigo As String = dtgListado.ActiveRow.Cells(0).Value.ToString()
+                Dim f As New FrmCambiarFechaPedido
+                f._codigo = codigo
+                ' Pasar la fecha directamente desde la tabla (columna 5 corresponde a F.pedido)
+                If dtgListado.ActiveRow.Cells.Count > 5 AndAlso Not IsDBNull(dtgListado.ActiveRow.Cells(5).Value) Then
+                    Dim fecha As DateTime
+                    If DateTime.TryParse(dtgListado.ActiveRow.Cells(5).Value.ToString(), fecha) Then
+                        f.FechaPedido = fecha
+                    End If
+                End If
+
+                f.ShowDialog()
+                Consultar()
+            Else
+                MessageBox.Show("Seleccione una fila para editar.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            End If
+            Consultar()
+        Catch ex As Exception
+            MessageBox.Show("Ocurrió un error: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
 End Class

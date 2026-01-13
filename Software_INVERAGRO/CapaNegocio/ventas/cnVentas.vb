@@ -43,6 +43,9 @@ Public Class cnVentas
     Public Function Cn_RegPedidoVentaCerdoupdate(ByRef obj As coVentas) As String
         Return cls_at.Cd_RegPedidoVentaCerdoupdate("[j_pa_update_ventacerdo]", obj)
     End Function
+    Public Function Cn_RegPedidoVentaCerdoupdatefecha(ByRef obj As coVentas) As String
+        Return cls_at.Cd_RegPedidoVentaCerdoupdatefecha("[j_pa_update_ventacerdo_fecha]", obj)
+    End Function
     Public Function Cn_RegPedidoVentaCerdoTransferencia(ByRef obj As coVentas) As String
         Return cls_at.Cd_RegPedidoVentaCerdo("[i_pa_regpedidoventa_cerdo_x_transferencia]", obj)
     End Function
