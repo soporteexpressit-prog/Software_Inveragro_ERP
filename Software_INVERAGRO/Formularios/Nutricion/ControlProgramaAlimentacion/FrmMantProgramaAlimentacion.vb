@@ -12,6 +12,7 @@ Public Class FrmMantProgramaAlimentacion
     Private Sub FrmMantProgramaAlimentacion_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
             Inicializar()
+            ListarPlanteles()
             ListarAreas()
             CargarTablaProgAlimentacion()
             clsBasicas.Formato_Tablas_Grid(DtgDetalleProgramaAlimentacion)
@@ -29,8 +30,25 @@ Public Class FrmMantProgramaAlimentacion
 
     Sub Inicializar()
         DtpFecha.Value = Now.Date
+        DtpFechaFin.Value = Now.Date
         CmbEstado.SelectedIndex = 0
         TxtRacion.ReadOnly = True
+    End Sub
+
+    Sub ListarPlanteles()
+        Dim cn As New cnUbicacion
+        Dim tb As New DataTable
+        tb = cn.Cn_ListarPlanteles().Copy
+        tb.TableName = "tmp"
+        tb.Columns(1).ColumnName = "Seleccione un Plantel"
+        With CmbUbicacion
+            .DataSource = tb
+            .DisplayMember = tb.Columns(1).ColumnName
+            .ValueMember = tb.Columns(0).ColumnName
+            If (tb.Rows.Count > 0) Then
+                .Value = tb.Rows(0)(0)
+            End If
+        End With
     End Sub
 
     Sub ConsultarxId()
@@ -44,6 +62,8 @@ Public Class FrmMantProgramaAlimentacion
                 TxtMotivo.Text = ds.Tables(0).Rows(0)("nota").ToString
                 CmbEstado.Text = ds.Tables(0).Rows(0)("estado").ToString
                 DtpFecha.Value = ds.Tables(0).Rows(0)("fecha")
+                DtpFechaFin.Value = ds.Tables(0).Rows(0)("fechaFin")
+                CmbUbicacion.Value = ds.Tables(0).Rows(0)("idPlantel")
             End If
 
             If (ds.Tables(1).Rows.Count > 0) Then
@@ -311,6 +331,8 @@ Public Class FrmMantProgramaAlimentacion
                     .Operacion = If(idProgramaAlimentacion = 0, 0, 1),
                     .Codigo = idProgramaAlimentacion,
                     .FechaElaboracion = DtpFecha.Value,
+                    .FechaHasta = DtpFechaFin.Value,
+                    .IdUbicacion = CmbUbicacion.Value,
                     .Descripcion = "PROGRAMA DE ALIMENTACIÓN" & " " & DtpFecha.Value.ToString("dd/MM/yyyy"),
                     .Motivo = TxtMotivo.Text,
                     .Iduser = VP_IdUser,
