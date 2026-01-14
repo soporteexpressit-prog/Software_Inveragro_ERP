@@ -1807,6 +1807,12 @@
     <Compile Include="produccion\HistoricoDepuraciones\FrmHistoricoDepuraciones.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="produccion\HistoricoMortalidad\FrmHistoricoMortalidadChanchillaMarrana.Designer.vb">
+      <DependentUpon>FrmHistoricoMortalidadChanchillaMarrana.vb</DependentUpon>
+    </Compile>
+    <Compile Include="produccion\HistoricoMortalidad\FrmHistoricoMortalidadChanchillaMarrana.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="produccion\HistoricoMortalidad\FrmReporteMortalidadLoteCompleto.Designer.vb">
       <DependentUpon>FrmReporteMortalidadLoteCompleto.vb</DependentUpon>
     </Compile>
@@ -4701,6 +4707,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="produccion\HistoricoDepuraciones\FrmHistoricoDepuraciones.resx">
       <DependentUpon>FrmHistoricoDepuraciones.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="produccion\HistoricoMortalidad\FrmHistoricoMortalidadChanchillaMarrana.resx">
+      <DependentUpon>FrmHistoricoMortalidadChanchillaMarrana.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="produccion\HistoricoMortalidad\FrmReporteMortalidadLoteCompleto.resx">
       <DependentUpon>FrmReporteMortalidadLoteCompleto.vb</DependentUpon>

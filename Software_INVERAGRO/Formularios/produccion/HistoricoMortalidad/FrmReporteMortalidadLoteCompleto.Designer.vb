@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FrmReporteMortalidadLoteCompleto
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class FrmReporteMortalidadLoteCompleto
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim Appearance1 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance2 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
@@ -51,6 +51,7 @@ Partial Class FrmReporteMortalidadLoteCompleto
         Dim Appearance26 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance27 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Me.Contenedor = New System.Windows.Forms.Panel()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.CmbLotes = New Infragistics.Win.UltraWinGrid.UltraCombo()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -64,30 +65,42 @@ Partial Class FrmReporteMortalidadLoteCompleto
         Me.Ptbx_Cargando = New System.Windows.Forms.PictureBox()
         Me.dtgListado = New Infragistics.Win.UltraWinGrid.UltraGrid()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
+        Me.GrupoFiltros = New System.Windows.Forms.GroupBox()
         Me.Contenedor.SuspendLayout()
         CType(Me.CmbLotes, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.BarraNavegacion.SuspendLayout()
         CType(Me.Ptbx_Cargando, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dtgListado, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GrupoFiltros.SuspendLayout()
         Me.SuspendLayout()
         '
         'Contenedor
         '
         Me.Contenedor.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(233, Byte), Integer))
-        Me.Contenedor.Controls.Add(Me.Label5)
-        Me.Contenedor.Controls.Add(Me.CmbLotes)
+        Me.Contenedor.Controls.Add(Me.GrupoFiltros)
+        Me.Contenedor.Controls.Add(Me.Label1)
         Me.Contenedor.Controls.Add(Me.Label6)
         Me.Contenedor.Controls.Add(Me.LblCampaña)
-        Me.Contenedor.Controls.Add(Me.btnBuscar)
-        Me.Contenedor.Controls.Add(Me.CmbAnios)
-        Me.Contenedor.Controls.Add(Me.Label3)
         Me.Contenedor.Controls.Add(Me.BarraNavegacion)
         Me.Contenedor.Dock = System.Windows.Forms.DockStyle.Top
         Me.Contenedor.Location = New System.Drawing.Point(0, 0)
-        Me.Contenedor.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Contenedor.Margin = New System.Windows.Forms.Padding(2, 1, 2, 1)
         Me.Contenedor.Name = "Contenedor"
-        Me.Contenedor.Size = New System.Drawing.Size(1808, 274)
+        Me.Contenedor.Size = New System.Drawing.Size(1228, 216)
         Me.Contenedor.TabIndex = 15
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.Label1.Font = New System.Drawing.Font("Verdana", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.Black
+        Me.Label1.Location = New System.Drawing.Point(36, 56)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(407, 12)
+        Me.Label1.TabIndex = 241
+        Me.Label1.Text = "Histórico de todo el lote desde la etapa de maternidad hasta la etapa de engorde"
         '
         'Label5
         '
@@ -95,10 +108,10 @@ Partial Class FrmReporteMortalidadLoteCompleto
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label5.Location = New System.Drawing.Point(502, 140)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label5.Location = New System.Drawing.Point(221, 34)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(77, 22)
+        Me.Label5.Size = New System.Drawing.Size(52, 14)
         Me.Label5.TabIndex = 240
         Me.Label5.Text = "Lotes :"
         '
@@ -159,10 +172,9 @@ Partial Class FrmReporteMortalidadLoteCompleto
         Me.CmbLotes.DisplayLayout.ScrollStyle = Infragistics.Win.UltraWinGrid.ScrollStyle.Immediate
         Me.CmbLotes.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy
         Me.CmbLotes.DropDownStyle = Infragistics.Win.UltraWinGrid.UltraComboStyle.DropDownList
-        Me.CmbLotes.Location = New System.Drawing.Point(593, 137)
-        Me.CmbLotes.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.CmbLotes.Location = New System.Drawing.Point(281, 30)
         Me.CmbLotes.Name = "CmbLotes"
-        Me.CmbLotes.Size = New System.Drawing.Size(241, 29)
+        Me.CmbLotes.Size = New System.Drawing.Size(139, 22)
         Me.CmbLotes.TabIndex = 239
         '
         'Label6
@@ -171,9 +183,10 @@ Partial Class FrmReporteMortalidadLoteCompleto
         Me.Label6.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(233, Byte), Integer))
         Me.Label6.Font = New System.Drawing.Font("Verdana", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(49, Byte), Integer))
-        Me.Label6.Location = New System.Drawing.Point(49, 44)
+        Me.Label6.Location = New System.Drawing.Point(33, 29)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(513, 29)
+        Me.Label6.Size = New System.Drawing.Size(346, 18)
         Me.Label6.TabIndex = 128
         Me.Label6.Text = "REPORTE DE MORTALIDAD POR LOTE"
         '
@@ -183,10 +196,10 @@ Partial Class FrmReporteMortalidadLoteCompleto
         Me.LblCampaña.BackColor = System.Drawing.Color.Transparent
         Me.LblCampaña.Font = New System.Drawing.Font("Verdana", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblCampaña.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.LblCampaña.Location = New System.Drawing.Point(1990, 108)
-        Me.LblCampaña.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.LblCampaña.Location = New System.Drawing.Point(1327, 70)
+        Me.LblCampaña.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblCampaña.Name = "LblCampaña"
-        Me.LblCampaña.Size = New System.Drawing.Size(28, 34)
+        Me.LblCampaña.Size = New System.Drawing.Size(19, 23)
         Me.LblCampaña.TabIndex = 238
         Me.LblCampaña.Text = "-"
         '
@@ -196,11 +209,10 @@ Partial Class FrmReporteMortalidadLoteCompleto
         Me.btnBuscar.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBuscar.Image = CType(resources.GetObject("btnBuscar.Image"), System.Drawing.Image)
         Me.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnBuscar.Location = New System.Drawing.Point(916, 120)
-        Me.btnBuscar.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btnBuscar.Location = New System.Drawing.Point(501, 21)
         Me.btnBuscar.Name = "btnBuscar"
-        Me.btnBuscar.Padding = New System.Windows.Forms.Padding(6, 0, 6, 0)
-        Me.btnBuscar.Size = New System.Drawing.Size(138, 63)
+        Me.btnBuscar.Padding = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.btnBuscar.Size = New System.Drawing.Size(92, 41)
         Me.btnBuscar.TabIndex = 179
         Me.btnBuscar.Text = "Buscar"
         Me.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -208,11 +220,12 @@ Partial Class FrmReporteMortalidadLoteCompleto
         '
         'CmbAnios
         '
-        Me.CmbAnios.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CmbAnios.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CmbAnios.FormattingEnabled = True
-        Me.CmbAnios.Location = New System.Drawing.Point(232, 133)
+        Me.CmbAnios.Location = New System.Drawing.Point(70, 29)
+        Me.CmbAnios.Margin = New System.Windows.Forms.Padding(2)
         Me.CmbAnios.Name = "CmbAnios"
-        Me.CmbAnios.Size = New System.Drawing.Size(199, 37)
+        Me.CmbAnios.Size = New System.Drawing.Size(115, 24)
         Me.CmbAnios.TabIndex = 176
         '
         'Label3
@@ -221,12 +234,12 @@ Partial Class FrmReporteMortalidadLoteCompleto
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(52, 140)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label3.Location = New System.Drawing.Point(23, 34)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(174, 22)
+        Me.Label3.Size = New System.Drawing.Size(41, 14)
         Me.Label3.TabIndex = 175
-        Me.Label3.Text = "Seleccione año :"
+        Me.Label3.Text = "Año :"
         '
         'BarraNavegacion
         '
@@ -235,11 +248,11 @@ Partial Class FrmReporteMortalidadLoteCompleto
         Me.BarraNavegacion.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
         Me.BarraNavegacion.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.BarraNavegacion.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnExportarhistoricomortalidad, Me.BtnCerrar})
-        Me.BarraNavegacion.Location = New System.Drawing.Point(0, 234)
-        Me.BarraNavegacion.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.BarraNavegacion.Location = New System.Drawing.Point(0, 178)
+        Me.BarraNavegacion.Margin = New System.Windows.Forms.Padding(2, 1, 2, 1)
         Me.BarraNavegacion.Name = "BarraNavegacion"
-        Me.BarraNavegacion.Padding = New System.Windows.Forms.Padding(0, 0, 3, 0)
-        Me.BarraNavegacion.Size = New System.Drawing.Size(1808, 40)
+        Me.BarraNavegacion.Padding = New System.Windows.Forms.Padding(0, 0, 2, 0)
+        Me.BarraNavegacion.Size = New System.Drawing.Size(1228, 38)
         Me.BarraNavegacion.TabIndex = 52
         Me.BarraNavegacion.Text = "Monitoreo"
         '
@@ -252,7 +265,7 @@ Partial Class FrmReporteMortalidadLoteCompleto
         Me.BtnExportarhistoricomortalidad.Margin = New System.Windows.Forms.Padding(5)
         Me.BtnExportarhistoricomortalidad.Name = "BtnExportarhistoricomortalidad"
         Me.BtnExportarhistoricomortalidad.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnExportarhistoricomortalidad.Size = New System.Drawing.Size(125, 30)
+        Me.BtnExportarhistoricomortalidad.Size = New System.Drawing.Size(92, 28)
         Me.BtnExportarhistoricomortalidad.Text = "Exportar"
         Me.BtnExportarhistoricomortalidad.ToolTipText = "Exportar"
         '
@@ -265,17 +278,16 @@ Partial Class FrmReporteMortalidadLoteCompleto
         Me.BtnCerrar.Margin = New System.Windows.Forms.Padding(5)
         Me.BtnCerrar.Name = "BtnCerrar"
         Me.BtnCerrar.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnCerrar.Size = New System.Drawing.Size(84, 30)
+        Me.BtnCerrar.Size = New System.Drawing.Size(66, 28)
         Me.BtnCerrar.Text = "Salir"
         '
         'Ptbx_Cargando
         '
         Me.Ptbx_Cargando.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Ptbx_Cargando.Image = Global.Formularios.My.Resources.Resources.loader
-        Me.Ptbx_Cargando.Location = New System.Drawing.Point(883, 604)
-        Me.Ptbx_Cargando.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Ptbx_Cargando.Location = New System.Drawing.Point(601, 393)
         Me.Ptbx_Cargando.Name = "Ptbx_Cargando"
-        Me.Ptbx_Cargando.Size = New System.Drawing.Size(64, 57)
+        Me.Ptbx_Cargando.Size = New System.Drawing.Size(43, 37)
         Me.Ptbx_Cargando.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.Ptbx_Cargando.TabIndex = 40
         Me.Ptbx_Cargando.TabStop = False
@@ -353,24 +365,40 @@ Partial Class FrmReporteMortalidadLoteCompleto
         Me.dtgListado.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy
         Me.dtgListado.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dtgListado.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dtgListado.Location = New System.Drawing.Point(0, 274)
-        Me.dtgListado.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.dtgListado.Location = New System.Drawing.Point(0, 216)
         Me.dtgListado.Name = "dtgListado"
-        Me.dtgListado.Size = New System.Drawing.Size(1808, 878)
+        Me.dtgListado.Size = New System.Drawing.Size(1228, 474)
         Me.dtgListado.TabIndex = 39
         Me.dtgListado.Text = "UltraGrid1"
         '
         'BackgroundWorker1
         '
         '
+        'GrupoFiltros
+        '
+        Me.GrupoFiltros.Controls.Add(Me.btnBuscar)
+        Me.GrupoFiltros.Controls.Add(Me.Label3)
+        Me.GrupoFiltros.Controls.Add(Me.Label5)
+        Me.GrupoFiltros.Controls.Add(Me.CmbAnios)
+        Me.GrupoFiltros.Controls.Add(Me.CmbLotes)
+        Me.GrupoFiltros.Location = New System.Drawing.Point(23, 86)
+        Me.GrupoFiltros.Margin = New System.Windows.Forms.Padding(2)
+        Me.GrupoFiltros.Name = "GrupoFiltros"
+        Me.GrupoFiltros.Padding = New System.Windows.Forms.Padding(2)
+        Me.GrupoFiltros.Size = New System.Drawing.Size(633, 75)
+        Me.GrupoFiltros.TabIndex = 242
+        Me.GrupoFiltros.TabStop = False
+        Me.GrupoFiltros.Text = "Filtros de Búsqueda"
+        '
         'FrmReporteMortalidadLoteCompleto
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1808, 1152)
+        Me.ClientSize = New System.Drawing.Size(1228, 690)
         Me.Controls.Add(Me.Ptbx_Cargando)
         Me.Controls.Add(Me.dtgListado)
         Me.Controls.Add(Me.Contenedor)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "FrmReporteMortalidadLoteCompleto"
@@ -383,6 +411,8 @@ Partial Class FrmReporteMortalidadLoteCompleto
         Me.BarraNavegacion.PerformLayout()
         CType(Me.Ptbx_Cargando, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dtgListado, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GrupoFiltros.ResumeLayout(False)
+        Me.GrupoFiltros.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -401,4 +431,6 @@ Partial Class FrmReporteMortalidadLoteCompleto
     Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
     Friend WithEvents Label5 As Label
     Friend WithEvents CmbLotes As Infragistics.Win.UltraWinGrid.UltraCombo
+    Friend WithEvents Label1 As Label
+    Friend WithEvents GrupoFiltros As GroupBox
 End Class

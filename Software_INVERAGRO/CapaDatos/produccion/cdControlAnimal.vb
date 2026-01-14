@@ -830,6 +830,7 @@ Public Class cdControlAnimal
             da.SelectCommand.Parameters.AddWithValue("@fechaDesde", obj.FechaDesde)
             da.SelectCommand.Parameters.AddWithValue("@fechaHasta", obj.FechaHasta)
             da.SelectCommand.Parameters.AddWithValue("@idUbicacion", obj.IdPlantel)
+            da.SelectCommand.Parameters.AddWithValue("@clasificacion", obj.TipoControl)
             da.Fill(dt)
         Catch ex As Exception
             Throw ex
