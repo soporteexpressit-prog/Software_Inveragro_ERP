@@ -23,11 +23,12 @@ Public Class FrmAnularventavendedoras
                 ' Crea el objeto y asigna los valores necesarios
                 Dim obj As New coVentas With {
                 .Codigo = idordencompra,
-                .Motivoanulacion = txtDescripcionAnulacion.Text
+                .Motivoanulacion = txtDescripcionAnulacion.Text,
+                .Iduser = VariablesGlobales.VP_IdUser
             }
 
                 ' Realiza la anulación a través de la función correspondiente
-                Dim mensaje As String = cn.Cn_AnularPedidoVenta(obj)
+                Dim mensaje As String = cn.Cn_AnularPedidoVentasdistribucionventas(obj)
 
                 ' Verifica el resultado de la operación
                 If obj.Coderror = 0 Then

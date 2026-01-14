@@ -1389,6 +1389,33 @@ Public Class cdVentas
             Throw ex
         End Try
     End Function
+    Public Function Cd_AnularPedidoVentadistribucionventa(name As String, obj As coVentas) As String
+        Dim mensaje As String
+        Dim cmd As New SqlCommand(name, con.con)
+        Try
+            con.Abrir()
+            cmd.CommandType = CommandType.StoredProcedure
+
+            With cmd.Parameters
+                .AddWithValue("@idsalida", SqlDbType.Int).Value = obj.Codigo
+                .AddWithValue("@motivoanulacion", SqlDbType.VarChar).Value = obj.Motivoanulacion
+                .AddWithValue("@idusuarioanulacion", SqlDbType.Int).Value = obj.Iduser
+                .Add("@msj", SqlDbType.VarChar, 100).Direction = ParameterDirection.Output
+                .Add("@coderror", SqlDbType.Int).Direction = ParameterDirection.Output
+            End With
+
+
+            cmd.ExecuteNonQuery()
+
+            mensaje = cmd.Parameters("@msj").Value.ToString()
+            obj.Coderror = Convert.ToInt32(cmd.Parameters("@coderror").Value)
+
+            con.Salir()
+            Return mensaje
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Function
     Public Function Cd_AnularRequerimiento(name As String, obj As coVentas) As String
         Dim mensaje As String
         Dim cmd As New SqlCommand(name, con.con)

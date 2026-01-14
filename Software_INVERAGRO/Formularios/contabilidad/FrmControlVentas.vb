@@ -223,7 +223,7 @@ Public Class FrmControlVentas
             StiReport1.Dictionary.Clear()
             StiReport1.RegData(ds)
             StiReport1.Dictionary.Synchronize()
-            StiReport1.Design()
+            StiReport1.Show()
         Catch ex As Exception
             clsBasicas.controlException(Name, ex)
         End Try

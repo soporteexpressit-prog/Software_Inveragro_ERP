@@ -214,6 +214,10 @@ Public Class cnVentas
         Return cls_at.Cd_AnularPedidoVenta("[jpa_anular_pedidoventa]", obj)
     End Function
 
+    Public Function Cn_AnularPedidoVentasdistribucionventas(ByRef obj As coVentas) As String
+        Return cls_at.Cd_AnularPedidoVentadistribucionventa("[j_pa_anular_distribucion_venta]", obj)
+    End Function
+
     Public Function Cn_AnularPedidoVenta(ByRef obj As coVentas) As String
         Return cls_at.Cd_AnularPedidoVenta("[i_pa_anular_pedidoventa]", obj)
     End Function
