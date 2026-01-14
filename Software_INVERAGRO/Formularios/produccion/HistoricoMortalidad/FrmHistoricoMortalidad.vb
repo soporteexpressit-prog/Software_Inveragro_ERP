@@ -240,7 +240,14 @@ Public Class FrmHistoricoMortalidad
         End Try
     End Sub
 
-    Private Sub BtnReporteMortalidadLote_Click(sender As Object, e As EventArgs) Handles BtnReporteMortalidadLote.Click
+    Private Sub FrmHistoricoMortalidad_KeyDown(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            BtnBuscar.PerformClick()
+            e.SuppressKeyPress = True
+        End If
+    End Sub
+
+    Private Sub BtnConsolidadoMortalidadLote_Click(sender As Object, e As EventArgs) Handles BtnConsolidadoMortalidadLote.Click
         Try
             Dim frm As New FrmReporteMortalidadLoteCompleto
             frm.ShowDialog()
@@ -249,11 +256,50 @@ Public Class FrmHistoricoMortalidad
         End Try
     End Sub
 
-    Private Sub FrmHistoricoMortalidad_KeyDown(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown
-        If e.KeyCode = Keys.Enter Then
-            BtnBuscar.PerformClick()
-            e.SuppressKeyPress = True
-        End If
+    Private Sub BtnMortalidadMaternidad_Click(sender As Object, e As EventArgs) Handles BtnMortalidadMaternidad.Click
+        Try
+            Dim frm As New FrmHistorialMortalidadLechon With {
+               .idUbicacion = CmbUbicacion.Value
+           }
+            frm.ShowDialog()
+        Catch ex As Exception
+            clsBasicas.controlException(Name, ex)
+        End Try
+    End Sub
+
+    Private Sub BtnMortalidadRecria_Click(sender As Object, e As EventArgs) Handles BtnMortalidadRecria.Click
+        Try
+            Dim frm As New FrmReporteMortalidadRecriaEngorde With {
+               .idUbicacion = CmbUbicacion.Value
+           }
+            frm.ShowDialog()
+        Catch ex As Exception
+            clsBasicas.controlException(Name, ex)
+        End Try
+    End Sub
+
+    Private Sub BtnMortalidadChanchillas_Click(sender As Object, e As EventArgs) Handles BtnMortalidadChanchillas.Click
+        Try
+            Dim frm As New FrmHistoricoMortalidadChanchillaMarrana With {
+               .tipoHembra = "CHANCHILLA",
+               .idUbicacion = CmbUbicacion.Value
+               }
+            frm.ShowDialog()
+        Catch ex As Exception
+            clsBasicas.controlException(Name, ex)
+        End Try
+    End Sub
+
+    Private Sub BtnMortalidadMarranas_Click(sender As Object, e As EventArgs) Handles BtnMortalidadMarranas.Click
+        Try
+            Dim frm As New FrmHistoricoMortalidadChanchillaMarrana With {
+               .tipoHembra = "MARRANA",
+               .idUbicacion = CmbUbicacion.Value
+               }
+            frm.ShowDialog()
+        Catch ex As Exception
+            clsBasicas.controlException(Name, ex)
+        End Try
     End Sub
 
     Private Sub BtnCerrar_Click(sender As Object, e As EventArgs) Handles BtnCerrar.Click
