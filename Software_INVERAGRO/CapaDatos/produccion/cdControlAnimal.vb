@@ -821,7 +821,7 @@ Public Class cdControlAnimal
         Return ds
     End Function
 
-    Public Function Cd_ConsultarxFechasUbicacionDt(name As String, obj As coControlAnimal) As DataTable
+    Public Function Cd_ConsultarxFechasUbicacionClasificacionDt(name As String, obj As coControlAnimal) As DataTable
         Dim dt As New DataTable
         Try
             con.Abrir()
@@ -1357,6 +1357,23 @@ Public Class cdControlAnimal
             Dim da As New SqlDataAdapter(name, con.con)
             da.SelectCommand.CommandType = 4
             da.SelectCommand.Parameters.AddWithValue("@idAnimal", obj.Codigo)
+            da.Fill(dt)
+        Catch ex As Exception
+            Throw ex
+        End Try
+        con.Salir()
+        Return dt
+    End Function
+
+    Public Function Cd_ConsultarxFechasUbicacionDt(name As String, obj As coControlAnimal) As DataTable
+        Dim dt As New DataTable
+        Try
+            con.Abrir()
+            Dim da As New SqlDataAdapter(name, con.con)
+            da.SelectCommand.CommandType = 4
+            da.SelectCommand.Parameters.AddWithValue("@fechaDesde", obj.FechaDesde)
+            da.SelectCommand.Parameters.AddWithValue("@fechaHasta", obj.FechaHasta)
+            da.SelectCommand.Parameters.AddWithValue("@idUbicacion", obj.IdPlantel)
             da.Fill(dt)
         Catch ex As Exception
             Throw ex

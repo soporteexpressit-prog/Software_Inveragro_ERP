@@ -1,14 +1,13 @@
-﻿Imports CapaDatos
-Imports CapaNegocio
+﻿Imports CapaNegocio
 Imports CapaObjetos
 Imports Infragistics.Win
 
-Public Class FrmHistoricoDestete
+Public Class FrmHistoricoParto
     Dim cn As New cnControlAnimal
     Dim tbtmp As New DataTable
     Public idUbicacion As Integer = 0
 
-    Private Sub FrmHistoricoDestete_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub FrmHistoricoParto_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
             Inicializar()
             Consultar()
@@ -54,7 +53,7 @@ Public Class FrmHistoricoDestete
     Private Sub BackgroundWorker1_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorker1.DoWork
         Try
             Dim obj As coControlAnimal = CType(e.Argument, coControlAnimal)
-            tbtmp = cn.Cn_ConsultarHistoricoDestete(obj).Copy
+            tbtmp = cn.Cn_ConsultarHistoricoParto(obj).Copy
             tbtmp.TableName = "tmp"
             e.Result = tbtmp
         Catch ex As Exception
@@ -68,27 +67,10 @@ Public Class FrmHistoricoDestete
             msj_advert("Error al Cargar los Datos")
         Else
             dtgListado.DataSource = CType(e.Result, DataTable)
-            dtgListado.DisplayLayout.Bands(0).Columns("idControlFicha").Hidden = True
-            Colorear()
         End If
     End Sub
 
-
-    Sub Colorear()
-        If (dtgListado.Rows.Count > 0) Then
-            Dim codigo As Integer = 2
-
-            'colorear segun clave
-            clsBasicas.Colorear_SegunClave(dtgListado, Color.Yellow, Color.Black, "NDZ", codigo)
-
-            'centrar columnas
-            With dtgListado.DisplayLayout.Bands(0)
-                .Columns(codigo).CellAppearance.TextHAlign = HAlign.Center
-            End With
-        End If
-    End Sub
-
-    Private Sub btnExportarNpea_Click(sender As Object, e As EventArgs) Handles btnExportarNpea.Click
+    Private Sub BtnExportar_Click(sender As Object, e As EventArgs) Handles BtnExportar.Click
         Try
             If (dtgListado.Rows.Count = 0) Then
                 msj_advert(MensajesSistema.mensajesGenerales("SIN_RESULTADOS"))
@@ -113,14 +95,18 @@ Public Class FrmHistoricoDestete
                 clsBasicas.Totales_Formato(dtgListado, e, 0)
                 clsBasicas.SumarTotales_Formato(dtgListado, e, 5)
                 clsBasicas.SumarTotales_Formato(dtgListado, e, 6)
+                clsBasicas.SumarTotales_Formato(dtgListado, e, 7)
                 clsBasicas.SumarTotales_Formato(dtgListado, e, 8)
+                clsBasicas.SumarTotales_Formato(dtgListado, e, 9)
+                clsBasicas.SumarTotales_Formato(dtgListado, e, 10)
+                clsBasicas.SumarTotales_Formato(dtgListado, e, 18)
             End If
         Catch ex As Exception
             clsBasicas.controlException(Name, ex)
         End Try
     End Sub
 
-    Private Sub btncerrar_Click(sender As Object, e As EventArgs) Handles btncerrar.Click
+    Private Sub BtnCerrar_Click(sender As Object, e As EventArgs) Handles BtnCerrar.Click
         Dispose()
     End Sub
 End Class
