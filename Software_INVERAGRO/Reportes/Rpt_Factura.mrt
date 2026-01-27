@@ -342,7 +342,7 @@
             <HeaderTable1_Precio2 Ref="26" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>Transparent</Brush>
-              <ClientRectangle>9.2,0,2.8,0.8</ClientRectangle>
+              <ClientRectangle>12.8,0,3.2,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Arial,12,Bold</Font>
               <HorAlignment>Center</HorAlignment>
@@ -359,7 +359,7 @@
             <HeaderTable1__Peso_Promedio Ref="27" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>Transparent</Brush>
-              <ClientRectangle>12,0,4,0.8</ClientRectangle>
+              <ClientRectangle>9.2,0,3.6,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Arial,12,Bold</Font>
               <HorAlignment>Center</HorAlignment>
@@ -367,7 +367,7 @@
               <Name>HeaderTable1__Peso_Promedio</Name>
               <Page isRef="7" />
               <Parent isRef="23" />
-              <Text>PESO TOTAL</Text>
+              <Text>PESO</Text>
               <TextBrush>Black</TextBrush>
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
               <Type>Expression</Type>
@@ -439,7 +439,7 @@
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>Transparent</Brush>
               <CanGrow>True</CanGrow>
-              <ClientRectangle>9.2,0,2.8,0.8</ClientRectangle>
+              <ClientRectangle>12.8,0,3.2,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Arial,9</Font>
               <HorAlignment>Right</HorAlignment>
@@ -472,7 +472,7 @@
             <Text26 Ref="34" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>Transparent</Brush>
-              <ClientRectangle>12,0,4,0.8</ClientRectangle>
+              <ClientRectangle>9.2,0,3.6,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Arial,9</Font>
               <HorAlignment>Right</HorAlignment>
@@ -494,7 +494,6 @@
           <Sort isList="true" count="0" />
         </DataTable12>
         <ReportSummaryBand1 Ref="35" type="ReportSummaryBand" isKey="true">
-          <Border>None;Black;1;Solid;False;4;Black</Border>
           <Brush>Transparent</Brush>
           <ClientRectangle>0,12.2,20,7</ClientRectangle>
           <Components isList="true" count="6">
@@ -510,7 +509,7 @@
               <Name>Text16</Name>
               <Page isRef="7" />
               <Parent isRef="35" />
-              <Text>Total Original : </Text>
+              <Text>Total : </Text>
               <TextBrush>Black</TextBrush>
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
               <Type>Expression</Type>
@@ -630,10 +629,10 @@
     <value>Stimulsoft.Report.Dll</value>
   </ReferencedAssemblies>
   <ReportAlias>Report</ReportAlias>
-  <ReportChanged>1/13/2026 10:52:59 PM</ReportChanged>
+  <ReportChanged>1/18/2026 9:48:38 PM</ReportChanged>
   <ReportCreated>3/1/2019 10:36:14 AM</ReportCreated>
-  <ReportFile>C:\Users\djjhi\OneDrive\Documentos\GitHub\Software_Inveragro_ERP\Software_INVERAGRO\Formularios\bin\Debug\Reportes\Rpt_Factura.mrt</ReportFile>
-  <ReportGuid>1d8f32b28ffa435ab8f19d5b87f4f738</ReportGuid>
+  <ReportFile>C:\Users\djjhi\OneDrive\Documentos\GitHub\Software_Inveragro_ERP\Software_INVERAGRO\Reportes\Rpt_Factura.mrt</ReportFile>
+  <ReportGuid>6952ba759eeb49b591843df4a011bd82</ReportGuid>
   <ReportName>Report</ReportName>
   <ReportUnit>Centimeters</ReportUnit>
   <ReportVersion>2016.1.0</ReportVersion>

@@ -38,7 +38,7 @@ Public Class FrmActualizarVendedor
 
     Private Sub FrmActualizarVendedor_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         If operacion = 0 Then
-            clsBasicas.ListartodosVendedores(cbxvendedor)
+            clsBasicas.ListartodosVendedoresyconductores(cbxvendedor)
             Me.Text = "Actualizar Vendedor"
             GrupoMasOpcionesBusqueda.Text = "Actualizar Vendedor"
         ElseIf operacion = 1 Then
