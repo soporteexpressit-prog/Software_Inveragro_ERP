@@ -27,7 +27,13 @@ Public Class FrmCancelarPedidoAlimento
                         .MotivoAnulacion = txtDescripcionAnulacion.Text
                     }
                     Dim rpta As String = cn.Cn_AnularRequerimientoAlimento(obj)
-                    Dispose()
+                    If (obj.Coderror = 0) Then
+                        msj_ok(rpta)
+                        Dispose()
+                    Else
+                        msj_advert(rpta)
+                    End If
+
                 End If
             End If
         Catch ex As Exception
