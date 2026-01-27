@@ -99,6 +99,10 @@ Public Class cnVentas
         Return cls_at.ListarVendedores("[i_pa_listar_vendedores_todos]", obj)
     End Function
 
+    Public Function Cn_ListartodosVendedoresyconductores(obj As coProductos) As DataTable
+        Return cls_at.ListarVendedores("[i_pa_listar_vendedores_y_conductores]", obj)
+    End Function
+
     Public Function Cn_ListarDestinoScti() As DataTable
         Return cls_at.ListarDestinoScti("[i_pa_listar_direcciones_scti]")
     End Function
