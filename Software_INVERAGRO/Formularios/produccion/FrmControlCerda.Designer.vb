@@ -81,10 +81,11 @@ Partial Class FrmControlCerda
         Me.btnreporteRrhhctrlcapaci = New System.Windows.Forms.ToolStripDropDownButton()
         Me.BtnReportePartos = New System.Windows.Forms.ToolStripMenuItem()
         Me.MortalidadMaternidadToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HistoricoDeDesteteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.dtgListado = New Infragistics.Win.UltraWinGrid.UltraGrid()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         Me.Ptbx_Cargando = New System.Windows.Forms.PictureBox()
-        Me.HistoricoDeDesteteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HistoricoDePartosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel2.SuspendLayout()
         Me.GrupoFiltros.SuspendLayout()
         CType(Me.CmbUbicacion, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -135,9 +136,9 @@ Partial Class FrmControlCerda
         Me.GrupoFiltros.Controls.Add(Me.CmbEstadoVivo)
         Me.GrupoFiltros.Controls.Add(Me.Label1)
         Me.GrupoFiltros.Location = New System.Drawing.Point(21, 51)
-        Me.GrupoFiltros.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GrupoFiltros.Margin = New System.Windows.Forms.Padding(2)
         Me.GrupoFiltros.Name = "GrupoFiltros"
-        Me.GrupoFiltros.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GrupoFiltros.Padding = New System.Windows.Forms.Padding(2)
         Me.GrupoFiltros.Size = New System.Drawing.Size(1519, 105)
         Me.GrupoFiltros.TabIndex = 170
         Me.GrupoFiltros.TabStop = False
@@ -147,7 +148,7 @@ Partial Class FrmControlCerda
         '
         Me.CbxSinCelo.AutoSize = True
         Me.CbxSinCelo.Location = New System.Drawing.Point(690, 69)
-        Me.CbxSinCelo.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.CbxSinCelo.Margin = New System.Windows.Forms.Padding(2)
         Me.CbxSinCelo.Name = "CbxSinCelo"
         Me.CbxSinCelo.Size = New System.Drawing.Size(119, 17)
         Me.CbxSinCelo.TabIndex = 177
@@ -158,7 +159,7 @@ Partial Class FrmControlCerda
         '
         Me.CbxTipoAdquisicion.AutoSize = True
         Me.CbxTipoAdquisicion.Location = New System.Drawing.Point(1382, 46)
-        Me.CbxTipoAdquisicion.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.CbxTipoAdquisicion.Margin = New System.Windows.Forms.Padding(2)
         Me.CbxTipoAdquisicion.Name = "CbxTipoAdquisicion"
         Me.CbxTipoAdquisicion.Size = New System.Drawing.Size(104, 17)
         Me.CbxTipoAdquisicion.TabIndex = 180
@@ -246,7 +247,7 @@ Partial Class FrmControlCerda
         '
         Me.CkbMadre.AutoSize = True
         Me.CkbMadre.Location = New System.Drawing.Point(1382, 22)
-        Me.CkbMadre.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.CkbMadre.Margin = New System.Windows.Forms.Padding(2)
         Me.CkbMadre.Name = "CkbMadre"
         Me.CkbMadre.Size = New System.Drawing.Size(94, 17)
         Me.CkbMadre.TabIndex = 173
@@ -270,7 +271,7 @@ Partial Class FrmControlCerda
         '
         Me.CkbMostrarUbicacion.AutoSize = True
         Me.CkbMostrarUbicacion.Location = New System.Drawing.Point(1218, 22)
-        Me.CkbMostrarUbicacion.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.CkbMostrarUbicacion.Margin = New System.Windows.Forms.Padding(2)
         Me.CkbMostrarUbicacion.Name = "CkbMostrarUbicacion"
         Me.CkbMostrarUbicacion.Size = New System.Drawing.Size(112, 17)
         Me.CkbMostrarUbicacion.TabIndex = 172
@@ -292,7 +293,7 @@ Partial Class FrmControlCerda
         '
         Me.CkbEnVenta.AutoSize = True
         Me.CkbEnVenta.Location = New System.Drawing.Point(1218, 46)
-        Me.CkbEnVenta.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.CkbEnVenta.Margin = New System.Windows.Forms.Padding(2)
         Me.CkbEnVenta.Name = "CkbEnVenta"
         Me.CkbEnVenta.Size = New System.Drawing.Size(70, 17)
         Me.CkbEnVenta.TabIndex = 171
@@ -316,7 +317,7 @@ Partial Class FrmControlCerda
         '
         Me.CkbRepetidoras.AutoSize = True
         Me.CkbRepetidoras.Location = New System.Drawing.Point(1218, 72)
-        Me.CkbRepetidoras.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.CkbRepetidoras.Margin = New System.Windows.Forms.Padding(2)
         Me.CkbRepetidoras.Name = "CkbRepetidoras"
         Me.CkbRepetidoras.Size = New System.Drawing.Size(83, 17)
         Me.CkbRepetidoras.TabIndex = 170
@@ -506,7 +507,7 @@ Partial Class FrmControlCerda
         'btnreporteRrhhctrlcapaci
         '
         Me.btnreporteRrhhctrlcapaci.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.btnreporteRrhhctrlcapaci.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnReportePartos, Me.MortalidadMaternidadToolStripMenuItem, Me.HistoricoDeDesteteToolStripMenuItem})
+        Me.btnreporteRrhhctrlcapaci.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnReportePartos, Me.MortalidadMaternidadToolStripMenuItem, Me.HistoricoDePartosToolStripMenuItem, Me.HistoricoDeDesteteToolStripMenuItem})
         Me.btnreporteRrhhctrlcapaci.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnreporteRrhhctrlcapaci.ForeColor = System.Drawing.Color.White
         Me.btnreporteRrhhctrlcapaci.Image = Global.Formularios.My.Resources.Resources.reporte
@@ -527,6 +528,12 @@ Partial Class FrmControlCerda
         Me.MortalidadMaternidadToolStripMenuItem.Name = "MortalidadMaternidadToolStripMenuItem"
         Me.MortalidadMaternidadToolStripMenuItem.Size = New System.Drawing.Size(230, 22)
         Me.MortalidadMaternidadToolStripMenuItem.Text = "Historico para Descarte"
+        '
+        'HistoricoDeDesteteToolStripMenuItem
+        '
+        Me.HistoricoDeDesteteToolStripMenuItem.Name = "HistoricoDeDesteteToolStripMenuItem"
+        Me.HistoricoDeDesteteToolStripMenuItem.Size = New System.Drawing.Size(230, 22)
+        Me.HistoricoDeDesteteToolStripMenuItem.Text = "Historico de Destete"
         '
         'dtgListado
         '
@@ -621,11 +628,11 @@ Partial Class FrmControlCerda
         Me.Ptbx_Cargando.TabStop = False
         Me.Ptbx_Cargando.Visible = False
         '
-        'HistoricoDeDesteteToolStripMenuItem
+        'HistoricoDePartosToolStripMenuItem
         '
-        Me.HistoricoDeDesteteToolStripMenuItem.Name = "HistoricoDeDesteteToolStripMenuItem"
-        Me.HistoricoDeDesteteToolStripMenuItem.Size = New System.Drawing.Size(230, 22)
-        Me.HistoricoDeDesteteToolStripMenuItem.Text = "Historico de Destete"
+        Me.HistoricoDePartosToolStripMenuItem.Name = "HistoricoDePartosToolStripMenuItem"
+        Me.HistoricoDePartosToolStripMenuItem.Size = New System.Drawing.Size(230, 22)
+        Me.HistoricoDePartosToolStripMenuItem.Text = "Historico de Partos"
         '
         'FrmControlCerda
         '
@@ -635,7 +642,7 @@ Partial Class FrmControlCerda
         Me.Controls.Add(Me.Ptbx_Cargando)
         Me.Controls.Add(Me.dtgListado)
         Me.Controls.Add(Me.Panel2)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "FrmControlCerda"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "CONTROL DE CERDAS"
@@ -687,4 +694,5 @@ Partial Class FrmControlCerda
     Friend WithEvents MortalidadMaternidadToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents BtnEliminar As ToolStripButton
     Friend WithEvents HistoricoDeDesteteToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents HistoricoDePartosToolStripMenuItem As ToolStripMenuItem
 End Class

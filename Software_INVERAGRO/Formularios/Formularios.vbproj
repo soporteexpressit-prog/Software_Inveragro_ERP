@@ -1705,6 +1705,12 @@
     <Compile Include="produccion\FrmHistoricoParaDescarte.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="produccion\FrmHistoricoParto.Designer.vb">
+      <DependentUpon>FrmHistoricoParto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="produccion\FrmHistoricoParto.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="produccion\FrmListarIncidenciaMandarCamalMasivo.Designer.vb">
       <DependentUpon>FrmListarIncidenciaMandarCamalMasivo.vb</DependentUpon>
     </Compile>
@@ -4656,6 +4662,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="produccion\FrmHistoricoParaDescarte.resx">
       <DependentUpon>FrmHistoricoParaDescarte.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="produccion\FrmHistoricoParto.resx">
+      <DependentUpon>FrmHistoricoParto.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="produccion\FrmListarIncidenciaMandarCamalMasivo.resx">
       <DependentUpon>FrmListarIncidenciaMandarCamalMasivo.vb</DependentUpon>

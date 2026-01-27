@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class FrmHistoricoDestete
+Partial Class FrmHistoricoParto
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -22,6 +22,7 @@ Partial Class FrmHistoricoDestete
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmHistoricoParto))
         Dim Appearance1 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance2 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance3 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
@@ -37,26 +38,25 @@ Partial Class FrmHistoricoDestete
         Dim Appearance13 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance14 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance15 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmHistoricoDestete))
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.GrupoFiltros = New System.Windows.Forms.GroupBox()
+        Me.btnBuscar = New System.Windows.Forms.Button()
         Me.dtpFechaHasta = New System.Windows.Forms.DateTimePicker()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.dtpFechaDesde = New System.Windows.Forms.DateTimePicker()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.BarraOpciones = New System.Windows.Forms.ToolStrip()
+        Me.BtnExportar = New System.Windows.Forms.ToolStripButton()
+        Me.BtnCerrar = New System.Windows.Forms.ToolStripButton()
+        Me.Ptbx_Cargando = New System.Windows.Forms.PictureBox()
         Me.dtgListado = New Infragistics.Win.UltraWinGrid.UltraGrid()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
-        Me.Ptbx_Cargando = New System.Windows.Forms.PictureBox()
-        Me.btnBuscar = New System.Windows.Forms.Button()
-        Me.btnExportarNpea = New System.Windows.Forms.ToolStripButton()
-        Me.btncerrar = New System.Windows.Forms.ToolStripButton()
         Me.Panel2.SuspendLayout()
         Me.GrupoFiltros.SuspendLayout()
         Me.BarraOpciones.SuspendLayout()
-        CType(Me.dtgListado, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Ptbx_Cargando, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dtgListado, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel2
@@ -69,8 +69,8 @@ Partial Class FrmHistoricoDestete
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
         Me.Panel2.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1413, 185)
-        Me.Panel2.TabIndex = 9
+        Me.Panel2.Size = New System.Drawing.Size(1364, 185)
+        Me.Panel2.TabIndex = 10
         '
         'GrupoFiltros
         '
@@ -87,6 +87,21 @@ Partial Class FrmHistoricoDestete
         Me.GrupoFiltros.TabIndex = 159
         Me.GrupoFiltros.TabStop = False
         Me.GrupoFiltros.Text = "Filtros de Búsqueda"
+        '
+        'btnBuscar
+        '
+        Me.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnBuscar.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnBuscar.Image = CType(resources.GetObject("btnBuscar.Image"), System.Drawing.Image)
+        Me.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnBuscar.Location = New System.Drawing.Point(839, 21)
+        Me.btnBuscar.Name = "btnBuscar"
+        Me.btnBuscar.Padding = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.btnBuscar.Size = New System.Drawing.Size(101, 40)
+        Me.btnBuscar.TabIndex = 162
+        Me.btnBuscar.Text = "Buscar"
+        Me.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnBuscar.UseVisualStyleBackColor = True
         '
         'dtpFechaHasta
         '
@@ -139,9 +154,9 @@ Partial Class FrmHistoricoDestete
         Me.Label6.Location = New System.Drawing.Point(32, 18)
         Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(228, 18)
+        Me.Label6.Size = New System.Drawing.Size(210, 18)
         Me.Label6.TabIndex = 128
-        Me.Label6.Text = "HISTORICO DE DESTETE"
+        Me.Label6.Text = "HISTORICO DE PARTO"
         '
         'BarraOpciones
         '
@@ -149,14 +164,51 @@ Partial Class FrmHistoricoDestete
         Me.BarraOpciones.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.BarraOpciones.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
         Me.BarraOpciones.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.BarraOpciones.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnExportarNpea, Me.btncerrar})
+        Me.BarraOpciones.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnExportar, Me.BtnCerrar})
         Me.BarraOpciones.Location = New System.Drawing.Point(0, 147)
         Me.BarraOpciones.Margin = New System.Windows.Forms.Padding(2)
         Me.BarraOpciones.Name = "BarraOpciones"
         Me.BarraOpciones.Padding = New System.Windows.Forms.Padding(0, 0, 2, 0)
-        Me.BarraOpciones.Size = New System.Drawing.Size(1413, 38)
+        Me.BarraOpciones.Size = New System.Drawing.Size(1364, 38)
         Me.BarraOpciones.TabIndex = 52
         Me.BarraOpciones.Text = "ToolStrip1"
+        '
+        'BtnExportar
+        '
+        Me.BtnExportar.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnExportar.ForeColor = System.Drawing.Color.White
+        Me.BtnExportar.Image = Global.Formularios.My.Resources.Resources.exportar2
+        Me.BtnExportar.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BtnExportar.Margin = New System.Windows.Forms.Padding(5)
+        Me.BtnExportar.Name = "BtnExportar"
+        Me.BtnExportar.Padding = New System.Windows.Forms.Padding(2)
+        Me.BtnExportar.Size = New System.Drawing.Size(92, 28)
+        Me.BtnExportar.Text = "Exportar"
+        Me.BtnExportar.ToolTipText = "Exportar"
+        '
+        'BtnCerrar
+        '
+        Me.BtnCerrar.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnCerrar.ForeColor = System.Drawing.Color.White
+        Me.BtnCerrar.Image = Global.Formularios.My.Resources.Resources.salir
+        Me.BtnCerrar.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BtnCerrar.Margin = New System.Windows.Forms.Padding(5)
+        Me.BtnCerrar.Name = "BtnCerrar"
+        Me.BtnCerrar.Padding = New System.Windows.Forms.Padding(2)
+        Me.BtnCerrar.Size = New System.Drawing.Size(66, 28)
+        Me.BtnCerrar.Text = "Salir"
+        '
+        'Ptbx_Cargando
+        '
+        Me.Ptbx_Cargando.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Ptbx_Cargando.Image = Global.Formularios.My.Resources.Resources.loader
+        Me.Ptbx_Cargando.Location = New System.Drawing.Point(664, 392)
+        Me.Ptbx_Cargando.Name = "Ptbx_Cargando"
+        Me.Ptbx_Cargando.Size = New System.Drawing.Size(43, 37)
+        Me.Ptbx_Cargando.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.Ptbx_Cargando.TabIndex = 29
+        Me.Ptbx_Cargando.TabStop = False
+        Me.Ptbx_Cargando.Visible = False
         '
         'dtgListado
         '
@@ -232,86 +284,34 @@ Partial Class FrmHistoricoDestete
         Me.dtgListado.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dtgListado.Location = New System.Drawing.Point(0, 185)
         Me.dtgListado.Name = "dtgListado"
-        Me.dtgListado.Size = New System.Drawing.Size(1413, 508)
-        Me.dtgListado.TabIndex = 10
+        Me.dtgListado.Size = New System.Drawing.Size(1364, 530)
+        Me.dtgListado.TabIndex = 28
         Me.dtgListado.Text = "UltraGrid1"
         '
         'BackgroundWorker1
         '
         '
-        'Ptbx_Cargando
-        '
-        Me.Ptbx_Cargando.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Ptbx_Cargando.Image = Global.Formularios.My.Resources.Resources.loader
-        Me.Ptbx_Cargando.Location = New System.Drawing.Point(671, 392)
-        Me.Ptbx_Cargando.Name = "Ptbx_Cargando"
-        Me.Ptbx_Cargando.Size = New System.Drawing.Size(43, 37)
-        Me.Ptbx_Cargando.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.Ptbx_Cargando.TabIndex = 27
-        Me.Ptbx_Cargando.TabStop = False
-        Me.Ptbx_Cargando.Visible = False
-        '
-        'btnBuscar
-        '
-        Me.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnBuscar.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnBuscar.Image = CType(resources.GetObject("btnBuscar.Image"), System.Drawing.Image)
-        Me.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnBuscar.Location = New System.Drawing.Point(839, 21)
-        Me.btnBuscar.Name = "btnBuscar"
-        Me.btnBuscar.Padding = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.btnBuscar.Size = New System.Drawing.Size(101, 40)
-        Me.btnBuscar.TabIndex = 162
-        Me.btnBuscar.Text = "Buscar"
-        Me.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnBuscar.UseVisualStyleBackColor = True
-        '
-        'btnExportarNpea
-        '
-        Me.btnExportarNpea.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnExportarNpea.ForeColor = System.Drawing.Color.White
-        Me.btnExportarNpea.Image = Global.Formularios.My.Resources.Resources.exportar2
-        Me.btnExportarNpea.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.btnExportarNpea.Margin = New System.Windows.Forms.Padding(5)
-        Me.btnExportarNpea.Name = "btnExportarNpea"
-        Me.btnExportarNpea.Padding = New System.Windows.Forms.Padding(2)
-        Me.btnExportarNpea.Size = New System.Drawing.Size(92, 28)
-        Me.btnExportarNpea.Text = "Exportar"
-        Me.btnExportarNpea.ToolTipText = "Exportar"
-        '
-        'btncerrar
-        '
-        Me.btncerrar.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btncerrar.ForeColor = System.Drawing.Color.White
-        Me.btncerrar.Image = Global.Formularios.My.Resources.Resources.salir
-        Me.btncerrar.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.btncerrar.Margin = New System.Windows.Forms.Padding(5)
-        Me.btncerrar.Name = "btncerrar"
-        Me.btncerrar.Padding = New System.Windows.Forms.Padding(2)
-        Me.btncerrar.Size = New System.Drawing.Size(66, 28)
-        Me.btncerrar.Text = "Salir"
-        '
-        'FrmHistoricoDestete
+        'FrmHistoricoParto
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1413, 693)
+        Me.ClientSize = New System.Drawing.Size(1364, 715)
         Me.Controls.Add(Me.Ptbx_Cargando)
         Me.Controls.Add(Me.dtgListado)
         Me.Controls.Add(Me.Panel2)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
-        Me.Name = "FrmHistoricoDestete"
+        Me.Name = "FrmHistoricoParto"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Historico de Destete"
+        Me.Text = "Historico de Parto"
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         Me.GrupoFiltros.ResumeLayout(False)
         Me.GrupoFiltros.PerformLayout()
         Me.BarraOpciones.ResumeLayout(False)
         Me.BarraOpciones.PerformLayout()
-        CType(Me.dtgListado, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Ptbx_Cargando, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dtgListado, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -325,9 +325,9 @@ Partial Class FrmHistoricoDestete
     Friend WithEvents dtpFechaDesde As DateTimePicker
     Friend WithEvents Label6 As Label
     Friend WithEvents BarraOpciones As ToolStrip
-    Friend WithEvents btnExportarNpea As ToolStripButton
-    Friend WithEvents btncerrar As ToolStripButton
-    Friend WithEvents dtgListado As Infragistics.Win.UltraWinGrid.UltraGrid
+    Friend WithEvents BtnExportar As ToolStripButton
+    Friend WithEvents BtnCerrar As ToolStripButton
     Friend WithEvents Ptbx_Cargando As PictureBox
+    Friend WithEvents dtgListado As Infragistics.Win.UltraWinGrid.UltraGrid
     Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
 End Class

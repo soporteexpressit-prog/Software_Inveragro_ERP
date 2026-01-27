@@ -133,7 +133,17 @@ Public Class FrmHistorialMortalidadLechon
                 LblMotivoMasFrecuente.Text = fila("MotivoMasFrecuente").ToString()
                 LblTasaMortalidadxDia.Text = fila("TasaMortalidadDia").ToString()
             End If
+            Colorear()
             DesbloquearControladores()
+        End If
+    End Sub
+
+    Sub Colorear()
+        If (dtgListado.Rows.Count > 0) Then
+            Dim codigo As Integer = 2
+
+            'colorear segun clave
+            clsBasicas.Colorear_SegunClave(dtgListado, Color.Yellow, Color.Black, "NODRIZA", codigo)
         End If
     End Sub
 

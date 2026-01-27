@@ -125,7 +125,7 @@ Public Class cnControlAnimal
     End Function
 
     Public Function Cn_ConsultarMortalidadChanchillasMarranas(ByRef obj As coControlAnimal) As DataTable
-        Return cls_at.Cd_ConsultarxFechasUbicacionDt("[w_pa_cons_mortalidad_chanchilla_marrana]", obj)
+        Return cls_at.Cd_ConsultarxFechasUbicacionClasificacionDt("[w_pa_cons_mortalidad_chanchilla_marrana]", obj)
     End Function
 
     Public Function Cn_ConsultarHistorialGestacionMaternidadxIdCerda(ByRef obj As coControlAnimal) As DataSet
@@ -322,5 +322,9 @@ Public Class cnControlAnimal
 
     Public Function Cn_ConsultarHistoricoDestete(ByRef obj As coControlAnimal) As DataTable
         Return cls_at.Cd_ConsultarxFechasUbicacionDt("[w_pa_cons_reporte_destete_por_fechas]", obj)
+    End Function
+
+    Public Function Cn_ConsultarHistoricoParto(ByRef obj As coControlAnimal) As DataTable
+        Return cls_at.Cd_ConsultarxFechasUbicacionDt("[w_pa_cons_reporte_partos_por_fechas]", obj)
     End Function
 End Class
