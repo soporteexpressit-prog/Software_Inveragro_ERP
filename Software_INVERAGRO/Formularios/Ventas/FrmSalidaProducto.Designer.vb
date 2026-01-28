@@ -23,9 +23,9 @@ Partial Class FrmSalidaProducto
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim Appearance1 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim Appearance2 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim Appearance3 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim Appearance4 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance100 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance101 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance102 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance5 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance6 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance7 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
@@ -188,10 +188,11 @@ Partial Class FrmSalidaProducto
         Me.btnbuscarpoveedor = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.cbUnidadMedida = New Infragistics.Win.UltraWinGrid.UltraCombo()
         Me.btnbuscarproducto = New System.Windows.Forms.Button()
         Me.cbxagregar = New System.Windows.Forms.Button()
         Me.btnarchivoadjunto = New System.Windows.Forms.Button()
-        Me.cbUnidadMedida = New Infragistics.Win.UltraWinGrid.UltraCombo()
+        Me.Button2 = New System.Windows.Forms.Button()
         CType(Me.txtcodproveedor, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtproveedor, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.UltraGroupBox3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -273,21 +274,21 @@ Partial Class FrmSalidaProducto
         '
         'UltraGroupBox3
         '
-        Appearance2.BackColor = System.Drawing.Color.Transparent
-        Me.UltraGroupBox3.Appearance = Appearance2
-        Appearance3.BackColor = System.Drawing.Color.Transparent
-        Appearance3.BorderColor = System.Drawing.Color.LightSteelBlue
-        Me.UltraGroupBox3.ContentAreaAppearance = Appearance3
+        Appearance100.BackColor = System.Drawing.Color.Transparent
+        Me.UltraGroupBox3.Appearance = Appearance100
+        Appearance101.BackColor = System.Drawing.Color.Transparent
+        Appearance101.BorderColor = System.Drawing.Color.LightSteelBlue
+        Me.UltraGroupBox3.ContentAreaAppearance = Appearance101
         Me.UltraGroupBox3.Controls.Add(Me.btnvercotizacion)
         Me.UltraGroupBox3.Controls.Add(Me.btnEliminar)
         Me.UltraGroupBox3.Controls.Add(Me.Label24)
         Me.UltraGroupBox3.Controls.Add(Me.txtcodcotizacion)
-        Appearance4.BackColor = System.Drawing.Color.Transparent
-        Appearance4.FontData.BoldAsString = "True"
-        Appearance4.FontData.SizeInPoints = 9.0!
-        Appearance4.ForeColor = System.Drawing.Color.Black
-        Appearance4.TextHAlignAsString = "Center"
-        Me.UltraGroupBox3.HeaderAppearance = Appearance4
+        Appearance102.BackColor = System.Drawing.Color.Transparent
+        Appearance102.FontData.BoldAsString = "True"
+        Appearance102.FontData.SizeInPoints = 9.0!
+        Appearance102.ForeColor = System.Drawing.Color.Black
+        Appearance102.TextHAlignAsString = "Center"
+        Me.UltraGroupBox3.HeaderAppearance = Appearance102
         Me.UltraGroupBox3.HeaderBorderStyle = Infragistics.Win.UIElementBorderStyle.Rounded4Thick
         Me.UltraGroupBox3.HeaderPosition = Infragistics.Win.Misc.GroupBoxHeaderPosition.TopOnBorder
         Me.UltraGroupBox3.Location = New System.Drawing.Point(982, 211)
@@ -766,7 +767,7 @@ Partial Class FrmSalidaProducto
         Me.cbxmotivotransaccion.Location = New System.Drawing.Point(504, 15)
         Me.cbxmotivotransaccion.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.cbxmotivotransaccion.Name = "cbxmotivotransaccion"
-        Me.cbxmotivotransaccion.Size = New System.Drawing.Size(280, 23)
+        Me.cbxmotivotransaccion.Size = New System.Drawing.Size(213, 23)
         Me.cbxmotivotransaccion.TabIndex = 159
         Me.cbxmotivotransaccion.TabStop = False
         '
@@ -1369,6 +1370,7 @@ Partial Class FrmSalidaProducto
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.Button2)
         Me.GroupBox1.Controls.Add(Me.cbxalmacen_origen)
         Me.GroupBox1.Controls.Add(Me.dtpedido)
         Me.GroupBox1.Controls.Add(Me.Label20)
@@ -1410,50 +1412,6 @@ Partial Class FrmSalidaProducto
         Me.GroupBox2.TabIndex = 180
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Detalles de Productos"
-        '
-        'btnbuscarproducto
-        '
-        Me.btnbuscarproducto.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnbuscarproducto.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnbuscarproducto.Image = CType(resources.GetObject("btnbuscarproducto.Image"), System.Drawing.Image)
-        Me.btnbuscarproducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnbuscarproducto.Location = New System.Drawing.Point(208, 29)
-        Me.btnbuscarproducto.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.btnbuscarproducto.Name = "btnbuscarproducto"
-        Me.btnbuscarproducto.Size = New System.Drawing.Size(79, 30)
-        Me.btnbuscarproducto.TabIndex = 2
-        Me.btnbuscarproducto.Text = "Buscar"
-        Me.btnbuscarproducto.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnbuscarproducto.UseVisualStyleBackColor = True
-        '
-        'cbxagregar
-        '
-        Me.cbxagregar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.cbxagregar.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cbxagregar.Image = Global.Formularios.My.Resources.Resources.Agregar_24_Px1
-        Me.cbxagregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.cbxagregar.Location = New System.Drawing.Point(702, 90)
-        Me.cbxagregar.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.cbxagregar.Name = "cbxagregar"
-        Me.cbxagregar.Size = New System.Drawing.Size(84, 32)
-        Me.cbxagregar.TabIndex = 5
-        Me.cbxagregar.Text = "Añadir"
-        Me.cbxagregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.cbxagregar.UseVisualStyleBackColor = True
-        '
-        'btnarchivoadjunto
-        '
-        Me.btnarchivoadjunto.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnarchivoadjunto.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnarchivoadjunto.Image = Global.Formularios.My.Resources.Resources.Adjuntar_24_pixel
-        Me.btnarchivoadjunto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnarchivoadjunto.Location = New System.Drawing.Point(1375, 410)
-        Me.btnarchivoadjunto.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.btnarchivoadjunto.Name = "btnarchivoadjunto"
-        Me.btnarchivoadjunto.Size = New System.Drawing.Size(30, 30)
-        Me.btnarchivoadjunto.TabIndex = 173
-        Me.btnarchivoadjunto.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnarchivoadjunto.UseVisualStyleBackColor = True
         '
         'cbUnidadMedida
         '
@@ -1518,6 +1476,64 @@ Partial Class FrmSalidaProducto
         Me.cbUnidadMedida.Name = "cbUnidadMedida"
         Me.cbUnidadMedida.Size = New System.Drawing.Size(261, 25)
         Me.cbUnidadMedida.TabIndex = 247
+        '
+        'btnbuscarproducto
+        '
+        Me.btnbuscarproducto.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnbuscarproducto.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnbuscarproducto.Image = CType(resources.GetObject("btnbuscarproducto.Image"), System.Drawing.Image)
+        Me.btnbuscarproducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnbuscarproducto.Location = New System.Drawing.Point(208, 29)
+        Me.btnbuscarproducto.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btnbuscarproducto.Name = "btnbuscarproducto"
+        Me.btnbuscarproducto.Size = New System.Drawing.Size(79, 30)
+        Me.btnbuscarproducto.TabIndex = 2
+        Me.btnbuscarproducto.Text = "Buscar"
+        Me.btnbuscarproducto.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnbuscarproducto.UseVisualStyleBackColor = True
+        '
+        'cbxagregar
+        '
+        Me.cbxagregar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.cbxagregar.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cbxagregar.Image = Global.Formularios.My.Resources.Resources.Agregar_24_Px1
+        Me.cbxagregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.cbxagregar.Location = New System.Drawing.Point(702, 90)
+        Me.cbxagregar.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.cbxagregar.Name = "cbxagregar"
+        Me.cbxagregar.Size = New System.Drawing.Size(84, 32)
+        Me.cbxagregar.TabIndex = 5
+        Me.cbxagregar.Text = "Añadir"
+        Me.cbxagregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.cbxagregar.UseVisualStyleBackColor = True
+        '
+        'btnarchivoadjunto
+        '
+        Me.btnarchivoadjunto.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnarchivoadjunto.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnarchivoadjunto.Image = Global.Formularios.My.Resources.Resources.Adjuntar_24_pixel
+        Me.btnarchivoadjunto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnarchivoadjunto.Location = New System.Drawing.Point(1375, 410)
+        Me.btnarchivoadjunto.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btnarchivoadjunto.Name = "btnarchivoadjunto"
+        Me.btnarchivoadjunto.Size = New System.Drawing.Size(30, 30)
+        Me.btnarchivoadjunto.TabIndex = 173
+        Me.btnarchivoadjunto.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnarchivoadjunto.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button2.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button2.Location = New System.Drawing.Point(726, 14)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 4)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(24, 24)
+        Me.Button2.TabIndex = 193
+        Me.Button2.Text = "+"
+        Me.Button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button2.UseVisualStyleBackColor = True
         '
         'FrmSalidaProducto
         '
@@ -1676,4 +1692,5 @@ Partial Class FrmSalidaProducto
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents cbUnidadMedida As Infragistics.Win.UltraWinGrid.UltraCombo
+    Friend WithEvents Button2 As Button
 End Class
