@@ -436,15 +436,38 @@ Public Class FrmSalidaProducto
 
     Private Sub cbxmoneda_ValueChanged(sender As Object, e As EventArgs) Handles cbxmoneda.ValueChanged
         Try
-            If (cbxmoneda.Value = 1) Then
+            If cbxmoneda.Value = 1 Then
                 txttc.ReadOnly = True
                 txttc.Text = 1
             Else
                 txttc.ReadOnly = False
-                txttc.Text = cbxmoneda.ActiveRow.Cells(2).Value.ToString
-            End If
 
+                ' Método más seguro: acceder directamente al DataSource
+                If cbxmoneda.SelectedRow IsNot Nothing AndAlso cbxmoneda.SelectedRow.Cells.Count > 2 Then
+                    If cbxmoneda.SelectedRow.Cells(2).Value IsNot Nothing Then
+                        txttc.Text = cbxmoneda.SelectedRow.Cells(2).Value.ToString()
+                    Else
+                        txttc.Text = "1.00"
+                    End If
+                ElseIf cbxmoneda.DataSource IsNot Nothing AndAlso cbxmoneda.Value IsNot Nothing Then
+                    ' Buscar el valor en el DataSource
+                    Dim dt As DataTable = TryCast(cbxmoneda.DataSource, DataTable)
+                    If dt IsNot Nothing Then
+                        Dim rows() As DataRow = dt.Select($"[{dt.Columns(0).ColumnName}] = '{cbxmoneda.Value}'")
+                        If rows.Length > 0 AndAlso rows(0).Table.Columns.Count > 2 Then
+                            txttc.Text = If(rows(0)(2) IsNot Nothing, rows(0)(2).ToString(), "1.00")
+                        Else
+                            txttc.Text = "1.00"
+                        End If
+                    Else
+                        txttc.Text = "1.00"
+                    End If
+                Else
+                    txttc.Text = "1.00"
+                End If
+            End If
         Catch ex As Exception
+            txttc.Text = "1.00"
             clsBasicas.controlException(Name, ex)
         End Try
     End Sub
@@ -660,5 +683,16 @@ Public Class FrmSalidaProducto
 
     Private Sub cbUnidadMedida_ValueChanged(sender As Object, e As EventArgs) Handles cbUnidadMedida.ValueChanged
         ActualizarConversion()
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Try
+            ListarTablas()
+            Dim f As New FrmMotivoTransaccion
+            f.Show()
+            ListarTablas()
+        Catch ex As Exception
+            clsBasicas.controlException(Name, ex)
+        End Try
     End Sub
 End Class

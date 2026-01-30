@@ -376,8 +376,20 @@ Public Class FrmIngresoProducto
 
     Private Sub cbxmoneda_ValueChanged(sender As Object, e As EventArgs) Handles cbxmoneda.ValueChanged
         Try
-            txttc.Text = cbxmoneda.ActiveRow.Cells(2).Value.ToString
+            ' Verificar que ActiveRow no sea Nothing antes de acceder a sus propiedades
+            If cbxmoneda.ActiveRow IsNot Nothing AndAlso cbxmoneda.ActiveRow.Cells.Count > 2 Then
+                ' Verificar también que la celda no sea Nothing
+                If cbxmoneda.ActiveRow.Cells(2).Value IsNot Nothing Then
+                    txttc.Text = cbxmoneda.ActiveRow.Cells(2).Value.ToString()
+                Else
+                    txttc.Text = "1.00" ' Valor por defecto
+                End If
+            Else
+                txttc.Text = "1.00" ' Valor por defecto cuando no hay fila activa
+            End If
         Catch ex As Exception
+            ' Establecer un valor por defecto en caso de error
+            txttc.Text = "1.00"
             clsBasicas.controlException(Name, ex)
         End Try
     End Sub
@@ -496,4 +508,14 @@ Public Class FrmIngresoProducto
         End Try
     End Sub
 
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Try
+            ListarTablas()
+            Dim f As New FrmMotivoTransaccion
+            f.Show()
+            ListarTablas()
+        Catch ex As Exception
+            clsBasicas.controlException(Name, ex)
+        End Try
+    End Sub
 End Class
