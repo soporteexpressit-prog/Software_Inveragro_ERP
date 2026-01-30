@@ -320,8 +320,8 @@ Public Class cnControlAnimal
         Return cls_at.Cd_GeneralxIdUbicacionArea("[w_pa_cons_cerdos_x_ubicacion_x_area]", obj)
     End Function
 
-    Public Function Cn_ConsultarHistoricoDestete(ByRef obj As coControlAnimal) As DataTable
-        Return cls_at.Cd_ConsultarxFechasUbicacionDt("[w_pa_cons_reporte_destete_por_fechas]", obj)
+    Public Function Cn_ConsultarHistoricoDestete(ByRef obj As coControlAnimal) As DataSet
+        Return cls_at.Cd_ConsultarxFechasUbicacionDs("[w_pa_cons_reporte_destete_por_fechas]", obj)
     End Function
 
     Public Function Cn_ConsultarHistoricoParto(ByRef obj As coControlAnimal) As DataTable

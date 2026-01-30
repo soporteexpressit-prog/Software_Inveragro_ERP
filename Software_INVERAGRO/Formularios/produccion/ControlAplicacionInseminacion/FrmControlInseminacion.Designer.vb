@@ -40,7 +40,7 @@ Partial Class FrmControlInseminacion
         Dim Appearance15 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.GrupoFiltros = New System.Windows.Forms.GroupBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label17 = New System.Windows.Forms.Label()
@@ -63,7 +63,7 @@ Partial Class FrmControlInseminacion
         Me.dtgListado = New Infragistics.Win.UltraWinGrid.UltraGrid()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         Me.Panel2.SuspendLayout()
-        Me.GroupBox1.SuspendLayout()
+        Me.GrupoFiltros.SuspendLayout()
         CType(Me.NumLote, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ToolStrip1.SuspendLayout()
         CType(Me.Ptbx_Cargando, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -74,7 +74,7 @@ Partial Class FrmControlInseminacion
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(233, Byte), Integer))
         Me.Panel2.Controls.Add(Me.Label6)
-        Me.Panel2.Controls.Add(Me.GroupBox1)
+        Me.Panel2.Controls.Add(Me.GrupoFiltros)
         Me.Panel2.Controls.Add(Me.ToolStrip1)
         Me.Panel2.Controls.Add(Me.LblPlantel)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
@@ -97,30 +97,30 @@ Partial Class FrmControlInseminacion
         Me.Label6.TabIndex = 128
         Me.Label6.Text = "CONTROL DE SERVICIOS Y PÉRDIDAS REPRODUCTIVAS"
         '
-        'GroupBox1
+        'GrupoFiltros
         '
-        Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Controls.Add(Me.Label4)
-        Me.GroupBox1.Controls.Add(Me.Label17)
-        Me.GroupBox1.Controls.Add(Me.Label16)
-        Me.GroupBox1.Controls.Add(Me.Label13)
-        Me.GroupBox1.Controls.Add(Me.Label12)
-        Me.GroupBox1.Controls.Add(Me.Label7)
-        Me.GroupBox1.Controls.Add(Me.Label5)
-        Me.GroupBox1.Controls.Add(Me.LblPeriodo)
-        Me.GroupBox1.Controls.Add(Me.CmbAnios)
-        Me.GroupBox1.Controls.Add(Me.NumLote)
-        Me.GroupBox1.Controls.Add(Me.btnBuscar)
-        Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Controls.Add(Me.Label3)
-        Me.GroupBox1.Location = New System.Drawing.Point(36, 69)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.GroupBox1.Size = New System.Drawing.Size(1199, 103)
-        Me.GroupBox1.TabIndex = 170
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Filtros de Búsquedas"
+        Me.GrupoFiltros.Controls.Add(Me.Label1)
+        Me.GrupoFiltros.Controls.Add(Me.Label4)
+        Me.GrupoFiltros.Controls.Add(Me.Label17)
+        Me.GrupoFiltros.Controls.Add(Me.Label16)
+        Me.GrupoFiltros.Controls.Add(Me.Label13)
+        Me.GrupoFiltros.Controls.Add(Me.Label12)
+        Me.GrupoFiltros.Controls.Add(Me.Label7)
+        Me.GrupoFiltros.Controls.Add(Me.Label5)
+        Me.GrupoFiltros.Controls.Add(Me.LblPeriodo)
+        Me.GrupoFiltros.Controls.Add(Me.CmbAnios)
+        Me.GrupoFiltros.Controls.Add(Me.NumLote)
+        Me.GrupoFiltros.Controls.Add(Me.btnBuscar)
+        Me.GrupoFiltros.Controls.Add(Me.Label2)
+        Me.GrupoFiltros.Controls.Add(Me.Label3)
+        Me.GrupoFiltros.Location = New System.Drawing.Point(36, 69)
+        Me.GrupoFiltros.Margin = New System.Windows.Forms.Padding(2)
+        Me.GrupoFiltros.Name = "GrupoFiltros"
+        Me.GrupoFiltros.Padding = New System.Windows.Forms.Padding(2)
+        Me.GrupoFiltros.Size = New System.Drawing.Size(1199, 103)
+        Me.GrupoFiltros.TabIndex = 170
+        Me.GrupoFiltros.TabStop = False
+        Me.GrupoFiltros.Text = "Filtros de Búsquedas"
         '
         'Label1
         '
@@ -244,7 +244,7 @@ Partial Class FrmControlInseminacion
         Me.CmbAnios.Font = New System.Drawing.Font("Verdana", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CmbAnios.FormattingEnabled = True
         Me.CmbAnios.Location = New System.Drawing.Point(84, 28)
-        Me.CmbAnios.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.CmbAnios.Margin = New System.Windows.Forms.Padding(2)
         Me.CmbAnios.Name = "CmbAnios"
         Me.CmbAnios.Size = New System.Drawing.Size(133, 26)
         Me.CmbAnios.TabIndex = 178
@@ -253,7 +253,7 @@ Partial Class FrmControlInseminacion
         '
         Me.NumLote.Font = New System.Drawing.Font("Verdana", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.NumLote.Location = New System.Drawing.Point(365, 29)
-        Me.NumLote.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.NumLote.Margin = New System.Windows.Forms.Padding(2)
         Me.NumLote.Maximum = New Decimal(New Integer() {52, 0, 0, 0})
         Me.NumLote.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.NumLote.Name = "NumLote"
@@ -456,7 +456,7 @@ Partial Class FrmControlInseminacion
         Me.Controls.Add(Me.Ptbx_Cargando)
         Me.Controls.Add(Me.dtgListado)
         Me.Controls.Add(Me.Panel2)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "FrmControlInseminacion"
@@ -464,8 +464,8 @@ Partial Class FrmControlInseminacion
         Me.Text = "CONTROL DE INSEMINACIONES"
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
+        Me.GrupoFiltros.ResumeLayout(False)
+        Me.GrupoFiltros.PerformLayout()
         CType(Me.NumLote, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()
@@ -490,7 +490,7 @@ Partial Class FrmControlInseminacion
     Friend WithEvents NumLote As NumericUpDown
     Friend WithEvents LblPeriodo As Label
     Friend WithEvents LblPlantel As Label
-    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents GrupoFiltros As GroupBox
     Friend WithEvents Label17 As Label
     Friend WithEvents Label16 As Label
     Friend WithEvents Label13 As Label
