@@ -97,7 +97,7 @@ Public Class FrmReporteAnimalesPlantel
 
                 LblConversionAlimenticia.Text = If(valor < 0, "-", valor.ToString("F2"))
             End If
-            GananciaDiariaPeso.Text = If(CInt(LblEdadPromedioLote.Text) = 0, 0, (CInt(LblPromedioPesoVenta.Text) / CInt(LblEdadPromedioLote.Text)).ToString("F3"))
+            GananciaDiariaPeso.Text = If(CInt(LblEdadPromedioLote.Text) = 0, 0, (CDec(LblPromedioPesoVenta.Text) / CDec(LblEdadPromedioLote.Text)).ToString("F3"))
             LblPesoTotalVentaConsDona.Text = (Convert.ToDecimal(dtgListado.Rows(0).Cells("pesoConsumoDonacion").Value) + Convert.ToDecimal(dtgListado.Rows(0).Cells("peso").Value)).ToString("N0")
         End If
     End Sub

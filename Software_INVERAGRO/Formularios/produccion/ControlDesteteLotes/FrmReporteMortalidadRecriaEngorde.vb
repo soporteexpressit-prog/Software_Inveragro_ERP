@@ -43,7 +43,7 @@ Public Class FrmReporteMortalidadRecriaEngorde
            .IdPlantel = idUbicacion
         }
         Dim tb As New DataTable
-        tb = cn.Cn_ConsultarLotesAnioCombo(obj).Copy
+        tb = cn.Cn_ConsultarLotesAnioUbicacion(obj).Copy
         tb.TableName = "tmp"
         tb.Columns(1).ColumnName = "Seleccione un Plantel"
         With CmbLotes

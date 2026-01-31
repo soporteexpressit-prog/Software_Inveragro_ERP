@@ -102,6 +102,7 @@ Public Class FrmProgramaAlimentacion
             Dim relation1 As New DataRelation("tb_relacion1", ds.Tables(0).Columns(0), ds.Tables(1).Columns(0), False)
             ds.Relations.Add(relation1)
             ds.Tables(0).Columns(0).ColumnMapping = MappingType.Hidden
+            ds.Tables(0).Columns(2).ColumnMapping = MappingType.Hidden
             ds.Tables(1).Columns(0).ColumnMapping = MappingType.Hidden
             ds.Tables(1).Columns(1).ColumnMapping = MappingType.Hidden
             e.Result = ds
@@ -122,7 +123,7 @@ Public Class FrmProgramaAlimentacion
 
     Sub Colorear()
         If (dtgListado.Rows.Count > 0) Then
-            Dim estado As Integer = 7
+            Dim estado As Integer = 8
 
             'estado
             clsBasicas.Colorear_SegunValor(dtgListado, Color.Red, Color.White, "INACTIVO", estado)

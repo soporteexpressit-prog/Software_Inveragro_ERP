@@ -20,6 +20,10 @@ Public Class cnControlLoteDestete
         Return cls_at.Cd_ConsultarLoteAnio("[w_pa_listar_lotes_por_anio_combo]", obj)
     End Function
 
+    Public Function Cn_ConsultarLotesAnioUbicacion(obj As coControlLoteDestete) As DataTable
+        Return cls_at.Cd_ConsultarLoteAnio("[w_pa_listar_lotes_por_anio_ubicacion]", obj)
+    End Function
+
     Public Function Cn_ConsultarLotesUnicos(obj As coControlLoteDestete) As DataTable
         Return cls_at.Cd_ConsultarxAnioDt("[w_pa_listar_lotes_unicos]", obj)
     End Function
