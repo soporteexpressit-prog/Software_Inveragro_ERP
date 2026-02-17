@@ -32,6 +32,7 @@
     Private _IdPeriodoMedicion As Integer
     Private _IdPeriodoPlus As Integer
     Private _Anio As Integer
+    Private _IdCampaña As Integer
 
     Public Property Codigo As Integer
         Get
@@ -318,6 +319,15 @@
         End Get
         Set(value As Integer)
             _Anio = value
+        End Set
+    End Property
+
+    Public Property IdCampaña As Integer
+        Get
+            Return _IdCampaña
+        End Get
+        Set(value As Integer)
+            _IdCampaña = value
         End Set
     End Property
 End Class

@@ -148,6 +148,13 @@ Public Class FrmCronogramaEngordeVT
         End Try
     End Sub
 
+    Private Sub CmbAnios_TextChanged(sender As Object, e As EventArgs) Handles CmbAnios.TextChanged
+        If CmbAnios Is Nothing OrElse String.IsNullOrEmpty(CmbAnios.Text) Then
+            Return
+        End If
+        ListarCampañas()
+    End Sub
+
     Private Sub btnCerrar_Click(sender As Object, e As EventArgs) Handles btnCerrar.Click
         Dispose()
     End Sub

@@ -1,11 +1,12 @@
 ﻿Imports CapaDatos
 Imports CapaNegocio
 Imports CapaObjetos
+Imports Infragistics.Olap.Core.Data
 Imports Infragistics.Win
 
 Public Class FrmHistoricoDestete
     Dim cn As New cnControlAnimal
-    Dim tbtmp As New DataTable
+    Dim ds As New DataSet
     Public idUbicacion As Integer = 0
 
     Private Sub FrmHistoricoDestete_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -54,9 +55,8 @@ Public Class FrmHistoricoDestete
     Private Sub BackgroundWorker1_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorker1.DoWork
         Try
             Dim obj As coControlAnimal = CType(e.Argument, coControlAnimal)
-            tbtmp = cn.Cn_ConsultarHistoricoDestete(obj).Copy
-            tbtmp.TableName = "tmp"
-            e.Result = tbtmp
+            ds = cn.Cn_ConsultarHistoricoDestete(obj).Copy
+            e.Result = ds
         Catch ex As Exception
             e.Cancel = True
         End Try
@@ -67,8 +67,19 @@ Public Class FrmHistoricoDestete
         If e.Error IsNot Nothing OrElse e.Cancelled Then
             msj_advert("Error al Cargar los Datos")
         Else
-            dtgListado.DataSource = CType(e.Result, DataTable)
+            Dim dsResult As DataSet = CType(e.Result, DataSet)
+            dtgListado.DataSource = dsResult.Tables(0)
             dtgListado.DisplayLayout.Bands(0).Columns("idControlFicha").Hidden = True
+
+            If dsResult.Tables.Count > 1 AndAlso dsResult.Tables(1).Rows.Count > 0 Then
+
+                Dim row As DataRow = dsResult.Tables(1).Rows(0)
+                LblEdadLote.Text = row("Edad Lote").ToString()
+                LblPesoPromCamada.Text = FormatNumber(row("Peso Promedio Camada"), 2)
+                LblCantidadLechones.Text = row("Cantidad Lechones").ToString()
+                LblPesoPromCria.Text = FormatNumber(row("Peso Promedio Cría"), 2)
+
+            End If
             Colorear()
         End If
     End Sub

@@ -350,6 +350,8 @@ Public Class FrmControlMaterialGenetico
             Else
                 e.Layout.Bands(0).Summaries.Clear()
                 clsBasicas.Totales_Formato(dtgListado, e, 1)
+                clsBasicas.SumarTotales_Formato(dtgListado, e, 7)
+                clsBasicas.SumarTotales_Formato(dtgListado, e, 8)
             End If
         Catch ex As Exception
             clsBasicas.controlException(Name, ex)

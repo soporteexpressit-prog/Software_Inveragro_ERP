@@ -1,7 +1,7 @@
-﻿Imports CapaNegocio
+﻿Imports CapaDatos
+Imports CapaNegocio
 Imports CapaObjetos
 Imports Infragistics.Win
-Imports iText.Forms.Form.Element
 
 Public Class FrmMantProgramaAlimentacion
     Dim cn As New cnControlFormulacion
@@ -23,14 +23,14 @@ Public Class FrmMantProgramaAlimentacion
             Else
                 CmbEstado.Enabled = False
             End If
+            CmbArea.Value = 4 'area de engorde
         Catch ex As Exception
             clsBasicas.controlException(Name, ex)
         End Try
     End Sub
 
     Sub Inicializar()
-        DtpFecha.Value = Now.Date
-        DtpFechaFin.Value = Now.Date
+        clsBasicas.LlenarComboAnios(CmbAnios)
         CmbEstado.SelectedIndex = 0
         TxtRacion.ReadOnly = True
     End Sub
@@ -38,10 +38,30 @@ Public Class FrmMantProgramaAlimentacion
     Sub ListarPlanteles()
         Dim cn As New cnUbicacion
         Dim tb As New DataTable
-        tb = cn.Cn_ListarPlanteles().Copy
+        tb = cn.Cn_ListarPlantelesEngorde().Copy
         tb.TableName = "tmp"
         tb.Columns(1).ColumnName = "Seleccione un Plantel"
         With CmbUbicacion
+            .DataSource = tb
+            .DisplayMember = tb.Columns(1).ColumnName
+            .ValueMember = tb.Columns(0).ColumnName
+            If (tb.Rows.Count > 0) Then
+                .Value = tb.Rows(0)(0)
+            End If
+        End With
+    End Sub
+
+    Sub ListarCampañas()
+        Dim cn As New cnUbicacion
+        Dim tb As New DataTable
+        Dim obj As New coUbicacion With {
+            .Codigo = CmbUbicacion.Value,
+            .Anio = CmbAnios.Text
+        }
+        tb = cn.Cn_ListarCampañas(obj).Copy
+        tb.TableName = "tmp"
+        tb.Columns(1).ColumnName = "Seleccione un Plantel"
+        With CmbCampaña
             .DataSource = tb
             .DisplayMember = tb.Columns(1).ColumnName
             .ValueMember = tb.Columns(0).ColumnName
@@ -61,9 +81,9 @@ Public Class FrmMantProgramaAlimentacion
             If (ds.Tables(0).Rows.Count > 0) Then
                 TxtMotivo.Text = ds.Tables(0).Rows(0)("nota").ToString
                 CmbEstado.Text = ds.Tables(0).Rows(0)("estado").ToString
-                DtpFecha.Value = ds.Tables(0).Rows(0)("fecha")
-                DtpFechaFin.Value = ds.Tables(0).Rows(0)("fechaFin")
+                CmbAnios.Text = ds.Tables(0).Rows(0)("anio").ToString
                 CmbUbicacion.Value = ds.Tables(0).Rows(0)("idPlantel")
+                CmbCampaña.Value = ds.Tables(0).Rows(0)("idCampaña")
             End If
 
             If (ds.Tables(1).Rows.Count > 0) Then
@@ -330,10 +350,9 @@ Public Class FrmMantProgramaAlimentacion
                 Dim obj As New coControlFormulacion With {
                     .Operacion = If(idProgramaAlimentacion = 0, 0, 1),
                     .Codigo = idProgramaAlimentacion,
-                    .FechaElaboracion = DtpFecha.Value,
-                    .FechaHasta = DtpFechaFin.Value,
                     .IdUbicacion = CmbUbicacion.Value,
-                    .Descripcion = "PROGRAMA DE ALIMENTACIÓN" & " " & DtpFecha.Value.ToString("dd/MM/yyyy"),
+                    .IdCampaña = CmbCampaña.Value,
+                    .Descripcion = "PROGRAMA DE ALIMENTACIÓN - " & CmbUbicacion.Text,
                     .Motivo = TxtMotivo.Text,
                     .Iduser = VP_IdUser,
                     .ListaAsignacionRacion = CreacionArrayProgramaAlimentacion(),
@@ -378,6 +397,20 @@ Public Class FrmMantProgramaAlimentacion
 
     Private Sub TxtPesoInicial_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtPesoInicial.KeyPress
         clsBasicas.ValidarDecimalEstricto(sender, e)
+    End Sub
+
+    Private Sub CmbUbicacion_ValueChanged(sender As Object, e As EventArgs) Handles CmbUbicacion.ValueChanged
+        If CmbUbicacion Is Nothing OrElse CmbUbicacion.Value Is Nothing OrElse String.IsNullOrEmpty(CmbAnios.Text) Then
+            Return
+        End If
+        ListarCampañas()
+    End Sub
+
+    Private Sub CmbAnios_TextChanged(sender As Object, e As EventArgs) Handles CmbAnios.TextChanged
+        If CmbAnios Is Nothing OrElse String.IsNullOrEmpty(CmbAnios.Text) Then
+            Return
+        End If
+        ListarCampañas()
     End Sub
 
     Private Sub BtnCerrar_Click(sender As Object, e As EventArgs) Handles BtnCerrar.Click

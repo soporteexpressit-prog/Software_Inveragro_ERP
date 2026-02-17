@@ -28,10 +28,21 @@ Public Class FrmControlInseminacion
         LblPlantel.Text = valorPlantel
     End Sub
 
+    Private Sub BloquearControladores()
+        Ptbx_Cargando.Visible = True
+        GrupoFiltros.Enabled = False
+        ToolStrip1.Enabled = False
+    End Sub
+
+    Private Sub DesbloquearControladores()
+        Ptbx_Cargando.Visible = False
+        GrupoFiltros.Enabled = True
+        ToolStrip1.Enabled = True
+    End Sub
+
     Sub Consultar()
+        BloquearControladores()
         If Not BackgroundWorker1.IsBusy Then
-            Ptbx_Cargando.Visible = True
-            ToolStrip1.Enabled = False
             Dim intervalo As (Date, Date) = clsBasicas.ObtenerIntervaloSemana(CmbAnios.Text, NumLote.Value)
             LblPeriodo.Text = clsBasicas.ObtenerPeriodoDeSemana(CmbAnios.Text, NumLote.Value)
 
@@ -71,14 +82,13 @@ Public Class FrmControlInseminacion
     End Sub
 
     Private Sub BackgroundWorker1_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BackgroundWorker1.RunWorkerCompleted
-        Ptbx_Cargando.Visible = False
         If e.Error IsNot Nothing OrElse e.Cancelled Then
             msj_advert("Error al Cargar los Datos")
         Else
             dtgListado.DataSource = ds.Tables(0)
-            ToolStrip1.Enabled = True
             dtgListado.DisplayLayout.Bands(0).Columns("idControlFicha").Hidden = True
             dtgListado.DisplayLayout.Bands(1).Columns("idControlFicha").Hidden = True
+            DesbloquearControladores()
             PintarFilasPorEtapa()
             PintarFilasPorEstadoParto()
             Colorear()
