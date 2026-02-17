@@ -64,6 +64,9 @@ Public Class cnVentas
     Public Function Cn_Regactualizacionatipopeso(ByRef obj As coVentas) As String
         Return cls_at.Cd_Regactualizaciontipopeso("[j_pa_actualizar_tipo_peso]", obj)
     End Function
+    Public Function Cn_Regtipo_conductor(ByRef obj As coVentas) As String
+        Return cls_at.Cd_Regactualizacionvendedor("[j_pa_reg_tipo_conductor]", obj)
+    End Function
     Public Function Cn_Regactualizacioncerdo(ByRef obj As coVentas) As String
         Return cls_at.Cd_Regactualizacionvendedor("[j_pa_actualizar_cerdo]", obj)
     End Function
@@ -101,6 +104,10 @@ Public Class cnVentas
 
     Public Function Cn_ListartodosVendedoresyconductores(obj As coProductos) As DataTable
         Return cls_at.ListarVendedores("[i_pa_listar_vendedores_y_conductores]", obj)
+    End Function
+
+    Public Function Cn_ListartipoRegConductor(obj As coProductos) As DataTable
+        Return cls_at.ListarVendedores("[i_pa_listar_conductorestiporeg]", obj)
     End Function
 
     Public Function Cn_ListarDestinoScti() As DataTable

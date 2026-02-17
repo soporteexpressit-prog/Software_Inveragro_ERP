@@ -82,6 +82,19 @@ Public Class clsBasicas
         End With
     End Sub
 
+    Public Shared Sub ListartipoRegConductor(cbxalmacen As ComboBox)
+        Dim obj As New coProductos
+        Dim cn As New cnVentas
+        obj.IdUsuario = GlobalReferences.ActiveSessionId
+        Dim tbtmp As New DataTable
+        tbtmp = cn.Cn_ListartipoRegConductor(obj).Copy
+        tbtmp.TableName = "tmp"
+        With cbxalmacen
+            .DataSource = tbtmp
+            .DisplayMember = tbtmp.Columns(1).ColumnName
+            .ValueMember = tbtmp.Columns(0).ColumnName
+        End With
+    End Sub
     Public Shared Sub ListarPlantelesAsignados(cbxalmacen As ComboBox)
         Dim obj As New coProductos
         Dim cn As New cnProducto

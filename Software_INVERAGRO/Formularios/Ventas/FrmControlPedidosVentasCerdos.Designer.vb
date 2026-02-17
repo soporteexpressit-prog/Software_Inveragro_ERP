@@ -22,8 +22,8 @@ Partial Class FrmControlPedidosVentasCerdos
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim Appearance1 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim Appearance2 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance18 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance19 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmControlPedidosVentasCerdos))
         Dim Appearance3 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance4 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
@@ -69,6 +69,7 @@ Partial Class FrmControlPedidosVentasCerdos
         Me.ToolStripMenuItem8 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ActualizarVendedorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EditarTipoDePrecioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EditarFechaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Visualizar = New System.Windows.Forms.ToolStripDropDownButton()
         Me.ToolStripMenuItem9 = New System.Windows.Forms.ToolStripMenuItem()
         Me.btnventaoirrecuperablespedidocerdoventas = New System.Windows.Forms.ToolStripMenuItem()
@@ -98,7 +99,7 @@ Partial Class FrmControlPedidosVentasCerdos
         Me.dtgListado = New Infragistics.Win.UltraWinGrid.UltraGrid()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         Me.Ptbx_Cargando = New System.Windows.Forms.PictureBox()
-        Me.EditarFechaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EditarVentaIrrecuperableToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.UltraGroupBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -184,7 +185,7 @@ Partial Class FrmControlPedidosVentasCerdos
         Me.Panel2.Controls.Add(Me.ToolStrip1)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(1709, 195)
         Me.Panel2.TabIndex = 7
@@ -200,16 +201,16 @@ Partial Class FrmControlPedidosVentasCerdos
         '
         'UltraGroupBox2
         '
-        Appearance1.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(233, Byte), Integer))
-        Appearance1.BackColor2 = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(233, Byte), Integer))
-        Me.UltraGroupBox2.Appearance = Appearance1
+        Appearance18.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(233, Byte), Integer))
+        Appearance18.BackColor2 = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.UltraGroupBox2.Appearance = Appearance18
         Me.UltraGroupBox2.CaptionAlignment = Infragistics.Win.Misc.GroupBoxCaptionAlignment.Near
         Me.UltraGroupBox2.Controls.Add(Me.Label2)
         Me.UltraGroupBox2.Controls.Add(Me.GrupoMasOpcionesBusqueda)
         Me.UltraGroupBox2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.UltraGroupBox2.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Appearance2.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(233, Byte), Integer))
-        Me.UltraGroupBox2.HeaderAppearance = Appearance2
+        Appearance19.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.UltraGroupBox2.HeaderAppearance = Appearance19
         Me.UltraGroupBox2.HeaderBorderStyle = Infragistics.Win.UIElementBorderStyle.Rounded4Thick
         Me.UltraGroupBox2.HeaderPosition = Infragistics.Win.Misc.GroupBoxHeaderPosition.TopOnBorder
         Me.UltraGroupBox2.Location = New System.Drawing.Point(0, 0)
@@ -267,7 +268,7 @@ Partial Class FrmControlPedidosVentasCerdos
         'txtProveedor
         '
         Me.txtProveedor.Location = New System.Drawing.Point(339, 25)
-        Me.txtProveedor.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtProveedor.Margin = New System.Windows.Forms.Padding(2)
         Me.txtProveedor.MaxLength = 200
         Me.txtProveedor.Name = "txtProveedor"
         Me.txtProveedor.Size = New System.Drawing.Size(263, 21)
@@ -293,7 +294,7 @@ Partial Class FrmControlPedidosVentasCerdos
         Me.btnConsultar.Image = Global.Formularios.My.Resources.Resources.buscando__1_
         Me.btnConsultar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnConsultar.Location = New System.Drawing.Point(1088, 72)
-        Me.btnConsultar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnConsultar.Margin = New System.Windows.Forms.Padding(2)
         Me.btnConsultar.Name = "btnConsultar"
         Me.btnConsultar.Padding = New System.Windows.Forms.Padding(3, 0, 3, 0)
         Me.btnConsultar.Size = New System.Drawing.Size(101, 34)
@@ -310,7 +311,7 @@ Partial Class FrmControlPedidosVentasCerdos
         Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnNuevopedidocerdoventas, Me.ToolStripButton2, Me.btnnueva_venta_x_kilosMODUVENTAS, Me.btnconfirmar_facturacionpedidocerdoventas, Me.btnajustespedidoventas, Me.btneditarpedidos, Me.Visualizar, Me.btnanulacionesdisponibles, Me.btnreportesventas, Me.btncerrar, Me.ToolStripButton1})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 157)
-        Me.ToolStrip1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.ToolStrip1.Margin = New System.Windows.Forms.Padding(2)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Padding = New System.Windows.Forms.Padding(0, 0, 2, 0)
         Me.ToolStrip1.Size = New System.Drawing.Size(1709, 38)
@@ -396,7 +397,7 @@ Partial Class FrmControlPedidosVentasCerdos
         'btneditarpedidos
         '
         Me.btneditarpedidos.BackColor = System.Drawing.Color.Transparent
-        Me.btneditarpedidos.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EditarTipoCerdoToolStripMenuItem, Me.ToolStripMenuItem7, Me.ToolStripMenuItem8, Me.ActualizarVendedorToolStripMenuItem, Me.EditarTipoDePrecioToolStripMenuItem, Me.EditarFechaToolStripMenuItem})
+        Me.btneditarpedidos.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EditarTipoCerdoToolStripMenuItem, Me.ToolStripMenuItem7, Me.ToolStripMenuItem8, Me.ActualizarVendedorToolStripMenuItem, Me.EditarTipoDePrecioToolStripMenuItem, Me.EditarFechaToolStripMenuItem, Me.EditarVentaIrrecuperableToolStripMenuItem})
         Me.btneditarpedidos.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btneditarpedidos.ForeColor = System.Drawing.Color.White
         Me.btneditarpedidos.Image = Global.Formularios.My.Resources.Resources.editar
@@ -409,33 +410,39 @@ Partial Class FrmControlPedidosVentasCerdos
         'EditarTipoCerdoToolStripMenuItem
         '
         Me.EditarTipoCerdoToolStripMenuItem.Name = "EditarTipoCerdoToolStripMenuItem"
-        Me.EditarTipoCerdoToolStripMenuItem.Size = New System.Drawing.Size(211, 22)
+        Me.EditarTipoCerdoToolStripMenuItem.Size = New System.Drawing.Size(262, 22)
         Me.EditarTipoCerdoToolStripMenuItem.Text = "Editar Tipo Cerdo"
         Me.EditarTipoCerdoToolStripMenuItem.Visible = False
         '
         'ToolStripMenuItem7
         '
         Me.ToolStripMenuItem7.Name = "ToolStripMenuItem7"
-        Me.ToolStripMenuItem7.Size = New System.Drawing.Size(211, 22)
+        Me.ToolStripMenuItem7.Size = New System.Drawing.Size(262, 22)
         Me.ToolStripMenuItem7.Text = "Editar Cliente"
         '
         'ToolStripMenuItem8
         '
         Me.ToolStripMenuItem8.Name = "ToolStripMenuItem8"
-        Me.ToolStripMenuItem8.Size = New System.Drawing.Size(211, 22)
+        Me.ToolStripMenuItem8.Size = New System.Drawing.Size(262, 22)
         Me.ToolStripMenuItem8.Text = "Editar pedido"
         '
         'ActualizarVendedorToolStripMenuItem
         '
         Me.ActualizarVendedorToolStripMenuItem.Name = "ActualizarVendedorToolStripMenuItem"
-        Me.ActualizarVendedorToolStripMenuItem.Size = New System.Drawing.Size(211, 22)
+        Me.ActualizarVendedorToolStripMenuItem.Size = New System.Drawing.Size(262, 22)
         Me.ActualizarVendedorToolStripMenuItem.Text = "Editar Vendedor"
         '
         'EditarTipoDePrecioToolStripMenuItem
         '
         Me.EditarTipoDePrecioToolStripMenuItem.Name = "EditarTipoDePrecioToolStripMenuItem"
-        Me.EditarTipoDePrecioToolStripMenuItem.Size = New System.Drawing.Size(211, 22)
+        Me.EditarTipoDePrecioToolStripMenuItem.Size = New System.Drawing.Size(262, 22)
         Me.EditarTipoDePrecioToolStripMenuItem.Text = "Editar Tipo de Precio"
+        '
+        'EditarFechaToolStripMenuItem
+        '
+        Me.EditarFechaToolStripMenuItem.Name = "EditarFechaToolStripMenuItem"
+        Me.EditarFechaToolStripMenuItem.Size = New System.Drawing.Size(262, 22)
+        Me.EditarFechaToolStripMenuItem.Text = "Editar Fecha"
         '
         'Visualizar
         '
@@ -725,11 +732,11 @@ Partial Class FrmControlPedidosVentasCerdos
         Me.Ptbx_Cargando.TabStop = False
         Me.Ptbx_Cargando.Visible = False
         '
-        'EditarFechaToolStripMenuItem
+        'EditarVentaIrrecuperableToolStripMenuItem
         '
-        Me.EditarFechaToolStripMenuItem.Name = "EditarFechaToolStripMenuItem"
-        Me.EditarFechaToolStripMenuItem.Size = New System.Drawing.Size(211, 22)
-        Me.EditarFechaToolStripMenuItem.Text = "Editar Fecha"
+        Me.EditarVentaIrrecuperableToolStripMenuItem.Name = "EditarVentaIrrecuperableToolStripMenuItem"
+        Me.EditarVentaIrrecuperableToolStripMenuItem.Size = New System.Drawing.Size(262, 22)
+        Me.EditarVentaIrrecuperableToolStripMenuItem.Text = "Editar Venta / Irrecuperable"
         '
         'FrmControlPedidosVentasCerdos
         '
@@ -819,4 +826,5 @@ Partial Class FrmControlPedidosVentasCerdos
     Friend WithEvents StockDeCerdosParaVentaToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AnularVentaPorKilosToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents EditarFechaToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents EditarVentaIrrecuperableToolStripMenuItem As ToolStripMenuItem
 End Class

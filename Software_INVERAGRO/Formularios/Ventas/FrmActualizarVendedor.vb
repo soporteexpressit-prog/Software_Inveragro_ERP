@@ -20,6 +20,8 @@ Public Class FrmActualizarVendedor
                 MensajeBgWk = cn.Cn_Regactualizacioncerdo(obj)
             ElseIf operacion = 2 Then
                 MensajeBgWk = cn.Cn_Regactualizacionatipopeso(obj)
+            ElseIf operacion = 3 Then
+                MensajeBgWk = cn.Cn_Regtipo_conductor(obj)
             End If
             If (obj.Coderror = 0) Then
                 msj_ok(MensajeBgWk)
@@ -51,6 +53,11 @@ Public Class FrmActualizarVendedor
             Me.Text = "Actualizar Tipo de Peso"
             GrupoMasOpcionesBusqueda.Text = "Actualizar Tipo de Peso"
             Label12.Text = "Tipo de Peso : "
+        ElseIf operacion = 3 Then
+            clsBasicas.ListartipoRegConductor(cbxvendedor)
+            Me.Text = "Actualizar Registro de Conductor"
+            GrupoMasOpcionesBusqueda.Text = "Actualizar Registro de Conductor"
+            Label12.Text = "Tipo de Registro : "
         End If
     End Sub
 

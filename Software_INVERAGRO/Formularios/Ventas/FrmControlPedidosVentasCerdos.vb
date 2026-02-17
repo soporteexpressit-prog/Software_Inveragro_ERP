@@ -357,8 +357,8 @@ Public Class FrmControlPedidosVentasCerdos
             End If
 
             If (dtgListado.Rows.Count > 0) Then
-                If {"31", "45", "46", "47", "48"}.Contains(activeRow.Cells(26).Value.ToString) Then
-                    If activeRow.Cells(19).Value.ToString() <> "PENDIENTE" Then
+                ' If {"31", "45", "46", "47", "48"}.Contains(activeRow.Cells(26).Value.ToString) Then
+                If activeRow.Cells(19).Value.ToString() <> "PENDIENTE" Then
                         msj_advert("No se puede Anexar una Nueva Venta por Kilos porque el Pedido Seleccionado ya fue enviado a Facturación")
                         Return
                     End If
@@ -366,9 +366,9 @@ Public Class FrmControlPedidosVentasCerdos
                     Dim f As New FrmPedidoVentaxKilos
                     f._codigo = dtgListado.ActiveRow.Cells(0).Value.ToString
                     f.ShowDialog()
-                Else
-                    msj_advert("Solo se puede Aplicar la Venta por Kilos a un Pedido de Cerdo de Emergencia")
-                End If
+                '  Else
+                ' msj_advert("Solo se puede Aplicar la Venta por Kilos a un Pedido de Cerdo de Emergencia")
+                'End If
             End If
         Catch ex As Exception
             clsBasicas.controlException(Name, ex)
@@ -920,6 +920,28 @@ Public Class FrmControlPedidosVentasCerdos
             Consultar()
         Catch ex As Exception
             MessageBox.Show("Ocurrió un error: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
+
+    Private Sub EditarVentaIrrecuperableToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EditarVentaIrrecuperableToolStripMenuItem.Click
+        Try
+
+            Dim activeRow As Infragistics.Win.UltraWinGrid.UltraGridRow = Nothing
+            ' Validar si se seleccionó una fila
+            If Not clsBasicas.ValidarSeleccionFila(activeRow, dtgListado) Then
+                Return
+            End If
+            If activeRow.Cells(19).Value.ToString() = "FACTURADO" Then
+                msj_advert("Este pedido ya ha sido facturado y no puede modificarse")
+                Return
+            End If
+            Dim frm As New FrmActualizarVendedor
+            frm._codigo = dtgListado.ActiveRow.Cells(0).Value.ToString
+            frm.operacion = 3
+            frm.ShowDialog()
+            Consultar()
+        Catch ex As Exception
+            clsBasicas.controlException(Name, ex)
         End Try
     End Sub
 End Class
