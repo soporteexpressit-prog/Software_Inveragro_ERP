@@ -235,6 +235,9 @@ Public Class FrmCuentasCobrar
 
             If (activeRow.Cells(13).Value.ToString.Equals("SI")) Then
                 msj_advert("La cuenta ya fue liquidada")
+            ElseIf (activeRow.Cells(14).Value.ToString.Equals("ANULADO")) Then
+                msj_advert("La cuenta ya fue anulada, no puede realizar cobros")
+
             Else
 
                 Dim f As New FrmAbonarCuentaCobrar

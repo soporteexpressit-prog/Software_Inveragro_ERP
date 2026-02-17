@@ -24,9 +24,9 @@ Partial Class FrmMant_Producto
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim Appearance33 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim Appearance34 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim Appearance35 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance1 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance2 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance18 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance3 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance4 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance5 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
@@ -42,9 +42,9 @@ Partial Class FrmMant_Producto
         Dim Appearance15 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance16 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance17 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim Appearance36 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance19 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmMant_Producto))
-        Dim Appearance37 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance20 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance21 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance22 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance23 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
@@ -72,6 +72,7 @@ Partial Class FrmMant_Producto
         Me.ReporteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReporteDeCostosDeAlmancenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.btnDashboardproductos = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HistoricoDeRecepcionesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.btn_historicodecompraalmacenali = New System.Windows.Forms.ToolStripButton()
         Me.btnverkardexproductos = New System.Windows.Forms.ToolStripButton()
         Me.BtnCodigoBarraalmaali = New System.Windows.Forms.ToolStripButton()
@@ -90,7 +91,6 @@ Partial Class FrmMant_Producto
         Me.cbxalmacen = New System.Windows.Forms.ComboBox()
         Me.Cmbx_TipoDoc = New Infragistics.Win.UltraWinGrid.UltraCombo()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
-        Me.HistoricoDeRecepcionesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.UltraGroupBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.UltraGroupBox2.SuspendLayout()
         CType(Me.Ptbx_Cargando, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -103,21 +103,21 @@ Partial Class FrmMant_Producto
         '
         'UltraGroupBox2
         '
-        Appearance33.BackColor = System.Drawing.Color.Transparent
-        Appearance33.BorderColor = System.Drawing.Color.Transparent
-        Me.UltraGroupBox2.Appearance = Appearance33
-        Appearance34.BorderColor = System.Drawing.Color.Black
-        Me.UltraGroupBox2.ContentAreaAppearance = Appearance34
+        Appearance1.BackColor = System.Drawing.Color.Transparent
+        Appearance1.BorderColor = System.Drawing.Color.Transparent
+        Me.UltraGroupBox2.Appearance = Appearance1
+        Appearance2.BorderColor = System.Drawing.Color.Black
+        Me.UltraGroupBox2.ContentAreaAppearance = Appearance2
         Me.UltraGroupBox2.Controls.Add(Me.Ptbx_Cargando)
         Me.UltraGroupBox2.Controls.Add(Me.dtg_Listado)
         Me.UltraGroupBox2.Dock = System.Windows.Forms.DockStyle.Fill
-        Appearance35.BackColor = System.Drawing.Color.Transparent
-        Appearance35.FontData.BoldAsString = "True"
-        Appearance35.FontData.Name = "Calibri"
-        Appearance35.FontData.SizeInPoints = 11.0!
-        Appearance35.ForeColor = System.Drawing.Color.Black
-        Appearance35.TextHAlignAsString = "Center"
-        Me.UltraGroupBox2.HeaderAppearance = Appearance35
+        Appearance18.BackColor = System.Drawing.Color.Transparent
+        Appearance18.FontData.BoldAsString = "True"
+        Appearance18.FontData.Name = "Calibri"
+        Appearance18.FontData.SizeInPoints = 11.0!
+        Appearance18.ForeColor = System.Drawing.Color.Black
+        Appearance18.TextHAlignAsString = "Center"
+        Me.UltraGroupBox2.HeaderAppearance = Appearance18
         Me.UltraGroupBox2.HeaderPosition = Infragistics.Win.Misc.GroupBoxHeaderPosition.TopOnBorder
         Me.UltraGroupBox2.Location = New System.Drawing.Point(0, 169)
         Me.UltraGroupBox2.Name = "UltraGroupBox2"
@@ -227,11 +227,11 @@ Partial Class FrmMant_Producto
         '
         'UltraLabel3
         '
-        Appearance36.BackColor = System.Drawing.Color.Transparent
-        Appearance36.FontData.SizeInPoints = 9.0!
-        Appearance36.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Appearance36.TextVAlignAsString = "Middle"
-        Me.UltraLabel3.Appearance = Appearance36
+        Appearance19.BackColor = System.Drawing.Color.Transparent
+        Appearance19.FontData.SizeInPoints = 9.0!
+        Appearance19.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
+        Appearance19.TextVAlignAsString = "Middle"
+        Me.UltraLabel3.Appearance = Appearance19
         Me.UltraLabel3.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.UltraLabel3.Location = New System.Drawing.Point(558, 30)
         Me.UltraLabel3.Name = "UltraLabel3"
@@ -246,7 +246,7 @@ Partial Class FrmMant_Producto
         Me.ToolStrip1.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold)
         Me.ToolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
         Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btn_nuevoproductos, Me.btn_editarproductos, Me.btn_eliminar, Me.btnexportar_excelproductos, Me.ToolStripButton1productos, Me.btn_historicodecompraalmacenali, Me.btnverkardexproductos, Me.BtnCodigoBarraalmaali, Me.BtnVerLotealmcenproductos, Me.btnrecepciones, Me.btnAsignarUnidadesMedida, Me.ToolStripButton3, Me.btn_cerrar, Me.ToolStripButton2, Me.ToolStripButton1})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btn_nuevoproductos, Me.btn_editarproductos, Me.btn_eliminar, Me.ToolStripButton1productos, Me.btnexportar_excelproductos, Me.btn_historicodecompraalmacenali, Me.btnverkardexproductos, Me.BtnCodigoBarraalmaali, Me.BtnVerLotealmcenproductos, Me.btnrecepciones, Me.btnAsignarUnidadesMedida, Me.ToolStripButton3, Me.btn_cerrar, Me.ToolStripButton2, Me.ToolStripButton1})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 131)
         Me.ToolStrip1.Margin = New System.Windows.Forms.Padding(1)
         Me.ToolStrip1.Name = "ToolStrip1"
@@ -351,6 +351,12 @@ Partial Class FrmMant_Producto
         Me.btnDashboardproductos.Name = "btnDashboardproductos"
         Me.btnDashboardproductos.Size = New System.Drawing.Size(280, 22)
         Me.btnDashboardproductos.Text = " Reporte Dashboard"
+        '
+        'HistoricoDeRecepcionesToolStripMenuItem
+        '
+        Me.HistoricoDeRecepcionesToolStripMenuItem.Name = "HistoricoDeRecepcionesToolStripMenuItem"
+        Me.HistoricoDeRecepcionesToolStripMenuItem.Size = New System.Drawing.Size(280, 22)
+        Me.HistoricoDeRecepcionesToolStripMenuItem.Text = "Historico de Recepciones"
         '
         'btn_historicodecompraalmacenali
         '
@@ -543,11 +549,11 @@ Partial Class FrmMant_Producto
         '
         'lblalmacen
         '
-        Appearance37.BackColor = System.Drawing.Color.Transparent
-        Appearance37.FontData.SizeInPoints = 9.0!
-        Appearance37.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Appearance37.TextVAlignAsString = "Middle"
-        Me.lblalmacen.Appearance = Appearance37
+        Appearance20.BackColor = System.Drawing.Color.Transparent
+        Appearance20.FontData.SizeInPoints = 9.0!
+        Appearance20.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
+        Appearance20.TextVAlignAsString = "Middle"
+        Me.lblalmacen.Appearance = Appearance20
         Me.lblalmacen.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblalmacen.Location = New System.Drawing.Point(8, 29)
         Me.lblalmacen.Name = "lblalmacen"
@@ -632,12 +638,6 @@ Partial Class FrmMant_Producto
         '
         Me.BackgroundWorker1.WorkerReportsProgress = True
         Me.BackgroundWorker1.WorkerSupportsCancellation = True
-        '
-        'HistoricoDeRecepcionesToolStripMenuItem
-        '
-        Me.HistoricoDeRecepcionesToolStripMenuItem.Name = "HistoricoDeRecepcionesToolStripMenuItem"
-        Me.HistoricoDeRecepcionesToolStripMenuItem.Size = New System.Drawing.Size(280, 22)
-        Me.HistoricoDeRecepcionesToolStripMenuItem.Text = "Historico de Recepciones"
         '
         'FrmMant_Producto
         '
