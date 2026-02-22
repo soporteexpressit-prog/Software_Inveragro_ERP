@@ -77,7 +77,7 @@ Public Class FrmControlBajada
             ds.DataSetName = "tmp"
             Dim relation1 As New DataRelation("tb_relacion1", ds.Tables(0).Columns(0), ds.Tables(1).Columns(0), False)
             ds.Relations.Add(relation1)
-            ds.Tables(0).Columns("idLote").ColumnMapping = MappingType.Hidden
+            'ds.Tables(0).Columns("idLote").ColumnMapping = MappingType.Hidden
             ds.Tables(0).Columns("idPlantel").ColumnMapping = MappingType.Hidden
             ds.Tables(0).Columns("Fecha Apertura").ColumnMapping = MappingType.Hidden
             ds.Tables(0).Columns("Fecha Cierre").ColumnMapping = MappingType.Hidden

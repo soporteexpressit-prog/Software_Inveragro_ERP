@@ -230,21 +230,11 @@ Public Class FrmControlExcedente
                         Return
                     End If
 
-                    If (MessageBox.Show("¿ESTÁ SEGURO DE CANCELAR LA PREPARACIÓN?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.No) Then
-                        Return
-                    End If
-
-                    Dim obj As New coControlAlimento With {
-                        .IdPreparacionAlimento = activeRow.Cells("idPreparacionAlimento").Value
+                    Dim frm As New FrmMotivoAnularExcedente With {
+                        .idPreparacionAlimento = activeRow.Cells("idPreparacionAlimento").Value
                     }
-
-                    Dim MensajeBgWk As String = cnAlimento.Cn_CancelarPreparacionAlimentoExcedente(obj)
-                    If (obj.Coderror = 0) Then
-                        msj_ok(MensajeBgWk)
-                        Consultar1()
-                    Else
-                        msj_advert(MensajeBgWk)
-                    End If
+                    frm.ShowDialog()
+                    Consultar1()
                 Else
                     msj_advert(MensajesSistema.mensajesGenerales("SELECCION_FILA_CONTENEDOR"))
                 End If

@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class FrmAnularEnvioCamal
+Partial Class FrmMotivoAnularExcedente
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -22,14 +22,37 @@ Partial Class FrmAnularEnvioCamal
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.txtDescripcionAnulacion = New System.Windows.Forms.RichTextBox()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.btnGuardar = New System.Windows.Forms.ToolStripButton()
         Me.btnSalir = New System.Windows.Forms.ToolStripButton()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.txtDescripcionAnulacion = New System.Windows.Forms.RichTextBox()
-        Me.ToolStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
+        Me.ToolStrip1.SuspendLayout()
         Me.SuspendLayout()
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.txtDescripcionAnulacion)
+        Me.GroupBox1.Location = New System.Drawing.Point(11, 51)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2)
+        Me.GroupBox1.Size = New System.Drawing.Size(361, 157)
+        Me.GroupBox1.TabIndex = 165
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "MOTIVO DE ANULACIÓN"
+        '
+        'txtDescripcionAnulacion
+        '
+        Me.txtDescripcionAnulacion.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtDescripcionAnulacion.Location = New System.Drawing.Point(11, 28)
+        Me.txtDescripcionAnulacion.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtDescripcionAnulacion.MaxLength = 150
+        Me.txtDescripcionAnulacion.Name = "txtDescripcionAnulacion"
+        Me.txtDescripcionAnulacion.Size = New System.Drawing.Size(341, 121)
+        Me.txtDescripcionAnulacion.TabIndex = 0
+        Me.txtDescripcionAnulacion.Text = "NINGUNO"
         '
         'ToolStrip1
         '
@@ -41,8 +64,8 @@ Partial Class FrmAnularEnvioCamal
         Me.ToolStrip1.Margin = New System.Windows.Forms.Padding(2)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Padding = New System.Windows.Forms.Padding(0, 0, 2, 0)
-        Me.ToolStrip1.Size = New System.Drawing.Size(376, 38)
-        Me.ToolStrip1.TabIndex = 54
+        Me.ToolStrip1.Size = New System.Drawing.Size(383, 38)
+        Me.ToolStrip1.TabIndex = 164
         Me.ToolStrip1.Text = "ToolStrip1"
         '
         'btnGuardar
@@ -71,54 +94,30 @@ Partial Class FrmAnularEnvioCamal
         Me.btnSalir.Text = "Salir"
         Me.btnSalir.ToolTipText = "Salir"
         '
-        'GroupBox1
-        '
-        Me.GroupBox1.Controls.Add(Me.txtDescripcionAnulacion)
-        Me.GroupBox1.Location = New System.Drawing.Point(8, 44)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2)
-        Me.GroupBox1.Size = New System.Drawing.Size(361, 157)
-        Me.GroupBox1.TabIndex = 161
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "MOTIVO DE ANULACIÓN"
-        '
-        'txtDescripcionAnulacion
-        '
-        Me.txtDescripcionAnulacion.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtDescripcionAnulacion.Location = New System.Drawing.Point(11, 28)
-        Me.txtDescripcionAnulacion.Margin = New System.Windows.Forms.Padding(2)
-        Me.txtDescripcionAnulacion.MaxLength = 150
-        Me.txtDescripcionAnulacion.Name = "txtDescripcionAnulacion"
-        Me.txtDescripcionAnulacion.Size = New System.Drawing.Size(341, 121)
-        Me.txtDescripcionAnulacion.TabIndex = 0
-        Me.txtDescripcionAnulacion.Text = "NINGUNO"
-        '
-        'FrmAnularEnvioCamal
+        'FrmMotivoAnularExcedente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(233, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(376, 211)
+        Me.ClientSize = New System.Drawing.Size(383, 222)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.ToolStrip1)
-        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
-        Me.Name = "FrmAnularEnvioCamal"
+        Me.Name = "FrmMotivoAnularExcedente"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "ANULAR ENVIO"
+        Me.Text = "Motivo Anulación"
+        Me.GroupBox1.ResumeLayout(False)
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()
-        Me.GroupBox1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
+    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents txtDescripcionAnulacion As RichTextBox
     Friend WithEvents ToolStrip1 As ToolStrip
     Friend WithEvents btnGuardar As ToolStripButton
     Friend WithEvents btnSalir As ToolStripButton
-    Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents txtDescripcionAnulacion As RichTextBox
 End Class

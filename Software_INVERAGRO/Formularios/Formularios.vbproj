@@ -950,6 +950,12 @@
     <Compile Include="Molino\ControlExcedente\FrmListaRacionesExcedente.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Molino\ControlExcedente\FrmMotivoAnularExcedente.Designer.vb">
+      <DependentUpon>FrmMotivoAnularExcedente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Molino\ControlExcedente\FrmMotivoAnularExcedente.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Molino\ControlExcedente\FrmRegistrarExcedentexRacion.Designer.vb">
       <DependentUpon>FrmRegistrarExcedentexRacion.vb</DependentUpon>
     </Compile>
@@ -984,6 +990,12 @@
       <DependentUpon>FrmControlExcedente.vb</DependentUpon>
     </Compile>
     <Compile Include="Molino\ControlExcedente\FrmControlExcedente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Molino\PreparacionAlimento\FrmMotivoAnulacionPreparacionAlimento.Designer.vb">
+      <DependentUpon>FrmMotivoAnulacionPreparacionAlimento.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Molino\PreparacionAlimento\FrmMotivoAnulacionPreparacionAlimento.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Molino\PreparacionAlimento\FrmVerMedicacionRacion.Designer.vb">
@@ -4290,6 +4302,9 @@
     <EmbeddedResource Include="Molino\ControlExcedente\FrmListaRacionesExcedente.resx">
       <DependentUpon>FrmListaRacionesExcedente.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Molino\ControlExcedente\FrmMotivoAnularExcedente.resx">
+      <DependentUpon>FrmMotivoAnularExcedente.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Molino\ControlExcedente\FrmRegistrarExcedentexRacion.resx">
       <DependentUpon>FrmRegistrarExcedentexRacion.vb</DependentUpon>
     </EmbeddedResource>
@@ -4307,6 +4322,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Molino\ControlExcedente\FrmControlExcedente.resx">
       <DependentUpon>FrmControlExcedente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Molino\PreparacionAlimento\FrmMotivoAnulacionPreparacionAlimento.resx">
+      <DependentUpon>FrmMotivoAnulacionPreparacionAlimento.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Molino\PreparacionAlimento\FrmVerMedicacionRacion.resx">
       <DependentUpon>FrmVerMedicacionRacion.vb</DependentUpon>
