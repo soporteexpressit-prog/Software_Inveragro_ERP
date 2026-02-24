@@ -486,4 +486,13 @@ Public Class FrmMant_Producto
             clsBasicas.controlException(Name, ex)
         End Try
     End Sub
+
+    Private Sub ReporteDeInconsistenciasEnKardexDeInventarioToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReporteDeInconsistenciasEnKardexDeInventarioToolStripMenuItem.Click
+        Try
+            Dim frm As New FrmKadexDescuadrado
+            frm.ShowDialog()
+        Catch ex As Exception
+            clsBasicas.controlException(Name, ex)
+        End Try
+    End Sub
 End Class

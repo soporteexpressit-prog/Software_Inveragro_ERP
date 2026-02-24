@@ -6,6 +6,7 @@ Public Class FrmKardex
     Public idubicacion As Integer
     Private Sub FrmHistoricoCompraPorProducto_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ConsultarCompras()
+        cbxestado.SelectedIndex = 0
         clsBasicas.Formato_Tablas_Grid_Sin_Ajustar(dtgListado)
     End Sub
 
@@ -15,7 +16,8 @@ Public Class FrmKardex
                 .Idproducto = CInt(lblCodigo.Text),
                 .FechaDesde = dtpFechaDesde.Value,
                 .FechaHasta = dtpFechaHasta.Value,
-                .IdUbicacion = idubicacion
+                .IdUbicacion = idubicacion,
+                .Estado = cbxestado.Text
             }
             dtgListado.DataSource = cn.Cn_ConsultarKardexProductoPorIdyUbicacion(obj)
 

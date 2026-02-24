@@ -58,6 +58,8 @@ Partial Class FrmKardex
         Me.dtgListado = New Infragistics.Win.UltraWinGrid.UltraGrid()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.cbxestado = New System.Windows.Forms.ComboBox()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
@@ -68,15 +70,16 @@ Partial Class FrmKardex
         '
         'GroupBox2
         '
+        Me.GroupBox2.Controls.Add(Me.cbxestado)
+        Me.GroupBox2.Controls.Add(Me.Label6)
         Me.GroupBox2.Controls.Add(Me.dtpFechaDesde)
-        Me.GroupBox2.Controls.Add(Me.Button1)
         Me.GroupBox2.Controls.Add(Me.Label2)
         Me.GroupBox2.Controls.Add(Me.Label1)
         Me.GroupBox2.Controls.Add(Me.dtpFechaHasta)
         Me.GroupBox2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.GroupBox2.Location = New System.Drawing.Point(14, 112)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(1097, 65)
+        Me.GroupBox2.Size = New System.Drawing.Size(1209, 65)
         Me.GroupBox2.TabIndex = 166
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Filtros de Busqueda"
@@ -95,7 +98,7 @@ Partial Class FrmKardex
         Me.Button1.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
         Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button1.Location = New System.Drawing.Point(817, 21)
+        Me.Button1.Location = New System.Drawing.Point(1089, 18)
         Me.Button1.Name = "Button1"
         Me.Button1.Padding = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Button1.Size = New System.Drawing.Size(92, 40)
@@ -154,6 +157,7 @@ Partial Class FrmKardex
         'GroupBox1
         '
         Me.GroupBox1.Controls.Add(Me.Label5)
+        Me.GroupBox1.Controls.Add(Me.Button1)
         Me.GroupBox1.Controls.Add(Me.lblpresentación)
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Controls.Add(Me.lblNombreProducto)
@@ -162,7 +166,7 @@ Partial Class FrmKardex
         Me.GroupBox1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.GroupBox1.Location = New System.Drawing.Point(14, 41)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(1099, 65)
+        Me.GroupBox1.Size = New System.Drawing.Size(1209, 65)
         Me.GroupBox1.TabIndex = 165
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Información del Producto"
@@ -256,7 +260,7 @@ Partial Class FrmKardex
         Me.ToolStrip1.Margin = New System.Windows.Forms.Padding(2)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Padding = New System.Windows.Forms.Padding(0, 0, 2, 0)
-        Me.ToolStrip1.Size = New System.Drawing.Size(1234, 38)
+        Me.ToolStrip1.Size = New System.Drawing.Size(1484, 38)
         Me.ToolStrip1.TabIndex = 164
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -361,7 +365,7 @@ Partial Class FrmKardex
         Me.dtgListado.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dtgListado.Location = New System.Drawing.Point(0, 0)
         Me.dtgListado.Name = "dtgListado"
-        Me.dtgListado.Size = New System.Drawing.Size(1234, 628)
+        Me.dtgListado.Size = New System.Drawing.Size(1484, 828)
         Me.dtgListado.TabIndex = 167
         Me.dtgListado.Text = "UltraGrid1"
         '
@@ -374,7 +378,7 @@ Partial Class FrmKardex
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1234, 233)
+        Me.Panel1.Size = New System.Drawing.Size(1484, 233)
         Me.Panel1.TabIndex = 168
         '
         'Panel2
@@ -383,15 +387,38 @@ Partial Class FrmKardex
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel2.Location = New System.Drawing.Point(0, 233)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1234, 628)
+        Me.Panel2.Size = New System.Drawing.Size(1484, 828)
         Me.Panel2.TabIndex = 169
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.BackColor = System.Drawing.Color.Transparent
+        Me.Label6.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.Label6.Location = New System.Drawing.Point(831, 32)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(60, 14)
+        Me.Label6.TabIndex = 169
+        Me.Label6.Text = "Estado :"
+        '
+        'cbxestado
+        '
+        Me.cbxestado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbxestado.FormattingEnabled = True
+        Me.cbxestado.Items.AddRange(New Object() {"ACTIVOS", "INACTIVOS", "TODOS"})
+        Me.cbxestado.Location = New System.Drawing.Point(899, 28)
+        Me.cbxestado.Name = "cbxestado"
+        Me.cbxestado.Size = New System.Drawing.Size(121, 21)
+        Me.cbxestado.TabIndex = 170
         '
         'FrmKardex
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(233, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1234, 861)
+        Me.ClientSize = New System.Drawing.Size(1484, 1061)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -435,4 +462,6 @@ Partial Class FrmKardex
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Label5 As Label
     Public WithEvents lblpresentación As Label
+    Friend WithEvents Label6 As Label
+    Friend WithEvents cbxestado As ComboBox
 End Class

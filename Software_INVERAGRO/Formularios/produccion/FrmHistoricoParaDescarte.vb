@@ -104,6 +104,7 @@ Public Class FrmHistoricoParaDescarte
             msj_advert("Error al Cargar los Datos")
         Else
             DtgListado.DataSource = CType(e.Result, DataTable)
+            DtgListado.DisplayLayout.Bands(0).Columns("Índice").Hidden = True
             PintarFilasHembrasPosibleDescarte()
         End If
     End Sub

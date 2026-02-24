@@ -66,13 +66,13 @@ Partial Class FrmMant_Producto
         Me.btn_nuevoproductos = New System.Windows.Forms.ToolStripButton()
         Me.btn_editarproductos = New System.Windows.Forms.ToolStripButton()
         Me.btn_eliminar = New System.Windows.Forms.ToolStripButton()
-        Me.btnexportar_excelproductos = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButton1productos = New System.Windows.Forms.ToolStripDropDownButton()
         Me.btnImprimirListaInventario = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReporteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReporteDeCostosDeAlmancenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.btnDashboardproductos = New System.Windows.Forms.ToolStripMenuItem()
         Me.HistoricoDeRecepcionesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.btnexportar_excelproductos = New System.Windows.Forms.ToolStripButton()
         Me.btn_historicodecompraalmacenali = New System.Windows.Forms.ToolStripButton()
         Me.btnverkardexproductos = New System.Windows.Forms.ToolStripButton()
         Me.BtnCodigoBarraalmaali = New System.Windows.Forms.ToolStripButton()
@@ -91,6 +91,7 @@ Partial Class FrmMant_Producto
         Me.cbxalmacen = New System.Windows.Forms.ComboBox()
         Me.Cmbx_TipoDoc = New Infragistics.Win.UltraWinGrid.UltraCombo()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
+        Me.ReporteDeInconsistenciasEnKardexDeInventarioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.UltraGroupBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.UltraGroupBox2.SuspendLayout()
         CType(Me.Ptbx_Cargando, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -298,24 +299,10 @@ Partial Class FrmMant_Producto
         Me.btn_eliminar.ToolTipText = "Eliminar"
         Me.btn_eliminar.Visible = False
         '
-        'btnexportar_excelproductos
-        '
-        Me.btnexportar_excelproductos.AutoToolTip = False
-        Me.btnexportar_excelproductos.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnexportar_excelproductos.ForeColor = System.Drawing.Color.White
-        Me.btnexportar_excelproductos.Image = Global.Formularios.My.Resources.Resources.exportar2
-        Me.btnexportar_excelproductos.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.btnexportar_excelproductos.Margin = New System.Windows.Forms.Padding(5)
-        Me.btnexportar_excelproductos.Name = "btnexportar_excelproductos"
-        Me.btnexportar_excelproductos.Padding = New System.Windows.Forms.Padding(2)
-        Me.btnexportar_excelproductos.Size = New System.Drawing.Size(92, 28)
-        Me.btnexportar_excelproductos.Text = "Exportar"
-        Me.btnexportar_excelproductos.ToolTipText = "Exportar"
-        '
         'ToolStripButton1productos
         '
         Me.ToolStripButton1productos.BackColor = System.Drawing.Color.Transparent
-        Me.ToolStripButton1productos.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnImprimirListaInventario, Me.ReporteToolStripMenuItem, Me.ReporteDeCostosDeAlmancenToolStripMenuItem, Me.btnDashboardproductos, Me.HistoricoDeRecepcionesToolStripMenuItem})
+        Me.ToolStripButton1productos.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnImprimirListaInventario, Me.ReporteToolStripMenuItem, Me.ReporteDeCostosDeAlmancenToolStripMenuItem, Me.btnDashboardproductos, Me.HistoricoDeRecepcionesToolStripMenuItem, Me.ReporteDeInconsistenciasEnKardexDeInventarioToolStripMenuItem})
         Me.ToolStripButton1productos.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ToolStripButton1productos.ForeColor = System.Drawing.Color.White
         Me.ToolStripButton1productos.Image = Global.Formularios.My.Resources.Resources.reporte
@@ -330,33 +317,47 @@ Partial Class FrmMant_Producto
         'btnImprimirListaInventario
         '
         Me.btnImprimirListaInventario.Name = "btnImprimirListaInventario"
-        Me.btnImprimirListaInventario.Size = New System.Drawing.Size(280, 22)
+        Me.btnImprimirListaInventario.Size = New System.Drawing.Size(416, 22)
         Me.btnImprimirListaInventario.Text = "Imprimir Lista de Inventario"
         Me.btnImprimirListaInventario.ToolTipText = "Imprimir Lista de Inventario"
         '
         'ReporteToolStripMenuItem
         '
         Me.ReporteToolStripMenuItem.Name = "ReporteToolStripMenuItem"
-        Me.ReporteToolStripMenuItem.Size = New System.Drawing.Size(280, 22)
+        Me.ReporteToolStripMenuItem.Size = New System.Drawing.Size(416, 22)
         Me.ReporteToolStripMenuItem.Text = "Gastos Veterinarios"
         '
         'ReporteDeCostosDeAlmancenToolStripMenuItem
         '
         Me.ReporteDeCostosDeAlmancenToolStripMenuItem.Name = "ReporteDeCostosDeAlmancenToolStripMenuItem"
-        Me.ReporteDeCostosDeAlmancenToolStripMenuItem.Size = New System.Drawing.Size(280, 22)
+        Me.ReporteDeCostosDeAlmancenToolStripMenuItem.Size = New System.Drawing.Size(416, 22)
         Me.ReporteDeCostosDeAlmancenToolStripMenuItem.Text = "Reporte Valorizado de Almacén"
         '
         'btnDashboardproductos
         '
         Me.btnDashboardproductos.Name = "btnDashboardproductos"
-        Me.btnDashboardproductos.Size = New System.Drawing.Size(280, 22)
+        Me.btnDashboardproductos.Size = New System.Drawing.Size(416, 22)
         Me.btnDashboardproductos.Text = " Reporte Dashboard"
         '
         'HistoricoDeRecepcionesToolStripMenuItem
         '
         Me.HistoricoDeRecepcionesToolStripMenuItem.Name = "HistoricoDeRecepcionesToolStripMenuItem"
-        Me.HistoricoDeRecepcionesToolStripMenuItem.Size = New System.Drawing.Size(280, 22)
+        Me.HistoricoDeRecepcionesToolStripMenuItem.Size = New System.Drawing.Size(416, 22)
         Me.HistoricoDeRecepcionesToolStripMenuItem.Text = "Historico de Recepciones"
+        '
+        'btnexportar_excelproductos
+        '
+        Me.btnexportar_excelproductos.AutoToolTip = False
+        Me.btnexportar_excelproductos.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnexportar_excelproductos.ForeColor = System.Drawing.Color.White
+        Me.btnexportar_excelproductos.Image = Global.Formularios.My.Resources.Resources.exportar2
+        Me.btnexportar_excelproductos.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btnexportar_excelproductos.Margin = New System.Windows.Forms.Padding(5)
+        Me.btnexportar_excelproductos.Name = "btnexportar_excelproductos"
+        Me.btnexportar_excelproductos.Padding = New System.Windows.Forms.Padding(2)
+        Me.btnexportar_excelproductos.Size = New System.Drawing.Size(92, 28)
+        Me.btnexportar_excelproductos.Text = "Exportar"
+        Me.btnexportar_excelproductos.ToolTipText = "Exportar"
         '
         'btn_historicodecompraalmacenali
         '
@@ -639,6 +640,12 @@ Partial Class FrmMant_Producto
         Me.BackgroundWorker1.WorkerReportsProgress = True
         Me.BackgroundWorker1.WorkerSupportsCancellation = True
         '
+        'ReporteDeInconsistenciasEnKardexDeInventarioToolStripMenuItem
+        '
+        Me.ReporteDeInconsistenciasEnKardexDeInventarioToolStripMenuItem.Name = "ReporteDeInconsistenciasEnKardexDeInventarioToolStripMenuItem"
+        Me.ReporteDeInconsistenciasEnKardexDeInventarioToolStripMenuItem.Size = New System.Drawing.Size(416, 22)
+        Me.ReporteDeInconsistenciasEnKardexDeInventarioToolStripMenuItem.Text = "Reporte de Inconsistencias en Kardex de Inventario"
+        '
         'FrmMant_Producto
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -702,4 +709,5 @@ Partial Class FrmMant_Producto
     Friend WithEvents btnAsignarUnidadesMedida As ToolStripButton
     Friend WithEvents ToolStripButton3 As ToolStripButton
     Friend WithEvents HistoricoDeRecepcionesToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ReporteDeInconsistenciasEnKardexDeInventarioToolStripMenuItem As ToolStripMenuItem
 End Class

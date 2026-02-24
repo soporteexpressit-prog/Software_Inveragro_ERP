@@ -252,6 +252,24 @@ Public Class cdProducto
         con.Salir()
         Return dt
     End Function
+
+
+    Public Function Cd_Consultardeskardex(name As String, obj As coProductos) As DataTable
+        Dim dt As New DataTable
+        Try
+            con.Abrir()
+            Dim da As New SqlDataAdapter(name, con.con)
+            da.SelectCommand.CommandType = 4
+            da.SelectCommand.Parameters.AddWithValue("@valor", obj.Descripcion)
+            da.SelectCommand.Parameters.AddWithValue("@solo_descuadrados", obj.Idproducto)
+            da.Fill(dt)
+        Catch ex As Exception
+            Throw ex
+        End Try
+        con.Salir()
+        Return dt
+    End Function
+
     Public Function Cd_ConsultarKardexProductoPorId(name As String, obj As coProductos) As DataTable
         Dim dt As New DataTable
         Try
@@ -278,6 +296,7 @@ Public Class cdProducto
             da.SelectCommand.Parameters.AddWithValue("@fechaInicio", obj.FechaDesde)
             da.SelectCommand.Parameters.AddWithValue("@fechaFin", obj.FechaHasta)
             da.SelectCommand.Parameters.AddWithValue("@idUbicacion", obj.IdUbicacion)
+            da.SelectCommand.Parameters.AddWithValue("@Estado", obj.Estado)
             da.Fill(dt)
         Catch ex As Exception
             Throw ex

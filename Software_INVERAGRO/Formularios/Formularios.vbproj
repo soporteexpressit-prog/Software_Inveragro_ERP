@@ -504,6 +504,12 @@
     <Compile Include="Almacen\FrmImprimirCodBarraProducto.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Almacen\FrmKadexDescuadrado.Designer.vb">
+      <DependentUpon>FrmKadexDescuadrado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Almacen\FrmKadexDescuadrado.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Almacen\FrmListaProductoEquivalencia.Designer.vb">
       <DependentUpon>FrmListaProductoEquivalencia.vb</DependentUpon>
     </Compile>
@@ -950,6 +956,12 @@
     <Compile Include="Molino\ControlExcedente\FrmListaRacionesExcedente.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Molino\ControlExcedente\FrmMotivoAnularExcedente.Designer.vb">
+      <DependentUpon>FrmMotivoAnularExcedente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Molino\ControlExcedente\FrmMotivoAnularExcedente.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Molino\ControlExcedente\FrmRegistrarExcedentexRacion.Designer.vb">
       <DependentUpon>FrmRegistrarExcedentexRacion.vb</DependentUpon>
     </Compile>
@@ -984,6 +996,12 @@
       <DependentUpon>FrmControlExcedente.vb</DependentUpon>
     </Compile>
     <Compile Include="Molino\ControlExcedente\FrmControlExcedente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Molino\PreparacionAlimento\FrmMotivoAnulacionPreparacionAlimento.Designer.vb">
+      <DependentUpon>FrmMotivoAnulacionPreparacionAlimento.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Molino\PreparacionAlimento\FrmMotivoAnulacionPreparacionAlimento.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Molino\PreparacionAlimento\FrmVerMedicacionRacion.Designer.vb">
@@ -4074,6 +4092,9 @@
     <EmbeddedResource Include="Almacen\FrmImprimirCodBarraProducto.resx">
       <DependentUpon>FrmImprimirCodBarraProducto.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Almacen\FrmKadexDescuadrado.resx">
+      <DependentUpon>FrmKadexDescuadrado.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Almacen\FrmListaProductoEquivalencia.resx">
       <DependentUpon>FrmListaProductoEquivalencia.vb</DependentUpon>
     </EmbeddedResource>
@@ -4290,6 +4311,9 @@
     <EmbeddedResource Include="Molino\ControlExcedente\FrmListaRacionesExcedente.resx">
       <DependentUpon>FrmListaRacionesExcedente.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Molino\ControlExcedente\FrmMotivoAnularExcedente.resx">
+      <DependentUpon>FrmMotivoAnularExcedente.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Molino\ControlExcedente\FrmRegistrarExcedentexRacion.resx">
       <DependentUpon>FrmRegistrarExcedentexRacion.vb</DependentUpon>
     </EmbeddedResource>
@@ -4307,6 +4331,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Molino\ControlExcedente\FrmControlExcedente.resx">
       <DependentUpon>FrmControlExcedente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Molino\PreparacionAlimento\FrmMotivoAnulacionPreparacionAlimento.resx">
+      <DependentUpon>FrmMotivoAnulacionPreparacionAlimento.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Molino\PreparacionAlimento\FrmVerMedicacionRacion.resx">
       <DependentUpon>FrmVerMedicacionRacion.vb</DependentUpon>

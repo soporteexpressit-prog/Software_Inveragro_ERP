@@ -672,6 +672,8 @@ Public Class cdControlAlimento
 
             With cmd.Parameters
                 .AddWithValue("@idPreparacionAlimento", SqlDbType.Int).Value = obj.IdPreparacionAlimento
+                .AddWithValue("@idUsuarioAnulacion", SqlDbType.Int).Value = obj.IdUserAnulacion
+                .AddWithValue("@motivoAnulacion", SqlDbType.VarChar).Value = obj.MotivoAnulacion
                 .Add("@msj", SqlDbType.VarChar, 100).Direction = 2
                 .Add("@coderror", SqlDbType.Int).Direction = 2
             End With

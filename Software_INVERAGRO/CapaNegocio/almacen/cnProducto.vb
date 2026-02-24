@@ -66,6 +66,9 @@ Public Class cnProducto
     Public Function Cn_ConsultarIngresoProductoPorId(obj As coProductos) As DataTable
         Return cls_at.Cd_ConsultarIngresoProductoPorId("[w_obtener_ingresos_por_producto]", obj)
     End Function
+    Public Function Cn_Consultardeskardex(obj As coProductos) As DataTable
+        Return cls_at.Cd_Consultardeskardex("[i_pa_verificar_descuadre_stock_kardex]", obj)
+    End Function
     Public Function Cn_ConsultarRecepcionProductoPorId(obj As coProductos) As DataTable
         Return cls_at.Cd_ConsultarIngresoProductoPorId("[j_pa_cons_recepcion_x_ingreso]", obj)
     End Function
