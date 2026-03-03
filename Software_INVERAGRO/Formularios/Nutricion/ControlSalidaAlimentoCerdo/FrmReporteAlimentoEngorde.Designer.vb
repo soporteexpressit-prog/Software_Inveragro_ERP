@@ -94,10 +94,10 @@ Partial Class FrmReporteAlimentoEngorde
         Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnExportar, Me.btnSalir})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.ToolStrip1.Margin = New System.Windows.Forms.Padding(3)
+        Me.ToolStrip1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Padding = New System.Windows.Forms.Padding(0, 0, 3, 0)
-        Me.ToolStrip1.Size = New System.Drawing.Size(819, 40)
+        Me.ToolStrip1.Padding = New System.Windows.Forms.Padding(0, 0, 2, 0)
+        Me.ToolStrip1.Size = New System.Drawing.Size(546, 38)
         Me.ToolStrip1.TabIndex = 180
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -110,7 +110,7 @@ Partial Class FrmReporteAlimentoEngorde
         Me.BtnExportar.Margin = New System.Windows.Forms.Padding(5)
         Me.BtnExportar.Name = "BtnExportar"
         Me.BtnExportar.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnExportar.Size = New System.Drawing.Size(125, 30)
+        Me.BtnExportar.Size = New System.Drawing.Size(92, 28)
         Me.BtnExportar.Text = "Exportar"
         Me.BtnExportar.ToolTipText = "Exportar"
         '
@@ -123,7 +123,7 @@ Partial Class FrmReporteAlimentoEngorde
         Me.btnSalir.Margin = New System.Windows.Forms.Padding(5)
         Me.btnSalir.Name = "btnSalir"
         Me.btnSalir.Padding = New System.Windows.Forms.Padding(2)
-        Me.btnSalir.Size = New System.Drawing.Size(84, 30)
+        Me.btnSalir.Size = New System.Drawing.Size(66, 28)
         Me.btnSalir.Text = "Salir"
         Me.btnSalir.ToolTipText = "Editar"
         '
@@ -136,18 +136,21 @@ Partial Class FrmReporteAlimentoEngorde
         Me.Panel2.Controls.Add(Me.CmbCampanias)
         Me.Panel2.Controls.Add(Me.GroupBox2)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel2.Location = New System.Drawing.Point(0, 40)
+        Me.Panel2.Location = New System.Drawing.Point(0, 38)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(819, 885)
+        Me.Panel2.Size = New System.Drawing.Size(546, 563)
         Me.Panel2.TabIndex = 182
         '
         'GroupBox1
         '
         Me.GroupBox1.Controls.Add(Me.Ptbx_Cargando)
         Me.GroupBox1.Controls.Add(Me.DtgListado)
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 388)
+        Me.GroupBox1.Location = New System.Drawing.Point(8, 252)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(795, 467)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox1.Size = New System.Drawing.Size(530, 304)
         Me.GroupBox1.TabIndex = 238
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Consumo detallado por Galpón"
@@ -156,10 +159,9 @@ Partial Class FrmReporteAlimentoEngorde
         '
         Me.Ptbx_Cargando.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Ptbx_Cargando.Image = Global.Formularios.My.Resources.Resources.loader
-        Me.Ptbx_Cargando.Location = New System.Drawing.Point(368, 192)
-        Me.Ptbx_Cargando.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Ptbx_Cargando.Location = New System.Drawing.Point(245, 125)
         Me.Ptbx_Cargando.Name = "Ptbx_Cargando"
-        Me.Ptbx_Cargando.Size = New System.Drawing.Size(64, 57)
+        Me.Ptbx_Cargando.Size = New System.Drawing.Size(43, 37)
         Me.Ptbx_Cargando.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.Ptbx_Cargando.TabIndex = 184
         Me.Ptbx_Cargando.TabStop = False
@@ -235,10 +237,9 @@ Partial Class FrmReporteAlimentoEngorde
         Me.DtgListado.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy
         Me.DtgListado.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DtgListado.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DtgListado.Location = New System.Drawing.Point(3, 22)
-        Me.DtgListado.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.DtgListado.Location = New System.Drawing.Point(2, 15)
         Me.DtgListado.Name = "DtgListado"
-        Me.DtgListado.Size = New System.Drawing.Size(789, 442)
+        Me.DtgListado.Size = New System.Drawing.Size(526, 287)
         Me.DtgListado.TabIndex = 183
         Me.DtgListado.Text = "UltraGrid1"
         '
@@ -248,10 +249,10 @@ Partial Class FrmReporteAlimentoEngorde
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(36, 43)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label2.Location = New System.Drawing.Point(24, 28)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(134, 22)
+        Me.Label2.Size = New System.Drawing.Size(88, 14)
         Me.Label2.TabIndex = 180
         Me.Label2.Text = "Campañas : "
         '
@@ -261,10 +262,10 @@ Partial Class FrmReporteAlimentoEngorde
         Me.LblPlantel.BackColor = System.Drawing.Color.Transparent
         Me.LblPlantel.Font = New System.Drawing.Font("Verdana", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblPlantel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.LblPlantel.Location = New System.Drawing.Point(587, 40)
-        Me.LblPlantel.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.LblPlantel.Location = New System.Drawing.Point(391, 26)
+        Me.LblPlantel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblPlantel.Name = "LblPlantel"
-        Me.LblPlantel.Size = New System.Drawing.Size(25, 29)
+        Me.LblPlantel.Size = New System.Drawing.Size(16, 18)
         Me.LblPlantel.TabIndex = 237
         Me.LblPlantel.Text = "-"
         '
@@ -325,18 +326,19 @@ Partial Class FrmReporteAlimentoEngorde
         Me.CmbCampanias.DisplayLayout.ScrollStyle = Infragistics.Win.UltraWinGrid.ScrollStyle.Immediate
         Me.CmbCampanias.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy
         Me.CmbCampanias.DropDownStyle = Infragistics.Win.UltraWinGrid.UltraComboStyle.DropDownList
-        Me.CmbCampanias.Location = New System.Drawing.Point(181, 40)
-        Me.CmbCampanias.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.CmbCampanias.Location = New System.Drawing.Point(121, 26)
         Me.CmbCampanias.Name = "CmbCampanias"
-        Me.CmbCampanias.Size = New System.Drawing.Size(228, 29)
+        Me.CmbCampanias.Size = New System.Drawing.Size(152, 22)
         Me.CmbCampanias.TabIndex = 179
         '
         'GroupBox2
         '
         Me.GroupBox2.Controls.Add(Me.DtgListadoConsumoALimento)
-        Me.GroupBox2.Location = New System.Drawing.Point(12, 116)
+        Me.GroupBox2.Location = New System.Drawing.Point(8, 75)
+        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(795, 255)
+        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox2.Size = New System.Drawing.Size(530, 166)
         Me.GroupBox2.TabIndex = 232
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Consumo general de plantel"
@@ -411,10 +413,9 @@ Partial Class FrmReporteAlimentoEngorde
         Me.DtgListadoConsumoALimento.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy
         Me.DtgListadoConsumoALimento.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DtgListadoConsumoALimento.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DtgListadoConsumoALimento.Location = New System.Drawing.Point(3, 22)
-        Me.DtgListadoConsumoALimento.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.DtgListadoConsumoALimento.Location = New System.Drawing.Point(2, 15)
         Me.DtgListadoConsumoALimento.Name = "DtgListadoConsumoALimento"
-        Me.DtgListadoConsumoALimento.Size = New System.Drawing.Size(789, 230)
+        Me.DtgListadoConsumoALimento.Size = New System.Drawing.Size(526, 149)
         Me.DtgListadoConsumoALimento.TabIndex = 184
         Me.DtgListadoConsumoALimento.Text = "UltraGrid1"
         '
@@ -423,11 +424,12 @@ Partial Class FrmReporteAlimentoEngorde
         '
         'FrmReporteAlimentoEngorde
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(819, 925)
+        Me.ClientSize = New System.Drawing.Size(546, 601)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.ToolStrip1)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "FrmReporteAlimentoEngorde"
