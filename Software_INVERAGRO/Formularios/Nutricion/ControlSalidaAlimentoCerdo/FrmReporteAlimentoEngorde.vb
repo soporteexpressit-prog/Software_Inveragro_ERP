@@ -97,6 +97,21 @@ Public Class FrmReporteAlimentoEngorde
         End Try
     End Sub
 
+    Private Sub DtgListadoConsumoALimento_InitializeLayout(sender As Object, e As Infragistics.Win.UltraWinGrid.InitializeLayoutEventArgs) Handles DtgListadoConsumoALimento.InitializeLayout
+        Try
+            If (DtgListadoConsumoALimento.Rows.Count = 0) Then
+            Else
+                e.Layout.Bands(0).Summaries.Clear()
+                clsBasicas.Totales_Formato(DtgListadoConsumoALimento, e, 0)
+                clsBasicas.SumarTotales_Formato(DtgListadoConsumoALimento, e, 1)
+                clsBasicas.SumarTotales_Formato(DtgListadoConsumoALimento, e, 2)
+                clsBasicas.SumarTotales_Formato(DtgListadoConsumoALimento, e, 3)
+            End If
+        Catch ex As Exception
+            clsBasicas.controlException(Name, ex)
+        End Try
+    End Sub
+
     Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
         Dispose()
     End Sub
