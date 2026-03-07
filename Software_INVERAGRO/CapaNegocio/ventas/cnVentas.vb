@@ -73,6 +73,9 @@ Public Class cnVentas
     Public Function Cn_RegPedidoVentaxKilos(ByRef obj As coVentas) As String
         Return cls_at.Cd_RegPedidoVentaxKilos("[i_pa_regpedidoventa_cerdo_por_kilo]", obj)
     End Function
+    Public Function Cn_RegPesoganchocerdo(ByRef obj As coVentas) As String
+        Return cls_at.Cd_RegPesoganchocerdo("[i_pa_reg_peso_gancho_cerdo_ven_kilos]", obj)
+    End Function
     Public Function Cn_Reganulacionajuste(ByRef obj As coVentas) As String
         Return cls_at.Cd_Reganulacionajuste("[j_pa_anular_ajuste_parcial]", obj)
     End Function

@@ -139,29 +139,7 @@ Public Class FrmControlAtencionesPedidosRequerimientos
         clsBasicas.ExportarExcel("Lista de Requerimientos", dtgListado)
     End Sub
 
-    Private Sub btnAnular_Click(sender As Object, e As EventArgs) Handles btnAnularAlmacenreque.Click
-        Try
-            If (dtgListado.Rows.Count > 0) Then
-                If (dtgListado.ActiveRow.Cells(0).Value.ToString.Length <> 0) Then
-                    If dtgListado.ActiveRow.Cells(9).Value.ToString.Equals("SIN DESPACHO") Then
-                        If dtgListado.ActiveRow.Cells(8).Value.ToString.Equals("ACTIVO") Then
-                            Dim f As New FrmAnularRequerimiento
-                            f.idordencompra = dtgListado.ActiveRow.Cells(0).Value.ToString
-                            f.ShowDialog()
-                            Consultar()
-                        Else
-                            msj_advert("Requerimiento ya está anulado")
-                        End If
-                    Else
-                        msj_advert("Requerimiento no puede ser Anulada por que tiene Recepciones de Productos")
-                    End If
-                End If
-            End If
-        Catch ex As Exception
-            msj_advert("Seleccione un registro")
-            'clsBasicas.controlException(Name, ex)
-        End Try
-    End Sub
+
 
     Private Sub btnNuevo_Click(sender As Object, e As EventArgs) Handles btnNuevoatepedidoreque.Click
         Try
@@ -327,7 +305,32 @@ Public Class FrmControlAtencionesPedidosRequerimientos
         End Try
     End Sub
 
-    Private Sub ToolStripButton2_Click(sender As Object, e As EventArgs) Handles ToolStripButton2.Click
+
+    Private Sub AnularAjusteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AnularAjusteToolStripMenuItem.Click
+        Try
+            If (dtgListado.Rows.Count > 0) Then
+                If (dtgListado.ActiveRow.Cells(0).Value.ToString.Length <> 0) Then
+                    If dtgListado.ActiveRow.Cells(9).Value.ToString.Equals("SIN DESPACHO") Then
+                        If dtgListado.ActiveRow.Cells(8).Value.ToString.Equals("ACTIVO") Then
+                            Dim f As New FrmAnularRequerimiento
+                            f.idordencompra = dtgListado.ActiveRow.Cells(0).Value.ToString
+                            f.ShowDialog()
+                            Consultar()
+                        Else
+                            msj_advert("Requerimiento ya está anulado")
+                        End If
+                    Else
+                        msj_advert("Requerimiento no puede ser Anulada por que tiene Recepciones de Productos")
+                    End If
+                End If
+            End If
+        Catch ex As Exception
+            msj_advert("Seleccione un registro")
+            'clsBasicas.controlException(Name, ex)
+        End Try
+    End Sub
+
+    Private Sub ToolStripMenuItem5_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem5.Click
         ' Confirmación de la anulación
         Dim result As DialogResult = MessageBox.Show("¿Está seguro de que desea anular la ultima recepción?", "Confirmar Anulación", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
 
@@ -351,5 +354,9 @@ Public Class FrmControlAtencionesPedidosRequerimientos
                 MessageBox.Show("Ocurrió un error al intentar anular el Requerimiento: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End Try
         End If
+    End Sub
+
+    Private Sub AnularVentaPorKilosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AnularVentaPorKilosToolStripMenuItem.Click
+
     End Sub
 End Class

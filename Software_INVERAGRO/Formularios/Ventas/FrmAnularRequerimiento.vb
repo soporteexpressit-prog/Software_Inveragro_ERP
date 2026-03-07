@@ -4,6 +4,7 @@ Imports CapaObjetos
 Public Class FrmAnularRequerimiento
     Public idordencompra As Integer
     Dim cn As New cnVentas
+    Public operacion As Integer
 
     Private Sub FrmAnularEntregaEpp_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         txtDescripcionAnulacion.Text = ""
