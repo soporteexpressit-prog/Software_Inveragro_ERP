@@ -44,7 +44,10 @@ Partial Class FrmControlAtencionesPedidosRequerimientos
         Me.btnNuevoatepedidoreque = New System.Windows.Forms.ToolStripButton()
         Me.btaprobaratepedidoreque = New System.Windows.Forms.ToolStripButton()
         Me.btneditaratepedidoreque = New System.Windows.Forms.ToolStripButton()
-        Me.btnAnularAlmacenreque = New System.Windows.Forms.ToolStripButton()
+        Me.btnanulacionesdisponibles = New System.Windows.Forms.ToolStripDropDownButton()
+        Me.AnularAjusteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem5 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AnularVentaPorKilosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.btnhistoricorecepcionesatepedidoreque = New System.Windows.Forms.ToolStripButton()
         Me.btnexportaratepedidoreque = New System.Windows.Forms.ToolStripButton()
         Me.btnRecepcionarcomprasordencompa = New System.Windows.Forms.ToolStripButton()
@@ -63,7 +66,6 @@ Partial Class FrmControlAtencionesPedidosRequerimientos
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         Me.Ptbx_Cargando = New System.Windows.Forms.PictureBox()
         Me.dtgListado = New Infragistics.Win.UltraWinGrid.UltraGrid()
-        Me.ToolStripButton2 = New System.Windows.Forms.ToolStripButton()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
@@ -112,7 +114,7 @@ Partial Class FrmControlAtencionesPedidosRequerimientos
         Me.ToolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.ToolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
         Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnNuevoatepedidoreque, Me.btaprobaratepedidoreque, Me.btneditaratepedidoreque, Me.btnAnularAlmacenreque, Me.btnhistoricorecepcionesatepedidoreque, Me.btnexportaratepedidoreque, Me.ToolStripButton2, Me.btnRecepcionarcomprasordencompa, Me.btncerrar, Me.ToolStripButton1})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnNuevoatepedidoreque, Me.btaprobaratepedidoreque, Me.btneditaratepedidoreque, Me.btnanulacionesdisponibles, Me.btnhistoricorecepcionesatepedidoreque, Me.btnexportaratepedidoreque, Me.btnRecepcionarcomprasordencompa, Me.btncerrar, Me.ToolStripButton1})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 163)
         Me.ToolStrip1.Margin = New System.Windows.Forms.Padding(1)
         Me.ToolStrip1.Name = "ToolStrip1"
@@ -160,17 +162,36 @@ Partial Class FrmControlAtencionesPedidosRequerimientos
         Me.btneditaratepedidoreque.Text = "Editar "
         Me.btneditaratepedidoreque.ToolTipText = "Editar"
         '
-        'btnAnularAlmacenreque
+        'btnanulacionesdisponibles
         '
-        Me.btnAnularAlmacenreque.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAnularAlmacenreque.ForeColor = System.Drawing.Color.White
-        Me.btnAnularAlmacenreque.Image = Global.Formularios.My.Resources.Resources.cancelar
-        Me.btnAnularAlmacenreque.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.btnAnularAlmacenreque.Margin = New System.Windows.Forms.Padding(5)
-        Me.btnAnularAlmacenreque.Name = "btnAnularAlmacenreque"
-        Me.btnAnularAlmacenreque.Padding = New System.Windows.Forms.Padding(2)
-        Me.btnAnularAlmacenreque.Size = New System.Drawing.Size(78, 28)
-        Me.btnAnularAlmacenreque.Text = "Anular"
+        Me.btnanulacionesdisponibles.BackColor = System.Drawing.Color.Transparent
+        Me.btnanulacionesdisponibles.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AnularAjusteToolStripMenuItem, Me.ToolStripMenuItem5, Me.AnularVentaPorKilosToolStripMenuItem})
+        Me.btnanulacionesdisponibles.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnanulacionesdisponibles.ForeColor = System.Drawing.Color.White
+        Me.btnanulacionesdisponibles.Image = Global.Formularios.My.Resources.Resources.cancelar
+        Me.btnanulacionesdisponibles.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btnanulacionesdisponibles.Name = "btnanulacionesdisponibles"
+        Me.btnanulacionesdisponibles.Size = New System.Drawing.Size(83, 35)
+        Me.btnanulacionesdisponibles.Text = "Anular"
+        Me.btnanulacionesdisponibles.ToolTipText = "Convertir Trabajador"
+        '
+        'AnularAjusteToolStripMenuItem
+        '
+        Me.AnularAjusteToolStripMenuItem.Name = "AnularAjusteToolStripMenuItem"
+        Me.AnularAjusteToolStripMenuItem.Size = New System.Drawing.Size(217, 22)
+        Me.AnularAjusteToolStripMenuItem.Text = "Anular Requerimiento"
+        '
+        'ToolStripMenuItem5
+        '
+        Me.ToolStripMenuItem5.Name = "ToolStripMenuItem5"
+        Me.ToolStripMenuItem5.Size = New System.Drawing.Size(217, 22)
+        Me.ToolStripMenuItem5.Text = "Anular recepción"
+        '
+        'AnularVentaPorKilosToolStripMenuItem
+        '
+        Me.AnularVentaPorKilosToolStripMenuItem.Name = "AnularVentaPorKilosToolStripMenuItem"
+        Me.AnularVentaPorKilosToolStripMenuItem.Size = New System.Drawing.Size(217, 22)
+        Me.AnularVentaPorKilosToolStripMenuItem.Text = "Anular Despacho"
         '
         'btnhistoricorecepcionesatepedidoreque
         '
@@ -455,18 +476,6 @@ Partial Class FrmControlAtencionesPedidosRequerimientos
         Me.dtgListado.TabIndex = 8
         Me.dtgListado.Text = "UltraGrid1"
         '
-        'ToolStripButton2
-        '
-        Me.ToolStripButton2.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ToolStripButton2.ForeColor = System.Drawing.Color.White
-        Me.ToolStripButton2.Image = Global.Formularios.My.Resources.Resources.cancelar
-        Me.ToolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton2.Margin = New System.Windows.Forms.Padding(5)
-        Me.ToolStripButton2.Name = "ToolStripButton2"
-        Me.ToolStripButton2.Padding = New System.Windows.Forms.Padding(2)
-        Me.ToolStripButton2.Size = New System.Drawing.Size(146, 28)
-        Me.ToolStripButton2.Text = "Anular recepción"
-        '
         'FrmControlAtencionesPedidosRequerimientos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -496,7 +505,6 @@ Partial Class FrmControlAtencionesPedidosRequerimientos
     Friend WithEvents btnNuevoatepedidoreque As Windows.Forms.ToolStripButton
     Friend WithEvents btnexportaratepedidoreque As Windows.Forms.ToolStripButton
     Friend WithEvents btncerrar As Windows.Forms.ToolStripButton
-    Friend WithEvents btnAnularAlmacenreque As Windows.Forms.ToolStripButton
     Friend WithEvents Panel1 As Windows.Forms.Panel
     Friend WithEvents Label2 As Windows.Forms.Label
     Friend WithEvents Ptbx_Cargando As PictureBox
@@ -517,5 +525,8 @@ Partial Class FrmControlAtencionesPedidosRequerimientos
     Friend WithEvents dtgListado As Infragistics.Win.UltraWinGrid.UltraGrid
     Friend WithEvents GrupoMasOpcionesBusqueda As GroupBox
     Friend WithEvents btnRecepcionarcomprasordencompa As ToolStripButton
-    Friend WithEvents ToolStripButton2 As ToolStripButton
+    Friend WithEvents btnanulacionesdisponibles As ToolStripDropDownButton
+    Friend WithEvents AnularAjusteToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem5 As ToolStripMenuItem
+    Friend WithEvents AnularVentaPorKilosToolStripMenuItem As ToolStripMenuItem
 End Class

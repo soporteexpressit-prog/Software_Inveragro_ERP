@@ -8,6 +8,7 @@ Public Class FrmPedidoVentaxKilos
     Public _codigo As Integer = 0
     Dim tbtmpplanteles As New DataTable
     Dim DvPlanteles As DataView
+    Dim _operacion As Integer = 0
     Sub ListarTablas()
         Try
             Dim ds As New DataSet
@@ -39,6 +40,7 @@ Public Class FrmPedidoVentaxKilos
             ' Formatear los valores a 2 decimales antes de asignarlos al TextBox
             txtpesogranja.Text = Convert.ToDecimal(tb1.Rows(0)(0)).ToString("F2")
             txtsaldo.Text = Convert.ToDecimal(tb1.Rows(0)(1)).ToString("F2")
+            pesoganchotxt.Text = Convert.ToDecimal(tb1.Rows(0)(2)).ToString("F2")
 
         Catch ex As Exception
             clsBasicas.controlException(Name, ex)
@@ -52,6 +54,8 @@ Public Class FrmPedidoVentaxKilos
             dtfechaemision.Value = Now.Date
             dtpedido.Value = Now.Date
             btnbuscarpoveedor.Select()
+            pesoganchotxt.ReadOnly = True
+            pesoganchotxt.Enabled = False
         Catch ex As Exception
             clsBasicas.controlException(Name, ex)
         End Try
@@ -84,82 +88,100 @@ Public Class FrmPedidoVentaxKilos
 
     Private Sub TsBtn_Guardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
         Try
-            If MsgBox("¿Esta Seguro de Registrar la Venta por Kilos?", MsgBoxStyle.OkCancel, "Aviso") = MsgBoxResult.Cancel Then
-                Return
-            End If
-
-            If (ckconsumo.Checked = False) Then
-                If (txtcantidad.TextLength = 0) Then
-                    msj_advert("Ingrese un Cantidad")
+            If _operacion = 0 Then
+                If MsgBox("¿Esta Seguro de Registrar la Venta por Kilos?", MsgBoxStyle.OkCancel, "Aviso") = MsgBoxResult.Cancel Then
                     Return
-                ElseIf CDec(txtcantidad.Text) = 0 Then
-                    msj_advert("Ingrese una Cantidad Válida")
-                    Return
-                ElseIf (txtprecio.TextLength = 0) Then
-                    msj_advert("Ingrese un Precio de Venta")
-                    Return
-                ElseIf CDec(txtcantidad.Text) > CDec(txtsaldo.Text) Then
-                    msj_advert("La Cantidad de Kilos Ingresada supera el Saldo de Kilos que se tiene del Cerdo")
-                Return
-            End If
-            End If
+                End If
 
-            If (txtcodcliente.Text.Length = 0) Then
-                msj_advert("Seleccione un Cliente")
-                Return
+                If (ckconsumo.Checked = False) Then
+                    If (txtcantidad.TextLength = 0) Then
+                        msj_advert("Ingrese un Cantidad")
+                        Return
+                    ElseIf CDec(txtcantidad.Text) = 0 Then
+                        msj_advert("Ingrese una Cantidad Válida")
+                        Return
+                    ElseIf (txtprecio.TextLength = 0) Then
+                        msj_advert("Ingrese un Precio de Venta")
+                        Return
+                    ElseIf CDec(txtcantidad.Text) > CDec(txtsaldo.Text) Then
+                        msj_advert("La Cantidad de Kilos Ingresada supera el Saldo de Kilos que se tiene del Cerdo")
+                        Return
+                    End If
+                End If
 
-            ElseIf (txttc.TextLength = 0) Then
-                msj_advert("Ingrese un Tipo de Cambio")
-                Return
-            ElseIf CDec(txttc.Text) = 0 Then
-                msj_advert("Ingrese un Tipo de Cambio Válido")
-                Return
+                If (txtcodcliente.Text.Length = 0) Then
+                    msj_advert("Seleccione un Cliente")
+                    Return
+
+                ElseIf (txttc.TextLength = 0) Then
+                    msj_advert("Ingrese un Tipo de Cambio")
+                    Return
+                ElseIf CDec(txttc.Text) = 0 Then
+                    msj_advert("Ingrese un Tipo de Cambio Válido")
+                    Return
+                Else
+                    Dim obj As New coVentas
+                    obj.Codigo = _codigo
+                    obj.Serie = ""
+                    obj.Correlativo = ""
+                    obj.FEmision = dtfechaemision.Value
+                    obj.Fpedido = dtpedido.Value
+                    obj.Total = txttotal.Text
+                    obj.Igv = txtigv.Text
+                    obj.Flete = 0
+                    obj.Observacion = txtobservacion.Text
+                    obj.Estado = "ACTIVO"
+                    obj.Iduser = VP_IdUser
+                    obj.IdCondicionpago = 1
+                    obj.IdMotivoTransaccion = If(ckconsumo.Checked, 41, 40)
+                    obj.Frecepcion = dtfechaemision.Value
+                    obj.IdUbicacionOrigen = 6
+                    obj.IdUbicacionDestino = 6
+                    obj.Idmoneda = cbxmoneda.Value
+                    obj.Tipocambio = txttc.Text
+                    obj.Idcotizacion = 0
+                    obj.Lista_items = creacion_de_arrary()
+                    obj.Idtipodocumento = 1
+                    obj.Idproveedor = txtcodcliente.Text
+                    'If cbxmotivotransaccion.Value = 29 Then
+                    obj.EstadoRecepcion = "SI"
+                    obj.Precio = txtprecio.Text
+                    obj.Cantidad = txtcantidad.Text
+                    'ElseIf cbxmotivotransaccion.Value = 30 Or cbxmotivotransaccion.Value = 31 Then
+                    'obj.EstadoRecepcion = "SI"
+                    'End If
+
+                    obj.Idguia = 0
+                    obj.Tipoprecio = If(ckconsumo.Checked, "CONSUMO INTERNO", "VENTA POR KILOS")
+                    obj.Idplantel = 0
+                    Dim MensajeBgWk As String = ""
+
+                    MensajeBgWk = cn.Cn_RegPedidoVentaxKilos(obj)
+                    If (obj.Coderror = 0) Then
+                        msj_ok(MensajeBgWk)
+                        Dispose()
+                    Else
+                        msj_advert(MensajeBgWk)
+                    End If
+
+                End If
+
+                ' sino es 0, es 1 este ejecutara la opcion de modifcar el valor del peso granja 
             Else
                 Dim obj As New coVentas
                 obj.Codigo = _codigo
-                obj.Serie = ""
-                obj.Correlativo = ""
-                obj.FEmision = dtfechaemision.Value
-                obj.Fpedido = dtpedido.Value
-                obj.Total = txttotal.Text
-                obj.Igv = txtigv.Text
-                obj.Flete = 0
-                obj.Observacion = txtobservacion.Text
-                obj.Estado = "ACTIVO"
-                obj.Iduser = VP_IdUser
-                obj.IdCondicionpago = 1
-                obj.IdMotivoTransaccion = If(ckconsumo.Checked, 41, 40)
-                obj.Frecepcion = dtfechaemision.Value
-                obj.IdUbicacionOrigen = 6
-                obj.IdUbicacionDestino = 6
-                obj.Idmoneda = cbxmoneda.Value
-                obj.Tipocambio = txttc.Text
-                obj.Idcotizacion = 0
-                obj.Lista_items = creacion_de_arrary()
-                obj.Idtipodocumento = 1
-                obj.Idproveedor = txtcodcliente.Text
-                'If cbxmotivotransaccion.Value = 29 Then
-                obj.EstadoRecepcion = "SI"
-                obj.Precio = txtprecio.Text
-                obj.Cantidad = txtcantidad.Text
-                'ElseIf cbxmotivotransaccion.Value = 30 Or cbxmotivotransaccion.Value = 31 Then
-                'obj.EstadoRecepcion = "SI"
-                'End If
-
-                obj.Idguia = 0
-                obj.Tipoprecio = If(ckconsumo.Checked, "CONSUMO INTERNO", "VENTA POR KILOS")
-                obj.Idplantel = 0
+                obj.Total = pesoganchotxt.Text
                 Dim MensajeBgWk As String = ""
 
-                MensajeBgWk = cn.Cn_RegPedidoVentaxKilos(obj)
+                MensajeBgWk = cn.Cn_RegPesoganchocerdo(obj)
                 If (obj.Coderror = 0) Then
                     msj_ok(MensajeBgWk)
                     Dispose()
                 Else
                     msj_advert(MensajeBgWk)
                 End If
-
             End If
+
         Catch ex As Exception
             clsBasicas.controlException(Name, ex)
         End Try
@@ -262,4 +284,19 @@ Public Class FrmPedidoVentaxKilos
         End If
     End Sub
 
+    Private Sub cbxmodificar_CheckedChanged(sender As Object, e As EventArgs) Handles cbxmodificar.CheckedChanged
+        If cbxmodificar.Checked Then
+            pesoganchotxt.ReadOnly = False
+            pesoganchotxt.Enabled = True
+            _operacion = 1
+            txtprecio.Enabled = False
+            txtcantidad.Enabled = False
+            txtobservacion.Enabled = False
+            ckconsumo.Enabled = False
+        Else
+            pesoganchotxt.ReadOnly = True
+            pesoganchotxt.Enabled = False
+            _operacion = 0
+        End If
+    End Sub
 End Class

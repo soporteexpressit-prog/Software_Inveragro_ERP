@@ -639,41 +639,63 @@ Public Class cdVentas
         Try
             con.Abrir()
             cmd.CommandType = CommandType.StoredProcedure
-
             With cmd.Parameters
-                .AddWithValue("@codigo", SqlDbType.Int).Value = obj.Codigo
-                .AddWithValue("@serie", SqlDbType.VarChar).Value = obj.Serie
-                .AddWithValue("@correlativo", SqlDbType.VarChar).Value = obj.Correlativo
-                .AddWithValue("@fEmision", SqlDbType.Date).Value = obj.FEmision
-                .AddWithValue("@fpedido", SqlDbType.Date).Value = obj.Fpedido
-                .AddWithValue("@total", SqlDbType.Money).Value = obj.Total
-                .AddWithValue("@igv", SqlDbType.Money).Value = obj.Igv
-                .AddWithValue("@flete", SqlDbType.Money).Value = obj.Flete
-                .AddWithValue("@observacion", SqlDbType.VarChar).Value = obj.Observacion
-                .AddWithValue("@estado", SqlDbType.VarChar).Value = obj.Estado
-                .AddWithValue("@iduser", SqlDbType.Int).Value = obj.Iduser
-                .AddWithValue("@idCondicionpago", SqlDbType.Int).Value = obj.IdCondicionpago
-                .AddWithValue("@idMotivoTransaccion", SqlDbType.Int).Value = obj.IdMotivoTransaccion
-                .AddWithValue("@frecepcion", SqlDbType.Date).Value = If(obj.Frecepcion IsNot Nothing, obj.Frecepcion, DBNull.Value)
-                .AddWithValue("@idubicacion_origen", SqlDbType.Int).Value = If(obj.IdUbicacionOrigen IsNot Nothing, obj.IdUbicacionOrigen, DBNull.Value)
-                .AddWithValue("@idubicacion_destino", SqlDbType.Int).Value = If(obj.IdUbicacionDestino IsNot Nothing, obj.IdUbicacionDestino, DBNull.Value)
-                .AddWithValue("@lista_items", SqlDbType.VarChar).Value = obj.Lista_items
-                .AddWithValue("@idtipodocumento", SqlDbType.Int).Value = obj.Idtipodocumento
-                .AddWithValue("@idmoneda", SqlDbType.Int).Value = obj.Idmoneda
-                .AddWithValue("@tipocambio", SqlDbType.Money).Value = obj.Tipocambio
-                .AddWithValue("@idcotizacion", SqlDbType.Int).Value = obj.Idcotizacion
-                .AddWithValue("@idproveedor", SqlDbType.Int).Value = obj.Idproveedor
-                .AddWithValue("@recepcion", SqlDbType.VarChar).Value = obj.EstadoRecepcion
-                .AddWithValue("@idguia", SqlDbType.Int).Value = obj.Idguia
+                .Add("@codigo", SqlDbType.Int).Value = obj.Codigo
+                .Add("@serie", SqlDbType.VarChar, 4).Value = obj.Serie
+                .Add("@correlativo", SqlDbType.VarChar, 20).Value = obj.Correlativo
+                .Add("@fEmision", SqlDbType.Date).Value = obj.FEmision
+                .Add("@fpedido", SqlDbType.Date).Value = obj.Fpedido
+                .Add("@total", SqlDbType.Money).Value = obj.Total
+                .Add("@igv", SqlDbType.Money).Value = obj.Igv
+                .Add("@flete", SqlDbType.Money).Value = obj.Flete
+                .Add("@observacion", SqlDbType.VarChar, 200).Value = obj.Observacion
+                .Add("@estado", SqlDbType.VarChar, 20).Value = obj.Estado
+                .Add("@iduser", SqlDbType.Int).Value = obj.Iduser
+                .Add("@idCondicionpago", SqlDbType.Int).Value = obj.IdCondicionpago
+                .Add("@idMotivoTransaccion", SqlDbType.Int).Value = obj.IdMotivoTransaccion
+                .Add("@frecepcion", SqlDbType.Date).Value = If(obj.Frecepcion IsNot Nothing, obj.Frecepcion, DBNull.Value)
+                .Add("@idubicacion_origen", SqlDbType.Int).Value = If(obj.IdUbicacionOrigen IsNot Nothing, obj.IdUbicacionOrigen, DBNull.Value)
+                .Add("@idubicacion_destino", SqlDbType.Int).Value = If(obj.IdUbicacionDestino IsNot Nothing, obj.IdUbicacionDestino, DBNull.Value)
+                .Add("@lista_items", SqlDbType.VarChar, -1).Value = obj.Lista_items
+                .Add("@idtipodocumento", SqlDbType.Int).Value = obj.Idtipodocumento
+                .Add("@idmoneda", SqlDbType.Int).Value = obj.Idmoneda
+                .Add("@tipocambio", SqlDbType.Money).Value = obj.Tipocambio
+                .Add("@idcotizacion", SqlDbType.Int).Value = obj.Idcotizacion
+                .Add("@idproveedor", SqlDbType.Int).Value = obj.Idproveedor
+                .Add("@recepcion", SqlDbType.VarChar, 2).Value = obj.EstadoRecepcion
+                .Add("@idguia", SqlDbType.Int).Value = obj.Idguia
                 If obj.ArchivoRecepcion IsNot Nothing Then
                     .Add("@archivo", SqlDbType.VarBinary).Value = obj.ArchivoRecepcion
                 Else
                     .Add("@archivo", SqlDbType.VarBinary).Value = DBNull.Value
                 End If
-                .AddWithValue("@tipoprecio", SqlDbType.VarChar).Value = obj.Tipoprecio
-                .AddWithValue("@idplantel", SqlDbType.Int).Value = obj.Idplantel
-                .AddWithValue("@precio", SqlDbType.Money).Value = obj.Precio
-                .AddWithValue("@cantidad", SqlDbType.Money).Value = obj.Cantidad
+                .Add("@tipoprecio", SqlDbType.VarChar, 25).Value = If(obj.Tipoprecio IsNot Nothing, obj.Tipoprecio, DBNull.Value)
+                .Add("@idplantel", SqlDbType.Int).Value = obj.Idplantel
+                .Add("@precio", SqlDbType.Money).Value = obj.Precio
+                .Add("@cantidad", SqlDbType.Money).Value = obj.Cantidad
+                .Add("@msj", SqlDbType.VarChar, 100).Direction = ParameterDirection.Output
+                .Add("@coderror", SqlDbType.Int).Direction = ParameterDirection.Output
+            End With
+            cmd.ExecuteNonQuery()
+            mensaje = cmd.Parameters("@msj").Value.ToString()
+            obj.Coderror = Convert.ToInt32(cmd.Parameters("@coderror").Value)
+            con.Salir()
+            Return mensaje
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Function
+
+    Public Function Cd_RegPesoganchocerdo(name As String, obj As coVentas) As String
+        Dim mensaje As String
+        Dim cmd As New SqlCommand(name, con.con)
+        Try
+            con.Abrir()
+            cmd.CommandType = CommandType.StoredProcedure
+
+            With cmd.Parameters
+                .AddWithValue("@codigo", SqlDbType.Int).Value = obj.Codigo
+                .AddWithValue("@total", SqlDbType.Money).Value = obj.Total
                 .Add("@msj", SqlDbType.VarChar, 100).Direction = ParameterDirection.Output
                 .Add("@coderror", SqlDbType.Int).Direction = ParameterDirection.Output
             End With
@@ -690,6 +712,7 @@ Public Class cdVentas
             Throw ex
         End Try
     End Function
+
 
     Public Function Cd_RegPedidoVentaDirecta(name As String, obj As coVentas) As String
         Dim mensaje As String

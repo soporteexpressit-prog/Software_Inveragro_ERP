@@ -53,6 +53,7 @@ Partial Class FrmPedidoVentaxKilos
         Dim Appearance29 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance30 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance31 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance32 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Me.Label26 = New System.Windows.Forms.Label()
         Me.txtdireccion = New Infragistics.Win.UltraWinEditors.UltraTextEditor()
         Me.Label29 = New System.Windows.Forms.Label()
@@ -91,6 +92,10 @@ Partial Class FrmPedidoVentaxKilos
         Me.txtigv = New Infragistics.Win.UltraWinEditors.UltraTextEditor()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.txtsubtotal = New Infragistics.Win.UltraWinEditors.UltraTextEditor()
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.cbxmodificar = New System.Windows.Forms.CheckBox()
+        Me.pesoganchotxt = New Infragistics.Win.UltraWinEditors.UltraTextEditor()
+        Me.Label5 = New System.Windows.Forms.Label()
         CType(Me.txtdireccion, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtcodcliente, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtcliente, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -109,6 +114,8 @@ Partial Class FrmPedidoVentaxKilos
         CType(Me.txttotal, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtigv, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtsubtotal, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox3.SuspendLayout()
+        CType(Me.pesoganchotxt, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label26
@@ -196,7 +203,7 @@ Partial Class FrmPedidoVentaxKilos
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Padding = New System.Windows.Forms.Padding(0, 0, 4, 0)
         Me.ToolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-        Me.ToolStrip1.Size = New System.Drawing.Size(700, 38)
+        Me.ToolStrip1.Size = New System.Drawing.Size(706, 38)
         Me.ToolStrip1.TabIndex = 37
         Me.ToolStrip1.TabStop = True
         Me.ToolStrip1.Text = "ToolStrip1"
@@ -435,7 +442,7 @@ Partial Class FrmPedidoVentaxKilos
         Me.GroupBox2.Controls.Add(Me.txtobservacion)
         Me.GroupBox2.Controls.Add(Me.Label9)
         Me.GroupBox2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.GroupBox2.Location = New System.Drawing.Point(8, 155)
+        Me.GroupBox2.Location = New System.Drawing.Point(9, 212)
         Me.GroupBox2.MaximumSize = New System.Drawing.Size(684, 142)
         Me.GroupBox2.MinimumSize = New System.Drawing.Size(684, 142)
         Me.GroupBox2.Name = "GroupBox2"
@@ -624,7 +631,7 @@ Partial Class FrmPedidoVentaxKilos
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label11.Location = New System.Drawing.Point(459, 316)
+        Me.Label11.Location = New System.Drawing.Point(460, 373)
         Me.Label11.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(49, 14)
@@ -638,7 +645,7 @@ Partial Class FrmPedidoVentaxKilos
         Me.txttotal.Appearance = Appearance29
         Me.txttotal.BackColor = System.Drawing.Color.FromArgb(CType(CType(232, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(216, Byte), Integer))
         Me.txttotal.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txttotal.Location = New System.Drawing.Point(518, 309)
+        Me.txttotal.Location = New System.Drawing.Point(519, 366)
         Me.txttotal.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.txttotal.Name = "txttotal"
         Me.txttotal.ReadOnly = True
@@ -651,7 +658,7 @@ Partial Class FrmPedidoVentaxKilos
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label10.Location = New System.Drawing.Point(285, 316)
+        Me.Label10.Location = New System.Drawing.Point(286, 373)
         Me.Label10.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(38, 14)
@@ -665,7 +672,7 @@ Partial Class FrmPedidoVentaxKilos
         Me.txtigv.Appearance = Appearance30
         Me.txtigv.BackColor = System.Drawing.Color.FromArgb(CType(CType(232, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(216, Byte), Integer))
         Me.txtigv.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtigv.Location = New System.Drawing.Point(333, 309)
+        Me.txtigv.Location = New System.Drawing.Point(334, 366)
         Me.txtigv.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.txtigv.Name = "txtigv"
         Me.txtigv.ReadOnly = True
@@ -678,7 +685,7 @@ Partial Class FrmPedidoVentaxKilos
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label7.Location = New System.Drawing.Point(75, 316)
+        Me.Label7.Location = New System.Drawing.Point(76, 373)
         Me.Label7.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(74, 14)
@@ -692,7 +699,7 @@ Partial Class FrmPedidoVentaxKilos
         Me.txtsubtotal.Appearance = Appearance31
         Me.txtsubtotal.BackColor = System.Drawing.Color.FromArgb(CType(CType(232, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(216, Byte), Integer))
         Me.txtsubtotal.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtsubtotal.Location = New System.Drawing.Point(159, 309)
+        Me.txtsubtotal.Location = New System.Drawing.Point(160, 366)
         Me.txtsubtotal.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.txtsubtotal.Name = "txtsubtotal"
         Me.txtsubtotal.ReadOnly = True
@@ -700,12 +707,60 @@ Partial Class FrmPedidoVentaxKilos
         Me.txtsubtotal.TabIndex = 176
         Me.txtsubtotal.TabStop = False
         '
+        'GroupBox3
+        '
+        Me.GroupBox3.Controls.Add(Me.cbxmodificar)
+        Me.GroupBox3.Controls.Add(Me.pesoganchotxt)
+        Me.GroupBox3.Controls.Add(Me.Label5)
+        Me.GroupBox3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.GroupBox3.Location = New System.Drawing.Point(5, 157)
+        Me.GroupBox3.Name = "GroupBox3"
+        Me.GroupBox3.Size = New System.Drawing.Size(688, 49)
+        Me.GroupBox3.TabIndex = 175
+        Me.GroupBox3.TabStop = False
+        Me.GroupBox3.Text = "Agregar / Modificar Peso Gancho"
+        '
+        'cbxmodificar
+        '
+        Me.cbxmodificar.AutoSize = True
+        Me.cbxmodificar.Location = New System.Drawing.Point(124, 19)
+        Me.cbxmodificar.Name = "cbxmodificar"
+        Me.cbxmodificar.Size = New System.Drawing.Size(99, 17)
+        Me.cbxmodificar.TabIndex = 58
+        Me.cbxmodificar.Text = "MODIFICAR"
+        Me.cbxmodificar.UseVisualStyleBackColor = True
+        '
+        'pesoganchotxt
+        '
+        Appearance32.BackColor = System.Drawing.Color.Orange
+        Me.pesoganchotxt.Appearance = Appearance32
+        Me.pesoganchotxt.BackColor = System.Drawing.Color.Orange
+        Me.pesoganchotxt.Location = New System.Drawing.Point(493, 16)
+        Me.pesoganchotxt.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
+        Me.pesoganchotxt.MaxLength = 8
+        Me.pesoganchotxt.Name = "pesoganchotxt"
+        Me.pesoganchotxt.Size = New System.Drawing.Size(115, 22)
+        Me.pesoganchotxt.TabIndex = 56
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.Label5.Location = New System.Drawing.Point(385, 19)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(98, 14)
+        Me.Label5.TabIndex = 57
+        Me.Label5.Text = "Peso Gancho :"
+        '
         'FrmPedidoVentaxKilos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(233, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(700, 349)
+        Me.ClientSize = New System.Drawing.Size(706, 406)
+        Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.txttotal)
         Me.Controls.Add(Me.Label10)
@@ -749,6 +804,9 @@ Partial Class FrmPedidoVentaxKilos
         CType(Me.txttotal, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtigv, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtsubtotal, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox3.ResumeLayout(False)
+        Me.GroupBox3.PerformLayout()
+        CType(Me.pesoganchotxt, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -791,4 +849,8 @@ Partial Class FrmPedidoVentaxKilos
     Friend WithEvents ckconsumo As CheckBox
     Friend WithEvents txtpesogranja As Infragistics.Win.UltraWinEditors.UltraTextEditor
     Friend WithEvents Label3 As Label
+    Friend WithEvents GroupBox3 As GroupBox
+    Friend WithEvents cbxmodificar As CheckBox
+    Friend WithEvents pesoganchotxt As Infragistics.Win.UltraWinEditors.UltraTextEditor
+    Friend WithEvents Label5 As Label
 End Class

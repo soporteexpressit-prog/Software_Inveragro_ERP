@@ -20,6 +20,7 @@ Public Class FrmAnularOrdendeCompra
                 Dim obj As New coIngreso
                 obj.Codigo = idordencompra
                 obj.Motivoanulacion = txtDescripcionAnulacion.Text
+                obj.Iduser = VP_IdUser
                 Dim MensajeBgWk As String = ""
                 MensajeBgWk = cn.Cn_AnularOrdenCompra(obj)
                 If (obj.Coderror = 0) Then
