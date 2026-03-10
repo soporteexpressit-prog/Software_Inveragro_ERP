@@ -253,4 +253,13 @@ Public Class FrmControlRecepcionRacion
     Private Sub btncerrar_Click(sender As Object, e As EventArgs) Handles btncerrar.Click
         Dispose()
     End Sub
+
+    Private Sub BtnReporte_Click(sender As Object, e As EventArgs) Handles BtnReporte.Click
+        Try
+            Dim frm As New FrmReporteRecepcionxCampana
+            frm.ShowDialog()
+        Catch ex As Exception
+            clsBasicas.controlException(Name, ex)
+        End Try
+    End Sub
 End Class

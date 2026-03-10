@@ -104,4 +104,21 @@ Public Class cdControlRecepcionAlimento
             Throw ex
         End Try
     End Function
+
+
+    Public Function Cd_ReporteRecepcionesxIdUbicacion(name As String, obj As coControlRecepcionAlimento) As DataSet
+        Dim ds As New DataSet
+        Try
+            con.Abrir()
+            Dim da As New SqlDataAdapter(name, con.con)
+            da.SelectCommand.CommandType = 4
+            da.SelectCommand.Parameters.AddWithValue("@idUbicacion", obj.IdUbicacion)
+            da.SelectCommand.Parameters.AddWithValue("@idCampaña", obj.IdCampaña)
+            da.Fill(ds)
+        Catch ex As Exception
+            Throw ex
+        End Try
+        con.Salir()
+        Return ds
+    End Function
 End Class
