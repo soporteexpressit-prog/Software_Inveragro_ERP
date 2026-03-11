@@ -155,6 +155,9 @@ Public Class cnVentas
     Public Function Cn_ConsultarPedidosTransferencia(ByRef obj As coVentas) As DataSet
         Return cls_at.ConsultarTransferencia("[i_pa_cons_control_pedidos_transferencias]", obj)
     End Function
+    Public Function Cn_Consultardistrbuciones(ByRef obj As coVentas) As DataSet
+        Return cls_at.Consultardistribuciones("[i_pa_cons_distribuciones_de_transferencias]", obj)
+    End Function
     Public Function Cn_ConsultarPedidoVentasCerdo(ByRef obj As coVentas) As DataSet
         Return cls_at.ConsultarPedidoVentaCerdo("[i_pa_cons_control_pedidos_venta_cerdo]", obj)
     End Function
@@ -237,6 +240,11 @@ Public Class cnVentas
     End Function
     Public Function Cn_AnularRequerimiento(ByRef obj As coVentas) As String
         Return cls_at.Cd_AnularRequerimiento("[i_pa_anular_requerimiento]", obj)
+    End Function
+
+
+    Public Function Cn_AnularRequerimientodespachado(ByRef obj As coVentas) As String
+        Return cls_at.Cd_AnularRequerimiento("[i_pa_anular_requerimiento_despachado]", obj)
     End Function
 
     Public Function Cn_AnularrecepcionRequerimiento(ByRef obj As coVentas) As String

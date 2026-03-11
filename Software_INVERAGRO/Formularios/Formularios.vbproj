@@ -2143,6 +2143,12 @@
     <Compile Include="Ventas\FrmControlPedidosVentaProductos.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Ventas\FrmHistoricoDistribuciones.Designer.vb">
+      <DependentUpon>FrmHistoricoDistribuciones.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ventas\FrmHistoricoDistribuciones.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ventas\FrmListarTransporteGuiasTraslado.Designer.vb">
       <DependentUpon>FrmListarTransporteGuiasTraslado.vb</DependentUpon>
     </Compile>
@@ -4899,6 +4905,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ventas\FrmControlPedidosVentaProductos.resx">
       <DependentUpon>FrmControlPedidosVentaProductos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventas\FrmHistoricoDistribuciones.resx">
+      <DependentUpon>FrmHistoricoDistribuciones.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventas\FrmListarTransporteGuiasTraslado.resx">
       <DependentUpon>FrmListarTransporteGuiasTraslado.vb</DependentUpon>

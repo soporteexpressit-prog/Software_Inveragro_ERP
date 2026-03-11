@@ -39,11 +39,13 @@ Partial Class FrmKardex
         Dim Appearance14 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance15 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.cbxestado = New System.Windows.Forms.ComboBox()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.dtpFechaDesde = New System.Windows.Forms.DateTimePicker()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.dtpFechaHasta = New System.Windows.Forms.DateTimePicker()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.lbltitulo = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -58,8 +60,6 @@ Partial Class FrmKardex
         Me.dtgListado = New Infragistics.Win.UltraWinGrid.UltraGrid()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.cbxestado = New System.Windows.Forms.ComboBox()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
@@ -84,6 +84,29 @@ Partial Class FrmKardex
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Filtros de Busqueda"
         '
+        'cbxestado
+        '
+        Me.cbxestado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbxestado.FormattingEnabled = True
+        Me.cbxestado.Items.AddRange(New Object() {"ACTIVOS", "ANULADOS", "TODOS"})
+        Me.cbxestado.Location = New System.Drawing.Point(899, 28)
+        Me.cbxestado.Name = "cbxestado"
+        Me.cbxestado.Size = New System.Drawing.Size(121, 21)
+        Me.cbxestado.TabIndex = 170
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.BackColor = System.Drawing.Color.Transparent
+        Me.Label6.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.Label6.Location = New System.Drawing.Point(831, 32)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(60, 14)
+        Me.Label6.TabIndex = 169
+        Me.Label6.Text = "Estado :"
+        '
         'dtpFechaDesde
         '
         Me.dtpFechaDesde.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -91,21 +114,6 @@ Partial Class FrmKardex
         Me.dtpFechaDesde.Name = "dtpFechaDesde"
         Me.dtpFechaDesde.Size = New System.Drawing.Size(240, 21)
         Me.dtpFechaDesde.TabIndex = 167
-        '
-        'Button1
-        '
-        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button1.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
-        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button1.Location = New System.Drawing.Point(1089, 18)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Padding = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Button1.Size = New System.Drawing.Size(92, 40)
-        Me.Button1.TabIndex = 169
-        Me.Button1.Text = "Buscar"
-        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button1.UseVisualStyleBackColor = True
         '
         'Label2
         '
@@ -140,6 +148,21 @@ Partial Class FrmKardex
         Me.dtpFechaHasta.Name = "dtpFechaHasta"
         Me.dtpFechaHasta.Size = New System.Drawing.Size(240, 21)
         Me.dtpFechaHasta.TabIndex = 168
+        '
+        'Button1
+        '
+        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button1.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
+        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button1.Location = New System.Drawing.Point(1089, 18)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Padding = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Button1.Size = New System.Drawing.Size(92, 40)
+        Me.Button1.TabIndex = 169
+        Me.Button1.Text = "Buscar"
+        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'lbltitulo
         '
@@ -389,29 +412,6 @@ Partial Class FrmKardex
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(1484, 828)
         Me.Panel2.TabIndex = 169
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.BackColor = System.Drawing.Color.Transparent
-        Me.Label6.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label6.Location = New System.Drawing.Point(831, 32)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(60, 14)
-        Me.Label6.TabIndex = 169
-        Me.Label6.Text = "Estado :"
-        '
-        'cbxestado
-        '
-        Me.cbxestado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cbxestado.FormattingEnabled = True
-        Me.cbxestado.Items.AddRange(New Object() {"ACTIVOS", "INACTIVOS", "TODOS"})
-        Me.cbxestado.Location = New System.Drawing.Point(899, 28)
-        Me.cbxestado.Name = "cbxestado"
-        Me.cbxestado.Size = New System.Drawing.Size(121, 21)
-        Me.cbxestado.TabIndex = 170
         '
         'FrmKardex
         '

@@ -8,6 +8,9 @@ Public Class FrmAnularRequerimiento
 
     Private Sub FrmAnularEntregaEpp_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         txtDescripcionAnulacion.Text = ""
+        If operacion = 1 Then
+            Me.Text = "Anular Requerimiento"
+        End If
     End Sub
 
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
@@ -19,17 +22,22 @@ Public Class FrmAnularRequerimiento
 
         ' Confirmación de la anulación
         Dim result As DialogResult = MessageBox.Show("¿Está seguro de que desea anular este Requerimiento?", "Confirmar Anulación", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
-
+        Dim mensaje As String
         If result = DialogResult.Yes Then
             Try
                 ' Crea el objeto y asigna los valores necesarios
                 Dim obj As New coVentas With {
                 .Codigo = idordencompra,
-                .Motivoanulacion = txtDescripcionAnulacion.Text
+                .Motivoanulacion = txtDescripcionAnulacion.Text,
+                .Iduser = VP_IdUser
             }
 
                 ' Realiza la anulación a través de la función correspondiente
-                Dim mensaje As String = cn.Cn_AnularRequerimiento(obj)
+                If operacion = 1 Then
+                    mensaje = cn.Cn_AnularRequerimientodespachado(obj)
+                Else
+                    mensaje = cn.Cn_AnularRequerimiento(obj)
+                End If
 
                 ' Verifica el resultado de la operación
                 If obj.Coderror = 0 Then
