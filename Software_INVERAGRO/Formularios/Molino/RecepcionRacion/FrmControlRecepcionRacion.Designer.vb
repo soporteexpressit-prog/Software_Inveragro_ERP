@@ -39,13 +39,14 @@ Partial Class FrmControlRecepcionRacion
         Dim Appearance14 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance15 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.GrupoFiltros = New System.Windows.Forms.GroupBox()
         Me.btnBuscar = New System.Windows.Forms.Button()
-        Me.cmbEstadoPedido = New System.Windows.Forms.ComboBox()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.dtpFechaHasta = New System.Windows.Forms.DateTimePicker()
-        Me.dtpFechaDesde = New System.Windows.Forms.DateTimePicker()
-        Me.Label3 = New System.Windows.Forms.Label()
+        Me.cmbEstadoPedido = New System.Windows.Forms.ComboBox()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.dtpFechaDesde = New System.Windows.Forms.DateTimePicker()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.BarraOpciones = New System.Windows.Forms.ToolStrip()
         Me.BtnRecepcionarAlimento = New System.Windows.Forms.ToolStripButton()
@@ -54,12 +55,12 @@ Partial Class FrmControlRecepcionRacion
         Me.dtgListadoPreparacionRacion = New Infragistics.Win.UltraWinGrid.UltraGrid()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         Me.Ptbx_Cargando = New System.Windows.Forms.PictureBox()
-        Me.GrupoFiltros = New System.Windows.Forms.GroupBox()
+        Me.BtnReporte = New System.Windows.Forms.ToolStripButton()
         Me.Panel2.SuspendLayout()
+        Me.GrupoFiltros.SuspendLayout()
         Me.BarraOpciones.SuspendLayout()
         CType(Me.dtgListadoPreparacionRacion, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Ptbx_Cargando, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GrupoFiltros.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel2
@@ -70,10 +71,28 @@ Partial Class FrmControlRecepcionRacion
         Me.Panel2.Controls.Add(Me.BarraOpciones)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(2, 1, 2, 1)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(2141, 329)
+        Me.Panel2.Size = New System.Drawing.Size(1283, 214)
         Me.Panel2.TabIndex = 11
+        '
+        'GrupoFiltros
+        '
+        Me.GrupoFiltros.Controls.Add(Me.btnBuscar)
+        Me.GrupoFiltros.Controls.Add(Me.dtpFechaHasta)
+        Me.GrupoFiltros.Controls.Add(Me.cmbEstadoPedido)
+        Me.GrupoFiltros.Controls.Add(Me.Label4)
+        Me.GrupoFiltros.Controls.Add(Me.Label1)
+        Me.GrupoFiltros.Controls.Add(Me.Label3)
+        Me.GrupoFiltros.Controls.Add(Me.dtpFechaDesde)
+        Me.GrupoFiltros.Location = New System.Drawing.Point(23, 55)
+        Me.GrupoFiltros.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GrupoFiltros.Name = "GrupoFiltros"
+        Me.GrupoFiltros.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GrupoFiltros.Size = New System.Drawing.Size(814, 106)
+        Me.GrupoFiltros.TabIndex = 159
+        Me.GrupoFiltros.TabStop = False
+        Me.GrupoFiltros.Text = "Filtros de Búsqueda"
         '
         'btnBuscar
         '
@@ -81,15 +100,22 @@ Partial Class FrmControlRecepcionRacion
         Me.btnBuscar.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBuscar.Image = CType(resources.GetObject("btnBuscar.Image"), System.Drawing.Image)
         Me.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnBuscar.Location = New System.Drawing.Point(1053, 69)
-        Me.btnBuscar.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btnBuscar.Location = New System.Drawing.Point(702, 45)
         Me.btnBuscar.Name = "btnBuscar"
-        Me.btnBuscar.Padding = New System.Windows.Forms.Padding(6, 0, 6, 0)
-        Me.btnBuscar.Size = New System.Drawing.Size(138, 63)
+        Me.btnBuscar.Padding = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.btnBuscar.Size = New System.Drawing.Size(92, 41)
         Me.btnBuscar.TabIndex = 184
         Me.btnBuscar.Text = "Buscar"
         Me.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnBuscar.UseVisualStyleBackColor = True
+        '
+        'dtpFechaHasta
+        '
+        Me.dtpFechaHasta.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dtpFechaHasta.Location = New System.Drawing.Point(129, 68)
+        Me.dtpFechaHasta.Name = "dtpFechaHasta"
+        Me.dtpFechaHasta.Size = New System.Drawing.Size(240, 21)
+        Me.dtpFechaHasta.TabIndex = 181
         '
         'cmbEstadoPedido
         '
@@ -97,55 +123,10 @@ Partial Class FrmControlRecepcionRacion
         Me.cmbEstadoPedido.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbEstadoPedido.FormattingEnabled = True
         Me.cmbEstadoPedido.Items.AddRange(New Object() {"TODOS", "PARCIAL", "DESPACHADO"})
-        Me.cmbEstadoPedido.Location = New System.Drawing.Point(793, 44)
-        Me.cmbEstadoPedido.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.cmbEstadoPedido.Location = New System.Drawing.Point(529, 29)
         Me.cmbEstadoPedido.Name = "cmbEstadoPedido"
-        Me.cmbEstadoPedido.Size = New System.Drawing.Size(194, 28)
+        Me.cmbEstadoPedido.Size = New System.Drawing.Size(131, 21)
         Me.cmbEstadoPedido.TabIndex = 183
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(620, 47)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(160, 22)
-        Me.Label1.TabIndex = 182
-        Me.Label1.Text = "Estado Pedido:"
-        '
-        'dtpFechaHasta
-        '
-        Me.dtpFechaHasta.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dtpFechaHasta.Location = New System.Drawing.Point(193, 104)
-        Me.dtpFechaHasta.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.dtpFechaHasta.Name = "dtpFechaHasta"
-        Me.dtpFechaHasta.Size = New System.Drawing.Size(358, 28)
-        Me.dtpFechaHasta.TabIndex = 181
-        '
-        'dtpFechaDesde
-        '
-        Me.dtpFechaDesde.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dtpFechaDesde.Location = New System.Drawing.Point(194, 44)
-        Me.dtpFechaDesde.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.dtpFechaDesde.Name = "dtpFechaDesde"
-        Me.dtpFechaDesde.Size = New System.Drawing.Size(358, 28)
-        Me.dtpFechaDesde.TabIndex = 180
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.BackColor = System.Drawing.Color.Transparent
-        Me.Label3.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(27, 47)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(152, 22)
-        Me.Label3.TabIndex = 178
-        Me.Label3.Text = "Fecha Desde :"
         '
         'Label4
         '
@@ -153,12 +134,46 @@ Partial Class FrmControlRecepcionRacion
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label4.Location = New System.Drawing.Point(32, 107)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label4.Location = New System.Drawing.Point(21, 70)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(147, 22)
+        Me.Label4.Size = New System.Drawing.Size(97, 14)
         Me.Label4.TabIndex = 179
         Me.Label4.Text = "Fecha Hasta :"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.Label1.Location = New System.Drawing.Point(413, 31)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(105, 14)
+        Me.Label1.TabIndex = 182
+        Me.Label1.Text = "Estado Pedido:"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.Label3.Location = New System.Drawing.Point(18, 31)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(100, 14)
+        Me.Label3.TabIndex = 178
+        Me.Label3.Text = "Fecha Desde :"
+        '
+        'dtpFechaDesde
+        '
+        Me.dtpFechaDesde.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dtpFechaDesde.Location = New System.Drawing.Point(129, 29)
+        Me.dtpFechaDesde.Name = "dtpFechaDesde"
+        Me.dtpFechaDesde.Size = New System.Drawing.Size(240, 21)
+        Me.dtpFechaDesde.TabIndex = 180
         '
         'Label6
         '
@@ -166,9 +181,10 @@ Partial Class FrmControlRecepcionRacion
         Me.Label6.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(233, Byte), Integer))
         Me.Label6.Font = New System.Drawing.Font("Verdana", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(49, Byte), Integer))
-        Me.Label6.Location = New System.Drawing.Point(47, 27)
+        Me.Label6.Location = New System.Drawing.Point(31, 18)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(541, 29)
+        Me.Label6.Size = New System.Drawing.Size(364, 18)
         Me.Label6.TabIndex = 128
         Me.Label6.Text = "CONTROL DE RECEPCIÓN DE RACIONES"
         '
@@ -178,12 +194,12 @@ Partial Class FrmControlRecepcionRacion
         Me.BarraOpciones.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.BarraOpciones.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
         Me.BarraOpciones.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.BarraOpciones.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnRecepcionarAlimento, Me.btnExportarMolinorecep, Me.btncerrar})
-        Me.BarraOpciones.Location = New System.Drawing.Point(0, 289)
-        Me.BarraOpciones.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.BarraOpciones.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnRecepcionarAlimento, Me.btnExportarMolinorecep, Me.btncerrar, Me.BtnReporte})
+        Me.BarraOpciones.Location = New System.Drawing.Point(0, 176)
+        Me.BarraOpciones.Margin = New System.Windows.Forms.Padding(2, 1, 2, 1)
         Me.BarraOpciones.Name = "BarraOpciones"
-        Me.BarraOpciones.Padding = New System.Windows.Forms.Padding(0, 0, 3, 0)
-        Me.BarraOpciones.Size = New System.Drawing.Size(2141, 40)
+        Me.BarraOpciones.Padding = New System.Windows.Forms.Padding(0, 0, 2, 0)
+        Me.BarraOpciones.Size = New System.Drawing.Size(1283, 38)
         Me.BarraOpciones.TabIndex = 52
         Me.BarraOpciones.Text = "ToolStrip1"
         '
@@ -196,7 +212,7 @@ Partial Class FrmControlRecepcionRacion
         Me.BtnRecepcionarAlimento.Margin = New System.Windows.Forms.Padding(5)
         Me.BtnRecepcionarAlimento.Name = "BtnRecepcionarAlimento"
         Me.BtnRecepcionarAlimento.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnRecepcionarAlimento.Size = New System.Drawing.Size(163, 30)
+        Me.BtnRecepcionarAlimento.Size = New System.Drawing.Size(116, 28)
         Me.BtnRecepcionarAlimento.Text = "Recepcionar"
         Me.BtnRecepcionarAlimento.ToolTipText = "Recepcionar"
         '
@@ -209,7 +225,7 @@ Partial Class FrmControlRecepcionRacion
         Me.btnExportarMolinorecep.Margin = New System.Windows.Forms.Padding(5)
         Me.btnExportarMolinorecep.Name = "btnExportarMolinorecep"
         Me.btnExportarMolinorecep.Padding = New System.Windows.Forms.Padding(2)
-        Me.btnExportarMolinorecep.Size = New System.Drawing.Size(125, 30)
+        Me.btnExportarMolinorecep.Size = New System.Drawing.Size(92, 28)
         Me.btnExportarMolinorecep.Text = "Exportar"
         Me.btnExportarMolinorecep.ToolTipText = "Exportar"
         '
@@ -222,7 +238,7 @@ Partial Class FrmControlRecepcionRacion
         Me.btncerrar.Margin = New System.Windows.Forms.Padding(5)
         Me.btncerrar.Name = "btncerrar"
         Me.btncerrar.Padding = New System.Windows.Forms.Padding(2)
-        Me.btncerrar.Size = New System.Drawing.Size(84, 30)
+        Me.btncerrar.Size = New System.Drawing.Size(66, 28)
         Me.btncerrar.Text = "Salir"
         '
         'dtgListadoPreparacionRacion
@@ -297,10 +313,9 @@ Partial Class FrmControlRecepcionRacion
         Me.dtgListadoPreparacionRacion.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy
         Me.dtgListadoPreparacionRacion.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dtgListadoPreparacionRacion.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dtgListadoPreparacionRacion.Location = New System.Drawing.Point(0, 329)
-        Me.dtgListadoPreparacionRacion.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.dtgListadoPreparacionRacion.Location = New System.Drawing.Point(0, 214)
         Me.dtgListadoPreparacionRacion.Name = "dtgListadoPreparacionRacion"
-        Me.dtgListadoPreparacionRacion.Size = New System.Drawing.Size(2141, 696)
+        Me.dtgListadoPreparacionRacion.Size = New System.Drawing.Size(1283, 452)
         Me.dtgListadoPreparacionRacion.TabIndex = 33
         Me.dtgListadoPreparacionRacion.Text = "UltraGrid1"
         '
@@ -311,50 +326,48 @@ Partial Class FrmControlRecepcionRacion
         '
         Me.Ptbx_Cargando.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Ptbx_Cargando.Image = Global.Formularios.My.Resources.Resources.loader
-        Me.Ptbx_Cargando.Location = New System.Drawing.Point(1019, 578)
-        Me.Ptbx_Cargando.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Ptbx_Cargando.Location = New System.Drawing.Point(679, 376)
         Me.Ptbx_Cargando.Name = "Ptbx_Cargando"
-        Me.Ptbx_Cargando.Size = New System.Drawing.Size(64, 57)
+        Me.Ptbx_Cargando.Size = New System.Drawing.Size(43, 37)
         Me.Ptbx_Cargando.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.Ptbx_Cargando.TabIndex = 34
         Me.Ptbx_Cargando.TabStop = False
         Me.Ptbx_Cargando.Visible = False
         '
-        'GrupoFiltros
+        'BtnReporte
         '
-        Me.GrupoFiltros.Controls.Add(Me.btnBuscar)
-        Me.GrupoFiltros.Controls.Add(Me.dtpFechaHasta)
-        Me.GrupoFiltros.Controls.Add(Me.cmbEstadoPedido)
-        Me.GrupoFiltros.Controls.Add(Me.Label4)
-        Me.GrupoFiltros.Controls.Add(Me.Label1)
-        Me.GrupoFiltros.Controls.Add(Me.Label3)
-        Me.GrupoFiltros.Controls.Add(Me.dtpFechaDesde)
-        Me.GrupoFiltros.Location = New System.Drawing.Point(34, 84)
-        Me.GrupoFiltros.Name = "GrupoFiltros"
-        Me.GrupoFiltros.Size = New System.Drawing.Size(1221, 163)
-        Me.GrupoFiltros.TabIndex = 159
-        Me.GrupoFiltros.TabStop = False
-        Me.GrupoFiltros.Text = "Filtros de Búsqueda"
+        Me.BtnReporte.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.BtnReporte.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnReporte.ForeColor = System.Drawing.Color.White
+        Me.BtnReporte.Image = Global.Formularios.My.Resources.Resources.registro1
+        Me.BtnReporte.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BtnReporte.Margin = New System.Windows.Forms.Padding(5)
+        Me.BtnReporte.Name = "BtnReporte"
+        Me.BtnReporte.Padding = New System.Windows.Forms.Padding(2)
+        Me.BtnReporte.Size = New System.Drawing.Size(87, 28)
+        Me.BtnReporte.Text = "Reporte"
+        Me.BtnReporte.ToolTipText = "Exportar"
         '
         'FrmControlRecepcionRacion
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(2141, 1025)
+        Me.ClientSize = New System.Drawing.Size(1283, 666)
         Me.Controls.Add(Me.Ptbx_Cargando)
         Me.Controls.Add(Me.dtgListadoPreparacionRacion)
         Me.Controls.Add(Me.Panel2)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "FrmControlRecepcionRacion"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "CONTROL DE RECEPCIÓN DE RACIONES"
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
+        Me.GrupoFiltros.ResumeLayout(False)
+        Me.GrupoFiltros.PerformLayout()
         Me.BarraOpciones.ResumeLayout(False)
         Me.BarraOpciones.PerformLayout()
         CType(Me.dtgListadoPreparacionRacion, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Ptbx_Cargando, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GrupoFiltros.ResumeLayout(False)
-        Me.GrupoFiltros.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -376,4 +389,5 @@ Partial Class FrmControlRecepcionRacion
     Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
     Friend WithEvents BtnRecepcionarAlimento As ToolStripButton
     Friend WithEvents GrupoFiltros As GroupBox
+    Friend WithEvents BtnReporte As ToolStripButton
 End Class

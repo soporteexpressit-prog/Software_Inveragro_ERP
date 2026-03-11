@@ -23,4 +23,8 @@ Public Class cnControlRecepcionAlimento
     Public Function Cn_CancelarDespachoAlimento(obj As coControlRecepcionAlimento) As String
         Return cls_at.Cd_CancelarDespachoAlimento("[w_pa_cancelar_despacho_recepcion_alimento]", obj)
     End Function
+
+    Public Function Cn_ReporteRecepcionesxIdUbicacion(obj As coControlRecepcionAlimento) As DataSet
+        Return cls_at.Cd_ReporteRecepcionesxIdUbicacion("[w_pa_cons_recepciones_x_plantel]", obj)
+    End Function
 End Class

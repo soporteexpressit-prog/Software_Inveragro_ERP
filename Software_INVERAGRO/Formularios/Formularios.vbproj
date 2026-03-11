@@ -1052,6 +1052,12 @@
     <Compile Include="Molino\RecepcionRacion\FrmListaDespachosPedido.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Molino\RecepcionRacion\FrmReporteRecepcionxCampana.Designer.vb">
+      <DependentUpon>FrmReporteRecepcionxCampana.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Molino\RecepcionRacion\FrmReporteRecepcionxCampana.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -4364,6 +4370,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Molino\RecepcionRacion\FrmListaDespachosPedido.resx">
       <DependentUpon>FrmListaDespachosPedido.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Molino\RecepcionRacion\FrmReporteRecepcionxCampana.resx">
+      <DependentUpon>FrmReporteRecepcionxCampana.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Nutricion\ControlFormulas\FrmGestionarVisualizacionRacion.resx">
       <DependentUpon>FrmGestionarVisualizacionRacion.vb</DependentUpon>
