@@ -11,7 +11,6 @@ Public Class FrmModificarCampaña
         Try
             LblPlantel.Text = valorPlantel
             clsBasicas.LlenarComboAnios(CmbAnios)
-
             ListarCampañas()
         Catch ex As Exception
             clsBasicas.controlException(Name, ex)
@@ -59,6 +58,13 @@ Public Class FrmModificarCampaña
         Catch ex As Exception
             clsBasicas.controlException(Name, ex)
         End Try
+    End Sub
+
+    Private Sub CmbAnios_TextChanged(sender As Object, e As EventArgs) Handles CmbAnios.TextChanged
+        If CmbAnios Is Nothing OrElse String.IsNullOrEmpty(CmbAnios.Text) Then
+            Return
+        End If
+        ListarCampañas()
     End Sub
 
     Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
