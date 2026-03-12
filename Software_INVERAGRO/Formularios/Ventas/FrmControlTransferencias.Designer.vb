@@ -22,8 +22,8 @@ Partial Class FrmControlTransferencias
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim Appearance20 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim Appearance21 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance18 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance19 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance3 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance4 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance5 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
@@ -52,27 +52,28 @@ Partial Class FrmControlTransferencias
         Me.GrupoMasOpcionesBusqueda = New System.Windows.Forms.GroupBox()
         Me.txtProveedor = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.btnConsultar = New System.Windows.Forms.Button()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
+        Me.dtgListado = New Infragistics.Win.UltraWinGrid.UltraGrid()
+        Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
+        Me.Ptbx_Cargando = New System.Windows.Forms.PictureBox()
+        Me.btnConsultar = New System.Windows.Forms.Button()
         Me.btnnuevatransferenciaventas = New System.Windows.Forms.ToolStripButton()
         Me.btnRecepcionarVmopevetransferenciaventas = New System.Windows.Forms.ToolStripSplitButton()
         Me.CONGUIADETRASLADOToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SINGUIADETRASLADOToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.btneditar = New System.Windows.Forms.ToolStripButton()
-        Me.btnhistoricoretransferenciaventas = New System.Windows.Forms.ToolStripButton()
-        Me.btnventaoirrecuperablestransferenciaventas = New System.Windows.Forms.ToolStripButton()
-        Me.btnajustespedidoventas = New System.Windows.Forms.ToolStripDropDownButton()
-        Me.ToolStripMenuItem10 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripMenuItem11 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.btnexportarVmopevetransferenciaventas = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
-        Me.btncerrar = New System.Windows.Forms.ToolStripButton()
         Me.btnanulacionesdisponibles = New System.Windows.Forms.ToolStripDropDownButton()
         Me.AnularAjusteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem5 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.dtgListado = New Infragistics.Win.UltraWinGrid.UltraGrid()
-        Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
-        Me.Ptbx_Cargando = New System.Windows.Forms.PictureBox()
+        Me.btnajustespedidoventas = New System.Windows.Forms.ToolStripDropDownButton()
+        Me.ToolStripMenuItem10 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem11 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.btnhistoricoretransferenciaventas = New System.Windows.Forms.ToolStripButton()
+        Me.btnventaoirrecuperablestransferenciaventas = New System.Windows.Forms.ToolStripButton()
+        Me.btnexportarVmopevetransferenciaventas = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
+        Me.btncerrar = New System.Windows.Forms.ToolStripButton()
+        Me.btndistribucion = New System.Windows.Forms.ToolStripButton()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.UltraGroupBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -174,16 +175,16 @@ Partial Class FrmControlTransferencias
         '
         'UltraGroupBox2
         '
-        Appearance20.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(233, Byte), Integer))
-        Appearance20.BackColor2 = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(233, Byte), Integer))
-        Me.UltraGroupBox2.Appearance = Appearance20
+        Appearance18.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(233, Byte), Integer))
+        Appearance18.BackColor2 = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.UltraGroupBox2.Appearance = Appearance18
         Me.UltraGroupBox2.CaptionAlignment = Infragistics.Win.Misc.GroupBoxCaptionAlignment.Near
         Me.UltraGroupBox2.Controls.Add(Me.Label2)
         Me.UltraGroupBox2.Controls.Add(Me.GrupoMasOpcionesBusqueda)
         Me.UltraGroupBox2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.UltraGroupBox2.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Appearance21.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(233, Byte), Integer))
-        Me.UltraGroupBox2.HeaderAppearance = Appearance21
+        Appearance19.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.UltraGroupBox2.HeaderAppearance = Appearance19
         Me.UltraGroupBox2.HeaderBorderStyle = Infragistics.Win.UIElementBorderStyle.Rounded4Thick
         Me.UltraGroupBox2.HeaderPosition = Infragistics.Win.Misc.GroupBoxHeaderPosition.TopOnBorder
         Me.UltraGroupBox2.Location = New System.Drawing.Point(0, 0)
@@ -244,29 +245,13 @@ Partial Class FrmControlTransferencias
         Me.Label7.TabIndex = 166
         Me.Label7.Text = "Clientes :"
         '
-        'btnConsultar
-        '
-        Me.btnConsultar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnConsultar.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnConsultar.Image = Global.Formularios.My.Resources.Resources.buscando__1_
-        Me.btnConsultar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnConsultar.Location = New System.Drawing.Point(632, 45)
-        Me.btnConsultar.Margin = New System.Windows.Forms.Padding(2)
-        Me.btnConsultar.Name = "btnConsultar"
-        Me.btnConsultar.Padding = New System.Windows.Forms.Padding(3, 0, 3, 0)
-        Me.btnConsultar.Size = New System.Drawing.Size(101, 34)
-        Me.btnConsultar.TabIndex = 162
-        Me.btnConsultar.Text = "Buscar"
-        Me.btnConsultar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnConsultar.UseVisualStyleBackColor = True
-        '
         'ToolStrip1
         '
         Me.ToolStrip1.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.ToolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.ToolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
         Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnnuevatransferenciaventas, Me.btnRecepcionarVmopevetransferenciaventas, Me.btneditar, Me.btnanulacionesdisponibles, Me.btnajustespedidoventas, Me.btnhistoricoretransferenciaventas, Me.btnventaoirrecuperablestransferenciaventas, Me.btnexportarVmopevetransferenciaventas, Me.ToolStripButton1, Me.btncerrar})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnnuevatransferenciaventas, Me.btnRecepcionarVmopevetransferenciaventas, Me.btneditar, Me.btnanulacionesdisponibles, Me.btnajustespedidoventas, Me.btnhistoricoretransferenciaventas, Me.btnexportarVmopevetransferenciaventas, Me.btnventaoirrecuperablestransferenciaventas, Me.ToolStripButton1, Me.btndistribucion, Me.btncerrar})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 157)
         Me.ToolStrip1.Margin = New System.Windows.Forms.Padding(1)
         Me.ToolStrip1.Name = "ToolStrip1"
@@ -274,170 +259,6 @@ Partial Class FrmControlTransferencias
         Me.ToolStrip1.Size = New System.Drawing.Size(1894, 38)
         Me.ToolStrip1.TabIndex = 52
         Me.ToolStrip1.Text = "ToolStrip1"
-        '
-        'btnnuevatransferenciaventas
-        '
-        Me.btnnuevatransferenciaventas.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnnuevatransferenciaventas.ForeColor = System.Drawing.Color.White
-        Me.btnnuevatransferenciaventas.Image = Global.Formularios.My.Resources.Resources.nuevo
-        Me.btnnuevatransferenciaventas.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.btnnuevatransferenciaventas.Margin = New System.Windows.Forms.Padding(5)
-        Me.btnnuevatransferenciaventas.Name = "btnnuevatransferenciaventas"
-        Me.btnnuevatransferenciaventas.Padding = New System.Windows.Forms.Padding(2)
-        Me.btnnuevatransferenciaventas.Size = New System.Drawing.Size(77, 28)
-        Me.btnnuevatransferenciaventas.Text = "Nuevo"
-        Me.btnnuevatransferenciaventas.ToolTipText = "Nuevo"
-        '
-        'btnRecepcionarVmopevetransferenciaventas
-        '
-        Me.btnRecepcionarVmopevetransferenciaventas.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CONGUIADETRASLADOToolStripMenuItem, Me.SINGUIADETRASLADOToolStripMenuItem})
-        Me.btnRecepcionarVmopevetransferenciaventas.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnRecepcionarVmopevetransferenciaventas.ForeColor = System.Drawing.Color.White
-        Me.btnRecepcionarVmopevetransferenciaventas.Image = Global.Formularios.My.Resources.Resources.entrega_rapida__1_
-        Me.btnRecepcionarVmopevetransferenciaventas.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.btnRecepcionarVmopevetransferenciaventas.Margin = New System.Windows.Forms.Padding(5)
-        Me.btnRecepcionarVmopevetransferenciaventas.Name = "btnRecepcionarVmopevetransferenciaventas"
-        Me.btnRecepcionarVmopevetransferenciaventas.Padding = New System.Windows.Forms.Padding(2)
-        Me.btnRecepcionarVmopevetransferenciaventas.Size = New System.Drawing.Size(111, 28)
-        Me.btnRecepcionarVmopevetransferenciaventas.Text = "Despacho"
-        Me.btnRecepcionarVmopevetransferenciaventas.Visible = False
-        '
-        'CONGUIADETRASLADOToolStripMenuItem
-        '
-        Me.CONGUIADETRASLADOToolStripMenuItem.Name = "CONGUIADETRASLADOToolStripMenuItem"
-        Me.CONGUIADETRASLADOToolStripMenuItem.Size = New System.Drawing.Size(242, 22)
-        Me.CONGUIADETRASLADOToolStripMenuItem.Text = "CON GUIA DE TRASLADO"
-        '
-        'SINGUIADETRASLADOToolStripMenuItem
-        '
-        Me.SINGUIADETRASLADOToolStripMenuItem.Name = "SINGUIADETRASLADOToolStripMenuItem"
-        Me.SINGUIADETRASLADOToolStripMenuItem.Size = New System.Drawing.Size(242, 22)
-        Me.SINGUIADETRASLADOToolStripMenuItem.Text = "SIN GUIA DE TRASLADO"
-        '
-        'btneditar
-        '
-        Me.btneditar.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btneditar.ForeColor = System.Drawing.Color.White
-        Me.btneditar.Image = Global.Formularios.My.Resources.Resources.editar
-        Me.btneditar.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.btneditar.Margin = New System.Windows.Forms.Padding(5)
-        Me.btneditar.Name = "btneditar"
-        Me.btneditar.Padding = New System.Windows.Forms.Padding(2)
-        Me.btneditar.Size = New System.Drawing.Size(74, 28)
-        Me.btneditar.Text = "Editar"
-        '
-        'btnhistoricoretransferenciaventas
-        '
-        Me.btnhistoricoretransferenciaventas.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnhistoricoretransferenciaventas.ForeColor = System.Drawing.Color.White
-        Me.btnhistoricoretransferenciaventas.Image = Global.Formularios.My.Resources.Resources.Historico_24_px1
-        Me.btnhistoricoretransferenciaventas.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.btnhistoricoretransferenciaventas.Margin = New System.Windows.Forms.Padding(5)
-        Me.btnhistoricoretransferenciaventas.Name = "btnhistoricoretransferenciaventas"
-        Me.btnhistoricoretransferenciaventas.Padding = New System.Windows.Forms.Padding(2)
-        Me.btnhistoricoretransferenciaventas.Size = New System.Drawing.Size(189, 28)
-        Me.btnhistoricoretransferenciaventas.Text = "Historico de Despachos"
-        '
-        'btnventaoirrecuperablestransferenciaventas
-        '
-        Me.btnventaoirrecuperablestransferenciaventas.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnventaoirrecuperablestransferenciaventas.ForeColor = System.Drawing.Color.White
-        Me.btnventaoirrecuperablestransferenciaventas.Image = Global.Formularios.My.Resources.Resources.ajuste
-        Me.btnventaoirrecuperablestransferenciaventas.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.btnventaoirrecuperablestransferenciaventas.Margin = New System.Windows.Forms.Padding(5)
-        Me.btnventaoirrecuperablestransferenciaventas.Name = "btnventaoirrecuperablestransferenciaventas"
-        Me.btnventaoirrecuperablestransferenciaventas.Padding = New System.Windows.Forms.Padding(2)
-        Me.btnventaoirrecuperablestransferenciaventas.Size = New System.Drawing.Size(338, 28)
-        Me.btnventaoirrecuperablestransferenciaventas.Text = "Ventas / Ajustes Anexadas por Transportistas"
-        '
-        'btnajustespedidoventas
-        '
-        Me.btnajustespedidoventas.BackColor = System.Drawing.Color.Transparent
-        Me.btnajustespedidoventas.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem10, Me.ToolStripMenuItem11})
-        Me.btnajustespedidoventas.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnajustespedidoventas.ForeColor = System.Drawing.Color.White
-        Me.btnajustespedidoventas.Image = Global.Formularios.My.Resources.Resources.portapapeles
-        Me.btnajustespedidoventas.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.btnajustespedidoventas.Name = "btnajustespedidoventas"
-        Me.btnajustespedidoventas.Size = New System.Drawing.Size(82, 35)
-        Me.btnajustespedidoventas.Text = "Ajuste"
-        Me.btnajustespedidoventas.ToolTipText = "Convertir Trabajador"
-        '
-        'ToolStripMenuItem10
-        '
-        Me.ToolStripMenuItem10.Name = "ToolStripMenuItem10"
-        Me.ToolStripMenuItem10.Size = New System.Drawing.Size(179, 22)
-        Me.ToolStripMenuItem10.Text = "Ajuste Positivo"
-        '
-        'ToolStripMenuItem11
-        '
-        Me.ToolStripMenuItem11.Name = "ToolStripMenuItem11"
-        Me.ToolStripMenuItem11.Size = New System.Drawing.Size(179, 22)
-        Me.ToolStripMenuItem11.Text = "Ajuste Negativo"
-        '
-        'btnexportarVmopevetransferenciaventas
-        '
-        Me.btnexportarVmopevetransferenciaventas.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnexportarVmopevetransferenciaventas.ForeColor = System.Drawing.Color.White
-        Me.btnexportarVmopevetransferenciaventas.Image = Global.Formularios.My.Resources.Resources.exportar2
-        Me.btnexportarVmopevetransferenciaventas.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.btnexportarVmopevetransferenciaventas.Margin = New System.Windows.Forms.Padding(5)
-        Me.btnexportarVmopevetransferenciaventas.Name = "btnexportarVmopevetransferenciaventas"
-        Me.btnexportarVmopevetransferenciaventas.Padding = New System.Windows.Forms.Padding(2)
-        Me.btnexportarVmopevetransferenciaventas.Size = New System.Drawing.Size(92, 28)
-        Me.btnexportarVmopevetransferenciaventas.Text = "Exportar"
-        Me.btnexportarVmopevetransferenciaventas.ToolTipText = "Exportar"
-        '
-        'ToolStripButton1
-        '
-        Me.ToolStripButton1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.ToolStripButton1.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.ToolStripButton1.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ToolStripButton1.ForeColor = System.Drawing.Color.White
-        Me.ToolStripButton1.Image = Global.Formularios.My.Resources.Resources.filter__2_1
-        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton1.Margin = New System.Windows.Forms.Padding(5)
-        Me.ToolStripButton1.Name = "ToolStripButton1"
-        Me.ToolStripButton1.Padding = New System.Windows.Forms.Padding(2)
-        Me.ToolStripButton1.Size = New System.Drawing.Size(77, 28)
-        Me.ToolStripButton1.Text = "Filtros"
-        '
-        'btncerrar
-        '
-        Me.btncerrar.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btncerrar.ForeColor = System.Drawing.Color.White
-        Me.btncerrar.Image = Global.Formularios.My.Resources.Resources.salir
-        Me.btncerrar.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.btncerrar.Margin = New System.Windows.Forms.Padding(5)
-        Me.btncerrar.Name = "btncerrar"
-        Me.btncerrar.Padding = New System.Windows.Forms.Padding(2)
-        Me.btncerrar.Size = New System.Drawing.Size(66, 28)
-        Me.btncerrar.Text = "Salir"
-        '
-        'btnanulacionesdisponibles
-        '
-        Me.btnanulacionesdisponibles.BackColor = System.Drawing.Color.Transparent
-        Me.btnanulacionesdisponibles.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AnularAjusteToolStripMenuItem, Me.ToolStripMenuItem5})
-        Me.btnanulacionesdisponibles.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnanulacionesdisponibles.ForeColor = System.Drawing.Color.White
-        Me.btnanulacionesdisponibles.Image = Global.Formularios.My.Resources.Resources.cancelar
-        Me.btnanulacionesdisponibles.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.btnanulacionesdisponibles.Name = "btnanulacionesdisponibles"
-        Me.btnanulacionesdisponibles.Size = New System.Drawing.Size(83, 35)
-        Me.btnanulacionesdisponibles.Text = "Anular"
-        Me.btnanulacionesdisponibles.ToolTipText = "Convertir Trabajador"
-        '
-        'AnularAjusteToolStripMenuItem
-        '
-        Me.AnularAjusteToolStripMenuItem.Name = "AnularAjusteToolStripMenuItem"
-        Me.AnularAjusteToolStripMenuItem.Size = New System.Drawing.Size(227, 22)
-        Me.AnularAjusteToolStripMenuItem.Text = "Anular Ajuste"
-        '
-        'ToolStripMenuItem5
-        '
-        Me.ToolStripMenuItem5.Name = "ToolStripMenuItem5"
-        Me.ToolStripMenuItem5.Size = New System.Drawing.Size(227, 22)
-        Me.ToolStripMenuItem5.Text = "Anular Pedido de venta"
         '
         'dtgListado
         '
@@ -534,6 +355,199 @@ Partial Class FrmControlTransferencias
         Me.Ptbx_Cargando.TabStop = False
         Me.Ptbx_Cargando.Visible = False
         '
+        'btnConsultar
+        '
+        Me.btnConsultar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnConsultar.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnConsultar.Image = Global.Formularios.My.Resources.Resources.buscando__1_
+        Me.btnConsultar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnConsultar.Location = New System.Drawing.Point(632, 45)
+        Me.btnConsultar.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnConsultar.Name = "btnConsultar"
+        Me.btnConsultar.Padding = New System.Windows.Forms.Padding(3, 0, 3, 0)
+        Me.btnConsultar.Size = New System.Drawing.Size(101, 34)
+        Me.btnConsultar.TabIndex = 162
+        Me.btnConsultar.Text = "Buscar"
+        Me.btnConsultar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnConsultar.UseVisualStyleBackColor = True
+        '
+        'btnnuevatransferenciaventas
+        '
+        Me.btnnuevatransferenciaventas.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnnuevatransferenciaventas.ForeColor = System.Drawing.Color.White
+        Me.btnnuevatransferenciaventas.Image = Global.Formularios.My.Resources.Resources.nuevo
+        Me.btnnuevatransferenciaventas.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btnnuevatransferenciaventas.Margin = New System.Windows.Forms.Padding(5)
+        Me.btnnuevatransferenciaventas.Name = "btnnuevatransferenciaventas"
+        Me.btnnuevatransferenciaventas.Padding = New System.Windows.Forms.Padding(2)
+        Me.btnnuevatransferenciaventas.Size = New System.Drawing.Size(77, 28)
+        Me.btnnuevatransferenciaventas.Text = "Nuevo"
+        Me.btnnuevatransferenciaventas.ToolTipText = "Nuevo"
+        '
+        'btnRecepcionarVmopevetransferenciaventas
+        '
+        Me.btnRecepcionarVmopevetransferenciaventas.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CONGUIADETRASLADOToolStripMenuItem, Me.SINGUIADETRASLADOToolStripMenuItem})
+        Me.btnRecepcionarVmopevetransferenciaventas.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnRecepcionarVmopevetransferenciaventas.ForeColor = System.Drawing.Color.White
+        Me.btnRecepcionarVmopevetransferenciaventas.Image = Global.Formularios.My.Resources.Resources.entrega_rapida__1_
+        Me.btnRecepcionarVmopevetransferenciaventas.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btnRecepcionarVmopevetransferenciaventas.Margin = New System.Windows.Forms.Padding(5)
+        Me.btnRecepcionarVmopevetransferenciaventas.Name = "btnRecepcionarVmopevetransferenciaventas"
+        Me.btnRecepcionarVmopevetransferenciaventas.Padding = New System.Windows.Forms.Padding(2)
+        Me.btnRecepcionarVmopevetransferenciaventas.Size = New System.Drawing.Size(111, 28)
+        Me.btnRecepcionarVmopevetransferenciaventas.Text = "Despacho"
+        Me.btnRecepcionarVmopevetransferenciaventas.Visible = False
+        '
+        'CONGUIADETRASLADOToolStripMenuItem
+        '
+        Me.CONGUIADETRASLADOToolStripMenuItem.Name = "CONGUIADETRASLADOToolStripMenuItem"
+        Me.CONGUIADETRASLADOToolStripMenuItem.Size = New System.Drawing.Size(242, 22)
+        Me.CONGUIADETRASLADOToolStripMenuItem.Text = "CON GUIA DE TRASLADO"
+        '
+        'SINGUIADETRASLADOToolStripMenuItem
+        '
+        Me.SINGUIADETRASLADOToolStripMenuItem.Name = "SINGUIADETRASLADOToolStripMenuItem"
+        Me.SINGUIADETRASLADOToolStripMenuItem.Size = New System.Drawing.Size(242, 22)
+        Me.SINGUIADETRASLADOToolStripMenuItem.Text = "SIN GUIA DE TRASLADO"
+        '
+        'btneditar
+        '
+        Me.btneditar.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btneditar.ForeColor = System.Drawing.Color.White
+        Me.btneditar.Image = Global.Formularios.My.Resources.Resources.editar
+        Me.btneditar.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btneditar.Margin = New System.Windows.Forms.Padding(5)
+        Me.btneditar.Name = "btneditar"
+        Me.btneditar.Padding = New System.Windows.Forms.Padding(2)
+        Me.btneditar.Size = New System.Drawing.Size(74, 28)
+        Me.btneditar.Text = "Editar"
+        '
+        'btnanulacionesdisponibles
+        '
+        Me.btnanulacionesdisponibles.BackColor = System.Drawing.Color.Transparent
+        Me.btnanulacionesdisponibles.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AnularAjusteToolStripMenuItem, Me.ToolStripMenuItem5})
+        Me.btnanulacionesdisponibles.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnanulacionesdisponibles.ForeColor = System.Drawing.Color.White
+        Me.btnanulacionesdisponibles.Image = Global.Formularios.My.Resources.Resources.cancelar
+        Me.btnanulacionesdisponibles.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btnanulacionesdisponibles.Name = "btnanulacionesdisponibles"
+        Me.btnanulacionesdisponibles.Size = New System.Drawing.Size(83, 35)
+        Me.btnanulacionesdisponibles.Text = "Anular"
+        Me.btnanulacionesdisponibles.ToolTipText = "Convertir Trabajador"
+        '
+        'AnularAjusteToolStripMenuItem
+        '
+        Me.AnularAjusteToolStripMenuItem.Name = "AnularAjusteToolStripMenuItem"
+        Me.AnularAjusteToolStripMenuItem.Size = New System.Drawing.Size(227, 22)
+        Me.AnularAjusteToolStripMenuItem.Text = "Anular Ajuste"
+        '
+        'ToolStripMenuItem5
+        '
+        Me.ToolStripMenuItem5.Name = "ToolStripMenuItem5"
+        Me.ToolStripMenuItem5.Size = New System.Drawing.Size(227, 22)
+        Me.ToolStripMenuItem5.Text = "Anular Pedido de venta"
+        '
+        'btnajustespedidoventas
+        '
+        Me.btnajustespedidoventas.BackColor = System.Drawing.Color.Transparent
+        Me.btnajustespedidoventas.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem10, Me.ToolStripMenuItem11})
+        Me.btnajustespedidoventas.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnajustespedidoventas.ForeColor = System.Drawing.Color.White
+        Me.btnajustespedidoventas.Image = Global.Formularios.My.Resources.Resources.portapapeles
+        Me.btnajustespedidoventas.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btnajustespedidoventas.Name = "btnajustespedidoventas"
+        Me.btnajustespedidoventas.Size = New System.Drawing.Size(82, 35)
+        Me.btnajustespedidoventas.Text = "Ajuste"
+        Me.btnajustespedidoventas.ToolTipText = "Convertir Trabajador"
+        '
+        'ToolStripMenuItem10
+        '
+        Me.ToolStripMenuItem10.Name = "ToolStripMenuItem10"
+        Me.ToolStripMenuItem10.Size = New System.Drawing.Size(179, 22)
+        Me.ToolStripMenuItem10.Text = "Ajuste Positivo"
+        '
+        'ToolStripMenuItem11
+        '
+        Me.ToolStripMenuItem11.Name = "ToolStripMenuItem11"
+        Me.ToolStripMenuItem11.Size = New System.Drawing.Size(179, 22)
+        Me.ToolStripMenuItem11.Text = "Ajuste Negativo"
+        '
+        'btnhistoricoretransferenciaventas
+        '
+        Me.btnhistoricoretransferenciaventas.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnhistoricoretransferenciaventas.ForeColor = System.Drawing.Color.White
+        Me.btnhistoricoretransferenciaventas.Image = Global.Formularios.My.Resources.Resources.Historico_24_px1
+        Me.btnhistoricoretransferenciaventas.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btnhistoricoretransferenciaventas.Margin = New System.Windows.Forms.Padding(5)
+        Me.btnhistoricoretransferenciaventas.Name = "btnhistoricoretransferenciaventas"
+        Me.btnhistoricoretransferenciaventas.Padding = New System.Windows.Forms.Padding(2)
+        Me.btnhistoricoretransferenciaventas.Size = New System.Drawing.Size(189, 28)
+        Me.btnhistoricoretransferenciaventas.Text = "Historico de Despachos"
+        '
+        'btnventaoirrecuperablestransferenciaventas
+        '
+        Me.btnventaoirrecuperablestransferenciaventas.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnventaoirrecuperablestransferenciaventas.ForeColor = System.Drawing.Color.White
+        Me.btnventaoirrecuperablestransferenciaventas.Image = Global.Formularios.My.Resources.Resources.ajuste
+        Me.btnventaoirrecuperablestransferenciaventas.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btnventaoirrecuperablestransferenciaventas.Margin = New System.Windows.Forms.Padding(5)
+        Me.btnventaoirrecuperablestransferenciaventas.Name = "btnventaoirrecuperablestransferenciaventas"
+        Me.btnventaoirrecuperablestransferenciaventas.Padding = New System.Windows.Forms.Padding(2)
+        Me.btnventaoirrecuperablestransferenciaventas.Size = New System.Drawing.Size(338, 28)
+        Me.btnventaoirrecuperablestransferenciaventas.Text = "Ventas / Ajustes Anexadas por Transportistas"
+        '
+        'btnexportarVmopevetransferenciaventas
+        '
+        Me.btnexportarVmopevetransferenciaventas.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnexportarVmopevetransferenciaventas.ForeColor = System.Drawing.Color.White
+        Me.btnexportarVmopevetransferenciaventas.Image = Global.Formularios.My.Resources.Resources.exportar2
+        Me.btnexportarVmopevetransferenciaventas.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btnexportarVmopevetransferenciaventas.Margin = New System.Windows.Forms.Padding(5)
+        Me.btnexportarVmopevetransferenciaventas.Name = "btnexportarVmopevetransferenciaventas"
+        Me.btnexportarVmopevetransferenciaventas.Padding = New System.Windows.Forms.Padding(2)
+        Me.btnexportarVmopevetransferenciaventas.Size = New System.Drawing.Size(92, 28)
+        Me.btnexportarVmopevetransferenciaventas.Text = "Exportar"
+        Me.btnexportarVmopevetransferenciaventas.ToolTipText = "Exportar"
+        '
+        'ToolStripButton1
+        '
+        Me.ToolStripButton1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.ToolStripButton1.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.ToolStripButton1.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ToolStripButton1.ForeColor = System.Drawing.Color.White
+        Me.ToolStripButton1.Image = Global.Formularios.My.Resources.Resources.filter__2_1
+        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton1.Margin = New System.Windows.Forms.Padding(5)
+        Me.ToolStripButton1.Name = "ToolStripButton1"
+        Me.ToolStripButton1.Padding = New System.Windows.Forms.Padding(2)
+        Me.ToolStripButton1.Size = New System.Drawing.Size(77, 28)
+        Me.ToolStripButton1.Text = "Filtros"
+        '
+        'btncerrar
+        '
+        Me.btncerrar.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btncerrar.ForeColor = System.Drawing.Color.White
+        Me.btncerrar.Image = Global.Formularios.My.Resources.Resources.salir
+        Me.btncerrar.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btncerrar.Margin = New System.Windows.Forms.Padding(5)
+        Me.btncerrar.Name = "btncerrar"
+        Me.btncerrar.Padding = New System.Windows.Forms.Padding(2)
+        Me.btncerrar.Size = New System.Drawing.Size(66, 28)
+        Me.btncerrar.Text = "Salir"
+        '
+        'btndistribucion
+        '
+        Me.btndistribucion.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btndistribucion.ForeColor = System.Drawing.Color.White
+        Me.btndistribucion.Image = Global.Formularios.My.Resources.Resources.exportar2
+        Me.btndistribucion.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btndistribucion.Margin = New System.Windows.Forms.Padding(5)
+        Me.btndistribucion.Name = "btndistribucion"
+        Me.btndistribucion.Padding = New System.Windows.Forms.Padding(2)
+        Me.btndistribucion.Size = New System.Drawing.Size(209, 28)
+        Me.btndistribucion.Text = "Historial de Distribuciones"
+        Me.btndistribucion.ToolTipText = "Exportar"
+        '
         'FrmControlTransferencias
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -595,4 +609,5 @@ Partial Class FrmControlTransferencias
     Friend WithEvents btnanulacionesdisponibles As ToolStripDropDownButton
     Friend WithEvents AnularAjusteToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ToolStripMenuItem5 As ToolStripMenuItem
+    Friend WithEvents btndistribucion As ToolStripButton
 End Class

@@ -357,6 +357,29 @@ Public Class FrmControlAtencionesPedidosRequerimientos
     End Sub
 
     Private Sub AnularVentaPorKilosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AnularVentaPorKilosToolStripMenuItem.Click
+        Try
+            If (dtgListado.Rows.Count > 0) Then
+                If (dtgListado.ActiveRow.Cells(0).Value.ToString.Length <> 0) Then
+                    If dtgListado.ActiveRow.Cells(15).Value.ToString.Equals("PENDIENTE") Or dtgListado.ActiveRow.Cells(15).Value.ToString.Equals("") Then
+                        If dtgListado.ActiveRow.Cells(8).Value.ToString.Equals("ACTIVO") Then
+                            Dim f As New FrmAnularRequerimiento
+                            f.idordencompra = dtgListado.ActiveRow.Cells(0).Value.ToString
+                            f.operacion = 1
+                            f.ShowDialog()
+                            Consultar()
+                        Else
+                            msj_advert("Requerimiento ya está anulado")
+                        End If
+                    Else
 
+                        msj_advert("No se puede anular: existen recepciones asociadas. Anúlalas primero.")
+
+                    End If
+                End If
+            End If
+        Catch ex As Exception
+            msj_advert("Seleccione un registro")
+            'clsBasicas.controlException(Name, ex)
+        End Try
     End Sub
 End Class

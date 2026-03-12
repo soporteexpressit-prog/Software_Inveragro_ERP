@@ -987,6 +987,25 @@ Public Class cdVentas
         con.Salir()
         Return dt
     End Function
+
+
+
+    Public Function Consultardistribuciones(name As String, ByRef obj As coVentas) As DataSet
+        Dim dt As New DataSet
+        Try
+            con.Abrir()
+            Dim da As New SqlDataAdapter(name, con.con)
+            da.SelectCommand.CommandType = 4
+            da.SelectCommand.Parameters.AddWithValue("@codigo", obj.Codigo)
+            da.Fill(dt)
+        Catch ex As Exception
+            Throw ex
+        End Try
+        con.Salir()
+        Return dt
+    End Function
+
+
     Public Function ConsultarPedidoVentaCerdo(name As String, ByRef obj As coVentas) As DataSet
         Dim dt As New DataSet
         Try
@@ -1449,7 +1468,7 @@ Public Class cdVentas
             With cmd.Parameters
                 .AddWithValue("@codigo", SqlDbType.Int).Value = obj.Codigo
                 .AddWithValue("@motivo", SqlDbType.VarChar).Value = obj.Motivoanulacion
-                .AddWithValue("@iduser", SqlDbType.Int).Value = obj.Codigo
+                .AddWithValue("@iduser", SqlDbType.Int).Value = obj.Iduser
                 .Add("@msj", SqlDbType.VarChar, 150).Direction = ParameterDirection.Output
                 .Add("@coderror", SqlDbType.Int).Direction = ParameterDirection.Output
             End With

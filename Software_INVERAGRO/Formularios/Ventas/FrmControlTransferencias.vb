@@ -549,4 +549,19 @@ Public Class FrmControlTransferencias
             msj_advert("Seleccione un Registro Correcto")
         End Try
     End Sub
+
+    Private Sub btndistribucion_Click(sender As Object, e As EventArgs) Handles btndistribucion.Click
+        Try
+            Dim activeRow As Infragistics.Win.UltraWinGrid.UltraGridRow = Nothing
+            If Not clsBasicas.ValidarSeleccionFila(activeRow, dtgListado) Then
+                Return
+            End If
+            Dim f As New FrmHistoricoDistribuciones
+            f.codigo = activeRow.Cells(0).Value.ToString
+            f.ShowDialog()
+            Consultar()
+        Catch ex As Exception
+            clsBasicas.controlException(Name, ex)
+        End Try
+    End Sub
 End Class
