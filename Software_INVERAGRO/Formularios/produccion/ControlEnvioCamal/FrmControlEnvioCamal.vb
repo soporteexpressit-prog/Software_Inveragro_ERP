@@ -100,10 +100,10 @@ Public Class FrmControlEnvioCamal
 
     Sub Colorear()
         If (dtgListado.Rows.Count > 0) Then
-            Dim estadoPdf As Integer = 14
-            Dim estado As Integer = 15
-            Dim estadoAtendido As Integer = 16
-            Dim estadoVivo As Integer = 18
+            Dim estadoPdf As Integer = 15
+            Dim estado As Integer = 16
+            Dim estadoAtendido As Integer = 17
+            Dim estadoVivo As Integer = 19
 
             'estadoPdf
             clsBasicas.Colorear_SegunValor(dtgListado, Color.Green, Color.White, "CON EVIDENCIA", estadoPdf)

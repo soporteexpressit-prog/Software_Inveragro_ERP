@@ -144,6 +144,21 @@ Public Class FrmReporteCumplimientoPresupuesto
         End Try
     End Sub
 
+    Private Sub dtgListado_InitializeLayout(sender As Object, e As UltraWinGrid.InitializeLayoutEventArgs) Handles dtgListado.InitializeLayout
+        Try
+            If (dtgListado.Rows.Count = 0) Then
+            Else
+                e.Layout.Bands(0).Summaries.Clear()
+                clsBasicas.Totales_Formato(dtgListado, e, 0)
+                clsBasicas.SumarTotales_Formato(dtgListado, e, 1)
+                clsBasicas.SumarTotales_Formato(dtgListado, e, 2)
+                clsBasicas.SumarTotales_Formato(dtgListado, e, 3)
+            End If
+        Catch ex As Exception
+            clsBasicas.controlException(Name, ex)
+        End Try
+    End Sub
+
     Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
         Dispose()
     End Sub

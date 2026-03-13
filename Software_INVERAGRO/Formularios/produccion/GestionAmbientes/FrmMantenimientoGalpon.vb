@@ -17,6 +17,7 @@ Public Class FrmMantenimientoGalpon
                 ConsultarxIdUbicacion()
             Else
                 _Operacion = 0
+                CbxEstado.Visible = False
             End If
         Catch ex As Exception
             clsBasicas.controlException(Name, ex)
@@ -27,6 +28,7 @@ Public Class FrmMantenimientoGalpon
         TxtDescripcion.Clear()
         TxtDescripcion.Clear()
         CkxEsEmbarcadero.Checked = False
+        CbxEstado.SelectedIndex = 0
     End Sub
 
     Sub ListarPlanteles()
@@ -73,6 +75,7 @@ Public Class FrmMantenimientoGalpon
                 CmbUbicacion.Value = CInt(dt.Rows(0)("idUbicacion").ToString())
                 CmbArea.Value = CInt(dt.Rows(0)("idArea").ToString())
                 CkxEsEmbarcadero.Checked = dt.Rows(0)("esEmbarcadero").ToString() = "SI"
+                CbxEstado.Text = dt.Rows(0)("estado").ToString()
             End If
         Catch ex As Exception
             clsBasicas.controlException(Name, ex)
@@ -101,7 +104,8 @@ Public Class FrmMantenimientoGalpon
                 .Descripcion = TxtDescripcion.Text,
                 .IdArea = CmbArea.Value,
                 .IdUbicacion = CmbUbicacion.Value,
-                .EsEmbarcadero = If(CkxEsEmbarcadero.Checked, "SI", "NO")
+                .EsEmbarcadero = If(CkxEsEmbarcadero.Checked, "SI", "NO"),
+                .Estado = CbxEstado.Text
             }
 
             _mensaje = cn.Cn_Mantenimiento(obj)

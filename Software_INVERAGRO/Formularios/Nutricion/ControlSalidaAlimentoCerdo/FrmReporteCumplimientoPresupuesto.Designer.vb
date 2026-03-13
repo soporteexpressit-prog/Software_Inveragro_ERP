@@ -99,7 +99,7 @@ Partial Class FrmReporteCumplimientoPresupuesto
         Me.Panel2.Controls.Add(Me.CmbCampanias)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel2.Location = New System.Drawing.Point(0, 38)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(624, 426)
         Me.Panel2.TabIndex = 183
@@ -213,9 +213,9 @@ Partial Class FrmReporteCumplimientoPresupuesto
         Me.GroupBox1.Controls.Add(Me.Ptbx_Cargando)
         Me.GroupBox1.Controls.Add(Me.dtgListado)
         Me.GroupBox1.Location = New System.Drawing.Point(8, 144)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2)
         Me.GroupBox1.Size = New System.Drawing.Size(608, 276)
         Me.GroupBox1.TabIndex = 238
         Me.GroupBox1.TabStop = False
@@ -404,7 +404,7 @@ Partial Class FrmReporteCumplimientoPresupuesto
         Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnExportar, Me.btnSalir})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.ToolStrip1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.ToolStrip1.Margin = New System.Windows.Forms.Padding(2)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Padding = New System.Windows.Forms.Padding(0, 0, 2, 0)
         Me.ToolStrip1.Size = New System.Drawing.Size(624, 38)
@@ -447,7 +447,7 @@ Partial Class FrmReporteCumplimientoPresupuesto
         Me.ClientSize = New System.Drawing.Size(624, 464)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.ToolStrip1)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "FrmReporteCumplimientoPresupuesto"

@@ -22,18 +22,6 @@ Partial Class FrmMantenimientoGalpon
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim Appearance13 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim Appearance14 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim Appearance15 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim Appearance16 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim Appearance17 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim Appearance18 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim Appearance19 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim Appearance20 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim Appearance21 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim Appearance22 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim Appearance23 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim Appearance24 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance1 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance2 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance3 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
@@ -46,22 +34,36 @@ Partial Class FrmMantenimientoGalpon
         Dim Appearance10 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance11 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance12 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance13 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance14 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance15 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance16 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance17 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance18 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance19 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance20 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance21 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance22 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance23 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance24 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.btnGuardarPcorr = New System.Windows.Forms.ToolStripButton()
         Me.btnCerrar = New System.Windows.Forms.ToolStripButton()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.TxtDescripcion = New System.Windows.Forms.TextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.CmbUbicacion = New Infragistics.Win.UltraWinGrid.UltraCombo()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.CkxEsEmbarcadero = New System.Windows.Forms.CheckBox()
         Me.CmbArea = New Infragistics.Win.UltraWinGrid.UltraCombo()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.CkxEsEmbarcadero = New System.Windows.Forms.CheckBox()
+        Me.CmbUbicacion = New Infragistics.Win.UltraWinGrid.UltraCombo()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.TxtDescripcion = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.CbxEstado = New System.Windows.Forms.ComboBox()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.ToolStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
-        CType(Me.CmbUbicacion, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CmbArea, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CmbUbicacion, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ToolStrip1
@@ -106,6 +108,8 @@ Partial Class FrmMantenimientoGalpon
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.CbxEstado)
+        Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.CkxEsEmbarcadero)
         Me.GroupBox1.Controls.Add(Me.CmbArea)
         Me.GroupBox1.Controls.Add(Me.Label2)
@@ -120,42 +124,93 @@ Partial Class FrmMantenimientoGalpon
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Información Galpón"
         '
-        'Label6
+        'CkxEsEmbarcadero
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(233, Byte), Integer))
-        Me.Label6.Font = New System.Drawing.Font("Verdana", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(49, Byte), Integer))
-        Me.Label6.Location = New System.Drawing.Point(28, 60)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(211, 18)
-        Me.Label6.TabIndex = 232
-        Me.Label6.Text = "REGISTRO DE GALPÓN"
+        Me.CkxEsEmbarcadero.AutoSize = True
+        Me.CkxEsEmbarcadero.Location = New System.Drawing.Point(241, 186)
+        Me.CkxEsEmbarcadero.Margin = New System.Windows.Forms.Padding(2)
+        Me.CkxEsEmbarcadero.Name = "CkxEsEmbarcadero"
+        Me.CkxEsEmbarcadero.Size = New System.Drawing.Size(104, 17)
+        Me.CkxEsEmbarcadero.TabIndex = 60
+        Me.CkxEsEmbarcadero.Text = "Es Embarcadero"
+        Me.CkxEsEmbarcadero.UseVisualStyleBackColor = True
         '
-        'TxtDescripcion
+        'CmbArea
         '
-        Me.TxtDescripcion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.TxtDescripcion.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtDescripcion.Location = New System.Drawing.Point(124, 66)
-        Me.TxtDescripcion.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.TxtDescripcion.MaxLength = 50
-        Me.TxtDescripcion.Name = "TxtDescripcion"
-        Me.TxtDescripcion.Size = New System.Drawing.Size(221, 22)
-        Me.TxtDescripcion.TabIndex = 50
+        Appearance1.BackColor = System.Drawing.SystemColors.Window
+        Appearance1.BorderColor = System.Drawing.SystemColors.InactiveCaption
+        Me.CmbArea.DisplayLayout.Appearance = Appearance1
+        Me.CmbArea.DisplayLayout.BorderStyle = Infragistics.Win.UIElementBorderStyle.Solid
+        Me.CmbArea.DisplayLayout.CaptionVisible = Infragistics.Win.DefaultableBoolean.[False]
+        Appearance2.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Appearance2.BackColor2 = System.Drawing.SystemColors.ControlDark
+        Appearance2.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical
+        Appearance2.BorderColor = System.Drawing.SystemColors.Window
+        Me.CmbArea.DisplayLayout.GroupByBox.Appearance = Appearance2
+        Appearance3.ForeColor = System.Drawing.SystemColors.GrayText
+        Me.CmbArea.DisplayLayout.GroupByBox.BandLabelAppearance = Appearance3
+        Me.CmbArea.DisplayLayout.GroupByBox.BorderStyle = Infragistics.Win.UIElementBorderStyle.Solid
+        Appearance4.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Appearance4.BackColor2 = System.Drawing.SystemColors.Control
+        Appearance4.BackGradientStyle = Infragistics.Win.GradientStyle.Horizontal
+        Appearance4.ForeColor = System.Drawing.SystemColors.GrayText
+        Me.CmbArea.DisplayLayout.GroupByBox.PromptAppearance = Appearance4
+        Me.CmbArea.DisplayLayout.MaxColScrollRegions = 1
+        Me.CmbArea.DisplayLayout.MaxRowScrollRegions = 1
+        Appearance5.BackColor = System.Drawing.SystemColors.Window
+        Appearance5.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.CmbArea.DisplayLayout.Override.ActiveCellAppearance = Appearance5
+        Appearance6.BackColor = System.Drawing.SystemColors.Highlight
+        Appearance6.ForeColor = System.Drawing.SystemColors.HighlightText
+        Me.CmbArea.DisplayLayout.Override.ActiveRowAppearance = Appearance6
+        Me.CmbArea.DisplayLayout.Override.BorderStyleCell = Infragistics.Win.UIElementBorderStyle.Dotted
+        Me.CmbArea.DisplayLayout.Override.BorderStyleRow = Infragistics.Win.UIElementBorderStyle.Dotted
+        Appearance7.BackColor = System.Drawing.SystemColors.Window
+        Me.CmbArea.DisplayLayout.Override.CardAreaAppearance = Appearance7
+        Appearance8.BorderColor = System.Drawing.Color.Silver
+        Appearance8.TextTrimming = Infragistics.Win.TextTrimming.EllipsisCharacter
+        Me.CmbArea.DisplayLayout.Override.CellAppearance = Appearance8
+        Me.CmbArea.DisplayLayout.Override.CellClickAction = Infragistics.Win.UltraWinGrid.CellClickAction.EditAndSelectText
+        Me.CmbArea.DisplayLayout.Override.CellPadding = 0
+        Appearance9.BackColor = System.Drawing.SystemColors.Control
+        Appearance9.BackColor2 = System.Drawing.SystemColors.ControlDark
+        Appearance9.BackGradientAlignment = Infragistics.Win.GradientAlignment.Element
+        Appearance9.BackGradientStyle = Infragistics.Win.GradientStyle.Horizontal
+        Appearance9.BorderColor = System.Drawing.SystemColors.Window
+        Me.CmbArea.DisplayLayout.Override.GroupByRowAppearance = Appearance9
+        Appearance10.TextHAlignAsString = "Left"
+        Me.CmbArea.DisplayLayout.Override.HeaderAppearance = Appearance10
+        Me.CmbArea.DisplayLayout.Override.HeaderClickAction = Infragistics.Win.UltraWinGrid.HeaderClickAction.SortMulti
+        Me.CmbArea.DisplayLayout.Override.HeaderStyle = Infragistics.Win.HeaderStyle.WindowsXPCommand
+        Appearance11.BackColor = System.Drawing.SystemColors.Window
+        Appearance11.BorderColor = System.Drawing.Color.Silver
+        Me.CmbArea.DisplayLayout.Override.RowAppearance = Appearance11
+        Me.CmbArea.DisplayLayout.Override.RowSelectors = Infragistics.Win.DefaultableBoolean.[False]
+        Appearance12.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.CmbArea.DisplayLayout.Override.TemplateAddRowAppearance = Appearance12
+        Me.CmbArea.DisplayLayout.ScrollBounds = Infragistics.Win.UltraWinGrid.ScrollBounds.ScrollToFill
+        Me.CmbArea.DisplayLayout.ScrollStyle = Infragistics.Win.UltraWinGrid.ScrollStyle.Immediate
+        Me.CmbArea.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy
+        Me.CmbArea.DropDownStyle = Infragistics.Win.UltraWinGrid.UltraComboStyle.DropDownList
+        Me.CmbArea.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CmbArea.Location = New System.Drawing.Point(124, 106)
+        Me.CmbArea.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.CmbArea.Name = "CmbArea"
+        Me.CmbArea.Size = New System.Drawing.Size(142, 25)
+        Me.CmbArea.TabIndex = 59
         '
-        'Label4
+        'Label2
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.BackColor = System.Drawing.Color.Transparent
-        Me.Label4.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label4.Location = New System.Drawing.Point(23, 68)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(93, 14)
-        Me.Label4.TabIndex = 49
-        Me.Label4.Text = "Descripción :"
+        Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.Label2.Location = New System.Drawing.Point(69, 111)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(47, 14)
+        Me.Label2.TabIndex = 58
+        Me.Label2.Text = "Área :"
         '
         'CmbUbicacion
         '
@@ -233,93 +288,66 @@ Partial Class FrmMantenimientoGalpon
         Me.Label1.TabIndex = 56
         Me.Label1.Text = "Plantel :"
         '
-        'CmbArea
+        'TxtDescripcion
         '
-        Appearance1.BackColor = System.Drawing.SystemColors.Window
-        Appearance1.BorderColor = System.Drawing.SystemColors.InactiveCaption
-        Me.CmbArea.DisplayLayout.Appearance = Appearance1
-        Me.CmbArea.DisplayLayout.BorderStyle = Infragistics.Win.UIElementBorderStyle.Solid
-        Me.CmbArea.DisplayLayout.CaptionVisible = Infragistics.Win.DefaultableBoolean.[False]
-        Appearance2.BackColor = System.Drawing.SystemColors.ActiveBorder
-        Appearance2.BackColor2 = System.Drawing.SystemColors.ControlDark
-        Appearance2.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical
-        Appearance2.BorderColor = System.Drawing.SystemColors.Window
-        Me.CmbArea.DisplayLayout.GroupByBox.Appearance = Appearance2
-        Appearance3.ForeColor = System.Drawing.SystemColors.GrayText
-        Me.CmbArea.DisplayLayout.GroupByBox.BandLabelAppearance = Appearance3
-        Me.CmbArea.DisplayLayout.GroupByBox.BorderStyle = Infragistics.Win.UIElementBorderStyle.Solid
-        Appearance4.BackColor = System.Drawing.SystemColors.ControlLightLight
-        Appearance4.BackColor2 = System.Drawing.SystemColors.Control
-        Appearance4.BackGradientStyle = Infragistics.Win.GradientStyle.Horizontal
-        Appearance4.ForeColor = System.Drawing.SystemColors.GrayText
-        Me.CmbArea.DisplayLayout.GroupByBox.PromptAppearance = Appearance4
-        Me.CmbArea.DisplayLayout.MaxColScrollRegions = 1
-        Me.CmbArea.DisplayLayout.MaxRowScrollRegions = 1
-        Appearance5.BackColor = System.Drawing.SystemColors.Window
-        Appearance5.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.CmbArea.DisplayLayout.Override.ActiveCellAppearance = Appearance5
-        Appearance6.BackColor = System.Drawing.SystemColors.Highlight
-        Appearance6.ForeColor = System.Drawing.SystemColors.HighlightText
-        Me.CmbArea.DisplayLayout.Override.ActiveRowAppearance = Appearance6
-        Me.CmbArea.DisplayLayout.Override.BorderStyleCell = Infragistics.Win.UIElementBorderStyle.Dotted
-        Me.CmbArea.DisplayLayout.Override.BorderStyleRow = Infragistics.Win.UIElementBorderStyle.Dotted
-        Appearance7.BackColor = System.Drawing.SystemColors.Window
-        Me.CmbArea.DisplayLayout.Override.CardAreaAppearance = Appearance7
-        Appearance8.BorderColor = System.Drawing.Color.Silver
-        Appearance8.TextTrimming = Infragistics.Win.TextTrimming.EllipsisCharacter
-        Me.CmbArea.DisplayLayout.Override.CellAppearance = Appearance8
-        Me.CmbArea.DisplayLayout.Override.CellClickAction = Infragistics.Win.UltraWinGrid.CellClickAction.EditAndSelectText
-        Me.CmbArea.DisplayLayout.Override.CellPadding = 0
-        Appearance9.BackColor = System.Drawing.SystemColors.Control
-        Appearance9.BackColor2 = System.Drawing.SystemColors.ControlDark
-        Appearance9.BackGradientAlignment = Infragistics.Win.GradientAlignment.Element
-        Appearance9.BackGradientStyle = Infragistics.Win.GradientStyle.Horizontal
-        Appearance9.BorderColor = System.Drawing.SystemColors.Window
-        Me.CmbArea.DisplayLayout.Override.GroupByRowAppearance = Appearance9
-        Appearance10.TextHAlignAsString = "Left"
-        Me.CmbArea.DisplayLayout.Override.HeaderAppearance = Appearance10
-        Me.CmbArea.DisplayLayout.Override.HeaderClickAction = Infragistics.Win.UltraWinGrid.HeaderClickAction.SortMulti
-        Me.CmbArea.DisplayLayout.Override.HeaderStyle = Infragistics.Win.HeaderStyle.WindowsXPCommand
-        Appearance11.BackColor = System.Drawing.SystemColors.Window
-        Appearance11.BorderColor = System.Drawing.Color.Silver
-        Me.CmbArea.DisplayLayout.Override.RowAppearance = Appearance11
-        Me.CmbArea.DisplayLayout.Override.RowSelectors = Infragistics.Win.DefaultableBoolean.[False]
-        Appearance12.BackColor = System.Drawing.SystemColors.ControlLight
-        Me.CmbArea.DisplayLayout.Override.TemplateAddRowAppearance = Appearance12
-        Me.CmbArea.DisplayLayout.ScrollBounds = Infragistics.Win.UltraWinGrid.ScrollBounds.ScrollToFill
-        Me.CmbArea.DisplayLayout.ScrollStyle = Infragistics.Win.UltraWinGrid.ScrollStyle.Immediate
-        Me.CmbArea.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy
-        Me.CmbArea.DropDownStyle = Infragistics.Win.UltraWinGrid.UltraComboStyle.DropDownList
-        Me.CmbArea.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CmbArea.Location = New System.Drawing.Point(124, 111)
-        Me.CmbArea.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.CmbArea.Name = "CmbArea"
-        Me.CmbArea.Size = New System.Drawing.Size(142, 25)
-        Me.CmbArea.TabIndex = 59
+        Me.TxtDescripcion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.TxtDescripcion.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtDescripcion.Location = New System.Drawing.Point(124, 66)
+        Me.TxtDescripcion.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.TxtDescripcion.MaxLength = 50
+        Me.TxtDescripcion.Name = "TxtDescripcion"
+        Me.TxtDescripcion.Size = New System.Drawing.Size(221, 22)
+        Me.TxtDescripcion.TabIndex = 50
         '
-        'Label2
+        'Label4
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(69, 116)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(47, 14)
-        Me.Label2.TabIndex = 58
-        Me.Label2.Text = "Área :"
+        Me.Label4.AutoSize = True
+        Me.Label4.BackColor = System.Drawing.Color.Transparent
+        Me.Label4.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.Label4.Location = New System.Drawing.Point(23, 68)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(93, 14)
+        Me.Label4.TabIndex = 49
+        Me.Label4.Text = "Descripción :"
         '
-        'CkxEsEmbarcadero
+        'Label6
         '
-        Me.CkxEsEmbarcadero.AutoSize = True
-        Me.CkxEsEmbarcadero.Location = New System.Drawing.Point(241, 171)
-        Me.CkxEsEmbarcadero.Margin = New System.Windows.Forms.Padding(2)
-        Me.CkxEsEmbarcadero.Name = "CkxEsEmbarcadero"
-        Me.CkxEsEmbarcadero.Size = New System.Drawing.Size(104, 17)
-        Me.CkxEsEmbarcadero.TabIndex = 60
-        Me.CkxEsEmbarcadero.Text = "Es Embarcadero"
-        Me.CkxEsEmbarcadero.UseVisualStyleBackColor = True
+        Me.Label6.AutoSize = True
+        Me.Label6.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.Label6.Font = New System.Drawing.Font("Verdana", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.Label6.Location = New System.Drawing.Point(28, 60)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(211, 18)
+        Me.Label6.TabIndex = 232
+        Me.Label6.Text = "REGISTRO DE GALPÓN"
+        '
+        'CbxEstado
+        '
+        Me.CbxEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CbxEstado.FormattingEnabled = True
+        Me.CbxEstado.Items.AddRange(New Object() {"ACTIVO", "INACTIVO"})
+        Me.CbxEstado.Location = New System.Drawing.Point(124, 149)
+        Me.CbxEstado.Margin = New System.Windows.Forms.Padding(2)
+        Me.CbxEstado.Name = "CbxEstado"
+        Me.CbxEstado.Size = New System.Drawing.Size(142, 21)
+        Me.CbxEstado.TabIndex = 61
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.Label3.Location = New System.Drawing.Point(60, 152)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(56, 14)
+        Me.Label3.TabIndex = 62
+        Me.Label3.Text = "Estado:"
         '
         'FrmMantenimientoGalpon
         '
@@ -338,8 +366,8 @@ Partial Class FrmMantenimientoGalpon
         Me.ToolStrip1.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
-        CType(Me.CmbUbicacion, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CmbArea, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CmbUbicacion, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -357,4 +385,6 @@ Partial Class FrmMantenimientoGalpon
     Friend WithEvents CmbArea As Infragistics.Win.UltraWinGrid.UltraCombo
     Friend WithEvents Label2 As Label
     Friend WithEvents CkxEsEmbarcadero As CheckBox
+    Friend WithEvents CbxEstado As ComboBox
+    Friend WithEvents Label3 As Label
 End Class

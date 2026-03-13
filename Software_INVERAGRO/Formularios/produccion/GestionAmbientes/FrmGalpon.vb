@@ -9,8 +9,10 @@ Public Class FrmGalpon
     Private Sub FrmGalpon_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
             ListarPlanteles()
+            CmbEstado.SelectedIndex = 0
             clsBasicas.Formato_Tablas_Grid(dtgListado)
             clsBasicas.Filtrar_Tabla(dtgListado, True)
+            Consultar()
         Catch ex As Exception
             clsBasicas.controlException(Name, ex)
         End Try
@@ -35,7 +37,8 @@ Public Class FrmGalpon
     Sub Consultar()
         Dim obj As New coGalpon With {
             .Descripcion = "",
-            .IdUbicacion = If(CkxTodos.Checked, Nothing, cmbUbicacion.Value)
+            .IdUbicacion = If(CkxTodos.Checked, Nothing, cmbUbicacion.Value),
+            .Estado = CmbEstado.Text
         }
         dtgListado.DataSource = cn.Cn_Consultar(obj)
         dtgListado.DisplayLayout.Bands(0).Columns("Codigo").Hidden = True
@@ -43,14 +46,11 @@ Public Class FrmGalpon
         Colorear()
     End Sub
 
-    Private Sub CkxTodos_CheckedChanged(sender As Object, e As EventArgs) Handles CkxTodos.CheckedChanged
-        Consultar()
-    End Sub
-
     Sub Colorear()
         If (dtgListado.Rows.Count > 0) Then
             Dim nombreGalpon As Integer = 1
             Dim estadoCapacidad As Integer = 4
+            Dim estado As Integer = 6
 
             'estadoCapacidad
             clsBasicas.Colorear_SegunValor(dtgListado, Color.LightGreen, Color.DarkGreen, "LIBRE", estadoCapacidad)
@@ -60,9 +60,14 @@ Public Class FrmGalpon
             'nombreGalpon
             clsBasicas.Colorear_SegunClave(dtgListado, Color.LightYellow, Color.Black, "EMBARCADERO", nombreGalpon)
 
+            'estado
+            clsBasicas.Colorear_SegunValor(dtgListado, Color.Red, Color.White, "INACTIVO", estado)
+            clsBasicas.Colorear_SegunValor(dtgListado, Color.Green, Color.White, "ACTIVO", estado)
+
             'centrar columnas
             With dtgListado.DisplayLayout.Bands(0)
                 .Columns(estadoCapacidad).CellAppearance.TextHAlign = HAlign.Center
+                .Columns(estado).CellAppearance.TextHAlign = HAlign.Center
             End With
         End If
     End Sub
@@ -129,7 +134,8 @@ Public Class FrmGalpon
                         .Descripcion = "",
                         .IdUbicacion = cmbUbicacion.Value,
                         .IdArea = cmbArea.Value,
-                        .EsEmbarcadero = "NO"
+                        .EsEmbarcadero = "NO",
+                        .Estado = "INACTIVO"
                     }
 
                     Dim MensajeBgWk As String = cn.Cn_Mantenimiento(obj)
@@ -163,7 +169,7 @@ Public Class FrmGalpon
         End Try
     End Sub
 
-    Private Sub cmbUbicacion_ValueChanged(sender As Object, e As EventArgs) Handles cmbUbicacion.ValueChanged
+    Private Sub btnBuscarJaula_Click(sender As Object, e As EventArgs) Handles btnBuscarJaula.Click
         Consultar()
     End Sub
 
