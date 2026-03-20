@@ -37,6 +37,7 @@ Public Class FrmRegistrarRegularizacionSalida
         TxtEngorde.ReadOnly = True
         DtpFechaControl.Value = Now.Date
         clsBasicas.Formato_Tablas_Grid(dtgListado)
+        clsBasicas.Filtrar_Tabla(dtgListado, True)
     End Sub
 
     Sub ListarCampañas()
