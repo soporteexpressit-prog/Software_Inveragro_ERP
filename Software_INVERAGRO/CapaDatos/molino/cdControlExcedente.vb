@@ -70,4 +70,20 @@ Public Class cdControlExcedente
             Throw ex
         End Try
     End Function
+
+    Public Function Cd_ReporteConsolidadoxInsumoCubrirMerma(name As String, obj As coControlExcedente) As DataTable
+        Dim dt As New DataTable
+        Try
+            con.Abrir()
+            Dim da As New SqlDataAdapter(name, con.con)
+            da.SelectCommand.CommandType = 4
+            da.SelectCommand.Parameters.AddWithValue("@fechaDesde", obj.FechaDesde)
+            da.SelectCommand.Parameters.AddWithValue("@fechaHasta", obj.FechaHasta)
+            da.Fill(dt)
+        Catch ex As Exception
+            Throw ex
+        End Try
+        con.Salir()
+        Return dt
+    End Function
 End Class

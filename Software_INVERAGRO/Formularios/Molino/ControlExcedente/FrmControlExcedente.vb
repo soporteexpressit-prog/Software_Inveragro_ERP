@@ -202,12 +202,6 @@ Public Class FrmControlExcedente
         End Try
     End Sub
 
-    Private Sub ToolStripButton1_Click(sender As Object, e As EventArgs) Handles ToolStripButton1.Click
-        Dim isFilterActive As Boolean = Not ToolStripButton1.Checked
-        ToolStripButton1.Checked = isFilterActive
-        clsBasicas.Filtrar_Tabla(dtgListadoInsumoExcedente, isFilterActive)
-    End Sub
-
     Private Sub BtnNuevoxRacion_Click(sender As Object, e As EventArgs) Handles BtnNuevoxRacion.Click
         Try
             Dim f As New FrmRegistrarExcedentexRacion
@@ -321,6 +315,15 @@ Public Class FrmControlExcedente
             Else
                 msj_advert(MensajesSistema.mensajesGenerales("SELECCIONE_REGISTRO"))
             End If
+        Catch ex As Exception
+            clsBasicas.controlException(Name, ex)
+        End Try
+    End Sub
+
+    Private Sub BtnReporte_Click(sender As Object, e As EventArgs) Handles BtnReporte.Click
+        Try
+            Dim frm As New FrmReportexInsumoCubrirMerma
+            frm.ShowDialog()
         Catch ex As Exception
             clsBasicas.controlException(Name, ex)
         End Try

@@ -147,21 +147,23 @@ Public Class FrmControlEnvioCamal
                 Return
             End If
 
-            Dim obj As New coControlAnimal With {
-                .ListaIdsControlFicha = CrearStringIdsControlCamal(),
-                .IdPlantel = CmbUbicacion.Value,
-                .IdUsuario = VP_IdUser
-            }
+            msj_advert(CrearStringIdsControlCamal())
 
-            Dim _mensaje As String = cn.Cn_ConfirmarVentaEnvioCamal(obj)
-            If (obj.Coderror = 0) Then
-                msj_ok(_mensaje)
-                Consultar()
-                idsControlCamal.Clear()
-                LblCriasSeleccionadas.Text = "0"
-            Else
-                msj_advert(_mensaje)
-            End If
+            'Dim obj As New coControlAnimal With {
+            '    .ListaIdsControlFicha = CrearStringIdsControlCamal(),
+            '    .IdPlantel = CmbUbicacion.Value,
+            '    .IdUsuario = VP_IdUser
+            '}
+
+            'Dim _mensaje As String = cn.Cn_ConfirmarVentaEnvioCamal(obj)
+            'If (obj.Coderror = 0) Then
+            '    msj_ok(_mensaje)
+            '    Consultar()
+            '    idsControlCamal.Clear()
+            '    LblCriasSeleccionadas.Text = "0"
+            'Else
+            '    msj_advert(_mensaje)
+            'End If
         Catch ex As Exception
             clsBasicas.controlException(Name, ex)
         End Try
