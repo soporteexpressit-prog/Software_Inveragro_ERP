@@ -55,6 +55,7 @@ Partial Class FrmHistoricoCompraPorProducto
         Me.dtgListado = New Infragistics.Win.UltraWinGrid.UltraGrid()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.btnexportar_excelproductos = New System.Windows.Forms.ToolStripButton()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
@@ -219,7 +220,7 @@ Partial Class FrmHistoricoCompraPorProducto
         Me.ToolStrip1.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.ToolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
         Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnCerrar})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnexportar_excelproductos, Me.btnCerrar})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Margin = New System.Windows.Forms.Padding(2)
         Me.ToolStrip1.Name = "ToolStrip1"
@@ -338,6 +339,20 @@ Partial Class FrmHistoricoCompraPorProducto
         Me.GroupBox3.TabIndex = 169
         Me.GroupBox3.TabStop = False
         '
+        'btnexportar_excelproductos
+        '
+        Me.btnexportar_excelproductos.AutoToolTip = False
+        Me.btnexportar_excelproductos.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnexportar_excelproductos.ForeColor = System.Drawing.Color.White
+        Me.btnexportar_excelproductos.Image = Global.Formularios.My.Resources.Resources.exportar2
+        Me.btnexportar_excelproductos.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btnexportar_excelproductos.Margin = New System.Windows.Forms.Padding(5)
+        Me.btnexportar_excelproductos.Name = "btnexportar_excelproductos"
+        Me.btnexportar_excelproductos.Padding = New System.Windows.Forms.Padding(2)
+        Me.btnexportar_excelproductos.Size = New System.Drawing.Size(92, 28)
+        Me.btnexportar_excelproductos.Text = "Exportar"
+        Me.btnexportar_excelproductos.ToolTipText = "Exportar"
+        '
         'FrmHistoricoCompraPorProducto
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -384,4 +399,5 @@ Partial Class FrmHistoricoCompraPorProducto
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents Panel1 As Panel
     Friend WithEvents GroupBox3 As GroupBox
+    Friend WithEvents btnexportar_excelproductos As ToolStripButton
 End Class

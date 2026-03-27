@@ -53,4 +53,13 @@ Public Class FrmHistoricoCompraPorProducto
             clsBasicas.controlException(Name, ex)
         End Try
     End Sub
+
+    Private Sub btnexportar_excelproductos_Click(sender As Object, e As EventArgs) Handles btnexportar_excelproductos.Click
+        'Validamos sin existen registros, si es asi exportamos a excel toda la lista de la grilla
+        Try
+            clsBasicas.ExportarExcel("Lista de Productos", dtgListado)
+        Catch ex As Exception
+            clsBasicas.controlException(Name, ex)
+        End Try
+    End Sub
 End Class
