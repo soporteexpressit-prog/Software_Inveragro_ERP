@@ -56,7 +56,7 @@ Partial Class FrmControlExcedente
         Me.BtnCancelarxInsumo = New System.Windows.Forms.ToolStripButton()
         Me.btnExportarMolinoinexce = New System.Windows.Forms.ToolStripButton()
         Me.btncerrar = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
+        Me.BtnReporte = New System.Windows.Forms.ToolStripButton()
         Me.dtgListadoInsumoExcedente = New Infragistics.Win.UltraWinGrid.UltraGrid()
         Me.Ptbx_Cargando = New System.Windows.Forms.PictureBox()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
@@ -211,7 +211,7 @@ Partial Class FrmControlExcedente
         Me.BarraOpciones.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.BarraOpciones.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
         Me.BarraOpciones.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.BarraOpciones.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnNuevoxRacion, Me.BtnCancelarxRacion, Me.BtnNuevoxInsumo, Me.BtnCancelarxInsumo, Me.btnExportarMolinoinexce, Me.btncerrar, Me.ToolStripButton1})
+        Me.BarraOpciones.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnNuevoxRacion, Me.BtnCancelarxRacion, Me.BtnNuevoxInsumo, Me.BtnCancelarxInsumo, Me.btnExportarMolinoinexce, Me.btncerrar, Me.BtnReporte})
         Me.BarraOpciones.Location = New System.Drawing.Point(0, 174)
         Me.BarraOpciones.Margin = New System.Windows.Forms.Padding(2, 1, 2, 1)
         Me.BarraOpciones.Name = "BarraOpciones"
@@ -295,19 +295,19 @@ Partial Class FrmControlExcedente
         Me.btncerrar.Size = New System.Drawing.Size(66, 28)
         Me.btncerrar.Text = "Salir"
         '
-        'ToolStripButton1
+        'BtnReporte
         '
-        Me.ToolStripButton1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.ToolStripButton1.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.ToolStripButton1.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ToolStripButton1.ForeColor = System.Drawing.Color.White
-        Me.ToolStripButton1.Image = Global.Formularios.My.Resources.Resources.filter__2_1
-        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton1.Margin = New System.Windows.Forms.Padding(5)
-        Me.ToolStripButton1.Name = "ToolStripButton1"
-        Me.ToolStripButton1.Padding = New System.Windows.Forms.Padding(2)
-        Me.ToolStripButton1.Size = New System.Drawing.Size(77, 28)
-        Me.ToolStripButton1.Text = "Filtros"
+        Me.BtnReporte.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.BtnReporte.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.BtnReporte.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnReporte.ForeColor = System.Drawing.Color.White
+        Me.BtnReporte.Image = Global.Formularios.My.Resources.Resources.registro
+        Me.BtnReporte.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BtnReporte.Margin = New System.Windows.Forms.Padding(5)
+        Me.BtnReporte.Name = "BtnReporte"
+        Me.BtnReporte.Padding = New System.Windows.Forms.Padding(2)
+        Me.BtnReporte.Size = New System.Drawing.Size(152, 28)
+        Me.BtnReporte.Text = "Reporte x Insumo"
         '
         'dtgListadoInsumoExcedente
         '
@@ -446,7 +446,7 @@ Partial Class FrmControlExcedente
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
-    Friend WithEvents ToolStripButton1 As ToolStripButton
+    Friend WithEvents BtnReporte As ToolStripButton
     Friend WithEvents GrupoFiltros As GroupBox
     Friend WithEvents BtnNuevoxRacion As ToolStripButton
     Friend WithEvents BtnCancelarxRacion As ToolStripButton

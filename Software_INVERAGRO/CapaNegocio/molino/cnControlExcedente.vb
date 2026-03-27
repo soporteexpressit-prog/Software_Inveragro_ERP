@@ -14,4 +14,8 @@ Public Class cnControlExcedente
     Public Function Cn_CancelarSalidaInsumoExcedente(obj As coControlExcedente) As String
         Return cls_at.Cd_CancelarSalidaInsumoExcedente("[w_pa_cancelar_pedido_alimento]", obj)
     End Function
+
+    Public Function Cn_ReporteConsolidadoxInsumoCubrirMerma(obj As coControlExcedente) As DataTable
+        Return cls_at.Cd_ReporteConsolidadoxInsumoCubrirMerma("[w_pa_cons_consolidado_salida_producto_cubrir_merma]", obj)
+    End Function
 End Class

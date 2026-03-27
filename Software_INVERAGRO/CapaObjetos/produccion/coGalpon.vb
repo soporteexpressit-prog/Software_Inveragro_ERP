@@ -6,6 +6,7 @@
     Private _EsEmbarcadero As String
     Private _Operacion As Integer
     Private _Coderror As Integer
+    Private _Estado As String
 
     Public Property Codigo As Integer
         Get
@@ -67,6 +68,15 @@
         End Get
         Set(value As Integer)
             _Coderror = value
+        End Set
+    End Property
+
+    Public Property Estado As String
+        Get
+            Return _Estado
+        End Get
+        Set(value As String)
+            _Estado = value
         End Set
     End Property
 End Class

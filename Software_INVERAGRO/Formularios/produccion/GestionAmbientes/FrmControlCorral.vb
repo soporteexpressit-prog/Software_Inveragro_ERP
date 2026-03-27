@@ -81,6 +81,7 @@ Public Class FrmControlCorral
             dtgListado.DisplayLayout.Bands(0).Columns("Codigo").Hidden = True
             dtgListado.DisplayLayout.Bands(0).Columns("densidadxCorral").Hidden = True
             dtgListado.DisplayLayout.Bands(0).Columns("Sala").Hidden = True
+            Colorear()
         End If
     End Sub
 

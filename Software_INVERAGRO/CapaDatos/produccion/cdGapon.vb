@@ -18,6 +18,7 @@ Public Class cdGapon
                 .AddWithValue("@idUbicacion", SqlDbType.Int).Value = obj.IdUbicacion
                 .AddWithValue("@idArea", SqlDbType.Int).Value = obj.IdArea
                 .AddWithValue("@esEmbarcadero", SqlDbType.VarChar).Value = obj.EsEmbarcadero
+                .AddWithValue("@estado", SqlDbType.VarChar).Value = obj.Estado
                 .Add("@msj", SqlDbType.VarChar, 100).Direction = 2
                 .Add("@coderror", SqlDbType.Int).Direction = 2
             End With
@@ -39,6 +40,7 @@ Public Class cdGapon
             da.SelectCommand.CommandType = 4
             da.SelectCommand.Parameters.AddWithValue("@descripcion", obj.Descripcion)
             da.SelectCommand.Parameters.AddWithValue("@idUbicacion", If(obj.IdUbicacion.HasValue, CType(obj.IdUbicacion.Value, Object), DBNull.Value))
+            da.SelectCommand.Parameters.AddWithValue("@estado", obj.Estado)
             da.Fill(dt)
         Catch ex As Exception
             Throw ex

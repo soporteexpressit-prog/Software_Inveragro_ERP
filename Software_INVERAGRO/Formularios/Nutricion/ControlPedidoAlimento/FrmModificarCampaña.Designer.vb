@@ -35,14 +35,14 @@ Partial Class FrmModificarCampaña
         Dim Appearance11 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance12 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
-        Me.btnSalir = New System.Windows.Forms.ToolStripButton()
         Me.BtnGuardar = New System.Windows.Forms.ToolStripButton()
+        Me.btnSalir = New System.Windows.Forms.ToolStripButton()
         Me.LblPlantel = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.CmbCampaña = New Infragistics.Win.UltraWinGrid.UltraCombo()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.CmbAnios = New System.Windows.Forms.ComboBox()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.ToolStrip1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.CmbCampaña, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -62,19 +62,6 @@ Partial Class FrmModificarCampaña
         Me.ToolStrip1.TabIndex = 181
         Me.ToolStrip1.Text = "ToolStrip1"
         '
-        'btnSalir
-        '
-        Me.btnSalir.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSalir.ForeColor = System.Drawing.Color.White
-        Me.btnSalir.Image = Global.Formularios.My.Resources.Resources.salir
-        Me.btnSalir.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.btnSalir.Margin = New System.Windows.Forms.Padding(5)
-        Me.btnSalir.Name = "btnSalir"
-        Me.btnSalir.Padding = New System.Windows.Forms.Padding(2)
-        Me.btnSalir.Size = New System.Drawing.Size(66, 28)
-        Me.btnSalir.Text = "Salir"
-        Me.btnSalir.ToolTipText = "Editar"
-        '
         'BtnGuardar
         '
         Me.BtnGuardar.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -87,6 +74,19 @@ Partial Class FrmModificarCampaña
         Me.BtnGuardar.Size = New System.Drawing.Size(89, 28)
         Me.BtnGuardar.Text = "Guardar"
         Me.BtnGuardar.ToolTipText = "Guardar"
+        '
+        'btnSalir
+        '
+        Me.btnSalir.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSalir.ForeColor = System.Drawing.Color.White
+        Me.btnSalir.Image = Global.Formularios.My.Resources.Resources.salir
+        Me.btnSalir.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btnSalir.Margin = New System.Windows.Forms.Padding(5)
+        Me.btnSalir.Name = "btnSalir"
+        Me.btnSalir.Padding = New System.Windows.Forms.Padding(2)
+        Me.btnSalir.Size = New System.Drawing.Size(66, 28)
+        Me.btnSalir.Text = "Salir"
+        Me.btnSalir.ToolTipText = "Editar"
         '
         'LblPlantel
         '
@@ -191,6 +191,16 @@ Partial Class FrmModificarCampaña
         Me.CmbCampaña.Size = New System.Drawing.Size(136, 22)
         Me.CmbCampaña.TabIndex = 240
         '
+        'CmbAnios
+        '
+        Me.CmbAnios.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CmbAnios.FormattingEnabled = True
+        Me.CmbAnios.Location = New System.Drawing.Point(104, 67)
+        Me.CmbAnios.Margin = New System.Windows.Forms.Padding(2)
+        Me.CmbAnios.Name = "CmbAnios"
+        Me.CmbAnios.Size = New System.Drawing.Size(136, 21)
+        Me.CmbAnios.TabIndex = 239
+        '
         'Label3
         '
         Me.Label3.AutoSize = True
@@ -203,16 +213,6 @@ Partial Class FrmModificarCampaña
         Me.Label3.Size = New System.Drawing.Size(41, 14)
         Me.Label3.TabIndex = 238
         Me.Label3.Text = "Año :"
-        '
-        'CmbAnios
-        '
-        Me.CmbAnios.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CmbAnios.FormattingEnabled = True
-        Me.CmbAnios.Location = New System.Drawing.Point(104, 67)
-        Me.CmbAnios.Margin = New System.Windows.Forms.Padding(2)
-        Me.CmbAnios.Name = "CmbAnios"
-        Me.CmbAnios.Size = New System.Drawing.Size(136, 21)
-        Me.CmbAnios.TabIndex = 239
         '
         'FrmModificarCampaña
         '

@@ -968,6 +968,12 @@
     <Compile Include="Molino\ControlExcedente\FrmRegistrarExcedentexRacion.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Molino\ControlExcedente\FrmReportexInsumoCubrirMerma.Designer.vb">
+      <DependentUpon>FrmReportexInsumoCubrirMerma.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Molino\ControlExcedente\FrmReportexInsumoCubrirMerma.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Molino\FrmReporteDespachosRecepciones.Designer.vb">
       <DependentUpon>FrmReporteDespachosRecepciones.vb</DependentUpon>
     </Compile>
@@ -4328,6 +4334,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Molino\ControlExcedente\FrmRegistrarExcedentexRacion.resx">
       <DependentUpon>FrmRegistrarExcedentexRacion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Molino\ControlExcedente\FrmReportexInsumoCubrirMerma.resx">
+      <DependentUpon>FrmReportexInsumoCubrirMerma.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Molino\FrmReporteDespachosRecepciones.resx">
       <DependentUpon>FrmReporteDespachosRecepciones.vb</DependentUpon>

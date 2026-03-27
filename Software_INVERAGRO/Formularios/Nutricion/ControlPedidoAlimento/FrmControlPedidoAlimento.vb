@@ -272,6 +272,11 @@ Public Class FrmControlPedidoAlimento
                     Dim valorPlantel As String = activeRow.Cells("Destino").Value.ToString()
                     Dim idPedido As Integer = Convert.ToInt32(activeRow.Cells(0).Value)
 
+                    If (idUbicacion = 1 OrElse idUbicacion = 2) Then
+                        msj_advert("SOLO SE PERMITE MODIFICAR CAMPAÑA A PLANTELES DE ENGORDE.")
+                        Return
+                    End If
+
                     Dim f As New FrmModificarCampaña With {
                         .idUbicacion = idUbicacion,
                         .valorPlantel = valorPlantel,

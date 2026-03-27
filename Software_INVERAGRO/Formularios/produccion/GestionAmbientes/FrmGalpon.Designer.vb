@@ -22,6 +22,7 @@ Partial Class FrmGalpon
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmGalpon))
         Dim Appearance1 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance2 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance3 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
@@ -70,11 +71,14 @@ Partial Class FrmGalpon
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.btnBuscarJaula = New System.Windows.Forms.Button()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.CmbEstado = New System.Windows.Forms.ComboBox()
+        Me.CkxTodos = New System.Windows.Forms.CheckBox()
         Me.cmbUbicacion = New Infragistics.Win.UltraWinGrid.UltraCombo()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.dtgListado = New Infragistics.Win.UltraWinGrid.UltraGrid()
         Me.cmbArea = New Infragistics.Win.UltraWinGrid.UltraCombo()
-        Me.CkxTodos = New System.Windows.Forms.CheckBox()
         Me.ToolStrip1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -191,15 +195,67 @@ Partial Class FrmGalpon
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.btnBuscarJaula)
+        Me.GroupBox1.Controls.Add(Me.Label2)
+        Me.GroupBox1.Controls.Add(Me.CmbEstado)
         Me.GroupBox1.Controls.Add(Me.CkxTodos)
         Me.GroupBox1.Controls.Add(Me.cmbUbicacion)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Location = New System.Drawing.Point(21, 60)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(494, 86)
+        Me.GroupBox1.Size = New System.Drawing.Size(750, 86)
         Me.GroupBox1.TabIndex = 167
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Filtro de Búsqueda"
+        '
+        'btnBuscarJaula
+        '
+        Me.btnBuscarJaula.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnBuscarJaula.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnBuscarJaula.Image = CType(resources.GetObject("btnBuscarJaula.Image"), System.Drawing.Image)
+        Me.btnBuscarJaula.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnBuscarJaula.Location = New System.Drawing.Point(636, 27)
+        Me.btnBuscarJaula.Name = "btnBuscarJaula"
+        Me.btnBuscarJaula.Padding = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.btnBuscarJaula.Size = New System.Drawing.Size(92, 41)
+        Me.btnBuscarJaula.TabIndex = 173
+        Me.btnBuscarJaula.Text = "Buscar"
+        Me.btnBuscarJaula.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnBuscarJaula.UseVisualStyleBackColor = True
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.Label2.Location = New System.Drawing.Point(338, 40)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(56, 14)
+        Me.Label2.TabIndex = 172
+        Me.Label2.Text = "Estado:"
+        '
+        'CmbEstado
+        '
+        Me.CmbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CmbEstado.FormattingEnabled = True
+        Me.CmbEstado.Items.AddRange(New Object() {"ACTIVO", "INACTIVO"})
+        Me.CmbEstado.Location = New System.Drawing.Point(402, 37)
+        Me.CmbEstado.Name = "CmbEstado"
+        Me.CmbEstado.Size = New System.Drawing.Size(95, 21)
+        Me.CmbEstado.TabIndex = 171
+        '
+        'CkxTodos
+        '
+        Me.CkxTodos.AutoSize = True
+        Me.CkxTodos.Location = New System.Drawing.Point(523, 39)
+        Me.CkxTodos.Margin = New System.Windows.Forms.Padding(2)
+        Me.CkxTodos.Name = "CkxTodos"
+        Me.CkxTodos.Size = New System.Drawing.Size(56, 17)
+        Me.CkxTodos.TabIndex = 61
+        Me.CkxTodos.Text = "Todos"
+        Me.CkxTodos.UseVisualStyleBackColor = True
         '
         'cmbUbicacion
         '
@@ -259,7 +315,7 @@ Partial Class FrmGalpon
         Me.cmbUbicacion.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy
         Me.cmbUbicacion.DropDownStyle = Infragistics.Win.UltraWinGrid.UltraComboStyle.DropDownList
         Me.cmbUbicacion.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmbUbicacion.Location = New System.Drawing.Point(101, 34)
+        Me.cmbUbicacion.Location = New System.Drawing.Point(101, 35)
         Me.cmbUbicacion.Name = "cmbUbicacion"
         Me.cmbUbicacion.Size = New System.Drawing.Size(221, 25)
         Me.cmbUbicacion.TabIndex = 55
@@ -270,7 +326,7 @@ Partial Class FrmGalpon
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(35, 38)
+        Me.Label1.Location = New System.Drawing.Point(35, 40)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(62, 14)
@@ -417,17 +473,6 @@ Partial Class FrmGalpon
         Me.cmbArea.Size = New System.Drawing.Size(221, 25)
         Me.cmbArea.TabIndex = 57
         '
-        'CkxTodos
-        '
-        Me.CkxTodos.AutoSize = True
-        Me.CkxTodos.Location = New System.Drawing.Point(420, 38)
-        Me.CkxTodos.Margin = New System.Windows.Forms.Padding(2)
-        Me.CkxTodos.Name = "CkxTodos"
-        Me.CkxTodos.Size = New System.Drawing.Size(56, 17)
-        Me.CkxTodos.TabIndex = 61
-        Me.CkxTodos.Text = "Todos"
-        Me.CkxTodos.UseVisualStyleBackColor = True
-        '
         'FrmGalpon
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -466,4 +511,7 @@ Partial Class FrmGalpon
     Friend WithEvents BtnEliminar As ToolStripButton
     Friend WithEvents BtnExportarBtnMandarCamalprocontrolverracos As ToolStripButton
     Friend WithEvents CkxTodos As CheckBox
+    Friend WithEvents Label2 As Label
+    Friend WithEvents CmbEstado As ComboBox
+    Friend WithEvents btnBuscarJaula As Button
 End Class
