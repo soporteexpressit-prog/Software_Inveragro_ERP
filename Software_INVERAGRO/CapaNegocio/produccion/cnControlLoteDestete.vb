@@ -417,4 +417,8 @@ Public Class cnControlLoteDestete
     Public Function Cn_CierreLlenadoCampana(ByRef obj As coControlLoteDestete) As String
         Return cls_at.Cd_CierreLlenadoCampana("[w_pa_cerrar_llenado_x_campaña]", obj)
     End Function
+
+    Public Function Cn_ReporteConsumoAlimentoMaternidad(ByRef obj As coControlLoteDestete) As DataTable
+        Return cls_at.Cd_ConsultarLoteAnio("[w_pa_consumo_alimento_lote_maternidad]", obj)
+    End Function
 End Class

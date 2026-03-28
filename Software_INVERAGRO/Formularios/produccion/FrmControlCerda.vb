@@ -500,6 +500,17 @@ Public Class FrmControlCerda
         End Try
     End Sub
 
+    Private Sub BtnReporteConsumoMaternidad_Click(sender As Object, e As EventArgs) Handles BtnReporteConsumoMaternidad.Click
+        Try
+            Dim frm As New FrmReporteConsumoMaternidad With {
+                .idUbicacion = CmbUbicacion.Value
+            }
+            frm.ShowDialog()
+        Catch ex As Exception
+            clsBasicas.controlException(Name, ex)
+        End Try
+    End Sub
+
     Private Sub BtnCerrar_Click(sender As Object, e As EventArgs) Handles BtnCerrar.Click
         Dispose()
     End Sub

@@ -81,11 +81,12 @@ Partial Class FrmControlCerda
         Me.btnreporteRrhhctrlcapaci = New System.Windows.Forms.ToolStripDropDownButton()
         Me.BtnReportePartos = New System.Windows.Forms.ToolStripMenuItem()
         Me.MortalidadMaternidadToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HistoricoDePartosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HistoricoDeDesteteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BtnReporteConsumoMaternidad = New System.Windows.Forms.ToolStripMenuItem()
         Me.dtgListado = New Infragistics.Win.UltraWinGrid.UltraGrid()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         Me.Ptbx_Cargando = New System.Windows.Forms.PictureBox()
-        Me.HistoricoDePartosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel2.SuspendLayout()
         Me.GrupoFiltros.SuspendLayout()
         CType(Me.CmbUbicacion, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -507,7 +508,7 @@ Partial Class FrmControlCerda
         'btnreporteRrhhctrlcapaci
         '
         Me.btnreporteRrhhctrlcapaci.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.btnreporteRrhhctrlcapaci.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnReportePartos, Me.MortalidadMaternidadToolStripMenuItem, Me.HistoricoDePartosToolStripMenuItem, Me.HistoricoDeDesteteToolStripMenuItem})
+        Me.btnreporteRrhhctrlcapaci.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnReportePartos, Me.MortalidadMaternidadToolStripMenuItem, Me.HistoricoDePartosToolStripMenuItem, Me.HistoricoDeDesteteToolStripMenuItem, Me.BtnReporteConsumoMaternidad})
         Me.btnreporteRrhhctrlcapaci.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnreporteRrhhctrlcapaci.ForeColor = System.Drawing.Color.White
         Me.btnreporteRrhhctrlcapaci.Image = Global.Formularios.My.Resources.Resources.reporte
@@ -520,20 +521,32 @@ Partial Class FrmControlCerda
         'BtnReportePartos
         '
         Me.BtnReportePartos.Name = "BtnReportePartos"
-        Me.BtnReportePartos.Size = New System.Drawing.Size(230, 22)
+        Me.BtnReportePartos.Size = New System.Drawing.Size(232, 22)
         Me.BtnReportePartos.Text = "Partos Detallado"
         '
         'MortalidadMaternidadToolStripMenuItem
         '
         Me.MortalidadMaternidadToolStripMenuItem.Name = "MortalidadMaternidadToolStripMenuItem"
-        Me.MortalidadMaternidadToolStripMenuItem.Size = New System.Drawing.Size(230, 22)
+        Me.MortalidadMaternidadToolStripMenuItem.Size = New System.Drawing.Size(232, 22)
         Me.MortalidadMaternidadToolStripMenuItem.Text = "Historico para Descarte"
+        '
+        'HistoricoDePartosToolStripMenuItem
+        '
+        Me.HistoricoDePartosToolStripMenuItem.Name = "HistoricoDePartosToolStripMenuItem"
+        Me.HistoricoDePartosToolStripMenuItem.Size = New System.Drawing.Size(232, 22)
+        Me.HistoricoDePartosToolStripMenuItem.Text = "Historico de Partos"
         '
         'HistoricoDeDesteteToolStripMenuItem
         '
         Me.HistoricoDeDesteteToolStripMenuItem.Name = "HistoricoDeDesteteToolStripMenuItem"
-        Me.HistoricoDeDesteteToolStripMenuItem.Size = New System.Drawing.Size(230, 22)
+        Me.HistoricoDeDesteteToolStripMenuItem.Size = New System.Drawing.Size(232, 22)
         Me.HistoricoDeDesteteToolStripMenuItem.Text = "Historico de Destete"
+        '
+        'BtnReporteConsumoMaternidad
+        '
+        Me.BtnReporteConsumoMaternidad.Name = "BtnReporteConsumoMaternidad"
+        Me.BtnReporteConsumoMaternidad.Size = New System.Drawing.Size(232, 22)
+        Me.BtnReporteConsumoMaternidad.Text = "Consumo de Maternidad"
         '
         'dtgListado
         '
@@ -628,12 +641,6 @@ Partial Class FrmControlCerda
         Me.Ptbx_Cargando.TabStop = False
         Me.Ptbx_Cargando.Visible = False
         '
-        'HistoricoDePartosToolStripMenuItem
-        '
-        Me.HistoricoDePartosToolStripMenuItem.Name = "HistoricoDePartosToolStripMenuItem"
-        Me.HistoricoDePartosToolStripMenuItem.Size = New System.Drawing.Size(230, 22)
-        Me.HistoricoDePartosToolStripMenuItem.Text = "Historico de Partos"
-        '
         'FrmControlCerda
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -695,4 +702,5 @@ Partial Class FrmControlCerda
     Friend WithEvents BtnEliminar As ToolStripButton
     Friend WithEvents HistoricoDeDesteteToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents HistoricoDePartosToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents BtnReporteConsumoMaternidad As ToolStripMenuItem
 End Class
