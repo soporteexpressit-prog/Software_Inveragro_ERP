@@ -22,8 +22,8 @@ Partial Class FrmControlPedidosVentasCerdos
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim Appearance18 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim Appearance19 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance1 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance2 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmControlPedidosVentasCerdos))
         Dim Appearance3 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance4 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
@@ -70,6 +70,7 @@ Partial Class FrmControlPedidosVentasCerdos
         Me.ActualizarVendedorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EditarTipoDePrecioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EditarFechaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EditarVentaIrrecuperableToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Visualizar = New System.Windows.Forms.ToolStripDropDownButton()
         Me.ToolStripMenuItem9 = New System.Windows.Forms.ToolStripMenuItem()
         Me.btnventaoirrecuperablespedidocerdoventas = New System.Windows.Forms.ToolStripMenuItem()
@@ -99,7 +100,7 @@ Partial Class FrmControlPedidosVentasCerdos
         Me.dtgListado = New Infragistics.Win.UltraWinGrid.UltraGrid()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         Me.Ptbx_Cargando = New System.Windows.Forms.PictureBox()
-        Me.EditarVentaIrrecuperableToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ReporteVentasDetalladoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.UltraGroupBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -201,16 +202,16 @@ Partial Class FrmControlPedidosVentasCerdos
         '
         'UltraGroupBox2
         '
-        Appearance18.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(233, Byte), Integer))
-        Appearance18.BackColor2 = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(233, Byte), Integer))
-        Me.UltraGroupBox2.Appearance = Appearance18
+        Appearance1.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(233, Byte), Integer))
+        Appearance1.BackColor2 = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.UltraGroupBox2.Appearance = Appearance1
         Me.UltraGroupBox2.CaptionAlignment = Infragistics.Win.Misc.GroupBoxCaptionAlignment.Near
         Me.UltraGroupBox2.Controls.Add(Me.Label2)
         Me.UltraGroupBox2.Controls.Add(Me.GrupoMasOpcionesBusqueda)
         Me.UltraGroupBox2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.UltraGroupBox2.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Appearance19.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(233, Byte), Integer))
-        Me.UltraGroupBox2.HeaderAppearance = Appearance19
+        Appearance2.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.UltraGroupBox2.HeaderAppearance = Appearance2
         Me.UltraGroupBox2.HeaderBorderStyle = Infragistics.Win.UIElementBorderStyle.Rounded4Thick
         Me.UltraGroupBox2.HeaderPosition = Infragistics.Win.Misc.GroupBoxHeaderPosition.TopOnBorder
         Me.UltraGroupBox2.Location = New System.Drawing.Point(0, 0)
@@ -444,10 +445,16 @@ Partial Class FrmControlPedidosVentasCerdos
         Me.EditarFechaToolStripMenuItem.Size = New System.Drawing.Size(262, 22)
         Me.EditarFechaToolStripMenuItem.Text = "Editar Fecha"
         '
+        'EditarVentaIrrecuperableToolStripMenuItem
+        '
+        Me.EditarVentaIrrecuperableToolStripMenuItem.Name = "EditarVentaIrrecuperableToolStripMenuItem"
+        Me.EditarVentaIrrecuperableToolStripMenuItem.Size = New System.Drawing.Size(262, 22)
+        Me.EditarVentaIrrecuperableToolStripMenuItem.Text = "Editar Venta / Irrecuperable"
+        '
         'Visualizar
         '
         Me.Visualizar.BackColor = System.Drawing.Color.Transparent
-        Me.Visualizar.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem9, Me.btnventaoirrecuperablespedidocerdoventas, Me.PesosGanchosToolStripMenuItem, Me.VentasCobrosPorClienteToolStripMenuItem})
+        Me.Visualizar.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem9, Me.btnventaoirrecuperablespedidocerdoventas, Me.PesosGanchosToolStripMenuItem, Me.VentasCobrosPorClienteToolStripMenuItem, Me.ReporteVentasDetalladoToolStripMenuItem})
         Me.Visualizar.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Visualizar.ForeColor = System.Drawing.Color.White
         Me.Visualizar.Image = Global.Formularios.My.Resources.Resources.ver24px
@@ -562,6 +569,7 @@ Partial Class FrmControlPedidosVentasCerdos
         Me.VentaDeCerdosToolStripMenuItem.Name = "VentaDeCerdosToolStripMenuItem"
         Me.VentaDeCerdosToolStripMenuItem.Size = New System.Drawing.Size(321, 22)
         Me.VentaDeCerdosToolStripMenuItem.Text = "Reporte Ventas General"
+        Me.VentaDeCerdosToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'ConvertirAConductorToolStripMenuItem
         '
@@ -732,11 +740,11 @@ Partial Class FrmControlPedidosVentasCerdos
         Me.Ptbx_Cargando.TabStop = False
         Me.Ptbx_Cargando.Visible = False
         '
-        'EditarVentaIrrecuperableToolStripMenuItem
+        'ReporteVentasDetalladoToolStripMenuItem
         '
-        Me.EditarVentaIrrecuperableToolStripMenuItem.Name = "EditarVentaIrrecuperableToolStripMenuItem"
-        Me.EditarVentaIrrecuperableToolStripMenuItem.Size = New System.Drawing.Size(262, 22)
-        Me.EditarVentaIrrecuperableToolStripMenuItem.Text = "Editar Venta / Irrecuperable"
+        Me.ReporteVentasDetalladoToolStripMenuItem.Name = "ReporteVentasDetalladoToolStripMenuItem"
+        Me.ReporteVentasDetalladoToolStripMenuItem.Size = New System.Drawing.Size(301, 22)
+        Me.ReporteVentasDetalladoToolStripMenuItem.Text = "Reporte Ventas Detallado"
         '
         'FrmControlPedidosVentasCerdos
         '
@@ -827,4 +835,5 @@ Partial Class FrmControlPedidosVentasCerdos
     Friend WithEvents AnularVentaPorKilosToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents EditarFechaToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents EditarVentaIrrecuperableToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ReporteVentasDetalladoToolStripMenuItem As ToolStripMenuItem
 End Class

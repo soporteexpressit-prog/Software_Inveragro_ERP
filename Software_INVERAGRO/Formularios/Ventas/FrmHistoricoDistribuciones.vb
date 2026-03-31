@@ -1,5 +1,6 @@
 ﻿Imports CapaNegocio
 Imports CapaObjetos
+Imports Infragistics.Win.UltraWinGrid
 Imports iTextSharp.text.pdf.codec.wmf
 
 Public Class FrmHistoricoDistribuciones
@@ -50,5 +51,17 @@ Public Class FrmHistoricoDistribuciones
 
     Private Sub btnexportarVmopevetransferenciaventas_Click(sender As Object, e As EventArgs) Handles btnexportarVmopevetransferenciaventas.Click
         clsBasicas.ExportarExcel("Lista de Pedidos de Ventas", dtgListado)
+    End Sub
+
+    Private Sub dtgListado_InitializeLayout(sender As Object, e As Infragistics.Win.UltraWinGrid.InitializeLayoutEventArgs) Handles dtgListado.InitializeLayout
+        Try
+            clsBasicas.Totales_Formato(dtgListado, e, 1)
+            clsBasicas.SumarTotales_Formato(dtgListado, e, 3)
+            e.Layout.AutoFitStyle = Infragistics.Win.UltraWinGrid.AutoFitStyle.ResizeAllColumns
+            e.Layout.Bands(0).PerformAutoResizeColumns(False, PerformAutoSizeType.AllRowsInBand)
+
+        Catch ex As Exception
+            clsBasicas.controlException(Name, ex)
+        End Try
     End Sub
 End Class

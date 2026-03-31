@@ -944,4 +944,15 @@ Public Class FrmControlPedidosVentasCerdos
             clsBasicas.controlException(Name, ex)
         End Try
     End Sub
+
+    Private Sub ReporteVentasDetalladoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReporteVentasDetalladoToolStripMenuItem.Click
+        Try
+            Dim frm As New FrmReporteVentaCerdos
+            frm.operacion = 0
+            frm.ShowDialog()
+        Catch ex As Exception
+            clsBasicas.controlException(Name, ex)
+        End Try
+        Consultar()
+    End Sub
 End Class
