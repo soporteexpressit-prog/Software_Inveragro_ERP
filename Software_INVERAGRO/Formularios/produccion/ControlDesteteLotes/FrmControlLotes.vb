@@ -738,11 +738,6 @@ Public Class FrmControlLotes
                     Dim numPuras As Integer = CInt(activeRow.Cells("Total Puras").Value)
                     Dim numCamborough As Integer = CInt(activeRow.Cells("Total Camborough").Value)
 
-                    If numPuras = 0 AndAlso numCamborough = 0 Then
-                        msj_advert("No hay chanchillas para registrar pesos en este lote")
-                        Return
-                    End If
-
                     Dim frm As New FrmRegistrarPesosChanchillas With {
                         .idLote = CInt(activeRow.Cells("idLote").Value),
                         .valorLote = activeRow.Cells("Lote").Value.ToString(),

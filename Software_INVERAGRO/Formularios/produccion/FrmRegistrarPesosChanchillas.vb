@@ -23,6 +23,13 @@ Public Class FrmRegistrarPesosChanchillas
             clsBasicas.Formato_Tablas_Grid(DtgListadoPesosDestete)
             clsBasicas.Formato_Tablas_Grid(DtgListadoPesosBajada)
             ConsultarxIdLote()
+
+            If numChanchillas = 0 Then
+                btnAgregar.Enabled = False
+                NumAnimales.Enabled = False
+                TxtPeso.Enabled = False
+            End If
+
             AddHandler PesosDestete.Enter, AddressOf PesosDestete_Enter
             AddHandler PesosBajada.Enter, AddressOf PesosBajada_Enter
         Catch ex As Exception
@@ -131,6 +138,8 @@ Public Class FrmRegistrarPesosChanchillas
 
     Private Sub btnAgregar_Click(sender As Object, e As EventArgs) Handles btnAgregar.Click
         Try
+            If numChanchillas = 0 Then Return
+
             Dim cantidadChanchillas As Integer = SumarCantidad()
 
             If TxtPeso.Text.Trim() = "" Then
@@ -245,10 +254,14 @@ Public Class FrmRegistrarPesosChanchillas
                 .Columns(2).Header.Caption = "Peso"
                 .Columns(3).Header.Caption = "Eliminar"
                 .Columns(3).Width = 60
-                .Columns(3).Style = UltraWinGrid.ColumnStyle.Button
-                .Columns(3).CellButtonAppearance.Image = My.Resources.ico_eliminar
-                .Columns(3).CellButtonAppearance.ImageHAlign = Infragistics.Win.HAlign.Center
-                .Columns(3).ButtonDisplayStyle = UltraWinGrid.ButtonDisplayStyle.Always
+                If numChanchillas = 0 Then
+                    .Columns(3).Hidden = True
+                Else
+                    .Columns(3).Style = UltraWinGrid.ColumnStyle.Button
+                    .Columns(3).CellButtonAppearance.Image = My.Resources.ico_eliminar
+                    .Columns(3).CellButtonAppearance.ImageHAlign = Infragistics.Win.HAlign.Center
+                    .Columns(3).ButtonDisplayStyle = UltraWinGrid.ButtonDisplayStyle.Always
+                End If
             End With
         Catch ex As Exception
             clsBasicas.controlException(Name, ex)
@@ -256,6 +269,7 @@ Public Class FrmRegistrarPesosChanchillas
     End Sub
 
     Private Sub DtgListadoPesosDestete_ClickCellButton(sender As Object, e As UltraWinGrid.CellEventArgs) Handles DtgListadoPesosDestete.ClickCellButton
+        If numChanchillas = 0 Then Return
         If e.Cell.Column.Key = "btneliminar" Then
             Dim result As DialogResult = MessageBox.Show("¿ESTÁ SEGURO DE ELIMINAR ESTE REGISTRO?", "Confirmar Eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
             If result = DialogResult.Yes Then
@@ -291,10 +305,14 @@ Public Class FrmRegistrarPesosChanchillas
                 .Columns(2).Header.Caption = "Peso"
                 .Columns(3).Header.Caption = "Eliminar"
                 .Columns(3).Width = 60
-                .Columns(3).Style = UltraWinGrid.ColumnStyle.Button
-                .Columns(3).CellButtonAppearance.Image = My.Resources.ico_eliminar
-                .Columns(3).CellButtonAppearance.ImageHAlign = Infragistics.Win.HAlign.Center
-                .Columns(3).ButtonDisplayStyle = UltraWinGrid.ButtonDisplayStyle.Always
+                If numChanchillas = 0 Then
+                    .Columns(3).Hidden = True
+                Else
+                    .Columns(3).Style = UltraWinGrid.ColumnStyle.Button
+                    .Columns(3).CellButtonAppearance.Image = My.Resources.ico_eliminar
+                    .Columns(3).CellButtonAppearance.ImageHAlign = Infragistics.Win.HAlign.Center
+                    .Columns(3).ButtonDisplayStyle = UltraWinGrid.ButtonDisplayStyle.Always
+                End If
             End With
         Catch ex As Exception
             clsBasicas.controlException(Name, ex)
@@ -302,6 +320,7 @@ Public Class FrmRegistrarPesosChanchillas
     End Sub
 
     Private Sub DtgListadoPesosBajada_ClickCellButton(sender As Object, e As UltraWinGrid.CellEventArgs) Handles DtgListadoPesosBajada.ClickCellButton
+        If numChanchillas = 0 Then Return
         If e.Cell.Column.Key = "btneliminar" Then
             Dim result As DialogResult = MessageBox.Show("¿ESTÁ SEGURO DE ELIMINAR ESTE REGISTRO?", "Confirmar Eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
             If result = DialogResult.Yes Then
