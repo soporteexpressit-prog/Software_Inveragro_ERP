@@ -145,10 +145,10 @@ Public Class FrmControlMadreFutura
 
     Sub Colorear()
         If (dtgListado.Rows.Count > 0) Then
-            Dim estadoVivo As Integer = 12
-            Dim condicionReproductiva As Integer = 13
-            Dim estadoCamal As Integer = 14
-            Dim estadoVenta As Integer = 15
+            Dim estadoVivo As Integer = 13
+            Dim condicionReproductiva As Integer = 14
+            Dim estadoCamal As Integer = 15
+            Dim estadoVenta As Integer = 16
 
             'estadoVivo
             clsBasicas.Colorear_SegunValor(dtgListado, Color.LightGreen, Color.DarkGreen, "VIVO", estadoVivo)

@@ -418,10 +418,10 @@ Public Class FrmControlBajada
                 Dim totalPuras As Integer = CInt(clickedRow.Cells("Total Puras").Value)
                 Dim totalCerdas As Integer = CInt(clickedRow.Cells("Total Camborough").Value)
 
-                If totalPuras = 0 AndAlso totalCerdas = 0 Then
-                    msj_advert("No hay chanchillas para retornar en este lote")
-                    Return
-                End If
+                'If totalPuras = 0 AndAlso totalCerdas = 0 Then
+                '    msj_advert("No hay chanchillas para retornar en este lote")
+                '    Return
+                'End If
 
                 If selectedParentRows.Contains(clickedRow) Then
                     clickedRow.Appearance.BackColor = Color.White
