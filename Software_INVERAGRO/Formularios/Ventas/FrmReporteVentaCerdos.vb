@@ -201,7 +201,7 @@ Public Class FrmReporteVentaCerdos
                     dtgListado.DisplayLayout.Bands(0).Columns("codigo").Hidden = True
                     dtgListado.DisplayLayout.Bands(0).Columns("cant. Pedido").Hidden = True
                 Else
-                    dtgListado.DataSource = cn.Cn_ReporteVentaCerdosPorVendedor(obj).Copy
+                    dtgListado.DataSource = cn.Cn_ReporteVentaCerdosconsolidadoIsdetalle(obj).Copy
                 End If
                 Ptbx_Cargando.Visible = False
                 BackgroundWorker1.RunWorkerAsync(obj)
@@ -215,21 +215,14 @@ Public Class FrmReporteVentaCerdos
 
     Private Sub dtgListado_InitializeLayout(sender As Object, e As Infragistics.Win.UltraWinGrid.InitializeLayoutEventArgs) Handles dtgListado.InitializeLayout
         Try
-            If operacion = 1 Then
-                clsBasicas.Totales_Formato(dtgListado, e, 1)
-                clsBasicas.SumarTotales_Formato(dtgListado, e, 5)
+            clsBasicas.Totales_Formato(dtgListado, e, 1)
+            clsBasicas.SumarTotales_Formato(dtgListado, e, 5)
                 clsBasicas.SumarTotales_Formato(dtgListado, e, 6)
                 clsBasicas.SumarTotales_Formato(dtgListado, e, 7)
                 clsBasicas.DivisionTotales_Formato(dtgListado, e, 7, 6, 8)
                 clsBasicas.DivisionTotales_Formato(dtgListado, e, 10, 7, 9)
                 clsBasicas.SumarTotales_Formato(dtgListado, e, 10)
-            Else
-                clsBasicas.Totales_Formato(dtgListado, e, 1)
-                clsBasicas.SumarTotales_Formato(dtgListado, e, 3)
-                clsBasicas.SumarTotales_Formato(dtgListado, e, 6)
-                clsBasicas.PromedioTotales_Formato(dtgListado, e, 7)
-                clsBasicas.SumarTotales_Formato(dtgListado, e, 8)
-            End If
+
             e.Layout.AutoFitStyle = Infragistics.Win.UltraWinGrid.AutoFitStyle.ResizeAllColumns
             e.Layout.Bands(0).PerformAutoResizeColumns(False, PerformAutoSizeType.AllRowsInBand)
 
@@ -262,8 +255,12 @@ Public Class FrmReporteVentaCerdos
 
     Private Sub BtnBuscar_Click(sender As Object, e As EventArgs) Handles BtnBuscar.Click
         Ptbx_Cargando.Visible = True
-        ConsultarDirecto()
-        Consultar()
+        If operacion = 1 Then
+            ConsultarDirecto()
+            Consultar()
+        Else
+            Consultar()
+        End If
     End Sub
 
     Private Sub BtnExportar_Click(sender As Object, e As EventArgs) Handles BtnExportar.Click

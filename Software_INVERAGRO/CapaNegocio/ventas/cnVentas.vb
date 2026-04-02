@@ -323,6 +323,9 @@ Public Class cnVentas
     Public Function Cn_ReporteVentaCerdosconsolidadoIs(ByRef obj As coVentas) As DataTable
         Return cls_at.Cd_ReporteVentaCerdosPorVendedoranio("[j_pa_reporte_ventas_cerdos_consolidado_IS]", obj)
     End Function
+    Public Function Cn_ReporteVentaCerdosconsolidadoIsdetalle(ByRef obj As coVentas) As DataTable
+        Return cls_at.Cd_ReporteVentaCerdosPorVendedoranio("[j_pa_reporte_ventas_cerdos_detalle_IS]", obj)
+    End Function
     Public Function Cn_ReporteVentaconsolidado(ByRef obj As coVentas) As DataTable
         Return cls_at.Cd_ReporteVentaconsolidado("[j_pa_reporte_consolidado_mensual_ventas_cerdos]", obj)
     End Function
