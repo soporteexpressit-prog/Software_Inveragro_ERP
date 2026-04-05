@@ -440,6 +440,14 @@ Public Class FrmCodificarMasivo
         Return array_valvulas
     End Function
 
+    Private Sub RbnJaula_CheckedChanged(sender As Object, e As EventArgs) Handles RbnJaula.CheckedChanged
+        If RbnJaula.Checked Then
+            LblAmbiente.Text = "Jaula:"
+        Else
+            LblAmbiente.Text = "Corral:"
+        End If
+    End Sub
+
     Private Sub BtnCerrar_Click(sender As Object, e As EventArgs) Handles BtnCerrar.Click
         Dispose()
     End Sub

@@ -61,6 +61,34 @@ Public Class cdControlAnimal
         End Try
     End Function
 
+    Public Function Cd_RegistrarCodificacionAnimalCM(name As String, obj As coControlAnimal) As String
+        Dim mensaje As String
+        Dim cmd As New SqlCommand(name, con.con)
+        Try
+            con.Abrir()
+            cmd.CommandType = 4
+
+            With cmd.Parameters
+                .AddWithValue("@fLlegada", SqlDbType.Date).Value = obj.FechaLlegada
+                .AddWithValue("@idGenetica", SqlDbType.Int).Value = obj.IdGenetica
+                .AddWithValue("@idJaulaCorral", SqlDbType.Int).Value = obj.IdJaulaCorral
+                .AddWithValue("@idLote", SqlDbType.Int).Value = obj.IdLote
+                .AddWithValue("@codArete", SqlDbType.VarChar).Value = obj.CodArete
+                .AddWithValue("@tatuaje", SqlDbType.VarChar).Value = obj.CodArete
+                .AddWithValue("@sexo", SqlDbType.VarChar).Value = obj.Sexo
+                .Add("@msj", SqlDbType.VarChar, 100).Direction = 2
+                .Add("@coderror", SqlDbType.Int).Direction = 2
+            End With
+            cmd.ExecuteNonQuery()
+            mensaje = cmd.Parameters("@msj").Value.ToString
+            obj.Coderror = cmd.Parameters("@coderror").Value.ToString
+            con.Salir()
+            Return mensaje
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Function
+
     Public Function Cd_ConsultarAnimal(name As String, obj As coControlAnimal) As DataTable
         Dim dt As New DataTable
         Try

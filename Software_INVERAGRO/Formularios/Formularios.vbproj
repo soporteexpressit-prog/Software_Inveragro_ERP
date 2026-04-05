@@ -1321,6 +1321,12 @@
     <Compile Include="produccion\ControlCampañas\FrmReporteEngordeCampana.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="produccion\ControlDesteteLotes\FrmCodificarCeladorMeishan.Designer.vb">
+      <DependentUpon>FrmCodificarCeladorMeishan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="produccion\ControlDesteteLotes\FrmCodificarCeladorMeishan.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="produccion\ControlDesteteLotes\FrmDetalleMotivoFrecuente.Designer.vb">
       <DependentUpon>FrmDetalleMotivoFrecuente.vb</DependentUpon>
     </Compile>
@@ -1337,6 +1343,12 @@
       <DependentUpon>FrmEditarDestete.vb</DependentUpon>
     </Compile>
     <Compile Include="produccion\ControlDesteteLotes\FrmEditarDestete.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="produccion\ControlDesteteLotes\FrmListarJaulaCorralCM.Designer.vb">
+      <DependentUpon>FrmListarJaulaCorralCM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="produccion\ControlDesteteLotes\FrmListarJaulaCorralCM.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="produccion\ControlDesteteLotes\FrmMovimientoAmbienteChanchillas.Designer.vb">
@@ -4522,6 +4534,9 @@
     <EmbeddedResource Include="produccion\ControlDesteteLotes\FrmCantidadSacarClinica.resx">
       <DependentUpon>FrmCantidadSacarClinica.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="produccion\ControlDesteteLotes\FrmCodificarCeladorMeishan.resx">
+      <DependentUpon>FrmCodificarCeladorMeishan.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="produccion\ControlDesteteLotes\FrmDetalleMotivoFrecuente.resx">
       <DependentUpon>FrmDetalleMotivoFrecuente.vb</DependentUpon>
     </EmbeddedResource>
@@ -4536,6 +4551,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="produccion\ControlDesteteLotes\FrmEditarDestete.resx">
       <DependentUpon>FrmEditarDestete.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="produccion\ControlDesteteLotes\FrmListarJaulaCorralCM.resx">
+      <DependentUpon>FrmListarJaulaCorralCM.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="produccion\ControlDesteteLotes\FrmMovimientoAmbienteChanchillas.resx">
       <DependentUpon>FrmMovimientoAmbienteChanchillas.vb</DependentUpon>
