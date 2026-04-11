@@ -22,6 +22,7 @@ Partial Class FrmCuentasCobrar
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmCuentasCobrar))
         Dim Appearance1 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance2 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance3 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
@@ -37,7 +38,6 @@ Partial Class FrmCuentasCobrar
         Dim Appearance13 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance14 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance15 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmCuentasCobrar))
         Me.txtproveedor = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.txtcodproveedor = New System.Windows.Forms.TextBox()
@@ -49,19 +49,6 @@ Partial Class FrmCuentasCobrar
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.cbxliquidado = New System.Windows.Forms.ComboBox()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.cbxbancodestino = New System.Windows.Forms.ComboBox()
-        Me.cktodosfechas = New System.Windows.Forms.CheckBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.dtgListado = New Infragistics.Win.UltraWinGrid.UltraGrid()
-        Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
-        Me.Ptbx_Cargando = New System.Windows.Forms.PictureBox()
-        Me.btnBuscar = New System.Windows.Forms.Button()
-        Me.btnConsultar = New System.Windows.Forms.Button()
         Me.ToolStripButton2ctcc = New System.Windows.Forms.ToolStripButton()
         Me.btneditarModucontabiidad = New System.Windows.Forms.ToolStripButton()
         Me.btnPagarctcc = New System.Windows.Forms.ToolStripButton()
@@ -69,10 +56,25 @@ Partial Class FrmCuentasCobrar
         Me.btneditarclientecuentacobrarcontabilidad = New System.Windows.Forms.ToolStripButton()
         Me.btnexportarctcc = New System.Windows.Forms.ToolStripButton()
         Me.btndetallesaldofavor = New System.Windows.Forms.ToolStripButton()
-        Me.btnanularcontabilidad = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripButton1productos = New System.Windows.Forms.ToolStripDropDownButton()
+        Me.HistoricoDeRecepcionesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AnularAbonoCobroToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripButton2 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
         Me.btncerrar = New System.Windows.Forms.ToolStripButton()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.cbxliquidado = New System.Windows.Forms.ComboBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.cbxbancodestino = New System.Windows.Forms.ComboBox()
+        Me.cktodosfechas = New System.Windows.Forms.CheckBox()
+        Me.btnBuscar = New System.Windows.Forms.Button()
+        Me.btnConsultar = New System.Windows.Forms.Button()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.dtgListado = New Infragistics.Win.UltraWinGrid.UltraGrid()
+        Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
+        Me.Ptbx_Cargando = New System.Windows.Forms.PictureBox()
         Me.ToolStrip1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -213,14 +215,170 @@ Partial Class FrmCuentasCobrar
         Me.ToolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.ToolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
         Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton2ctcc, Me.btneditarModucontabiidad, Me.btnPagarctcc, Me.btnPagarctcp, Me.btneditarclientecuentacobrarcontabilidad, Me.btnexportarctcc, Me.btndetallesaldofavor, Me.btnanularcontabilidad, Me.ToolStripButton2, Me.ToolStripButton1, Me.btncerrar})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton2ctcc, Me.btneditarModucontabiidad, Me.btnPagarctcc, Me.btnPagarctcp, Me.btneditarclientecuentacobrarcontabilidad, Me.btnexportarctcc, Me.btndetallesaldofavor, Me.ToolStripButton1productos, Me.ToolStripButton2, Me.ToolStripButton1, Me.btncerrar})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 164)
         Me.ToolStrip1.Margin = New System.Windows.Forms.Padding(2)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Padding = New System.Windows.Forms.Padding(0, 0, 2, 0)
-        Me.ToolStrip1.Size = New System.Drawing.Size(1198, 38)
+        Me.ToolStrip1.Size = New System.Drawing.Size(1545, 38)
         Me.ToolStrip1.TabIndex = 52
         Me.ToolStrip1.Text = "ToolStrip1"
+        '
+        'ToolStripButton2ctcc
+        '
+        Me.ToolStripButton2ctcc.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ToolStripButton2ctcc.ForeColor = System.Drawing.Color.White
+        Me.ToolStripButton2ctcc.Image = Global.Formularios.My.Resources.Resources.nuevo
+        Me.ToolStripButton2ctcc.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton2ctcc.Margin = New System.Windows.Forms.Padding(5)
+        Me.ToolStripButton2ctcc.Name = "ToolStripButton2ctcc"
+        Me.ToolStripButton2ctcc.Padding = New System.Windows.Forms.Padding(2)
+        Me.ToolStripButton2ctcc.Size = New System.Drawing.Size(132, 28)
+        Me.ToolStripButton2ctcc.Text = "Nuevo Ingreso"
+        '
+        'btneditarModucontabiidad
+        '
+        Me.btneditarModucontabiidad.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btneditarModucontabiidad.ForeColor = System.Drawing.Color.White
+        Me.btneditarModucontabiidad.Image = Global.Formularios.My.Resources.Resources.editar
+        Me.btneditarModucontabiidad.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btneditarModucontabiidad.Margin = New System.Windows.Forms.Padding(5)
+        Me.btneditarModucontabiidad.Name = "btneditarModucontabiidad"
+        Me.btneditarModucontabiidad.Padding = New System.Windows.Forms.Padding(2)
+        Me.btneditarModucontabiidad.Size = New System.Drawing.Size(74, 28)
+        Me.btneditarModucontabiidad.Text = "Editar"
+        '
+        'btnPagarctcc
+        '
+        Me.btnPagarctcc.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnPagarctcc.ForeColor = System.Drawing.Color.White
+        Me.btnPagarctcc.Image = Global.Formularios.My.Resources.Resources.Pagar_24_px
+        Me.btnPagarctcc.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btnPagarctcc.Margin = New System.Windows.Forms.Padding(5)
+        Me.btnPagarctcc.Name = "btnPagarctcc"
+        Me.btnPagarctcc.Padding = New System.Windows.Forms.Padding(2)
+        Me.btnPagarctcc.Size = New System.Drawing.Size(80, 28)
+        Me.btnPagarctcc.Text = "Cobrar"
+        Me.btnPagarctcc.ToolTipText = "Cobrar"
+        '
+        'btnPagarctcp
+        '
+        Me.btnPagarctcp.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnPagarctcp.ForeColor = System.Drawing.Color.White
+        Me.btnPagarctcp.Image = Global.Formularios.My.Resources.Resources.Pagar_24_px
+        Me.btnPagarctcp.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btnPagarctcp.Margin = New System.Windows.Forms.Padding(5)
+        Me.btnPagarctcp.Name = "btnPagarctcp"
+        Me.btnPagarctcp.Padding = New System.Windows.Forms.Padding(2)
+        Me.btnPagarctcp.Size = New System.Drawing.Size(116, 28)
+        Me.btnPagarctcp.Text = "Aplicar Nota"
+        Me.btnPagarctcp.ToolTipText = "Pagar"
+        '
+        'btneditarclientecuentacobrarcontabilidad
+        '
+        Me.btneditarclientecuentacobrarcontabilidad.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btneditarclientecuentacobrarcontabilidad.ForeColor = System.Drawing.Color.White
+        Me.btneditarclientecuentacobrarcontabilidad.Image = Global.Formularios.My.Resources.Resources.editar
+        Me.btneditarclientecuentacobrarcontabilidad.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btneditarclientecuentacobrarcontabilidad.Margin = New System.Windows.Forms.Padding(5)
+        Me.btneditarclientecuentacobrarcontabilidad.Name = "btneditarclientecuentacobrarcontabilidad"
+        Me.btneditarclientecuentacobrarcontabilidad.Padding = New System.Windows.Forms.Padding(2)
+        Me.btneditarclientecuentacobrarcontabilidad.Size = New System.Drawing.Size(124, 28)
+        Me.btneditarclientecuentacobrarcontabilidad.Text = "Editar Cliente"
+        '
+        'btnexportarctcc
+        '
+        Me.btnexportarctcc.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnexportarctcc.ForeColor = System.Drawing.Color.White
+        Me.btnexportarctcc.Image = Global.Formularios.My.Resources.Resources.exportar2
+        Me.btnexportarctcc.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btnexportarctcc.Margin = New System.Windows.Forms.Padding(5)
+        Me.btnexportarctcc.Name = "btnexportarctcc"
+        Me.btnexportarctcc.Padding = New System.Windows.Forms.Padding(2)
+        Me.btnexportarctcc.Size = New System.Drawing.Size(92, 28)
+        Me.btnexportarctcc.Text = "Exportar"
+        Me.btnexportarctcc.ToolTipText = "Exportar"
+        '
+        'btndetallesaldofavor
+        '
+        Me.btndetallesaldofavor.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btndetallesaldofavor.ForeColor = System.Drawing.Color.White
+        Me.btndetallesaldofavor.Image = Global.Formularios.My.Resources.Resources.link
+        Me.btndetallesaldofavor.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btndetallesaldofavor.Margin = New System.Windows.Forms.Padding(5)
+        Me.btndetallesaldofavor.Name = "btndetallesaldofavor"
+        Me.btndetallesaldofavor.Padding = New System.Windows.Forms.Padding(2)
+        Me.btndetallesaldofavor.Size = New System.Drawing.Size(163, 28)
+        Me.btndetallesaldofavor.Text = "Cuentas Vinculadas"
+        '
+        'ToolStripButton1productos
+        '
+        Me.ToolStripButton1productos.BackColor = System.Drawing.Color.Transparent
+        Me.ToolStripButton1productos.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HistoricoDeRecepcionesToolStripMenuItem, Me.AnularAbonoCobroToolStripMenuItem})
+        Me.ToolStripButton1productos.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ToolStripButton1productos.ForeColor = System.Drawing.Color.White
+        Me.ToolStripButton1productos.Image = Global.Formularios.My.Resources.Resources.cancelar
+        Me.ToolStripButton1productos.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton1productos.Margin = New System.Windows.Forms.Padding(5)
+        Me.ToolStripButton1productos.Name = "ToolStripButton1productos"
+        Me.ToolStripButton1productos.Padding = New System.Windows.Forms.Padding(2)
+        Me.ToolStripButton1productos.Size = New System.Drawing.Size(87, 28)
+        Me.ToolStripButton1productos.Text = "Anular"
+        Me.ToolStripButton1productos.ToolTipText = "Anular"
+        '
+        'HistoricoDeRecepcionesToolStripMenuItem
+        '
+        Me.HistoricoDeRecepcionesToolStripMenuItem.Checked = True
+        Me.HistoricoDeRecepcionesToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.HistoricoDeRecepcionesToolStripMenuItem.Name = "HistoricoDeRecepcionesToolStripMenuItem"
+        Me.HistoricoDeRecepcionesToolStripMenuItem.Size = New System.Drawing.Size(217, 22)
+        Me.HistoricoDeRecepcionesToolStripMenuItem.Text = "Anular Cuenta"
+        '
+        'AnularAbonoCobroToolStripMenuItem
+        '
+        Me.AnularAbonoCobroToolStripMenuItem.Name = "AnularAbonoCobroToolStripMenuItem"
+        Me.AnularAbonoCobroToolStripMenuItem.Size = New System.Drawing.Size(217, 22)
+        Me.AnularAbonoCobroToolStripMenuItem.Text = "Anular Abono / Cobro"
+        '
+        'ToolStripButton2
+        '
+        Me.ToolStripButton2.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.ToolStripButton2.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.ToolStripButton2.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ToolStripButton2.ForeColor = System.Drawing.Color.White
+        Me.ToolStripButton2.Image = Global.Formularios.My.Resources.Resources.enlace
+        Me.ToolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton2.Margin = New System.Windows.Forms.Padding(5)
+        Me.ToolStripButton2.Name = "ToolStripButton2"
+        Me.ToolStripButton2.Padding = New System.Windows.Forms.Padding(2)
+        Me.ToolStripButton2.Size = New System.Drawing.Size(88, 28)
+        Me.ToolStripButton2.Text = "Agrupar"
+        '
+        'ToolStripButton1
+        '
+        Me.ToolStripButton1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.ToolStripButton1.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.ToolStripButton1.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ToolStripButton1.ForeColor = System.Drawing.Color.White
+        Me.ToolStripButton1.Image = Global.Formularios.My.Resources.Resources.filter__2_1
+        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton1.Margin = New System.Windows.Forms.Padding(5)
+        Me.ToolStripButton1.Name = "ToolStripButton1"
+        Me.ToolStripButton1.Padding = New System.Windows.Forms.Padding(2)
+        Me.ToolStripButton1.Size = New System.Drawing.Size(77, 28)
+        Me.ToolStripButton1.Text = "Filtros"
+        '
+        'btncerrar
+        '
+        Me.btncerrar.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btncerrar.ForeColor = System.Drawing.Color.White
+        Me.btncerrar.Image = Global.Formularios.My.Resources.Resources.salir
+        Me.btncerrar.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btncerrar.Margin = New System.Windows.Forms.Padding(5)
+        Me.btncerrar.Name = "btncerrar"
+        Me.btncerrar.Padding = New System.Windows.Forms.Padding(2)
+        Me.btncerrar.Size = New System.Drawing.Size(66, 28)
+        Me.btncerrar.Text = "Salir"
         '
         'Panel2
         '
@@ -232,7 +390,7 @@ Partial Class FrmCuentasCobrar
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
         Me.Panel2.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1198, 202)
+        Me.Panel2.Size = New System.Drawing.Size(1545, 202)
         Me.Panel2.TabIndex = 8
         '
         'GroupBox1
@@ -328,6 +486,34 @@ Partial Class FrmCuentasCobrar
         Me.cktodosfechas.Text = "Todos :   "
         Me.cktodosfechas.UseVisualStyleBackColor = False
         '
+        'btnBuscar
+        '
+        Me.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnBuscar.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnBuscar.Image = CType(resources.GetObject("btnBuscar.Image"), System.Drawing.Image)
+        Me.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnBuscar.Location = New System.Drawing.Point(707, 26)
+        Me.btnBuscar.Name = "btnBuscar"
+        Me.btnBuscar.Size = New System.Drawing.Size(95, 29)
+        Me.btnBuscar.TabIndex = 173
+        Me.btnBuscar.Text = "Buscar"
+        Me.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnBuscar.UseVisualStyleBackColor = True
+        '
+        'btnConsultar
+        '
+        Me.btnConsultar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnConsultar.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnConsultar.Image = Global.Formularios.My.Resources.Resources.buscando__1_
+        Me.btnConsultar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnConsultar.Location = New System.Drawing.Point(707, 61)
+        Me.btnConsultar.Name = "btnConsultar"
+        Me.btnConsultar.Size = New System.Drawing.Size(95, 29)
+        Me.btnConsultar.TabIndex = 169
+        Me.btnConsultar.Text = "Buscar"
+        Me.btnConsultar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnConsultar.UseVisualStyleBackColor = True
+        '
         'Label2
         '
         Me.Label2.AutoSize = True
@@ -414,7 +600,7 @@ Partial Class FrmCuentasCobrar
         Me.dtgListado.Location = New System.Drawing.Point(0, 202)
         Me.dtgListado.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.dtgListado.Name = "dtgListado"
-        Me.dtgListado.Size = New System.Drawing.Size(1198, 479)
+        Me.dtgListado.Size = New System.Drawing.Size(1545, 479)
         Me.dtgListado.TabIndex = 9
         Me.dtgListado.Text = "UltraGrid1"
         '
@@ -427,7 +613,7 @@ Partial Class FrmCuentasCobrar
         '
         Me.Ptbx_Cargando.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Ptbx_Cargando.Image = Global.Formularios.My.Resources.Resources.loader
-        Me.Ptbx_Cargando.Location = New System.Drawing.Point(690, 412)
+        Me.Ptbx_Cargando.Location = New System.Drawing.Point(863, 412)
         Me.Ptbx_Cargando.Name = "Ptbx_Cargando"
         Me.Ptbx_Cargando.Size = New System.Drawing.Size(43, 37)
         Me.Ptbx_Cargando.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -435,178 +621,11 @@ Partial Class FrmCuentasCobrar
         Me.Ptbx_Cargando.TabStop = False
         Me.Ptbx_Cargando.Visible = False
         '
-        'btnBuscar
-        '
-        Me.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnBuscar.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnBuscar.Image = CType(resources.GetObject("btnBuscar.Image"), System.Drawing.Image)
-        Me.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnBuscar.Location = New System.Drawing.Point(707, 26)
-        Me.btnBuscar.Name = "btnBuscar"
-        Me.btnBuscar.Size = New System.Drawing.Size(95, 29)
-        Me.btnBuscar.TabIndex = 173
-        Me.btnBuscar.Text = "Buscar"
-        Me.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnBuscar.UseVisualStyleBackColor = True
-        '
-        'btnConsultar
-        '
-        Me.btnConsultar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnConsultar.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnConsultar.Image = Global.Formularios.My.Resources.Resources.buscando__1_
-        Me.btnConsultar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnConsultar.Location = New System.Drawing.Point(707, 61)
-        Me.btnConsultar.Name = "btnConsultar"
-        Me.btnConsultar.Size = New System.Drawing.Size(95, 29)
-        Me.btnConsultar.TabIndex = 169
-        Me.btnConsultar.Text = "Buscar"
-        Me.btnConsultar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnConsultar.UseVisualStyleBackColor = True
-        '
-        'ToolStripButton2ctcc
-        '
-        Me.ToolStripButton2ctcc.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ToolStripButton2ctcc.ForeColor = System.Drawing.Color.White
-        Me.ToolStripButton2ctcc.Image = Global.Formularios.My.Resources.Resources.nuevo
-        Me.ToolStripButton2ctcc.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton2ctcc.Margin = New System.Windows.Forms.Padding(5)
-        Me.ToolStripButton2ctcc.Name = "ToolStripButton2ctcc"
-        Me.ToolStripButton2ctcc.Padding = New System.Windows.Forms.Padding(2)
-        Me.ToolStripButton2ctcc.Size = New System.Drawing.Size(132, 28)
-        Me.ToolStripButton2ctcc.Text = "Nuevo Ingreso"
-        '
-        'btneditarModucontabiidad
-        '
-        Me.btneditarModucontabiidad.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btneditarModucontabiidad.ForeColor = System.Drawing.Color.White
-        Me.btneditarModucontabiidad.Image = Global.Formularios.My.Resources.Resources.editar
-        Me.btneditarModucontabiidad.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.btneditarModucontabiidad.Margin = New System.Windows.Forms.Padding(5)
-        Me.btneditarModucontabiidad.Name = "btneditarModucontabiidad"
-        Me.btneditarModucontabiidad.Padding = New System.Windows.Forms.Padding(2)
-        Me.btneditarModucontabiidad.Size = New System.Drawing.Size(74, 28)
-        Me.btneditarModucontabiidad.Text = "Editar"
-        '
-        'btnPagarctcc
-        '
-        Me.btnPagarctcc.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnPagarctcc.ForeColor = System.Drawing.Color.White
-        Me.btnPagarctcc.Image = Global.Formularios.My.Resources.Resources.Pagar_24_px
-        Me.btnPagarctcc.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.btnPagarctcc.Margin = New System.Windows.Forms.Padding(5)
-        Me.btnPagarctcc.Name = "btnPagarctcc"
-        Me.btnPagarctcc.Padding = New System.Windows.Forms.Padding(2)
-        Me.btnPagarctcc.Size = New System.Drawing.Size(80, 28)
-        Me.btnPagarctcc.Text = "Cobrar"
-        Me.btnPagarctcc.ToolTipText = "Cobrar"
-        '
-        'btnPagarctcp
-        '
-        Me.btnPagarctcp.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnPagarctcp.ForeColor = System.Drawing.Color.White
-        Me.btnPagarctcp.Image = Global.Formularios.My.Resources.Resources.Pagar_24_px
-        Me.btnPagarctcp.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.btnPagarctcp.Margin = New System.Windows.Forms.Padding(5)
-        Me.btnPagarctcp.Name = "btnPagarctcp"
-        Me.btnPagarctcp.Padding = New System.Windows.Forms.Padding(2)
-        Me.btnPagarctcp.Size = New System.Drawing.Size(116, 28)
-        Me.btnPagarctcp.Text = "Aplicar Nota"
-        Me.btnPagarctcp.ToolTipText = "Pagar"
-        '
-        'btneditarclientecuentacobrarcontabilidad
-        '
-        Me.btneditarclientecuentacobrarcontabilidad.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btneditarclientecuentacobrarcontabilidad.ForeColor = System.Drawing.Color.White
-        Me.btneditarclientecuentacobrarcontabilidad.Image = Global.Formularios.My.Resources.Resources.editar
-        Me.btneditarclientecuentacobrarcontabilidad.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.btneditarclientecuentacobrarcontabilidad.Margin = New System.Windows.Forms.Padding(5)
-        Me.btneditarclientecuentacobrarcontabilidad.Name = "btneditarclientecuentacobrarcontabilidad"
-        Me.btneditarclientecuentacobrarcontabilidad.Padding = New System.Windows.Forms.Padding(2)
-        Me.btneditarclientecuentacobrarcontabilidad.Size = New System.Drawing.Size(124, 28)
-        Me.btneditarclientecuentacobrarcontabilidad.Text = "Editar Cliente"
-        '
-        'btnexportarctcc
-        '
-        Me.btnexportarctcc.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnexportarctcc.ForeColor = System.Drawing.Color.White
-        Me.btnexportarctcc.Image = Global.Formularios.My.Resources.Resources.exportar2
-        Me.btnexportarctcc.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.btnexportarctcc.Margin = New System.Windows.Forms.Padding(5)
-        Me.btnexportarctcc.Name = "btnexportarctcc"
-        Me.btnexportarctcc.Padding = New System.Windows.Forms.Padding(2)
-        Me.btnexportarctcc.Size = New System.Drawing.Size(92, 28)
-        Me.btnexportarctcc.Text = "Exportar"
-        Me.btnexportarctcc.ToolTipText = "Exportar"
-        '
-        'btndetallesaldofavor
-        '
-        Me.btndetallesaldofavor.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btndetallesaldofavor.ForeColor = System.Drawing.Color.White
-        Me.btndetallesaldofavor.Image = Global.Formularios.My.Resources.Resources.link
-        Me.btndetallesaldofavor.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.btndetallesaldofavor.Margin = New System.Windows.Forms.Padding(5)
-        Me.btndetallesaldofavor.Name = "btndetallesaldofavor"
-        Me.btndetallesaldofavor.Padding = New System.Windows.Forms.Padding(2)
-        Me.btndetallesaldofavor.Size = New System.Drawing.Size(163, 28)
-        Me.btndetallesaldofavor.Text = "Cuentas Vinculadas"
-        '
-        'btnanularcontabilidad
-        '
-        Me.btnanularcontabilidad.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnanularcontabilidad.ForeColor = System.Drawing.Color.White
-        Me.btnanularcontabilidad.Image = Global.Formularios.My.Resources.Resources.cancelar
-        Me.btnanularcontabilidad.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.btnanularcontabilidad.Margin = New System.Windows.Forms.Padding(5)
-        Me.btnanularcontabilidad.Name = "btnanularcontabilidad"
-        Me.btnanularcontabilidad.Padding = New System.Windows.Forms.Padding(2)
-        Me.btnanularcontabilidad.Size = New System.Drawing.Size(78, 28)
-        Me.btnanularcontabilidad.Text = "Anular"
-        '
-        'ToolStripButton2
-        '
-        Me.ToolStripButton2.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.ToolStripButton2.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.ToolStripButton2.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ToolStripButton2.ForeColor = System.Drawing.Color.White
-        Me.ToolStripButton2.Image = Global.Formularios.My.Resources.Resources.enlace
-        Me.ToolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton2.Margin = New System.Windows.Forms.Padding(5)
-        Me.ToolStripButton2.Name = "ToolStripButton2"
-        Me.ToolStripButton2.Padding = New System.Windows.Forms.Padding(2)
-        Me.ToolStripButton2.Size = New System.Drawing.Size(88, 28)
-        Me.ToolStripButton2.Text = "Agrupar"
-        '
-        'ToolStripButton1
-        '
-        Me.ToolStripButton1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.ToolStripButton1.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.ToolStripButton1.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ToolStripButton1.ForeColor = System.Drawing.Color.White
-        Me.ToolStripButton1.Image = Global.Formularios.My.Resources.Resources.filter__2_1
-        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton1.Margin = New System.Windows.Forms.Padding(5)
-        Me.ToolStripButton1.Name = "ToolStripButton1"
-        Me.ToolStripButton1.Padding = New System.Windows.Forms.Padding(2)
-        Me.ToolStripButton1.Size = New System.Drawing.Size(77, 28)
-        Me.ToolStripButton1.Text = "Filtros"
-        '
-        'btncerrar
-        '
-        Me.btncerrar.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btncerrar.ForeColor = System.Drawing.Color.White
-        Me.btncerrar.Image = Global.Formularios.My.Resources.Resources.salir
-        Me.btncerrar.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.btncerrar.Margin = New System.Windows.Forms.Padding(5)
-        Me.btncerrar.Name = "btncerrar"
-        Me.btncerrar.Padding = New System.Windows.Forms.Padding(2)
-        Me.btncerrar.Size = New System.Drawing.Size(66, 28)
-        Me.btncerrar.Text = "Salir"
-        '
         'FrmCuentasCobrar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1198, 681)
+        Me.ClientSize = New System.Drawing.Size(1545, 681)
         Me.Controls.Add(Me.Ptbx_Cargando)
         Me.Controls.Add(Me.dtgListado)
         Me.Controls.Add(Me.Panel2)
@@ -654,12 +673,14 @@ Partial Class FrmCuentasCobrar
     Friend WithEvents ToolStripButton2 As ToolStripButton
     Friend WithEvents btneditarclientecuentacobrarcontabilidad As ToolStripButton
     Friend WithEvents cbxbancodestino As ComboBox
-    Friend WithEvents btnanularcontabilidad As ToolStripButton
     Friend WithEvents btneditarModucontabiidad As ToolStripButton
     Friend WithEvents Label6 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents cbxliquidado As ComboBox
     Friend WithEvents btnPagarctcp As ToolStripButton
     Friend WithEvents btndetallesaldofavor As ToolStripButton
+    Friend WithEvents ToolStripButton1productos As ToolStripDropDownButton
+    Friend WithEvents HistoricoDeRecepcionesToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents AnularAbonoCobroToolStripMenuItem As ToolStripMenuItem
 End Class
 

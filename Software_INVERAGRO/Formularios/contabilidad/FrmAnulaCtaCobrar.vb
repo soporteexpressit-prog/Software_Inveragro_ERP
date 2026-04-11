@@ -3,6 +3,7 @@ Imports CapaObjetos
 
 Public Class FrmAnulaCtaCobrar
     Public Property codcta As Integer
+    Public Property operacion As Integer
     Private Sub TsBtn_Cerrar_Click(sender As Object, e As EventArgs) Handles TsBtn_Cerrar.Click
         Dispose()
     End Sub
@@ -20,7 +21,11 @@ Public Class FrmAnulaCtaCobrar
                 obj.Motivoanulacion = txtmotivoanulacion.Text
 
                 Dim MensajeBgWk As String = ""
-                MensajeBgWk = cn.Cn_AnularCtaCobrar(obj)
+                If operacion = 1 Then
+                    MensajeBgWk = cn.Cn_AnulardetCtaCobrar(obj)
+                Else
+                    MensajeBgWk = cn.Cn_AnularCtaCobrar(obj)
+                End If
 
                 If (obj.Coderror = 0) Then
                     msj_ok(MensajeBgWk)
@@ -36,6 +41,7 @@ Public Class FrmAnulaCtaCobrar
 
     Private Sub FrmAnulaCtaCobrar_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.KeyPreview = True
+        Me.Text = "Anular Cobro especifico N° " & codcta
     End Sub
     Private Sub FrmAnularCtaPagar_KeyDown(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown
         ' Verifica si se presionan Control y Espacio al mismo tiempo

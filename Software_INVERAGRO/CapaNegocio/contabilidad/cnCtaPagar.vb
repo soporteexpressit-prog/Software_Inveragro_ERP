@@ -52,6 +52,9 @@ Public Class cnCtaPagar
     Public Function Cn_AnularCtaCobrar(ByRef obj As coCtaPagar) As String
         Return cls_at.Cd_AnularCtaPagar("[i_pa_anular_ctacobrar]", obj)
     End Function
+    Public Function Cn_AnulardetCtaCobrar(ByRef obj As coCtaPagar) As String
+        Return cls_at.Cd_AnularCtaPagar("[j_pa_anular_detcuentacobrar]", obj)
+    End Function
     Public Function Cn_AnularAbonoCtaPagar(ByRef obj As coCtaPagar) As String
         Return cls_at.Cd_AnularAbonoCtaPagar("[i_pa_anular_abonoctapagar]", obj)
     End Function

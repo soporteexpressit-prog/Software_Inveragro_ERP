@@ -321,27 +321,6 @@ Public Class FrmCuentasCobrar
         Consultar()
     End Sub
 
-    Private Sub btnanularcontabilidad_Click(sender As Object, e As EventArgs) Handles btnanularcontabilidad.Click
-        Try
-            Dim activeRow As Infragistics.Win.UltraWinGrid.UltraGridRow = Nothing
-            ' Llamar a la función de validación de selección
-            If Not clsBasicas.ValidarSeleccionFila(activeRow, dtgListado) Then
-                Return
-            End If
-            If activeRow.Cells(14).Value = "ANULADO" Then
-                msj_advert("La cuenta ya fue Anulada")
-                Return
-            End If
-            Dim f As New FrmAnulaCtaCobrar
-            f.codcta = activeRow.Cells(0).Value.ToString
-            f.ShowDialog()
-            Consultar()
-
-        Catch ex As Exception
-            clsBasicas.controlException(Name, ex)
-        End Try
-    End Sub
-
     Private Sub btneditarModucontabiidad_Click(sender As Object, e As EventArgs) Handles btneditarModucontabiidad.Click
         Try
             Dim filaSeleccionada = dtgListado.ActiveRow ' Obtener la fila activa
@@ -418,6 +397,70 @@ Public Class FrmCuentasCobrar
             frm.idIngreso = dtgListado.ActiveRow.Cells(0).Value
             frm.operacion = 1
             frm.ShowDialog()
+        Catch ex As Exception
+            clsBasicas.controlException(Name, ex)
+        End Try
+    End Sub
+
+    Private Sub HistoricoDeRecepcionesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HistoricoDeRecepcionesToolStripMenuItem.Click
+        Try
+            Dim activeRow As Infragistics.Win.UltraWinGrid.UltraGridRow = Nothing
+            ' Llamar a la función de validación de selección
+            If Not clsBasicas.ValidarSeleccionFila(activeRow, dtgListado) Then
+                Return
+            End If
+            If activeRow.Cells(14).Value = "ANULADO" Then
+                msj_advert("La cuenta ya fue Anulada")
+                Return
+            End If
+            Dim f As New FrmAnulaCtaCobrar
+            f.codcta = activeRow.Cells(0).Value.ToString
+            f.ShowDialog()
+            Consultar()
+
+        Catch ex As Exception
+            clsBasicas.controlException(Name, ex)
+        End Try
+    End Sub
+
+    Private Sub AnularAbonoCobroToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AnularAbonoCobroToolStripMenuItem.Click
+        Try
+            Dim activeRow As Infragistics.Win.UltraWinGrid.UltraGridRow = dtgListado.ActiveRow
+
+            ' ✅ VALIDACIÓN DIRECTA (sin usar ValidarSeleccionFila)
+            If activeRow Is Nothing OrElse Not activeRow.IsDataRow Then
+                msj_advert("Seleccione un registro.")
+                Return
+            End If
+
+            ' ✅ Verificar que sea del detalle (Band 1)
+            If activeRow.Band Is Nothing OrElse activeRow.Band.Index <> 1 Then
+                msj_advert("Seleccione un registro del detalle para anular el abono.")
+                Return
+            End If
+
+            ' ✅ Verificar que la primera celda (ID) tenga valor
+            If activeRow.Cells(0).Value Is Nothing OrElse String.IsNullOrEmpty(activeRow.Cells(0).Value.ToString()) Then
+                msj_advert("Registro inválido.")
+                Return
+            End If
+
+            ' ✅ Validar estado
+            If activeRow.Cells(14).Value IsNot Nothing AndAlso
+           activeRow.Cells(14).Value.ToString().Equals("ANULADO") Then
+                msj_advert("La cuenta ya fue Anulada.")
+                Return
+            End If
+
+            Dim codcta As String = activeRow.Cells(0).Value.ToString()
+
+            Dim f As New FrmAnulaCtaCobrar
+            f.codcta = codcta
+            f.operacion = 1
+            f.ShowDialog()
+
+            Consultar()
+
         Catch ex As Exception
             clsBasicas.controlException(Name, ex)
         End Try
