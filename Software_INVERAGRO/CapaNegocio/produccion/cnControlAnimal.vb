@@ -16,6 +16,10 @@ Public Class cnControlAnimal
         Return cls_at.Cd_RegistrarCodificacionAnimal("[w_pa_reg_codificacion_animal]", obj)
     End Function
 
+    Public Function Cn_RegistrarCodificacionAnimalCM(ByRef obj As coControlAnimal) As String
+        Return cls_at.Cd_RegistrarCodificacionAnimalCM("[w_pa_codificar_engorde_cm]", obj) 'CM = CELADOR - MEISHAN
+    End Function
+
     Public Function Cn_ActualizarDatosCerda(ByRef obj As coControlAnimal) As String
         Return cls_at.Cd_ActualizarDatosCerda("[w_pa_actualizar_informacion_cerda]", obj)
     End Function

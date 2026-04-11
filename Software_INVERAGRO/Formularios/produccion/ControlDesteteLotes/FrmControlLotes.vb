@@ -104,7 +104,7 @@ Public Class FrmControlLotes
                 BtnVentaLotecontrollotespro.Visible = False
                 BtnCancelarVenta.Visible = False
                 BtnPesos.Visible = True
-                BtnCodificarMadreFutura.Visible = True
+                BtnCodificar.Visible = True
             Else
                 dtgListado.DisplayLayout.Bands(0).Columns("Estado Venta").Hidden = False
                 dtgListado.DisplayLayout.Bands(0).Columns("P. Salida").Hidden = False
@@ -113,7 +113,7 @@ Public Class FrmControlLotes
                 BtnVentaLotecontrollotespro.Visible = True
                 BtnCancelarVenta.Visible = True
                 BtnPesos.Visible = True
-                BtnCodificarMadreFutura.Visible = False
+                BtnCodificar.Visible = False
             End If
 
             If ds.Tables(0).Rows.Count <> 0 Then
@@ -832,7 +832,7 @@ Public Class FrmControlLotes
         End Try
     End Sub
 
-    Private Sub BtnCodificarMadreFutura_Click(sender As Object, e As EventArgs) Handles BtnCodificarMadreFutura.Click
+    Private Sub BtnCodificarMadreFutura_Click_1(sender As Object, e As EventArgs) Handles BtnCodificarMadreFutura.Click
         Try
             Dim activeRow As Infragistics.Win.UltraWinGrid.UltraGridRow = dtgListado.ActiveRow
             If (dtgListado.Rows.Count > 0) Then
@@ -850,6 +850,40 @@ Public Class FrmControlLotes
                             .IdLote = CInt(activeRow.Cells("idLote").Value),
                             .IdPlantel = CmbUbicacion.Value,
                             .chanchillasSinBajada = "SI"
+                        }
+                        frm.ShowDialog()
+                        Consultar()
+                    Else
+                        msj_advert(MensajesSistema.mensajesGenerales("SELECCION_FILA_CONTENEDOR"))
+                    End If
+                Else
+                    msj_advert(MensajesSistema.mensajesGenerales("SELECCIONE_REGISTRO"))
+                End If
+            Else
+                msj_advert(MensajesSistema.mensajesGenerales("SELECCIONE_REGISTRO"))
+            End If
+        Catch ex As Exception
+            clsBasicas.controlException(Name, ex)
+        End Try
+    End Sub
+
+    Private Sub BtnCodificarCeladorMeishan_Click(sender As Object, e As EventArgs) Handles BtnCodificarCeladorMeishan.Click
+        Try
+            Dim activeRow As Infragistics.Win.UltraWinGrid.UltraGridRow = dtgListado.ActiveRow
+            If (dtgListado.Rows.Count > 0) Then
+                If (activeRow.Cells(0).Value.ToString.Length <> 0) Then
+                    If activeRow.Band.Index = 0 Then
+                        Dim totalEngorde As Integer = CInt(activeRow.Cells("Total Engorde").Value)
+
+                        If totalEngorde = 0 Then
+                            msj_advert("No hay cerdos de engorde para codificar en este lote")
+                            Return
+                        End If
+
+                        Dim frm As New FrmCodificarCeladorMeishan With {
+                            .IdLote = CInt(activeRow.Cells("idLote").Value),
+                            .IdPlantel = CmbUbicacion.Value,
+                            .TotalEngorde = totalEngorde
                         }
                         frm.ShowDialog()
                         Consultar()

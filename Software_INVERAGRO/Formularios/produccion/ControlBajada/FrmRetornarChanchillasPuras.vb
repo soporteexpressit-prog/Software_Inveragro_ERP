@@ -54,10 +54,10 @@ Public Class FrmRetornarChanchillasPuras
 
             numAnimales = CInt(LblNumPuras.Text) + CInt(LblNumCambo.Text)
 
-            If numAnimales = 0 Then
-                msj_advert("No se encontraron animales para retornar")
-                Dispose()
-            End If
+            'If numAnimales = 0 Then
+            '    msj_advert("No se encontraron animales para retornar")
+            '    Dispose()
+            'End If
         Catch ex As Exception
             clsBasicas.controlException(Name, ex)
         End Try

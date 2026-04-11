@@ -34,7 +34,6 @@ Partial Class FrmControlLotes
         Dim Appearance10 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance11 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance12 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmControlLotes))
         Dim Appearance13 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance14 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance15 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
@@ -50,16 +49,20 @@ Partial Class FrmControlLotes
         Dim Appearance25 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance26 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance27 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmControlLotes))
         Me.Contenedor = New System.Windows.Forms.Panel()
         Me.GrupoFiltros = New System.Windows.Forms.GroupBox()
         Me.CmbUbicacion = New Infragistics.Win.UltraWinGrid.UltraCombo()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.CmbAnios = New System.Windows.Forms.ComboBox()
-        Me.btnBuscar = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.LblDiaPic = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.BarraNavegacion = New System.Windows.Forms.ToolStrip()
+        Me.dtgListado = New Infragistics.Win.UltraWinGrid.UltraGrid()
+        Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
+        Me.Ptbx_Cargando = New System.Windows.Forms.PictureBox()
+        Me.btnBuscar = New System.Windows.Forms.Button()
         Me.BtnClinica = New System.Windows.Forms.ToolStripButton()
         Me.BtnCambiarUbicacioncontrollotespro = New System.Windows.Forms.ToolStripButton()
         Me.BtnUbicarZonaEspera = New System.Windows.Forms.ToolStripButton()
@@ -73,7 +76,9 @@ Partial Class FrmControlLotes
         Me.BtnRegistrarBajadacontrollotespro = New System.Windows.Forms.ToolStripButton()
         Me.BtnVentaLotecontrollotespro = New System.Windows.Forms.ToolStripButton()
         Me.BtnCancelarVenta = New System.Windows.Forms.ToolStripButton()
-        Me.BtnCodificarMadreFutura = New System.Windows.Forms.ToolStripButton()
+        Me.BtnCodificar = New System.Windows.Forms.ToolStripDropDownButton()
+        Me.BtnCodificarMadreFutura = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BtnCodificarCeladorMeishan = New System.Windows.Forms.ToolStripMenuItem()
         Me.BtnExportarControlCerdacontrollotespro = New System.Windows.Forms.ToolStripButton()
         Me.btnreporteRrhhctrlcapaci = New System.Windows.Forms.ToolStripDropDownButton()
         Me.BtnReporteGeneral = New System.Windows.Forms.ToolStripMenuItem()
@@ -83,9 +88,6 @@ Partial Class FrmControlLotes
         Me.ReporteDeConsumoYDonacionesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MortalidadRecríaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HistorialLoteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.dtgListado = New Infragistics.Win.UltraWinGrid.UltraGrid()
-        Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
-        Me.Ptbx_Cargando = New System.Windows.Forms.PictureBox()
         Me.Contenedor.SuspendLayout()
         Me.GrupoFiltros.SuspendLayout()
         CType(Me.CmbUbicacion, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -209,21 +211,6 @@ Partial Class FrmControlLotes
         Me.CmbAnios.Size = New System.Drawing.Size(128, 28)
         Me.CmbAnios.TabIndex = 176
         '
-        'btnBuscar
-        '
-        Me.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnBuscar.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnBuscar.Image = CType(resources.GetObject("btnBuscar.Image"), System.Drawing.Image)
-        Me.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnBuscar.Location = New System.Drawing.Point(457, 18)
-        Me.btnBuscar.Name = "btnBuscar"
-        Me.btnBuscar.Padding = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.btnBuscar.Size = New System.Drawing.Size(92, 41)
-        Me.btnBuscar.TabIndex = 179
-        Me.btnBuscar.Text = "Buscar"
-        Me.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnBuscar.UseVisualStyleBackColor = True
-        '
         'Label5
         '
         Me.Label5.AutoSize = True
@@ -269,7 +256,7 @@ Partial Class FrmControlLotes
         Me.BarraNavegacion.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.BarraNavegacion.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
         Me.BarraNavegacion.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.BarraNavegacion.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnClinica, Me.BtnCambiarUbicacioncontrollotespro, Me.BtnUbicarZonaEspera, Me.BtnAjustarDistribucionCerdocontrollotespro, Me.BtnMandarCamalMortalidadLotecontrollotespro, Me.BtnDepurar, Me.BtnPesos, Me.BtnMoverChanchillas, Me.BtnRegistrarBajadacontrollotespro, Me.BtnVentaLotecontrollotespro, Me.BtnCancelarVenta, Me.BtnCodificarMadreFutura, Me.BtnExportarControlCerdacontrollotespro, Me.btnreporteRrhhctrlcapaci})
+        Me.BarraNavegacion.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnClinica, Me.BtnCambiarUbicacioncontrollotespro, Me.BtnUbicarZonaEspera, Me.BtnAjustarDistribucionCerdocontrollotespro, Me.BtnMandarCamalMortalidadLotecontrollotespro, Me.BtnDepurar, Me.BtnPesos, Me.BtnMoverChanchillas, Me.BtnRegistrarBajadacontrollotespro, Me.BtnVentaLotecontrollotespro, Me.BtnCancelarVenta, Me.BtnCodificar, Me.BtnExportarControlCerdacontrollotespro, Me.btnreporteRrhhctrlcapaci})
         Me.BarraNavegacion.Location = New System.Drawing.Point(0, 147)
         Me.BarraNavegacion.Margin = New System.Windows.Forms.Padding(2, 1, 2, 1)
         Me.BarraNavegacion.Name = "BarraNavegacion"
@@ -277,6 +264,114 @@ Partial Class FrmControlLotes
         Me.BarraNavegacion.Size = New System.Drawing.Size(1742, 38)
         Me.BarraNavegacion.TabIndex = 52
         Me.BarraNavegacion.Text = "Monitoreo"
+        '
+        'dtgListado
+        '
+        Appearance13.BackColor = System.Drawing.Color.White
+        Appearance13.BorderColor = System.Drawing.SystemColors.InactiveCaption
+        Appearance13.FontData.Name = "Verdana"
+        Me.dtgListado.DisplayLayout.Appearance = Appearance13
+        Me.dtgListado.DisplayLayout.BorderStyle = Infragistics.Win.UIElementBorderStyle.Solid
+        Me.dtgListado.DisplayLayout.CaptionVisible = Infragistics.Win.DefaultableBoolean.[False]
+        Appearance14.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Appearance14.BackColor2 = System.Drawing.SystemColors.ControlDark
+        Appearance14.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical
+        Appearance14.BorderColor = System.Drawing.SystemColors.Window
+        Me.dtgListado.DisplayLayout.GroupByBox.Appearance = Appearance14
+        Appearance15.ForeColor = System.Drawing.SystemColors.GrayText
+        Me.dtgListado.DisplayLayout.GroupByBox.BandLabelAppearance = Appearance15
+        Me.dtgListado.DisplayLayout.GroupByBox.BorderStyle = Infragistics.Win.UIElementBorderStyle.Solid
+        Me.dtgListado.DisplayLayout.GroupByBox.Hidden = True
+        Appearance16.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Appearance16.BackColor2 = System.Drawing.SystemColors.Control
+        Appearance16.BackGradientStyle = Infragistics.Win.GradientStyle.Horizontal
+        Appearance16.ForeColor = System.Drawing.SystemColors.GrayText
+        Me.dtgListado.DisplayLayout.GroupByBox.PromptAppearance = Appearance16
+        Me.dtgListado.DisplayLayout.MaxColScrollRegions = 1
+        Me.dtgListado.DisplayLayout.MaxRowScrollRegions = 1
+        Appearance17.BackColor = System.Drawing.Color.White
+        Appearance17.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.dtgListado.DisplayLayout.Override.ActiveCellAppearance = Appearance17
+        Appearance18.BackColor = System.Drawing.Color.Navy
+        Appearance18.ForeColor = System.Drawing.Color.White
+        Me.dtgListado.DisplayLayout.Override.ActiveRowAppearance = Appearance18
+        Me.dtgListado.DisplayLayout.Override.BorderStyleCell = Infragistics.Win.UIElementBorderStyle.Dotted
+        Me.dtgListado.DisplayLayout.Override.BorderStyleRow = Infragistics.Win.UIElementBorderStyle.Dotted
+        Appearance19.BackColor = System.Drawing.SystemColors.Window
+        Me.dtgListado.DisplayLayout.Override.CardAreaAppearance = Appearance19
+        Appearance20.BorderColor = System.Drawing.Color.Silver
+        Appearance20.TextTrimming = Infragistics.Win.TextTrimming.EllipsisCharacter
+        Me.dtgListado.DisplayLayout.Override.CellAppearance = Appearance20
+        Me.dtgListado.DisplayLayout.Override.CellClickAction = Infragistics.Win.UltraWinGrid.CellClickAction.EditAndSelectText
+        Me.dtgListado.DisplayLayout.Override.CellPadding = 0
+        Me.dtgListado.DisplayLayout.Override.FilterOperatorDefaultValue = Infragistics.Win.UltraWinGrid.FilterOperatorDefaultValue.Contains
+        Me.dtgListado.DisplayLayout.Override.FilterUIType = Infragistics.Win.UltraWinGrid.FilterUIType.FilterRow
+        Appearance21.BackColor = System.Drawing.SystemColors.Control
+        Appearance21.BackColor2 = System.Drawing.SystemColors.ControlDark
+        Appearance21.BackGradientAlignment = Infragistics.Win.GradientAlignment.Element
+        Appearance21.BackGradientStyle = Infragistics.Win.GradientStyle.Horizontal
+        Appearance21.BorderColor = System.Drawing.SystemColors.Window
+        Me.dtgListado.DisplayLayout.Override.GroupByRowAppearance = Appearance21
+        Appearance22.BackColor = System.Drawing.Color.AliceBlue
+        Appearance22.BackColor2 = System.Drawing.Color.Silver
+        Appearance22.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical
+        Appearance22.ForeColor = System.Drawing.Color.Black
+        Appearance22.TextHAlignAsString = "Left"
+        Me.dtgListado.DisplayLayout.Override.HeaderAppearance = Appearance22
+        Me.dtgListado.DisplayLayout.Override.HeaderClickAction = Infragistics.Win.UltraWinGrid.HeaderClickAction.SortMulti
+        Me.dtgListado.DisplayLayout.Override.HeaderStyle = Infragistics.Win.HeaderStyle.WindowsXPCommand
+        Appearance23.BackColor = System.Drawing.SystemColors.Window
+        Appearance23.BorderColor = System.Drawing.Color.Silver
+        Me.dtgListado.DisplayLayout.Override.RowAppearance = Appearance23
+        Appearance24.BackColor = System.Drawing.Color.White
+        Me.dtgListado.DisplayLayout.Override.RowPreviewAppearance = Appearance24
+        Appearance25.BackColor = System.Drawing.Color.White
+        Me.dtgListado.DisplayLayout.Override.RowSelectorAppearance = Appearance25
+        Appearance26.BackColor = System.Drawing.Color.Navy
+        Me.dtgListado.DisplayLayout.Override.RowSelectorHeaderAppearance = Appearance26
+        Me.dtgListado.DisplayLayout.Override.RowSelectors = Infragistics.Win.DefaultableBoolean.[False]
+        Appearance27.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.dtgListado.DisplayLayout.Override.TemplateAddRowAppearance = Appearance27
+        Me.dtgListado.DisplayLayout.ScrollBounds = Infragistics.Win.UltraWinGrid.ScrollBounds.ScrollToFill
+        Me.dtgListado.DisplayLayout.ScrollStyle = Infragistics.Win.UltraWinGrid.ScrollStyle.Immediate
+        Me.dtgListado.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy
+        Me.dtgListado.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.dtgListado.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dtgListado.Location = New System.Drawing.Point(0, 185)
+        Me.dtgListado.Name = "dtgListado"
+        Me.dtgListado.Size = New System.Drawing.Size(1742, 505)
+        Me.dtgListado.TabIndex = 37
+        Me.dtgListado.Text = "UltraGrid1"
+        '
+        'BackgroundWorker1
+        '
+        '
+        'Ptbx_Cargando
+        '
+        Me.Ptbx_Cargando.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Ptbx_Cargando.Image = Global.Formularios.My.Resources.Resources.loader
+        Me.Ptbx_Cargando.Location = New System.Drawing.Point(855, 400)
+        Me.Ptbx_Cargando.Name = "Ptbx_Cargando"
+        Me.Ptbx_Cargando.Size = New System.Drawing.Size(43, 37)
+        Me.Ptbx_Cargando.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.Ptbx_Cargando.TabIndex = 38
+        Me.Ptbx_Cargando.TabStop = False
+        Me.Ptbx_Cargando.Visible = False
+        '
+        'btnBuscar
+        '
+        Me.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnBuscar.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnBuscar.Image = CType(resources.GetObject("btnBuscar.Image"), System.Drawing.Image)
+        Me.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnBuscar.Location = New System.Drawing.Point(457, 18)
+        Me.btnBuscar.Name = "btnBuscar"
+        Me.btnBuscar.Padding = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.btnBuscar.Size = New System.Drawing.Size(92, 41)
+        Me.btnBuscar.TabIndex = 179
+        Me.btnBuscar.Text = "Buscar"
+        Me.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnBuscar.UseVisualStyleBackColor = True
         '
         'BtnClinica
         '
@@ -431,18 +526,29 @@ Partial Class FrmControlLotes
         Me.BtnCancelarVenta.Text = "Cancelar Venta"
         Me.BtnCancelarVenta.ToolTipText = "Cancelar"
         '
+        'BtnCodificar
+        '
+        Me.BtnCodificar.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnCodificarMadreFutura, Me.BtnCodificarCeladorMeishan})
+        Me.BtnCodificar.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnCodificar.ForeColor = System.Drawing.Color.White
+        Me.BtnCodificar.Image = Global.Formularios.My.Resources.Resources.identificador
+        Me.BtnCodificar.Margin = New System.Windows.Forms.Padding(5)
+        Me.BtnCodificar.Name = "BtnCodificar"
+        Me.BtnCodificar.Padding = New System.Windows.Forms.Padding(2)
+        Me.BtnCodificar.Size = New System.Drawing.Size(103, 28)
+        Me.BtnCodificar.Text = "Codificar"
+        '
         'BtnCodificarMadreFutura
         '
-        Me.BtnCodificarMadreFutura.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnCodificarMadreFutura.ForeColor = System.Drawing.Color.White
-        Me.BtnCodificarMadreFutura.Image = Global.Formularios.My.Resources.Resources.identificador
-        Me.BtnCodificarMadreFutura.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.BtnCodificarMadreFutura.Margin = New System.Windows.Forms.Padding(5)
         Me.BtnCodificarMadreFutura.Name = "BtnCodificarMadreFutura"
-        Me.BtnCodificarMadreFutura.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnCodificarMadreFutura.Size = New System.Drawing.Size(94, 28)
-        Me.BtnCodificarMadreFutura.Text = "Codificar"
-        Me.BtnCodificarMadreFutura.ToolTipText = "Parto"
+        Me.BtnCodificarMadreFutura.Size = New System.Drawing.Size(195, 22)
+        Me.BtnCodificarMadreFutura.Text = "Puras / Cambor"
+        '
+        'BtnCodificarCeladorMeishan
+        '
+        Me.BtnCodificarCeladorMeishan.Name = "BtnCodificarCeladorMeishan"
+        Me.BtnCodificarCeladorMeishan.Size = New System.Drawing.Size(195, 22)
+        Me.BtnCodificarCeladorMeishan.Text = "Celador / Meishan"
         '
         'BtnExportarControlCerdacontrollotespro
         '
@@ -512,99 +618,6 @@ Partial Class FrmControlLotes
         Me.HistorialLoteToolStripMenuItem.Size = New System.Drawing.Size(280, 22)
         Me.HistorialLoteToolStripMenuItem.Text = "Historial Lote"
         '
-        'dtgListado
-        '
-        Appearance13.BackColor = System.Drawing.Color.White
-        Appearance13.BorderColor = System.Drawing.SystemColors.InactiveCaption
-        Appearance13.FontData.Name = "Verdana"
-        Me.dtgListado.DisplayLayout.Appearance = Appearance13
-        Me.dtgListado.DisplayLayout.BorderStyle = Infragistics.Win.UIElementBorderStyle.Solid
-        Me.dtgListado.DisplayLayout.CaptionVisible = Infragistics.Win.DefaultableBoolean.[False]
-        Appearance14.BackColor = System.Drawing.SystemColors.ActiveBorder
-        Appearance14.BackColor2 = System.Drawing.SystemColors.ControlDark
-        Appearance14.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical
-        Appearance14.BorderColor = System.Drawing.SystemColors.Window
-        Me.dtgListado.DisplayLayout.GroupByBox.Appearance = Appearance14
-        Appearance15.ForeColor = System.Drawing.SystemColors.GrayText
-        Me.dtgListado.DisplayLayout.GroupByBox.BandLabelAppearance = Appearance15
-        Me.dtgListado.DisplayLayout.GroupByBox.BorderStyle = Infragistics.Win.UIElementBorderStyle.Solid
-        Me.dtgListado.DisplayLayout.GroupByBox.Hidden = True
-        Appearance16.BackColor = System.Drawing.SystemColors.ControlLightLight
-        Appearance16.BackColor2 = System.Drawing.SystemColors.Control
-        Appearance16.BackGradientStyle = Infragistics.Win.GradientStyle.Horizontal
-        Appearance16.ForeColor = System.Drawing.SystemColors.GrayText
-        Me.dtgListado.DisplayLayout.GroupByBox.PromptAppearance = Appearance16
-        Me.dtgListado.DisplayLayout.MaxColScrollRegions = 1
-        Me.dtgListado.DisplayLayout.MaxRowScrollRegions = 1
-        Appearance17.BackColor = System.Drawing.Color.White
-        Appearance17.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.dtgListado.DisplayLayout.Override.ActiveCellAppearance = Appearance17
-        Appearance18.BackColor = System.Drawing.Color.Navy
-        Appearance18.ForeColor = System.Drawing.Color.White
-        Me.dtgListado.DisplayLayout.Override.ActiveRowAppearance = Appearance18
-        Me.dtgListado.DisplayLayout.Override.BorderStyleCell = Infragistics.Win.UIElementBorderStyle.Dotted
-        Me.dtgListado.DisplayLayout.Override.BorderStyleRow = Infragistics.Win.UIElementBorderStyle.Dotted
-        Appearance19.BackColor = System.Drawing.SystemColors.Window
-        Me.dtgListado.DisplayLayout.Override.CardAreaAppearance = Appearance19
-        Appearance20.BorderColor = System.Drawing.Color.Silver
-        Appearance20.TextTrimming = Infragistics.Win.TextTrimming.EllipsisCharacter
-        Me.dtgListado.DisplayLayout.Override.CellAppearance = Appearance20
-        Me.dtgListado.DisplayLayout.Override.CellClickAction = Infragistics.Win.UltraWinGrid.CellClickAction.EditAndSelectText
-        Me.dtgListado.DisplayLayout.Override.CellPadding = 0
-        Me.dtgListado.DisplayLayout.Override.FilterOperatorDefaultValue = Infragistics.Win.UltraWinGrid.FilterOperatorDefaultValue.Contains
-        Me.dtgListado.DisplayLayout.Override.FilterUIType = Infragistics.Win.UltraWinGrid.FilterUIType.FilterRow
-        Appearance21.BackColor = System.Drawing.SystemColors.Control
-        Appearance21.BackColor2 = System.Drawing.SystemColors.ControlDark
-        Appearance21.BackGradientAlignment = Infragistics.Win.GradientAlignment.Element
-        Appearance21.BackGradientStyle = Infragistics.Win.GradientStyle.Horizontal
-        Appearance21.BorderColor = System.Drawing.SystemColors.Window
-        Me.dtgListado.DisplayLayout.Override.GroupByRowAppearance = Appearance21
-        Appearance22.BackColor = System.Drawing.Color.AliceBlue
-        Appearance22.BackColor2 = System.Drawing.Color.Silver
-        Appearance22.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical
-        Appearance22.ForeColor = System.Drawing.Color.Black
-        Appearance22.TextHAlignAsString = "Left"
-        Me.dtgListado.DisplayLayout.Override.HeaderAppearance = Appearance22
-        Me.dtgListado.DisplayLayout.Override.HeaderClickAction = Infragistics.Win.UltraWinGrid.HeaderClickAction.SortMulti
-        Me.dtgListado.DisplayLayout.Override.HeaderStyle = Infragistics.Win.HeaderStyle.WindowsXPCommand
-        Appearance23.BackColor = System.Drawing.SystemColors.Window
-        Appearance23.BorderColor = System.Drawing.Color.Silver
-        Me.dtgListado.DisplayLayout.Override.RowAppearance = Appearance23
-        Appearance24.BackColor = System.Drawing.Color.White
-        Me.dtgListado.DisplayLayout.Override.RowPreviewAppearance = Appearance24
-        Appearance25.BackColor = System.Drawing.Color.White
-        Me.dtgListado.DisplayLayout.Override.RowSelectorAppearance = Appearance25
-        Appearance26.BackColor = System.Drawing.Color.Navy
-        Me.dtgListado.DisplayLayout.Override.RowSelectorHeaderAppearance = Appearance26
-        Me.dtgListado.DisplayLayout.Override.RowSelectors = Infragistics.Win.DefaultableBoolean.[False]
-        Appearance27.BackColor = System.Drawing.SystemColors.ControlLight
-        Me.dtgListado.DisplayLayout.Override.TemplateAddRowAppearance = Appearance27
-        Me.dtgListado.DisplayLayout.ScrollBounds = Infragistics.Win.UltraWinGrid.ScrollBounds.ScrollToFill
-        Me.dtgListado.DisplayLayout.ScrollStyle = Infragistics.Win.UltraWinGrid.ScrollStyle.Immediate
-        Me.dtgListado.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy
-        Me.dtgListado.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.dtgListado.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dtgListado.Location = New System.Drawing.Point(0, 185)
-        Me.dtgListado.Name = "dtgListado"
-        Me.dtgListado.Size = New System.Drawing.Size(1742, 505)
-        Me.dtgListado.TabIndex = 37
-        Me.dtgListado.Text = "UltraGrid1"
-        '
-        'BackgroundWorker1
-        '
-        '
-        'Ptbx_Cargando
-        '
-        Me.Ptbx_Cargando.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Ptbx_Cargando.Image = Global.Formularios.My.Resources.Resources.loader
-        Me.Ptbx_Cargando.Location = New System.Drawing.Point(855, 400)
-        Me.Ptbx_Cargando.Name = "Ptbx_Cargando"
-        Me.Ptbx_Cargando.Size = New System.Drawing.Size(43, 37)
-        Me.Ptbx_Cargando.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.Ptbx_Cargando.TabIndex = 38
-        Me.Ptbx_Cargando.TabStop = False
-        Me.Ptbx_Cargando.Visible = False
-        '
         'FrmControlLotes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -665,5 +678,7 @@ Partial Class FrmControlLotes
     Friend WithEvents BtnPesosChanchillas As ToolStripMenuItem
     Friend WithEvents BtnPesosBajadas As ToolStripMenuItem
     Friend WithEvents BtnMoverChanchillas As ToolStripButton
-    Friend WithEvents BtnCodificarMadreFutura As ToolStripButton
+    Friend WithEvents BtnCodificar As ToolStripDropDownButton
+    Friend WithEvents BtnCodificarMadreFutura As ToolStripMenuItem
+    Friend WithEvents BtnCodificarCeladorMeishan As ToolStripMenuItem
 End Class
