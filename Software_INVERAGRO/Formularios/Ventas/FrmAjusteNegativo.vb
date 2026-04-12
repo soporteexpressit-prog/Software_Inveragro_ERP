@@ -419,4 +419,25 @@ Public Class FrmAjusteNegativo
         End If
     End Sub
 
+    Private Sub cbxmoneda_ValueChanged(sender As Object, e As EventArgs) Handles cbxmoneda.ValueChanged
+        Try
+            If (cbxmoneda.Value = 1) Then
+                UltraTextEditor1.Text = 1
+            Else
+                UltraTextEditor1.Text = cbxmoneda.ActiveRow.Cells(2).Value.ToString
+            End If
+
+        Catch ex As Exception
+            clsBasicas.controlException(Name, ex)
+        End Try
+    End Sub
+    Private Sub cbxmoneda_InitializeLayout(sender As Object, e As UltraWinGrid.InitializeLayoutEventArgs) Handles cbxmoneda.InitializeLayout
+        Try
+            With e.Layout.Bands(0)
+                .Columns(0).Hidden = True
+            End With
+        Catch ex As Exception
+            clsBasicas.controlException(Name, ex)
+        End Try
+    End Sub
 End Class
