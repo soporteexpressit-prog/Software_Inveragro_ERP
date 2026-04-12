@@ -63,10 +63,11 @@ Partial Class FrmReporteCumplimientoPresupuesto
         Dim Appearance38 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance39 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.CbxOmitirGalpones = New System.Windows.Forms.CheckBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.BtnBuscar = New System.Windows.Forms.Button()
         Me.cmbGalpon = New Infragistics.Win.UltraWinGrid.UltraCombo()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.LblGalpon = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Ptbx_Cargando = New System.Windows.Forms.PictureBox()
         Me.dtgListado = New Infragistics.Win.UltraWinGrid.UltraGrid()
@@ -89,10 +90,11 @@ Partial Class FrmReporteCumplimientoPresupuesto
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.Panel2.Controls.Add(Me.CbxOmitirGalpones)
         Me.Panel2.Controls.Add(Me.Label3)
         Me.Panel2.Controls.Add(Me.BtnBuscar)
         Me.Panel2.Controls.Add(Me.cmbGalpon)
-        Me.Panel2.Controls.Add(Me.Label1)
+        Me.Panel2.Controls.Add(Me.LblGalpon)
         Me.Panel2.Controls.Add(Me.GroupBox1)
         Me.Panel2.Controls.Add(Me.Label2)
         Me.Panel2.Controls.Add(Me.LblPlantel)
@@ -103,6 +105,16 @@ Partial Class FrmReporteCumplimientoPresupuesto
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(624, 426)
         Me.Panel2.TabIndex = 183
+        '
+        'CbxOmitirGalpones
+        '
+        Me.CbxOmitirGalpones.AutoSize = True
+        Me.CbxOmitirGalpones.Location = New System.Drawing.Point(171, 106)
+        Me.CbxOmitirGalpones.Name = "CbxOmitirGalpones"
+        Me.CbxOmitirGalpones.Size = New System.Drawing.Size(100, 17)
+        Me.CbxOmitirGalpones.TabIndex = 243
+        Me.CbxOmitirGalpones.Text = "Omitir Galpones"
+        Me.CbxOmitirGalpones.UseVisualStyleBackColor = True
         '
         'Label3
         '
@@ -195,18 +207,18 @@ Partial Class FrmReporteCumplimientoPresupuesto
         Me.cmbGalpon.Size = New System.Drawing.Size(208, 25)
         Me.cmbGalpon.TabIndex = 240
         '
-        'Label1
+        'LblGalpon
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(327, 58)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(58, 14)
-        Me.Label1.TabIndex = 239
-        Me.Label1.Text = "Galpón:"
+        Me.LblGalpon.AutoSize = True
+        Me.LblGalpon.BackColor = System.Drawing.Color.Transparent
+        Me.LblGalpon.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblGalpon.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.LblGalpon.Location = New System.Drawing.Point(327, 58)
+        Me.LblGalpon.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblGalpon.Name = "LblGalpon"
+        Me.LblGalpon.Size = New System.Drawing.Size(58, 14)
+        Me.LblGalpon.TabIndex = 239
+        Me.LblGalpon.Text = "Galpón:"
         '
         'GroupBox1
         '
@@ -478,8 +490,9 @@ Partial Class FrmReporteCumplimientoPresupuesto
     Friend WithEvents BtnExportar As ToolStripButton
     Friend WithEvents btnSalir As ToolStripButton
     Friend WithEvents cmbGalpon As Infragistics.Win.UltraWinGrid.UltraCombo
-    Friend WithEvents Label1 As Label
+    Friend WithEvents LblGalpon As Label
     Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
     Friend WithEvents BtnBuscar As Button
     Friend WithEvents Label3 As Label
+    Friend WithEvents CbxOmitirGalpones As CheckBox
 End Class

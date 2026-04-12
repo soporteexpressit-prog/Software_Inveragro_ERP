@@ -64,7 +64,7 @@ Public Class FrmReporteCumplimientoPresupuesto
             ToolStrip1.Enabled = False
             Dim obj As New coControlAlimento With {
                 .IdCampana = CmbCampanias.Value,
-                .IdGalpon = cmbGalpon.Value
+                .IdGalpon = If(CbxOmitirGalpones.Checked, 0, cmbGalpon.Value)
             }
 
             BackgroundWorker1.RunWorkerAsync(obj)
@@ -157,6 +157,16 @@ Public Class FrmReporteCumplimientoPresupuesto
         Catch ex As Exception
             clsBasicas.controlException(Name, ex)
         End Try
+    End Sub
+
+    Private Sub CbxOmitirGalpones_CheckedChanged(sender As Object, e As EventArgs) Handles CbxOmitirGalpones.CheckedChanged
+        If CbxOmitirGalpones.Checked Then
+            cmbGalpon.Visible = False
+            LblGalpon.Visible = False
+        Else
+            cmbGalpon.Visible = True
+            LblGalpon.Visible = True
+        End If
     End Sub
 
     Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
