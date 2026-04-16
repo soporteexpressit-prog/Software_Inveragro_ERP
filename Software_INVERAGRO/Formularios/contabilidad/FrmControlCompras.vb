@@ -246,26 +246,25 @@ Public Class FrmControlCompras
 
     Private Sub ToolStripButton2_Click(sender As Object, e As EventArgs) Handles ToolStripButton2.Click
         Try
-            If dtgListado.ActiveRow IsNot Nothing AndAlso dtgListado.ActiveRow.Cells(0).Value IsNot Nothing Then
-                ' Pregunta de confirmación
-                Dim respuesta As DialogResult = MessageBox.Show("¿Realmente desea anular la factura de la orden de compra seleccionada?", "Confirmar Anulación", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
-                If respuesta = DialogResult.Yes Then
-                    Dim obj As New coIngreso
-                    obj.Codigo = dtgListado.ActiveRow.Cells(0).Value.ToString()
-                    Dim mensaje As String = cn.Cn_anularfacturaordencompra(obj)
-                    If obj.Coderror = 0 Then
-                        msj_ok(mensaje)
-                        Consultar() ' Refresca la grilla si fue exitoso
-                    Else
-                        msj_advert(mensaje)
-                    End If
-                End If
-            Else
-                msj_advert("Seleccione un registro válido.")
+            Dim activeRow As Infragistics.Win.UltraWinGrid.UltraGridRow = Nothing
+            ' Llamar a la función de validación de selección
+            If Not clsBasicas.ValidarSeleccionFila(activeRow, dtgListado) Then
+                Return
             End If
+            If activeRow.Cells(17).Value = "ANULADO" Then
+                msj_advert("La cuenta ya fue Anulada")
+                Return
+            End If
+            Dim f As New FrmAnularCtaPagar
+            f.operacion = 1
+            f.codcta = activeRow.Cells(0).Value.ToString
+            f.ShowDialog()
+            Consultar()
+
         Catch ex As Exception
             clsBasicas.controlException(Name, ex)
         End Try
+
     End Sub
 
 End Class

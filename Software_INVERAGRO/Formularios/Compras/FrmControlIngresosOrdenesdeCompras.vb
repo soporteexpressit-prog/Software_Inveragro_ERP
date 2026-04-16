@@ -204,25 +204,6 @@ Public Class FrmControlIngresosOrdenesdeCompras
     End Sub
 
 
-    Private Sub btnAnular_Click(sender As Object, e As EventArgs) Handles btnAnularcomprasordencompa.Click
-        Try
-            If (dtgListado.Rows.Count > 0) Then
-                If (dtgListado.ActiveRow.Cells(0).Value.ToString.Length <> 0) Then
-                    ' If dtgListado.ActiveRow.Cells(19).Value = "FACTURADO" And (dtgListado.ActiveRow.Cells(29).Value.ToString = "NO") Then
-                    ' msj_advert("Orden de Compra no puede ser Anulada por que ya fue " & dtgListado.ActiveRow.Cells(19).Value.ToString)
-                    'Else
-                    Dim f As New FrmAnularOrdendeCompra
-                        f.idordencompra = dtgListado.ActiveRow.Cells(0).Value.ToString
-                        f.ShowDialog()
-                        Consultar()
-                    ' End If
-                End If
-
-            End If
-        Catch ex As Exception
-            clsBasicas.controlException(Name, ex)
-        End Try
-    End Sub
 
     Private Sub btnNuevo_Click(sender As Object, e As EventArgs) Handles btnNuevocomprasordencompa.Click
         Dim f As New FrmOrdendeCompra
@@ -521,6 +502,97 @@ Public Class FrmControlIngresosOrdenesdeCompras
                 Consultar()
             Else
                 msj_advert(MensajesSistema.mensajesGenerales("SELECCIONE_REGISTRO"))
+            End If
+        Catch ex As Exception
+            clsBasicas.controlException(Name, ex)
+        End Try
+    End Sub
+
+    Private Sub ToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem1.Click
+        Try
+            If (dtgListado.Rows.Count > 0) Then
+                If (dtgListado.ActiveRow.Cells(0).Value.ToString.Length <> 0) Then
+                    If dtgListado.ActiveRow.Cells(19).Value = "FACTURADO" Or dtgListado.ActiveRow.Cells(19).Value = "ENVIADO" Then
+                        msj_advert("Orden de Compra no puede ser Anulada por que ya fue enviada a facturación")
+                        Return
+                    End If
+                    If dtgListado.ActiveRow.Cells(18).Value = "PARCIAL" Or dtgListado.ActiveRow.Cells(18).Value = "RECEPCIONADO" Then
+                        msj_advert("Orden de Compra no puede ser Anulada por que tiene recepciones")
+                        Return
+                    End If
+                    If dtgListado.ActiveRow.Cells(17).Value = "ANULADO" Then
+                        msj_advert("Orden de Compra ya fue anulada")
+                        Return
+                    End If
+
+                    Dim f As New FrmAnularOrdendeCompra
+                    f.idordencompra = dtgListado.ActiveRow.Cells(0).Value.ToString
+                        f.operacion = 1
+                        f.ShowDialog()
+                        Consultar()
+                        ' End If
+                    End If
+
+                End If
+        Catch ex As Exception
+            clsBasicas.controlException(Name, ex)
+        End Try
+    End Sub
+
+    Private Sub AnularEnvioFacturacToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AnularEnvioFacturacToolStripMenuItem.Click
+        Try
+            If dtgListado.ActiveRow IsNot Nothing AndAlso dtgListado.ActiveRow.Cells(0).Value IsNot Nothing Then
+                ' Pregunta de confirmación
+                If dtgListado.ActiveRow.Cells(19).Value.ToString() = "ENVIADO" Then
+                    Dim respuesta As DialogResult = MessageBox.Show("¿Realmente desea anular el envio a faturación de la orden de compra seleccionada?", "Confirmar Anulación", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+                    If respuesta = DialogResult.Yes Then
+                        Dim obj As New coIngreso
+                        obj.Codigo = dtgListado.ActiveRow.Cells(0).Value.ToString()
+                        Dim mensaje As String = cn.Cn_anularenviofacturacion(obj)
+                        If obj.Coderror = 0 Then
+                            msj_ok(mensaje)
+                            Consultar() ' Refresca la grilla si fue exitoso
+                        Else
+                            msj_advert(mensaje)
+                        End If
+                    End If
+                Else
+                    If dtgListado.ActiveRow.Cells(19).Value.ToString() = "FACTURADO" Then
+                        msj_advert("La orden de compra ya ha sido facturada, no se puede anular el envio.")
+                        Return
+                    Else
+                        msj_advert("Aún no se a enviado a Facturación, no se puede anular el envio.")
+                        Return
+                    End If
+
+                End If
+
+            Else
+                msj_advert("Seleccione un registro válido.")
+            End If
+        Catch ex As Exception
+            clsBasicas.controlException(Name, ex)
+        End Try
+    End Sub
+
+    Private Sub AnularRecepciónToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AnularRecepciónToolStripMenuItem.Click
+        Try
+            If (dtgListado.Rows.Count > 0) Then
+                If (dtgListado.ActiveRow.Cells(0).Value.ToString.Length <> 0) Then
+
+                    If dtgListado.ActiveRow.Cells(17).Value = "ANULADO" Then
+                        msj_advert("Orden de Compra ya fue anulada")
+                        Return
+                    End If
+
+                    Dim f As New FrmAnularOrdendeCompra
+                    f.idordencompra = dtgListado.ActiveRow.Cells(0).Value.ToString
+                    f.operacion = 2
+                    f.ShowDialog()
+                    Consultar()
+                    ' End If
+                End If
+
             End If
         Catch ex As Exception
             clsBasicas.controlException(Name, ex)

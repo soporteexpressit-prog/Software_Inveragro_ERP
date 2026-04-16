@@ -23,6 +23,8 @@ Public Class FrmAnulaCtaCobrar
                 Dim MensajeBgWk As String = ""
                 If operacion = 1 Then
                     MensajeBgWk = cn.Cn_AnulardetCtaCobrar(obj)
+                ElseIf operacion = 2 Then
+                    MensajeBgWk = cn.Cn_Anularfacturadeventa(obj)
                 Else
                     MensajeBgWk = cn.Cn_AnularCtaCobrar(obj)
                 End If
@@ -41,7 +43,11 @@ Public Class FrmAnulaCtaCobrar
 
     Private Sub FrmAnulaCtaCobrar_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.KeyPreview = True
-        Me.Text = "Anular Cobro especifico N° " & codcta
+        If operacion = 1 Then
+            Me.Text = "Anular Cobro especifico N° " & codcta
+        ElseIf operacion = 2 Then
+            Me.Text = "Anular Factura de Venta° "
+        End If
     End Sub
     Private Sub FrmAnularCtaPagar_KeyDown(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown
         ' Verifica si se presionan Control y Espacio al mismo tiempo

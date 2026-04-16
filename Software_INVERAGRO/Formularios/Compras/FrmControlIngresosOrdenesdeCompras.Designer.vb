@@ -22,11 +22,11 @@ Partial Class FrmControlIngresosOrdenesdeCompras
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim Appearance1 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim Appearance2 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim Appearance3 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim Appearance4 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim Appearance5 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance41 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance42 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance43 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance44 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance45 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance6 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance7 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance8 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
@@ -75,11 +75,14 @@ Partial Class FrmControlIngresosOrdenesdeCompras
         Me.ExportarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReporteDeOrdenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.btnhistoricorecepcionescomprasordencompa = New System.Windows.Forms.ToolStripButton()
-        Me.btnAnularcomprasordencompa = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSplitButton2 = New System.Windows.Forms.ToolStripSplitButton()
+        Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.btncerrar = New System.Windows.Forms.ToolStripButton()
         Me.dtgListado = New Infragistics.Win.UltraWinGrid.UltraGrid()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         Me.Ptbx_Cargando = New System.Windows.Forms.PictureBox()
+        Me.AnularEnvioFacturacToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AnularRecepciónToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.UltraGroupBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -181,9 +184,9 @@ Partial Class FrmControlIngresosOrdenesdeCompras
         '
         'UltraGroupBox2
         '
-        Appearance1.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(233, Byte), Integer))
-        Appearance1.BackColor2 = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(233, Byte), Integer))
-        Me.UltraGroupBox2.Appearance = Appearance1
+        Appearance41.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(233, Byte), Integer))
+        Appearance41.BackColor2 = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.UltraGroupBox2.Appearance = Appearance41
         Me.UltraGroupBox2.CaptionAlignment = Infragistics.Win.Misc.GroupBoxCaptionAlignment.Center
         Me.UltraGroupBox2.Controls.Add(Me.txtProveedor)
         Me.UltraGroupBox2.Controls.Add(Me.txtProducto)
@@ -201,8 +204,8 @@ Partial Class FrmControlIngresosOrdenesdeCompras
         Me.UltraGroupBox2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.UltraGroupBox2.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.UltraGroupBox2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Appearance2.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(233, Byte), Integer))
-        Me.UltraGroupBox2.HeaderAppearance = Appearance2
+        Appearance42.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.UltraGroupBox2.HeaderAppearance = Appearance42
         Me.UltraGroupBox2.HeaderBorderStyle = Infragistics.Win.UIElementBorderStyle.Rounded4Thick
         Me.UltraGroupBox2.HeaderPosition = Infragistics.Win.Misc.GroupBoxHeaderPosition.TopOnBorder
         Me.UltraGroupBox2.Location = New System.Drawing.Point(0, 44)
@@ -299,26 +302,26 @@ Partial Class FrmControlIngresosOrdenesdeCompras
         '
         'GrupoMasOpcionesBusqueda
         '
-        Appearance3.BackColor = System.Drawing.Color.White
-        Appearance3.BorderColor = System.Drawing.Color.Black
-        Me.GrupoMasOpcionesBusqueda.Appearance = Appearance3
-        Appearance4.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(233, Byte), Integer))
-        Appearance4.BackColor2 = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(233, Byte), Integer))
-        Appearance4.BorderColor = System.Drawing.Color.Black
-        Me.GrupoMasOpcionesBusqueda.ContentAreaAppearance = Appearance4
+        Appearance43.BackColor = System.Drawing.Color.White
+        Appearance43.BorderColor = System.Drawing.Color.Black
+        Me.GrupoMasOpcionesBusqueda.Appearance = Appearance43
+        Appearance44.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(233, Byte), Integer))
+        Appearance44.BackColor2 = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(233, Byte), Integer))
+        Appearance44.BorderColor = System.Drawing.Color.Black
+        Me.GrupoMasOpcionesBusqueda.ContentAreaAppearance = Appearance44
         Me.GrupoMasOpcionesBusqueda.Controls.Add(Me.Label2)
         Me.GrupoMasOpcionesBusqueda.Dock = System.Windows.Forms.DockStyle.Top
         Me.GrupoMasOpcionesBusqueda.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Appearance5.BackColor = System.Drawing.Color.White
-        Appearance5.BackColor2 = System.Drawing.Color.White
-        Appearance5.BorderColor = System.Drawing.Color.White
-        Appearance5.BorderColor2 = System.Drawing.Color.White
-        Appearance5.BorderColor3DBase = System.Drawing.Color.White
-        Appearance5.FontData.BoldAsString = "False"
-        Appearance5.FontData.Name = "Segoe UI"
-        Appearance5.FontData.SizeInPoints = 10.0!
-        Appearance5.ForeColor = System.Drawing.Color.White
-        Me.GrupoMasOpcionesBusqueda.HeaderAppearance = Appearance5
+        Appearance45.BackColor = System.Drawing.Color.White
+        Appearance45.BackColor2 = System.Drawing.Color.White
+        Appearance45.BorderColor = System.Drawing.Color.White
+        Appearance45.BorderColor2 = System.Drawing.Color.White
+        Appearance45.BorderColor3DBase = System.Drawing.Color.White
+        Appearance45.FontData.BoldAsString = "False"
+        Appearance45.FontData.Name = "Segoe UI"
+        Appearance45.FontData.SizeInPoints = 10.0!
+        Appearance45.ForeColor = System.Drawing.Color.White
+        Me.GrupoMasOpcionesBusqueda.HeaderAppearance = Appearance45
         Me.GrupoMasOpcionesBusqueda.HeaderPosition = Infragistics.Win.Misc.GroupBoxHeaderPosition.TopOutsideBorder
         Me.GrupoMasOpcionesBusqueda.Location = New System.Drawing.Point(0, 0)
         Me.GrupoMasOpcionesBusqueda.Name = "GrupoMasOpcionesBusqueda"
@@ -344,7 +347,7 @@ Partial Class FrmControlIngresosOrdenesdeCompras
         Me.ToolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.ToolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
         Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnNuevocomprasordencompa, Me.ToolStripSplitButton1, Me.BtnEnviarCorreocomprasordenes, Me.btnRecepcionarcomprasordencompa, Me.btnconfirmar_facturacioncomprasordencompa, Me.btnadjuntarcomprasordencompa, Me.btnreportes, Me.btnhistoricorecepcionescomprasordencompa, Me.btnAnularcomprasordencompa, Me.btncerrar})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnNuevocomprasordencompa, Me.ToolStripSplitButton1, Me.BtnEnviarCorreocomprasordenes, Me.btnRecepcionarcomprasordencompa, Me.btnconfirmar_facturacioncomprasordencompa, Me.btnadjuntarcomprasordencompa, Me.btnreportes, Me.btnhistoricorecepcionescomprasordencompa, Me.ToolStripSplitButton2, Me.btncerrar})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 164)
         Me.ToolStrip1.Margin = New System.Windows.Forms.Padding(1)
         Me.ToolStrip1.Name = "ToolStrip1"
@@ -483,17 +486,22 @@ Partial Class FrmControlIngresosOrdenesdeCompras
         Me.btnhistoricorecepcionescomprasordencompa.Size = New System.Drawing.Size(185, 28)
         Me.btnhistoricorecepcionescomprasordencompa.Text = "Historico de Recepción"
         '
-        'btnAnularcomprasordencompa
+        'ToolStripSplitButton2
         '
-        Me.btnAnularcomprasordencompa.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAnularcomprasordencompa.ForeColor = System.Drawing.Color.White
-        Me.btnAnularcomprasordencompa.Image = Global.Formularios.My.Resources.Resources.cancelar
-        Me.btnAnularcomprasordencompa.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.btnAnularcomprasordencompa.Margin = New System.Windows.Forms.Padding(5)
-        Me.btnAnularcomprasordencompa.Name = "btnAnularcomprasordencompa"
-        Me.btnAnularcomprasordencompa.Padding = New System.Windows.Forms.Padding(2)
-        Me.btnAnularcomprasordencompa.Size = New System.Drawing.Size(78, 28)
-        Me.btnAnularcomprasordencompa.Text = "Anular"
+        Me.ToolStripSplitButton2.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem1, Me.AnularRecepciónToolStripMenuItem, Me.AnularEnvioFacturacToolStripMenuItem})
+        Me.ToolStripSplitButton2.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.ToolStripSplitButton2.ForeColor = System.Drawing.Color.White
+        Me.ToolStripSplitButton2.Image = Global.Formularios.My.Resources.Resources.cancelar
+        Me.ToolStripSplitButton2.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripSplitButton2.Name = "ToolStripSplitButton2"
+        Me.ToolStripSplitButton2.Size = New System.Drawing.Size(86, 35)
+        Me.ToolStripSplitButton2.Text = "Anular"
+        '
+        'ToolStripMenuItem1
+        '
+        Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
+        Me.ToolStripMenuItem1.Text = "Anular Orden"
         '
         'btncerrar
         '
@@ -604,6 +612,18 @@ Partial Class FrmControlIngresosOrdenesdeCompras
         Me.Ptbx_Cargando.TabStop = False
         Me.Ptbx_Cargando.Visible = False
         '
+        'AnularEnvioFacturacToolStripMenuItem
+        '
+        Me.AnularEnvioFacturacToolStripMenuItem.Name = "AnularEnvioFacturacToolStripMenuItem"
+        Me.AnularEnvioFacturacToolStripMenuItem.Size = New System.Drawing.Size(238, 22)
+        Me.AnularEnvioFacturacToolStripMenuItem.Text = "Anular Envio Facturación"
+        '
+        'AnularRecepciónToolStripMenuItem
+        '
+        Me.AnularRecepciónToolStripMenuItem.Name = "AnularRecepciónToolStripMenuItem"
+        Me.AnularRecepciónToolStripMenuItem.Size = New System.Drawing.Size(238, 22)
+        Me.AnularRecepciónToolStripMenuItem.Text = "Anular Recepción"
+        '
         'FrmControlIngresosOrdenesdeCompras
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -644,7 +664,6 @@ Partial Class FrmControlIngresosOrdenesdeCompras
     Friend WithEvents Label1 As Windows.Forms.Label
     Friend WithEvents dtpFechaHasta As Windows.Forms.DateTimePicker
     Friend WithEvents btnConsultar As Windows.Forms.Button
-    Friend WithEvents btnAnularcomprasordencompa As Windows.Forms.ToolStripButton
     Friend WithEvents Panel1 As Windows.Forms.Panel
     Friend WithEvents UltraGroupBox2 As Infragistics.Win.Misc.UltraGroupBox
     Friend WithEvents GrupoMasOpcionesBusqueda As Infragistics.Win.Misc.UltraGroupBox
@@ -670,4 +689,8 @@ Partial Class FrmControlIngresosOrdenesdeCompras
     Friend WithEvents AjustarOrdenToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents FinalizarOrdenToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents EditarOrdenToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ToolStripSplitButton2 As ToolStripSplitButton
+    Friend WithEvents ToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents AnularEnvioFacturacToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents AnularRecepciónToolStripMenuItem As ToolStripMenuItem
 End Class

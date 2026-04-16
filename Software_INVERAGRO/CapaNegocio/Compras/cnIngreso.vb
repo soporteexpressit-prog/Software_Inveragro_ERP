@@ -74,8 +74,8 @@ Public Class cnIngreso
         Return cls_at.Cd_AprobarFacturacionOrdenCompra("[i_pa_confirmar_facturacion_orden_compra]", obj)
     End Function
 
-    Public Function Cn_anularfacturaordencompra(ByRef obj As coIngreso) As String
-        Return cls_at.Cd_AprobarFacturacionOrdenCompra("[j_anular_factura_orden_compra]", obj)
+    Public Function Cn_anularenviofacturacion(ByRef obj As coIngreso) As String
+        Return cls_at.Cd_AprobarFacturacionOrdenCompra("[j_anular_envio_facturacion]", obj)
     End Function
 
     Public Function Cn_crearsueldosbonificacionescts(ByRef obj As coIngreso) As String
@@ -105,7 +105,10 @@ Public Class cnIngreso
         Return cls_at.Cd_obtenerArchivo("[w_obtener_archivo_recepcion]", idRecepcion)
     End Function
     Public Function Cn_AnularOrdenCompra(ByRef obj As coIngreso) As String
-        Return cls_at.Cd_AnularOrdenCompra("[i_pa_anularordendecompra]", obj)
+        Return cls_at.Cd_AnularOrdenCompra("[j_pa_anularordendecompra]", obj)
+    End Function
+    Public Function Cn_AnularrecepcionOrdenCompra(ByRef obj As coIngreso) As String
+        Return cls_at.Cd_AnularOrdenCompra("[j_pa_anular_recepcion_orden_compra]", obj)
     End Function
     Public Function Cn_Anularasignacionrequerimiento(ByRef obj As coIngreso) As String
         Return cls_at.Cd_AnularOrdenCompra("[an_pa_anularasignacionrequerimiento]", obj)
