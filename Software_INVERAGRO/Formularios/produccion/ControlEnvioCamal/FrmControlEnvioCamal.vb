@@ -1,5 +1,4 @@
-﻿Imports System.Windows.Media.Media3D
-Imports CapaNegocio
+﻿Imports CapaNegocio
 Imports CapaObjetos
 Imports Infragistics.Win
 
@@ -95,6 +94,7 @@ Public Class FrmControlEnvioCamal
             DesbloquearControladores()
             dtgListado.DisplayLayout.Bands(0).Columns(0).Hidden = True
             dtgListado.DisplayLayout.Bands(0).Columns("idTipoIncidencia").Hidden = True
+            FormatearFilas()
             Colorear()
         End If
     End Sub
@@ -169,17 +169,7 @@ Public Class FrmControlEnvioCamal
     End Sub
 
     Private Function CrearStringIdsControlCamal() As String
-        Dim seleccionados As String = ""
-
-        For Each filaIndex As Integer In idsControlCamal
-            seleccionados &= dtgListado.Rows(filaIndex).Cells(0).Value.ToString() & ", "
-        Next
-
-        If seleccionados.Length > 2 Then
-            seleccionados = seleccionados.Substring(0, seleccionados.Length - 2)
-        End If
-
-        Return seleccionados
+        Return String.Join(", ", idsControlCamal)
     End Function
 
     Private Sub BtnExportarControlCerda_Click(sender As Object, e As EventArgs) Handles BtnExportarControlCerdaenvioscamalpro.Click
@@ -364,6 +354,7 @@ Public Class FrmControlEnvioCamal
        Not String.IsNullOrWhiteSpace(fila.Cells(0).Value?.ToString()) Then
             Dim estado As String = fila.Cells("Estado").Value.ToString()
             Dim estadoVivo As String = fila.Cells("Condición").Value.ToString()
+            Dim idRegistro As Integer = CInt(fila.Cells(0).Value)
 
             If estadoVivo = "MUERTO" Then
                 msj_advert("YA SE REGISTRO MORTALIDAD DE ESTE ANIMAL. NO SE PUEDE SELECCIONAR")
@@ -381,11 +372,11 @@ Public Class FrmControlEnvioCamal
                 Return
             End If
 
-            If idsControlCamal.Contains(fila.Index) Then
-                idsControlCamal.Remove(fila.Index)
+            If idsControlCamal.Contains(idRegistro) Then
+                idsControlCamal.Remove(idRegistro)
                 fila.Appearance.BackColor = Color.White
             Else
-                idsControlCamal.Add(fila.Index)
+                idsControlCamal.Add(idRegistro)
                 fila.Appearance.BackColor = Color.LightBlue
             End If
 
