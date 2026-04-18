@@ -322,17 +322,17 @@ Public Class FrmControlIngresosOrdenesdeCompras
             End If
 
             Dim estadoRecepcion = activeRow.Cells(18).Value.ToString
-            If estadoRecepcion = "RECEPCIONADO" OrElse estadoRecepcion = "PARCIAL" Then
-                Dim f As New FrmHistoricoRecepcion
+            'If estadoRecepcion = "RECEPCIONADO" OrElse estadoRecepcion = "PARCIAL" Then
+            Dim f As New FrmHistoricoRecepcion
                 f.lblCodigo.Text = activeRow.Cells(0).Value.ToString
                 f.lblcodOrden.Text = activeRow.Cells(22).Value.ToString
                 f.lblMotivoTransaccion.Text = activeRow.Cells(4).Value.ToString
                 f.lblFechaPedido.Text = DateTime.Parse(activeRow.Cells(5).Value).ToString("dd/MM/yyyy")
                 f.lblProveedor.Text = activeRow.Cells(7).Value.ToString
                 f.ShowDialog()
-            Else
-                msj_advert("La Orden de Compra no tiene Recepciones")
-            End If
+                'Else
+            '   msj_advert("La Orden de Compra no tiene Recepciones")
+            'End If
         Catch ex As Exception
             clsBasicas.controlException(Name, ex)
         End Try
