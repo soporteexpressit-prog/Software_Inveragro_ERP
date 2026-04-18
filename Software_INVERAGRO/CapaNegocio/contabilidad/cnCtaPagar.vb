@@ -46,8 +46,14 @@ Public Class cnCtaPagar
     Public Function Cn_ResPrestamo(ByRef obj As coPrestamo) As String
         Return cls_at.Cd_RegPrestamo("[i_pa_reg_prestamo_cuentapagar]", obj)
     End Function
+    Public Function Cn_Anularfacturadeventa(ByRef obj As coCtaPagar) As String
+        Return cls_at.Cd_AnularCtaPagar("[j_anular_facturacion_venta]", obj)
+    End Function
     Public Function Cn_AnularCtaPagar(ByRef obj As coCtaPagar) As String
         Return cls_at.Cd_AnularCtaPagar("[i_pa_anular_ctapagar]", obj)
+    End Function
+    Public Function Cn_AnularFacturaordenCompra(ByRef obj As coCtaPagar) As String
+        Return cls_at.Cd_AnularCtaPagar("[j_anular_factura_orden_compra]", obj)
     End Function
     Public Function Cn_AnularCtaCobrar(ByRef obj As coCtaPagar) As String
         Return cls_at.Cd_AnularCtaPagar("[i_pa_anular_ctacobrar]", obj)
