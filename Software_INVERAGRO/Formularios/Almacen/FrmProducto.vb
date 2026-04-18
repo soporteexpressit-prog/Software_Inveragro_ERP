@@ -137,6 +137,7 @@ Public Class FrmProducto
             obj.esmolino = _esmolino
             obj.EsRacionExterna = _esRacionExterna
             obj.IdProductoEquivalencia = codProductoEq
+            obj.NumDosis = CInt(TxtNumDosis.Text)
             _mensajeBgWk = cn_item.Cn_Mantenimiento(obj)
 
             e.Result = obj.Coderror
@@ -225,6 +226,7 @@ Public Class FrmProducto
         codProductoEq = tb.Rows(0)("idProductoEquivalencia").ToString()
         TxtNombreEqProducto.Text = tb.Rows(0)("nombreProductoEq").ToString()
         TxtEqProducto.Text = tb.Rows(0)("equivalenciaProEq").ToString()
+        TxtNumDosis.Text = tb.Rows(0)("numDosis").ToString()
     End Sub
 
     Private Sub FrmItem_Load(sender As Object, e As EventArgs) Handles MyBase.Load
