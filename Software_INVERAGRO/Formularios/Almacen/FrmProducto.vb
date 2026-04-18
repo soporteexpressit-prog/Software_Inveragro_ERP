@@ -137,7 +137,11 @@ Public Class FrmProducto
             obj.esmolino = _esmolino
             obj.EsRacionExterna = _esRacionExterna
             obj.IdProductoEquivalencia = codProductoEq
-            obj.NumDosis = CInt(TxtNumDosis.Text)
+            If String.IsNullOrWhiteSpace(TxtNumDosis.Text) Then
+                obj.NumDosis = 0
+            Else
+                obj.NumDosis = CInt(TxtNumDosis.Text)
+            End If
             _mensajeBgWk = cn_item.Cn_Mantenimiento(obj)
 
             e.Result = obj.Coderror
