@@ -230,7 +230,11 @@ Public Class FrmProducto
         codProductoEq = tb.Rows(0)("idProductoEquivalencia").ToString()
         TxtNombreEqProducto.Text = tb.Rows(0)("nombreProductoEq").ToString()
         TxtEqProducto.Text = tb.Rows(0)("equivalenciaProEq").ToString()
-        TxtNumDosis.Text = tb.Rows(0)("numDosis").ToString()
+        If IsDBNull(tb.Rows(0)("numDosis")) Then
+            TxtNumDosis.Text = "0"
+        Else
+            TxtNumDosis.Text = tb.Rows(0)("numDosis").ToString()
+        End If
     End Sub
 
     Private Sub FrmItem_Load(sender As Object, e As EventArgs) Handles MyBase.Load

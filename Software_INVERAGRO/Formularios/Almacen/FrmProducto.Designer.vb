@@ -107,6 +107,8 @@ Partial Class FrmProducto
         Me.BackgroundWorker2 = New System.ComponentModel.BackgroundWorker()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.TxtNumDosis = New System.Windows.Forms.NumericUpDown()
+        Me.Label25 = New System.Windows.Forms.Label()
         Me.CbxRacionExterna = New System.Windows.Forms.CheckBox()
         Me.Label21 = New System.Windows.Forms.Label()
         Me.cbesmolino = New System.Windows.Forms.ComboBox()
@@ -132,8 +134,6 @@ Partial Class FrmProducto
         Me.Label23 = New System.Windows.Forms.Label()
         Me.BtnProductoEquivalencia = New System.Windows.Forms.Button()
         Me.TxtNombreEqProducto = New System.Windows.Forms.TextBox()
-        Me.Label25 = New System.Windows.Forms.Label()
-        Me.TxtNumDosis = New System.Windows.Forms.NumericUpDown()
         CType(Me.GroupBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox3.SuspendLayout()
         CType(Me.cbxpresentacion, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -143,8 +143,8 @@ Partial Class FrmProducto
         CType(Me.txtCodigo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ToolStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
-        Me.GroupBox2.SuspendLayout()
         CType(Me.TxtNumDosis, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox3
@@ -834,6 +834,27 @@ Partial Class FrmProducto
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Información:"
         '
+        'TxtNumDosis
+        '
+        Me.TxtNumDosis.Location = New System.Drawing.Point(486, 431)
+        Me.TxtNumDosis.Maximum = New Decimal(New Integer() {1000, 0, 0, 0})
+        Me.TxtNumDosis.Name = "TxtNumDosis"
+        Me.TxtNumDosis.Size = New System.Drawing.Size(57, 21)
+        Me.TxtNumDosis.TabIndex = 185
+        '
+        'Label25
+        '
+        Me.Label25.AutoSize = True
+        Me.Label25.BackColor = System.Drawing.Color.Transparent
+        Me.Label25.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label25.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.Label25.Location = New System.Drawing.Point(404, 434)
+        Me.Label25.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label25.Name = "Label25"
+        Me.Label25.Size = New System.Drawing.Size(76, 14)
+        Me.Label25.TabIndex = 183
+        Me.Label25.Text = "Nro Dosis :"
+        '
         'CbxRacionExterna
         '
         Me.CbxRacionExterna.AutoSize = True
@@ -1118,26 +1139,6 @@ Partial Class FrmProducto
         Me.TxtNombreEqProducto.Size = New System.Drawing.Size(193, 21)
         Me.TxtNombreEqProducto.TabIndex = 171
         '
-        'Label25
-        '
-        Me.Label25.AutoSize = True
-        Me.Label25.BackColor = System.Drawing.Color.Transparent
-        Me.Label25.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label25.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label25.Location = New System.Drawing.Point(404, 434)
-        Me.Label25.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(76, 14)
-        Me.Label25.TabIndex = 183
-        Me.Label25.Text = "Nro Dosis :"
-        '
-        'TxtNumDosis
-        '
-        Me.TxtNumDosis.Location = New System.Drawing.Point(486, 431)
-        Me.TxtNumDosis.Name = "TxtNumDosis"
-        Me.TxtNumDosis.Size = New System.Drawing.Size(57, 21)
-        Me.TxtNumDosis.TabIndex = 185
-        '
         'FrmProducto
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1169,9 +1170,9 @@ Partial Class FrmProducto
         Me.ToolStrip1.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        CType(Me.TxtNumDosis, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
-        CType(Me.TxtNumDosis, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
