@@ -206,6 +206,32 @@ Public Class FrmRegularizacionCerdo
         End If
     End Sub
 
+    Private Sub BtnSalidaCodificadas_Click(sender As Object, e As EventArgs) Handles BtnSalidaCodificadas.Click
+        Try
+            Dim frm As New FrmRegularizarSalidaConArete With {
+                .valorPlantel = CmbUbicacion.Text,
+                .idPlantel = CmbUbicacion.Value
+            }
+            frm.ShowDialog()
+
+            Consultar()
+        Catch ex As Exception
+            clsBasicas.controlException(Name, ex)
+        End Try
+    End Sub
+
+    Private Sub dtgListado_InitializeLayout(sender As Object, e As UltraWinGrid.InitializeLayoutEventArgs) Handles dtgListado.InitializeLayout
+        Try
+            If (dtgListado.Rows.Count = 0) Then
+            Else
+                e.Layout.Bands(0).Summaries.Clear()
+                clsBasicas.Totales_Formato(dtgListado, e, 1)
+            End If
+        Catch ex As Exception
+            clsBasicas.controlException(Name, ex)
+        End Try
+    End Sub
+
     Private Sub BtnCerrar_Click(sender As Object, e As EventArgs) Handles BtnCerrar.Click
         Dispose()
     End Sub

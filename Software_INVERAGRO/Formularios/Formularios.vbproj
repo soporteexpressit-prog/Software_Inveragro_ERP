@@ -1879,6 +1879,18 @@
     <Compile Include="produccion\HistoricoMortalidad\FrmVerEvidenciaMortalidad.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="produccion\RegularizacionCerdos\FrmListarAnimalesCodificadosRegu.Designer.vb">
+      <DependentUpon>FrmListarAnimalesCodificadosRegu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="produccion\RegularizacionCerdos\FrmListarAnimalesCodificadosRegu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="produccion\RegularizacionCerdos\FrmListarMotivoRegularCodificados.Designer.vb">
+      <DependentUpon>FrmListarMotivoRegularCodificados.vb</DependentUpon>
+    </Compile>
+    <Compile Include="produccion\RegularizacionCerdos\FrmListarMotivoRegularCodificados.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="produccion\RegularizacionCerdos\FrmListarMotivosRegularizacion.Designer.vb">
       <DependentUpon>FrmListarMotivosRegularizacion.vb</DependentUpon>
     </Compile>
@@ -1907,6 +1919,12 @@
       <DependentUpon>FrmRegularizarCerdosReproduccion.vb</DependentUpon>
     </Compile>
     <Compile Include="produccion\RegularizacionCerdos\FrmRegularizarCerdosReproduccion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="produccion\RegularizacionCerdos\FrmRegularizarSalidaConArete.Designer.vb">
+      <DependentUpon>FrmRegularizarSalidaConArete.vb</DependentUpon>
+    </Compile>
+    <Compile Include="produccion\RegularizacionCerdos\FrmRegularizarSalidaConArete.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="RecursosHumanos\AnularPago.Designer.vb">
@@ -4804,6 +4822,12 @@
     <EmbeddedResource Include="produccion\HistoricoMortalidad\FrmVerEvidenciaMortalidad.resx">
       <DependentUpon>FrmVerEvidenciaMortalidad.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="produccion\RegularizacionCerdos\FrmListarAnimalesCodificadosRegu.resx">
+      <DependentUpon>FrmListarAnimalesCodificadosRegu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="produccion\RegularizacionCerdos\FrmListarMotivoRegularCodificados.resx">
+      <DependentUpon>FrmListarMotivoRegularCodificados.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="produccion\RegularizacionCerdos\FrmListarMotivosRegularizacion.resx">
       <DependentUpon>FrmListarMotivosRegularizacion.vb</DependentUpon>
     </EmbeddedResource>
@@ -4818,6 +4842,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="produccion\RegularizacionCerdos\FrmRegularizarCerdosReproduccion.resx">
       <DependentUpon>FrmRegularizarCerdosReproduccion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="produccion\RegularizacionCerdos\FrmRegularizarSalidaConArete.resx">
+      <DependentUpon>FrmRegularizarSalidaConArete.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RecursosHumanos\AnularPago.resx">
       <DependentUpon>AnularPago.vb</DependentUpon>

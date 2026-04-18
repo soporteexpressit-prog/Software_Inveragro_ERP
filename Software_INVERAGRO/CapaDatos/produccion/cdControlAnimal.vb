@@ -1409,4 +1409,50 @@ Public Class cdControlAnimal
         con.Salir()
         Return dt
     End Function
+
+    Public Function Cd_ConsultarAnimalCodificadosRegularizacion(name As String, obj As coControlAnimal) As DataTable
+        Dim dt As New DataTable
+        Try
+            con.Abrir()
+            Dim da As New SqlDataAdapter(name, con.con)
+            da.SelectCommand.CommandType = 4
+            da.SelectCommand.Parameters.AddWithValue("@sexo", obj.Sexo)
+            da.SelectCommand.Parameters.AddWithValue("@idUbicacion", obj.IdPlantel)
+            da.Fill(dt)
+        Catch ex As Exception
+            Throw ex
+        End Try
+        con.Salir()
+        Return dt
+    End Function
+
+    Public Function Cd_RegistrarRegularizacionCerdosCodificado(name As String, obj As coControlAnimal) As String
+        Dim mensaje As String
+        Dim cmd As New SqlCommand(name, con.con)
+        Try
+            con.Abrir()
+            cmd.CommandType = 4
+
+            With cmd.Parameters
+                .Add("@fControl", SqlDbType.Date).Value = obj.FechaControl
+                .Add("@observacion", SqlDbType.VarChar).Value = obj.Observacion
+                .Add("@idJaulaCorral", SqlDbType.Int).Value = obj.IdJaulaCorral
+                .Add("@idTipoIncidencia", SqlDbType.Int).Value = obj.IdMotivoMortalidadCamal
+                .Add("@idAnimal", SqlDbType.Int).Value = obj.Codigo
+                .Add("@idUsuario", SqlDbType.Int).Value = obj.IdUsuario
+                .Add("@tipo", SqlDbType.VarChar).Value = obj.TipoControl
+                .Add("@idCampaña", SqlDbType.Int).Value = obj.IdCampaña
+                .Add("@idLote", SqlDbType.Int).Value = obj.IdLote
+                .Add("@msj", SqlDbType.VarChar, 100).Direction = 2
+                .Add("@coderror", SqlDbType.Int).Direction = 2
+            End With
+            cmd.ExecuteNonQuery()
+            mensaje = cmd.Parameters("@msj").Value.ToString
+            obj.Coderror = cmd.Parameters("@coderror").Value.ToString
+            con.Salir()
+            Return mensaje
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Function
 End Class

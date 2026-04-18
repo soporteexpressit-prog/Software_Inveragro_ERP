@@ -1,16 +1,16 @@
 ﻿Imports CapaNegocio
 Imports CapaObjetos
 
-Public Class FrmMotivosRegularizacionReproduccion
+Public Class FrmListarMotivoRegularCodificados
     Dim cn As New cnTipoIncidencia
-    Private ReadOnly _frmRegularizarCerdosReproduccion As FrmRegularizarCerdosReproduccion
+    Private ReadOnly _frmRegularizarSalidaConArete As FrmRegularizarSalidaConArete
 
-    Public Sub New(frmRegularizarCerdosReproduccion As FrmRegularizarCerdosReproduccion)
+    Public Sub New(frmRegularizarSalidaConArete As FrmRegularizarSalidaConArete)
         InitializeComponent()
-        _frmRegularizarCerdosReproduccion = frmRegularizarCerdosReproduccion
+        _frmRegularizarSalidaConArete = frmRegularizarSalidaConArete
     End Sub
 
-    Private Sub FrmMotivosRegularizacionReproduccion_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub FrmListarMotivoRegularCodificados_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
             ListarMotivoMortalidad()
         Catch ex As Exception
@@ -39,7 +39,7 @@ Public Class FrmMotivosRegularizacionReproduccion
                     Dim codigo As Integer = e.Cell.Row.Cells(0).Value
                     Dim descripcion As String = e.Cell.Row.Cells(1).Value
 
-                    _frmRegularizarCerdosReproduccion.LlenarCampoMotivoMortalidad(codigo, descripcion)
+                    _frmRegularizarSalidaConArete.LlenarCampoMotivoMortalidad(codigo, descripcion)
                     Me.Close()
                 Else
                     msj_advert(MensajesSistema.mensajesGenerales("SELECCIONE_REGISTRO"))

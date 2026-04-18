@@ -240,6 +240,10 @@ Public Class cnControlAnimal
         Return cls_at.Cd_RegistrarRegularizacionCerdos("[w_pa_reg_regularizar_cerdos]", obj)
     End Function
 
+    Public Function Cn_RegistrarRegularizacionCerdosCodificado(ByRef obj As coControlAnimal) As String
+        Return cls_at.Cd_RegistrarRegularizacionCerdosCodificado("[w_pa_reg_regularizar_cerdos_codificados]", obj)
+    End Function
+
     Public Function Cn_EliminarServicio(ByRef obj As coControlAnimal) As String
         Return cls_at.Cd_EliminarEventoCerda("[w_pa_eliminar_evento_servicio]", obj)
     End Function
@@ -330,5 +334,9 @@ Public Class cnControlAnimal
 
     Public Function Cn_ConsultarHistoricoParto(ByRef obj As coControlAnimal) As DataTable
         Return cls_at.Cd_ConsultarxFechasUbicacionDt("[w_pa_cons_reporte_partos_por_fechas]", obj)
+    End Function
+
+    Public Function Cn_ConsultarAnimalCodificadosRegularizacion(ByRef obj As coControlAnimal) As DataTable
+        Return cls_at.Cd_ConsultarAnimalCodificadosRegularizacion("[w_pa_cons_animales_codificados_regularizar]", obj)
     End Function
 End Class
