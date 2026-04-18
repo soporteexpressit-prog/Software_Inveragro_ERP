@@ -29,6 +29,7 @@
     Private _esmolino As String
     Private _EsRacionExterna As Boolean
     Private _IdProductoEquivalencia As Integer
+    Private _NumDosis As Integer
 
     Public Property Idproducto As Integer
         Get
@@ -295,6 +296,15 @@
         End Get
         Set(value As Integer)
             _IdProductoEquivalencia = value
+        End Set
+    End Property
+
+    Public Property NumDosis As Integer
+        Get
+            Return _NumDosis
+        End Get
+        Set(value As Integer)
+            _NumDosis = value
         End Set
     End Property
 End Class
