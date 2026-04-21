@@ -141,6 +141,21 @@ Public Class FrmDespachosCerdosVenta
                         Return
                     End If
 
+                    Dim valFPedido As Object = activeRow.Cells("F.Pedido").Value
+                    Dim dateFPedido As Date = Now.Date
+                    If TypeOf valFPedido Is Date Then
+                        dateFPedido = CDate(valFPedido)
+                    ElseIf valFPedido IsNot DBNull.Value AndAlso valFPedido IsNot Nothing Then
+                        Dim stringDate As String = valFPedido.ToString()
+                        If stringDate.Length >= 10 Then
+                            If Not Date.TryParseExact(stringDate.Substring(0, 10), "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture, System.Globalization.DateTimeStyles.None, dateFPedido) Then
+                                Date.TryParse(stringDate, dateFPedido)
+                            End If
+                        Else
+                            Date.TryParse(stringDate, dateFPedido)
+                        End If
+                    End If
+
                     Try
                         Dim frm As Form
 
@@ -152,7 +167,7 @@ Public Class FrmDespachosCerdosVenta
                             .observacion = activeRow.Cells("Observación").Value,
                             .idSalida = idSalida,
                             .idMotivoTransaccion = idMotivoTransaccion,
-                            .fPedido = activeRow.Cells("F.Pedido").Value
+                            .fPedido = dateFPedido
                         }
                         Else
                             frm = New FrmAtenderPedidoCerdoVenta With {
@@ -162,7 +177,7 @@ Public Class FrmDespachosCerdosVenta
                             .observacion = activeRow.Cells("Observación").Value,
                             .idSalida = idSalida,
                             .sacosEngorde = activeRow.Cells("Sacos Engorde").Value,
-                            .fPedido = activeRow.Cells("F.Pedido").Value
+                            .fPedido = dateFPedido
                         }
                         End If
 
