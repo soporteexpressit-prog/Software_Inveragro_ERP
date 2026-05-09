@@ -22,9 +22,43 @@ Public Class FrmRegularizarSalidaConArete
 
     Private Sub Inicializar()
         LblPlantel.Text = valorPlantel
-        DtpFechaControl.Value = Now.Date
         TxtAreteAnimal.ReadOnly = True
         TxtMotivoMortalidad.ReadOnly = True
+        ConsultarInicializarDiccionario()
+    End Sub
+
+    Private Sub ConsultarInicializarDiccionario()
+        DtpFechaControl.Value = VariablesGlobales.ParametrosRegularizacionCodificadas("fRegularizacion")
+        DtpFechaControl.Enabled = If(VariablesGlobales.ParametrosRegularizacionCodificadas("fRegularizacionBloqueo") = 1, False, True)
+        idMotivoMortalidad = VariablesGlobales.ParametrosRegularizacionCodificadas("idMotivoRegularizacion")
+        TxtMotivoMortalidad.Text = VariablesGlobales.ParametrosRegularizacionCodificadas("valorMotivoRegularizacion").ToString()
+        BtnMotivoMortalidad.Enabled = If(VariablesGlobales.ParametrosRegularizacionCodificadas("motivoRegularizacionBloqueo") = 1, False, True)
+    End Sub
+
+    Private Sub BtnBloquearFecha_Click(sender As Object, e As EventArgs) Handles BtnBloquearFecha.Click
+        If CInt(VariablesGlobales.ParametrosRegularizacionCodificadas("fRegularizacionBloqueo")) = 1 Then
+            DtpFechaControl.Enabled = True
+            VariablesGlobales.ParametrosRegularizacionCodificadas("fRegularizacion") = Now.Date
+            VariablesGlobales.ParametrosRegularizacionCodificadas("fRegularizacionBloqueo") = 0
+        Else
+            DtpFechaControl.Enabled = False
+            VariablesGlobales.ParametrosRegularizacionCodificadas("fRegularizacion") = DtpFechaControl.Value
+            VariablesGlobales.ParametrosRegularizacionCodificadas("fRegularizacionBloqueo") = 1
+        End If
+    End Sub
+
+    Private Sub BtnBloquearMotivo_Click(sender As Object, e As EventArgs) Handles BtnBloquearMotivo.Click
+        If CInt(VariablesGlobales.ParametrosRegularizacionCodificadas("motivoRegularizacionBloqueo")) = 1 Then
+            BtnMotivoMortalidad.Enabled = True
+            VariablesGlobales.ParametrosRegularizacionCodificadas("idMotivoRegularizacion") = 0
+            VariablesGlobales.ParametrosRegularizacionCodificadas("valorMotivoRegularizacion") = ""
+            VariablesGlobales.ParametrosRegularizacionCodificadas("motivoRegularizacionBloqueo") = 0
+        Else
+            BtnMotivoMortalidad.Enabled = False
+            VariablesGlobales.ParametrosRegularizacionCodificadas("idMotivoRegularizacion") = idMotivoMortalidad
+            VariablesGlobales.ParametrosRegularizacionCodificadas("valorMotivoRegularizacion") = TxtMotivoMortalidad.Text
+            VariablesGlobales.ParametrosRegularizacionCodificadas("motivoRegularizacionBloqueo") = 1
+        End If
     End Sub
 
     Private Sub BtnGuardar_Click(sender As Object, e As EventArgs) Handles BtnGuardar.Click

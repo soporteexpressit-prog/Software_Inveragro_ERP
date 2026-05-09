@@ -71,9 +71,9 @@ Partial Class FrmPreparacionRacion
         Me.Panel2.Controls.Add(Me.ToolStrip1)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(2, 1, 2, 1)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1923, 297)
+        Me.Panel2.Size = New System.Drawing.Size(1282, 193)
         Me.Panel2.TabIndex = 8
         '
         'GroupBox1
@@ -82,9 +82,11 @@ Partial Class FrmPreparacionRacion
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.lblPeriodo)
-        Me.GroupBox1.Location = New System.Drawing.Point(47, 91)
+        Me.GroupBox1.Location = New System.Drawing.Point(31, 59)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(1410, 120)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox1.Size = New System.Drawing.Size(940, 78)
         Me.GroupBox1.TabIndex = 159
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Filtros de Búsqueda"
@@ -92,10 +94,9 @@ Partial Class FrmPreparacionRacion
         'dtpFecha
         '
         Me.dtpFecha.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dtpFecha.Location = New System.Drawing.Point(245, 53)
-        Me.dtpFecha.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.dtpFecha.Location = New System.Drawing.Point(163, 34)
         Me.dtpFecha.Name = "dtpFecha"
-        Me.dtpFecha.Size = New System.Drawing.Size(358, 28)
+        Me.dtpFecha.Size = New System.Drawing.Size(240, 21)
         Me.dtpFecha.TabIndex = 177
         '
         'Label2
@@ -104,10 +105,10 @@ Partial Class FrmPreparacionRacion
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(38, 56)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label2.Location = New System.Drawing.Point(25, 36)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(197, 22)
+        Me.Label2.Size = New System.Drawing.Size(130, 14)
         Me.Label2.TabIndex = 176
         Me.Label2.Text = "Seleccione Fecha :"
         '
@@ -117,10 +118,10 @@ Partial Class FrmPreparacionRacion
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(674, 56)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label3.Location = New System.Drawing.Point(449, 36)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(100, 22)
+        Me.Label3.Size = New System.Drawing.Size(67, 14)
         Me.Label3.TabIndex = 174
         Me.Label3.Text = "Periodo :"
         '
@@ -130,10 +131,10 @@ Partial Class FrmPreparacionRacion
         Me.lblPeriodo.BackColor = System.Drawing.Color.Transparent
         Me.lblPeriodo.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblPeriodo.ForeColor = System.Drawing.Color.Black
-        Me.lblPeriodo.Location = New System.Drawing.Point(787, 56)
-        Me.lblPeriodo.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.lblPeriodo.Location = New System.Drawing.Point(525, 36)
+        Me.lblPeriodo.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblPeriodo.Name = "lblPeriodo"
-        Me.lblPeriodo.Size = New System.Drawing.Size(89, 22)
+        Me.lblPeriodo.Size = New System.Drawing.Size(60, 14)
         Me.lblPeriodo.TabIndex = 175
         Me.lblPeriodo.Text = "FECHAS"
         '
@@ -143,9 +144,10 @@ Partial Class FrmPreparacionRacion
         Me.Label6.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(233, Byte), Integer))
         Me.Label6.Font = New System.Drawing.Font("Verdana", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(49, Byte), Integer))
-        Me.Label6.Location = New System.Drawing.Point(42, 27)
+        Me.Label6.Location = New System.Drawing.Point(28, 18)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(648, 29)
+        Me.Label6.Size = New System.Drawing.Size(430, 18)
         Me.Label6.TabIndex = 128
         Me.Label6.Text = "PREPARACIÓN DE ALIMENTO PARA PLANTELES"
         '
@@ -156,11 +158,11 @@ Partial Class FrmPreparacionRacion
         Me.ToolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
         Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnPrepararRacionMolinoalica, Me.BtnHistoricoPreparacion, Me.btnConsultarPedidosPreparadoMolinoalica, Me.btnHistoricoRacionPreparadaMolinoalica, Me.btnExportarMolinoalica, Me.btncerrar})
-        Me.ToolStrip1.Location = New System.Drawing.Point(0, 257)
-        Me.ToolStrip1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.ToolStrip1.Location = New System.Drawing.Point(0, 155)
+        Me.ToolStrip1.Margin = New System.Windows.Forms.Padding(2, 1, 2, 1)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Padding = New System.Windows.Forms.Padding(0, 0, 3, 0)
-        Me.ToolStrip1.Size = New System.Drawing.Size(1923, 40)
+        Me.ToolStrip1.Padding = New System.Windows.Forms.Padding(0, 0, 2, 0)
+        Me.ToolStrip1.Size = New System.Drawing.Size(1282, 38)
         Me.ToolStrip1.TabIndex = 52
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -173,7 +175,7 @@ Partial Class FrmPreparacionRacion
         Me.btnPrepararRacionMolinoalica.Margin = New System.Windows.Forms.Padding(5)
         Me.btnPrepararRacionMolinoalica.Name = "btnPrepararRacionMolinoalica"
         Me.btnPrepararRacionMolinoalica.Padding = New System.Windows.Forms.Padding(2)
-        Me.btnPrepararRacionMolinoalica.Size = New System.Drawing.Size(201, 30)
+        Me.btnPrepararRacionMolinoalica.Size = New System.Drawing.Size(142, 28)
         Me.btnPrepararRacionMolinoalica.Text = "Preparar Ración"
         Me.btnPrepararRacionMolinoalica.ToolTipText = "Preparar Ración"
         '
@@ -186,7 +188,7 @@ Partial Class FrmPreparacionRacion
         Me.BtnHistoricoPreparacion.Margin = New System.Windows.Forms.Padding(5)
         Me.BtnHistoricoPreparacion.Name = "BtnHistoricoPreparacion"
         Me.BtnHistoricoPreparacion.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnHistoricoPreparacion.Size = New System.Drawing.Size(310, 30)
+        Me.BtnHistoricoPreparacion.Size = New System.Drawing.Size(213, 28)
         Me.BtnHistoricoPreparacion.Text = "Historico de Preparaciones"
         Me.BtnHistoricoPreparacion.ToolTipText = "Despachar Ración"
         '
@@ -199,7 +201,7 @@ Partial Class FrmPreparacionRacion
         Me.btnConsultarPedidosPreparadoMolinoalica.Margin = New System.Windows.Forms.Padding(5)
         Me.btnConsultarPedidosPreparadoMolinoalica.Name = "btnConsultarPedidosPreparadoMolinoalica"
         Me.btnConsultarPedidosPreparadoMolinoalica.Padding = New System.Windows.Forms.Padding(2)
-        Me.btnConsultarPedidosPreparadoMolinoalica.Size = New System.Drawing.Size(240, 30)
+        Me.btnConsultarPedidosPreparadoMolinoalica.Size = New System.Drawing.Size(167, 28)
         Me.btnConsultarPedidosPreparadoMolinoalica.Text = "Pedidos Preparados"
         Me.btnConsultarPedidosPreparadoMolinoalica.ToolTipText = "Pedidos Preparados"
         '
@@ -212,7 +214,7 @@ Partial Class FrmPreparacionRacion
         Me.btnHistoricoRacionPreparadaMolinoalica.Margin = New System.Windows.Forms.Padding(5)
         Me.btnHistoricoRacionPreparadaMolinoalica.Name = "btnHistoricoRacionPreparadaMolinoalica"
         Me.btnHistoricoRacionPreparadaMolinoalica.Padding = New System.Windows.Forms.Padding(2)
-        Me.btnHistoricoRacionPreparadaMolinoalica.Size = New System.Drawing.Size(251, 30)
+        Me.btnHistoricoRacionPreparadaMolinoalica.Size = New System.Drawing.Size(174, 28)
         Me.btnHistoricoRacionPreparadaMolinoalica.Text = "Raciones Preparadas"
         Me.btnHistoricoRacionPreparadaMolinoalica.ToolTipText = "Historico de Preparaciones"
         '
@@ -225,7 +227,7 @@ Partial Class FrmPreparacionRacion
         Me.btnExportarMolinoalica.Margin = New System.Windows.Forms.Padding(5)
         Me.btnExportarMolinoalica.Name = "btnExportarMolinoalica"
         Me.btnExportarMolinoalica.Padding = New System.Windows.Forms.Padding(2)
-        Me.btnExportarMolinoalica.Size = New System.Drawing.Size(125, 30)
+        Me.btnExportarMolinoalica.Size = New System.Drawing.Size(92, 28)
         Me.btnExportarMolinoalica.Text = "Exportar"
         Me.btnExportarMolinoalica.ToolTipText = "Exportar"
         '
@@ -238,7 +240,7 @@ Partial Class FrmPreparacionRacion
         Me.btncerrar.Margin = New System.Windows.Forms.Padding(5)
         Me.btncerrar.Name = "btncerrar"
         Me.btncerrar.Padding = New System.Windows.Forms.Padding(2)
-        Me.btncerrar.Size = New System.Drawing.Size(84, 30)
+        Me.btncerrar.Size = New System.Drawing.Size(66, 28)
         Me.btncerrar.Text = "Salir"
         '
         'dtgListadoPreparacionRacion
@@ -313,10 +315,9 @@ Partial Class FrmPreparacionRacion
         Me.dtgListadoPreparacionRacion.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy
         Me.dtgListadoPreparacionRacion.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dtgListadoPreparacionRacion.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dtgListadoPreparacionRacion.Location = New System.Drawing.Point(0, 297)
-        Me.dtgListadoPreparacionRacion.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.dtgListadoPreparacionRacion.Location = New System.Drawing.Point(0, 193)
         Me.dtgListadoPreparacionRacion.Name = "dtgListadoPreparacionRacion"
-        Me.dtgListadoPreparacionRacion.Size = New System.Drawing.Size(1923, 488)
+        Me.dtgListadoPreparacionRacion.Size = New System.Drawing.Size(1282, 317)
         Me.dtgListadoPreparacionRacion.TabIndex = 9
         Me.dtgListadoPreparacionRacion.Text = "UltraGrid1"
         '
@@ -330,10 +331,9 @@ Partial Class FrmPreparacionRacion
         '
         Me.Ptbx_Cargando.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Ptbx_Cargando.Image = Global.Formularios.My.Resources.Resources.loader
-        Me.Ptbx_Cargando.Location = New System.Drawing.Point(895, 514)
-        Me.Ptbx_Cargando.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Ptbx_Cargando.Location = New System.Drawing.Point(597, 334)
         Me.Ptbx_Cargando.Name = "Ptbx_Cargando"
-        Me.Ptbx_Cargando.Size = New System.Drawing.Size(64, 57)
+        Me.Ptbx_Cargando.Size = New System.Drawing.Size(43, 37)
         Me.Ptbx_Cargando.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.Ptbx_Cargando.TabIndex = 28
         Me.Ptbx_Cargando.TabStop = False
@@ -341,12 +341,13 @@ Partial Class FrmPreparacionRacion
         '
         'FrmPreparacionRacion
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1923, 785)
+        Me.ClientSize = New System.Drawing.Size(1282, 510)
         Me.Controls.Add(Me.Ptbx_Cargando)
         Me.Controls.Add(Me.dtgListadoPreparacionRacion)
         Me.Controls.Add(Me.Panel2)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "FrmPreparacionRacion"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "PREPARACIÓN DE RACIONES"

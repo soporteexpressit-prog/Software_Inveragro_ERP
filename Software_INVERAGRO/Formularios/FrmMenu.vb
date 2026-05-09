@@ -1401,4 +1401,8 @@ GetType(FrmUnidadMedida)}
     Private Sub HISTORICODEDEPURACIÓNToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HISTORICODEDEPURACIÓNToolStripMenuItem.Click
         AbrirFormulario("FrmHistoricoDepuraciones")
     End Sub
+
+    Private Sub COSTOXKILOCERDOToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles COSTOXKILOCERDOToolStripMenuItem.Click
+        AbrirFormulario("FrmReporteCostoxKiloCerdo")
+    End Sub
 End Class

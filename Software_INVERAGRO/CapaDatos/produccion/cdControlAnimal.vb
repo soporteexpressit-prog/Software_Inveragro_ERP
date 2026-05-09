@@ -1455,4 +1455,20 @@ Public Class cdControlAnimal
             Throw ex
         End Try
     End Function
+
+
+    Public Function Cd_ConsultarxIdCampaña(name As String, obj As coControlAnimal) As DataSet
+        Dim ds As New DataSet
+        Try
+            con.Abrir()
+            Dim da As New SqlDataAdapter(name, con.con)
+            da.SelectCommand.CommandType = 4
+            da.SelectCommand.Parameters.AddWithValue("@idCampaña", obj.IdCampaña)
+            da.Fill(ds)
+        Catch ex As Exception
+            Throw ex
+        End Try
+        con.Salir()
+        Return ds
+    End Function
 End Class

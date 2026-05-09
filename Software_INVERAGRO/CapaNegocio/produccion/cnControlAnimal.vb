@@ -339,4 +339,22 @@ Public Class cnControlAnimal
     Public Function Cn_ConsultarAnimalCodificadosRegularizacion(ByRef obj As coControlAnimal) As DataTable
         Return cls_at.Cd_ConsultarAnimalCodificadosRegularizacion("[w_pa_cons_animales_codificados_regularizar]", obj)
     End Function
+
+    'CONSULTAS POR COSTO X KILO CERDO
+    Public Function Cn_CostoxKiloLechonReproduccion(ByRef obj As coControlAnimal) As DataSet
+        Return cls_at.Cd_ConsultarxIdCampaña("[w_pa_costo_x_kilo_lechon_reproduccion]", obj)
+    End Function
+
+    'CONSULTAS POR COSTO X KILO CERDO - DETALLADO
+    Public Function Cn_CostoxKiloLechonRP2Detallado(ByRef obj As coControlAnimal) As DataSet
+        Return cls_at.Cd_ConsultarxIdCampaña("[w_costo_vacunacion_chanchillas]", obj)
+    End Function
+
+    Public Function Cn_CostoxKiloLechonRP6Detallado(ByRef obj As coControlAnimal) As DataSet
+        Return cls_at.Cd_ConsultarxIdCampaña("[w_costo_gastos_veterinarios_detalle]", obj)
+    End Function
+
+    Public Function Cn_CostoxKiloLechonRP7Detallado(ByRef obj As coControlAnimal) As DataSet
+        Return cls_at.Cd_ConsultarxIdCampaña("[w_costo_dosis_gestantes]", obj)
+    End Function
 End Class

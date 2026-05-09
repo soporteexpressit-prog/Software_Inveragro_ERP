@@ -113,16 +113,19 @@ Partial Class FrmRetornarChanchillasPuras
         Me.Panel2.Controls.Add(Me.ToolStrip1)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1189, 970)
+        Me.Panel2.Size = New System.Drawing.Size(793, 630)
         Me.Panel2.TabIndex = 11
         '
         'GroupBox4
         '
         Me.GroupBox4.Controls.Add(Me.DtgListadoLote)
-        Me.GroupBox4.Location = New System.Drawing.Point(12, 504)
+        Me.GroupBox4.Location = New System.Drawing.Point(8, 328)
+        Me.GroupBox4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(1165, 252)
+        Me.GroupBox4.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox4.Size = New System.Drawing.Size(777, 164)
         Me.GroupBox4.TabIndex = 215
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Detalle lote - retorno"
@@ -197,10 +200,9 @@ Partial Class FrmRetornarChanchillasPuras
         Me.DtgListadoLote.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy
         Me.DtgListadoLote.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DtgListadoLote.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DtgListadoLote.Location = New System.Drawing.Point(3, 22)
-        Me.DtgListadoLote.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.DtgListadoLote.Location = New System.Drawing.Point(2, 15)
         Me.DtgListadoLote.Name = "DtgListadoLote"
-        Me.DtgListadoLote.Size = New System.Drawing.Size(1159, 227)
+        Me.DtgListadoLote.Size = New System.Drawing.Size(773, 147)
         Me.DtgListadoLote.TabIndex = 175
         Me.DtgListadoLote.Text = "UltraGrid1"
         '
@@ -210,10 +212,10 @@ Partial Class FrmRetornarChanchillasPuras
         Me.LblNumPuras.BackColor = System.Drawing.Color.Transparent
         Me.LblNumPuras.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblNumPuras.ForeColor = System.Drawing.Color.Black
-        Me.LblNumPuras.Location = New System.Drawing.Point(825, 155)
-        Me.LblNumPuras.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.LblNumPuras.Location = New System.Drawing.Point(550, 101)
+        Me.LblNumPuras.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblNumPuras.Name = "LblNumPuras"
-        Me.LblNumPuras.Size = New System.Drawing.Size(23, 22)
+        Me.LblNumPuras.Size = New System.Drawing.Size(16, 14)
         Me.LblNumPuras.TabIndex = 214
         Me.LblNumPuras.Text = "0"
         '
@@ -223,10 +225,10 @@ Partial Class FrmRetornarChanchillasPuras
         Me.LblNumCambo.BackColor = System.Drawing.Color.Transparent
         Me.LblNumCambo.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblNumCambo.ForeColor = System.Drawing.Color.Black
-        Me.LblNumCambo.Location = New System.Drawing.Point(564, 155)
-        Me.LblNumCambo.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.LblNumCambo.Location = New System.Drawing.Point(376, 101)
+        Me.LblNumCambo.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblNumCambo.Name = "LblNumCambo"
-        Me.LblNumCambo.Size = New System.Drawing.Size(23, 22)
+        Me.LblNumCambo.Size = New System.Drawing.Size(16, 14)
         Me.LblNumCambo.TabIndex = 213
         Me.LblNumCambo.Text = "0"
         '
@@ -236,10 +238,10 @@ Partial Class FrmRetornarChanchillasPuras
         Me.Label17.BackColor = System.Drawing.Color.Transparent
         Me.Label17.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label17.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label17.Location = New System.Drawing.Point(701, 155)
-        Me.Label17.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label17.Location = New System.Drawing.Point(467, 101)
+        Me.Label17.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(113, 22)
+        Me.Label17.Size = New System.Drawing.Size(75, 14)
         Me.Label17.TabIndex = 211
         Me.Label17.Text = "N° Puras :"
         '
@@ -249,10 +251,10 @@ Partial Class FrmRetornarChanchillasPuras
         Me.Label16.BackColor = System.Drawing.Color.Transparent
         Me.Label16.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label16.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label16.Location = New System.Drawing.Point(368, 155)
-        Me.Label16.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label16.Location = New System.Drawing.Point(245, 101)
+        Me.Label16.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(184, 22)
+        Me.Label16.Size = New System.Drawing.Size(120, 14)
         Me.Label16.TabIndex = 212
         Me.Label16.Text = "N° Camborough :"
         '
@@ -266,22 +268,23 @@ Partial Class FrmRetornarChanchillasPuras
         Me.GroupBox3.Controls.Add(Me.Label4)
         Me.GroupBox3.Controls.Add(Me.TxtObservacion)
         Me.GroupBox3.Controls.Add(Me.Label15)
-        Me.GroupBox3.Location = New System.Drawing.Point(15, 762)
+        Me.GroupBox3.Location = New System.Drawing.Point(10, 495)
+        Me.GroupBox3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(1162, 192)
+        Me.GroupBox3.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox3.Size = New System.Drawing.Size(775, 125)
         Me.GroupBox3.TabIndex = 190
         Me.GroupBox3.TabStop = False
-        Me.GroupBox3.Text = "Infromación de peso y comentario"
+        Me.GroupBox3.Text = "Información de peso y comentario"
         '
         'TxtTotalAnimales
         '
         Me.TxtTotalAnimales.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxtTotalAnimales.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtTotalAnimales.Location = New System.Drawing.Point(225, 46)
-        Me.TxtTotalAnimales.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.TxtTotalAnimales.Location = New System.Drawing.Point(150, 30)
         Me.TxtTotalAnimales.MaxLength = 50
         Me.TxtTotalAnimales.Name = "TxtTotalAnimales"
-        Me.TxtTotalAnimales.Size = New System.Drawing.Size(115, 28)
+        Me.TxtTotalAnimales.Size = New System.Drawing.Size(78, 21)
         Me.TxtTotalAnimales.TabIndex = 208
         Me.TxtTotalAnimales.TabStop = False
         Me.TxtTotalAnimales.Text = "0.0"
@@ -292,10 +295,10 @@ Partial Class FrmRetornarChanchillasPuras
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label5.Location = New System.Drawing.Point(35, 49)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label5.Location = New System.Drawing.Point(23, 32)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(172, 22)
+        Me.Label5.Size = New System.Drawing.Size(113, 14)
         Me.Label5.TabIndex = 207
         Me.Label5.Text = "Total Animales :"
         '
@@ -303,11 +306,10 @@ Partial Class FrmRetornarChanchillasPuras
         '
         Me.TxtPesoPromedio.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxtPesoPromedio.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtPesoPromedio.Location = New System.Drawing.Point(890, 46)
-        Me.TxtPesoPromedio.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.TxtPesoPromedio.Location = New System.Drawing.Point(593, 30)
         Me.TxtPesoPromedio.MaxLength = 50
         Me.TxtPesoPromedio.Name = "TxtPesoPromedio"
-        Me.TxtPesoPromedio.Size = New System.Drawing.Size(115, 28)
+        Me.TxtPesoPromedio.Size = New System.Drawing.Size(78, 21)
         Me.TxtPesoPromedio.TabIndex = 206
         Me.TxtPesoPromedio.TabStop = False
         Me.TxtPesoPromedio.Text = "0.0"
@@ -316,11 +318,10 @@ Partial Class FrmRetornarChanchillasPuras
         '
         Me.TxtPesoTotal.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxtPesoTotal.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtPesoTotal.Location = New System.Drawing.Point(536, 46)
-        Me.TxtPesoTotal.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.TxtPesoTotal.Location = New System.Drawing.Point(357, 30)
         Me.TxtPesoTotal.MaxLength = 50
         Me.TxtPesoTotal.Name = "TxtPesoTotal"
-        Me.TxtPesoTotal.Size = New System.Drawing.Size(115, 28)
+        Me.TxtPesoTotal.Size = New System.Drawing.Size(78, 21)
         Me.TxtPesoTotal.TabIndex = 205
         Me.TxtPesoTotal.TabStop = False
         Me.TxtPesoTotal.Text = "0.0"
@@ -331,10 +332,10 @@ Partial Class FrmRetornarChanchillasPuras
         Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label6.Location = New System.Drawing.Point(707, 49)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label6.Location = New System.Drawing.Point(471, 32)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(173, 22)
+        Me.Label6.Size = New System.Drawing.Size(115, 14)
         Me.Label6.TabIndex = 204
         Me.Label6.Text = "Peso Promedio :"
         '
@@ -344,20 +345,21 @@ Partial Class FrmRetornarChanchillasPuras
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label4.Location = New System.Drawing.Point(391, 49)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label4.Location = New System.Drawing.Point(261, 32)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(127, 22)
+        Me.Label4.Size = New System.Drawing.Size(85, 14)
         Me.Label4.TabIndex = 203
         Me.Label4.Text = "Peso Total :"
         '
         'TxtObservacion
         '
         Me.TxtObservacion.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtObservacion.Location = New System.Drawing.Point(225, 99)
+        Me.TxtObservacion.Location = New System.Drawing.Point(150, 64)
+        Me.TxtObservacion.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TxtObservacion.MaxLength = 150
         Me.TxtObservacion.Name = "TxtObservacion"
-        Me.TxtObservacion.Size = New System.Drawing.Size(780, 74)
+        Me.TxtObservacion.Size = New System.Drawing.Size(521, 50)
         Me.TxtObservacion.TabIndex = 180
         Me.TxtObservacion.Text = "NINGUNA"
         '
@@ -367,10 +369,10 @@ Partial Class FrmRetornarChanchillasPuras
         Me.Label15.BackColor = System.Drawing.Color.Transparent
         Me.Label15.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label15.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label15.Location = New System.Drawing.Point(74, 99)
-        Me.Label15.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label15.Location = New System.Drawing.Point(49, 64)
+        Me.Label15.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(133, 22)
+        Me.Label15.Size = New System.Drawing.Size(88, 14)
         Me.Label15.TabIndex = 179
         Me.Label15.Text = "Comentario:"
         '
@@ -386,9 +388,11 @@ Partial Class FrmRetornarChanchillasPuras
         Me.GroupBox2.Controls.Add(Me.TxtDatos)
         Me.GroupBox2.Controls.Add(Me.BtnBuscarConductor)
         Me.GroupBox2.Controls.Add(Me.Label8)
-        Me.GroupBox2.Location = New System.Drawing.Point(12, 339)
+        Me.GroupBox2.Location = New System.Drawing.Point(8, 220)
+        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(1162, 159)
+        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox2.Size = New System.Drawing.Size(775, 103)
         Me.GroupBox2.TabIndex = 189
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Información de conductor y vehículo"
@@ -397,11 +401,10 @@ Partial Class FrmRetornarChanchillasPuras
         '
         Me.TxtTransporte.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxtTransporte.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtTransporte.Location = New System.Drawing.Point(855, 48)
-        Me.TxtTransporte.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.TxtTransporte.Location = New System.Drawing.Point(570, 31)
         Me.TxtTransporte.MaxLength = 50
         Me.TxtTransporte.Name = "TxtTransporte"
-        Me.TxtTransporte.Size = New System.Drawing.Size(170, 28)
+        Me.TxtTransporte.Size = New System.Drawing.Size(115, 21)
         Me.TxtTransporte.TabIndex = 173
         Me.TxtTransporte.TabStop = False
         '
@@ -411,10 +414,10 @@ Partial Class FrmRetornarChanchillasPuras
         Me.Label10.BackColor = System.Drawing.Color.Transparent
         Me.Label10.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label10.Location = New System.Drawing.Point(31, 51)
-        Me.Label10.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label10.Location = New System.Drawing.Point(21, 33)
+        Me.Label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(195, 22)
+        Me.Label10.Size = New System.Drawing.Size(127, 14)
         Me.Label10.TabIndex = 47
         Me.Label10.Text = "N° de Documento:"
         '
@@ -422,11 +425,10 @@ Partial Class FrmRetornarChanchillasPuras
         '
         Me.TxtPlaca.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxtPlaca.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtPlaca.Location = New System.Drawing.Point(855, 96)
-        Me.TxtPlaca.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.TxtPlaca.Location = New System.Drawing.Point(570, 62)
         Me.TxtPlaca.MaxLength = 50
         Me.TxtPlaca.Name = "TxtPlaca"
-        Me.TxtPlaca.Size = New System.Drawing.Size(170, 28)
+        Me.TxtPlaca.Size = New System.Drawing.Size(115, 21)
         Me.TxtPlaca.TabIndex = 176
         Me.TxtPlaca.TabStop = False
         '
@@ -436,10 +438,10 @@ Partial Class FrmRetornarChanchillasPuras
         Me.Label9.BackColor = System.Drawing.Color.Transparent
         Me.Label9.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label9.Location = New System.Drawing.Point(151, 99)
-        Me.Label9.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label9.Location = New System.Drawing.Point(101, 64)
+        Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(75, 22)
+        Me.Label9.Size = New System.Drawing.Size(50, 14)
         Me.Label9.TabIndex = 165
         Me.Label9.Text = "Datos:"
         '
@@ -449,10 +451,10 @@ Partial Class FrmRetornarChanchillasPuras
         Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label7.Location = New System.Drawing.Point(774, 99)
-        Me.Label7.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label7.Location = New System.Drawing.Point(516, 64)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(71, 22)
+        Me.Label7.Size = New System.Drawing.Size(48, 14)
         Me.Label7.TabIndex = 175
         Me.Label7.Text = "Placa:"
         '
@@ -460,11 +462,10 @@ Partial Class FrmRetornarChanchillasPuras
         '
         Me.TxtNumDoc.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxtNumDoc.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtNumDoc.Location = New System.Drawing.Point(244, 48)
-        Me.TxtNumDoc.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.TxtNumDoc.Location = New System.Drawing.Point(163, 31)
         Me.TxtNumDoc.MaxLength = 50
         Me.TxtNumDoc.Name = "TxtNumDoc"
-        Me.TxtNumDoc.Size = New System.Drawing.Size(269, 28)
+        Me.TxtNumDoc.Size = New System.Drawing.Size(181, 21)
         Me.TxtNumDoc.TabIndex = 166
         Me.TxtNumDoc.TabStop = False
         '
@@ -474,10 +475,9 @@ Partial Class FrmRetornarChanchillasPuras
         Me.BtnBuscarVehiculo.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnBuscarVehiculo.Image = CType(resources.GetObject("BtnBuscarVehiculo.Image"), System.Drawing.Image)
         Me.BtnBuscarVehiculo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnBuscarVehiculo.Location = New System.Drawing.Point(1033, 40)
-        Me.BtnBuscarVehiculo.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.BtnBuscarVehiculo.Location = New System.Drawing.Point(689, 26)
         Me.BtnBuscarVehiculo.Name = "BtnBuscarVehiculo"
-        Me.BtnBuscarVehiculo.Size = New System.Drawing.Size(48, 45)
+        Me.BtnBuscarVehiculo.Size = New System.Drawing.Size(32, 29)
         Me.BtnBuscarVehiculo.TabIndex = 174
         Me.BtnBuscarVehiculo.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.BtnBuscarVehiculo.UseVisualStyleBackColor = True
@@ -486,11 +486,10 @@ Partial Class FrmRetornarChanchillasPuras
         '
         Me.TxtDatos.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxtDatos.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtDatos.Location = New System.Drawing.Point(244, 96)
-        Me.TxtDatos.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.TxtDatos.Location = New System.Drawing.Point(163, 62)
         Me.TxtDatos.MaxLength = 50
         Me.TxtDatos.Name = "TxtDatos"
-        Me.TxtDatos.Size = New System.Drawing.Size(333, 28)
+        Me.TxtDatos.Size = New System.Drawing.Size(223, 21)
         Me.TxtDatos.TabIndex = 167
         Me.TxtDatos.TabStop = False
         Me.TxtDatos.Text = "  "
@@ -501,10 +500,9 @@ Partial Class FrmRetornarChanchillasPuras
         Me.BtnBuscarConductor.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnBuscarConductor.Image = CType(resources.GetObject("BtnBuscarConductor.Image"), System.Drawing.Image)
         Me.BtnBuscarConductor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnBuscarConductor.Location = New System.Drawing.Point(529, 40)
-        Me.BtnBuscarConductor.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.BtnBuscarConductor.Location = New System.Drawing.Point(353, 26)
         Me.BtnBuscarConductor.Name = "BtnBuscarConductor"
-        Me.BtnBuscarConductor.Size = New System.Drawing.Size(48, 45)
+        Me.BtnBuscarConductor.Size = New System.Drawing.Size(32, 29)
         Me.BtnBuscarConductor.TabIndex = 171
         Me.BtnBuscarConductor.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.BtnBuscarConductor.UseVisualStyleBackColor = True
@@ -515,10 +513,10 @@ Partial Class FrmRetornarChanchillasPuras
         Me.Label8.BackColor = System.Drawing.Color.Transparent
         Me.Label8.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label8.Location = New System.Drawing.Point(717, 51)
-        Me.Label8.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label8.Location = New System.Drawing.Point(478, 33)
+        Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(128, 22)
+        Me.Label8.Size = New System.Drawing.Size(84, 14)
         Me.Label8.TabIndex = 172
         Me.Label8.Text = "Transporte:"
         '
@@ -528,10 +526,10 @@ Partial Class FrmRetornarChanchillasPuras
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(29, 88)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label2.Location = New System.Drawing.Point(19, 57)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(169, 22)
+        Me.Label2.Size = New System.Drawing.Size(111, 14)
         Me.Label2.TabIndex = 190
         Me.Label2.Text = "Fecha Retorno :"
         '
@@ -539,10 +537,9 @@ Partial Class FrmRetornarChanchillasPuras
         '
         Me.DtpFechaRetorno.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DtpFechaRetorno.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DtpFechaRetorno.Location = New System.Drawing.Point(206, 85)
-        Me.DtpFechaRetorno.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.DtpFechaRetorno.Location = New System.Drawing.Point(137, 55)
         Me.DtpFechaRetorno.Name = "DtpFechaRetorno"
-        Me.DtpFechaRetorno.Size = New System.Drawing.Size(200, 28)
+        Me.DtpFechaRetorno.Size = New System.Drawing.Size(135, 21)
         Me.DtpFechaRetorno.TabIndex = 191
         '
         'GroupBox1
@@ -551,9 +548,11 @@ Partial Class FrmRetornarChanchillasPuras
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.CmbUbicacionLLegada)
         Me.GroupBox1.Controls.Add(Me.Label3)
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 214)
+        Me.GroupBox1.Location = New System.Drawing.Point(8, 139)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(1165, 114)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox1.Size = New System.Drawing.Size(777, 74)
         Me.GroupBox1.TabIndex = 188
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Información de ubicación de translado"
@@ -562,9 +561,10 @@ Partial Class FrmRetornarChanchillasPuras
         '
         Me.cbxalmacendestino.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbxalmacendestino.FormattingEnabled = True
-        Me.cbxalmacendestino.Location = New System.Drawing.Point(221, 50)
+        Me.cbxalmacendestino.Location = New System.Drawing.Point(147, 32)
+        Me.cbxalmacendestino.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.cbxalmacendestino.Name = "cbxalmacendestino"
-        Me.cbxalmacendestino.Size = New System.Drawing.Size(296, 28)
+        Me.cbxalmacendestino.Size = New System.Drawing.Size(199, 21)
         Me.cbxalmacendestino.TabIndex = 178
         '
         'Label1
@@ -573,10 +573,10 @@ Partial Class FrmRetornarChanchillasPuras
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(632, 53)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label1.Location = New System.Drawing.Point(421, 34)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(178, 22)
+        Me.Label1.Size = New System.Drawing.Size(118, 14)
         Me.Label1.TabIndex = 165
         Me.Label1.Text = "Plantel Llegada :"
         '
@@ -637,10 +637,9 @@ Partial Class FrmRetornarChanchillasPuras
         Me.CmbUbicacionLLegada.DisplayLayout.ScrollStyle = Infragistics.Win.UltraWinGrid.ScrollStyle.Immediate
         Me.CmbUbicacionLLegada.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy
         Me.CmbUbicacionLLegada.DropDownStyle = Infragistics.Win.UltraWinGrid.UltraComboStyle.DropDownList
-        Me.CmbUbicacionLLegada.Location = New System.Drawing.Point(820, 50)
-        Me.CmbUbicacionLLegada.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.CmbUbicacionLLegada.Location = New System.Drawing.Point(547, 32)
         Me.CmbUbicacionLLegada.Name = "CmbUbicacionLLegada"
-        Me.CmbUbicacionLLegada.Size = New System.Drawing.Size(267, 29)
+        Me.CmbUbicacionLLegada.Size = New System.Drawing.Size(178, 22)
         Me.CmbUbicacionLLegada.TabIndex = 164
         '
         'Label3
@@ -649,10 +648,10 @@ Partial Class FrmRetornarChanchillasPuras
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(50, 53)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label3.Location = New System.Drawing.Point(33, 34)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(161, 22)
+        Me.Label3.Size = New System.Drawing.Size(107, 14)
         Me.Label3.TabIndex = 163
         Me.Label3.Text = "Plantel Salida :"
         '
@@ -663,10 +662,10 @@ Partial Class FrmRetornarChanchillasPuras
         Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnGuardar, Me.BtnCerrar})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.ToolStrip1.Margin = New System.Windows.Forms.Padding(3)
+        Me.ToolStrip1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Padding = New System.Windows.Forms.Padding(0, 0, 3, 0)
-        Me.ToolStrip1.Size = New System.Drawing.Size(1189, 40)
+        Me.ToolStrip1.Padding = New System.Windows.Forms.Padding(0, 0, 2, 0)
+        Me.ToolStrip1.Size = New System.Drawing.Size(793, 38)
         Me.ToolStrip1.TabIndex = 52
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -679,7 +678,7 @@ Partial Class FrmRetornarChanchillasPuras
         Me.btnGuardar.Margin = New System.Windows.Forms.Padding(5)
         Me.btnGuardar.Name = "btnGuardar"
         Me.btnGuardar.Padding = New System.Windows.Forms.Padding(2)
-        Me.btnGuardar.Size = New System.Drawing.Size(121, 30)
+        Me.btnGuardar.Size = New System.Drawing.Size(89, 28)
         Me.btnGuardar.Text = "Guardar"
         Me.btnGuardar.ToolTipText = "Guardar"
         '
@@ -692,16 +691,17 @@ Partial Class FrmRetornarChanchillasPuras
         Me.BtnCerrar.Margin = New System.Windows.Forms.Padding(5)
         Me.BtnCerrar.Name = "BtnCerrar"
         Me.BtnCerrar.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnCerrar.Size = New System.Drawing.Size(84, 30)
+        Me.BtnCerrar.Size = New System.Drawing.Size(66, 28)
         Me.BtnCerrar.Text = "Salir"
         Me.BtnCerrar.ToolTipText = "Cerrar"
         '
         'FrmRetornarChanchillasPuras
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1189, 970)
+        Me.ClientSize = New System.Drawing.Size(793, 630)
         Me.Controls.Add(Me.Panel2)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "FrmRetornarChanchillasPuras"

@@ -36,6 +36,10 @@ Public Class cnUbicacion
         Return cls_at.Cd_ListarCampañas("[w_pa_campañas_x_plantel]", obj)
     End Function
 
+    Public Function Cn_ListarCampañasCerradas(ByRef obj As coUbicacion) As DataTable
+        Return cls_at.Cd_ListarCampañasCerradas("[w_pa_cons_campañas_cerradas]", obj)
+    End Function
+
     Public Function Cn_ListarPlantelesEngorde() As DataTable
         Return cls_at.Cd_ListarPlanteles("[w_pa_listar_planteles_engorde]")
     End Function

@@ -1795,6 +1795,12 @@
     <Compile Include="produccion\FrmReporteConsumoMaternidad.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="produccion\ReporteCostoxKilo\FrmReporteCostoxKiloCerdo.Designer.vb">
+      <DependentUpon>FrmReporteCostoxKiloCerdo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="produccion\ReporteCostoxKilo\FrmReporteCostoxKiloCerdo.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="produccion\FrmReportePartoDetallado.Designer.vb">
       <DependentUpon>FrmReportePartoDetallado.vb</DependentUpon>
     </Compile>
@@ -1925,6 +1931,12 @@
       <DependentUpon>FrmRegularizarSalidaConArete.vb</DependentUpon>
     </Compile>
     <Compile Include="produccion\RegularizacionCerdos\FrmRegularizarSalidaConArete.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="produccion\ReporteCostoxKilo\FrmRptCostoxKiloDetalleF1.Designer.vb">
+      <DependentUpon>FrmRptCostoxKiloDetalleF1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="produccion\ReporteCostoxKilo\FrmRptCostoxKiloDetalleF1.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="RecursosHumanos\AnularPago.Designer.vb">
@@ -4780,6 +4792,9 @@
     <EmbeddedResource Include="produccion\FrmReporteConsumoMaternidad.resx">
       <DependentUpon>FrmReporteConsumoMaternidad.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="produccion\ReporteCostoxKilo\FrmReporteCostoxKiloCerdo.resx">
+      <DependentUpon>FrmReporteCostoxKiloCerdo.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="produccion\FrmReportePartoDetallado.resx">
       <DependentUpon>FrmReportePartoDetallado.vb</DependentUpon>
     </EmbeddedResource>
@@ -4845,6 +4860,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="produccion\RegularizacionCerdos\FrmRegularizarSalidaConArete.resx">
       <DependentUpon>FrmRegularizarSalidaConArete.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="produccion\ReporteCostoxKilo\FrmRptCostoxKiloDetalleF1.resx">
+      <DependentUpon>FrmRptCostoxKiloDetalleF1.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RecursosHumanos\AnularPago.resx">
       <DependentUpon>AnularPago.vb</DependentUpon>

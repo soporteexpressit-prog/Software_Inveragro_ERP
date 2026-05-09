@@ -24,22 +24,24 @@ Partial Class FrmRegularizarSalidaConArete
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmRegularizarSalidaConArete))
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.BtnBloquearMotivo = New System.Windows.Forms.Button()
+        Me.BtnBloquearFecha = New System.Windows.Forms.Button()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.TxtAreteAnimal = New System.Windows.Forms.TextBox()
+        Me.BtnBuscarAnimal = New System.Windows.Forms.Button()
+        Me.TxtObservacion = New System.Windows.Forms.RichTextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.TxtMotivoMortalidad = New System.Windows.Forms.RichTextBox()
+        Me.BtnMotivoMortalidad = New System.Windows.Forms.Button()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.DtpFechaControl = New System.Windows.Forms.DateTimePicker()
         Me.LblPlantel = New System.Windows.Forms.Label()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
-        Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.TxtObservacion = New System.Windows.Forms.RichTextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.TxtMotivoMortalidad = New System.Windows.Forms.RichTextBox()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.BtnMotivoMortalidad = New System.Windows.Forms.Button()
         Me.BtnGuardar = New System.Windows.Forms.ToolStripButton()
         Me.BtnCerrar = New System.Windows.Forms.ToolStripButton()
-        Me.TxtAreteAnimal = New System.Windows.Forms.TextBox()
-        Me.BtnBuscarAnimal = New System.Windows.Forms.Button()
-        Me.Label3 = New System.Windows.Forms.Label()
+        Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         Me.Panel2.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -47,6 +49,8 @@ Partial Class FrmRegularizarSalidaConArete
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.Panel2.Controls.Add(Me.BtnBloquearMotivo)
+        Me.Panel2.Controls.Add(Me.BtnBloquearFecha)
         Me.Panel2.Controls.Add(Me.Label3)
         Me.Panel2.Controls.Add(Me.TxtAreteAnimal)
         Me.Panel2.Controls.Add(Me.BtnBuscarAnimal)
@@ -67,71 +71,75 @@ Partial Class FrmRegularizarSalidaConArete
         Me.Panel2.Size = New System.Drawing.Size(586, 276)
         Me.Panel2.TabIndex = 14
         '
-        'Label12
+        'BtnBloquearMotivo
         '
-        Me.Label12.AutoSize = True
-        Me.Label12.BackColor = System.Drawing.Color.Transparent
-        Me.Label12.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label12.Location = New System.Drawing.Point(375, 117)
-        Me.Label12.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(55, 14)
-        Me.Label12.TabIndex = 216
-        Me.Label12.Text = "Fecha :"
+        Me.BtnBloquearMotivo.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnBloquearMotivo.AutoSize = True
+        Me.BtnBloquearMotivo.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnBloquearMotivo.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnBloquearMotivo.Image = Global.Formularios.My.Resources.Resources.candado_16px
+        Me.BtnBloquearMotivo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnBloquearMotivo.Location = New System.Drawing.Point(416, 167)
+        Me.BtnBloquearMotivo.Name = "BtnBloquearMotivo"
+        Me.BtnBloquearMotivo.Size = New System.Drawing.Size(24, 24)
+        Me.BtnBloquearMotivo.TabIndex = 233
+        Me.BtnBloquearMotivo.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnBloquearMotivo.UseVisualStyleBackColor = True
         '
-        'DtpFechaControl
+        'BtnBloquearFecha
         '
-        Me.DtpFechaControl.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DtpFechaControl.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DtpFechaControl.Location = New System.Drawing.Point(442, 114)
-        Me.DtpFechaControl.Name = "DtpFechaControl"
-        Me.DtpFechaControl.Size = New System.Drawing.Size(115, 21)
-        Me.DtpFechaControl.TabIndex = 217
+        Me.BtnBloquearFecha.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnBloquearFecha.AutoSize = True
+        Me.BtnBloquearFecha.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnBloquearFecha.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnBloquearFecha.Image = Global.Formularios.My.Resources.Resources.candado_16px
+        Me.BtnBloquearFecha.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnBloquearFecha.Location = New System.Drawing.Point(507, 112)
+        Me.BtnBloquearFecha.Name = "BtnBloquearFecha"
+        Me.BtnBloquearFecha.Size = New System.Drawing.Size(24, 24)
+        Me.BtnBloquearFecha.TabIndex = 232
+        Me.BtnBloquearFecha.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnBloquearFecha.UseVisualStyleBackColor = True
         '
-        'LblPlantel
+        'Label3
         '
-        Me.LblPlantel.AutoSize = True
-        Me.LblPlantel.BackColor = System.Drawing.Color.Transparent
-        Me.LblPlantel.Font = New System.Drawing.Font("Verdana", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblPlantel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.LblPlantel.Location = New System.Drawing.Point(29, 59)
-        Me.LblPlantel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.LblPlantel.Name = "LblPlantel"
-        Me.LblPlantel.Size = New System.Drawing.Size(88, 18)
-        Me.LblPlantel.TabIndex = 187
-        Me.LblPlantel.Text = "PLANTEL"
-        Me.LblPlantel.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.Label3.Location = New System.Drawing.Point(41, 117)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(52, 14)
+        Me.Label3.TabIndex = 231
+        Me.Label3.Text = "Arete :"
         '
-        'ToolStrip1
+        'TxtAreteAnimal
         '
-        Me.ToolStrip1.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.ToolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
-        Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnGuardar, Me.BtnCerrar})
-        Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.ToolStrip1.Margin = New System.Windows.Forms.Padding(2)
-        Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Padding = New System.Windows.Forms.Padding(0, 0, 2, 0)
-        Me.ToolStrip1.Size = New System.Drawing.Size(586, 38)
-        Me.ToolStrip1.TabIndex = 52
-        Me.ToolStrip1.Text = "ToolStrip1"
+        Me.TxtAreteAnimal.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.TxtAreteAnimal.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtAreteAnimal.Location = New System.Drawing.Point(97, 114)
+        Me.TxtAreteAnimal.MaxLength = 50
+        Me.TxtAreteAnimal.Name = "TxtAreteAnimal"
+        Me.TxtAreteAnimal.Size = New System.Drawing.Size(110, 21)
+        Me.TxtAreteAnimal.TabIndex = 230
         '
-        'BackgroundWorker1
+        'BtnBuscarAnimal
         '
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.Yellow
-        Me.Label1.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.Black
-        Me.Label1.Location = New System.Drawing.Point(223, 62)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(351, 13)
-        Me.Label1.TabIndex = 222
-        Me.Label1.Text = "Solo lista las VACIAS, VIVOS y estado de venta PENDIENTE"
+        Me.BtnBuscarAnimal.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnBuscarAnimal.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnBuscarAnimal.Image = CType(resources.GetObject("BtnBuscarAnimal.Image"), System.Drawing.Image)
+        Me.BtnBuscarAnimal.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnBuscarAnimal.Location = New System.Drawing.Point(213, 110)
+        Me.BtnBuscarAnimal.Name = "BtnBuscarAnimal"
+        Me.BtnBuscarAnimal.Size = New System.Drawing.Size(32, 29)
+        Me.BtnBuscarAnimal.TabIndex = 229
+        Me.BtnBuscarAnimal.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnBuscarAnimal.UseVisualStyleBackColor = True
         '
         'TxtObservacion
         '
@@ -169,6 +177,19 @@ Partial Class FrmRegularizarSalidaConArete
         Me.TxtMotivoMortalidad.TabStop = False
         Me.TxtMotivoMortalidad.Text = ""
         '
+        'BtnMotivoMortalidad
+        '
+        Me.BtnMotivoMortalidad.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnMotivoMortalidad.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnMotivoMortalidad.Image = CType(resources.GetObject("BtnMotivoMortalidad.Image"), System.Drawing.Image)
+        Me.BtnMotivoMortalidad.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnMotivoMortalidad.Location = New System.Drawing.Point(378, 165)
+        Me.BtnMotivoMortalidad.Name = "BtnMotivoMortalidad"
+        Me.BtnMotivoMortalidad.Size = New System.Drawing.Size(32, 29)
+        Me.BtnMotivoMortalidad.TabIndex = 224
+        Me.BtnMotivoMortalidad.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnMotivoMortalidad.UseVisualStyleBackColor = True
+        '
         'Label9
         '
         Me.Label9.AutoSize = True
@@ -182,18 +203,68 @@ Partial Class FrmRegularizarSalidaConArete
         Me.Label9.TabIndex = 223
         Me.Label9.Text = "Motivo :"
         '
-        'BtnMotivoMortalidad
+        'Label1
         '
-        Me.BtnMotivoMortalidad.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BtnMotivoMortalidad.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnMotivoMortalidad.Image = CType(resources.GetObject("BtnMotivoMortalidad.Image"), System.Drawing.Image)
-        Me.BtnMotivoMortalidad.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnMotivoMortalidad.Location = New System.Drawing.Point(378, 165)
-        Me.BtnMotivoMortalidad.Name = "BtnMotivoMortalidad"
-        Me.BtnMotivoMortalidad.Size = New System.Drawing.Size(32, 29)
-        Me.BtnMotivoMortalidad.TabIndex = 224
-        Me.BtnMotivoMortalidad.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.BtnMotivoMortalidad.UseVisualStyleBackColor = True
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Yellow
+        Me.Label1.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.Black
+        Me.Label1.Location = New System.Drawing.Point(223, 62)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(351, 13)
+        Me.Label1.TabIndex = 222
+        Me.Label1.Text = "Solo lista las VACIAS, VIVOS y estado de venta PENDIENTE"
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.BackColor = System.Drawing.Color.Transparent
+        Me.Label12.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.Label12.Location = New System.Drawing.Point(326, 117)
+        Me.Label12.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(55, 14)
+        Me.Label12.TabIndex = 216
+        Me.Label12.Text = "Fecha :"
+        '
+        'DtpFechaControl
+        '
+        Me.DtpFechaControl.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DtpFechaControl.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DtpFechaControl.Location = New System.Drawing.Point(386, 114)
+        Me.DtpFechaControl.Name = "DtpFechaControl"
+        Me.DtpFechaControl.Size = New System.Drawing.Size(115, 21)
+        Me.DtpFechaControl.TabIndex = 217
+        '
+        'LblPlantel
+        '
+        Me.LblPlantel.AutoSize = True
+        Me.LblPlantel.BackColor = System.Drawing.Color.Transparent
+        Me.LblPlantel.Font = New System.Drawing.Font("Verdana", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblPlantel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.LblPlantel.Location = New System.Drawing.Point(29, 59)
+        Me.LblPlantel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblPlantel.Name = "LblPlantel"
+        Me.LblPlantel.Size = New System.Drawing.Size(88, 18)
+        Me.LblPlantel.TabIndex = 187
+        Me.LblPlantel.Text = "PLANTEL"
+        Me.LblPlantel.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
+        'ToolStrip1
+        '
+        Me.ToolStrip1.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.ToolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
+        Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnGuardar, Me.BtnCerrar})
+        Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.ToolStrip1.Margin = New System.Windows.Forms.Padding(2)
+        Me.ToolStrip1.Name = "ToolStrip1"
+        Me.ToolStrip1.Padding = New System.Windows.Forms.Padding(0, 0, 2, 0)
+        Me.ToolStrip1.Size = New System.Drawing.Size(586, 38)
+        Me.ToolStrip1.TabIndex = 52
+        Me.ToolStrip1.Text = "ToolStrip1"
         '
         'BtnGuardar
         '
@@ -220,42 +291,6 @@ Partial Class FrmRegularizarSalidaConArete
         Me.BtnCerrar.Size = New System.Drawing.Size(66, 28)
         Me.BtnCerrar.Text = "Salir"
         Me.BtnCerrar.ToolTipText = "Cerrar"
-        '
-        'TxtAreteAnimal
-        '
-        Me.TxtAreteAnimal.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.TxtAreteAnimal.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtAreteAnimal.Location = New System.Drawing.Point(97, 114)
-        Me.TxtAreteAnimal.MaxLength = 50
-        Me.TxtAreteAnimal.Name = "TxtAreteAnimal"
-        Me.TxtAreteAnimal.Size = New System.Drawing.Size(110, 21)
-        Me.TxtAreteAnimal.TabIndex = 230
-        '
-        'BtnBuscarAnimal
-        '
-        Me.BtnBuscarAnimal.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BtnBuscarAnimal.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnBuscarAnimal.Image = CType(resources.GetObject("BtnBuscarAnimal.Image"), System.Drawing.Image)
-        Me.BtnBuscarAnimal.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnBuscarAnimal.Location = New System.Drawing.Point(213, 110)
-        Me.BtnBuscarAnimal.Name = "BtnBuscarAnimal"
-        Me.BtnBuscarAnimal.Size = New System.Drawing.Size(32, 29)
-        Me.BtnBuscarAnimal.TabIndex = 229
-        Me.BtnBuscarAnimal.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.BtnBuscarAnimal.UseVisualStyleBackColor = True
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.BackColor = System.Drawing.Color.Transparent
-        Me.Label3.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(41, 117)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(52, 14)
-        Me.Label3.TabIndex = 231
-        Me.Label3.Text = "Arete :"
         '
         'FrmRegularizarSalidaConArete
         '
@@ -293,4 +328,6 @@ Partial Class FrmRegularizarSalidaConArete
     Friend WithEvents Label3 As Label
     Friend WithEvents TxtAreteAnimal As TextBox
     Friend WithEvents BtnBuscarAnimal As Button
+    Friend WithEvents BtnBloquearFecha As Button
+    Friend WithEvents BtnBloquearMotivo As Button
 End Class
