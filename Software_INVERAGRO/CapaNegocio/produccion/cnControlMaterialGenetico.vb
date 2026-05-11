@@ -47,4 +47,8 @@ Public Class cnControlMaterialGenetico
     Public Function Cn_ConsultarExtraccionesxIdVerraco(ByRef obj As coControlMaterialGenetico) As DataTable
         Return cls_at.Cd_ConsultarxIdVerraco("[w_pa_cons_material_genetico_x_id_verraco]", obj)
     End Function
+
+    Public Function Cn_ReporteMaterialGenetico(ByRef obj As coControlMaterialGenetico) As DataSet
+        Return cls_at.Cd_ConsultarxFechasxPlantel("[w_pa_reporte_material_genetico]", obj)
+    End Function
 End Class

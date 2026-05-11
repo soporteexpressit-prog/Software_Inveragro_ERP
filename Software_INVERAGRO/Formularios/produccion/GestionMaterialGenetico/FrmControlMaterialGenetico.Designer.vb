@@ -51,17 +51,19 @@ Partial Class FrmControlMaterialGenetico
         Dim Appearance26 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance27 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.GrupoFiltros = New System.Windows.Forms.GroupBox()
         Me.CmbEstado = New System.Windows.Forms.ComboBox()
-        Me.Label14 = New System.Windows.Forms.Label()
-        Me.Label13 = New System.Windows.Forms.Label()
         Me.CmbUbicacion = New Infragistics.Win.UltraWinGrid.UltraCombo()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.dtpFechaDesde = New System.Windows.Forms.DateTimePicker()
         Me.BtnBuscarMG = New System.Windows.Forms.Button()
+        Me.dtpFechaHasta = New System.Windows.Forms.DateTimePicker()
         Me.CmbTipo = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.dtpFechaHasta = New System.Windows.Forms.DateTimePicker()
-        Me.dtpFechaDesde = New System.Windows.Forms.DateTimePicker()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
@@ -79,19 +81,17 @@ Partial Class FrmControlMaterialGenetico
         Me.BtnAnularMaterialGeneticopro = New System.Windows.Forms.ToolStripButton()
         Me.BtnExportarMaterialGeneticopro = New System.Windows.Forms.ToolStripButton()
         Me.BtnCerrar = New System.Windows.Forms.ToolStripButton()
-        Me.BtnFiltros = New System.Windows.Forms.ToolStripButton()
-        Me.Label6 = New System.Windows.Forms.Label()
+        Me.BtnReporte = New System.Windows.Forms.ToolStripButton()
         Me.dtgListado = New Infragistics.Win.UltraWinGrid.UltraGrid()
         Me.Ptbx_Cargando = New System.Windows.Forms.PictureBox()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
-        Me.GrupoFiltros = New System.Windows.Forms.GroupBox()
         Me.Panel2.SuspendLayout()
+        Me.GrupoFiltros.SuspendLayout()
         CType(Me.CmbUbicacion, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
         CType(Me.dtgListado, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Ptbx_Cargando, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GrupoFiltros.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel2
@@ -103,10 +103,32 @@ Partial Class FrmControlMaterialGenetico
         Me.Panel2.Controls.Add(Me.ToolStrip1)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(2, 1, 2, 1)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(2206, 355)
+        Me.Panel2.Size = New System.Drawing.Size(1283, 231)
         Me.Panel2.TabIndex = 9
+        '
+        'GrupoFiltros
+        '
+        Me.GrupoFiltros.Controls.Add(Me.CmbEstado)
+        Me.GrupoFiltros.Controls.Add(Me.CmbUbicacion)
+        Me.GrupoFiltros.Controls.Add(Me.Label14)
+        Me.GrupoFiltros.Controls.Add(Me.Label4)
+        Me.GrupoFiltros.Controls.Add(Me.Label13)
+        Me.GrupoFiltros.Controls.Add(Me.Label3)
+        Me.GrupoFiltros.Controls.Add(Me.dtpFechaDesde)
+        Me.GrupoFiltros.Controls.Add(Me.BtnBuscarMG)
+        Me.GrupoFiltros.Controls.Add(Me.dtpFechaHasta)
+        Me.GrupoFiltros.Controls.Add(Me.CmbTipo)
+        Me.GrupoFiltros.Controls.Add(Me.Label1)
+        Me.GrupoFiltros.Location = New System.Drawing.Point(21, 58)
+        Me.GrupoFiltros.Margin = New System.Windows.Forms.Padding(2)
+        Me.GrupoFiltros.Name = "GrupoFiltros"
+        Me.GrupoFiltros.Padding = New System.Windows.Forms.Padding(2)
+        Me.GrupoFiltros.Size = New System.Drawing.Size(910, 119)
+        Me.GrupoFiltros.TabIndex = 165
+        Me.GrupoFiltros.TabStop = False
+        Me.GrupoFiltros.Text = "Filtros de Búsqueda"
         '
         'CmbEstado
         '
@@ -114,37 +136,10 @@ Partial Class FrmControlMaterialGenetico
         Me.CmbEstado.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CmbEstado.FormattingEnabled = True
         Me.CmbEstado.Items.AddRange(New Object() {"ACTIVO", "ANULADO"})
-        Me.CmbEstado.Location = New System.Drawing.Point(1119, 39)
-        Me.CmbEstado.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.CmbEstado.Location = New System.Drawing.Point(746, 25)
         Me.CmbEstado.Name = "CmbEstado"
-        Me.CmbEstado.Size = New System.Drawing.Size(194, 28)
+        Me.CmbEstado.Size = New System.Drawing.Size(131, 21)
         Me.CmbEstado.TabIndex = 179
-        '
-        'Label14
-        '
-        Me.Label14.AutoSize = True
-        Me.Label14.BackColor = System.Drawing.Color.Transparent
-        Me.Label14.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label14.Location = New System.Drawing.Point(1018, 42)
-        Me.Label14.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(91, 22)
-        Me.Label14.TabIndex = 178
-        Me.Label14.Text = "Estado :"
-        '
-        'Label13
-        '
-        Me.Label13.AutoSize = True
-        Me.Label13.BackColor = System.Drawing.Color.Transparent
-        Me.Label13.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label13.Location = New System.Drawing.Point(613, 108)
-        Me.Label13.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(93, 22)
-        Me.Label13.TabIndex = 177
-        Me.Label13.Text = "Plantel :"
         '
         'CmbUbicacion
         '
@@ -203,11 +198,70 @@ Partial Class FrmControlMaterialGenetico
         Me.CmbUbicacion.DisplayLayout.ScrollStyle = Infragistics.Win.UltraWinGrid.ScrollStyle.Immediate
         Me.CmbUbicacion.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy
         Me.CmbUbicacion.DropDownStyle = Infragistics.Win.UltraWinGrid.UltraComboStyle.DropDownList
-        Me.CmbUbicacion.Location = New System.Drawing.Point(714, 104)
-        Me.CmbUbicacion.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.CmbUbicacion.Location = New System.Drawing.Point(476, 68)
         Me.CmbUbicacion.Name = "CmbUbicacion"
-        Me.CmbUbicacion.Size = New System.Drawing.Size(238, 29)
+        Me.CmbUbicacion.Size = New System.Drawing.Size(159, 22)
         Me.CmbUbicacion.TabIndex = 176
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.BackColor = System.Drawing.Color.Transparent
+        Me.Label14.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label14.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.Label14.Location = New System.Drawing.Point(679, 27)
+        Me.Label14.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(60, 14)
+        Me.Label14.TabIndex = 178
+        Me.Label14.Text = "Estado :"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.BackColor = System.Drawing.Color.Transparent
+        Me.Label4.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.Label4.Location = New System.Drawing.Point(23, 68)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(97, 14)
+        Me.Label4.TabIndex = 47
+        Me.Label4.Text = "Fecha Hasta :"
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.BackColor = System.Drawing.Color.Transparent
+        Me.Label13.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.Label13.Location = New System.Drawing.Point(409, 70)
+        Me.Label13.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(62, 14)
+        Me.Label13.TabIndex = 177
+        Me.Label13.Text = "Plantel :"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.Label3.Location = New System.Drawing.Point(19, 29)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(100, 14)
+        Me.Label3.TabIndex = 46
+        Me.Label3.Text = "Fecha Desde :"
+        '
+        'dtpFechaDesde
+        '
+        Me.dtpFechaDesde.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dtpFechaDesde.Location = New System.Drawing.Point(125, 27)
+        Me.dtpFechaDesde.Name = "dtpFechaDesde"
+        Me.dtpFechaDesde.Size = New System.Drawing.Size(240, 21)
+        Me.dtpFechaDesde.TabIndex = 158
         '
         'BtnBuscarMG
         '
@@ -215,15 +269,22 @@ Partial Class FrmControlMaterialGenetico
         Me.BtnBuscarMG.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnBuscarMG.Image = CType(resources.GetObject("BtnBuscarMG.Image"), System.Drawing.Image)
         Me.BtnBuscarMG.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnBuscarMG.Location = New System.Drawing.Point(1175, 99)
-        Me.BtnBuscarMG.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.BtnBuscarMG.Location = New System.Drawing.Point(783, 64)
         Me.BtnBuscarMG.Name = "BtnBuscarMG"
-        Me.BtnBuscarMG.Padding = New System.Windows.Forms.Padding(6, 0, 6, 0)
-        Me.BtnBuscarMG.Size = New System.Drawing.Size(138, 63)
+        Me.BtnBuscarMG.Padding = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.BtnBuscarMG.Size = New System.Drawing.Size(92, 41)
         Me.BtnBuscarMG.TabIndex = 163
         Me.BtnBuscarMG.Text = "Buscar"
         Me.BtnBuscarMG.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.BtnBuscarMG.UseVisualStyleBackColor = True
+        '
+        'dtpFechaHasta
+        '
+        Me.dtpFechaHasta.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dtpFechaHasta.Location = New System.Drawing.Point(125, 65)
+        Me.dtpFechaHasta.Name = "dtpFechaHasta"
+        Me.dtpFechaHasta.Size = New System.Drawing.Size(240, 21)
+        Me.dtpFechaHasta.TabIndex = 159
         '
         'CmbTipo
         '
@@ -231,10 +292,9 @@ Partial Class FrmControlMaterialGenetico
         Me.CmbTipo.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CmbTipo.FormattingEnabled = True
         Me.CmbTipo.Items.AddRange(New Object() {"TODOS", "GRANJA", "COMPRADO"})
-        Me.CmbTipo.Location = New System.Drawing.Point(714, 42)
-        Me.CmbTipo.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.CmbTipo.Location = New System.Drawing.Point(476, 27)
         Me.CmbTipo.Name = "CmbTipo"
-        Me.CmbTipo.Size = New System.Drawing.Size(194, 28)
+        Me.CmbTipo.Size = New System.Drawing.Size(131, 21)
         Me.CmbTipo.TabIndex = 161
         '
         'Label1
@@ -243,56 +303,25 @@ Partial Class FrmControlMaterialGenetico
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(640, 45)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label1.Location = New System.Drawing.Point(427, 29)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(66, 22)
+        Me.Label1.Size = New System.Drawing.Size(44, 14)
         Me.Label1.TabIndex = 160
         Me.Label1.Text = "Tipo :"
         '
-        'dtpFechaHasta
+        'Label6
         '
-        Me.dtpFechaHasta.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dtpFechaHasta.Location = New System.Drawing.Point(188, 100)
-        Me.dtpFechaHasta.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.dtpFechaHasta.Name = "dtpFechaHasta"
-        Me.dtpFechaHasta.Size = New System.Drawing.Size(358, 28)
-        Me.dtpFechaHasta.TabIndex = 159
-        '
-        'dtpFechaDesde
-        '
-        Me.dtpFechaDesde.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dtpFechaDesde.Location = New System.Drawing.Point(188, 42)
-        Me.dtpFechaDesde.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.dtpFechaDesde.Name = "dtpFechaDesde"
-        Me.dtpFechaDesde.Size = New System.Drawing.Size(358, 28)
-        Me.dtpFechaDesde.TabIndex = 158
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.BackColor = System.Drawing.Color.Transparent
-        Me.Label3.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(29, 45)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(152, 22)
-        Me.Label3.TabIndex = 46
-        Me.Label3.Text = "Fecha Desde :"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.BackColor = System.Drawing.Color.Transparent
-        Me.Label4.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label4.Location = New System.Drawing.Point(34, 104)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(147, 22)
-        Me.Label4.TabIndex = 47
-        Me.Label4.Text = "Fecha Hasta :"
+        Me.Label6.AutoSize = True
+        Me.Label6.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.Label6.Font = New System.Drawing.Font("Verdana", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.Label6.Location = New System.Drawing.Point(41, 18)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(322, 18)
+        Me.Label6.TabIndex = 128
+        Me.Label6.Text = "CONTROL DE MATERIAL GENÉTICO"
         '
         'GroupBox1
         '
@@ -304,9 +333,11 @@ Partial Class FrmControlMaterialGenetico
         Me.GroupBox1.Controls.Add(Me.Label8)
         Me.GroupBox1.Controls.Add(Me.Label5)
         Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Location = New System.Drawing.Point(1436, 89)
+        Me.GroupBox1.Location = New System.Drawing.Point(957, 58)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(424, 183)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2)
+        Me.GroupBox1.Size = New System.Drawing.Size(283, 119)
         Me.GroupBox1.TabIndex = 164
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Estados"
@@ -317,10 +348,10 @@ Partial Class FrmControlMaterialGenetico
         Me.Label12.BackColor = System.Drawing.Color.Transparent
         Me.Label12.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label12.ForeColor = System.Drawing.Color.Black
-        Me.Label12.Location = New System.Drawing.Point(254, 133)
-        Me.Label12.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label12.Location = New System.Drawing.Point(169, 86)
+        Me.Label12.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(110, 22)
+        Me.Label12.Size = New System.Drawing.Size(72, 14)
         Me.Label12.TabIndex = 171
         Me.Label12.Text = "Fuera uso"
         '
@@ -330,10 +361,10 @@ Partial Class FrmControlMaterialGenetico
         Me.Label11.BackColor = System.Drawing.Color.Transparent
         Me.Label11.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label11.Location = New System.Drawing.Point(98, 133)
-        Me.Label11.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label11.Location = New System.Drawing.Point(65, 86)
+        Me.Label11.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(138, 22)
+        Me.Label11.Size = New System.Drawing.Size(91, 14)
         Me.Label11.TabIndex = 170
         Me.Label11.Text = "Descartado :"
         '
@@ -343,10 +374,10 @@ Partial Class FrmControlMaterialGenetico
         Me.Label9.BackColor = System.Drawing.Color.Transparent
         Me.Label9.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.Black
-        Me.Label9.Location = New System.Drawing.Point(254, 98)
-        Me.Label9.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label9.Location = New System.Drawing.Point(169, 64)
+        Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(102, 22)
+        Me.Label9.Size = New System.Drawing.Size(67, 14)
         Me.Label9.TabIndex = 169
         Me.Label9.Text = "4to día +"
         '
@@ -356,10 +387,10 @@ Partial Class FrmControlMaterialGenetico
         Me.Label10.BackColor = System.Drawing.Color.Transparent
         Me.Label10.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label10.Location = New System.Drawing.Point(106, 98)
-        Me.Label10.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label10.Location = New System.Drawing.Point(71, 64)
+        Me.Label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(129, 22)
+        Me.Label10.Size = New System.Drawing.Size(86, 14)
         Me.Label10.TabIndex = 168
         Me.Label10.Text = "No Óptimo :"
         '
@@ -369,10 +400,10 @@ Partial Class FrmControlMaterialGenetico
         Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.Black
-        Me.Label7.Location = New System.Drawing.Point(254, 66)
-        Me.Label7.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label7.Location = New System.Drawing.Point(169, 43)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(81, 22)
+        Me.Label7.Size = New System.Drawing.Size(54, 14)
         Me.Label7.TabIndex = 167
         Me.Label7.Text = "3er día"
         '
@@ -382,10 +413,10 @@ Partial Class FrmControlMaterialGenetico
         Me.Label8.BackColor = System.Drawing.Color.Transparent
         Me.Label8.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label8.Location = New System.Drawing.Point(34, 66)
-        Me.Label8.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label8.Location = New System.Drawing.Point(23, 43)
+        Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(201, 22)
+        Me.Label8.Size = New System.Drawing.Size(133, 14)
         Me.Label8.TabIndex = 166
         Me.Label8.Text = "Próximo a Vencer :"
         '
@@ -395,10 +426,10 @@ Partial Class FrmControlMaterialGenetico
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.Black
-        Me.Label5.Location = New System.Drawing.Point(254, 33)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label5.Location = New System.Drawing.Point(169, 21)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(143, 22)
+        Me.Label5.Size = New System.Drawing.Size(95, 14)
         Me.Label5.TabIndex = 165
         Me.Label5.Text = "1er y 2do día"
         '
@@ -408,10 +439,10 @@ Partial Class FrmControlMaterialGenetico
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(140, 33)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label2.Location = New System.Drawing.Point(93, 21)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(96, 22)
+        Me.Label2.Size = New System.Drawing.Size(64, 14)
         Me.Label2.TabIndex = 164
         Me.Label2.Text = "Óptimo :"
         '
@@ -421,12 +452,12 @@ Partial Class FrmControlMaterialGenetico
         Me.ToolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.ToolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
         Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnNuevoMaterialGeneticopro, Me.BtnActualizarMotilidad, Me.BtnParticion, Me.BtnInhabilitarMaterialGeneticopro, Me.BtnAnularMaterialGeneticopro, Me.BtnExportarMaterialGeneticopro, Me.BtnCerrar, Me.BtnFiltros})
-        Me.ToolStrip1.Location = New System.Drawing.Point(0, 315)
-        Me.ToolStrip1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnNuevoMaterialGeneticopro, Me.BtnActualizarMotilidad, Me.BtnParticion, Me.BtnInhabilitarMaterialGeneticopro, Me.BtnAnularMaterialGeneticopro, Me.BtnExportarMaterialGeneticopro, Me.BtnCerrar, Me.BtnReporte})
+        Me.ToolStrip1.Location = New System.Drawing.Point(0, 193)
+        Me.ToolStrip1.Margin = New System.Windows.Forms.Padding(2, 1, 2, 1)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Padding = New System.Windows.Forms.Padding(0, 0, 3, 0)
-        Me.ToolStrip1.Size = New System.Drawing.Size(2206, 40)
+        Me.ToolStrip1.Padding = New System.Windows.Forms.Padding(0, 0, 2, 0)
+        Me.ToolStrip1.Size = New System.Drawing.Size(1283, 38)
         Me.ToolStrip1.TabIndex = 52
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -439,7 +470,7 @@ Partial Class FrmControlMaterialGenetico
         Me.btnNuevoMaterialGeneticopro.Margin = New System.Windows.Forms.Padding(5)
         Me.btnNuevoMaterialGeneticopro.Name = "btnNuevoMaterialGeneticopro"
         Me.btnNuevoMaterialGeneticopro.Padding = New System.Windows.Forms.Padding(2)
-        Me.btnNuevoMaterialGeneticopro.Size = New System.Drawing.Size(182, 30)
+        Me.btnNuevoMaterialGeneticopro.Size = New System.Drawing.Size(130, 28)
         Me.btnNuevoMaterialGeneticopro.Text = "Nueva Colecta"
         Me.btnNuevoMaterialGeneticopro.ToolTipText = "Nuevo "
         '
@@ -452,7 +483,7 @@ Partial Class FrmControlMaterialGenetico
         Me.BtnActualizarMotilidad.Margin = New System.Windows.Forms.Padding(5)
         Me.BtnActualizarMotilidad.Name = "BtnActualizarMotilidad"
         Me.BtnActualizarMotilidad.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnActualizarMotilidad.Size = New System.Drawing.Size(239, 30)
+        Me.BtnActualizarMotilidad.Size = New System.Drawing.Size(165, 28)
         Me.BtnActualizarMotilidad.Text = "Actualizar Motilidad"
         Me.BtnActualizarMotilidad.ToolTipText = "Aprobar"
         '
@@ -465,7 +496,7 @@ Partial Class FrmControlMaterialGenetico
         Me.BtnParticion.Margin = New System.Windows.Forms.Padding(5)
         Me.BtnParticion.Name = "BtnParticion"
         Me.BtnParticion.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnParticion.Size = New System.Drawing.Size(128, 30)
+        Me.BtnParticion.Size = New System.Drawing.Size(94, 28)
         Me.BtnParticion.Text = "Partición"
         Me.BtnParticion.ToolTipText = "Aprobar"
         '
@@ -478,7 +509,7 @@ Partial Class FrmControlMaterialGenetico
         Me.BtnInhabilitarMaterialGeneticopro.Margin = New System.Windows.Forms.Padding(5)
         Me.BtnInhabilitarMaterialGeneticopro.Name = "BtnInhabilitarMaterialGeneticopro"
         Me.BtnInhabilitarMaterialGeneticopro.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnInhabilitarMaterialGeneticopro.Size = New System.Drawing.Size(146, 30)
+        Me.BtnInhabilitarMaterialGeneticopro.Size = New System.Drawing.Size(104, 28)
         Me.BtnInhabilitarMaterialGeneticopro.Text = "Inhabilitar"
         Me.BtnInhabilitarMaterialGeneticopro.ToolTipText = "Exportar"
         '
@@ -491,7 +522,7 @@ Partial Class FrmControlMaterialGenetico
         Me.BtnAnularMaterialGeneticopro.Margin = New System.Windows.Forms.Padding(5)
         Me.BtnAnularMaterialGeneticopro.Name = "BtnAnularMaterialGeneticopro"
         Me.BtnAnularMaterialGeneticopro.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnAnularMaterialGeneticopro.Size = New System.Drawing.Size(105, 30)
+        Me.BtnAnularMaterialGeneticopro.Size = New System.Drawing.Size(78, 28)
         Me.BtnAnularMaterialGeneticopro.Text = "Anular"
         Me.BtnAnularMaterialGeneticopro.ToolTipText = "Anular"
         '
@@ -504,7 +535,7 @@ Partial Class FrmControlMaterialGenetico
         Me.BtnExportarMaterialGeneticopro.Margin = New System.Windows.Forms.Padding(5)
         Me.BtnExportarMaterialGeneticopro.Name = "BtnExportarMaterialGeneticopro"
         Me.BtnExportarMaterialGeneticopro.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnExportarMaterialGeneticopro.Size = New System.Drawing.Size(125, 30)
+        Me.BtnExportarMaterialGeneticopro.Size = New System.Drawing.Size(92, 28)
         Me.BtnExportarMaterialGeneticopro.Text = "Exportar"
         Me.BtnExportarMaterialGeneticopro.ToolTipText = "Exportar"
         '
@@ -517,34 +548,22 @@ Partial Class FrmControlMaterialGenetico
         Me.BtnCerrar.Margin = New System.Windows.Forms.Padding(5)
         Me.BtnCerrar.Name = "BtnCerrar"
         Me.BtnCerrar.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnCerrar.Size = New System.Drawing.Size(84, 30)
+        Me.BtnCerrar.Size = New System.Drawing.Size(66, 28)
         Me.BtnCerrar.Text = "Salir"
         '
-        'BtnFiltros
+        'BtnReporte
         '
-        Me.BtnFiltros.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.BtnFiltros.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.BtnFiltros.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnFiltros.ForeColor = System.Drawing.Color.White
-        Me.BtnFiltros.Image = Global.Formularios.My.Resources.Resources.filter__2_1
-        Me.BtnFiltros.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.BtnFiltros.Margin = New System.Windows.Forms.Padding(5)
-        Me.BtnFiltros.Name = "BtnFiltros"
-        Me.BtnFiltros.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnFiltros.Size = New System.Drawing.Size(102, 30)
-        Me.BtnFiltros.Text = "Filtros"
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(233, Byte), Integer))
-        Me.Label6.Font = New System.Drawing.Font("Verdana", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(49, Byte), Integer))
-        Me.Label6.Location = New System.Drawing.Point(62, 27)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(477, 29)
-        Me.Label6.TabIndex = 128
-        Me.Label6.Text = "CONTROL DE MATERIAL GENÉTICO"
+        Me.BtnReporte.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.BtnReporte.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.BtnReporte.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnReporte.ForeColor = System.Drawing.Color.White
+        Me.BtnReporte.Image = Global.Formularios.My.Resources.Resources.reporte
+        Me.BtnReporte.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BtnReporte.Margin = New System.Windows.Forms.Padding(5)
+        Me.BtnReporte.Name = "BtnReporte"
+        Me.BtnReporte.Padding = New System.Windows.Forms.Padding(2)
+        Me.BtnReporte.Size = New System.Drawing.Size(87, 28)
+        Me.BtnReporte.Text = "Reporte"
         '
         'dtgListado
         '
@@ -618,10 +637,9 @@ Partial Class FrmControlMaterialGenetico
         Me.dtgListado.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy
         Me.dtgListado.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dtgListado.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dtgListado.Location = New System.Drawing.Point(0, 355)
-        Me.dtgListado.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.dtgListado.Location = New System.Drawing.Point(0, 231)
         Me.dtgListado.Name = "dtgListado"
-        Me.dtgListado.Size = New System.Drawing.Size(2206, 673)
+        Me.dtgListado.Size = New System.Drawing.Size(1283, 437)
         Me.dtgListado.TabIndex = 27
         Me.dtgListado.Text = "UltraGrid1"
         '
@@ -629,10 +647,9 @@ Partial Class FrmControlMaterialGenetico
         '
         Me.Ptbx_Cargando.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Ptbx_Cargando.Image = Global.Formularios.My.Resources.Resources.loader
-        Me.Ptbx_Cargando.Location = New System.Drawing.Point(1095, 603)
-        Me.Ptbx_Cargando.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Ptbx_Cargando.Location = New System.Drawing.Point(730, 392)
         Me.Ptbx_Cargando.Name = "Ptbx_Cargando"
-        Me.Ptbx_Cargando.Size = New System.Drawing.Size(64, 57)
+        Me.Ptbx_Cargando.Size = New System.Drawing.Size(43, 37)
         Me.Ptbx_Cargando.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.Ptbx_Cargando.TabIndex = 28
         Me.Ptbx_Cargando.TabStop = False
@@ -641,34 +658,15 @@ Partial Class FrmControlMaterialGenetico
         'BackgroundWorker1
         '
         '
-        'GrupoFiltros
-        '
-        Me.GrupoFiltros.Controls.Add(Me.CmbEstado)
-        Me.GrupoFiltros.Controls.Add(Me.CmbUbicacion)
-        Me.GrupoFiltros.Controls.Add(Me.Label14)
-        Me.GrupoFiltros.Controls.Add(Me.Label4)
-        Me.GrupoFiltros.Controls.Add(Me.Label13)
-        Me.GrupoFiltros.Controls.Add(Me.Label3)
-        Me.GrupoFiltros.Controls.Add(Me.dtpFechaDesde)
-        Me.GrupoFiltros.Controls.Add(Me.BtnBuscarMG)
-        Me.GrupoFiltros.Controls.Add(Me.dtpFechaHasta)
-        Me.GrupoFiltros.Controls.Add(Me.CmbTipo)
-        Me.GrupoFiltros.Controls.Add(Me.Label1)
-        Me.GrupoFiltros.Location = New System.Drawing.Point(32, 89)
-        Me.GrupoFiltros.Name = "GrupoFiltros"
-        Me.GrupoFiltros.Size = New System.Drawing.Size(1365, 183)
-        Me.GrupoFiltros.TabIndex = 165
-        Me.GrupoFiltros.TabStop = False
-        Me.GrupoFiltros.Text = "Filtros de Búsqueda"
-        '
         'FrmControlMaterialGenetico
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(2206, 1028)
+        Me.ClientSize = New System.Drawing.Size(1283, 668)
         Me.Controls.Add(Me.Ptbx_Cargando)
         Me.Controls.Add(Me.dtgListado)
         Me.Controls.Add(Me.Panel2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "FrmControlMaterialGenetico"
@@ -676,6 +674,8 @@ Partial Class FrmControlMaterialGenetico
         Me.Text = "CONTROL DE MATERIAL GENÉTICO"
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
+        Me.GrupoFiltros.ResumeLayout(False)
+        Me.GrupoFiltros.PerformLayout()
         CType(Me.CmbUbicacion, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
@@ -683,8 +683,6 @@ Partial Class FrmControlMaterialGenetico
         Me.ToolStrip1.PerformLayout()
         CType(Me.dtgListado, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Ptbx_Cargando, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GrupoFiltros.ResumeLayout(False)
-        Me.GrupoFiltros.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -701,7 +699,7 @@ Partial Class FrmControlMaterialGenetico
     Friend WithEvents btnNuevoMaterialGeneticopro As ToolStripButton
     Friend WithEvents BtnExportarMaterialGeneticopro As ToolStripButton
     Friend WithEvents BtnCerrar As ToolStripButton
-    Friend WithEvents BtnFiltros As ToolStripButton
+    Friend WithEvents BtnReporte As ToolStripButton
     Friend WithEvents Label6 As Label
     Friend WithEvents Ptbx_Cargando As PictureBox
     Friend WithEvents dtgListado As Infragistics.Win.UltraWinGrid.UltraGrid

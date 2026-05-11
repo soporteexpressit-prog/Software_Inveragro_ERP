@@ -166,12 +166,6 @@ Public Class FrmControlMaterialGenetico
         End Try
     End Sub
 
-    Private Sub BtnFiltros_Click(sender As Object, e As EventArgs) Handles BtnFiltros.Click
-        Dim isFilterActive As Boolean = Not BtnFiltros.Checked
-        BtnFiltros.Checked = isFilterActive
-        clsBasicas.Filtrar_Tabla(dtgListado, isFilterActive)
-    End Sub
-
     Private Sub BtnAnular_Click(sender As Object, e As EventArgs) Handles BtnAnularMaterialGeneticopro.Click
         Try
             Dim activeRow As Infragistics.Win.UltraWinGrid.UltraGridRow = dtgListado.ActiveRow
@@ -346,13 +340,23 @@ Public Class FrmControlMaterialGenetico
 
     Private Sub dtgListado_InitializeLayout(sender As Object, e As UltraWinGrid.InitializeLayoutEventArgs) Handles dtgListado.InitializeLayout
         Try
-            If (dtgListado.Rows.Count = 0) Then
-            Else
+            If (dtgListado.Rows.Count > 0) Then
                 e.Layout.Bands(0).Summaries.Clear()
                 clsBasicas.Totales_Formato(dtgListado, e, 1)
                 clsBasicas.SumarTotales_Formato(dtgListado, e, 7)
                 clsBasicas.SumarTotales_Formato(dtgListado, e, 8)
             End If
+        Catch ex As Exception
+            clsBasicas.controlException(Name, ex)
+        End Try
+    End Sub
+
+    Private Sub BtnReporte_Click(sender As Object, e As EventArgs) Handles BtnReporte.Click
+        Try
+            Dim frm As New FrmReporteMaterialGenetico With {
+                .idPlantel = CmbUbicacion.Value
+            }
+            frm.ShowDialog()
         Catch ex As Exception
             clsBasicas.controlException(Name, ex)
         End Try
