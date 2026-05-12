@@ -156,10 +156,19 @@ Public Class FrmReporteCostoxKiloCerdo
         Try
             With dtgListado1
                 If (e.Cell.Column.Key = "[+]") Then
-                    Dim frm As New FrmRptCostoxKiloDetalleF1
-                    frm.idDetalle = .ActiveRow.Cells("Id").Value.ToString
-                    frm.idCampaña = CmbCampaña.Value
-                    frm.ShowDialog()
+                    Dim idDetalleVal As String = .ActiveRow.Cells("Id").Value.ToString()
+
+                    If idDetalleVal = "RP8" Then
+                        Dim frm As New FrmRptCostoxKiloDetalleF2
+                        frm.idDetalle = idDetalleVal
+                        frm.idCampaña = CmbCampaña.Value
+                        frm.ShowDialog()
+                    Else
+                        Dim frm As New FrmRptCostoxKiloDetalleF1
+                        frm.idDetalle = idDetalleVal
+                        frm.idCampaña = CmbCampaña.Value
+                        frm.ShowDialog()
+                    End If
                 End If
             End With
         Catch ex As Exception

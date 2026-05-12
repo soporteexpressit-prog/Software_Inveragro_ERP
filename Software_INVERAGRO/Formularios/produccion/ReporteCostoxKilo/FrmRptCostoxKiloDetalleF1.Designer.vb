@@ -521,7 +521,7 @@ Partial Class FrmRptCostoxKiloDetalleF1
         Me.MinimizeBox = False
         Me.Name = "FrmRptCostoxKiloDetalleF1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "FrmRptCostoxKiloDetalleF1"
+        Me.Text = "REPORTE DETALLADO"
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         Me.BarraOpciones.ResumeLayout(False)

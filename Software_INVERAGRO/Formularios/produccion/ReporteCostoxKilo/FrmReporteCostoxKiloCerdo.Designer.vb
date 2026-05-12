@@ -192,7 +192,7 @@ Partial Class FrmReporteCostoxKiloCerdo
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
         Me.Panel2.Margin = New System.Windows.Forms.Padding(2, 1, 2, 1)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1596, 742)
+        Me.Panel2.Size = New System.Drawing.Size(1782, 742)
         Me.Panel2.TabIndex = 10
         '
         'GroupBox5
@@ -213,7 +213,7 @@ Partial Class FrmReporteCostoxKiloCerdo
         Me.GroupBox5.Controls.Add(Me.Label2)
         Me.GroupBox5.Location = New System.Drawing.Point(27, 426)
         Me.GroupBox5.Name = "GroupBox5"
-        Me.GroupBox5.Size = New System.Drawing.Size(507, 215)
+        Me.GroupBox5.Size = New System.Drawing.Size(479, 215)
         Me.GroupBox5.TabIndex = 171
         Me.GroupBox5.TabStop = False
         Me.GroupBox5.Text = "Información Adicional"
@@ -224,7 +224,7 @@ Partial Class FrmReporteCostoxKiloCerdo
         Me.LblLotesInvolucrados.BackColor = System.Drawing.Color.Transparent
         Me.LblLotesInvolucrados.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblLotesInvolucrados.ForeColor = System.Drawing.Color.Black
-        Me.LblLotesInvolucrados.Location = New System.Drawing.Point(346, 66)
+        Me.LblLotesInvolucrados.Location = New System.Drawing.Point(327, 66)
         Me.LblLotesInvolucrados.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblLotesInvolucrados.Name = "LblLotesInvolucrados"
         Me.LblLotesInvolucrados.Size = New System.Drawing.Size(12, 13)
@@ -237,7 +237,7 @@ Partial Class FrmReporteCostoxKiloCerdo
         Me.Label11.BackColor = System.Drawing.Color.Transparent
         Me.Label11.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label11.Location = New System.Drawing.Point(346, 28)
+        Me.Label11.Location = New System.Drawing.Point(327, 28)
         Me.Label11.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(133, 14)
@@ -250,7 +250,7 @@ Partial Class FrmReporteCostoxKiloCerdo
         Me.LblFinChanchilla.BackColor = System.Drawing.Color.Transparent
         Me.LblFinChanchilla.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblFinChanchilla.ForeColor = System.Drawing.Color.Black
-        Me.LblFinChanchilla.Location = New System.Drawing.Point(173, 186)
+        Me.LblFinChanchilla.Location = New System.Drawing.Point(164, 186)
         Me.LblFinChanchilla.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblFinChanchilla.Name = "LblFinChanchilla"
         Me.LblFinChanchilla.Size = New System.Drawing.Size(48, 13)
@@ -263,7 +263,7 @@ Partial Class FrmReporteCostoxKiloCerdo
         Me.LblInicioChanchilla.BackColor = System.Drawing.Color.Transparent
         Me.LblInicioChanchilla.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblInicioChanchilla.ForeColor = System.Drawing.Color.Black
-        Me.LblInicioChanchilla.Location = New System.Drawing.Point(173, 162)
+        Me.LblInicioChanchilla.Location = New System.Drawing.Point(164, 162)
         Me.LblInicioChanchilla.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblInicioChanchilla.Name = "LblInicioChanchilla"
         Me.LblInicioChanchilla.Size = New System.Drawing.Size(48, 13)
@@ -276,7 +276,7 @@ Partial Class FrmReporteCostoxKiloCerdo
         Me.LblFinInseminacion.BackColor = System.Drawing.Color.Transparent
         Me.LblFinInseminacion.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblFinInseminacion.ForeColor = System.Drawing.Color.Black
-        Me.LblFinInseminacion.Location = New System.Drawing.Point(173, 116)
+        Me.LblFinInseminacion.Location = New System.Drawing.Point(164, 116)
         Me.LblFinInseminacion.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblFinInseminacion.Name = "LblFinInseminacion"
         Me.LblFinInseminacion.Size = New System.Drawing.Size(48, 13)
@@ -289,7 +289,7 @@ Partial Class FrmReporteCostoxKiloCerdo
         Me.LblInicioInseminacion.BackColor = System.Drawing.Color.Transparent
         Me.LblInicioInseminacion.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblInicioInseminacion.ForeColor = System.Drawing.Color.Black
-        Me.LblInicioInseminacion.Location = New System.Drawing.Point(173, 92)
+        Me.LblInicioInseminacion.Location = New System.Drawing.Point(164, 92)
         Me.LblInicioInseminacion.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblInicioInseminacion.Name = "LblInicioInseminacion"
         Me.LblInicioInseminacion.Size = New System.Drawing.Size(48, 13)
@@ -302,7 +302,7 @@ Partial Class FrmReporteCostoxKiloCerdo
         Me.LblFinCampana.BackColor = System.Drawing.Color.Transparent
         Me.LblFinCampana.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblFinCampana.ForeColor = System.Drawing.Color.Black
-        Me.LblFinCampana.Location = New System.Drawing.Point(173, 53)
+        Me.LblFinCampana.Location = New System.Drawing.Point(164, 53)
         Me.LblFinCampana.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblFinCampana.Name = "LblFinCampana"
         Me.LblFinCampana.Size = New System.Drawing.Size(48, 13)
@@ -315,7 +315,7 @@ Partial Class FrmReporteCostoxKiloCerdo
         Me.LblInicioCampana.BackColor = System.Drawing.Color.Transparent
         Me.LblInicioCampana.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblInicioCampana.ForeColor = System.Drawing.Color.Black
-        Me.LblInicioCampana.Location = New System.Drawing.Point(173, 29)
+        Me.LblInicioCampana.Location = New System.Drawing.Point(164, 29)
         Me.LblInicioCampana.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblInicioCampana.Name = "LblInicioCampana"
         Me.LblInicioCampana.Size = New System.Drawing.Size(48, 13)
@@ -328,7 +328,7 @@ Partial Class FrmReporteCostoxKiloCerdo
         Me.Label9.BackColor = System.Drawing.Color.Transparent
         Me.Label9.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label9.Location = New System.Drawing.Point(57, 185)
+        Me.Label9.Location = New System.Drawing.Point(48, 185)
         Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(108, 14)
@@ -341,7 +341,7 @@ Partial Class FrmReporteCostoxKiloCerdo
         Me.Label10.BackColor = System.Drawing.Color.Transparent
         Me.Label10.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label10.Location = New System.Drawing.Point(40, 161)
+        Me.Label10.Location = New System.Drawing.Point(31, 161)
         Me.Label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(125, 14)
@@ -354,7 +354,7 @@ Partial Class FrmReporteCostoxKiloCerdo
         Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label7.Location = New System.Drawing.Point(37, 115)
+        Me.Label7.Location = New System.Drawing.Point(28, 115)
         Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(128, 14)
@@ -367,7 +367,7 @@ Partial Class FrmReporteCostoxKiloCerdo
         Me.Label8.BackColor = System.Drawing.Color.Transparent
         Me.Label8.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label8.Location = New System.Drawing.Point(20, 91)
+        Me.Label8.Location = New System.Drawing.Point(11, 91)
         Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(145, 14)
@@ -380,7 +380,7 @@ Partial Class FrmReporteCostoxKiloCerdo
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label4.Location = New System.Drawing.Point(64, 52)
+        Me.Label4.Location = New System.Drawing.Point(55, 52)
         Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(101, 14)
@@ -393,7 +393,7 @@ Partial Class FrmReporteCostoxKiloCerdo
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(47, 28)
+        Me.Label2.Location = New System.Drawing.Point(38, 28)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(118, 14)
@@ -405,9 +405,9 @@ Partial Class FrmReporteCostoxKiloCerdo
         Me.GroupBox4.Controls.Add(Me.Ptbx_Cargando4)
         Me.GroupBox4.Controls.Add(Me.dtgListado4)
         Me.GroupBox4.Controls.Add(Me.BarraOpciones4)
-        Me.GroupBox4.Location = New System.Drawing.Point(1080, 438)
+        Me.GroupBox4.Location = New System.Drawing.Point(1016, 426)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(513, 327)
+        Me.GroupBox4.Size = New System.Drawing.Size(479, 327)
         Me.GroupBox4.TabIndex = 55
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "ENGORDE"
@@ -416,7 +416,7 @@ Partial Class FrmReporteCostoxKiloCerdo
         '
         Me.Ptbx_Cargando4.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Ptbx_Cargando4.Image = Global.Formularios.My.Resources.Resources.loader
-        Me.Ptbx_Cargando4.Location = New System.Drawing.Point(226, 149)
+        Me.Ptbx_Cargando4.Location = New System.Drawing.Point(209, 149)
         Me.Ptbx_Cargando4.Name = "Ptbx_Cargando4"
         Me.Ptbx_Cargando4.Size = New System.Drawing.Size(43, 37)
         Me.Ptbx_Cargando4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -498,7 +498,7 @@ Partial Class FrmReporteCostoxKiloCerdo
         Me.dtgListado4.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dtgListado4.Location = New System.Drawing.Point(3, 54)
         Me.dtgListado4.Name = "dtgListado4"
-        Me.dtgListado4.Size = New System.Drawing.Size(507, 270)
+        Me.dtgListado4.Size = New System.Drawing.Size(473, 270)
         Me.dtgListado4.TabIndex = 29
         Me.dtgListado4.Text = "UltraGrid1"
         '
@@ -512,7 +512,7 @@ Partial Class FrmReporteCostoxKiloCerdo
         Me.BarraOpciones4.Margin = New System.Windows.Forms.Padding(2, 1, 2, 1)
         Me.BarraOpciones4.Name = "BarraOpciones4"
         Me.BarraOpciones4.Padding = New System.Windows.Forms.Padding(0, 0, 2, 0)
-        Me.BarraOpciones4.Size = New System.Drawing.Size(507, 38)
+        Me.BarraOpciones4.Size = New System.Drawing.Size(473, 38)
         Me.BarraOpciones4.TabIndex = 53
         Me.BarraOpciones4.Text = "ToolStrip4"
         '
@@ -548,9 +548,9 @@ Partial Class FrmReporteCostoxKiloCerdo
         Me.GroupBox3.Controls.Add(Me.Ptbx_Cargando3)
         Me.GroupBox3.Controls.Add(Me.dtgListado3)
         Me.GroupBox3.Controls.Add(Me.BarraOpciones3)
-        Me.GroupBox3.Location = New System.Drawing.Point(1080, 96)
+        Me.GroupBox3.Location = New System.Drawing.Point(1016, 93)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(513, 327)
+        Me.GroupBox3.Size = New System.Drawing.Size(479, 327)
         Me.GroupBox3.TabIndex = 54
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "RECRÍA"
@@ -559,7 +559,7 @@ Partial Class FrmReporteCostoxKiloCerdo
         '
         Me.Ptbx_Cargando3.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Ptbx_Cargando3.Image = Global.Formularios.My.Resources.Resources.loader
-        Me.Ptbx_Cargando3.Location = New System.Drawing.Point(226, 149)
+        Me.Ptbx_Cargando3.Location = New System.Drawing.Point(209, 149)
         Me.Ptbx_Cargando3.Name = "Ptbx_Cargando3"
         Me.Ptbx_Cargando3.Size = New System.Drawing.Size(43, 37)
         Me.Ptbx_Cargando3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -641,7 +641,7 @@ Partial Class FrmReporteCostoxKiloCerdo
         Me.dtgListado3.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dtgListado3.Location = New System.Drawing.Point(3, 54)
         Me.dtgListado3.Name = "dtgListado3"
-        Me.dtgListado3.Size = New System.Drawing.Size(507, 270)
+        Me.dtgListado3.Size = New System.Drawing.Size(473, 270)
         Me.dtgListado3.TabIndex = 29
         Me.dtgListado3.Text = "UltraGrid1"
         '
@@ -655,7 +655,7 @@ Partial Class FrmReporteCostoxKiloCerdo
         Me.BarraOpciones3.Margin = New System.Windows.Forms.Padding(2, 1, 2, 1)
         Me.BarraOpciones3.Name = "BarraOpciones3"
         Me.BarraOpciones3.Padding = New System.Windows.Forms.Padding(0, 0, 2, 0)
-        Me.BarraOpciones3.Size = New System.Drawing.Size(507, 38)
+        Me.BarraOpciones3.Size = New System.Drawing.Size(473, 38)
         Me.BarraOpciones3.TabIndex = 53
         Me.BarraOpciones3.Text = "ToolStrip3"
         '
@@ -691,9 +691,9 @@ Partial Class FrmReporteCostoxKiloCerdo
         Me.GroupBox2.Controls.Add(Me.Ptbx_Cargando2)
         Me.GroupBox2.Controls.Add(Me.dtgListado2)
         Me.GroupBox2.Controls.Add(Me.BarraOpciones2)
-        Me.GroupBox2.Location = New System.Drawing.Point(552, 96)
+        Me.GroupBox2.Location = New System.Drawing.Point(520, 93)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(513, 327)
+        Me.GroupBox2.Size = New System.Drawing.Size(482, 327)
         Me.GroupBox2.TabIndex = 54
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "MATERNIDAD"
@@ -702,7 +702,7 @@ Partial Class FrmReporteCostoxKiloCerdo
         '
         Me.Ptbx_Cargando2.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Ptbx_Cargando2.Image = Global.Formularios.My.Resources.Resources.loader
-        Me.Ptbx_Cargando2.Location = New System.Drawing.Point(226, 149)
+        Me.Ptbx_Cargando2.Location = New System.Drawing.Point(211, 149)
         Me.Ptbx_Cargando2.Name = "Ptbx_Cargando2"
         Me.Ptbx_Cargando2.Size = New System.Drawing.Size(43, 37)
         Me.Ptbx_Cargando2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -784,7 +784,7 @@ Partial Class FrmReporteCostoxKiloCerdo
         Me.dtgListado2.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dtgListado2.Location = New System.Drawing.Point(3, 54)
         Me.dtgListado2.Name = "dtgListado2"
-        Me.dtgListado2.Size = New System.Drawing.Size(507, 270)
+        Me.dtgListado2.Size = New System.Drawing.Size(476, 270)
         Me.dtgListado2.TabIndex = 29
         Me.dtgListado2.Text = "UltraGrid1"
         '
@@ -798,7 +798,7 @@ Partial Class FrmReporteCostoxKiloCerdo
         Me.BarraOpciones2.Margin = New System.Windows.Forms.Padding(2, 1, 2, 1)
         Me.BarraOpciones2.Name = "BarraOpciones2"
         Me.BarraOpciones2.Padding = New System.Windows.Forms.Padding(0, 0, 2, 0)
-        Me.BarraOpciones2.Size = New System.Drawing.Size(507, 38)
+        Me.BarraOpciones2.Size = New System.Drawing.Size(476, 38)
         Me.BarraOpciones2.TabIndex = 53
         Me.BarraOpciones2.Text = "ToolStrip1"
         '
@@ -836,7 +836,7 @@ Partial Class FrmReporteCostoxKiloCerdo
         Me.GroupBox1.Controls.Add(Me.BarraOpciones1)
         Me.GroupBox1.Location = New System.Drawing.Point(24, 93)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(513, 327)
+        Me.GroupBox1.Size = New System.Drawing.Size(482, 327)
         Me.GroupBox1.TabIndex = 31
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "REPRODUCCIÓN"
@@ -845,7 +845,7 @@ Partial Class FrmReporteCostoxKiloCerdo
         '
         Me.Ptbx_Cargando1.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Ptbx_Cargando1.Image = Global.Formularios.My.Resources.Resources.loader
-        Me.Ptbx_Cargando1.Location = New System.Drawing.Point(228, 149)
+        Me.Ptbx_Cargando1.Location = New System.Drawing.Point(213, 149)
         Me.Ptbx_Cargando1.Name = "Ptbx_Cargando1"
         Me.Ptbx_Cargando1.Size = New System.Drawing.Size(43, 37)
         Me.Ptbx_Cargando1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -927,7 +927,7 @@ Partial Class FrmReporteCostoxKiloCerdo
         Me.dtgListado1.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dtgListado1.Location = New System.Drawing.Point(3, 54)
         Me.dtgListado1.Name = "dtgListado1"
-        Me.dtgListado1.Size = New System.Drawing.Size(507, 270)
+        Me.dtgListado1.Size = New System.Drawing.Size(476, 270)
         Me.dtgListado1.TabIndex = 29
         Me.dtgListado1.Text = "UltraGrid1"
         '
@@ -941,7 +941,7 @@ Partial Class FrmReporteCostoxKiloCerdo
         Me.BarraOpciones1.Margin = New System.Windows.Forms.Padding(2, 1, 2, 1)
         Me.BarraOpciones1.Name = "BarraOpciones1"
         Me.BarraOpciones1.Padding = New System.Windows.Forms.Padding(0, 0, 2, 0)
-        Me.BarraOpciones1.Size = New System.Drawing.Size(507, 38)
+        Me.BarraOpciones1.Size = New System.Drawing.Size(476, 38)
         Me.BarraOpciones1.TabIndex = 53
         Me.BarraOpciones1.Text = "ToolStrip2"
         '
@@ -1182,7 +1182,7 @@ Partial Class FrmReporteCostoxKiloCerdo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1596, 742)
+        Me.ClientSize = New System.Drawing.Size(1782, 742)
         Me.Controls.Add(Me.Panel2)
         Me.Name = "FrmReporteCostoxKiloCerdo"
         Me.Text = "REPORTE POR KILO DE CERDO"
