@@ -9,7 +9,7 @@ Public Class FrmRptCostoxKiloDetalleF1
 
     Private Sub FrmRptCostoxKiloDetalleF1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
-            Dim codigosSoportados As String() = {"RP2", "RP6"}
+            Dim codigosSoportados As String() = {"RP2", "RP6", "RP7"}
 
             If Not codigosSoportados.Contains(idDetalle) Then
                 msj_advert("Para este registro no se tiene configurado un detalle")
@@ -32,6 +32,8 @@ Public Class FrmRptCostoxKiloDetalleF1
                 LblTitle.Text = "Reporte detallado de Reproduccion (VACUNACIÓN)"
             Case "RP6"
                 LblTitle.Text = "Reporte detallado de gastos veterinarios"
+            Case "RP7"
+                LblTitle.Text = "Reporte detallado de dosis de semen"
                 ' Case "RP3"
                 '     LblTitle.Text = "Otro título para un nuevo reporte..."
             Case Else
@@ -74,6 +76,9 @@ Public Class FrmRptCostoxKiloDetalleF1
                     ds = cn.Cn_CostoxKiloLechonRP6Detallado(obj).Copy
                     ds.Tables(1).Columns("idProducto").ColumnMapping = MappingType.Hidden
                     ds.Tables(1).Columns("idPlantel").ColumnMapping = MappingType.Hidden
+                Case "RP7"
+                    ds = cn.Cn_CostoxKiloLechonRP7Detallado(obj).Copy
+                    ds.Tables(1).Columns("idProducto").ColumnMapping = MappingType.Hidden
                     ' Case "RP3"
                     '     ds = cn.Cn_OtroProcedimientoAlmacenado(obj).Copy 
                 Case Else
@@ -144,6 +149,32 @@ Public Class FrmRptCostoxKiloDetalleF1
                         LblTotal.Text = Math.Round(total, 2).ToString("0.00")
                     End If
 
+                Case "RP7"
+                    Dim dtResult As DataTable = dsResult.Tables(0)
+                    Dim dtResult2 As DataTable = dsResult.Tables(2)
+
+                    LblInicioCampana.Text = If(IsDBNull(dtResult.Rows(0)("Campaña_Inicio")), "- / - / -", Convert.ToDateTime(dtResult.Rows(0)("Campaña_Inicio")).ToString("dd/MM/yyyy"))
+                    LblFinCampana.Text = If(IsDBNull(dtResult.Rows(0)("Campaña_Fin")), "- / - / -", Convert.ToDateTime(dtResult.Rows(0)("Campaña_Fin")).ToString("dd/MM/yyyy"))
+                    LblDiasCampana.Visible = False
+                    Label1.Visible = False
+                    LblInicioInseminacion.Text = If(IsDBNull(dtResult.Rows(0)("Monta_Inicio")), "- / - / -", Convert.ToDateTime(dtResult.Rows(0)("Monta_Inicio")).ToString("dd/MM/yyyy"))
+                    LblFinInseminacion.Text = If(IsDBNull(dtResult.Rows(0)("Monta_Fin")), "- / - / -", Convert.ToDateTime(dtResult.Rows(0)("Monta_Fin")).ToString("dd/MM/yyyy"))
+                    LblDiasInseminacion.Visible = False
+                    Label3.Visible = False
+                    LblInicioChanchilla.Text = If(IsDBNull(dtResult.Rows(0)("Chanchilla_Inicio")), "- / - / -", Convert.ToDateTime(dtResult.Rows(0)("Chanchilla_Inicio")).ToString("dd/MM/yyyy"))
+                    LblFinChanchilla.Text = If(IsDBNull(dtResult.Rows(0)("Chanchilla_Fin")), "- / - / -", Convert.ToDateTime(dtResult.Rows(0)("Chanchilla_Fin")).ToString("dd/MM/yyyy"))
+                    LblDiasChanchilla.Visible = False
+                    Label5.Visible = False
+
+                    dtgListado.DataSource = dsResult.Tables(1)
+
+                    If IsDBNull(dtResult2.Rows(0)("CostoDosisSemenxMadre")) Then
+                        LblTotal.Text = "-"
+                    Else
+                        Dim total As Decimal = Convert.ToDecimal(dtResult2.Rows(0)("CostoDosisSemenxMadre"))
+                        LblTotal.Text = Math.Round(total, 2).ToString("0.00")
+                    End If
+
                     ' Case "RP3"
                     '     ' Aquí puedes extraer las tablas para el siguiente reporte futuro
                     '     ' Dim dtT1 as DataTable = dsResult.Tables(0)
@@ -182,6 +213,11 @@ Public Class FrmRptCostoxKiloDetalleF1
                         clsBasicas.SumarTotales_Formato(dtgListado, e, 5)
                         clsBasicas.SumarTotales_Formato(dtgListado, e, 6)
                         clsBasicas.SumarTotales_Formato(dtgListado, e, 7)
+                    Case "RP7"
+                        clsBasicas.Totales_Formato(dtgListado, e, 1)
+                        clsBasicas.SumarTotales_Formato(dtgListado, e, 2)
+                        clsBasicas.SumarTotales_Formato(dtgListado, e, 3)
+                        clsBasicas.SumarTotales_Formato(dtgListado, e, 4)
                 End Select
             End If
         Catch ex As Exception
