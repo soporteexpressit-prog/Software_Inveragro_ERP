@@ -163,6 +163,11 @@ Public Class FrmReporteCostoxKiloCerdo
                         frm.idDetalle = idDetalleVal
                         frm.idCampaña = CmbCampaña.Value
                         frm.ShowDialog()
+                    ElseIf idDetalleVal = "RP10" Then
+                        Dim frm As New FrmRptCostoxKiloDetalleF3
+                        frm.idDetalle = idDetalleVal
+                        frm.idCampaña = CmbCampaña.Value
+                        frm.ShowDialog()
                     Else
                         Dim frm As New FrmRptCostoxKiloDetalleF1
                         frm.idDetalle = idDetalleVal

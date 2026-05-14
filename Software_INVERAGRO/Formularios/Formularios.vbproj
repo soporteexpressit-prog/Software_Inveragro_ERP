@@ -1951,6 +1951,12 @@
     <Compile Include="produccion\ReporteCostoxKilo\FrmRptCostoxKiloDetalleF2.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="produccion\ReporteCostoxKilo\FrmRptCostoxKiloDetalleF3.Designer.vb">
+      <DependentUpon>FrmRptCostoxKiloDetalleF3.vb</DependentUpon>
+    </Compile>
+    <Compile Include="produccion\ReporteCostoxKilo\FrmRptCostoxKiloDetalleF3.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="RecursosHumanos\AnularPago.Designer.vb">
       <DependentUpon>AnularPago.vb</DependentUpon>
     </Compile>
@@ -4881,6 +4887,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="produccion\ReporteCostoxKilo\FrmRptCostoxKiloDetalleF2.resx">
       <DependentUpon>FrmRptCostoxKiloDetalleF2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="produccion\ReporteCostoxKilo\FrmRptCostoxKiloDetalleF3.resx">
+      <DependentUpon>FrmRptCostoxKiloDetalleF3.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RecursosHumanos\AnularPago.resx">
       <DependentUpon>AnularPago.vb</DependentUpon>
