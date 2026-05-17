@@ -52,6 +52,8 @@ Partial Class FrmCategoriaProducto
         Me.txtCodigo = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.dtgListado = New Infragistics.Win.UltraWinGrid.UltraGrid()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.cbestado = New System.Windows.Forms.ComboBox()
         Me.ToolStrip1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -169,13 +171,15 @@ Partial Class FrmCategoriaProducto
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.cbestado)
+        Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.txtDescripcion)
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.txtCodigo)
         Me.GroupBox1.Location = New System.Drawing.Point(14, 37)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(880, 56)
+        Me.GroupBox1.Size = New System.Drawing.Size(893, 56)
         Me.GroupBox1.TabIndex = 129
         Me.GroupBox1.TabStop = False
         '
@@ -183,10 +187,10 @@ Partial Class FrmCategoriaProducto
         '
         Me.txtDescripcion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtDescripcion.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtDescripcion.Location = New System.Drawing.Point(455, 23)
+        Me.txtDescripcion.Location = New System.Drawing.Point(302, 25)
         Me.txtDescripcion.MaxLength = 100
         Me.txtDescripcion.Name = "txtDescripcion"
-        Me.txtDescripcion.Size = New System.Drawing.Size(403, 22)
+        Me.txtDescripcion.Size = New System.Drawing.Size(323, 22)
         Me.txtDescripcion.TabIndex = 48
         '
         'Label4
@@ -195,7 +199,7 @@ Partial Class FrmCategoriaProducto
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label4.Location = New System.Drawing.Point(337, 31)
+        Me.Label4.Location = New System.Drawing.Point(202, 28)
         Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(93, 14)
@@ -316,6 +320,29 @@ Partial Class FrmCategoriaProducto
         Me.dtgListado.TabIndex = 8
         Me.dtgListado.Text = "UltraGrid1"
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.Label1.Location = New System.Drawing.Point(643, 28)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(60, 14)
+        Me.Label1.TabIndex = 52
+        Me.Label1.Text = "Estado :"
+        '
+        'cbestado
+        '
+        Me.cbestado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbestado.FormattingEnabled = True
+        Me.cbestado.Items.AddRange(New Object() {"ACTIVO", "INACTIVO"})
+        Me.cbestado.Location = New System.Drawing.Point(710, 25)
+        Me.cbestado.Name = "cbestado"
+        Me.cbestado.Size = New System.Drawing.Size(136, 21)
+        Me.cbestado.TabIndex = 53
+        '
         'FrmCategoriaProducto
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -356,4 +383,6 @@ Partial Class FrmCategoriaProducto
     Friend WithEvents btncerrarr As ToolStripButton
     Friend WithEvents ToolStripButton1 As ToolStripButton
     Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents cbestado As ComboBox
+    Friend WithEvents Label1 As Label
 End Class

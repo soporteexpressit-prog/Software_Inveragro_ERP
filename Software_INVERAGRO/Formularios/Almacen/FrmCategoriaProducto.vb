@@ -41,6 +41,7 @@ Public Class FrmCategoriaProducto
         txtCodigo.Clear()
         txtCodigo.ReadOnly = True
         txtDescripcion.Clear()
+        cbestado.SelectedIndex = 0
         clsBasicas.Formato_Tablas_Grid(dtgListado)
         Consultar()
     End Sub
@@ -59,6 +60,7 @@ Public Class FrmCategoriaProducto
             obj.Operacion = _Operacion
             obj.Codigo = _CodCategoriaProducto
             obj.Descripcion = txtDescripcion.Text
+            obj.Estado = cbestado.Text
             obj.Iduser = 1
             _mensaje = cn.Cn_Mantenimiento(obj)
             If (obj.Coderror = 0) Then
@@ -91,6 +93,20 @@ Public Class FrmCategoriaProducto
                 _CodCategoriaProducto = CInt(dtgListado.DisplayLayout.ActiveRow.Cells(0).Value.ToString)
                 txtCodigo.Text = _CodCategoriaProducto.ToString
                 txtDescripcion.Text = dtgListado.DisplayLayout.ActiveRow.Cells(1).Value.ToString
+                ' ✅ CORRECTO: Obtener el texto del estado y buscar el índice en el ComboBox
+                Dim estadoTexto As String = dtgListado.ActiveRow.Cells(3).Value.ToString().Trim().ToUpper()
+
+                ' Buscar el índice del item que coincida con el texto
+                Dim indiceEncontrado As Integer = -1
+                For i As Integer = 0 To cbestado.Items.Count - 1
+                    If cbestado.Items(i).ToString().Trim().ToUpper() = estadoTexto Then
+                        indiceEncontrado = i
+                        Exit For
+                    End If
+                Next
+                If indiceEncontrado <> -1 Then
+                    cbestado.SelectedIndex = indiceEncontrado
+                End If
                 txtDescripcion.Focus()
             Else
                 msj_advert(MensajesSistema.mensajesGenerales("SELECCIONE_REGISTRO"))

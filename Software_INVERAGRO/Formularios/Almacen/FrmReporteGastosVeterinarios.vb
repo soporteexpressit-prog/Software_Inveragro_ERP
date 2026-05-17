@@ -107,7 +107,8 @@ Public Class FrmReporteGastosVeterinarios
                 dtgListado.DisplayLayout.Bands(0).Summaries.Clear()
             End If
             ' Ahora sí agrega los totales
-            clsBasicas.SumarTotales_Formato(dtgListado, e, 4)
+            clsBasicas.Totales_Formato(dtgListado, e, 1)
+            clsBasicas.SumarTotales_Formato(dtgListado, e, 3)
             clsBasicas.SumarTotales_Formato(dtgListado, e, 5)
             clsBasicas.SumarTotales_Formato(dtgListado, e, 6)
         Catch ex As Exception

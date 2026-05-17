@@ -81,7 +81,7 @@ Partial Class FrmReporteGastosVeterinarios
         Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnExportar, Me.btnSalir})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.ToolStrip1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.ToolStrip1.Margin = New System.Windows.Forms.Padding(2)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Padding = New System.Windows.Forms.Padding(0, 0, 2, 0)
         Me.ToolStrip1.Size = New System.Drawing.Size(997, 38)
@@ -133,9 +133,9 @@ Partial Class FrmReporteGastosVeterinarios
         Me.lbltitulo.Location = New System.Drawing.Point(9, 12)
         Me.lbltitulo.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lbltitulo.Name = "lbltitulo"
-        Me.lbltitulo.Size = New System.Drawing.Size(315, 18)
+        Me.lbltitulo.Size = New System.Drawing.Size(282, 18)
         Me.lbltitulo.TabIndex = 128
-        Me.lbltitulo.Text = "REPORTE GASTOS VETERINARIOS"
+        Me.lbltitulo.Text = "REPORTE GASTOS GENERALES"
         '
         'GroupBox1
         '
@@ -387,10 +387,10 @@ Partial Class FrmReporteGastosVeterinarios
         Me.Controls.Add(Me.dtgListado)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.ToolStrip1)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "FrmReporteGastosVeterinarios"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "REPORTE GASTOS VETERINARIOS"
+        Me.Text = "REPORTE GASTOS GENERALES"
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()
         Me.Panel1.ResumeLayout(False)
