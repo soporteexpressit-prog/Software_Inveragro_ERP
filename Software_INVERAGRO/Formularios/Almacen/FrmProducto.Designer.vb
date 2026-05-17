@@ -134,6 +134,8 @@ Partial Class FrmProducto
         Me.Label23 = New System.Windows.Forms.Label()
         Me.BtnProductoEquivalencia = New System.Windows.Forms.Button()
         Me.TxtNombreEqProducto = New System.Windows.Forms.TextBox()
+        Me.TxtMl = New System.Windows.Forms.NumericUpDown()
+        Me.Label26 = New System.Windows.Forms.Label()
         CType(Me.GroupBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox3.SuspendLayout()
         CType(Me.cbxpresentacion, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -145,6 +147,7 @@ Partial Class FrmProducto
         Me.GroupBox1.SuspendLayout()
         CType(Me.TxtNumDosis, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
+        CType(Me.TxtMl, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox3
@@ -779,6 +782,8 @@ Partial Class FrmProducto
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.TxtMl)
+        Me.GroupBox1.Controls.Add(Me.Label26)
         Me.GroupBox1.Controls.Add(Me.TxtNumDosis)
         Me.GroupBox1.Controls.Add(Me.Label25)
         Me.GroupBox1.Controls.Add(Me.CbxRacionExterna)
@@ -1139,6 +1144,27 @@ Partial Class FrmProducto
         Me.TxtNombreEqProducto.Size = New System.Drawing.Size(193, 21)
         Me.TxtNombreEqProducto.TabIndex = 171
         '
+        'TxtMl
+        '
+        Me.TxtMl.Location = New System.Drawing.Point(486, 458)
+        Me.TxtMl.Maximum = New Decimal(New Integer() {1000, 0, 0, 0})
+        Me.TxtMl.Name = "TxtMl"
+        Me.TxtMl.Size = New System.Drawing.Size(57, 21)
+        Me.TxtMl.TabIndex = 187
+        '
+        'Label26
+        '
+        Me.Label26.AutoSize = True
+        Me.Label26.BackColor = System.Drawing.Color.Transparent
+        Me.Label26.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label26.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.Label26.Location = New System.Drawing.Point(447, 461)
+        Me.Label26.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label26.Name = "Label26"
+        Me.Label26.Size = New System.Drawing.Size(33, 14)
+        Me.Label26.TabIndex = 186
+        Me.Label26.Text = "ML :"
+        '
         'FrmProducto
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1173,6 +1199,7 @@ Partial Class FrmProducto
         CType(Me.TxtNumDosis, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
+        CType(Me.TxtMl, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1242,4 +1269,6 @@ Partial Class FrmProducto
     Friend WithEvents Label23 As Label
     Friend WithEvents Label25 As Label
     Friend WithEvents TxtNumDosis As NumericUpDown
+    Friend WithEvents TxtMl As NumericUpDown
+    Friend WithEvents Label26 As Label
 End Class

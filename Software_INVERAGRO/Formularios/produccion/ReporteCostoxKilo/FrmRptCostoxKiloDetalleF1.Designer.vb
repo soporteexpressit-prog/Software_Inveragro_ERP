@@ -60,15 +60,15 @@ Partial Class FrmRptCostoxKiloDetalleF1
         Me.Label2 = New System.Windows.Forms.Label()
         Me.LblTitle = New System.Windows.Forms.Label()
         Me.BarraOpciones = New System.Windows.Forms.ToolStrip()
-        Me.BtnExportarprocontrolcerdos = New System.Windows.Forms.ToolStripButton()
-        Me.BtnCerrar = New System.Windows.Forms.ToolStripButton()
-        Me.Ptbx_Cargando = New System.Windows.Forms.PictureBox()
         Me.dtgListado = New Infragistics.Win.UltraWinGrid.UltraGrid()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
+        Me.Ptbx_Cargando = New System.Windows.Forms.PictureBox()
+        Me.BtnExportarprocontrolcerdos = New System.Windows.Forms.ToolStripButton()
+        Me.BtnCerrar = New System.Windows.Forms.ToolStripButton()
         Me.Panel2.SuspendLayout()
         Me.BarraOpciones.SuspendLayout()
-        CType(Me.Ptbx_Cargando, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dtgListado, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Ptbx_Cargando, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel2
@@ -210,7 +210,7 @@ Partial Class FrmRptCostoxKiloDetalleF1
         'LblFinChanchilla
         '
         Me.LblFinChanchilla.AutoSize = True
-        Me.LblFinChanchilla.BackColor = System.Drawing.Color.Transparent
+        Me.LblFinChanchilla.BackColor = System.Drawing.Color.Yellow
         Me.LblFinChanchilla.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblFinChanchilla.ForeColor = System.Drawing.Color.Black
         Me.LblFinChanchilla.Location = New System.Drawing.Point(895, 97)
@@ -223,7 +223,7 @@ Partial Class FrmRptCostoxKiloDetalleF1
         'LblInicioChanchilla
         '
         Me.LblInicioChanchilla.AutoSize = True
-        Me.LblInicioChanchilla.BackColor = System.Drawing.Color.Transparent
+        Me.LblInicioChanchilla.BackColor = System.Drawing.Color.Yellow
         Me.LblInicioChanchilla.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblInicioChanchilla.ForeColor = System.Drawing.Color.Black
         Me.LblInicioChanchilla.Location = New System.Drawing.Point(895, 73)
@@ -372,9 +372,9 @@ Partial Class FrmRptCostoxKiloDetalleF1
         Me.LblTitle.Location = New System.Drawing.Point(21, 20)
         Me.LblTitle.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.LblTitle.Name = "LblTitle"
-        Me.LblTitle.Size = New System.Drawing.Size(202, 18)
+        Me.LblTitle.Size = New System.Drawing.Size(310, 18)
         Me.LblTitle.TabIndex = 128
-        Me.LblTitle.Text = "CONTROL DE CERDAS"
+        Me.LblTitle.Text = "Reporte detallado (VACUNACIÓN)"
         '
         'BarraOpciones
         '
@@ -390,43 +390,6 @@ Partial Class FrmRptCostoxKiloDetalleF1
         Me.BarraOpciones.Size = New System.Drawing.Size(1039, 38)
         Me.BarraOpciones.TabIndex = 52
         Me.BarraOpciones.Text = "ToolStrip1"
-        '
-        'BtnExportarprocontrolcerdos
-        '
-        Me.BtnExportarprocontrolcerdos.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnExportarprocontrolcerdos.ForeColor = System.Drawing.Color.White
-        Me.BtnExportarprocontrolcerdos.Image = Global.Formularios.My.Resources.Resources.exportar2
-        Me.BtnExportarprocontrolcerdos.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.BtnExportarprocontrolcerdos.Margin = New System.Windows.Forms.Padding(5)
-        Me.BtnExportarprocontrolcerdos.Name = "BtnExportarprocontrolcerdos"
-        Me.BtnExportarprocontrolcerdos.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnExportarprocontrolcerdos.Size = New System.Drawing.Size(92, 28)
-        Me.BtnExportarprocontrolcerdos.Text = "Exportar"
-        Me.BtnExportarprocontrolcerdos.ToolTipText = "Exportar"
-        '
-        'BtnCerrar
-        '
-        Me.BtnCerrar.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnCerrar.ForeColor = System.Drawing.Color.White
-        Me.BtnCerrar.Image = Global.Formularios.My.Resources.Resources.salir
-        Me.BtnCerrar.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.BtnCerrar.Margin = New System.Windows.Forms.Padding(5)
-        Me.BtnCerrar.Name = "BtnCerrar"
-        Me.BtnCerrar.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnCerrar.Size = New System.Drawing.Size(66, 28)
-        Me.BtnCerrar.Text = "Salir"
-        '
-        'Ptbx_Cargando
-        '
-        Me.Ptbx_Cargando.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Ptbx_Cargando.Image = Global.Formularios.My.Resources.Resources.loader
-        Me.Ptbx_Cargando.Location = New System.Drawing.Point(445, 400)
-        Me.Ptbx_Cargando.Name = "Ptbx_Cargando"
-        Me.Ptbx_Cargando.Size = New System.Drawing.Size(43, 37)
-        Me.Ptbx_Cargando.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.Ptbx_Cargando.TabIndex = 30
-        Me.Ptbx_Cargando.TabStop = False
-        Me.Ptbx_Cargando.Visible = False
         '
         'dtgListado
         '
@@ -509,6 +472,43 @@ Partial Class FrmRptCostoxKiloDetalleF1
         'BackgroundWorker1
         '
         '
+        'Ptbx_Cargando
+        '
+        Me.Ptbx_Cargando.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Ptbx_Cargando.Image = Global.Formularios.My.Resources.Resources.loader
+        Me.Ptbx_Cargando.Location = New System.Drawing.Point(445, 400)
+        Me.Ptbx_Cargando.Name = "Ptbx_Cargando"
+        Me.Ptbx_Cargando.Size = New System.Drawing.Size(43, 37)
+        Me.Ptbx_Cargando.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.Ptbx_Cargando.TabIndex = 30
+        Me.Ptbx_Cargando.TabStop = False
+        Me.Ptbx_Cargando.Visible = False
+        '
+        'BtnExportarprocontrolcerdos
+        '
+        Me.BtnExportarprocontrolcerdos.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnExportarprocontrolcerdos.ForeColor = System.Drawing.Color.White
+        Me.BtnExportarprocontrolcerdos.Image = Global.Formularios.My.Resources.Resources.exportar2
+        Me.BtnExportarprocontrolcerdos.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BtnExportarprocontrolcerdos.Margin = New System.Windows.Forms.Padding(5)
+        Me.BtnExportarprocontrolcerdos.Name = "BtnExportarprocontrolcerdos"
+        Me.BtnExportarprocontrolcerdos.Padding = New System.Windows.Forms.Padding(2)
+        Me.BtnExportarprocontrolcerdos.Size = New System.Drawing.Size(92, 28)
+        Me.BtnExportarprocontrolcerdos.Text = "Exportar"
+        Me.BtnExportarprocontrolcerdos.ToolTipText = "Exportar"
+        '
+        'BtnCerrar
+        '
+        Me.BtnCerrar.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnCerrar.ForeColor = System.Drawing.Color.White
+        Me.BtnCerrar.Image = Global.Formularios.My.Resources.Resources.salir
+        Me.BtnCerrar.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BtnCerrar.Margin = New System.Windows.Forms.Padding(5)
+        Me.BtnCerrar.Name = "BtnCerrar"
+        Me.BtnCerrar.Padding = New System.Windows.Forms.Padding(2)
+        Me.BtnCerrar.Size = New System.Drawing.Size(66, 28)
+        Me.BtnCerrar.Text = "Salir"
+        '
         'FrmRptCostoxKiloDetalleF1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -526,8 +526,8 @@ Partial Class FrmRptCostoxKiloDetalleF1
         Me.Panel2.PerformLayout()
         Me.BarraOpciones.ResumeLayout(False)
         Me.BarraOpciones.PerformLayout()
-        CType(Me.Ptbx_Cargando, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dtgListado, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Ptbx_Cargando, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

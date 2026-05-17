@@ -30,6 +30,7 @@
     Private _EsRacionExterna As Boolean
     Private _IdProductoEquivalencia As Integer
     Private _NumDosis As Integer
+    Private _Ml As Integer
 
     Public Property Idproducto As Integer
         Get
@@ -305,6 +306,15 @@
         End Get
         Set(value As Integer)
             _NumDosis = value
+        End Set
+    End Property
+
+    Public Property Ml As Integer
+        Get
+            Return _Ml
+        End Get
+        Set(value As Integer)
+            _Ml = value
         End Set
     End Property
 End Class
