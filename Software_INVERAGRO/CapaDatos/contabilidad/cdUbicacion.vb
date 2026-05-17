@@ -299,4 +299,20 @@ Public Class cdUbicacion
         con.Salir()
         Return dt
     End Function
+
+    Public Function Cd_ListarCampañasCerradas(name As String, obj As coUbicacion) As DataTable
+        Dim dt As New DataTable
+        Try
+            con.Abrir()
+            Dim da As New SqlDataAdapter(name, con.con)
+            da.SelectCommand.CommandType = 4
+            da.SelectCommand.Parameters.AddWithValue("@idUbicacion", obj.Codigo)
+            da.SelectCommand.Parameters.AddWithValue("@anio", obj.Anio)
+            da.Fill(dt)
+        Catch ex As Exception
+            Throw ex
+        End Try
+        con.Salir()
+        Return dt
+    End Function
 End Class

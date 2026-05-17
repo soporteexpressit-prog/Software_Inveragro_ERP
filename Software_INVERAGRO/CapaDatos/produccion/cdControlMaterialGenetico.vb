@@ -200,4 +200,21 @@ Public Class cdControlMaterialGenetico
             Throw ex
         End Try
     End Function
+
+    Public Function Cd_ConsultarxFechasxPlantel(name As String, obj As coControlMaterialGenetico) As DataSet
+        Dim ds As New DataSet
+        Try
+            con.Abrir()
+            Dim da As New SqlDataAdapter(name, con.con)
+            da.SelectCommand.CommandType = 4
+            da.SelectCommand.Parameters.AddWithValue("@fechaDesde", obj.FechaDesde)
+            da.SelectCommand.Parameters.AddWithValue("@fechaHasta", obj.FechaHasta)
+            da.SelectCommand.Parameters.AddWithValue("@idUbicacion", obj.IdUbicacionOrigen)
+            da.Fill(ds)
+        Catch ex As Exception
+            Throw ex
+        End Try
+        con.Salir()
+        Return ds
+    End Function
 End Class

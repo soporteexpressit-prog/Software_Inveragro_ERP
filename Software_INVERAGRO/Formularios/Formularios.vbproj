@@ -1795,6 +1795,18 @@
     <Compile Include="produccion\FrmReporteConsumoMaternidad.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="produccion\GestionMaterialGenetico\FrmReporteMaterialGenetico.Designer.vb">
+      <DependentUpon>FrmReporteMaterialGenetico.vb</DependentUpon>
+    </Compile>
+    <Compile Include="produccion\GestionMaterialGenetico\FrmReporteMaterialGenetico.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="produccion\ReporteCostoxKilo\FrmReporteCostoxKiloCerdo.Designer.vb">
+      <DependentUpon>FrmReporteCostoxKiloCerdo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="produccion\ReporteCostoxKilo\FrmReporteCostoxKiloCerdo.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="produccion\FrmReportePartoDetallado.Designer.vb">
       <DependentUpon>FrmReportePartoDetallado.vb</DependentUpon>
     </Compile>
@@ -1879,6 +1891,18 @@
     <Compile Include="produccion\HistoricoMortalidad\FrmVerEvidenciaMortalidad.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="produccion\RegularizacionCerdos\FrmListarAnimalesCodificadosRegu.Designer.vb">
+      <DependentUpon>FrmListarAnimalesCodificadosRegu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="produccion\RegularizacionCerdos\FrmListarAnimalesCodificadosRegu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="produccion\RegularizacionCerdos\FrmListarMotivoRegularCodificados.Designer.vb">
+      <DependentUpon>FrmListarMotivoRegularCodificados.vb</DependentUpon>
+    </Compile>
+    <Compile Include="produccion\RegularizacionCerdos\FrmListarMotivoRegularCodificados.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="produccion\RegularizacionCerdos\FrmListarMotivosRegularizacion.Designer.vb">
       <DependentUpon>FrmListarMotivosRegularizacion.vb</DependentUpon>
     </Compile>
@@ -1907,6 +1931,42 @@
       <DependentUpon>FrmRegularizarCerdosReproduccion.vb</DependentUpon>
     </Compile>
     <Compile Include="produccion\RegularizacionCerdos\FrmRegularizarCerdosReproduccion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="produccion\RegularizacionCerdos\FrmRegularizarSalidaConArete.Designer.vb">
+      <DependentUpon>FrmRegularizarSalidaConArete.vb</DependentUpon>
+    </Compile>
+    <Compile Include="produccion\RegularizacionCerdos\FrmRegularizarSalidaConArete.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="produccion\ReporteCostoxKilo\FrmRptCostoxKiloDetalleF1.Designer.vb">
+      <DependentUpon>FrmRptCostoxKiloDetalleF1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="produccion\ReporteCostoxKilo\FrmRptCostoxKiloDetalleF1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="produccion\ReporteCostoxKilo\FrmRptCostoxKiloDetalleF2.Designer.vb">
+      <DependentUpon>FrmRptCostoxKiloDetalleF2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="produccion\ReporteCostoxKilo\FrmRptCostoxKiloDetalleF2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="produccion\ReporteCostoxKilo\FrmRptCostoxKiloDetalleF4.Designer.vb">
+      <DependentUpon>FrmRptCostoxKiloDetalleF4.vb</DependentUpon>
+    </Compile>
+    <Compile Include="produccion\ReporteCostoxKilo\FrmRptCostoxKiloDetalleF4.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="produccion\ReporteCostoxKilo\FrmRptCostoxKiloDetalleF3.Designer.vb">
+      <DependentUpon>FrmRptCostoxKiloDetalleF3.vb</DependentUpon>
+    </Compile>
+    <Compile Include="produccion\ReporteCostoxKilo\FrmRptCostoxKiloDetalleF3.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="produccion\ReporteCostoxKilo\FrmRptCostoxKiloDetalleF5.Designer.vb">
+      <DependentUpon>FrmRptCostoxKiloDetalleF5.vb</DependentUpon>
+    </Compile>
+    <Compile Include="produccion\ReporteCostoxKilo\FrmRptCostoxKiloDetalleF5.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="RecursosHumanos\AnularPago.Designer.vb">
@@ -4762,6 +4822,12 @@
     <EmbeddedResource Include="produccion\FrmReporteConsumoMaternidad.resx">
       <DependentUpon>FrmReporteConsumoMaternidad.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="produccion\GestionMaterialGenetico\FrmReporteMaterialGenetico.resx">
+      <DependentUpon>FrmReporteMaterialGenetico.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="produccion\ReporteCostoxKilo\FrmReporteCostoxKiloCerdo.resx">
+      <DependentUpon>FrmReporteCostoxKiloCerdo.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="produccion\FrmReportePartoDetallado.resx">
       <DependentUpon>FrmReportePartoDetallado.vb</DependentUpon>
     </EmbeddedResource>
@@ -4804,6 +4870,12 @@
     <EmbeddedResource Include="produccion\HistoricoMortalidad\FrmVerEvidenciaMortalidad.resx">
       <DependentUpon>FrmVerEvidenciaMortalidad.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="produccion\RegularizacionCerdos\FrmListarAnimalesCodificadosRegu.resx">
+      <DependentUpon>FrmListarAnimalesCodificadosRegu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="produccion\RegularizacionCerdos\FrmListarMotivoRegularCodificados.resx">
+      <DependentUpon>FrmListarMotivoRegularCodificados.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="produccion\RegularizacionCerdos\FrmListarMotivosRegularizacion.resx">
       <DependentUpon>FrmListarMotivosRegularizacion.vb</DependentUpon>
     </EmbeddedResource>
@@ -4818,6 +4890,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="produccion\RegularizacionCerdos\FrmRegularizarCerdosReproduccion.resx">
       <DependentUpon>FrmRegularizarCerdosReproduccion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="produccion\RegularizacionCerdos\FrmRegularizarSalidaConArete.resx">
+      <DependentUpon>FrmRegularizarSalidaConArete.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="produccion\ReporteCostoxKilo\FrmRptCostoxKiloDetalleF1.resx">
+      <DependentUpon>FrmRptCostoxKiloDetalleF1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="produccion\ReporteCostoxKilo\FrmRptCostoxKiloDetalleF2.resx">
+      <DependentUpon>FrmRptCostoxKiloDetalleF2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="produccion\ReporteCostoxKilo\FrmRptCostoxKiloDetalleF4.resx">
+      <DependentUpon>FrmRptCostoxKiloDetalleF4.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="produccion\ReporteCostoxKilo\FrmRptCostoxKiloDetalleF3.resx">
+      <DependentUpon>FrmRptCostoxKiloDetalleF3.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="produccion\ReporteCostoxKilo\FrmRptCostoxKiloDetalleF5.resx">
+      <DependentUpon>FrmRptCostoxKiloDetalleF5.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RecursosHumanos\AnularPago.resx">
       <DependentUpon>AnularPago.vb</DependentUpon>

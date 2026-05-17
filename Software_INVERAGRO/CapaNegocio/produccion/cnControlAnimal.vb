@@ -240,6 +240,10 @@ Public Class cnControlAnimal
         Return cls_at.Cd_RegistrarRegularizacionCerdos("[w_pa_reg_regularizar_cerdos]", obj)
     End Function
 
+    Public Function Cn_RegistrarRegularizacionCerdosCodificado(ByRef obj As coControlAnimal) As String
+        Return cls_at.Cd_RegistrarRegularizacionCerdosCodificado("[w_pa_reg_regularizar_cerdos_codificados]", obj)
+    End Function
+
     Public Function Cn_EliminarServicio(ByRef obj As coControlAnimal) As String
         Return cls_at.Cd_EliminarEventoCerda("[w_pa_eliminar_evento_servicio]", obj)
     End Function
@@ -330,5 +334,35 @@ Public Class cnControlAnimal
 
     Public Function Cn_ConsultarHistoricoParto(ByRef obj As coControlAnimal) As DataTable
         Return cls_at.Cd_ConsultarxFechasUbicacionDt("[w_pa_cons_reporte_partos_por_fechas]", obj)
+    End Function
+
+    Public Function Cn_ConsultarAnimalCodificadosRegularizacion(ByRef obj As coControlAnimal) As DataTable
+        Return cls_at.Cd_ConsultarAnimalCodificadosRegularizacion("[w_pa_cons_animales_codificados_regularizar]", obj)
+    End Function
+
+    'CONSULTAS POR COSTO X KILO CERDO
+    Public Function Cn_CostoxKiloLechonReproduccion(ByRef obj As coControlAnimal) As DataSet
+        Return cls_at.Cd_ConsultarxIdCampaña("[w_pa_costo_x_kilo_lechon_reproduccion]", obj)
+    End Function
+
+    'CONSULTAS POR COSTO X KILO CERDO - DETALLADO
+    Public Function Cn_CostoxKiloLechonRP2Detallado(ByRef obj As coControlAnimal) As DataSet
+        Return cls_at.Cd_ConsultarxIdCampaña("[w_costo_vacunacion_chanchillas]", obj)
+    End Function
+
+    Public Function Cn_CostoxKiloLechonRP6Detallado(ByRef obj As coControlAnimal) As DataSet
+        Return cls_at.Cd_ConsultarxIdCampaña("[w_costo_gastos_veterinarios_detalle]", obj)
+    End Function
+
+    Public Function Cn_CostoxKiloLechonRP7Detallado(ByRef obj As coControlAnimal) As DataSet
+        Return cls_at.Cd_ConsultarxIdCampaña("[w_costo_vacunas_gestantes]", obj)
+    End Function
+
+    Public Function Cn_CostoxKiloLechonRP8Detallado(ByRef obj As coControlAnimal) As DataSet
+        Return cls_at.Cd_ConsultarxIdCampaña("[w_costo_dosis_semen]", obj)
+    End Function
+
+    Public Function Cn_CostoxKiloLechonRP10Detallado(ByRef obj As coControlAnimal) As DataSet
+        Return cls_at.Cd_ConsultarxIdCampaña("[w_costo_personal_reproduccion_detalle]", obj)
     End Function
 End Class

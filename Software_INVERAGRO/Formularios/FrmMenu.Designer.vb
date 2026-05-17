@@ -176,6 +176,7 @@ Partial Class FrmMenu
         Me.btnSolicitudPedidosRequerimientos = New System.Windows.Forms.ToolStripMenuItem()
         Me.ACERCADEToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.MORTALIDADDECERDOSToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.COSTOXKILOCERDOToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PanelContenedor.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -238,105 +239,105 @@ Partial Class FrmMenu
         'toolControlAlimentos
         '
         Me.toolControlAlimentos.Name = "toolControlAlimentos"
-        Me.toolControlAlimentos.Size = New System.Drawing.Size(474, 26)
+        Me.toolControlAlimentos.Size = New System.Drawing.Size(393, 22)
         Me.toolControlAlimentos.Text = "CONTROL DE ALIMENTOS"
         '
         'btnProductos
         '
         Me.btnProductos.Name = "btnProductos"
-        Me.btnProductos.Size = New System.Drawing.Size(474, 26)
+        Me.btnProductos.Size = New System.Drawing.Size(393, 22)
         Me.btnProductos.Text = "CONTROL DE PRODUCTOS"
         '
         'toolControlRequerimientos
         '
         Me.toolControlRequerimientos.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ATENCIONDEPEDIDOSToolStripMenuItem, Me.PEDIDOSPENDIENTESToolStripMenuItem})
         Me.toolControlRequerimientos.Name = "toolControlRequerimientos"
-        Me.toolControlRequerimientos.Size = New System.Drawing.Size(474, 26)
+        Me.toolControlRequerimientos.Size = New System.Drawing.Size(393, 22)
         Me.toolControlRequerimientos.Text = "CONTROL DE REQUERIMIENTOS"
         '
         'ATENCIONDEPEDIDOSToolStripMenuItem
         '
         Me.ATENCIONDEPEDIDOSToolStripMenuItem.Name = "ATENCIONDEPEDIDOSToolStripMenuItem"
-        Me.ATENCIONDEPEDIDOSToolStripMenuItem.Size = New System.Drawing.Size(298, 26)
+        Me.ATENCIONDEPEDIDOSToolStripMenuItem.Size = New System.Drawing.Size(247, 22)
         Me.ATENCIONDEPEDIDOSToolStripMenuItem.Text = "CREAR REQUERIMIENTOS"
         '
         'PEDIDOSPENDIENTESToolStripMenuItem
         '
         Me.PEDIDOSPENDIENTESToolStripMenuItem.Name = "PEDIDOSPENDIENTESToolStripMenuItem"
-        Me.PEDIDOSPENDIENTESToolStripMenuItem.Size = New System.Drawing.Size(298, 26)
+        Me.PEDIDOSPENDIENTESToolStripMenuItem.Size = New System.Drawing.Size(247, 22)
         Me.PEDIDOSPENDIENTESToolStripMenuItem.Text = "ATENDER REQUERIMIENTOS"
         '
         'toolControlStockAlmacenes
         '
         Me.toolControlStockAlmacenes.Name = "toolControlStockAlmacenes"
-        Me.toolControlStockAlmacenes.Size = New System.Drawing.Size(474, 26)
+        Me.toolControlStockAlmacenes.Size = New System.Drawing.Size(393, 22)
         Me.toolControlStockAlmacenes.Text = "CONTROL STOCK ALMACENES"
         '
         'toolOtrasSalidasAlmacen
         '
         Me.toolOtrasSalidasAlmacen.Name = "toolOtrasSalidasAlmacen"
-        Me.toolOtrasSalidasAlmacen.Size = New System.Drawing.Size(474, 26)
+        Me.toolOtrasSalidasAlmacen.Size = New System.Drawing.Size(393, 22)
         Me.toolOtrasSalidasAlmacen.Text = "OTRAS SALIDAS DE ALMACEN"
         '
         'toolOtrosIngresosAlmacen
         '
         Me.toolOtrosIngresosAlmacen.Name = "toolOtrosIngresosAlmacen"
-        Me.toolOtrosIngresosAlmacen.Size = New System.Drawing.Size(474, 26)
+        Me.toolOtrosIngresosAlmacen.Size = New System.Drawing.Size(393, 22)
         Me.toolOtrosIngresosAlmacen.Text = "OTROS INGRESOS DE ALMACEN"
         '
         'toolPedidosparaOrdenesCompra
         '
         Me.toolPedidosparaOrdenesCompra.Name = "toolPedidosparaOrdenesCompra"
-        Me.toolPedidosparaOrdenesCompra.Size = New System.Drawing.Size(474, 26)
+        Me.toolPedidosparaOrdenesCompra.Size = New System.Drawing.Size(393, 22)
         Me.toolPedidosparaOrdenesCompra.Text = "PEDIDOS PARA ORDENES DE COMPRA"
         '
         'btnTablasMaestras
         '
         Me.btnTablasMaestras.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CATEGORIASToolStripMenuItem, Me.UNIDADDEMEDIDAToolStripMenuItem, Me.PRESENTACIONESPRODUCTOSToolStripMenuItem, Me.btnunidadesmedida, Me.CONTROLDETRANSPORTESTSUBMN2})
         Me.btnTablasMaestras.Name = "btnTablasMaestras"
-        Me.btnTablasMaestras.Size = New System.Drawing.Size(474, 26)
+        Me.btnTablasMaestras.Size = New System.Drawing.Size(393, 22)
         Me.btnTablasMaestras.Text = "TABLAS MAESTRAS"
         '
         'CATEGORIASToolStripMenuItem
         '
         Me.CATEGORIASToolStripMenuItem.Name = "CATEGORIASToolStripMenuItem"
-        Me.CATEGORIASToolStripMenuItem.Size = New System.Drawing.Size(324, 26)
+        Me.CATEGORIASToolStripMenuItem.Size = New System.Drawing.Size(268, 22)
         Me.CATEGORIASToolStripMenuItem.Text = "CATEGORIAS"
         '
         'UNIDADDEMEDIDAToolStripMenuItem
         '
         Me.UNIDADDEMEDIDAToolStripMenuItem.Name = "UNIDADDEMEDIDAToolStripMenuItem"
-        Me.UNIDADDEMEDIDAToolStripMenuItem.Size = New System.Drawing.Size(324, 26)
+        Me.UNIDADDEMEDIDAToolStripMenuItem.Size = New System.Drawing.Size(268, 22)
         Me.UNIDADDEMEDIDAToolStripMenuItem.Text = "MARCAS"
         '
         'PRESENTACIONESPRODUCTOSToolStripMenuItem
         '
         Me.PRESENTACIONESPRODUCTOSToolStripMenuItem.Name = "PRESENTACIONESPRODUCTOSToolStripMenuItem"
-        Me.PRESENTACIONESPRODUCTOSToolStripMenuItem.Size = New System.Drawing.Size(324, 26)
+        Me.PRESENTACIONESPRODUCTOSToolStripMenuItem.Size = New System.Drawing.Size(268, 22)
         Me.PRESENTACIONESPRODUCTOSToolStripMenuItem.Text = "PRESENTACIONES PRODUCTOS"
         '
         'btnunidadesmedida
         '
         Me.btnunidadesmedida.Name = "btnunidadesmedida"
-        Me.btnunidadesmedida.Size = New System.Drawing.Size(324, 26)
+        Me.btnunidadesmedida.Size = New System.Drawing.Size(268, 22)
         Me.btnunidadesmedida.Text = "UNIDAD DE MEDIDA MÍNIMA"
         '
         'CONTROLDETRANSPORTESTSUBMN2
         '
         Me.CONTROLDETRANSPORTESTSUBMN2.Name = "CONTROLDETRANSPORTESTSUBMN2"
-        Me.CONTROLDETRANSPORTESTSUBMN2.Size = New System.Drawing.Size(324, 26)
+        Me.CONTROLDETRANSPORTESTSUBMN2.Size = New System.Drawing.Size(268, 22)
         Me.CONTROLDETRANSPORTESTSUBMN2.Text = "CONTROL DE TRANSPORTES"
         '
         'CONTROLDEINVENTARIOSSUBMN2
         '
         Me.CONTROLDEINVENTARIOSSUBMN2.Name = "CONTROLDEINVENTARIOSSUBMN2"
-        Me.CONTROLDEINVENTARIOSSUBMN2.Size = New System.Drawing.Size(474, 26)
+        Me.CONTROLDEINVENTARIOSSUBMN2.Size = New System.Drawing.Size(393, 22)
         Me.CONTROLDEINVENTARIOSSUBMN2.Text = "CONTROL DE INVENTARIOS"
         '
         'CONTROLDEASIGNACIONESDEREQUERIMIENTOSToolStripMenuItem
         '
         Me.CONTROLDEASIGNACIONESDEREQUERIMIENTOSToolStripMenuItem.Name = "CONTROLDEASIGNACIONESDEREQUERIMIENTOSToolStripMenuItem"
-        Me.CONTROLDEASIGNACIONESDEREQUERIMIENTOSToolStripMenuItem.Size = New System.Drawing.Size(474, 26)
+        Me.CONTROLDEASIGNACIONESDEREQUERIMIENTOSToolStripMenuItem.Size = New System.Drawing.Size(393, 22)
         Me.CONTROLDEASIGNACIONESDEREQUERIMIENTOSToolStripMenuItem.Text = "CONTROL DE ASIGNACIONES DE REQUERIMIENTOS"
         '
         'toolCompras
@@ -359,13 +360,13 @@ Partial Class FrmMenu
         'toolOrdenesCompras
         '
         Me.toolOrdenesCompras.Name = "toolOrdenesCompras"
-        Me.toolOrdenesCompras.Size = New System.Drawing.Size(267, 26)
+        Me.toolOrdenesCompras.Size = New System.Drawing.Size(220, 22)
         Me.toolOrdenesCompras.Text = "ORDENES DE COMPRAS"
         '
         'toolProveedores
         '
         Me.toolProveedores.Name = "toolProveedores"
-        Me.toolProveedores.Size = New System.Drawing.Size(267, 26)
+        Me.toolProveedores.Size = New System.Drawing.Size(220, 22)
         Me.toolProveedores.Text = "PROVEEDORES"
         '
         'toolContabilidad
@@ -390,123 +391,123 @@ Partial Class FrmMenu
         Me.toolControlCaja.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
         Me.toolControlCaja.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnAperturarCaja, Me.btnCerrarCaja, Me.btnMovimientosCaja, Me.btnResumenesCaja})
         Me.toolControlCaja.Name = "toolControlCaja"
-        Me.toolControlCaja.Size = New System.Drawing.Size(378, 26)
+        Me.toolControlCaja.Size = New System.Drawing.Size(313, 22)
         Me.toolControlCaja.Text = "CONTROL DE CAJA"
         '
         'btnAperturarCaja
         '
         Me.btnAperturarCaja.Name = "btnAperturarCaja"
-        Me.btnAperturarCaja.Size = New System.Drawing.Size(267, 26)
+        Me.btnAperturarCaja.Size = New System.Drawing.Size(219, 22)
         Me.btnAperturarCaja.Text = "APERTURAR CAJA"
         '
         'btnCerrarCaja
         '
         Me.btnCerrarCaja.Name = "btnCerrarCaja"
-        Me.btnCerrarCaja.Size = New System.Drawing.Size(267, 26)
+        Me.btnCerrarCaja.Size = New System.Drawing.Size(219, 22)
         Me.btnCerrarCaja.Text = "CERRAR CAJA"
         '
         'btnMovimientosCaja
         '
         Me.btnMovimientosCaja.Name = "btnMovimientosCaja"
-        Me.btnMovimientosCaja.Size = New System.Drawing.Size(267, 26)
+        Me.btnMovimientosCaja.Size = New System.Drawing.Size(219, 22)
         Me.btnMovimientosCaja.Text = "MOVIMIENTOS DE CAJA"
         '
         'btnResumenesCaja
         '
         Me.btnResumenesCaja.Name = "btnResumenesCaja"
-        Me.btnResumenesCaja.Size = New System.Drawing.Size(267, 26)
+        Me.btnResumenesCaja.Size = New System.Drawing.Size(219, 22)
         Me.btnResumenesCaja.Text = "RESUMENES DE CAJA"
         '
         'toolControlBonificacionSNN
         '
         Me.toolControlBonificacionSNN.Name = "toolControlBonificacionSNN"
-        Me.toolControlBonificacionSNN.Size = New System.Drawing.Size(378, 26)
+        Me.toolControlBonificacionSNN.Size = New System.Drawing.Size(313, 22)
         Me.toolControlBonificacionSNN.Text = "CONTROL DE BONIFICACION POR SNN"
         '
         'toolCuentasxCobrar
         '
         Me.toolCuentasxCobrar.Name = "toolCuentasxCobrar"
-        Me.toolCuentasxCobrar.Size = New System.Drawing.Size(378, 26)
+        Me.toolCuentasxCobrar.Size = New System.Drawing.Size(313, 22)
         Me.toolCuentasxCobrar.Text = "CUENTAS POR COBRAR"
         '
         'toolCuentasPagar
         '
         Me.toolCuentasPagar.Name = "toolCuentasPagar"
-        Me.toolCuentasPagar.Size = New System.Drawing.Size(378, 26)
+        Me.toolCuentasPagar.Size = New System.Drawing.Size(313, 22)
         Me.toolCuentasPagar.Text = "CUENTAS POR PAGAR"
         '
         'toolGestionActivos
         '
         Me.toolGestionActivos.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnCategoriaActivo, Me.btnControlActivos, Me.btnMarcasActivos, Me.btnTipoActivo})
         Me.toolGestionActivos.Name = "toolGestionActivos"
-        Me.toolGestionActivos.Size = New System.Drawing.Size(378, 26)
+        Me.toolGestionActivos.Size = New System.Drawing.Size(313, 22)
         Me.toolGestionActivos.Text = "GESTION DE ACTIVOS"
         '
         'btnCategoriaActivo
         '
         Me.btnCategoriaActivo.Name = "btnCategoriaActivo"
-        Me.btnCategoriaActivo.Size = New System.Drawing.Size(264, 26)
+        Me.btnCategoriaActivo.Size = New System.Drawing.Size(217, 22)
         Me.btnCategoriaActivo.Text = "CATEGORIA DE ACTIVO"
         '
         'btnControlActivos
         '
         Me.btnControlActivos.Name = "btnControlActivos"
-        Me.btnControlActivos.Size = New System.Drawing.Size(264, 26)
+        Me.btnControlActivos.Size = New System.Drawing.Size(217, 22)
         Me.btnControlActivos.Text = "CONTROL DE ACTIVOS"
         '
         'btnMarcasActivos
         '
         Me.btnMarcasActivos.Name = "btnMarcasActivos"
-        Me.btnMarcasActivos.Size = New System.Drawing.Size(264, 26)
+        Me.btnMarcasActivos.Size = New System.Drawing.Size(217, 22)
         Me.btnMarcasActivos.Text = "MARCAS DE ACTIVOS"
         '
         'btnTipoActivo
         '
         Me.btnTipoActivo.Name = "btnTipoActivo"
-        Me.btnTipoActivo.Size = New System.Drawing.Size(264, 26)
+        Me.btnTipoActivo.Size = New System.Drawing.Size(217, 22)
         Me.btnTipoActivo.Text = "TIPO DE ACTIVO"
         '
         'toolGestionCompras
         '
         Me.toolGestionCompras.Name = "toolGestionCompras"
-        Me.toolGestionCompras.Size = New System.Drawing.Size(378, 26)
+        Me.toolGestionCompras.Size = New System.Drawing.Size(313, 22)
         Me.toolGestionCompras.Text = "GESTION DE COMPRAS"
         '
         'toolGestionVentas
         '
         Me.toolGestionVentas.Name = "toolGestionVentas"
-        Me.toolGestionVentas.Size = New System.Drawing.Size(378, 26)
+        Me.toolGestionVentas.Size = New System.Drawing.Size(313, 22)
         Me.toolGestionVentas.Text = "GESTION DE VENTAS"
         '
         'toolGestionSeguros
         '
         Me.toolGestionSeguros.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnProveedoresSeguros, Me.btnSeguroActivos, Me.btnTiposSeguro})
         Me.toolGestionSeguros.Name = "toolGestionSeguros"
-        Me.toolGestionSeguros.Size = New System.Drawing.Size(378, 26)
+        Me.toolGestionSeguros.Size = New System.Drawing.Size(313, 22)
         Me.toolGestionSeguros.Text = "GESTION DE SEGUROS"
         '
         'btnProveedoresSeguros
         '
         Me.btnProveedoresSeguros.Name = "btnProveedoresSeguros"
-        Me.btnProveedoresSeguros.Size = New System.Drawing.Size(305, 26)
+        Me.btnProveedoresSeguros.Size = New System.Drawing.Size(252, 22)
         Me.btnProveedoresSeguros.Text = "PROVEEDORES DE SEGUROS"
         '
         'btnSeguroActivos
         '
         Me.btnSeguroActivos.Name = "btnSeguroActivos"
-        Me.btnSeguroActivos.Size = New System.Drawing.Size(305, 26)
+        Me.btnSeguroActivos.Size = New System.Drawing.Size(252, 22)
         Me.btnSeguroActivos.Text = "SEGURO DE ACTIVOS"
         '
         'btnTiposSeguro
         '
         Me.btnTiposSeguro.Name = "btnTiposSeguro"
-        Me.btnTiposSeguro.Size = New System.Drawing.Size(305, 26)
+        Me.btnTiposSeguro.Size = New System.Drawing.Size(252, 22)
         Me.btnTiposSeguro.Text = "TIPOS DE SEGURO"
         '
         'toolRecepcionProductos
         '
         Me.toolRecepcionProductos.Name = "toolRecepcionProductos"
-        Me.toolRecepcionProductos.Size = New System.Drawing.Size(378, 26)
+        Me.toolRecepcionProductos.Size = New System.Drawing.Size(313, 22)
         Me.toolRecepcionProductos.Text = "RECEPCION DE PRODUCTOS"
         '
         'toolTablasMuestras
@@ -514,61 +515,61 @@ Partial Class FrmMenu
         Me.toolTablasMuestras.BackColor = System.Drawing.Color.White
         Me.toolTablasMuestras.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnBancos, Me.btnCuentaBancos, Me.btnGirosEmpresa, Me.btnMotivosTransacciones, Me.btnMonedas, Me.btnPlanCuentas, Me.btnTiposDocumentos, Me.btnUbicaciones, Me.CONDICIONDEPAGOToolStripMenuItem})
         Me.toolTablasMuestras.Name = "toolTablasMuestras"
-        Me.toolTablasMuestras.Size = New System.Drawing.Size(378, 26)
+        Me.toolTablasMuestras.Size = New System.Drawing.Size(313, 22)
         Me.toolTablasMuestras.Text = "TABLAS MAESTRAS"
         '
         'btnBancos
         '
         Me.btnBancos.Name = "btnBancos"
-        Me.btnBancos.Size = New System.Drawing.Size(320, 26)
+        Me.btnBancos.Size = New System.Drawing.Size(263, 22)
         Me.btnBancos.Text = "LISTADO DE BANCOS"
         '
         'btnCuentaBancos
         '
         Me.btnCuentaBancos.Name = "btnCuentaBancos"
-        Me.btnCuentaBancos.Size = New System.Drawing.Size(320, 26)
+        Me.btnCuentaBancos.Size = New System.Drawing.Size(263, 22)
         Me.btnCuentaBancos.Text = "CUENTA BANCOS"
         '
         'btnGirosEmpresa
         '
         Me.btnGirosEmpresa.Name = "btnGirosEmpresa"
-        Me.btnGirosEmpresa.Size = New System.Drawing.Size(320, 26)
+        Me.btnGirosEmpresa.Size = New System.Drawing.Size(263, 22)
         Me.btnGirosEmpresa.Text = "GIROS DE LA EMPRESA"
         '
         'btnMotivosTransacciones
         '
         Me.btnMotivosTransacciones.Name = "btnMotivosTransacciones"
-        Me.btnMotivosTransacciones.Size = New System.Drawing.Size(320, 26)
+        Me.btnMotivosTransacciones.Size = New System.Drawing.Size(263, 22)
         Me.btnMotivosTransacciones.Text = "MOTIVOS DE TRANSACCIONES"
         '
         'btnMonedas
         '
         Me.btnMonedas.Name = "btnMonedas"
-        Me.btnMonedas.Size = New System.Drawing.Size(320, 26)
+        Me.btnMonedas.Size = New System.Drawing.Size(263, 22)
         Me.btnMonedas.Text = "MONEDAS"
         '
         'btnPlanCuentas
         '
         Me.btnPlanCuentas.Name = "btnPlanCuentas"
-        Me.btnPlanCuentas.Size = New System.Drawing.Size(320, 26)
+        Me.btnPlanCuentas.Size = New System.Drawing.Size(263, 22)
         Me.btnPlanCuentas.Text = "PLAN DE CUENTAS"
         '
         'btnTiposDocumentos
         '
         Me.btnTiposDocumentos.Name = "btnTiposDocumentos"
-        Me.btnTiposDocumentos.Size = New System.Drawing.Size(320, 26)
+        Me.btnTiposDocumentos.Size = New System.Drawing.Size(263, 22)
         Me.btnTiposDocumentos.Text = "TIPOS DE DOCUMENTOS"
         '
         'btnUbicaciones
         '
         Me.btnUbicaciones.Name = "btnUbicaciones"
-        Me.btnUbicaciones.Size = New System.Drawing.Size(320, 26)
+        Me.btnUbicaciones.Size = New System.Drawing.Size(263, 22)
         Me.btnUbicaciones.Text = "UBICACIONES"
         '
         'CONDICIONDEPAGOToolStripMenuItem
         '
         Me.CONDICIONDEPAGOToolStripMenuItem.Name = "CONDICIONDEPAGOToolStripMenuItem"
-        Me.CONDICIONDEPAGOToolStripMenuItem.Size = New System.Drawing.Size(320, 26)
+        Me.CONDICIONDEPAGOToolStripMenuItem.Size = New System.Drawing.Size(263, 22)
         Me.CONDICIONDEPAGOToolStripMenuItem.Text = "CONDICIÓN DE PAGO"
         '
         'toolMolino
@@ -591,25 +592,25 @@ Partial Class FrmMenu
         'btnPreparacionAlimento
         '
         Me.btnPreparacionAlimento.Name = "btnPreparacionAlimento"
-        Me.btnPreparacionAlimento.Size = New System.Drawing.Size(291, 26)
+        Me.btnPreparacionAlimento.Size = New System.Drawing.Size(241, 22)
         Me.btnPreparacionAlimento.Text = "PREPARACIÓN ALIMENTO"
         '
         'CONTROLDEEXEDENTESToolStripMenuItem
         '
         Me.CONTROLDEEXEDENTESToolStripMenuItem.Name = "CONTROLDEEXEDENTESToolStripMenuItem"
-        Me.CONTROLDEEXEDENTESToolStripMenuItem.Size = New System.Drawing.Size(291, 26)
+        Me.CONTROLDEEXEDENTESToolStripMenuItem.Size = New System.Drawing.Size(241, 22)
         Me.CONTROLDEEXEDENTESToolStripMenuItem.Text = "CONTROL DE EXCEDENTES"
         '
         'CONTROLDEDESPACHOSToolStripMenuItem
         '
         Me.CONTROLDEDESPACHOSToolStripMenuItem.Name = "CONTROLDEDESPACHOSToolStripMenuItem"
-        Me.CONTROLDEDESPACHOSToolStripMenuItem.Size = New System.Drawing.Size(291, 26)
+        Me.CONTROLDEDESPACHOSToolStripMenuItem.Size = New System.Drawing.Size(241, 22)
         Me.CONTROLDEDESPACHOSToolStripMenuItem.Text = "CONTROL DE DESPACHOS"
         '
         'RECEPCIÓNDERACIÓNToolStripMenuItem
         '
         Me.RECEPCIÓNDERACIÓNToolStripMenuItem.Name = "RECEPCIÓNDERACIÓNToolStripMenuItem"
-        Me.RECEPCIÓNDERACIÓNToolStripMenuItem.Size = New System.Drawing.Size(291, 26)
+        Me.RECEPCIÓNDERACIÓNToolStripMenuItem.Size = New System.Drawing.Size(241, 22)
         Me.RECEPCIÓNDERACIÓNToolStripMenuItem.Text = "RECEPCIÓN DE RACIÓN"
         '
         'toolNutricion
@@ -632,49 +633,49 @@ Partial Class FrmMenu
         'toolControlPremixeros
         '
         Me.toolControlPremixeros.Name = "toolControlPremixeros"
-        Me.toolControlPremixeros.Size = New System.Drawing.Size(447, 26)
+        Me.toolControlPremixeros.Size = New System.Drawing.Size(370, 22)
         Me.toolControlPremixeros.Text = "CONTROL DE PREMIXEROS"
         '
         'toolControlFormulas
         '
         Me.toolControlFormulas.Name = "toolControlFormulas"
-        Me.toolControlFormulas.Size = New System.Drawing.Size(447, 26)
+        Me.toolControlFormulas.Size = New System.Drawing.Size(370, 22)
         Me.toolControlFormulas.Text = "CONTROL DE FÓRMULAS"
         '
         'toolControlRacionesyAnti
         '
         Me.toolControlRacionesyAnti.Name = "toolControlRacionesyAnti"
-        Me.toolControlRacionesyAnti.Size = New System.Drawing.Size(447, 26)
+        Me.toolControlRacionesyAnti.Size = New System.Drawing.Size(370, 22)
         Me.toolControlRacionesyAnti.Text = "CONTROL DE RACIONES Y ANTI"
         '
         'CONTROLDEPERIODODERACIÓNMEDICADAToolStripMenuItem
         '
         Me.CONTROLDEPERIODODERACIÓNMEDICADAToolStripMenuItem.Name = "CONTROLDEPERIODODERACIÓNMEDICADAToolStripMenuItem"
-        Me.CONTROLDEPERIODODERACIÓNMEDICADAToolStripMenuItem.Size = New System.Drawing.Size(447, 26)
+        Me.CONTROLDEPERIODODERACIÓNMEDICADAToolStripMenuItem.Size = New System.Drawing.Size(370, 22)
         Me.CONTROLDEPERIODODERACIÓNMEDICADAToolStripMenuItem.Text = "CONTROL DE PERIODO MEDICACIÓN Y PLUS"
         '
         'toolControlPedidoAlimentos
         '
         Me.toolControlPedidoAlimentos.Name = "toolControlPedidoAlimentos"
-        Me.toolControlPedidoAlimentos.Size = New System.Drawing.Size(447, 26)
+        Me.toolControlPedidoAlimentos.Size = New System.Drawing.Size(370, 22)
         Me.toolControlPedidoAlimentos.Text = "CONTROL DE PEDIDOS DE ALIMENTOS"
         '
         'SIMULACIÓNDEFORMULAToolStripMenuItem1
         '
         Me.SIMULACIÓNDEFORMULAToolStripMenuItem1.Name = "SIMULACIÓNDEFORMULAToolStripMenuItem1"
-        Me.SIMULACIÓNDEFORMULAToolStripMenuItem1.Size = New System.Drawing.Size(447, 26)
+        Me.SIMULACIÓNDEFORMULAToolStripMenuItem1.Size = New System.Drawing.Size(370, 22)
         Me.SIMULACIÓNDEFORMULAToolStripMenuItem1.Text = "SIMULACIÓN Y ACTIVACIÓN DE FÓRMULA"
         '
         'CONTROLDEALIMENTOCERDAToolStripMenuItem
         '
         Me.CONTROLDEALIMENTOCERDAToolStripMenuItem.Name = "CONTROLDEALIMENTOCERDAToolStripMenuItem"
-        Me.CONTROLDEALIMENTOCERDAToolStripMenuItem.Size = New System.Drawing.Size(447, 26)
+        Me.CONTROLDEALIMENTOCERDAToolStripMenuItem.Size = New System.Drawing.Size(370, 22)
         Me.CONTROLDEALIMENTOCERDAToolStripMenuItem.Text = "CONTROL DE SALIDA DE ALIMENTO DE CERDOS"
         '
         'PROGRAMADEALIMENTACIÓNToolStripMenuItem
         '
         Me.PROGRAMADEALIMENTACIÓNToolStripMenuItem.Name = "PROGRAMADEALIMENTACIÓNToolStripMenuItem"
-        Me.PROGRAMADEALIMENTACIÓNToolStripMenuItem.Size = New System.Drawing.Size(447, 26)
+        Me.PROGRAMADEALIMENTACIÓNToolStripMenuItem.Size = New System.Drawing.Size(370, 22)
         Me.PROGRAMADEALIMENTACIÓNToolStripMenuItem.Text = "CONTROL DE PROGRAMA DE ALIMENTACIÓN"
         '
         'toolProduccion
@@ -699,192 +700,192 @@ Partial Class FrmMenu
         '
         Me.MANTENIMIENTOToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RELACIÓNPESOToolStripMenuItem, Me.GESTIÓNDEPERSONALDEPRODUCCIÓNToolStripMenuItem, Me.TIPOSDEINCIDENCIASToolStripMenuItem, Me.PARÁMETROSREPRODUCTIVOSToolStripMenuItem, Me.GESTIÓNDELOTESToolStripMenuItem, Me.CONTROLDECAMPAÑASToolStripMenuItem1})
         Me.MANTENIMIENTOToolStripMenuItem.Name = "MANTENIMIENTOToolStripMenuItem"
-        Me.MANTENIMIENTOToolStripMenuItem.Size = New System.Drawing.Size(363, 26)
+        Me.MANTENIMIENTOToolStripMenuItem.Size = New System.Drawing.Size(299, 22)
         Me.MANTENIMIENTOToolStripMenuItem.Text = "MANTENIMIENTO PARAMETROS"
         '
         'RELACIÓNPESOToolStripMenuItem
         '
         Me.RELACIÓNPESOToolStripMenuItem.Name = "RELACIÓNPESOToolStripMenuItem"
-        Me.RELACIÓNPESOToolStripMenuItem.Size = New System.Drawing.Size(400, 26)
+        Me.RELACIÓNPESOToolStripMenuItem.Size = New System.Drawing.Size(332, 22)
         Me.RELACIÓNPESOToolStripMenuItem.Text = "TABLA RELACIÓN - PESO"
         Me.RELACIÓNPESOToolStripMenuItem.Visible = False
         '
         'GESTIÓNDEPERSONALDEPRODUCCIÓNToolStripMenuItem
         '
         Me.GESTIÓNDEPERSONALDEPRODUCCIÓNToolStripMenuItem.Name = "GESTIÓNDEPERSONALDEPRODUCCIÓNToolStripMenuItem"
-        Me.GESTIÓNDEPERSONALDEPRODUCCIÓNToolStripMenuItem.Size = New System.Drawing.Size(400, 26)
+        Me.GESTIÓNDEPERSONALDEPRODUCCIÓNToolStripMenuItem.Size = New System.Drawing.Size(332, 22)
         Me.GESTIÓNDEPERSONALDEPRODUCCIÓNToolStripMenuItem.Text = "GESTIÓN DE PERSONAL DE PRODUCCIÓN"
         '
         'TIPOSDEINCIDENCIASToolStripMenuItem
         '
         Me.TIPOSDEINCIDENCIASToolStripMenuItem.Name = "TIPOSDEINCIDENCIASToolStripMenuItem"
-        Me.TIPOSDEINCIDENCIASToolStripMenuItem.Size = New System.Drawing.Size(400, 26)
+        Me.TIPOSDEINCIDENCIASToolStripMenuItem.Size = New System.Drawing.Size(332, 22)
         Me.TIPOSDEINCIDENCIASToolStripMenuItem.Text = "TIPOS DE INCIDENCIAS Y MORTALIDAD"
         '
         'PARÁMETROSREPRODUCTIVOSToolStripMenuItem
         '
         Me.PARÁMETROSREPRODUCTIVOSToolStripMenuItem.Name = "PARÁMETROSREPRODUCTIVOSToolStripMenuItem"
-        Me.PARÁMETROSREPRODUCTIVOSToolStripMenuItem.Size = New System.Drawing.Size(400, 26)
+        Me.PARÁMETROSREPRODUCTIVOSToolStripMenuItem.Size = New System.Drawing.Size(332, 22)
         Me.PARÁMETROSREPRODUCTIVOSToolStripMenuItem.Text = "PARÁMETROS REPRODUCTIVOS"
         '
         'GESTIÓNDELOTESToolStripMenuItem
         '
         Me.GESTIÓNDELOTESToolStripMenuItem.Name = "GESTIÓNDELOTESToolStripMenuItem"
-        Me.GESTIÓNDELOTESToolStripMenuItem.Size = New System.Drawing.Size(400, 26)
+        Me.GESTIÓNDELOTESToolStripMenuItem.Size = New System.Drawing.Size(332, 22)
         Me.GESTIÓNDELOTESToolStripMenuItem.Text = "GESTIÓN DE LOTES"
         '
         'CONTROLDECAMPAÑASToolStripMenuItem1
         '
         Me.CONTROLDECAMPAÑASToolStripMenuItem1.Name = "CONTROLDECAMPAÑASToolStripMenuItem1"
-        Me.CONTROLDECAMPAÑASToolStripMenuItem1.Size = New System.Drawing.Size(400, 26)
+        Me.CONTROLDECAMPAÑASToolStripMenuItem1.Size = New System.Drawing.Size(332, 22)
         Me.CONTROLDECAMPAÑASToolStripMenuItem1.Text = "CONTROL DE CAMPAÑAS"
         '
         'GESTIÓNDEAMBIENTESToolStripMenuItem
         '
         Me.GESTIÓNDEAMBIENTESToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PLANTELESToolStripMenuItem, Me.GALPONESToolStripMenuItem, Me.SALASToolStripMenuItem1, Me.CORRALESToolStripMenuItem, Me.JAULASToolStripMenuItem})
         Me.GESTIÓNDEAMBIENTESToolStripMenuItem.Name = "GESTIÓNDEAMBIENTESToolStripMenuItem"
-        Me.GESTIÓNDEAMBIENTESToolStripMenuItem.Size = New System.Drawing.Size(363, 26)
+        Me.GESTIÓNDEAMBIENTESToolStripMenuItem.Size = New System.Drawing.Size(299, 22)
         Me.GESTIÓNDEAMBIENTESToolStripMenuItem.Text = "GESTIÓN DE AMBIENTES"
         '
         'PLANTELESToolStripMenuItem
         '
         Me.PLANTELESToolStripMenuItem.Name = "PLANTELESToolStripMenuItem"
-        Me.PLANTELESToolStripMenuItem.Size = New System.Drawing.Size(173, 26)
+        Me.PLANTELESToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.PLANTELESToolStripMenuItem.Text = "PLANTELES"
         '
         'GALPONESToolStripMenuItem
         '
         Me.GALPONESToolStripMenuItem.Name = "GALPONESToolStripMenuItem"
-        Me.GALPONESToolStripMenuItem.Size = New System.Drawing.Size(173, 26)
+        Me.GALPONESToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.GALPONESToolStripMenuItem.Text = "GALPONES"
         '
         'SALASToolStripMenuItem1
         '
         Me.SALASToolStripMenuItem1.Name = "SALASToolStripMenuItem1"
-        Me.SALASToolStripMenuItem1.Size = New System.Drawing.Size(173, 26)
+        Me.SALASToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
         Me.SALASToolStripMenuItem1.Text = "SALAS"
         '
         'CORRALESToolStripMenuItem
         '
         Me.CORRALESToolStripMenuItem.Name = "CORRALESToolStripMenuItem"
-        Me.CORRALESToolStripMenuItem.Size = New System.Drawing.Size(173, 26)
+        Me.CORRALESToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.CORRALESToolStripMenuItem.Text = "CORRALES"
         '
         'JAULASToolStripMenuItem
         '
         Me.JAULASToolStripMenuItem.Name = "JAULASToolStripMenuItem"
-        Me.JAULASToolStripMenuItem.Size = New System.Drawing.Size(173, 26)
+        Me.JAULASToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.JAULASToolStripMenuItem.Text = "JAULAS"
         '
         'GESTIÓNDECERDOSToolStripMenuItem
         '
-        Me.GESTIÓNDECERDOSToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CONTROLDEVERRACOSToolStripMenuItem, Me.CONTROLDECERDASToolStripMenuItem, Me.CONTROLDEMADRESFUTURASToolStripMenuItem, Me.MORTALIDADToolStripMenuItem, Me.HISTORICODEDEPURACIÓNToolStripMenuItem})
+        Me.GESTIÓNDECERDOSToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CONTROLDEVERRACOSToolStripMenuItem, Me.CONTROLDECERDASToolStripMenuItem, Me.CONTROLDEMADRESFUTURASToolStripMenuItem, Me.MORTALIDADToolStripMenuItem, Me.HISTORICODEDEPURACIÓNToolStripMenuItem, Me.COSTOXKILOCERDOToolStripMenuItem})
         Me.GESTIÓNDECERDOSToolStripMenuItem.Name = "GESTIÓNDECERDOSToolStripMenuItem"
-        Me.GESTIÓNDECERDOSToolStripMenuItem.Size = New System.Drawing.Size(363, 26)
+        Me.GESTIÓNDECERDOSToolStripMenuItem.Size = New System.Drawing.Size(299, 22)
         Me.GESTIÓNDECERDOSToolStripMenuItem.Text = "GESTIÓN DE CERDOS"
         '
         'CONTROLDEVERRACOSToolStripMenuItem
         '
         Me.CONTROLDEVERRACOSToolStripMenuItem.Name = "CONTROLDEVERRACOSToolStripMenuItem"
-        Me.CONTROLDEVERRACOSToolStripMenuItem.Size = New System.Drawing.Size(331, 26)
+        Me.CONTROLDEVERRACOSToolStripMenuItem.Size = New System.Drawing.Size(270, 22)
         Me.CONTROLDEVERRACOSToolStripMenuItem.Text = "CONTROL DE VERRACOS"
         '
         'CONTROLDECERDASToolStripMenuItem
         '
         Me.CONTROLDECERDASToolStripMenuItem.Name = "CONTROLDECERDASToolStripMenuItem"
-        Me.CONTROLDECERDASToolStripMenuItem.Size = New System.Drawing.Size(331, 26)
+        Me.CONTROLDECERDASToolStripMenuItem.Size = New System.Drawing.Size(270, 22)
         Me.CONTROLDECERDASToolStripMenuItem.Text = "CONTROL DE CERDAS"
         '
         'CONTROLDEMADRESFUTURASToolStripMenuItem
         '
         Me.CONTROLDEMADRESFUTURASToolStripMenuItem.Name = "CONTROLDEMADRESFUTURASToolStripMenuItem"
-        Me.CONTROLDEMADRESFUTURASToolStripMenuItem.Size = New System.Drawing.Size(331, 26)
+        Me.CONTROLDEMADRESFUTURASToolStripMenuItem.Size = New System.Drawing.Size(270, 22)
         Me.CONTROLDEMADRESFUTURASToolStripMenuItem.Text = "CONTROL DE MADRES FUTURAS"
         '
         'MORTALIDADToolStripMenuItem
         '
         Me.MORTALIDADToolStripMenuItem.Name = "MORTALIDADToolStripMenuItem"
-        Me.MORTALIDADToolStripMenuItem.Size = New System.Drawing.Size(331, 26)
+        Me.MORTALIDADToolStripMenuItem.Size = New System.Drawing.Size(270, 22)
         Me.MORTALIDADToolStripMenuItem.Text = "HISTORICO DE MORTALIDAD"
         '
         'HISTORICODEDEPURACIÓNToolStripMenuItem
         '
         Me.HISTORICODEDEPURACIÓNToolStripMenuItem.Name = "HISTORICODEDEPURACIÓNToolStripMenuItem"
-        Me.HISTORICODEDEPURACIÓNToolStripMenuItem.Size = New System.Drawing.Size(331, 26)
+        Me.HISTORICODEDEPURACIÓNToolStripMenuItem.Size = New System.Drawing.Size(270, 22)
         Me.HISTORICODEDEPURACIÓNToolStripMenuItem.Text = "HISTORICO DE DEPURACIÓN"
         '
         'GESTIÓNMATERIALGENÉTICOToolStripMenuItem
         '
         Me.GESTIÓNMATERIALGENÉTICOToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PEDIDOSEMENPORCINOToolStripMenuItem, Me.CONTROLMATERIALGENÉTICOToolStripMenuItem})
         Me.GESTIÓNMATERIALGENÉTICOToolStripMenuItem.Name = "GESTIÓNMATERIALGENÉTICOToolStripMenuItem"
-        Me.GESTIÓNMATERIALGENÉTICOToolStripMenuItem.Size = New System.Drawing.Size(363, 26)
+        Me.GESTIÓNMATERIALGENÉTICOToolStripMenuItem.Size = New System.Drawing.Size(299, 22)
         Me.GESTIÓNMATERIALGENÉTICOToolStripMenuItem.Text = "GESTIÓN MATERIAL GENÉTICO"
         '
         'PEDIDOSEMENPORCINOToolStripMenuItem
         '
         Me.PEDIDOSEMENPORCINOToolStripMenuItem.Name = "PEDIDOSEMENPORCINOToolStripMenuItem"
-        Me.PEDIDOSEMENPORCINOToolStripMenuItem.Size = New System.Drawing.Size(324, 26)
+        Me.PEDIDOSEMENPORCINOToolStripMenuItem.Size = New System.Drawing.Size(267, 22)
         Me.PEDIDOSEMENPORCINOToolStripMenuItem.Text = "PEDIDO SEMEN PORCINO"
         '
         'CONTROLMATERIALGENÉTICOToolStripMenuItem
         '
         Me.CONTROLMATERIALGENÉTICOToolStripMenuItem.Name = "CONTROLMATERIALGENÉTICOToolStripMenuItem"
-        Me.CONTROLMATERIALGENÉTICOToolStripMenuItem.Size = New System.Drawing.Size(324, 26)
+        Me.CONTROLMATERIALGENÉTICOToolStripMenuItem.Size = New System.Drawing.Size(267, 22)
         Me.CONTROLMATERIALGENÉTICOToolStripMenuItem.Text = "CONTROL MATERIAL GENÉTICO"
         '
         'Cicloreproductivotoolstring
         '
         Me.Cicloreproductivotoolstring.Name = "Cicloreproductivotoolstring"
-        Me.Cicloreproductivotoolstring.Size = New System.Drawing.Size(363, 26)
+        Me.Cicloreproductivotoolstring.Size = New System.Drawing.Size(299, 22)
         Me.Cicloreproductivotoolstring.Text = "CONTROL DE GESTACIÓN"
         '
         'CONTROLDEMATERNIDADToolStripMenuItem1
         '
         Me.CONTROLDEMATERNIDADToolStripMenuItem1.Name = "CONTROLDEMATERNIDADToolStripMenuItem1"
-        Me.CONTROLDEMATERNIDADToolStripMenuItem1.Size = New System.Drawing.Size(363, 26)
+        Me.CONTROLDEMATERNIDADToolStripMenuItem1.Size = New System.Drawing.Size(299, 22)
         Me.CONTROLDEMATERNIDADToolStripMenuItem1.Text = "CONTROL DE MATERNIDAD"
         '
         'CONTROLDELOTESToolStripMenuItem
         '
         Me.CONTROLDELOTESToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CONTROLDELOTESToolStripMenuItem1, Me.CONTROLDEBAJADAToolStripMenuItem1})
         Me.CONTROLDELOTESToolStripMenuItem.Name = "CONTROLDELOTESToolStripMenuItem"
-        Me.CONTROLDELOTESToolStripMenuItem.Size = New System.Drawing.Size(363, 26)
+        Me.CONTROLDELOTESToolStripMenuItem.Size = New System.Drawing.Size(299, 22)
         Me.CONTROLDELOTESToolStripMenuItem.Text = "GESTIÓN DE LOTES Y BAJADA "
         '
         'CONTROLDELOTESToolStripMenuItem1
         '
         Me.CONTROLDELOTESToolStripMenuItem1.Name = "CONTROLDELOTESToolStripMenuItem1"
-        Me.CONTROLDELOTESToolStripMenuItem1.Size = New System.Drawing.Size(343, 26)
+        Me.CONTROLDELOTESToolStripMenuItem1.Size = New System.Drawing.Size(281, 22)
         Me.CONTROLDELOTESToolStripMenuItem1.Text = "CONTROL DE RECRIA Y ENGORDE"
         '
         'CONTROLDEBAJADAToolStripMenuItem1
         '
         Me.CONTROLDEBAJADAToolStripMenuItem1.Name = "CONTROLDEBAJADAToolStripMenuItem1"
-        Me.CONTROLDEBAJADAToolStripMenuItem1.Size = New System.Drawing.Size(343, 26)
+        Me.CONTROLDEBAJADAToolStripMenuItem1.Size = New System.Drawing.Size(281, 22)
         Me.CONTROLDEBAJADAToolStripMenuItem1.Text = "CONTROL DE BAJADA Y RETORNO"
         '
         'CAMPAÑASToolStripMenuItem
         '
         Me.CAMPAÑASToolStripMenuItem.Name = "CAMPAÑASToolStripMenuItem"
-        Me.CAMPAÑASToolStripMenuItem.Size = New System.Drawing.Size(363, 26)
+        Me.CAMPAÑASToolStripMenuItem.Size = New System.Drawing.Size(299, 22)
         Me.CAMPAÑASToolStripMenuItem.Text = "DESPACHO DE CERDOS PARA VENTA"
         '
         'CONTROLDEENVIOCAMALToolStripMenuItem
         '
         Me.CONTROLDEENVIOCAMALToolStripMenuItem.Name = "CONTROLDEENVIOCAMALToolStripMenuItem"
-        Me.CONTROLDEENVIOCAMALToolStripMenuItem.Size = New System.Drawing.Size(363, 26)
+        Me.CONTROLDEENVIOCAMALToolStripMenuItem.Size = New System.Drawing.Size(299, 22)
         Me.CONTROLDEENVIOCAMALToolStripMenuItem.Text = "CONTROL DE ENVIOS A CAMAL"
         '
         'REGULARIZACIÓNCERDOSToolStripMenuItem
         '
         Me.REGULARIZACIÓNCERDOSToolStripMenuItem.Name = "REGULARIZACIÓNCERDOSToolStripMenuItem"
-        Me.REGULARIZACIÓNCERDOSToolStripMenuItem.Size = New System.Drawing.Size(363, 26)
+        Me.REGULARIZACIÓNCERDOSToolStripMenuItem.Size = New System.Drawing.Size(299, 22)
         Me.REGULARIZACIÓNCERDOSToolStripMenuItem.Text = "REGULARIZACIÓN CERDOS"
         '
         'CROQUISDEPLANTELESToolStripMenuItem
         '
         Me.CROQUISDEPLANTELESToolStripMenuItem.Name = "CROQUISDEPLANTELESToolStripMenuItem"
-        Me.CROQUISDEPLANTELESToolStripMenuItem.Size = New System.Drawing.Size(363, 26)
+        Me.CROQUISDEPLANTELESToolStripMenuItem.Size = New System.Drawing.Size(299, 22)
         Me.CROQUISDEPLANTELESToolStripMenuItem.Text = "CROQUIS DE PLANTELES"
         '
         'toolSanidad
@@ -907,31 +908,31 @@ Partial Class FrmMenu
         'btnEnfermedades
         '
         Me.btnEnfermedades.Name = "btnEnfermedades"
-        Me.btnEnfermedades.Size = New System.Drawing.Size(391, 26)
+        Me.btnEnfermedades.Size = New System.Drawing.Size(321, 22)
         Me.btnEnfermedades.Text = "ENFERMEDADES"
         '
         'btnGuiaTratamientos
         '
         Me.btnGuiaTratamientos.Name = "btnGuiaTratamientos"
-        Me.btnGuiaTratamientos.Size = New System.Drawing.Size(391, 26)
+        Me.btnGuiaTratamientos.Size = New System.Drawing.Size(321, 22)
         Me.btnGuiaTratamientos.Text = "GUÍA DE TRATAMIENTOS"
         '
         'PROTOCOLOSANITARIOToolStripMenuItem
         '
         Me.PROTOCOLOSANITARIOToolStripMenuItem.Name = "PROTOCOLOSANITARIOToolStripMenuItem"
-        Me.PROTOCOLOSANITARIOToolStripMenuItem.Size = New System.Drawing.Size(391, 26)
+        Me.PROTOCOLOSANITARIOToolStripMenuItem.Size = New System.Drawing.Size(321, 22)
         Me.PROTOCOLOSANITARIOToolStripMenuItem.Text = "CONTROL DE VACUNACIÓN"
         '
         'CONTROLDEMEDICACIÓNToolStripMenuItem
         '
         Me.CONTROLDEMEDICACIÓNToolStripMenuItem.Name = "CONTROLDEMEDICACIÓNToolStripMenuItem"
-        Me.CONTROLDEMEDICACIÓNToolStripMenuItem.Size = New System.Drawing.Size(391, 26)
+        Me.CONTROLDEMEDICACIÓNToolStripMenuItem.Size = New System.Drawing.Size(321, 22)
         Me.CONTROLDEMEDICACIÓNToolStripMenuItem.Text = "VACUNACIÓN Y TRATAMIENTOS"
         '
         'HISTÓRICODEENFERMEDADESGRANJAToolStripMenuItem
         '
         Me.HISTÓRICODEENFERMEDADESGRANJAToolStripMenuItem.Name = "HISTÓRICODEENFERMEDADESGRANJAToolStripMenuItem"
-        Me.HISTÓRICODEENFERMEDADESGRANJAToolStripMenuItem.Size = New System.Drawing.Size(391, 26)
+        Me.HISTÓRICODEENFERMEDADESGRANJAToolStripMenuItem.Size = New System.Drawing.Size(321, 22)
         Me.HISTÓRICODEENFERMEDADESGRANJAToolStripMenuItem.Text = "HISTÓRICO DE ENFERMEDADES GRANJA"
         '
         'toolRRHH
@@ -955,88 +956,88 @@ Partial Class FrmMenu
         'CONTROLDEASISTENCIAToolStripMenuItem
         '
         Me.CONTROLDEASISTENCIAToolStripMenuItem.Name = "CONTROLDEASISTENCIAToolStripMenuItem"
-        Me.CONTROLDEASISTENCIAToolStripMenuItem.Size = New System.Drawing.Size(476, 26)
+        Me.CONTROLDEASISTENCIAToolStripMenuItem.Size = New System.Drawing.Size(392, 22)
         Me.CONTROLDEASISTENCIAToolStripMenuItem.Text = "CONTROL DE ASISTENCIA"
         '
         'btnIncidentesyaccidentes
         '
         Me.btnIncidentesyaccidentes.Name = "btnIncidentesyaccidentes"
-        Me.btnIncidentesyaccidentes.Size = New System.Drawing.Size(476, 26)
+        Me.btnIncidentesyaccidentes.Size = New System.Drawing.Size(392, 22)
         Me.btnIncidentesyaccidentes.Text = "CONTROL DE INCIDENCIAS Y ACCIDENTES"
         '
         'ControlPagosydescuentos
         '
         Me.ControlPagosydescuentos.Name = "ControlPagosydescuentos"
-        Me.ControlPagosydescuentos.Size = New System.Drawing.Size(476, 26)
+        Me.ControlPagosydescuentos.Size = New System.Drawing.Size(392, 22)
         Me.ControlPagosydescuentos.Text = "CONTROL DE REPORTES DE PAGOS Y DESCUENTOS"
         '
         'toolControlMemorandum
         '
         Me.toolControlMemorandum.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnMemorandum, Me.btnMotivosMemorandum})
         Me.toolControlMemorandum.Name = "toolControlMemorandum"
-        Me.toolControlMemorandum.Size = New System.Drawing.Size(476, 26)
+        Me.toolControlMemorandum.Size = New System.Drawing.Size(392, 22)
         Me.toolControlMemorandum.Text = "CONTROL DE SENTENCIAS Y DESPIDOS"
         '
         'btnMemorandum
         '
         Me.btnMemorandum.Name = "btnMemorandum"
-        Me.btnMemorandum.Size = New System.Drawing.Size(382, 26)
+        Me.btnMemorandum.Size = New System.Drawing.Size(316, 22)
         Me.btnMemorandum.Text = "MEMORANDUM Y DESPIDOS"
         '
         'btnMotivosMemorandum
         '
         Me.btnMotivosMemorandum.Name = "btnMotivosMemorandum"
-        Me.btnMotivosMemorandum.Size = New System.Drawing.Size(382, 26)
+        Me.btnMotivosMemorandum.Size = New System.Drawing.Size(316, 22)
         Me.btnMotivosMemorandum.Text = "MOTIVOS DE SENTENCIAS Y DESPIDOS"
         '
         'btnControlSeguroTrabajadores
         '
         Me.btnControlSeguroTrabajadores.Name = "btnControlSeguroTrabajadores"
-        Me.btnControlSeguroTrabajadores.Size = New System.Drawing.Size(476, 26)
+        Me.btnControlSeguroTrabajadores.Size = New System.Drawing.Size(392, 22)
         Me.btnControlSeguroTrabajadores.Text = "CONTROL DE SEGURO TRABAJADORES"
         '
         'CONTROLDEDESCANSOSMEDICOS
         '
         Me.CONTROLDEDESCANSOSMEDICOS.Name = "CONTROLDEDESCANSOSMEDICOS"
-        Me.CONTROLDEDESCANSOSMEDICOS.Size = New System.Drawing.Size(476, 26)
+        Me.CONTROLDEDESCANSOSMEDICOS.Size = New System.Drawing.Size(392, 22)
         Me.CONTROLDEDESCANSOSMEDICOS.Text = "CONTROL DE VACACIONES Y PERMISOS"
         '
         'MANTENIMIENTOFORMATOSToolStripMenuItem
         '
         Me.MANTENIMIENTOFORMATOSToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MANTENIMIENTODEFORMATOSToolStripMenuItem})
         Me.MANTENIMIENTOFORMATOSToolStripMenuItem.Name = "MANTENIMIENTOFORMATOSToolStripMenuItem"
-        Me.MANTENIMIENTOFORMATOSToolStripMenuItem.Size = New System.Drawing.Size(476, 26)
+        Me.MANTENIMIENTOFORMATOSToolStripMenuItem.Size = New System.Drawing.Size(392, 22)
         Me.MANTENIMIENTOFORMATOSToolStripMenuItem.Text = "MANTENIMIENTO"
         '
         'MANTENIMIENTODEFORMATOSToolStripMenuItem
         '
         Me.MANTENIMIENTODEFORMATOSToolStripMenuItem.Name = "MANTENIMIENTODEFORMATOSToolStripMenuItem"
-        Me.MANTENIMIENTODEFORMATOSToolStripMenuItem.Size = New System.Drawing.Size(331, 26)
+        Me.MANTENIMIENTODEFORMATOSToolStripMenuItem.Size = New System.Drawing.Size(271, 22)
         Me.MANTENIMIENTODEFORMATOSToolStripMenuItem.Text = "MANTENIMIENTO DE FORMATOS"
         '
         'btnTrabajadores
         '
         Me.btnTrabajadores.Name = "btnTrabajadores"
-        Me.btnTrabajadores.Size = New System.Drawing.Size(476, 26)
+        Me.btnTrabajadores.Size = New System.Drawing.Size(392, 22)
         Me.btnTrabajadores.Text = "TRABAJADORES"
         '
         'CONTROLDECONDUCTORESToolStripMenuItem
         '
         Me.CONTROLDECONDUCTORESToolStripMenuItem.Name = "CONTROLDECONDUCTORESToolStripMenuItem"
-        Me.CONTROLDECONDUCTORESToolStripMenuItem.Size = New System.Drawing.Size(476, 26)
+        Me.CONTROLDECONDUCTORESToolStripMenuItem.Size = New System.Drawing.Size(392, 22)
         Me.CONTROLDECONDUCTORESToolStripMenuItem.Text = "CONTROL DE CONDUCTORES"
         '
         'TABLASMAESTRASToolStripMenuItem
         '
         Me.TABLASMAESTRASToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CARGOSToolStripMenuItem})
         Me.TABLASMAESTRASToolStripMenuItem.Name = "TABLASMAESTRASToolStripMenuItem"
-        Me.TABLASMAESTRASToolStripMenuItem.Size = New System.Drawing.Size(476, 26)
+        Me.TABLASMAESTRASToolStripMenuItem.Size = New System.Drawing.Size(392, 22)
         Me.TABLASMAESTRASToolStripMenuItem.Text = "TABLAS MAESTRAS"
         '
         'CARGOSToolStripMenuItem
         '
         Me.CARGOSToolStripMenuItem.Name = "CARGOSToolStripMenuItem"
-        Me.CARGOSToolStripMenuItem.Size = New System.Drawing.Size(155, 26)
+        Me.CARGOSToolStripMenuItem.Size = New System.Drawing.Size(126, 22)
         Me.CARGOSToolStripMenuItem.Text = "CARGOS"
         '
         'toolSegPersonal
@@ -1062,31 +1063,31 @@ Partial Class FrmMenu
         '
         Me.toolControlCapacitacion2.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnAreaCapacitadora2, Me.btnTemaCapacitacion2, Me.btnTipoCapacitacion2, Me.btnCapacitaciones2})
         Me.toolControlCapacitacion2.Name = "toolControlCapacitacion2"
-        Me.toolControlCapacitacion2.Size = New System.Drawing.Size(376, 26)
+        Me.toolControlCapacitacion2.Size = New System.Drawing.Size(311, 22)
         Me.toolControlCapacitacion2.Text = "CONTROL DE CAPACITACIÓN"
         '
         'btnAreaCapacitadora2
         '
         Me.btnAreaCapacitadora2.Name = "btnAreaCapacitadora2"
-        Me.btnAreaCapacitadora2.Size = New System.Drawing.Size(325, 26)
+        Me.btnAreaCapacitadora2.Size = New System.Drawing.Size(269, 22)
         Me.btnAreaCapacitadora2.Text = "ÁREA CAPACITADORA"
         '
         'btnTemaCapacitacion2
         '
         Me.btnTemaCapacitacion2.Name = "btnTemaCapacitacion2"
-        Me.btnTemaCapacitacion2.Size = New System.Drawing.Size(325, 26)
+        Me.btnTemaCapacitacion2.Size = New System.Drawing.Size(269, 22)
         Me.btnTemaCapacitacion2.Text = "TEMAS DE CAPACITACIÓN"
         '
         'btnTipoCapacitacion2
         '
         Me.btnTipoCapacitacion2.Name = "btnTipoCapacitacion2"
-        Me.btnTipoCapacitacion2.Size = New System.Drawing.Size(325, 26)
+        Me.btnTipoCapacitacion2.Size = New System.Drawing.Size(269, 22)
         Me.btnTipoCapacitacion2.Text = "TIPO DE CAPACITACIÓN"
         '
         'btnCapacitaciones2
         '
         Me.btnCapacitaciones2.Name = "btnCapacitaciones2"
-        Me.btnCapacitaciones2.Size = New System.Drawing.Size(325, 26)
+        Me.btnCapacitaciones2.Size = New System.Drawing.Size(269, 22)
         Me.btnCapacitaciones2.Text = "CONTROL DE CAPACITACIONES"
         '
         'toolControlMemorandum2
@@ -1094,31 +1095,31 @@ Partial Class FrmMenu
         Me.toolControlMemorandum2.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnMemorandum2, Me.btnMotivosMemorandum2})
         Me.toolControlMemorandum2.Name = "toolControlMemorandum2"
         Me.toolControlMemorandum2.ShowShortcutKeys = False
-        Me.toolControlMemorandum2.Size = New System.Drawing.Size(376, 26)
+        Me.toolControlMemorandum2.Size = New System.Drawing.Size(311, 22)
         Me.toolControlMemorandum2.Text = "CONTROL DE SENTENCIAS Y DESPIDOS"
         '
         'btnMemorandum2
         '
         Me.btnMemorandum2.Name = "btnMemorandum2"
-        Me.btnMemorandum2.Size = New System.Drawing.Size(382, 26)
+        Me.btnMemorandum2.Size = New System.Drawing.Size(316, 22)
         Me.btnMemorandum2.Text = "MEMORANDUM Y DESPIDOS"
         '
         'btnMotivosMemorandum2
         '
         Me.btnMotivosMemorandum2.Name = "btnMotivosMemorandum2"
-        Me.btnMotivosMemorandum2.Size = New System.Drawing.Size(382, 26)
+        Me.btnMotivosMemorandum2.Size = New System.Drawing.Size(316, 22)
         Me.btnMotivosMemorandum2.Text = "MOTIVOS DE SENTENCIAS Y DESPIDOS"
         '
         'btnControlEPP
         '
         Me.btnControlEPP.Name = "btnControlEPP"
-        Me.btnControlEPP.Size = New System.Drawing.Size(376, 26)
+        Me.btnControlEPP.Size = New System.Drawing.Size(311, 22)
         Me.btnControlEPP.Text = "CONTROL EPP"
         '
         'btnControlTipoMotivoEntrega
         '
         Me.btnControlTipoMotivoEntrega.Name = "btnControlTipoMotivoEntrega"
-        Me.btnControlTipoMotivoEntrega.Size = New System.Drawing.Size(376, 26)
+        Me.btnControlTipoMotivoEntrega.Size = New System.Drawing.Size(311, 22)
         Me.btnControlTipoMotivoEntrega.Text = "TIPO DE MOTIVO ENTREGA"
         '
         'toolVentas
@@ -1141,31 +1142,31 @@ Partial Class FrmMenu
         'TRANSFERENCIASToolStripMenuItem
         '
         Me.TRANSFERENCIASToolStripMenuItem.Name = "TRANSFERENCIASToolStripMenuItem"
-        Me.TRANSFERENCIASToolStripMenuItem.Size = New System.Drawing.Size(341, 26)
+        Me.TRANSFERENCIASToolStripMenuItem.Size = New System.Drawing.Size(280, 22)
         Me.TRANSFERENCIASToolStripMenuItem.Text = "TRANSFERENCIAS"
         '
         'btnControlClientes
         '
         Me.btnControlClientes.Name = "btnControlClientes"
-        Me.btnControlClientes.Size = New System.Drawing.Size(341, 26)
+        Me.btnControlClientes.Size = New System.Drawing.Size(280, 22)
         Me.btnControlClientes.Text = "CONTROL DE CLIENTES"
         '
         'PEDIDOSDEVENTADEPRODUCTOSToolStripMenuItem
         '
         Me.PEDIDOSDEVENTADEPRODUCTOSToolStripMenuItem.Name = "PEDIDOSDEVENTADEPRODUCTOSToolStripMenuItem"
-        Me.PEDIDOSDEVENTADEPRODUCTOSToolStripMenuItem.Size = New System.Drawing.Size(341, 26)
+        Me.PEDIDOSDEVENTADEPRODUCTOSToolStripMenuItem.Size = New System.Drawing.Size(280, 22)
         Me.PEDIDOSDEVENTADEPRODUCTOSToolStripMenuItem.Text = "VENTA DE PRODUCTOS"
         '
         'btnpedidoscerdos
         '
         Me.btnpedidoscerdos.Name = "btnpedidoscerdos"
-        Me.btnpedidoscerdos.Size = New System.Drawing.Size(341, 26)
+        Me.btnpedidoscerdos.Size = New System.Drawing.Size(280, 22)
         Me.btnpedidoscerdos.Text = "VENTA DE CERDOS"
         '
         'GUIASDETRASLADOToolStripMenuItem
         '
         Me.GUIASDETRASLADOToolStripMenuItem.Name = "GUIASDETRASLADOToolStripMenuItem"
-        Me.GUIASDETRASLADOToolStripMenuItem.Size = New System.Drawing.Size(341, 26)
+        Me.GUIASDETRASLADOToolStripMenuItem.Size = New System.Drawing.Size(280, 22)
         Me.GUIASDETRASLADOToolStripMenuItem.Text = "GUIAS DE TRASLADO DE CERDOS"
         '
         'toolConfiguracion
@@ -1190,37 +1191,37 @@ Partial Class FrmMenu
         'btnParametrosAlertas
         '
         Me.btnParametrosAlertas.Name = "btnParametrosAlertas"
-        Me.btnParametrosAlertas.Size = New System.Drawing.Size(401, 26)
+        Me.btnParametrosAlertas.Size = New System.Drawing.Size(331, 22)
         Me.btnParametrosAlertas.Text = "PARÁMETROS"
         '
         'btnPerfiles
         '
         Me.btnPerfiles.Name = "btnPerfiles"
-        Me.btnPerfiles.Size = New System.Drawing.Size(401, 26)
+        Me.btnPerfiles.Size = New System.Drawing.Size(331, 22)
         Me.btnPerfiles.Text = "PERFILES"
         '
         'btnUsuarios
         '
         Me.btnUsuarios.Name = "btnUsuarios"
-        Me.btnUsuarios.Size = New System.Drawing.Size(401, 26)
+        Me.btnUsuarios.Size = New System.Drawing.Size(331, 22)
         Me.btnUsuarios.Text = "USUARIOS"
         '
         'btnGestionUsuarios
         '
         Me.btnGestionUsuarios.Name = "btnGestionUsuarios"
-        Me.btnGestionUsuarios.Size = New System.Drawing.Size(401, 26)
+        Me.btnGestionUsuarios.Size = New System.Drawing.Size(331, 22)
         Me.btnGestionUsuarios.Text = "ADMINISTRAR USUARIOS DE ESCRITORIO"
         '
         'ADMINISTRARPERMISOSMOVILESToolStripMenuItem
         '
         Me.ADMINISTRARPERMISOSMOVILESToolStripMenuItem.Name = "ADMINISTRARPERMISOSMOVILESToolStripMenuItem"
-        Me.ADMINISTRARPERMISOSMOVILESToolStripMenuItem.Size = New System.Drawing.Size(401, 26)
+        Me.ADMINISTRARPERMISOSMOVILESToolStripMenuItem.Size = New System.Drawing.Size(331, 22)
         Me.ADMINISTRARPERMISOSMOVILESToolStripMenuItem.Text = "ADMINISTRAR USUARIOS DE MOVIL"
         '
         'REPORTESDELSISTEMAToolStripMenuItem
         '
         Me.REPORTESDELSISTEMAToolStripMenuItem.Name = "REPORTESDELSISTEMAToolStripMenuItem"
-        Me.REPORTESDELSISTEMAToolStripMenuItem.Size = New System.Drawing.Size(401, 26)
+        Me.REPORTESDELSISTEMAToolStripMenuItem.Size = New System.Drawing.Size(331, 22)
         Me.REPORTESDELSISTEMAToolStripMenuItem.Text = "REPORTES DEL SISTEMA"
         '
         'toolSalir
@@ -1274,6 +1275,12 @@ Partial Class FrmMenu
         Me.MORTALIDADDECERDOSToolStripMenuItem.Name = "MORTALIDADDECERDOSToolStripMenuItem"
         Me.MORTALIDADDECERDOSToolStripMenuItem.Size = New System.Drawing.Size(208, 22)
         Me.MORTALIDADDECERDOSToolStripMenuItem.Text = "MORTALIDAD DE CERDOS"
+        '
+        'COSTOXKILOCERDOToolStripMenuItem
+        '
+        Me.COSTOXKILOCERDOToolStripMenuItem.Name = "COSTOXKILOCERDOToolStripMenuItem"
+        Me.COSTOXKILOCERDOToolStripMenuItem.Size = New System.Drawing.Size(270, 22)
+        Me.COSTOXKILOCERDOToolStripMenuItem.Text = "COSTO X KILO CERDO"
         '
         'FrmMenu
         '
@@ -1451,4 +1458,5 @@ Partial Class FrmMenu
     Friend WithEvents CONTROLDECAMPAÑASToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents PROGRAMADEALIMENTACIÓNToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents HISTORICODEDEPURACIÓNToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents COSTOXKILOCERDOToolStripMenuItem As ToolStripMenuItem
 End Class

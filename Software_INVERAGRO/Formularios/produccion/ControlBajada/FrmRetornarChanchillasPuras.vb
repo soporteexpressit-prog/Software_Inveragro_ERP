@@ -248,7 +248,13 @@ Public Class FrmRetornarChanchillasPuras
                 Return
             End If
 
-            If (idConductor = 0) Then
+            If cbxalmacendestino.SelectedValue Is Nothing OrElse String.IsNullOrWhiteSpace(cbxalmacendestino.SelectedValue.ToString()) OrElse Not IsNumeric(cbxalmacendestino.SelectedValue) OrElse CInt(cbxalmacendestino.SelectedValue) <= 0 Then
+                msj_advert("Debe seleccionar un plantel de salida válido")
+                Return
+            ElseIf CmbUbicacionLLegada.Value Is Nothing OrElse String.IsNullOrWhiteSpace(CmbUbicacionLLegada.Value.ToString()) OrElse Not IsNumeric(CmbUbicacionLLegada.Value) OrElse CInt(CmbUbicacionLLegada.Value) <= 0 Then
+                msj_advert("Debe seleccionar un plantel de llegada válido")
+                Return
+            ElseIf (idConductor = 0) Then
                 msj_advert("Debe seleccionar un conductor")
                 Return
             ElseIf (idTransporte = 0) Then

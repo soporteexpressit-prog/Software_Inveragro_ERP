@@ -67,6 +67,14 @@
         {"motivoCamalBloqueo", 0}
     }
 
+    Public ParametrosRegularizacionCodificadas As New Dictionary(Of String, Object) From {
+        {"fRegularizacion", Now.Date},
+        {"fRegularizacionBloqueo", 0},
+        {"idMotivoRegularizacion", 0},
+        {"valorMotivoRegularizacion", ""},
+        {"motivoRegularizacionBloqueo", 0}
+    }
+
     Public ParametrosMortalidadAnimal As New Dictionary(Of String, Object) From {
         {"fMortalidad", Now.Date},
         {"fMortalidadBloqueo", 0},
