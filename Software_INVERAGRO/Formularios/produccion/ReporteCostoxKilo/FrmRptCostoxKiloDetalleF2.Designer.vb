@@ -41,12 +41,9 @@ Partial Class FrmRptCostoxKiloDetalleF2
         Me.Ptbx_Cargando = New System.Windows.Forms.PictureBox()
         Me.dtgListado = New Infragistics.Win.UltraWinGrid.UltraGrid()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.LblTotal = New System.Windows.Forms.Label()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.LblDiasChanchilla = New System.Windows.Forms.Label()
-        Me.LblDiasInseminacion = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.LblCostoVeteBruto = New System.Windows.Forms.Label()
         Me.LblDiasCampana = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.LblFinChanchilla = New System.Windows.Forms.Label()
@@ -65,7 +62,8 @@ Partial Class FrmRptCostoxKiloDetalleF2
         Me.BarraOpciones = New System.Windows.Forms.ToolStrip()
         Me.BtnExportarprocontrolcerdos = New System.Windows.Forms.ToolStripButton()
         Me.BtnCerrar = New System.Windows.Forms.ToolStripButton()
-        Me.Label6 = New System.Windows.Forms.Label()
+        Me.LblTotal = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
         CType(Me.Ptbx_Cargando, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dtgListado, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
@@ -168,13 +166,11 @@ Partial Class FrmRptCostoxKiloDetalleF2
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(233, Byte), Integer))
-        Me.Panel2.Controls.Add(Me.Label6)
         Me.Panel2.Controls.Add(Me.LblTotal)
         Me.Panel2.Controls.Add(Me.Label11)
-        Me.Panel2.Controls.Add(Me.LblDiasChanchilla)
-        Me.Panel2.Controls.Add(Me.LblDiasInseminacion)
+        Me.Panel2.Controls.Add(Me.Label6)
+        Me.Panel2.Controls.Add(Me.LblCostoVeteBruto)
         Me.Panel2.Controls.Add(Me.LblDiasCampana)
-        Me.Panel2.Controls.Add(Me.Label5)
         Me.Panel2.Controls.Add(Me.Label3)
         Me.Panel2.Controls.Add(Me.Label1)
         Me.Panel2.Controls.Add(Me.LblFinChanchilla)
@@ -198,57 +194,31 @@ Partial Class FrmRptCostoxKiloDetalleF2
         Me.Panel2.Size = New System.Drawing.Size(1110, 257)
         Me.Panel2.TabIndex = 31
         '
-        'LblTotal
+        'Label6
         '
-        Me.LblTotal.AutoSize = True
-        Me.LblTotal.BackColor = System.Drawing.Color.Transparent
-        Me.LblTotal.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblTotal.ForeColor = System.Drawing.Color.Black
-        Me.LblTotal.Location = New System.Drawing.Point(943, 189)
-        Me.LblTotal.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.LblTotal.Name = "LblTotal"
-        Me.LblTotal.Size = New System.Drawing.Size(14, 13)
-        Me.LblTotal.TabIndex = 214
-        Me.LblTotal.Text = "0"
+        Me.Label6.AutoSize = True
+        Me.Label6.BackColor = System.Drawing.Color.GreenYellow
+        Me.Label6.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.Black
+        Me.Label6.Location = New System.Drawing.Point(77, 188)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(496, 13)
+        Me.Label6.TabIndex = 215
+        Me.Label6.Text = "Solo se considera productos de categoría MEDICINA - ACCESORIOS VETERINARIOS "
         '
-        'Label11
+        'LblCostoVeteBruto
         '
-        Me.Label11.AutoSize = True
-        Me.Label11.BackColor = System.Drawing.Color.Transparent
-        Me.Label11.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label11.Location = New System.Drawing.Point(875, 188)
-        Me.Label11.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(60, 14)
-        Me.Label11.TabIndex = 213
-        Me.Label11.Text = "TOTAL :"
-        '
-        'LblDiasChanchilla
-        '
-        Me.LblDiasChanchilla.AutoSize = True
-        Me.LblDiasChanchilla.BackColor = System.Drawing.Color.Transparent
-        Me.LblDiasChanchilla.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblDiasChanchilla.ForeColor = System.Drawing.Color.Black
-        Me.LblDiasChanchilla.Location = New System.Drawing.Point(905, 125)
-        Me.LblDiasChanchilla.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.LblDiasChanchilla.Name = "LblDiasChanchilla"
-        Me.LblDiasChanchilla.Size = New System.Drawing.Size(14, 13)
-        Me.LblDiasChanchilla.TabIndex = 212
-        Me.LblDiasChanchilla.Text = "0"
-        '
-        'LblDiasInseminacion
-        '
-        Me.LblDiasInseminacion.AutoSize = True
-        Me.LblDiasInseminacion.BackColor = System.Drawing.Color.Transparent
-        Me.LblDiasInseminacion.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblDiasInseminacion.ForeColor = System.Drawing.Color.Black
-        Me.LblDiasInseminacion.Location = New System.Drawing.Point(558, 125)
-        Me.LblDiasInseminacion.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.LblDiasInseminacion.Name = "LblDiasInseminacion"
-        Me.LblDiasInseminacion.Size = New System.Drawing.Size(14, 13)
-        Me.LblDiasInseminacion.TabIndex = 211
-        Me.LblDiasInseminacion.Text = "0"
+        Me.LblCostoVeteBruto.AutoSize = True
+        Me.LblCostoVeteBruto.BackColor = System.Drawing.Color.Transparent
+        Me.LblCostoVeteBruto.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblCostoVeteBruto.ForeColor = System.Drawing.Color.Black
+        Me.LblCostoVeteBruto.Location = New System.Drawing.Point(558, 125)
+        Me.LblCostoVeteBruto.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblCostoVeteBruto.Name = "LblCostoVeteBruto"
+        Me.LblCostoVeteBruto.Size = New System.Drawing.Size(14, 13)
+        Me.LblCostoVeteBruto.TabIndex = 211
+        Me.LblCostoVeteBruto.Text = "0"
         '
         'LblDiasCampana
         '
@@ -263,31 +233,18 @@ Partial Class FrmRptCostoxKiloDetalleF2
         Me.LblDiasCampana.TabIndex = 210
         Me.LblDiasCampana.Text = "0"
         '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.BackColor = System.Drawing.Color.Transparent
-        Me.Label5.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label5.Location = New System.Drawing.Point(780, 124)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(117, 14)
-        Me.Label5.TabIndex = 209
-        Me.Label5.Text = "Días Chanchilla :"
-        '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(413, 124)
+        Me.Label3.Location = New System.Drawing.Point(379, 124)
         Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(137, 14)
+        Me.Label3.Size = New System.Drawing.Size(171, 14)
         Me.Label3.TabIndex = 208
-        Me.Label3.Text = "Días Inseminación :"
+        Me.Label3.Text = "Costo Veterinario Bruto :"
         '
         'Label1
         '
@@ -295,12 +252,12 @@ Partial Class FrmRptCostoxKiloDetalleF2
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(85, 124)
+        Me.Label1.Location = New System.Drawing.Point(108, 124)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(110, 14)
+        Me.Label1.Size = New System.Drawing.Size(87, 14)
         Me.Label1.TabIndex = 207
-        Me.Label1.Text = "Días Campaña :"
+        Me.Label1.Text = "N° Paridas :"
         '
         'LblFinChanchilla
         '
@@ -511,18 +468,31 @@ Partial Class FrmRptCostoxKiloDetalleF2
         Me.BtnCerrar.Size = New System.Drawing.Size(66, 28)
         Me.BtnCerrar.Text = "Salir"
         '
-        'Label6
+        'LblTotal
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.BackColor = System.Drawing.Color.GreenYellow
-        Me.Label6.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.Color.Black
-        Me.Label6.Location = New System.Drawing.Point(77, 188)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(496, 13)
-        Me.Label6.TabIndex = 215
-        Me.Label6.Text = "Solo se considera productos de categoría MEDICINA - ACCESORIOS VETERINARIOS "
+        Me.LblTotal.AutoSize = True
+        Me.LblTotal.BackColor = System.Drawing.Color.GreenYellow
+        Me.LblTotal.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblTotal.ForeColor = System.Drawing.Color.Black
+        Me.LblTotal.Location = New System.Drawing.Point(1006, 186)
+        Me.LblTotal.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblTotal.Name = "LblTotal"
+        Me.LblTotal.Size = New System.Drawing.Size(16, 16)
+        Me.LblTotal.TabIndex = 217
+        Me.LblTotal.Text = "0"
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.BackColor = System.Drawing.Color.GreenYellow
+        Me.Label11.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.Label11.Location = New System.Drawing.Point(938, 186)
+        Me.Label11.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(61, 16)
+        Me.Label11.TabIndex = 216
+        Me.Label11.Text = "TOTAL :"
         '
         'FrmRptCostoxKiloDetalleF2
         '
@@ -548,12 +518,8 @@ Partial Class FrmRptCostoxKiloDetalleF2
     Friend WithEvents Ptbx_Cargando As PictureBox
     Friend WithEvents dtgListado As Infragistics.Win.UltraWinGrid.UltraGrid
     Friend WithEvents Panel2 As Panel
-    Friend WithEvents LblTotal As Label
-    Friend WithEvents Label11 As Label
-    Friend WithEvents LblDiasChanchilla As Label
-    Friend WithEvents LblDiasInseminacion As Label
+    Friend WithEvents LblCostoVeteBruto As Label
     Friend WithEvents LblDiasCampana As Label
-    Friend WithEvents Label5 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents LblFinChanchilla As Label
@@ -573,4 +539,6 @@ Partial Class FrmRptCostoxKiloDetalleF2
     Friend WithEvents BtnExportarprocontrolcerdos As ToolStripButton
     Friend WithEvents BtnCerrar As ToolStripButton
     Friend WithEvents Label6 As Label
+    Friend WithEvents LblTotal As Label
+    Friend WithEvents Label11 As Label
 End Class

@@ -1969,6 +1969,18 @@
     <Compile Include="produccion\ReporteCostoxKilo\FrmRptCostoxKiloDetalleF5.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="produccion\ReporteCostoxKilo\FrmRptCostoxKiloDetalleF6.Designer.vb">
+      <DependentUpon>FrmRptCostoxKiloDetalleF6.vb</DependentUpon>
+    </Compile>
+    <Compile Include="produccion\ReporteCostoxKilo\FrmRptCostoxKiloDetalleF6.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="produccion\ReporteCostoxKilo\FrmRptCostoxKiloDetalleF7.Designer.vb">
+      <DependentUpon>FrmRptCostoxKiloDetalleF7.vb</DependentUpon>
+    </Compile>
+    <Compile Include="produccion\ReporteCostoxKilo\FrmRptCostoxKiloDetalleF7.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="RecursosHumanos\AnularPago.Designer.vb">
       <DependentUpon>AnularPago.vb</DependentUpon>
     </Compile>
@@ -4908,6 +4920,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="produccion\ReporteCostoxKilo\FrmRptCostoxKiloDetalleF5.resx">
       <DependentUpon>FrmRptCostoxKiloDetalleF5.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="produccion\ReporteCostoxKilo\FrmRptCostoxKiloDetalleF6.resx">
+      <DependentUpon>FrmRptCostoxKiloDetalleF6.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="produccion\ReporteCostoxKilo\FrmRptCostoxKiloDetalleF7.resx">
+      <DependentUpon>FrmRptCostoxKiloDetalleF7.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RecursosHumanos\AnularPago.resx">
       <DependentUpon>AnularPago.vb</DependentUpon>

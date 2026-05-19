@@ -64,21 +64,22 @@ Public Class FrmRptCostoxKiloDetalleF2
             LblInicioCampana.Text = If(IsDBNull(dtResult.Rows(0)("Campaña_Inicio")), "- / - / -", Convert.ToDateTime(dtResult.Rows(0)("Campaña_Inicio")).ToString("dd/MM/yyyy"))
             LblFinCampana.Text = If(IsDBNull(dtResult.Rows(0)("Campaña_Fin")), "- / - / -", Convert.ToDateTime(dtResult.Rows(0)("Campaña_Fin")).ToString("dd/MM/yyyy"))
             LblDiasCampana.Text = If(IsDBNull(dtResult.Rows(0)("MadresParidas_Denominador")), "-", dtResult.Rows(0)("MadresParidas_Denominador").ToString())
-            Label1.Text = "N° Paridas :"
             LblInicioInseminacion.Text = If(IsDBNull(dtResult.Rows(0)("Monta_Inicio")), "- / - / -", Convert.ToDateTime(dtResult.Rows(0)("Monta_Inicio")).ToString("dd/MM/yyyy"))
             LblFinInseminacion.Text = If(IsDBNull(dtResult.Rows(0)("Monta_Fin")), "- / - / -", Convert.ToDateTime(dtResult.Rows(0)("Monta_Fin")).ToString("dd/MM/yyyy"))
-            LblDiasInseminacion.Visible = False
-            Label3.Visible = False
             LblInicioChanchilla.Text = If(IsDBNull(dtResult.Rows(0)("Chanchilla_Inicio")), "- / - / -", Convert.ToDateTime(dtResult.Rows(0)("Chanchilla_Inicio")).ToString("dd/MM/yyyy"))
             LblFinChanchilla.Text = If(IsDBNull(dtResult.Rows(0)("Chanchilla_Fin")), "- / - / -", Convert.ToDateTime(dtResult.Rows(0)("Chanchilla_Fin")).ToString("dd/MM/yyyy"))
-            LblDiasChanchilla.Visible = False
-            Label5.Visible = False
 
             dtgListado.DataSource = dsResult.Tables(1)
 
             If IsDBNull(dtResult2.Rows(0)("GastosVeterinarios_XMadre")) Then
                 LblTotal.Text = "-"
             Else
+                Dim totalMadre As Decimal = Convert.ToDecimal(dtResult2.Rows(0)("GastosVeterinarios_XMadre"))
+                LblTotal.Text = Math.Round(totalMadre, 2).ToString("0.00")
+
+                Dim totalVeteBruto As Decimal = Convert.ToDecimal(dtResult2.Rows(0)("CostoVeterinario_Total_Bruto"))
+                LblCostoVeteBruto.Text = Math.Round(totalVeteBruto, 2).ToString("0.00")
+
                 Dim total As Decimal = Convert.ToDecimal(dtResult2.Rows(0)("GastosVeterinarios_XMadre"))
                 LblTotal.Text = Math.Round(total, 2).ToString("0.00")
             End If
