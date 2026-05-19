@@ -72,6 +72,7 @@ Partial Class FrmMant_Producto
         Me.ReporteDeCostosDeAlmancenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.btnDashboardproductos = New System.Windows.Forms.ToolStripMenuItem()
         Me.HistoricoDeRecepcionesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ReporteDeInconsistenciasEnKardexDeInventarioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.btnexportar_excelproductos = New System.Windows.Forms.ToolStripButton()
         Me.btn_historicodecompraalmacenali = New System.Windows.Forms.ToolStripButton()
         Me.btnverkardexproductos = New System.Windows.Forms.ToolStripButton()
@@ -91,7 +92,6 @@ Partial Class FrmMant_Producto
         Me.cbxalmacen = New System.Windows.Forms.ComboBox()
         Me.Cmbx_TipoDoc = New Infragistics.Win.UltraWinGrid.UltraCombo()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
-        Me.ReporteDeInconsistenciasEnKardexDeInventarioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.UltraGroupBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.UltraGroupBox2.SuspendLayout()
         CType(Me.Ptbx_Cargando, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -331,7 +331,7 @@ Partial Class FrmMant_Producto
         '
         Me.ReporteDeCostosDeAlmancenToolStripMenuItem.Name = "ReporteDeCostosDeAlmancenToolStripMenuItem"
         Me.ReporteDeCostosDeAlmancenToolStripMenuItem.Size = New System.Drawing.Size(416, 22)
-        Me.ReporteDeCostosDeAlmancenToolStripMenuItem.Text = "Reporte Valorizado de Almacén"
+        Me.ReporteDeCostosDeAlmancenToolStripMenuItem.Text = "Reporte Gastos Generales"
         '
         'btnDashboardproductos
         '
@@ -344,6 +344,12 @@ Partial Class FrmMant_Producto
         Me.HistoricoDeRecepcionesToolStripMenuItem.Name = "HistoricoDeRecepcionesToolStripMenuItem"
         Me.HistoricoDeRecepcionesToolStripMenuItem.Size = New System.Drawing.Size(416, 22)
         Me.HistoricoDeRecepcionesToolStripMenuItem.Text = "Historico de Recepciones"
+        '
+        'ReporteDeInconsistenciasEnKardexDeInventarioToolStripMenuItem
+        '
+        Me.ReporteDeInconsistenciasEnKardexDeInventarioToolStripMenuItem.Name = "ReporteDeInconsistenciasEnKardexDeInventarioToolStripMenuItem"
+        Me.ReporteDeInconsistenciasEnKardexDeInventarioToolStripMenuItem.Size = New System.Drawing.Size(416, 22)
+        Me.ReporteDeInconsistenciasEnKardexDeInventarioToolStripMenuItem.Text = "Reporte de Inconsistencias en Kardex de Inventario"
         '
         'btnexportar_excelproductos
         '
@@ -639,12 +645,6 @@ Partial Class FrmMant_Producto
         '
         Me.BackgroundWorker1.WorkerReportsProgress = True
         Me.BackgroundWorker1.WorkerSupportsCancellation = True
-        '
-        'ReporteDeInconsistenciasEnKardexDeInventarioToolStripMenuItem
-        '
-        Me.ReporteDeInconsistenciasEnKardexDeInventarioToolStripMenuItem.Name = "ReporteDeInconsistenciasEnKardexDeInventarioToolStripMenuItem"
-        Me.ReporteDeInconsistenciasEnKardexDeInventarioToolStripMenuItem.Size = New System.Drawing.Size(416, 22)
-        Me.ReporteDeInconsistenciasEnKardexDeInventarioToolStripMenuItem.Text = "Reporte de Inconsistencias en Kardex de Inventario"
         '
         'FrmMant_Producto
         '

@@ -88,7 +88,7 @@ Public Class FrmMant_Producto
 
                 e.Layout.Bands(0).Summaries.Clear()
                 clsBasicas.Totales_Formato(dtg_Listado, e, 1)
-                'clsBasicas.SumarTotales_Formato(dtg_Listado, e, 10)
+                clsBasicas.SumarTotales_Formato(dtg_Listado, e, 5)
             End If
 
         Catch ex As Exception

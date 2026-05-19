@@ -16,6 +16,7 @@ Public Class cdCategoriaProducto
                 .AddWithValue("@codigo", SqlDbType.Int).Value = obj.Codigo
                 .AddWithValue("@descripcion", SqlDbType.VarChar).Value = obj.Descripcion
                 .AddWithValue("@iduser", SqlDbType.Int).Value = obj.Iduser
+                .AddWithValue("@estado", SqlDbType.VarChar).Value = obj.Estado
                 .Add("@msj", SqlDbType.VarChar, 100).Direction = 2
                 .Add("@coderror", SqlDbType.Int).Direction = 2
             End With
