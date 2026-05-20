@@ -85,6 +85,7 @@ Public Class FrmRegistrarPreparacionRacion
                     .Columns("idProductoEquivalencia").Hidden = True
                     .Columns("nombreProductoEquivalencia").Hidden = True
                     .Columns("equivalencia").Hidden = True
+                    .Columns("stockProdEqui").Hidden = True
                 End With
 
                 clsBasicas.Formato_Tablas_Grid_UltimaColumnaEditable(dtgListadoCantidadInsumos)
@@ -112,6 +113,7 @@ Public Class FrmRegistrarPreparacionRacion
                     valores.Add("idProductoEquivalencia", row.Cells("idProductoEquivalencia").Value)
                     valores.Add("nombreProductoEquivalencia", row.Cells("nombreProductoEquivalencia").Value)
                     valores.Add("equivalencia", row.Cells("equivalencia").Value)
+                    valores.Add("Dispone Stock", row.Cells("Dispone Stock").Value) ' Guardando el valor original
 
                     valoresOriginales.Add(rowIndex, valores)
                 End If
@@ -146,7 +148,15 @@ Public Class FrmRegistrarPreparacionRacion
             Dim rowIndex As Integer = row.Index
 
             If Not valoresOriginales.ContainsKey(rowIndex) Then
-                Return
+                ' Guardar los valores originales de la columna 'Dispone Stock' la primera vez si no existen
+                Dim valOriginales As New Dictionary(Of String, Object)
+                valOriginales.Add("Dispone Stock", row.Cells("Dispone Stock").Value)
+                valoresOriginales.Add(rowIndex, valOriginales)
+            Else
+                ' Asegurarnos de que el valor original de 'Dispone Stock' esté guardado en el diccionario
+                If Not valoresOriginales(rowIndex).ContainsKey("Dispone Stock") Then
+                    valoresOriginales(rowIndex).Add("Dispone Stock", row.Cells("Dispone Stock").Value)
+                End If
             End If
 
             Dim valoresOriginalesRow As Dictionary(Of String, Object) = valoresOriginales(rowIndex)
@@ -185,15 +195,34 @@ Public Class FrmRegistrarPreparacionRacion
                 Dim nuevoTotal As Decimal = totalOriginal / factorEquivalencia
 
                 row.Cells("Total").Value = Math.Round(nuevoTotal, 2)
+
+                ' ------ NUEVA LÓGICA PARA STOCK DE EQUIVALENCIA ------
+                ' Validar si el stock disponible del producto equivalente es suficiente
+                Dim stockEqVal As Object = row.Cells("stockProdEqui").Value
+                Dim stockEq As Decimal = If(IsDBNull(stockEqVal) OrElse stockEqVal Is Nothing, 0D, CDec(stockEqVal))
+
+                ' Comparar con lo que necesito (nuevoTotal)
+                If stockEq >= nuevoTotal Then
+                    row.Cells("Dispone Stock").Value = "DISPONIBLE"
+                Else
+                    row.Cells("Dispone Stock").Value = "NO DISPONIBLE"
+                End If
+
             Else
                 ' DESMARCAR CHECK: Revertir a valores originales
                 row.Cells("idProducto").Value = valoresOriginalesRow("idProducto")
                 row.Cells("Nombre del Producto").Value = valoresOriginalesRow("Nombre del Producto")
                 row.Cells("Total").Value = valoresOriginalesRow("Total")
+
+                ' Revertir columna "Dispone Stock" a su valor original
+                If valoresOriginalesRow.ContainsKey("Dispone Stock") Then
+                    row.Cells("Dispone Stock").Value = valoresOriginalesRow("Dispone Stock")
+                End If
             End If
 
-            ' Refrescar la fila
+            ' Refrescar la fila y re-pintar para que los colores actualicen
             row.Refresh()
+            Colorear()
         Catch ex As Exception
             clsBasicas.controlException(Name, ex)
         End Try
