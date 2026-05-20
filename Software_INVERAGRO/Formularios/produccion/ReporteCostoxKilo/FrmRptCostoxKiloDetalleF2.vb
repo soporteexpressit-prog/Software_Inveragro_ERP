@@ -74,9 +74,6 @@ Public Class FrmRptCostoxKiloDetalleF2
             If IsDBNull(dtResult2.Rows(0)("GastosVeterinarios_XMadre")) Then
                 LblTotal.Text = "-"
             Else
-                Dim totalMadre As Decimal = Convert.ToDecimal(dtResult2.Rows(0)("GastosVeterinarios_XMadre"))
-                LblTotal.Text = Math.Round(totalMadre, 2).ToString("0.00")
-
                 Dim totalVeteBruto As Decimal = Convert.ToDecimal(dtResult2.Rows(0)("CostoVeterinario_Total_Bruto"))
                 LblCostoVeteBruto.Text = Math.Round(totalVeteBruto, 2).ToString("0.00")
 
@@ -113,7 +110,7 @@ Public Class FrmRptCostoxKiloDetalleF2
         End Try
     End Sub
 
-    Private Sub Ptbx_Cargando_Click(sender As Object, e As EventArgs) Handles Ptbx_Cargando.Click
-
+    Private Sub BtnCerrar_Click(sender As Object, e As EventArgs) Handles BtnCerrar.Click
+        Dispose()
     End Sub
 End Class

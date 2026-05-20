@@ -69,10 +69,10 @@ Partial Class FrmRptCostoxKiloDetalleF4
         Dim Appearance45 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.LblLotesInvolucrados = New System.Windows.Forms.Label()
         Me.LblTotal = New System.Windows.Forms.Label()
-        Me.LblMadresParidas = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.LblLotesInvolucrados = New System.Windows.Forms.Label()
+        Me.LblMadresParidas = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.dtgListado3 = New Infragistics.Win.UltraWinGrid.UltraGrid()
@@ -108,10 +108,10 @@ Partial Class FrmRptCostoxKiloDetalleF4
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(233, Byte), Integer))
-        Me.Panel2.Controls.Add(Me.LblLotesInvolucrados)
         Me.Panel2.Controls.Add(Me.LblTotal)
-        Me.Panel2.Controls.Add(Me.LblMadresParidas)
         Me.Panel2.Controls.Add(Me.Label3)
+        Me.Panel2.Controls.Add(Me.LblLotesInvolucrados)
+        Me.Panel2.Controls.Add(Me.LblMadresParidas)
         Me.Panel2.Controls.Add(Me.Label1)
         Me.Panel2.Controls.Add(Me.Label11)
         Me.Panel2.Controls.Add(Me.dtgListado3)
@@ -136,6 +136,32 @@ Partial Class FrmRptCostoxKiloDetalleF4
         Me.Panel2.Size = New System.Drawing.Size(1191, 285)
         Me.Panel2.TabIndex = 13
         '
+        'LblTotal
+        '
+        Me.LblTotal.AutoSize = True
+        Me.LblTotal.BackColor = System.Drawing.Color.GreenYellow
+        Me.LblTotal.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblTotal.ForeColor = System.Drawing.Color.Black
+        Me.LblTotal.Location = New System.Drawing.Point(457, 83)
+        Me.LblTotal.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblTotal.Name = "LblTotal"
+        Me.LblTotal.Size = New System.Drawing.Size(16, 16)
+        Me.LblTotal.TabIndex = 220
+        Me.LblTotal.Text = "0"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.GreenYellow
+        Me.Label3.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.Label3.Location = New System.Drawing.Point(389, 83)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(61, 16)
+        Me.Label3.TabIndex = 219
+        Me.Label3.Text = "TOTAL :"
+        '
         'LblLotesInvolucrados
         '
         Me.LblLotesInvolucrados.AutoSize = True
@@ -149,19 +175,6 @@ Partial Class FrmRptCostoxKiloDetalleF4
         Me.LblLotesInvolucrados.TabIndex = 218
         Me.LblLotesInvolucrados.Text = "-"
         '
-        'LblTotal
-        '
-        Me.LblTotal.AutoSize = True
-        Me.LblTotal.BackColor = System.Drawing.Color.Transparent
-        Me.LblTotal.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblTotal.ForeColor = System.Drawing.Color.Black
-        Me.LblTotal.Location = New System.Drawing.Point(458, 83)
-        Me.LblTotal.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.LblTotal.Name = "LblTotal"
-        Me.LblTotal.Size = New System.Drawing.Size(14, 13)
-        Me.LblTotal.TabIndex = 217
-        Me.LblTotal.Text = "0"
-        '
         'LblMadresParidas
         '
         Me.LblMadresParidas.AutoSize = True
@@ -174,19 +187,6 @@ Partial Class FrmRptCostoxKiloDetalleF4
         Me.LblMadresParidas.Size = New System.Drawing.Size(14, 13)
         Me.LblMadresParidas.TabIndex = 216
         Me.LblMadresParidas.Text = "0"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.BackColor = System.Drawing.Color.Transparent
-        Me.Label3.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(401, 82)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(49, 14)
-        Me.Label3.TabIndex = 215
-        Me.Label3.Text = "Total :"
         '
         'Label1
         '
@@ -285,9 +285,9 @@ Partial Class FrmRptCostoxKiloDetalleF4
         Me.dtgListado3.DisplayLayout.ScrollStyle = Infragistics.Win.UltraWinGrid.ScrollStyle.Immediate
         Me.dtgListado3.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy
         Me.dtgListado3.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dtgListado3.Location = New System.Drawing.Point(556, 20)
+        Me.dtgListado3.Location = New System.Drawing.Point(614, 20)
         Me.dtgListado3.Name = "dtgListado3"
-        Me.dtgListado3.Size = New System.Drawing.Size(537, 194)
+        Me.dtgListado3.Size = New System.Drawing.Size(560, 210)
         Me.dtgListado3.TabIndex = 33
         Me.dtgListado3.Text = "UltraGrid1"
         '
@@ -491,7 +491,7 @@ Partial Class FrmRptCostoxKiloDetalleF4
         '
         Me.Ptbx_Cargando.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Ptbx_Cargando.Image = Global.Formularios.My.Resources.Resources.loader
-        Me.Ptbx_Cargando.Location = New System.Drawing.Point(614, 462)
+        Me.Ptbx_Cargando.Location = New System.Drawing.Point(590, 470)
         Me.Ptbx_Cargando.Name = "Ptbx_Cargando"
         Me.Ptbx_Cargando.Size = New System.Drawing.Size(43, 37)
         Me.Ptbx_Cargando.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -573,7 +573,7 @@ Partial Class FrmRptCostoxKiloDetalleF4
         Me.dtgListado1.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dtgListado1.Location = New System.Drawing.Point(0, 285)
         Me.dtgListado1.Name = "dtgListado1"
-        Me.dtgListado1.Size = New System.Drawing.Size(637, 438)
+        Me.dtgListado1.Size = New System.Drawing.Size(614, 438)
         Me.dtgListado1.TabIndex = 39
         Me.dtgListado1.Text = "UltraGrid1"
         '
@@ -649,9 +649,9 @@ Partial Class FrmRptCostoxKiloDetalleF4
         Me.dtgListado2.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy
         Me.dtgListado2.Dock = System.Windows.Forms.DockStyle.Right
         Me.dtgListado2.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dtgListado2.Location = New System.Drawing.Point(637, 285)
+        Me.dtgListado2.Location = New System.Drawing.Point(614, 285)
         Me.dtgListado2.Name = "dtgListado2"
-        Me.dtgListado2.Size = New System.Drawing.Size(554, 438)
+        Me.dtgListado2.Size = New System.Drawing.Size(577, 438)
         Me.dtgListado2.TabIndex = 41
         Me.dtgListado2.Text = "UltraGrid2"
         '
@@ -668,7 +668,7 @@ Partial Class FrmRptCostoxKiloDetalleF4
         Me.MinimizeBox = False
         Me.Name = "FrmRptCostoxKiloDetalleF4"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "FrmRptCostoxKiloDetalleF3"
+        Me.Text = "REPORTE DETALLADO"
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         CType(Me.dtgListado3, System.ComponentModel.ISupportInitialize).EndInit()
@@ -683,9 +683,7 @@ Partial Class FrmRptCostoxKiloDetalleF4
     Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
     Friend WithEvents Panel2 As Panel
     Friend WithEvents LblLotesInvolucrados As Label
-    Friend WithEvents LblTotal As Label
     Friend WithEvents LblMadresParidas As Label
-    Friend WithEvents Label3 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents Label11 As Label
     Friend WithEvents dtgListado3 As Infragistics.Win.UltraWinGrid.UltraGrid
@@ -707,4 +705,6 @@ Partial Class FrmRptCostoxKiloDetalleF4
     Friend WithEvents Ptbx_Cargando As PictureBox
     Friend WithEvents dtgListado1 As Infragistics.Win.UltraWinGrid.UltraGrid
     Friend WithEvents dtgListado2 As Infragistics.Win.UltraWinGrid.UltraGrid
+    Friend WithEvents LblTotal As Label
+    Friend WithEvents Label3 As Label
 End Class

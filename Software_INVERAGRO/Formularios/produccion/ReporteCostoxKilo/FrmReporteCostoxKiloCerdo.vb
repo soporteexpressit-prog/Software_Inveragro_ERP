@@ -277,14 +277,16 @@ Public Class FrmReporteCostoxKiloCerdo
                     Dim idDetalleVal As String = .ActiveRow.Cells("Id").Value.ToString()
 
                     If idDetalleVal = "RP12" Then
-                        Dim frm As New FrmRptCostoxKiloDetalleF6
-                        frm.idDetalle = idDetalleVal
-                        frm.idCampaña = CmbCampaña.Value
+                        Dim frm As New FrmRptCostoxKiloDetalleF6 With {
+                            .idDetalle = idDetalleVal,
+                            .idCampaña = CmbCampaña.Value
+                        }
                         frm.ShowDialog()
                     ElseIf idDetalleVal = "RP6" Then
-                        Dim frm As New FrmRptCostoxKiloDetalleF7
-                        frm.idDetalle = idDetalleVal
-                        frm.idCampaña = CmbCampaña.Value
+                        Dim frm As New FrmRptCostoxKiloDetalleF7 With {
+                            .idDetalle = idDetalleVal,
+                            .idCampaña = CmbCampaña.Value
+                        }
                         frm.ShowDialog()
                     End If
                 End If

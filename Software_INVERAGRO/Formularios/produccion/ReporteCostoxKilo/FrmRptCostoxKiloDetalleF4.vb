@@ -43,7 +43,7 @@ Public Class FrmRptCostoxKiloDetalleF4
     Private Sub BackgroundWorker1_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorker1.DoWork
         Try
             Dim obj As coControlAnimal = CType(e.Argument, coControlAnimal)
-            ds = cn.Cn_CostoxKiloLechonRP7Detallado(obj).Copy
+            ds = cn.Cn_CostoxKiloLechonRP8Detallado(obj).Copy
             'Tabla 1
             ds.Tables(1).Columns("idAnimal").ColumnMapping = MappingType.Hidden
             ds.Tables(1).Columns("idCampaña").ColumnMapping = MappingType.Hidden
@@ -118,7 +118,16 @@ Public Class FrmRptCostoxKiloDetalleF4
     End Sub
 
     Private Sub dtgListado3_InitializeLayout(sender As Object, e As Infragistics.Win.UltraWinGrid.InitializeLayoutEventArgs) Handles dtgListado3.InitializeLayout
-
+        Try
+            If (dtgListado3.Rows.Count = 0) Then
+            Else
+                clsBasicas.Totales_Formato(dtgListado3, e, 1)
+                clsBasicas.SumarTotales_Formato(dtgListado3, e, 2)
+                clsBasicas.SumarTotales_Formato(dtgListado3, e, 5)
+            End If
+        Catch ex As Exception
+            clsBasicas.controlException(Name, ex)
+        End Try
     End Sub
 
     Private Sub BtnCerrar_Click(sender As Object, e As EventArgs) Handles BtnCerrar.Click

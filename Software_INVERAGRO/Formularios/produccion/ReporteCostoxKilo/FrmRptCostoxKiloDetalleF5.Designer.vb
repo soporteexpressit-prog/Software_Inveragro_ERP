@@ -600,7 +600,7 @@ Partial Class FrmRptCostoxKiloDetalleF5
         Me.Controls.Add(Me.dtgListado2)
         Me.Controls.Add(Me.Panel2)
         Me.Name = "FrmRptCostoxKiloDetalleF5"
-        Me.Text = "FrmRptCostoxKiloDetalleF5"
+        Me.Text = "REPORTE DETALLADO"
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         Me.BarraOpciones.ResumeLayout(False)
