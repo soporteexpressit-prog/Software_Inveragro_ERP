@@ -44,7 +44,7 @@ Public Class FrmVerFormulaBase
             DtgListado.DisplayLayout.Bands(0).Columns("idProducto").Hidden = True
 
             Dim costoFormulacion As Decimal = CalcularCostoTotalFormulacion(dtFormulacion)
-            LblTotalCostoBase.Text = costoFormulacion.ToString("C3")
+            LblTotalCostoBase.Text = "S/ " & costoFormulacion.ToString("N3")
         Catch ex As Exception
             clsBasicas.controlException(Name, ex)
         End Try
@@ -114,8 +114,8 @@ Public Class FrmVerFormulaBase
             Dim dtFormulacion As DataTable = CType(DtgListado.DataSource, DataTable)
             Dim costoFormulacion As Decimal = CalcularCostoTotalFormulacion(dtFormulacion)
 
-            LblTotalPlanMedicado.Text = (totalPlanMedicado + costoFormulacion).ToString("C3")
-            LblTotalAnti.Text = (totalAnti + totalPlanMedicado + costoFormulacion).ToString("C3")
+            LblTotalPlanMedicado.Text = "S/ " & (totalPlanMedicado + costoFormulacion).ToString("N3")
+            LblTotalAnti.Text = "S/ " & (totalAnti + totalPlanMedicado + costoFormulacion).ToString("N3")
         Catch ex As Exception
             clsBasicas.controlException("CalcularYMostrarTotalesPorTipo", ex)
         End Try
@@ -252,7 +252,7 @@ Public Class FrmVerFormulaBase
             Dim dtAntiPlanMedicado As DataTable = CType(DtgListadoAntiPlanMedicado.DataSource, DataTable)
             Dim costoFormulacion As Decimal = CalcularCostoTotalFormulacion(dtFormulacion)
 
-            LblTotalCostoBase.Text = costoFormulacion.ToString("C3")
+            LblTotalCostoBase.Text = "S/ " & costoFormulacion.ToString("N3")
         Catch ex As Exception
             clsBasicas.controlException("RecalcularCostos", ex)
         End Try

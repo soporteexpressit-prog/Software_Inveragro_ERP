@@ -60,11 +60,11 @@ Partial Class FrmRptCostoxKiloDetalleF1
         Me.Label2 = New System.Windows.Forms.Label()
         Me.LblTitle = New System.Windows.Forms.Label()
         Me.BarraOpciones = New System.Windows.Forms.ToolStrip()
+        Me.BtnExportarprocontrolcerdos = New System.Windows.Forms.ToolStripButton()
+        Me.BtnCerrar = New System.Windows.Forms.ToolStripButton()
         Me.dtgListado = New Infragistics.Win.UltraWinGrid.UltraGrid()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         Me.Ptbx_Cargando = New System.Windows.Forms.PictureBox()
-        Me.BtnExportarprocontrolcerdos = New System.Windows.Forms.ToolStripButton()
-        Me.BtnCerrar = New System.Windows.Forms.ToolStripButton()
         Me.Panel2.SuspendLayout()
         Me.BarraOpciones.SuspendLayout()
         CType(Me.dtgListado, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -106,26 +106,26 @@ Partial Class FrmRptCostoxKiloDetalleF1
         'LblTotal
         '
         Me.LblTotal.AutoSize = True
-        Me.LblTotal.BackColor = System.Drawing.Color.Transparent
-        Me.LblTotal.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblTotal.BackColor = System.Drawing.Color.GreenYellow
+        Me.LblTotal.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblTotal.ForeColor = System.Drawing.Color.Black
-        Me.LblTotal.Location = New System.Drawing.Point(933, 189)
+        Me.LblTotal.Location = New System.Drawing.Point(933, 185)
         Me.LblTotal.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblTotal.Name = "LblTotal"
-        Me.LblTotal.Size = New System.Drawing.Size(14, 13)
+        Me.LblTotal.Size = New System.Drawing.Size(16, 16)
         Me.LblTotal.TabIndex = 214
         Me.LblTotal.Text = "0"
         '
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.BackColor = System.Drawing.Color.Transparent
-        Me.Label11.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.BackColor = System.Drawing.Color.GreenYellow
+        Me.Label11.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label11.Location = New System.Drawing.Point(865, 188)
+        Me.Label11.Location = New System.Drawing.Point(865, 185)
         Me.Label11.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(60, 14)
+        Me.Label11.Size = New System.Drawing.Size(61, 16)
         Me.Label11.TabIndex = 213
         Me.Label11.Text = "TOTAL :"
         '
@@ -391,6 +391,31 @@ Partial Class FrmRptCostoxKiloDetalleF1
         Me.BarraOpciones.TabIndex = 52
         Me.BarraOpciones.Text = "ToolStrip1"
         '
+        'BtnExportarprocontrolcerdos
+        '
+        Me.BtnExportarprocontrolcerdos.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnExportarprocontrolcerdos.ForeColor = System.Drawing.Color.White
+        Me.BtnExportarprocontrolcerdos.Image = Global.Formularios.My.Resources.Resources.exportar2
+        Me.BtnExportarprocontrolcerdos.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BtnExportarprocontrolcerdos.Margin = New System.Windows.Forms.Padding(5)
+        Me.BtnExportarprocontrolcerdos.Name = "BtnExportarprocontrolcerdos"
+        Me.BtnExportarprocontrolcerdos.Padding = New System.Windows.Forms.Padding(2)
+        Me.BtnExportarprocontrolcerdos.Size = New System.Drawing.Size(92, 28)
+        Me.BtnExportarprocontrolcerdos.Text = "Exportar"
+        Me.BtnExportarprocontrolcerdos.ToolTipText = "Exportar"
+        '
+        'BtnCerrar
+        '
+        Me.BtnCerrar.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnCerrar.ForeColor = System.Drawing.Color.White
+        Me.BtnCerrar.Image = Global.Formularios.My.Resources.Resources.salir
+        Me.BtnCerrar.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BtnCerrar.Margin = New System.Windows.Forms.Padding(5)
+        Me.BtnCerrar.Name = "BtnCerrar"
+        Me.BtnCerrar.Padding = New System.Windows.Forms.Padding(2)
+        Me.BtnCerrar.Size = New System.Drawing.Size(66, 28)
+        Me.BtnCerrar.Text = "Salir"
+        '
         'dtgListado
         '
         Appearance1.BackColor = System.Drawing.Color.White
@@ -483,31 +508,6 @@ Partial Class FrmRptCostoxKiloDetalleF1
         Me.Ptbx_Cargando.TabIndex = 30
         Me.Ptbx_Cargando.TabStop = False
         Me.Ptbx_Cargando.Visible = False
-        '
-        'BtnExportarprocontrolcerdos
-        '
-        Me.BtnExportarprocontrolcerdos.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnExportarprocontrolcerdos.ForeColor = System.Drawing.Color.White
-        Me.BtnExportarprocontrolcerdos.Image = Global.Formularios.My.Resources.Resources.exportar2
-        Me.BtnExportarprocontrolcerdos.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.BtnExportarprocontrolcerdos.Margin = New System.Windows.Forms.Padding(5)
-        Me.BtnExportarprocontrolcerdos.Name = "BtnExportarprocontrolcerdos"
-        Me.BtnExportarprocontrolcerdos.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnExportarprocontrolcerdos.Size = New System.Drawing.Size(92, 28)
-        Me.BtnExportarprocontrolcerdos.Text = "Exportar"
-        Me.BtnExportarprocontrolcerdos.ToolTipText = "Exportar"
-        '
-        'BtnCerrar
-        '
-        Me.BtnCerrar.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnCerrar.ForeColor = System.Drawing.Color.White
-        Me.BtnCerrar.Image = Global.Formularios.My.Resources.Resources.salir
-        Me.BtnCerrar.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.BtnCerrar.Margin = New System.Windows.Forms.Padding(5)
-        Me.BtnCerrar.Name = "BtnCerrar"
-        Me.BtnCerrar.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnCerrar.Size = New System.Drawing.Size(66, 28)
-        Me.BtnCerrar.Text = "Salir"
         '
         'FrmRptCostoxKiloDetalleF1
         '
