@@ -22,16 +22,497 @@ Partial Class FrmRptCostoxKiloDetalleF7
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim Appearance1 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance2 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance3 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance4 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance5 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance6 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance7 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance8 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance9 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance10 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance11 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance12 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance13 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance14 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance15 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance16 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance17 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance18 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance19 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance20 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance21 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance22 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance23 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance24 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance25 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance26 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance27 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance28 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance29 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance30 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.LblTotal = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.LblLotesInvolucrados = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.LblTotalDestetados = New System.Windows.Forms.Label()
+        Me.LblFechaDesteteFin = New System.Windows.Forms.Label()
+        Me.LblSubTotalParvo = New System.Windows.Forms.Label()
+        Me.LblFechaPartoInicio = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.LblTitle = New System.Windows.Forms.Label()
+        Me.BarraOpciones = New System.Windows.Forms.ToolStrip()
+        Me.BtnCerrar = New System.Windows.Forms.ToolStripButton()
+        Me.Ptbx_Cargando = New System.Windows.Forms.PictureBox()
+        Me.dtgListado1 = New Infragistics.Win.UltraWinGrid.UltraGrid()
+        Me.dtgListado2 = New Infragistics.Win.UltraWinGrid.UltraGrid()
+        Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
+        Me.Panel2.SuspendLayout()
+        Me.BarraOpciones.SuspendLayout()
+        CType(Me.Ptbx_Cargando, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dtgListado1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dtgListado2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.Panel2.Controls.Add(Me.LblTotal)
+        Me.Panel2.Controls.Add(Me.Label11)
+        Me.Panel2.Controls.Add(Me.LblLotesInvolucrados)
+        Me.Panel2.Controls.Add(Me.Label1)
+        Me.Panel2.Controls.Add(Me.LblTotalDestetados)
+        Me.Panel2.Controls.Add(Me.LblFechaDesteteFin)
+        Me.Panel2.Controls.Add(Me.LblSubTotalParvo)
+        Me.Panel2.Controls.Add(Me.LblFechaPartoInicio)
+        Me.Panel2.Controls.Add(Me.Label10)
+        Me.Panel2.Controls.Add(Me.Label8)
+        Me.Panel2.Controls.Add(Me.Label4)
+        Me.Panel2.Controls.Add(Me.Label2)
+        Me.Panel2.Controls.Add(Me.LblTitle)
+        Me.Panel2.Controls.Add(Me.BarraOpciones)
+        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel2.Location = New System.Drawing.Point(0, 0)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(2, 1, 2, 1)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(1131, 257)
+        Me.Panel2.TabIndex = 11
+        '
+        'LblTotal
+        '
+        Me.LblTotal.AutoSize = True
+        Me.LblTotal.BackColor = System.Drawing.Color.GreenYellow
+        Me.LblTotal.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblTotal.ForeColor = System.Drawing.Color.Black
+        Me.LblTotal.Location = New System.Drawing.Point(933, 185)
+        Me.LblTotal.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblTotal.Name = "LblTotal"
+        Me.LblTotal.Size = New System.Drawing.Size(16, 16)
+        Me.LblTotal.TabIndex = 214
+        Me.LblTotal.Text = "0"
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.BackColor = System.Drawing.Color.GreenYellow
+        Me.Label11.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.Label11.Location = New System.Drawing.Point(865, 185)
+        Me.Label11.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(61, 16)
+        Me.Label11.TabIndex = 213
+        Me.Label11.Text = "TOTAL :"
+        '
+        'LblLotesInvolucrados
+        '
+        Me.LblLotesInvolucrados.AutoSize = True
+        Me.LblLotesInvolucrados.BackColor = System.Drawing.Color.Transparent
+        Me.LblLotesInvolucrados.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblLotesInvolucrados.ForeColor = System.Drawing.Color.Black
+        Me.LblLotesInvolucrados.Location = New System.Drawing.Point(217, 162)
+        Me.LblLotesInvolucrados.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblLotesInvolucrados.Name = "LblLotesInvolucrados"
+        Me.LblLotesInvolucrados.Size = New System.Drawing.Size(14, 13)
+        Me.LblLotesInvolucrados.TabIndex = 210
+        Me.LblLotesInvolucrados.Text = "0"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.Label1.Location = New System.Drawing.Point(67, 161)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(142, 14)
+        Me.Label1.TabIndex = 207
+        Me.Label1.Text = "Lotes Involucrados :"
+        '
+        'LblTotalDestetados
+        '
+        Me.LblTotalDestetados.AutoSize = True
+        Me.LblTotalDestetados.BackColor = System.Drawing.Color.Transparent
+        Me.LblTotalDestetados.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblTotalDestetados.ForeColor = System.Drawing.Color.Black
+        Me.LblTotalDestetados.Location = New System.Drawing.Point(895, 73)
+        Me.LblTotalDestetados.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblTotalDestetados.Name = "LblTotalDestetados"
+        Me.LblTotalDestetados.Size = New System.Drawing.Size(14, 13)
+        Me.LblTotalDestetados.TabIndex = 205
+        Me.LblTotalDestetados.Text = "0"
+        '
+        'LblFechaDesteteFin
+        '
+        Me.LblFechaDesteteFin.AutoSize = True
+        Me.LblFechaDesteteFin.BackColor = System.Drawing.Color.Transparent
+        Me.LblFechaDesteteFin.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblFechaDesteteFin.ForeColor = System.Drawing.Color.Black
+        Me.LblFechaDesteteFin.Location = New System.Drawing.Point(564, 73)
+        Me.LblFechaDesteteFin.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblFechaDesteteFin.Name = "LblFechaDesteteFin"
+        Me.LblFechaDesteteFin.Size = New System.Drawing.Size(48, 13)
+        Me.LblFechaDesteteFin.TabIndex = 203
+        Me.LblFechaDesteteFin.Text = "- / - / -"
+        '
+        'LblSubTotalParvo
+        '
+        Me.LblSubTotalParvo.AutoSize = True
+        Me.LblSubTotalParvo.BackColor = System.Drawing.Color.Transparent
+        Me.LblSubTotalParvo.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblSubTotalParvo.ForeColor = System.Drawing.Color.Black
+        Me.LblSubTotalParvo.Location = New System.Drawing.Point(217, 115)
+        Me.LblSubTotalParvo.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblSubTotalParvo.Name = "LblSubTotalParvo"
+        Me.LblSubTotalParvo.Size = New System.Drawing.Size(48, 13)
+        Me.LblSubTotalParvo.TabIndex = 202
+        Me.LblSubTotalParvo.Text = "- / - / -"
+        '
+        'LblFechaPartoInicio
+        '
+        Me.LblFechaPartoInicio.AutoSize = True
+        Me.LblFechaPartoInicio.BackColor = System.Drawing.Color.Transparent
+        Me.LblFechaPartoInicio.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblFechaPartoInicio.ForeColor = System.Drawing.Color.Black
+        Me.LblFechaPartoInicio.Location = New System.Drawing.Point(217, 73)
+        Me.LblFechaPartoInicio.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblFechaPartoInicio.Name = "LblFechaPartoInicio"
+        Me.LblFechaPartoInicio.Size = New System.Drawing.Size(48, 13)
+        Me.LblFechaPartoInicio.TabIndex = 201
+        Me.LblFechaPartoInicio.Text = "- / - / -"
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.BackColor = System.Drawing.Color.Transparent
+        Me.Label10.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.Label10.Location = New System.Drawing.Point(762, 72)
+        Me.Label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(127, 14)
+        Me.Label10.TabIndex = 199
+        Me.Label10.Text = "Total Destetados :"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.BackColor = System.Drawing.Color.Transparent
+        Me.Label8.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.Label8.Location = New System.Drawing.Point(401, 72)
+        Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(146, 14)
+        Me.Label8.TabIndex = 197
+        Me.Label8.Text = "Fecha Destete Final :"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.BackColor = System.Drawing.Color.Transparent
+        Me.Label4.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.Label4.Location = New System.Drawing.Point(88, 114)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(121, 14)
+        Me.Label4.TabIndex = 196
+        Me.Label4.Text = "Sub Total Parvo :"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.Label2.Location = New System.Drawing.Point(73, 72)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(136, 14)
+        Me.Label2.TabIndex = 195
+        Me.Label2.Text = "Fecha Parto Inicio :"
+        '
+        'LblTitle
+        '
+        Me.LblTitle.AutoSize = True
+        Me.LblTitle.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.LblTitle.Font = New System.Drawing.Font("Verdana", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblTitle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.LblTitle.Location = New System.Drawing.Point(21, 20)
+        Me.LblTitle.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.LblTitle.Name = "LblTitle"
+        Me.LblTitle.Size = New System.Drawing.Size(252, 18)
+        Me.LblTitle.TabIndex = 128
+        Me.LblTitle.Text = "Reporte detallado (PARVO)"
+        '
+        'BarraOpciones
+        '
+        Me.BarraOpciones.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.BarraOpciones.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.BarraOpciones.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
+        Me.BarraOpciones.ImageScalingSize = New System.Drawing.Size(20, 20)
+        Me.BarraOpciones.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnCerrar})
+        Me.BarraOpciones.Location = New System.Drawing.Point(0, 219)
+        Me.BarraOpciones.Margin = New System.Windows.Forms.Padding(2, 1, 2, 1)
+        Me.BarraOpciones.Name = "BarraOpciones"
+        Me.BarraOpciones.Padding = New System.Windows.Forms.Padding(0, 0, 2, 0)
+        Me.BarraOpciones.Size = New System.Drawing.Size(1131, 38)
+        Me.BarraOpciones.TabIndex = 52
+        Me.BarraOpciones.Text = "ToolStrip1"
+        '
+        'BtnCerrar
+        '
+        Me.BtnCerrar.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnCerrar.ForeColor = System.Drawing.Color.White
+        Me.BtnCerrar.Image = Global.Formularios.My.Resources.Resources.salir
+        Me.BtnCerrar.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BtnCerrar.Margin = New System.Windows.Forms.Padding(5)
+        Me.BtnCerrar.Name = "BtnCerrar"
+        Me.BtnCerrar.Padding = New System.Windows.Forms.Padding(2)
+        Me.BtnCerrar.Size = New System.Drawing.Size(66, 28)
+        Me.BtnCerrar.Text = "Salir"
+        '
+        'Ptbx_Cargando
+        '
+        Me.Ptbx_Cargando.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Ptbx_Cargando.Image = Global.Formularios.My.Resources.Resources.loader
+        Me.Ptbx_Cargando.Location = New System.Drawing.Point(569, 449)
+        Me.Ptbx_Cargando.Name = "Ptbx_Cargando"
+        Me.Ptbx_Cargando.Size = New System.Drawing.Size(43, 37)
+        Me.Ptbx_Cargando.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.Ptbx_Cargando.TabIndex = 32
+        Me.Ptbx_Cargando.TabStop = False
+        Me.Ptbx_Cargando.Visible = False
+        '
+        'dtgListado1
+        '
+        Appearance1.BackColor = System.Drawing.Color.White
+        Appearance1.BorderColor = System.Drawing.SystemColors.InactiveCaption
+        Appearance1.FontData.Name = "Verdana"
+        Me.dtgListado1.DisplayLayout.Appearance = Appearance1
+        Me.dtgListado1.DisplayLayout.BorderStyle = Infragistics.Win.UIElementBorderStyle.Solid
+        Me.dtgListado1.DisplayLayout.CaptionVisible = Infragistics.Win.DefaultableBoolean.[False]
+        Appearance2.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Appearance2.BackColor2 = System.Drawing.SystemColors.ControlDark
+        Appearance2.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical
+        Appearance2.BorderColor = System.Drawing.SystemColors.Window
+        Me.dtgListado1.DisplayLayout.GroupByBox.Appearance = Appearance2
+        Appearance3.ForeColor = System.Drawing.SystemColors.GrayText
+        Me.dtgListado1.DisplayLayout.GroupByBox.BandLabelAppearance = Appearance3
+        Me.dtgListado1.DisplayLayout.GroupByBox.BorderStyle = Infragistics.Win.UIElementBorderStyle.Solid
+        Me.dtgListado1.DisplayLayout.GroupByBox.Hidden = True
+        Appearance4.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Appearance4.BackColor2 = System.Drawing.SystemColors.Control
+        Appearance4.BackGradientStyle = Infragistics.Win.GradientStyle.Horizontal
+        Appearance4.ForeColor = System.Drawing.SystemColors.GrayText
+        Me.dtgListado1.DisplayLayout.GroupByBox.PromptAppearance = Appearance4
+        Me.dtgListado1.DisplayLayout.MaxColScrollRegions = 1
+        Me.dtgListado1.DisplayLayout.MaxRowScrollRegions = 1
+        Appearance5.BackColor = System.Drawing.Color.White
+        Appearance5.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.dtgListado1.DisplayLayout.Override.ActiveCellAppearance = Appearance5
+        Appearance6.BackColor = System.Drawing.Color.Navy
+        Appearance6.ForeColor = System.Drawing.Color.White
+        Me.dtgListado1.DisplayLayout.Override.ActiveRowAppearance = Appearance6
+        Me.dtgListado1.DisplayLayout.Override.BorderStyleCell = Infragistics.Win.UIElementBorderStyle.Dotted
+        Me.dtgListado1.DisplayLayout.Override.BorderStyleRow = Infragistics.Win.UIElementBorderStyle.Dotted
+        Appearance7.BackColor = System.Drawing.SystemColors.Window
+        Me.dtgListado1.DisplayLayout.Override.CardAreaAppearance = Appearance7
+        Appearance8.BorderColor = System.Drawing.Color.Silver
+        Appearance8.TextTrimming = Infragistics.Win.TextTrimming.EllipsisCharacter
+        Me.dtgListado1.DisplayLayout.Override.CellAppearance = Appearance8
+        Me.dtgListado1.DisplayLayout.Override.CellClickAction = Infragistics.Win.UltraWinGrid.CellClickAction.EditAndSelectText
+        Me.dtgListado1.DisplayLayout.Override.CellPadding = 0
+        Me.dtgListado1.DisplayLayout.Override.FilterOperatorDefaultValue = Infragistics.Win.UltraWinGrid.FilterOperatorDefaultValue.Contains
+        Me.dtgListado1.DisplayLayout.Override.FilterUIType = Infragistics.Win.UltraWinGrid.FilterUIType.FilterRow
+        Appearance9.BackColor = System.Drawing.SystemColors.Control
+        Appearance9.BackColor2 = System.Drawing.SystemColors.ControlDark
+        Appearance9.BackGradientAlignment = Infragistics.Win.GradientAlignment.Element
+        Appearance9.BackGradientStyle = Infragistics.Win.GradientStyle.Horizontal
+        Appearance9.BorderColor = System.Drawing.SystemColors.Window
+        Me.dtgListado1.DisplayLayout.Override.GroupByRowAppearance = Appearance9
+        Appearance10.BackColor = System.Drawing.Color.AliceBlue
+        Appearance10.BackColor2 = System.Drawing.Color.Silver
+        Appearance10.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical
+        Appearance10.ForeColor = System.Drawing.Color.Black
+        Appearance10.TextHAlignAsString = "Left"
+        Me.dtgListado1.DisplayLayout.Override.HeaderAppearance = Appearance10
+        Me.dtgListado1.DisplayLayout.Override.HeaderClickAction = Infragistics.Win.UltraWinGrid.HeaderClickAction.SortMulti
+        Me.dtgListado1.DisplayLayout.Override.HeaderStyle = Infragistics.Win.HeaderStyle.WindowsXPCommand
+        Appearance11.BackColor = System.Drawing.SystemColors.Window
+        Appearance11.BorderColor = System.Drawing.Color.Silver
+        Me.dtgListado1.DisplayLayout.Override.RowAppearance = Appearance11
+        Appearance12.BackColor = System.Drawing.Color.White
+        Me.dtgListado1.DisplayLayout.Override.RowPreviewAppearance = Appearance12
+        Appearance13.BackColor = System.Drawing.Color.White
+        Me.dtgListado1.DisplayLayout.Override.RowSelectorAppearance = Appearance13
+        Appearance14.BackColor = System.Drawing.Color.Navy
+        Me.dtgListado1.DisplayLayout.Override.RowSelectorHeaderAppearance = Appearance14
+        Me.dtgListado1.DisplayLayout.Override.RowSelectors = Infragistics.Win.DefaultableBoolean.[False]
+        Appearance15.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.dtgListado1.DisplayLayout.Override.TemplateAddRowAppearance = Appearance15
+        Me.dtgListado1.DisplayLayout.ScrollBounds = Infragistics.Win.UltraWinGrid.ScrollBounds.ScrollToFill
+        Me.dtgListado1.DisplayLayout.ScrollStyle = Infragistics.Win.UltraWinGrid.ScrollStyle.Immediate
+        Me.dtgListado1.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy
+        Me.dtgListado1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.dtgListado1.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dtgListado1.Location = New System.Drawing.Point(0, 257)
+        Me.dtgListado1.Name = "dtgListado1"
+        Me.dtgListado1.Size = New System.Drawing.Size(646, 465)
+        Me.dtgListado1.TabIndex = 31
+        Me.dtgListado1.Text = "UltraGrid1"
+        '
+        'dtgListado2
+        '
+        Appearance16.BackColor = System.Drawing.Color.White
+        Appearance16.BorderColor = System.Drawing.SystemColors.InactiveCaption
+        Appearance16.FontData.Name = "Verdana"
+        Me.dtgListado2.DisplayLayout.Appearance = Appearance16
+        Me.dtgListado2.DisplayLayout.BorderStyle = Infragistics.Win.UIElementBorderStyle.Solid
+        Me.dtgListado2.DisplayLayout.CaptionVisible = Infragistics.Win.DefaultableBoolean.[False]
+        Appearance17.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Appearance17.BackColor2 = System.Drawing.SystemColors.ControlDark
+        Appearance17.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical
+        Appearance17.BorderColor = System.Drawing.SystemColors.Window
+        Me.dtgListado2.DisplayLayout.GroupByBox.Appearance = Appearance17
+        Appearance18.ForeColor = System.Drawing.SystemColors.GrayText
+        Me.dtgListado2.DisplayLayout.GroupByBox.BandLabelAppearance = Appearance18
+        Me.dtgListado2.DisplayLayout.GroupByBox.BorderStyle = Infragistics.Win.UIElementBorderStyle.Solid
+        Me.dtgListado2.DisplayLayout.GroupByBox.Hidden = True
+        Appearance19.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Appearance19.BackColor2 = System.Drawing.SystemColors.Control
+        Appearance19.BackGradientStyle = Infragistics.Win.GradientStyle.Horizontal
+        Appearance19.ForeColor = System.Drawing.SystemColors.GrayText
+        Me.dtgListado2.DisplayLayout.GroupByBox.PromptAppearance = Appearance19
+        Me.dtgListado2.DisplayLayout.MaxColScrollRegions = 1
+        Me.dtgListado2.DisplayLayout.MaxRowScrollRegions = 1
+        Appearance20.BackColor = System.Drawing.Color.White
+        Appearance20.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.dtgListado2.DisplayLayout.Override.ActiveCellAppearance = Appearance20
+        Appearance21.BackColor = System.Drawing.Color.Navy
+        Appearance21.ForeColor = System.Drawing.Color.White
+        Me.dtgListado2.DisplayLayout.Override.ActiveRowAppearance = Appearance21
+        Me.dtgListado2.DisplayLayout.Override.BorderStyleCell = Infragistics.Win.UIElementBorderStyle.Dotted
+        Me.dtgListado2.DisplayLayout.Override.BorderStyleRow = Infragistics.Win.UIElementBorderStyle.Dotted
+        Appearance22.BackColor = System.Drawing.SystemColors.Window
+        Me.dtgListado2.DisplayLayout.Override.CardAreaAppearance = Appearance22
+        Appearance23.BorderColor = System.Drawing.Color.Silver
+        Appearance23.TextTrimming = Infragistics.Win.TextTrimming.EllipsisCharacter
+        Me.dtgListado2.DisplayLayout.Override.CellAppearance = Appearance23
+        Me.dtgListado2.DisplayLayout.Override.CellClickAction = Infragistics.Win.UltraWinGrid.CellClickAction.EditAndSelectText
+        Me.dtgListado2.DisplayLayout.Override.CellPadding = 0
+        Me.dtgListado2.DisplayLayout.Override.FilterOperatorDefaultValue = Infragistics.Win.UltraWinGrid.FilterOperatorDefaultValue.Contains
+        Me.dtgListado2.DisplayLayout.Override.FilterUIType = Infragistics.Win.UltraWinGrid.FilterUIType.FilterRow
+        Appearance24.BackColor = System.Drawing.SystemColors.Control
+        Appearance24.BackColor2 = System.Drawing.SystemColors.ControlDark
+        Appearance24.BackGradientAlignment = Infragistics.Win.GradientAlignment.Element
+        Appearance24.BackGradientStyle = Infragistics.Win.GradientStyle.Horizontal
+        Appearance24.BorderColor = System.Drawing.SystemColors.Window
+        Me.dtgListado2.DisplayLayout.Override.GroupByRowAppearance = Appearance24
+        Appearance25.BackColor = System.Drawing.Color.AliceBlue
+        Appearance25.BackColor2 = System.Drawing.Color.Silver
+        Appearance25.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical
+        Appearance25.ForeColor = System.Drawing.Color.Black
+        Appearance25.TextHAlignAsString = "Left"
+        Me.dtgListado2.DisplayLayout.Override.HeaderAppearance = Appearance25
+        Me.dtgListado2.DisplayLayout.Override.HeaderClickAction = Infragistics.Win.UltraWinGrid.HeaderClickAction.SortMulti
+        Me.dtgListado2.DisplayLayout.Override.HeaderStyle = Infragistics.Win.HeaderStyle.WindowsXPCommand
+        Appearance26.BackColor = System.Drawing.SystemColors.Window
+        Appearance26.BorderColor = System.Drawing.Color.Silver
+        Me.dtgListado2.DisplayLayout.Override.RowAppearance = Appearance26
+        Appearance27.BackColor = System.Drawing.Color.White
+        Me.dtgListado2.DisplayLayout.Override.RowPreviewAppearance = Appearance27
+        Appearance28.BackColor = System.Drawing.Color.White
+        Me.dtgListado2.DisplayLayout.Override.RowSelectorAppearance = Appearance28
+        Appearance29.BackColor = System.Drawing.Color.Navy
+        Me.dtgListado2.DisplayLayout.Override.RowSelectorHeaderAppearance = Appearance29
+        Me.dtgListado2.DisplayLayout.Override.RowSelectors = Infragistics.Win.DefaultableBoolean.[False]
+        Appearance30.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.dtgListado2.DisplayLayout.Override.TemplateAddRowAppearance = Appearance30
+        Me.dtgListado2.DisplayLayout.ScrollBounds = Infragistics.Win.UltraWinGrid.ScrollBounds.ScrollToFill
+        Me.dtgListado2.DisplayLayout.ScrollStyle = Infragistics.Win.UltraWinGrid.ScrollStyle.Immediate
+        Me.dtgListado2.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy
+        Me.dtgListado2.Dock = System.Windows.Forms.DockStyle.Right
+        Me.dtgListado2.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dtgListado2.Location = New System.Drawing.Point(646, 257)
+        Me.dtgListado2.Name = "dtgListado2"
+        Me.dtgListado2.Size = New System.Drawing.Size(485, 465)
+        Me.dtgListado2.TabIndex = 33
+        Me.dtgListado2.Text = "UltraGrid1"
+        '
+        'BackgroundWorker1
+        '
         '
         'FrmRptCostoxKiloDetalleF7
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(1131, 722)
+        Me.Controls.Add(Me.Ptbx_Cargando)
+        Me.Controls.Add(Me.dtgListado1)
+        Me.Controls.Add(Me.dtgListado2)
+        Me.Controls.Add(Me.Panel2)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "FrmRptCostoxKiloDetalleF7"
-        Me.Text = "FrmRptCostoxKiloDetalleF7"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "REPORTE DETALLADO"
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
+        Me.BarraOpciones.ResumeLayout(False)
+        Me.BarraOpciones.PerformLayout()
+        CType(Me.Ptbx_Cargando, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dtgListado1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dtgListado2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
+
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents LblTotal As Label
+    Friend WithEvents Label11 As Label
+    Friend WithEvents LblLotesInvolucrados As Label
+    Friend WithEvents Label1 As Label
+    Friend WithEvents LblTotalDestetados As Label
+    Friend WithEvents LblFechaDesteteFin As Label
+    Friend WithEvents LblSubTotalParvo As Label
+    Friend WithEvents LblFechaPartoInicio As Label
+    Friend WithEvents Label10 As Label
+    Friend WithEvents Label8 As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents LblTitle As Label
+    Friend WithEvents BarraOpciones As ToolStrip
+    Friend WithEvents BtnCerrar As ToolStripButton
+    Friend WithEvents Ptbx_Cargando As PictureBox
+    Friend WithEvents dtgListado1 As Infragistics.Win.UltraWinGrid.UltraGrid
+    Friend WithEvents dtgListado2 As Infragistics.Win.UltraWinGrid.UltraGrid
+    Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
 End Class
