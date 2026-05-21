@@ -325,13 +325,13 @@ Partial Class FrmMant_Producto
         '
         Me.ReporteToolStripMenuItem.Name = "ReporteToolStripMenuItem"
         Me.ReporteToolStripMenuItem.Size = New System.Drawing.Size(416, 22)
-        Me.ReporteToolStripMenuItem.Text = "Gastos Veterinarios"
+        Me.ReporteToolStripMenuItem.Text = "Reporte Gastos Generales"
         '
         'ReporteDeCostosDeAlmancenToolStripMenuItem
         '
         Me.ReporteDeCostosDeAlmancenToolStripMenuItem.Name = "ReporteDeCostosDeAlmancenToolStripMenuItem"
         Me.ReporteDeCostosDeAlmancenToolStripMenuItem.Size = New System.Drawing.Size(416, 22)
-        Me.ReporteDeCostosDeAlmancenToolStripMenuItem.Text = "Reporte Gastos Generales"
+        Me.ReporteDeCostosDeAlmancenToolStripMenuItem.Text = "Reporte Valorizado "
         '
         'btnDashboardproductos
         '
