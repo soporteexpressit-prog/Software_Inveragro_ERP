@@ -44,8 +44,8 @@ Public Class FrmRptCostoxKiloDetalleF5
             Dim obj As coControlAnimal = CType(e.Argument, coControlAnimal)
             ds = cn.Cn_CostoxKiloLechonRP10Detallado(obj).Copy
             'Tabla 1
-            ds.Tables(1).Columns("idPago").ColumnMapping = MappingType.Hidden
-            ds.Tables(1).Columns("idPlantel").ColumnMapping = MappingType.Hidden
+            ds.Tables(1).Columns("idPersona").ColumnMapping = MappingType.Hidden
+            ds.Tables(1).Columns("Area").ColumnMapping = MappingType.Hidden
 
             e.Result = ds
         Catch ex As Exception
@@ -70,16 +70,24 @@ Public Class FrmRptCostoxKiloDetalleF5
             LblFinInseminacion.Text = If(IsDBNull(dtResult.Rows(0)("Monta_Fin")), "- / - / -", Convert.ToDateTime(dtResult.Rows(0)("Monta_Fin")).ToString("dd/MM/yyyy"))
             LblInicioChanchilla.Text = If(IsDBNull(dtResult.Rows(0)("Chanchilla_Inicio")), "- / - / -", Convert.ToDateTime(dtResult.Rows(0)("Chanchilla_Inicio")).ToString("dd/MM/yyyy"))
             LblFinChanchilla.Text = If(IsDBNull(dtResult.Rows(0)("Chanchilla_Fin")), "- / - / -", Convert.ToDateTime(dtResult.Rows(0)("Chanchilla_Fin")).ToString("dd/MM/yyyy"))
+            LblFechaUltDestete.Text = If(IsDBNull(dtResult.Rows(0)("Destete_UltimoRegistro")), "- / - / -", Convert.ToDateTime(dtResult.Rows(0)("Destete_UltimoRegistro")).ToString("dd/MM/yyyy"))
 
-            dtgListado1.DataSource = dsResult.Tables(1)
-            dtgListado2.DataSource = dsResult.Tables(2)
+            dtgListado2.DataSource = dsResult.Tables(1)
+            dtgListado1.DataSource = dsResult.Tables(2)
 
-            If IsDBNull(dtResult3.Rows(0)("CostoPersonal_XCria")) Then
-                LblTotal.Text = "-"
-                LblTotal.Text = "-"
+            If IsDBNull(dtResult3.Rows(0)("CostoPersonal_XLechon")) Then
+                LblCostoTotalPersonal.Text = "-"
+                LblLechonesDestetados.Text = "-"
+                LblCostoTotalLechon.Text = "-"
             Else
-                Dim subtotal As Decimal = Convert.ToDecimal(dtResult3.Rows(0)("CostoPersonal_XCria"))
-                LblTotal.Text = Math.Round(subtotal, 2).ToString("0.00")
+                Dim costoTotalPersonal As Decimal = Convert.ToDecimal(dtResult3.Rows(0)("CostoTotal_Prorrateado"))
+                LblCostoTotalPersonal.Text = Math.Round(costoTotalPersonal, 2).ToString("0.00")
+
+                Dim lechonesDestetados As Integer = Convert.ToInt32(dtResult3.Rows(0)("LechonesDestetados"))
+                LblLechonesDestetados.Text = lechonesDestetados.ToString()
+
+                Dim costoTotalLechon As Decimal = Convert.ToDecimal(dtResult3.Rows(0)("CostoPersonal_XLechon"))
+                LblCostoTotalLechon.Text = Math.Round(costoTotalLechon, 2).ToString("0.00")
             End If
         End If
     End Sub
@@ -88,10 +96,11 @@ Public Class FrmRptCostoxKiloDetalleF5
         Try
             If (dtgListado1.Rows.Count = 0) Then
             Else
-                clsBasicas.Totales_Formato(dtgListado1, e, 1)
+                clsBasicas.Totales_Formato(dtgListado1, e, 0)
+                clsBasicas.SumarTotales_Formato(dtgListado1, e, 6)
+                clsBasicas.SumarTotales_Formato(dtgListado1, e, 7)
                 clsBasicas.SumarTotales_Formato(dtgListado1, e, 8)
                 clsBasicas.SumarTotales_Formato(dtgListado1, e, 9)
-                clsBasicas.SumarTotales_Formato(dtgListado1, e, 10)
             End If
         Catch ex As Exception
             clsBasicas.controlException(Name, ex)
@@ -102,11 +111,7 @@ Public Class FrmRptCostoxKiloDetalleF5
         Try
             If (dtgListado2.Rows.Count = 0) Then
             Else
-                clsBasicas.Totales_Formato(dtgListado2, e, 0)
-                clsBasicas.SumarTotales_Formato(dtgListado2, e, 3)
-                clsBasicas.SumarTotales_Formato(dtgListado2, e, 4)
-                clsBasicas.SumarTotales_Formato(dtgListado2, e, 5)
-                clsBasicas.SumarTotales_Formato(dtgListado2, e, 6)
+                clsBasicas.Totales_Formato(dtgListado2, e, 1)
             End If
         Catch ex As Exception
             clsBasicas.controlException(Name, ex)
