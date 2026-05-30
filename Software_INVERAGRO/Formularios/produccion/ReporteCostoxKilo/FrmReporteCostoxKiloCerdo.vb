@@ -288,6 +288,24 @@ Public Class FrmReporteCostoxKiloCerdo
                             .idCampaña = CmbCampaña.Value
                         }
                         frm.ShowDialog()
+                    ElseIf idDetalleVal = "RP14" Then
+                        Dim frm As New FrmRptCostoxKiloDetalleF8 With {
+                            .idDetalle = idDetalleVal,
+                            .idCampaña = CmbCampaña.Value
+                        }
+                        frm.ShowDialog()
+                    ElseIf idDetalleVal = "RP15" Then
+                        Dim frm As New FrmRptCostoxKiloDetalleF9 With {
+                            .idDetalle = idDetalleVal,
+                            .idCampaña = CmbCampaña.Value
+                        }
+                        frm.ShowDialog()
+                    ElseIf idDetalleVal = "RP16" Then
+                        'Dim frm As New FrmRptCostoxKiloDetalleF10 With {
+                        '    .idDetalle = idDetalleVal,
+                        '    .idCampaña = CmbCampaña.Value
+                        '}
+                        'frm.ShowDialog()
                     End If
                 End If
             End With

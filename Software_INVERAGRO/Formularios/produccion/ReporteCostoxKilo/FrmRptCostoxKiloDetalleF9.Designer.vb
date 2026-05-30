@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class FrmRptCostoxKiloDetalleF6
+Partial Class FrmRptCostoxKiloDetalleF9
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -38,24 +38,19 @@ Partial Class FrmRptCostoxKiloDetalleF6
         Dim Appearance14 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance15 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.LblTotalGlobal = New System.Windows.Forms.Label()
-        Me.Label15 = New System.Windows.Forms.Label()
-        Me.LblTotalDestetados = New System.Windows.Forms.Label()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.LblPrecioKiloPromedio = New System.Windows.Forms.Label()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.LblTotalLacta = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
         Me.LblTotal = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
-        Me.LblLotesInvolucrados = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.LblCostoVeteBruto = New System.Windows.Forms.Label()
+        Me.LblNumLechones = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.LblFinChanchilla = New System.Windows.Forms.Label()
         Me.LblInicioChanchilla = New System.Windows.Forms.Label()
         Me.LblFinInseminacion = New System.Windows.Forms.Label()
         Me.LblInicioInseminacion = New System.Windows.Forms.Label()
-        Me.LblFinCampana = New System.Windows.Forms.Label()
-        Me.LblInicioCampana = New System.Windows.Forms.Label()
+        Me.LblFinDestete = New System.Windows.Forms.Label()
+        Me.LblInicioDestete = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -78,24 +73,19 @@ Partial Class FrmRptCostoxKiloDetalleF6
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(233, Byte), Integer))
-        Me.Panel2.Controls.Add(Me.LblTotalGlobal)
-        Me.Panel2.Controls.Add(Me.Label15)
-        Me.Panel2.Controls.Add(Me.LblTotalDestetados)
-        Me.Panel2.Controls.Add(Me.Label13)
-        Me.Panel2.Controls.Add(Me.LblPrecioKiloPromedio)
-        Me.Panel2.Controls.Add(Me.Label12)
-        Me.Panel2.Controls.Add(Me.LblTotalLacta)
-        Me.Panel2.Controls.Add(Me.Label5)
         Me.Panel2.Controls.Add(Me.LblTotal)
         Me.Panel2.Controls.Add(Me.Label11)
-        Me.Panel2.Controls.Add(Me.LblLotesInvolucrados)
+        Me.Panel2.Controls.Add(Me.Label6)
+        Me.Panel2.Controls.Add(Me.LblCostoVeteBruto)
+        Me.Panel2.Controls.Add(Me.LblNumLechones)
+        Me.Panel2.Controls.Add(Me.Label3)
         Me.Panel2.Controls.Add(Me.Label1)
         Me.Panel2.Controls.Add(Me.LblFinChanchilla)
         Me.Panel2.Controls.Add(Me.LblInicioChanchilla)
         Me.Panel2.Controls.Add(Me.LblFinInseminacion)
         Me.Panel2.Controls.Add(Me.LblInicioInseminacion)
-        Me.Panel2.Controls.Add(Me.LblFinCampana)
-        Me.Panel2.Controls.Add(Me.LblInicioCampana)
+        Me.Panel2.Controls.Add(Me.LblFinDestete)
+        Me.Panel2.Controls.Add(Me.LblInicioDestete)
         Me.Panel2.Controls.Add(Me.Label9)
         Me.Panel2.Controls.Add(Me.Label10)
         Me.Panel2.Controls.Add(Me.Label7)
@@ -108,112 +98,8 @@ Partial Class FrmRptCostoxKiloDetalleF6
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
         Me.Panel2.Margin = New System.Windows.Forms.Padding(2, 1, 2, 1)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1098, 257)
+        Me.Panel2.Size = New System.Drawing.Size(1100, 257)
         Me.Panel2.TabIndex = 32
-        '
-        'LblTotalGlobal
-        '
-        Me.LblTotalGlobal.AutoSize = True
-        Me.LblTotalGlobal.BackColor = System.Drawing.Color.Transparent
-        Me.LblTotalGlobal.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblTotalGlobal.ForeColor = System.Drawing.Color.Black
-        Me.LblTotalGlobal.Location = New System.Drawing.Point(814, 189)
-        Me.LblTotalGlobal.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.LblTotalGlobal.Name = "LblTotalGlobal"
-        Me.LblTotalGlobal.Size = New System.Drawing.Size(12, 13)
-        Me.LblTotalGlobal.TabIndex = 225
-        Me.LblTotalGlobal.Text = "-"
-        '
-        'Label15
-        '
-        Me.Label15.AutoSize = True
-        Me.Label15.BackColor = System.Drawing.Color.Transparent
-        Me.Label15.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label15.Location = New System.Drawing.Point(670, 188)
-        Me.Label15.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(136, 14)
-        Me.Label15.TabIndex = 224
-        Me.Label15.Text = "Costo Total Global :"
-        '
-        'LblTotalDestetados
-        '
-        Me.LblTotalDestetados.AutoSize = True
-        Me.LblTotalDestetados.BackColor = System.Drawing.Color.Transparent
-        Me.LblTotalDestetados.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblTotalDestetados.ForeColor = System.Drawing.Color.Black
-        Me.LblTotalDestetados.Location = New System.Drawing.Point(905, 134)
-        Me.LblTotalDestetados.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.LblTotalDestetados.Name = "LblTotalDestetados"
-        Me.LblTotalDestetados.Size = New System.Drawing.Size(12, 13)
-        Me.LblTotalDestetados.TabIndex = 223
-        Me.LblTotalDestetados.Text = "-"
-        '
-        'Label13
-        '
-        Me.Label13.AutoSize = True
-        Me.Label13.BackColor = System.Drawing.Color.Transparent
-        Me.Label13.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label13.Location = New System.Drawing.Point(770, 133)
-        Me.Label13.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(127, 14)
-        Me.Label13.TabIndex = 222
-        Me.Label13.Text = "Total Destetados :"
-        '
-        'LblPrecioKiloPromedio
-        '
-        Me.LblPrecioKiloPromedio.AutoSize = True
-        Me.LblPrecioKiloPromedio.BackColor = System.Drawing.Color.Transparent
-        Me.LblPrecioKiloPromedio.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblPrecioKiloPromedio.ForeColor = System.Drawing.Color.Black
-        Me.LblPrecioKiloPromedio.Location = New System.Drawing.Point(558, 134)
-        Me.LblPrecioKiloPromedio.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.LblPrecioKiloPromedio.Name = "LblPrecioKiloPromedio"
-        Me.LblPrecioKiloPromedio.Size = New System.Drawing.Size(12, 13)
-        Me.LblPrecioKiloPromedio.TabIndex = 221
-        Me.LblPrecioKiloPromedio.Text = "-"
-        '
-        'Label12
-        '
-        Me.Label12.AutoSize = True
-        Me.Label12.BackColor = System.Drawing.Color.Transparent
-        Me.Label12.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label12.Location = New System.Drawing.Point(384, 133)
-        Me.Label12.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(166, 14)
-        Me.Label12.TabIndex = 220
-        Me.Label12.Text = "Precio x Kilo Promedio :"
-        '
-        'LblTotalLacta
-        '
-        Me.LblTotalLacta.AutoSize = True
-        Me.LblTotalLacta.BackColor = System.Drawing.Color.Transparent
-        Me.LblTotalLacta.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblTotalLacta.ForeColor = System.Drawing.Color.Black
-        Me.LblTotalLacta.Location = New System.Drawing.Point(203, 134)
-        Me.LblTotalLacta.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.LblTotalLacta.Name = "LblTotalLacta"
-        Me.LblTotalLacta.Size = New System.Drawing.Size(12, 13)
-        Me.LblTotalLacta.TabIndex = 219
-        Me.LblTotalLacta.Text = "-"
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.BackColor = System.Drawing.Color.Transparent
-        Me.Label5.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label5.Location = New System.Drawing.Point(110, 133)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(85, 14)
-        Me.Label5.TabIndex = 218
-        Me.Label5.Text = "Total Lacta:"
         '
         'LblTotal
         '
@@ -221,7 +107,7 @@ Partial Class FrmRptCostoxKiloDetalleF6
         Me.LblTotal.BackColor = System.Drawing.Color.GreenYellow
         Me.LblTotal.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblTotal.ForeColor = System.Drawing.Color.Black
-        Me.LblTotal.Location = New System.Drawing.Point(1006, 187)
+        Me.LblTotal.Location = New System.Drawing.Point(1006, 186)
         Me.LblTotal.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblTotal.Name = "LblTotal"
         Me.LblTotal.Size = New System.Drawing.Size(16, 16)
@@ -234,25 +120,64 @@ Partial Class FrmRptCostoxKiloDetalleF6
         Me.Label11.BackColor = System.Drawing.Color.GreenYellow
         Me.Label11.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label11.Location = New System.Drawing.Point(938, 187)
+        Me.Label11.Location = New System.Drawing.Point(938, 186)
         Me.Label11.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(61, 16)
         Me.Label11.TabIndex = 216
         Me.Label11.Text = "TOTAL :"
         '
-        'LblLotesInvolucrados
+        'Label6
         '
-        Me.LblLotesInvolucrados.AutoSize = True
-        Me.LblLotesInvolucrados.BackColor = System.Drawing.Color.Transparent
-        Me.LblLotesInvolucrados.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblLotesInvolucrados.ForeColor = System.Drawing.Color.Black
-        Me.LblLotesInvolucrados.Location = New System.Drawing.Point(203, 189)
-        Me.LblLotesInvolucrados.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.LblLotesInvolucrados.Name = "LblLotesInvolucrados"
-        Me.LblLotesInvolucrados.Size = New System.Drawing.Size(12, 13)
-        Me.LblLotesInvolucrados.TabIndex = 210
-        Me.LblLotesInvolucrados.Text = "-"
+        Me.Label6.AutoSize = True
+        Me.Label6.BackColor = System.Drawing.Color.GreenYellow
+        Me.Label6.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.Black
+        Me.Label6.Location = New System.Drawing.Point(77, 188)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(496, 13)
+        Me.Label6.TabIndex = 215
+        Me.Label6.Text = "Solo se considera productos de categoría MEDICINA - ACCESORIOS VETERINARIOS "
+        '
+        'LblCostoVeteBruto
+        '
+        Me.LblCostoVeteBruto.AutoSize = True
+        Me.LblCostoVeteBruto.BackColor = System.Drawing.Color.Transparent
+        Me.LblCostoVeteBruto.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblCostoVeteBruto.ForeColor = System.Drawing.Color.Black
+        Me.LblCostoVeteBruto.Location = New System.Drawing.Point(558, 125)
+        Me.LblCostoVeteBruto.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblCostoVeteBruto.Name = "LblCostoVeteBruto"
+        Me.LblCostoVeteBruto.Size = New System.Drawing.Size(14, 13)
+        Me.LblCostoVeteBruto.TabIndex = 211
+        Me.LblCostoVeteBruto.Text = "0"
+        '
+        'LblNumLechones
+        '
+        Me.LblNumLechones.AutoSize = True
+        Me.LblNumLechones.BackColor = System.Drawing.Color.Transparent
+        Me.LblNumLechones.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblNumLechones.ForeColor = System.Drawing.Color.Black
+        Me.LblNumLechones.Location = New System.Drawing.Point(203, 125)
+        Me.LblNumLechones.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblNumLechones.Name = "LblNumLechones"
+        Me.LblNumLechones.Size = New System.Drawing.Size(14, 13)
+        Me.LblNumLechones.TabIndex = 210
+        Me.LblNumLechones.Text = "0"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.Label3.Location = New System.Drawing.Point(379, 124)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(171, 14)
+        Me.Label3.TabIndex = 208
+        Me.Label3.Text = "Costo Veterinario Bruto :"
         '
         'Label1
         '
@@ -260,12 +185,12 @@ Partial Class FrmRptCostoxKiloDetalleF6
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(57, 188)
+        Me.Label1.Location = New System.Drawing.Point(18, 124)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(138, 14)
+        Me.Label1.Size = New System.Drawing.Size(177, 14)
         Me.Label1.TabIndex = 207
-        Me.Label1.Text = "Lotes Involucrados:"
+        Me.Label1.Text = "N° Lechones Destetados :"
         '
         'LblFinChanchilla
         '
@@ -273,7 +198,7 @@ Partial Class FrmRptCostoxKiloDetalleF6
         Me.LblFinChanchilla.BackColor = System.Drawing.Color.Transparent
         Me.LblFinChanchilla.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblFinChanchilla.ForeColor = System.Drawing.Color.Black
-        Me.LblFinChanchilla.Location = New System.Drawing.Point(905, 103)
+        Me.LblFinChanchilla.Location = New System.Drawing.Point(203, 97)
         Me.LblFinChanchilla.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblFinChanchilla.Name = "LblFinChanchilla"
         Me.LblFinChanchilla.Size = New System.Drawing.Size(48, 13)
@@ -283,10 +208,10 @@ Partial Class FrmRptCostoxKiloDetalleF6
         'LblInicioChanchilla
         '
         Me.LblInicioChanchilla.AutoSize = True
-        Me.LblInicioChanchilla.BackColor = System.Drawing.Color.Yellow
+        Me.LblInicioChanchilla.BackColor = System.Drawing.Color.Transparent
         Me.LblInicioChanchilla.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblInicioChanchilla.ForeColor = System.Drawing.Color.Black
-        Me.LblInicioChanchilla.Location = New System.Drawing.Point(905, 73)
+        Me.LblInicioChanchilla.Location = New System.Drawing.Point(203, 73)
         Me.LblInicioChanchilla.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblInicioChanchilla.Name = "LblInicioChanchilla"
         Me.LblInicioChanchilla.Size = New System.Drawing.Size(48, 13)
@@ -299,7 +224,7 @@ Partial Class FrmRptCostoxKiloDetalleF6
         Me.LblFinInseminacion.BackColor = System.Drawing.Color.Yellow
         Me.LblFinInseminacion.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblFinInseminacion.ForeColor = System.Drawing.Color.Black
-        Me.LblFinInseminacion.Location = New System.Drawing.Point(558, 103)
+        Me.LblFinInseminacion.Location = New System.Drawing.Point(558, 97)
         Me.LblFinInseminacion.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblFinInseminacion.Name = "LblFinInseminacion"
         Me.LblFinInseminacion.Size = New System.Drawing.Size(48, 13)
@@ -319,31 +244,31 @@ Partial Class FrmRptCostoxKiloDetalleF6
         Me.LblInicioInseminacion.TabIndex = 203
         Me.LblInicioInseminacion.Text = "- / - / -"
         '
-        'LblFinCampana
+        'LblFinDestete
         '
-        Me.LblFinCampana.AutoSize = True
-        Me.LblFinCampana.BackColor = System.Drawing.Color.Transparent
-        Me.LblFinCampana.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblFinCampana.ForeColor = System.Drawing.Color.Black
-        Me.LblFinCampana.Location = New System.Drawing.Point(203, 102)
-        Me.LblFinCampana.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.LblFinCampana.Name = "LblFinCampana"
-        Me.LblFinCampana.Size = New System.Drawing.Size(48, 13)
-        Me.LblFinCampana.TabIndex = 202
-        Me.LblFinCampana.Text = "- / - / -"
+        Me.LblFinDestete.AutoSize = True
+        Me.LblFinDestete.BackColor = System.Drawing.Color.Transparent
+        Me.LblFinDestete.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblFinDestete.ForeColor = System.Drawing.Color.Black
+        Me.LblFinDestete.Location = New System.Drawing.Point(856, 97)
+        Me.LblFinDestete.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblFinDestete.Name = "LblFinDestete"
+        Me.LblFinDestete.Size = New System.Drawing.Size(48, 13)
+        Me.LblFinDestete.TabIndex = 202
+        Me.LblFinDestete.Text = "- / - / -"
         '
-        'LblInicioCampana
+        'LblInicioDestete
         '
-        Me.LblInicioCampana.AutoSize = True
-        Me.LblInicioCampana.BackColor = System.Drawing.Color.Transparent
-        Me.LblInicioCampana.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblInicioCampana.ForeColor = System.Drawing.Color.Black
-        Me.LblInicioCampana.Location = New System.Drawing.Point(203, 72)
-        Me.LblInicioCampana.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.LblInicioCampana.Name = "LblInicioCampana"
-        Me.LblInicioCampana.Size = New System.Drawing.Size(48, 13)
-        Me.LblInicioCampana.TabIndex = 201
-        Me.LblInicioCampana.Text = "- / - / -"
+        Me.LblInicioDestete.AutoSize = True
+        Me.LblInicioDestete.BackColor = System.Drawing.Color.Transparent
+        Me.LblInicioDestete.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblInicioDestete.ForeColor = System.Drawing.Color.Black
+        Me.LblInicioDestete.Location = New System.Drawing.Point(856, 73)
+        Me.LblInicioDestete.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblInicioDestete.Name = "LblInicioDestete"
+        Me.LblInicioDestete.Size = New System.Drawing.Size(48, 13)
+        Me.LblInicioDestete.TabIndex = 201
+        Me.LblInicioDestete.Text = "- / - / -"
         '
         'Label9
         '
@@ -351,7 +276,7 @@ Partial Class FrmRptCostoxKiloDetalleF6
         Me.Label9.BackColor = System.Drawing.Color.Transparent
         Me.Label9.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label9.Location = New System.Drawing.Point(789, 102)
+        Me.Label9.Location = New System.Drawing.Point(87, 96)
         Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(108, 14)
@@ -364,7 +289,7 @@ Partial Class FrmRptCostoxKiloDetalleF6
         Me.Label10.BackColor = System.Drawing.Color.Transparent
         Me.Label10.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label10.Location = New System.Drawing.Point(772, 72)
+        Me.Label10.Location = New System.Drawing.Point(70, 72)
         Me.Label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(125, 14)
@@ -377,7 +302,7 @@ Partial Class FrmRptCostoxKiloDetalleF6
         Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label7.Location = New System.Drawing.Point(422, 102)
+        Me.Label7.Location = New System.Drawing.Point(422, 96)
         Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(128, 14)
@@ -403,12 +328,12 @@ Partial Class FrmRptCostoxKiloDetalleF6
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label4.Location = New System.Drawing.Point(94, 101)
+        Me.Label4.Location = New System.Drawing.Point(752, 96)
         Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(101, 14)
+        Me.Label4.Size = New System.Drawing.Size(91, 14)
         Me.Label4.TabIndex = 196
-        Me.Label4.Text = "Fin Campaña :"
+        Me.Label4.Text = "Fin Destete :"
         '
         'Label2
         '
@@ -416,12 +341,12 @@ Partial Class FrmRptCostoxKiloDetalleF6
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(77, 71)
+        Me.Label2.Location = New System.Drawing.Point(735, 72)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(118, 14)
+        Me.Label2.Size = New System.Drawing.Size(108, 14)
         Me.Label2.TabIndex = 195
-        Me.Label2.Text = "Inicio Campaña :"
+        Me.Label2.Text = "Inicio Destete :"
         '
         'LblTitle
         '
@@ -432,9 +357,9 @@ Partial Class FrmRptCostoxKiloDetalleF6
         Me.LblTitle.Location = New System.Drawing.Point(21, 20)
         Me.LblTitle.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.LblTitle.Name = "LblTitle"
-        Me.LblTitle.Size = New System.Drawing.Size(294, 18)
+        Me.LblTitle.Size = New System.Drawing.Size(405, 18)
         Me.LblTitle.TabIndex = 128
-        Me.LblTitle.Text = "Reporte detallado (LACTACIÓN)"
+        Me.LblTitle.Text = "Reporte detallado (GASTOS VETERINARIOS)"
         '
         'BarraOpciones
         '
@@ -447,7 +372,7 @@ Partial Class FrmRptCostoxKiloDetalleF6
         Me.BarraOpciones.Margin = New System.Windows.Forms.Padding(2, 1, 2, 1)
         Me.BarraOpciones.Name = "BarraOpciones"
         Me.BarraOpciones.Padding = New System.Windows.Forms.Padding(0, 0, 2, 0)
-        Me.BarraOpciones.Size = New System.Drawing.Size(1098, 38)
+        Me.BarraOpciones.Size = New System.Drawing.Size(1100, 38)
         Me.BarraOpciones.TabIndex = 52
         Me.BarraOpciones.Text = "ToolStrip1"
         '
@@ -480,7 +405,7 @@ Partial Class FrmRptCostoxKiloDetalleF6
         '
         Me.Ptbx_Cargando.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Ptbx_Cargando.Image = Global.Formularios.My.Resources.Resources.loader
-        Me.Ptbx_Cargando.Location = New System.Drawing.Point(507, 415)
+        Me.Ptbx_Cargando.Location = New System.Drawing.Point(525, 449)
         Me.Ptbx_Cargando.Name = "Ptbx_Cargando"
         Me.Ptbx_Cargando.Size = New System.Drawing.Size(43, 37)
         Me.Ptbx_Cargando.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -562,24 +487,24 @@ Partial Class FrmRptCostoxKiloDetalleF6
         Me.dtgListado.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dtgListado.Location = New System.Drawing.Point(0, 257)
         Me.dtgListado.Name = "dtgListado"
-        Me.dtgListado.Size = New System.Drawing.Size(1098, 394)
+        Me.dtgListado.Size = New System.Drawing.Size(1100, 434)
         Me.dtgListado.TabIndex = 34
         Me.dtgListado.Text = "UltraGrid1"
         '
         'BackgroundWorker1
         '
         '
-        'FrmRptCostoxKiloDetalleF6
+        'FrmRptCostoxKiloDetalleF9
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1098, 651)
+        Me.ClientSize = New System.Drawing.Size(1100, 691)
         Me.Controls.Add(Me.Ptbx_Cargando)
         Me.Controls.Add(Me.dtgListado)
         Me.Controls.Add(Me.Panel2)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
-        Me.Name = "FrmRptCostoxKiloDetalleF6"
+        Me.Name = "FrmRptCostoxKiloDetalleF9"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "REPORTE DETALLADO"
         Me.Panel2.ResumeLayout(False)
@@ -595,14 +520,17 @@ Partial Class FrmRptCostoxKiloDetalleF6
     Friend WithEvents Panel2 As Panel
     Friend WithEvents LblTotal As Label
     Friend WithEvents Label11 As Label
-    Friend WithEvents LblLotesInvolucrados As Label
+    Friend WithEvents Label6 As Label
+    Friend WithEvents LblCostoVeteBruto As Label
+    Friend WithEvents LblNumLechones As Label
+    Friend WithEvents Label3 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents LblFinChanchilla As Label
     Friend WithEvents LblInicioChanchilla As Label
     Friend WithEvents LblFinInseminacion As Label
     Friend WithEvents LblInicioInseminacion As Label
-    Friend WithEvents LblFinCampana As Label
-    Friend WithEvents LblInicioCampana As Label
+    Friend WithEvents LblFinDestete As Label
+    Friend WithEvents LblInicioDestete As Label
     Friend WithEvents Label9 As Label
     Friend WithEvents Label10 As Label
     Friend WithEvents Label7 As Label
@@ -616,12 +544,4 @@ Partial Class FrmRptCostoxKiloDetalleF6
     Friend WithEvents Ptbx_Cargando As PictureBox
     Friend WithEvents dtgListado As Infragistics.Win.UltraWinGrid.UltraGrid
     Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
-    Friend WithEvents LblTotalLacta As Label
-    Friend WithEvents Label5 As Label
-    Friend WithEvents LblTotalGlobal As Label
-    Friend WithEvents Label15 As Label
-    Friend WithEvents LblTotalDestetados As Label
-    Friend WithEvents Label13 As Label
-    Friend WithEvents LblPrecioKiloPromedio As Label
-    Friend WithEvents Label12 As Label
 End Class
