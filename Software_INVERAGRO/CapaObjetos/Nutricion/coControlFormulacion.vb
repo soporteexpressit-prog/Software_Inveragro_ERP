@@ -33,6 +33,7 @@
     Private _IdPeriodoPlus As Integer
     Private _Anio As Integer
     Private _IdCampaña As Integer
+    Private _EdadIngreso As Integer
 
     Public Property Codigo As Integer
         Get
@@ -328,6 +329,15 @@
         End Get
         Set(value As Integer)
             _IdCampaña = value
+        End Set
+    End Property
+
+    Public Property EdadIngreso As Integer
+        Get
+            Return _EdadIngreso
+        End Get
+        Set(value As Integer)
+            _EdadIngreso = value
         End Set
     End Property
 End Class

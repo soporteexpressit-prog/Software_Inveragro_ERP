@@ -607,6 +607,7 @@ Public Class cdControlFormulacion
                 .AddWithValue("@idCampaña", SqlDbType.Int).Value = obj.IdCampaña
                 .AddWithValue("@descripcion", SqlDbType.VarChar).Value = obj.Descripcion
                 .AddWithValue("@nota", SqlDbType.VarChar).Value = obj.Motivo
+                .AddWithValue("@edadIngreso", SqlDbType.Int).Value = obj.EdadIngreso
                 .AddWithValue("@idUsuario", SqlDbType.Int).Value = obj.Iduser
                 .AddWithValue("@estado", SqlDbType.VarChar).Value = obj.Estado
                 .AddWithValue("@listaDetProgAlimentacion", SqlDbType.VarChar).Value = obj.ListaAsignacionRacion

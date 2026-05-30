@@ -123,7 +123,7 @@ Public Class FrmProgramaAlimentacion
 
     Sub Colorear()
         If (dtgListado.Rows.Count > 0) Then
-            Dim estado As Integer = 8
+            Dim estado As Integer = 9
 
             'estado
             clsBasicas.Colorear_SegunValor(dtgListado, Color.Red, Color.White, "INACTIVO", estado)

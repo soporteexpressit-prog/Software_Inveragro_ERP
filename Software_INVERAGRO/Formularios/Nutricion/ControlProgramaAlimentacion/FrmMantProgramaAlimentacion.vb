@@ -84,6 +84,7 @@ Public Class FrmMantProgramaAlimentacion
                 CmbAnios.Text = ds.Tables(0).Rows(0)("anio").ToString
                 CmbUbicacion.Value = ds.Tables(0).Rows(0)("idPlantel")
                 CmbCampaña.Value = ds.Tables(0).Rows(0)("idCampaña")
+                NumEdadIngreso.Value = ds.Tables(0).Rows(0)("edadIngreso")
             End If
 
             If (ds.Tables(1).Rows.Count > 0) Then
@@ -354,6 +355,7 @@ Public Class FrmMantProgramaAlimentacion
                     .IdCampaña = CmbCampaña.Value,
                     .Descripcion = "PROGRAMA DE ALIMENTACIÓN - " & CmbUbicacion.Text,
                     .Motivo = TxtMotivo.Text,
+                    .EdadIngreso = NumEdadIngreso.Value,
                     .Iduser = VP_IdUser,
                     .ListaAsignacionRacion = CreacionArrayProgramaAlimentacion(),
                     .Estado = CmbEstado.Text
