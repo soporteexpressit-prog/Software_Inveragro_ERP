@@ -247,7 +247,7 @@ Partial Class FrmRptCostoxKiloDetalleF9
         'LblFinDestete
         '
         Me.LblFinDestete.AutoSize = True
-        Me.LblFinDestete.BackColor = System.Drawing.Color.Transparent
+        Me.LblFinDestete.BackColor = System.Drawing.Color.Yellow
         Me.LblFinDestete.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblFinDestete.ForeColor = System.Drawing.Color.Black
         Me.LblFinDestete.Location = New System.Drawing.Point(856, 97)
