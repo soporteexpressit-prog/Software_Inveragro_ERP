@@ -78,6 +78,13 @@ Public Class FrmReporteCostoxKiloCerdo
         ListarCampañas()
     End Sub
 
+    Private Sub BtnGenerar1_Click(sender As Object, e As EventArgs) Handles BtnGenerar1.Click
+        If CmbCampaña Is Nothing OrElse String.IsNullOrEmpty(CmbCampaña.Text) Then
+            Return
+        End If
+        ConsultarReproduccion()
+    End Sub
+
     Private Sub BloquearControladores1()
         Ptbx_Cargando1.Visible = True
         BarraOpciones1.Enabled = False
@@ -132,13 +139,6 @@ Public Class FrmReporteCostoxKiloCerdo
         End If
     End Sub
 
-    Private Sub BtnGenerar1_Click(sender As Object, e As EventArgs) Handles BtnGenerar1.Click
-        If CmbCampaña Is Nothing OrElse String.IsNullOrEmpty(CmbCampaña.Text) Then
-            Return
-        End If
-        ConsultarReproduccion()
-    End Sub
-
     Private Sub dtgListado1_InitializeRow(sender As Object, e As Infragistics.Win.UltraWinGrid.InitializeRowEventArgs) Handles dtgListado1.InitializeRow
         If e.Row.Band.Index = 0 Then
             Dim colVerPDF As Infragistics.Win.UltraWinGrid.UltraGridColumn
@@ -146,6 +146,10 @@ Public Class FrmReporteCostoxKiloCerdo
                 colVerPDF = dtgListado1.DisplayLayout.Bands(0).Columns("[+]")
                 colVerPDF.Style = Infragistics.Win.UltraWinGrid.ColumnStyle.Button
                 colVerPDF.ButtonDisplayStyle = Infragistics.Win.UltraWinGrid.ButtonDisplayStyle.Always
+                'colVerPDF.Width = 50
+                'colVerPDF.MinWidth = 50
+                'colVerPDF.MaxWidth = 50
+
                 If Not e.ReInitialize Then
                     e.Row.Cells("[+]").Value = "[+]"
                     e.Row.Cells("[+]").Appearance.TextHAlign = Infragistics.Win.HAlign.Center
@@ -196,6 +200,13 @@ Public Class FrmReporteCostoxKiloCerdo
         Catch ex As Exception
             clsBasicas.controlException(Name, ex)
         End Try
+    End Sub
+
+    Private Sub BtnGenerar2_Click(sender As Object, e As EventArgs) Handles BtnGenerar2.Click
+        If CmbCampaña Is Nothing OrElse String.IsNullOrEmpty(CmbCampaña.Text) Then
+            Return
+        End If
+        ConsultarMaternidad()
     End Sub
 
     Private Sub BloquearControladores2()
@@ -250,13 +261,6 @@ Public Class FrmReporteCostoxKiloCerdo
         End If
     End Sub
 
-    Private Sub BtnGenerar2_Click(sender As Object, e As EventArgs) Handles BtnGenerar2.Click
-        If CmbCampaña Is Nothing OrElse String.IsNullOrEmpty(CmbCampaña.Text) Then
-            Return
-        End If
-        ConsultarMaternidad()
-    End Sub
-
     Private Sub dtgListado2_InitializeRow(sender As Object, e As Infragistics.Win.UltraWinGrid.InitializeRowEventArgs) Handles dtgListado2.InitializeRow
         If e.Row.Band.Index = 0 Then
             Dim colVerPDF As Infragistics.Win.UltraWinGrid.UltraGridColumn
@@ -304,6 +308,112 @@ Public Class FrmReporteCostoxKiloCerdo
                         frm.ShowDialog()
                     ElseIf idDetalleVal = "RP16" Then
                         Dim frm As New FrmRptCostoxKiloDetalleF10 With {
+                            .idDetalle = idDetalleVal,
+                            .idCampaña = CmbCampaña.Value
+                        }
+                        frm.ShowDialog()
+                    End If
+                End If
+            End With
+        Catch ex As Exception
+            clsBasicas.controlException(Name, ex)
+        End Try
+    End Sub
+
+    Private Sub BtnGenerar3_Click(sender As Object, e As EventArgs) Handles BtnGenerar3.Click
+        If CmbCampaña Is Nothing OrElse String.IsNullOrEmpty(CmbCampaña.Text) Then
+            Return
+        End If
+        ConsultarRecria()
+    End Sub
+
+    Private Sub BloquearControladores3()
+        Ptbx_Cargando3.Visible = True
+        BarraOpciones3.Enabled = False
+    End Sub
+
+    Private Sub DesbloquearControladores3()
+        Ptbx_Cargando3.Visible = False
+        BarraOpciones3.Enabled = True
+    End Sub
+
+    Sub ConsultarRecria()
+        If Not BackgroundWorker3.IsBusy Then
+            BloquearControladores3()
+
+            Dim obj As New coControlAnimal With {
+                .IdCampaña = CmbCampaña.Value
+            }
+
+            BackgroundWorker3.RunWorkerAsync(obj)
+        End If
+    End Sub
+
+    Private Sub BackgroundWorker3_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorker3.DoWork
+        Try
+            Dim obj As coControlAnimal = CType(e.Argument, coControlAnimal)
+            ds = cn.Cn_CostoxKiloLechonRecria(obj).Copy
+            e.Result = ds
+        Catch ex As Exception
+            e.Cancel = True
+        End Try
+    End Sub
+
+    Private Sub BackgroundWorker3_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BackgroundWorker3.RunWorkerCompleted
+        DesbloquearControladores3()
+        If e.Error IsNot Nothing OrElse e.Cancelled Then
+            msj_advert("Error al Cargar los Datos")
+        Else
+            Dim dsResult As DataSet = CType(e.Result, DataSet)
+            Dim dtResult As DataTable = dsResult.Tables(0)
+
+            LblInicioCampana3.Text = If(IsDBNull(dtResult.Rows(0)("Campaña_Inicio")), "- / - / -", Convert.ToDateTime(dtResult.Rows(0)("Campaña_Inicio")).ToString("dd/MM/yyyy"))
+            LblFinCampana3.Text = If(IsDBNull(dtResult.Rows(0)("Campaña_Fin")), "- / - / -", Convert.ToDateTime(dtResult.Rows(0)("Campaña_Fin")).ToString("dd/MM/yyyy"))
+            LblInicioInseminacion3.Text = If(IsDBNull(dtResult.Rows(0)("Monta_Inicio")), "- / - / -", Convert.ToDateTime(dtResult.Rows(0)("Monta_Inicio")).ToString("dd/MM/yyyy"))
+            LblFinInseminacion3.Text = If(IsDBNull(dtResult.Rows(0)("Monta_Fin")), "- / - / -", Convert.ToDateTime(dtResult.Rows(0)("Monta_Fin")).ToString("dd/MM/yyyy"))
+            LblInicioChanchilla3.Text = If(IsDBNull(dtResult.Rows(0)("Chanchilla_Inicio")), "- / - / -", Convert.ToDateTime(dtResult.Rows(0)("Chanchilla_Inicio")).ToString("dd/MM/yyyy"))
+            LblFinChanchilla3.Text = If(IsDBNull(dtResult.Rows(0)("Chanchilla_Fin")), "- / - / -", Convert.ToDateTime(dtResult.Rows(0)("Chanchilla_Fin")).ToString("dd/MM/yyyy"))
+            LblLotesInvolucrados3.Text = If(IsDBNull(dtResult.Rows(0)("LotesInvolucrados")), "- / - / -", dtResult.Rows(0)("LotesInvolucrados").ToString().Replace(",", Environment.NewLine))
+
+            dtgListado3.DataSource = dsResult.Tables(1)
+        End If
+    End Sub
+
+    Private Sub dtgListado3_InitializeRow(sender As Object, e As Infragistics.Win.UltraWinGrid.InitializeRowEventArgs) Handles dtgListado3.InitializeRow
+        If e.Row.Band.Index = 0 Then
+            Dim colVerPDF As Infragistics.Win.UltraWinGrid.UltraGridColumn
+            If dtgListado3.DisplayLayout.Bands(0).Columns.Exists("[+]") Then
+                colVerPDF = dtgListado3.DisplayLayout.Bands(0).Columns("[+]")
+                colVerPDF.Style = Infragistics.Win.UltraWinGrid.ColumnStyle.Button
+                colVerPDF.ButtonDisplayStyle = Infragistics.Win.UltraWinGrid.ButtonDisplayStyle.Always
+                If Not e.ReInitialize Then
+                    e.Row.Cells("[+]").Value = "[+]"
+                    e.Row.Cells("[+]").Appearance.TextHAlign = Infragistics.Win.HAlign.Center
+                End If
+            End If
+        End If
+    End Sub
+
+    Private Sub dtgListado3_ClickCellButton(sender As Object, e As Infragistics.Win.UltraWinGrid.CellEventArgs) Handles dtgListado3.ClickCellButton
+        Try
+            With dtgListado3
+                If (e.Cell.Column.Key = "[+]") Then
+                    Dim idDetalleVal As String = .ActiveRow.Cells("Id").Value.ToString()
+
+                    If idDetalleVal = "RP18" Then
+                        Dim frm As New FrmRptCostoxKiloDetalleF6 With {
+                            .idDetalle = idDetalleVal,
+                            .idCampaña = CmbCampaña.Value
+                        }
+                        frm.ShowDialog()
+                    ElseIf idDetalleVal = "RP19" Then
+                        Dim frm As New FrmRptCostoxKiloDetalleF7 With {
+                            .idDetalle = idDetalleVal,
+                            .idCampaña = CmbCampaña.Value
+                        }
+                        frm.ShowDialog()
+                    ElseIf idDetalleVal = "RP20" Then
+                        Dim frm As New FrmRptCostoxKiloDetalleF8 With {
                             .idDetalle = idDetalleVal,
                             .idCampaña = CmbCampaña.Value
                         }
