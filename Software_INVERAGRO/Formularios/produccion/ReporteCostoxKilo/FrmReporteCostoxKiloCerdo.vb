@@ -401,7 +401,7 @@ Public Class FrmReporteCostoxKiloCerdo
                     Dim idDetalleVal As String = .ActiveRow.Cells("Id").Value.ToString()
 
                     If idDetalleVal = "RP18" Then
-                        Dim frm As New FrmRptCostoxKiloDetalleF6 With {
+                        Dim frm As New FrmRptCostoxKiloDetalleF11 With {
                             .idDetalle = idDetalleVal,
                             .idCampaña = CmbCampaña.Value
                         }
