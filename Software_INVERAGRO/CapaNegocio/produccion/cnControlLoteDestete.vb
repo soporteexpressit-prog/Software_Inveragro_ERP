@@ -330,6 +330,10 @@ Public Class cnControlLoteDestete
         Return cls_at.Cd_ConsultarxAnioMesSemDt("[w_pa_reporte_mermas]", obj)
     End Function
 
+    Public Function Cn_ReporteMermasconsolidado(ByRef obj As coControlLoteDestete) As DataTable
+        Return cls_at.Cd_ConsultarxAnioMesMermas("[i_pa_reporte_mermas_consolidado]", obj)
+    End Function
+
     Public Function Cn_ReportePesosxDespacho(ByRef obj As coControlLoteDestete) As DataTable
         Return cls_at.Cd_ConsultarxIdDespacho("[w_pa_pesos_x_despacho_granja]", obj)
     End Function

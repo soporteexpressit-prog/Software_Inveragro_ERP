@@ -76,6 +76,7 @@ Partial Class FrmControlPedidosVentasCerdos
         Me.btnventaoirrecuperablespedidocerdoventas = New System.Windows.Forms.ToolStripMenuItem()
         Me.PesosGanchosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.VentasCobrosPorClienteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ReporteVentasDetalladoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.btnanulacionesdisponibles = New System.Windows.Forms.ToolStripDropDownButton()
         Me.AnularAjusteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem4 = New System.Windows.Forms.ToolStripMenuItem()
@@ -100,7 +101,6 @@ Partial Class FrmControlPedidosVentasCerdos
         Me.dtgListado = New Infragistics.Win.UltraWinGrid.UltraGrid()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         Me.Ptbx_Cargando = New System.Windows.Forms.PictureBox()
-        Me.ReporteVentasDetalladoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.UltraGroupBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -488,6 +488,12 @@ Partial Class FrmControlPedidosVentasCerdos
         Me.VentasCobrosPorClienteToolStripMenuItem.Size = New System.Drawing.Size(301, 22)
         Me.VentasCobrosPorClienteToolStripMenuItem.Text = "Ventas / Cobros por Cliente"
         '
+        'ReporteVentasDetalladoToolStripMenuItem
+        '
+        Me.ReporteVentasDetalladoToolStripMenuItem.Name = "ReporteVentasDetalladoToolStripMenuItem"
+        Me.ReporteVentasDetalladoToolStripMenuItem.Size = New System.Drawing.Size(301, 22)
+        Me.ReporteVentasDetalladoToolStripMenuItem.Text = "Reporte Ventas Detallado"
+        '
         'btnanulacionesdisponibles
         '
         Me.btnanulacionesdisponibles.BackColor = System.Drawing.Color.Transparent
@@ -739,12 +745,6 @@ Partial Class FrmControlPedidosVentasCerdos
         Me.Ptbx_Cargando.TabIndex = 9
         Me.Ptbx_Cargando.TabStop = False
         Me.Ptbx_Cargando.Visible = False
-        '
-        'ReporteVentasDetalladoToolStripMenuItem
-        '
-        Me.ReporteVentasDetalladoToolStripMenuItem.Name = "ReporteVentasDetalladoToolStripMenuItem"
-        Me.ReporteVentasDetalladoToolStripMenuItem.Size = New System.Drawing.Size(301, 22)
-        Me.ReporteVentasDetalladoToolStripMenuItem.Text = "Reporte Ventas Detallado"
         '
         'FrmControlPedidosVentasCerdos
         '

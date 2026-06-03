@@ -4099,6 +4099,12 @@
     <Compile Include="Ventas\FrmReporteDespachoCerdoGranja.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Ventas\FrmReporteMermasConsolidado.Designer.vb">
+      <DependentUpon>FrmReporteMermasConsolidado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ventas\FrmReporteMermasConsolidado.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ventas\FrmReportePesosVendedor.Designer.vb">
       <DependentUpon>FrmReportePesosVendedor.vb</DependentUpon>
     </Compile>
@@ -5680,6 +5686,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ventas\FrmReporteDespachoCerdoGranja.resx">
       <DependentUpon>FrmReporteDespachoCerdoGranja.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventas\FrmReporteMermasConsolidado.resx">
+      <DependentUpon>FrmReporteMermasConsolidado.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventas\FrmReportePesosVendedor.resx">
       <DependentUpon>FrmReportePesosVendedor.vb</DependentUpon>

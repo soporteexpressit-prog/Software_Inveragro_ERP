@@ -180,4 +180,13 @@ Public Class FrmReporteMermas
     Private Sub btnCerrar_Click(sender As Object, e As EventArgs)
         Dispose()
     End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Try
+            Dim frm As New FrmReporteMermasConsolidado
+            frm.ShowDialog()
+        Catch ex As Exception
+            clsBasicas.controlException(Name, ex)
+        End Try
+    End Sub
 End Class
