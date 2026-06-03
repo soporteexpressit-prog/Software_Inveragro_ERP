@@ -106,6 +106,8 @@ Partial Class FrmMantProgramaAlimentacion
         Me.BtnCerrar = New System.Windows.Forms.ToolStripButton()
         Me.CmbEstado = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.NumEdadIngreso = New System.Windows.Forms.NumericUpDown()
         Me.Panel2.SuspendLayout()
         CType(Me.CmbCampaña, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CmbUbicacion, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -116,11 +118,14 @@ Partial Class FrmMantProgramaAlimentacion
         Me.GroupBox2.SuspendLayout()
         CType(Me.DtgDetalleProgramaAlimentacion, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ToolStrip1.SuspendLayout()
+        CType(Me.NumEdadIngreso, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.Panel2.Controls.Add(Me.NumEdadIngreso)
+        Me.Panel2.Controls.Add(Me.Label11)
         Me.Panel2.Controls.Add(Me.CmbCampaña)
         Me.Panel2.Controls.Add(Me.Label4)
         Me.Panel2.Controls.Add(Me.CmbAnios)
@@ -137,7 +142,7 @@ Partial Class FrmMantProgramaAlimentacion
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
         Me.Panel2.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(715, 553)
+        Me.Panel2.Size = New System.Drawing.Size(715, 603)
         Me.Panel2.TabIndex = 13
         '
         'CmbCampaña
@@ -355,7 +360,7 @@ Partial Class FrmMantProgramaAlimentacion
         Me.GroupBox1.Controls.Add(Me.BtnBuscarRacion)
         Me.GroupBox1.Controls.Add(Me.TxtRacion)
         Me.GroupBox1.Controls.Add(Me.Label10)
-        Me.GroupBox1.Location = New System.Drawing.Point(13, 151)
+        Me.GroupBox1.Location = New System.Drawing.Point(13, 196)
         Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2)
@@ -744,11 +749,33 @@ Partial Class FrmMantProgramaAlimentacion
         Me.Label1.TabIndex = 197
         Me.Label1.Text = "Estado  :"
         '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.BackColor = System.Drawing.Color.Transparent
+        Me.Label11.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.Label11.Location = New System.Drawing.Point(430, 160)
+        Me.Label11.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(123, 14)
+        Me.Label11.TabIndex = 210
+        Me.Label11.Text = "Edad de Ingreso :"
+        '
+        'NumEdadIngreso
+        '
+        Me.NumEdadIngreso.Location = New System.Drawing.Point(558, 157)
+        Me.NumEdadIngreso.Margin = New System.Windows.Forms.Padding(2)
+        Me.NumEdadIngreso.Maximum = New Decimal(New Integer() {500, 0, 0, 0})
+        Me.NumEdadIngreso.Name = "NumEdadIngreso"
+        Me.NumEdadIngreso.Size = New System.Drawing.Size(70, 20)
+        Me.NumEdadIngreso.TabIndex = 228
+        '
         'FrmMantProgramaAlimentacion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(715, 553)
+        Me.ClientSize = New System.Drawing.Size(715, 603)
         Me.Controls.Add(Me.Panel2)
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.MaximizeBox = False
@@ -769,6 +796,7 @@ Partial Class FrmMantProgramaAlimentacion
         CType(Me.DtgDetalleProgramaAlimentacion, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()
+        CType(Me.NumEdadIngreso, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -805,4 +833,6 @@ Partial Class FrmMantProgramaAlimentacion
     Friend WithEvents Label4 As Label
     Friend WithEvents CmbAnios As ComboBox
     Friend WithEvents Label8 As Label
+    Friend WithEvents NumEdadIngreso As NumericUpDown
+    Friend WithEvents Label11 As Label
 End Class

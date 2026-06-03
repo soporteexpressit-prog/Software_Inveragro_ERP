@@ -291,7 +291,7 @@ Partial Class FrmRptCostoxKiloDetalleF2
         Me.LblFinChanchilla.BackColor = System.Drawing.Color.Transparent
         Me.LblFinChanchilla.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblFinChanchilla.ForeColor = System.Drawing.Color.Black
-        Me.LblFinChanchilla.Location = New System.Drawing.Point(905, 97)
+        Me.LblFinChanchilla.Location = New System.Drawing.Point(558, 96)
         Me.LblFinChanchilla.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblFinChanchilla.Name = "LblFinChanchilla"
         Me.LblFinChanchilla.Size = New System.Drawing.Size(48, 13)
@@ -304,7 +304,7 @@ Partial Class FrmRptCostoxKiloDetalleF2
         Me.LblInicioChanchilla.BackColor = System.Drawing.Color.Yellow
         Me.LblInicioChanchilla.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblInicioChanchilla.ForeColor = System.Drawing.Color.Black
-        Me.LblInicioChanchilla.Location = New System.Drawing.Point(905, 73)
+        Me.LblInicioChanchilla.Location = New System.Drawing.Point(558, 72)
         Me.LblInicioChanchilla.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblInicioChanchilla.Name = "LblInicioChanchilla"
         Me.LblInicioChanchilla.Size = New System.Drawing.Size(48, 13)
@@ -317,7 +317,7 @@ Partial Class FrmRptCostoxKiloDetalleF2
         Me.LblFinInseminacion.BackColor = System.Drawing.Color.Yellow
         Me.LblFinInseminacion.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblFinInseminacion.ForeColor = System.Drawing.Color.Black
-        Me.LblFinInseminacion.Location = New System.Drawing.Point(558, 97)
+        Me.LblFinInseminacion.Location = New System.Drawing.Point(880, 96)
         Me.LblFinInseminacion.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblFinInseminacion.Name = "LblFinInseminacion"
         Me.LblFinInseminacion.Size = New System.Drawing.Size(48, 13)
@@ -330,7 +330,7 @@ Partial Class FrmRptCostoxKiloDetalleF2
         Me.LblInicioInseminacion.BackColor = System.Drawing.Color.Transparent
         Me.LblInicioInseminacion.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblInicioInseminacion.ForeColor = System.Drawing.Color.Black
-        Me.LblInicioInseminacion.Location = New System.Drawing.Point(558, 73)
+        Me.LblInicioInseminacion.Location = New System.Drawing.Point(880, 72)
         Me.LblInicioInseminacion.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblInicioInseminacion.Name = "LblInicioInseminacion"
         Me.LblInicioInseminacion.Size = New System.Drawing.Size(48, 13)
@@ -369,7 +369,7 @@ Partial Class FrmRptCostoxKiloDetalleF2
         Me.Label9.BackColor = System.Drawing.Color.Transparent
         Me.Label9.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label9.Location = New System.Drawing.Point(789, 96)
+        Me.Label9.Location = New System.Drawing.Point(442, 95)
         Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(108, 14)
@@ -382,7 +382,7 @@ Partial Class FrmRptCostoxKiloDetalleF2
         Me.Label10.BackColor = System.Drawing.Color.Transparent
         Me.Label10.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label10.Location = New System.Drawing.Point(772, 72)
+        Me.Label10.Location = New System.Drawing.Point(425, 71)
         Me.Label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(125, 14)
@@ -395,7 +395,7 @@ Partial Class FrmRptCostoxKiloDetalleF2
         Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label7.Location = New System.Drawing.Point(422, 96)
+        Me.Label7.Location = New System.Drawing.Point(744, 95)
         Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(128, 14)
@@ -408,7 +408,7 @@ Partial Class FrmRptCostoxKiloDetalleF2
         Me.Label8.BackColor = System.Drawing.Color.Transparent
         Me.Label8.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label8.Location = New System.Drawing.Point(405, 72)
+        Me.Label8.Location = New System.Drawing.Point(727, 71)
         Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(145, 14)
