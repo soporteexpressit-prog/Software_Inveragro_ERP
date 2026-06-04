@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class FrmReporteMermas
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+Partial Class FrmReporteMermasConsolidado
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()>
+    <System.Diagnostics.DebuggerNonUserCode()> _
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,9 +20,9 @@ Partial Class FrmReporteMermas
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()>
+    <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmReporteMermas))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmReporteMermasConsolidado))
         Dim Appearance1 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance2 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance3 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
@@ -38,65 +38,94 @@ Partial Class FrmReporteMermas
         Dim Appearance13 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance14 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance15 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Ptbx_Cargando = New System.Windows.Forms.PictureBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.BtnBusqueda = New System.Windows.Forms.Button()
-        Me.LblAnio = New System.Windows.Forms.Label()
-        Me.CkbOmitirSemana = New System.Windows.Forms.CheckBox()
-        Me.CmbAnios = New System.Windows.Forms.ComboBox()
-        Me.CkbOmitirMes = New System.Windows.Forms.CheckBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.CmbMeses = New System.Windows.Forms.ComboBox()
-        Me.CmbSemanas = New System.Windows.Forms.ComboBox()
-        Me.LblDiaPic = New System.Windows.Forms.Label()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.BtnExportarhistoricomortalidad = New System.Windows.Forms.ToolStripButton()
         Me.BtnCerrar = New System.Windows.Forms.ToolStripButton()
-        Me.Ptbx_Cargando = New System.Windows.Forms.PictureBox()
+        Me.BtnBusqueda = New System.Windows.Forms.Button()
+        Me.LblAnio = New System.Windows.Forms.Label()
+        Me.CmbAnios = New System.Windows.Forms.ComboBox()
+        Me.CkbOmitirMes = New System.Windows.Forms.CheckBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.CmbMeses = New System.Windows.Forms.ComboBox()
         Me.dtgListado = New Infragistics.Win.UltraWinGrid.UltraGrid()
-        Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Panel1.SuspendLayout()
+        CType(Me.Ptbx_Cargando, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
-        CType(Me.Ptbx_Cargando, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dtgListado, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'Panel1
+        'Ptbx_Cargando
         '
-        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(233, Byte), Integer))
-        Me.Panel1.Controls.Add(Me.Button1)
-        Me.Panel1.Controls.Add(Me.GroupBox1)
-        Me.Panel1.Controls.Add(Me.LblDiaPic)
-        Me.Panel1.Controls.Add(Me.ToolStrip1)
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(2, 1, 2, 1)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1047, 191)
-        Me.Panel1.TabIndex = 19
+        Me.Ptbx_Cargando.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Ptbx_Cargando.Image = Global.Formularios.My.Resources.Resources.loader
+        Me.Ptbx_Cargando.Location = New System.Drawing.Point(523, 340)
+        Me.Ptbx_Cargando.Name = "Ptbx_Cargando"
+        Me.Ptbx_Cargando.Size = New System.Drawing.Size(43, 37)
+        Me.Ptbx_Cargando.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.Ptbx_Cargando.TabIndex = 273
+        Me.Ptbx_Cargando.TabStop = False
+        Me.Ptbx_Cargando.Visible = False
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.ToolStrip1)
         Me.GroupBox1.Controls.Add(Me.BtnBusqueda)
         Me.GroupBox1.Controls.Add(Me.LblAnio)
-        Me.GroupBox1.Controls.Add(Me.CkbOmitirSemana)
         Me.GroupBox1.Controls.Add(Me.CmbAnios)
         Me.GroupBox1.Controls.Add(Me.CkbOmitirMes)
-        Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.CmbMeses)
-        Me.GroupBox1.Controls.Add(Me.CmbSemanas)
-        Me.GroupBox1.Location = New System.Drawing.Point(29, 60)
+        Me.GroupBox1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.GroupBox1.Location = New System.Drawing.Point(0, 0)
         Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2)
-        Me.GroupBox1.Size = New System.Drawing.Size(791, 83)
-        Me.GroupBox1.TabIndex = 270
+        Me.GroupBox1.Size = New System.Drawing.Size(1096, 135)
+        Me.GroupBox1.TabIndex = 274
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Filtros de Búsqueda"
+        '
+        'ToolStrip1
+        '
+        Me.ToolStrip1.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.ToolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.ToolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
+        Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnExportarhistoricomortalidad, Me.BtnCerrar})
+        Me.ToolStrip1.Location = New System.Drawing.Point(2, 95)
+        Me.ToolStrip1.Margin = New System.Windows.Forms.Padding(2, 1, 2, 1)
+        Me.ToolStrip1.Name = "ToolStrip1"
+        Me.ToolStrip1.Padding = New System.Windows.Forms.Padding(0, 0, 2, 0)
+        Me.ToolStrip1.Size = New System.Drawing.Size(1092, 38)
+        Me.ToolStrip1.TabIndex = 273
+        Me.ToolStrip1.Text = "Monitoreo"
+        '
+        'BtnExportarhistoricomortalidad
+        '
+        Me.BtnExportarhistoricomortalidad.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnExportarhistoricomortalidad.ForeColor = System.Drawing.Color.White
+        Me.BtnExportarhistoricomortalidad.Image = Global.Formularios.My.Resources.Resources.exportar2
+        Me.BtnExportarhistoricomortalidad.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BtnExportarhistoricomortalidad.Margin = New System.Windows.Forms.Padding(5)
+        Me.BtnExportarhistoricomortalidad.Name = "BtnExportarhistoricomortalidad"
+        Me.BtnExportarhistoricomortalidad.Padding = New System.Windows.Forms.Padding(2)
+        Me.BtnExportarhistoricomortalidad.Size = New System.Drawing.Size(92, 28)
+        Me.BtnExportarhistoricomortalidad.Text = "Exportar"
+        Me.BtnExportarhistoricomortalidad.ToolTipText = "Exportar"
+        '
+        'BtnCerrar
+        '
+        Me.BtnCerrar.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnCerrar.ForeColor = System.Drawing.Color.White
+        Me.BtnCerrar.Image = Global.Formularios.My.Resources.Resources.salir
+        Me.BtnCerrar.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BtnCerrar.Margin = New System.Windows.Forms.Padding(5)
+        Me.BtnCerrar.Name = "BtnCerrar"
+        Me.BtnCerrar.Padding = New System.Windows.Forms.Padding(2)
+        Me.BtnCerrar.Size = New System.Drawing.Size(66, 28)
+        Me.BtnCerrar.Text = "Salir"
         '
         'BtnBusqueda
         '
@@ -126,17 +155,6 @@ Partial Class FrmReporteMermas
         Me.LblAnio.TabIndex = 248
         Me.LblAnio.Text = "Año :"
         '
-        'CkbOmitirSemana
-        '
-        Me.CkbOmitirSemana.AutoSize = True
-        Me.CkbOmitirSemana.Location = New System.Drawing.Point(551, 53)
-        Me.CkbOmitirSemana.Margin = New System.Windows.Forms.Padding(2)
-        Me.CkbOmitirSemana.Name = "CkbOmitirSemana"
-        Me.CkbOmitirSemana.Size = New System.Drawing.Size(52, 17)
-        Me.CkbOmitirSemana.TabIndex = 269
-        Me.CkbOmitirSemana.Text = "Omitir"
-        Me.CkbOmitirSemana.UseVisualStyleBackColor = True
-        '
         'CmbAnios
         '
         Me.CmbAnios.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -157,19 +175,6 @@ Partial Class FrmReporteMermas
         Me.CkbOmitirMes.TabIndex = 268
         Me.CkbOmitirMes.Text = "Omitir"
         Me.CkbOmitirMes.UseVisualStyleBackColor = True
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(424, 29)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(69, 14)
-        Me.Label2.TabIndex = 266
-        Me.Label2.Text = "Semana :"
         '
         'Label1
         '
@@ -193,81 +198,6 @@ Partial Class FrmReporteMermas
         Me.CmbMeses.Name = "CmbMeses"
         Me.CmbMeses.Size = New System.Drawing.Size(107, 24)
         Me.CmbMeses.TabIndex = 265
-        '
-        'CmbSemanas
-        '
-        Me.CmbSemanas.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CmbSemanas.FormattingEnabled = True
-        Me.CmbSemanas.Location = New System.Drawing.Point(499, 26)
-        Me.CmbSemanas.Margin = New System.Windows.Forms.Padding(2)
-        Me.CmbSemanas.Name = "CmbSemanas"
-        Me.CmbSemanas.Size = New System.Drawing.Size(103, 24)
-        Me.CmbSemanas.TabIndex = 267
-        '
-        'LblDiaPic
-        '
-        Me.LblDiaPic.AutoSize = True
-        Me.LblDiaPic.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.LblDiaPic.Font = New System.Drawing.Font("Verdana", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblDiaPic.ForeColor = System.Drawing.Color.Green
-        Me.LblDiaPic.Location = New System.Drawing.Point(25, 27)
-        Me.LblDiaPic.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.LblDiaPic.Name = "LblDiaPic"
-        Me.LblDiaPic.Size = New System.Drawing.Size(85, 18)
-        Me.LblDiaPic.TabIndex = 250
-        Me.LblDiaPic.Text = "MERMAS"
-        '
-        'ToolStrip1
-        '
-        Me.ToolStrip1.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.ToolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.ToolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
-        Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnExportarhistoricomortalidad, Me.BtnCerrar})
-        Me.ToolStrip1.Location = New System.Drawing.Point(0, 153)
-        Me.ToolStrip1.Margin = New System.Windows.Forms.Padding(2, 1, 2, 1)
-        Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Padding = New System.Windows.Forms.Padding(0, 0, 2, 0)
-        Me.ToolStrip1.Size = New System.Drawing.Size(1047, 38)
-        Me.ToolStrip1.TabIndex = 52
-        Me.ToolStrip1.Text = "Monitoreo"
-        '
-        'BtnExportarhistoricomortalidad
-        '
-        Me.BtnExportarhistoricomortalidad.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnExportarhistoricomortalidad.ForeColor = System.Drawing.Color.White
-        Me.BtnExportarhistoricomortalidad.Image = Global.Formularios.My.Resources.Resources.exportar2
-        Me.BtnExportarhistoricomortalidad.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.BtnExportarhistoricomortalidad.Margin = New System.Windows.Forms.Padding(5)
-        Me.BtnExportarhistoricomortalidad.Name = "BtnExportarhistoricomortalidad"
-        Me.BtnExportarhistoricomortalidad.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnExportarhistoricomortalidad.Size = New System.Drawing.Size(92, 28)
-        Me.BtnExportarhistoricomortalidad.Text = "Exportar"
-        Me.BtnExportarhistoricomortalidad.ToolTipText = "Exportar"
-        '
-        'BtnCerrar
-        '
-        Me.BtnCerrar.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnCerrar.ForeColor = System.Drawing.Color.White
-        Me.BtnCerrar.Image = Global.Formularios.My.Resources.Resources.salir
-        Me.BtnCerrar.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.BtnCerrar.Margin = New System.Windows.Forms.Padding(5)
-        Me.BtnCerrar.Name = "BtnCerrar"
-        Me.BtnCerrar.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnCerrar.Size = New System.Drawing.Size(66, 28)
-        Me.BtnCerrar.Text = "Salir"
-        '
-        'Ptbx_Cargando
-        '
-        Me.Ptbx_Cargando.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Ptbx_Cargando.Image = Global.Formularios.My.Resources.Resources.loader
-        Me.Ptbx_Cargando.Location = New System.Drawing.Point(476, 384)
-        Me.Ptbx_Cargando.Name = "Ptbx_Cargando"
-        Me.Ptbx_Cargando.Size = New System.Drawing.Size(43, 37)
-        Me.Ptbx_Cargando.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.Ptbx_Cargando.TabIndex = 37
-        Me.Ptbx_Cargando.TabStop = False
-        Me.Ptbx_Cargando.Visible = False
         '
         'dtgListado
         '
@@ -341,73 +271,43 @@ Partial Class FrmReporteMermas
         Me.dtgListado.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy
         Me.dtgListado.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dtgListado.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dtgListado.Location = New System.Drawing.Point(0, 191)
+        Me.dtgListado.Location = New System.Drawing.Point(0, 135)
         Me.dtgListado.Name = "dtgListado"
-        Me.dtgListado.Size = New System.Drawing.Size(1047, 493)
-        Me.dtgListado.TabIndex = 36
+        Me.dtgListado.Size = New System.Drawing.Size(1096, 495)
+        Me.dtgListado.TabIndex = 275
         Me.dtgListado.Text = "UltraGrid1"
         '
-        'BackgroundWorker1
-        '
-        '
-        'Button1
-        '
-        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button1.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Image = Global.Formularios.My.Resources.Resources.guardar24pxx
-        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button1.Location = New System.Drawing.Point(839, 27)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Padding = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Button1.Size = New System.Drawing.Size(196, 41)
-        Me.Button1.TabIndex = 272
-        Me.Button1.Text = "Consolidado Mes / Año"
-        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'FrmReporteMermas
+        'FrmReporteMermasConsolidado
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1047, 684)
-        Me.Controls.Add(Me.Ptbx_Cargando)
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.ClientSize = New System.Drawing.Size(1096, 630)
         Me.Controls.Add(Me.dtgListado)
-        Me.Controls.Add(Me.Panel1)
-        Me.Margin = New System.Windows.Forms.Padding(2)
-        Me.MaximizeBox = False
-        Me.MinimizeBox = False
-        Me.Name = "FrmReporteMermas"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "REPORTE DE MERMAS"
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
+        Me.Controls.Add(Me.GroupBox1)
+        Me.Controls.Add(Me.Ptbx_Cargando)
+        Me.Name = "FrmReporteMermasConsolidado"
+        Me.Text = "Consolidado de Mermas"
+        Me.TopMost = True
+        CType(Me.Ptbx_Cargando, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()
-        CType(Me.Ptbx_Cargando, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dtgListado, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
-
-    Friend WithEvents Panel1 As Panel
-    Friend WithEvents LblDiaPic As Label
-    Friend WithEvents CmbAnios As ComboBox
-    Friend WithEvents LblAnio As Label
+    Friend WithEvents Ptbx_Cargando As PictureBox
+    Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents ToolStrip1 As ToolStrip
     Friend WithEvents BtnExportarhistoricomortalidad As ToolStripButton
     Friend WithEvents BtnCerrar As ToolStripButton
-    Friend WithEvents Ptbx_Cargando As PictureBox
-    Friend WithEvents dtgListado As Infragistics.Win.UltraWinGrid.UltraGrid
-    Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
-    Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents CkbOmitirSemana As CheckBox
+    Friend WithEvents BtnBusqueda As Button
+    Friend WithEvents LblAnio As Label
+    Friend WithEvents CmbAnios As ComboBox
     Friend WithEvents CkbOmitirMes As CheckBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents CmbSemanas As ComboBox
     Friend WithEvents CmbMeses As ComboBox
-    Friend WithEvents Label2 As Label
-    Friend WithEvents BtnBusqueda As Button
-    Friend WithEvents Button1 As Button
+    Friend WithEvents dtgListado As Infragistics.Win.UltraWinGrid.UltraGrid
 End Class

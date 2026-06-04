@@ -1007,6 +1007,22 @@ Public Class cdControlLoteDestete
         Return dt
     End Function
 
+    Public Function Cd_ConsultarxAnioMesMermas(name As String, obj As coControlLoteDestete) As DataTable
+        Dim dt As New DataTable
+        Try
+            con.Abrir()
+            Dim da As New SqlDataAdapter(name, con.con)
+            da.SelectCommand.CommandType = 4
+            da.SelectCommand.Parameters.AddWithValue("@anio", obj.Anio)
+            da.SelectCommand.Parameters.AddWithValue("@numMes", obj.Mes)
+            da.Fill(dt)
+        Catch ex As Exception
+            Throw ex
+        End Try
+        con.Salir()
+        Return dt
+    End Function
+
     Public Function Cd_ConsultarxAnioMesSemOtrosDt(name As String, obj As coControlLoteDestete) As DataTable
         Dim dt As New DataTable
         Try
