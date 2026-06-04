@@ -55,6 +55,9 @@ Public Class FrmCroquisPlantel4
                 LblCapacidadTotal.Text = CInt(ds.Tables(1).Rows(0)("Capacidad Total"))
                 LblTotalAniGranja.Text = CInt(ds.Tables(1).Rows(0)("Cantidad Total de Animales"))
                 LblDensidadxCorral.Text = CDec(ds.Tables(1).Rows(0)("Densidad por Corral")).ToString("F2")
+                LblCampaña.Text = ds.Tables(1).Rows(0)("Campaña")
+                LblTotalIngreso.Text = CInt(ds.Tables(1).Rows(0)("Total Ingreso"))
+                LblMortalidad.Text = CInt(ds.Tables(1).Rows(0)("Total Mortalidad"))
             End If
 
             For Each fila As DataRow In galponData.Rows
