@@ -4951,6 +4951,9 @@
     <EmbeddedResource Include="produccion\ReporteCostoxKilo\FrmRptCostoxKiloDetalleF11.resx">
       <DependentUpon>FrmRptCostoxKiloDetalleF11.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="produccion\ReporteCostoxKilo\FrmRptCostoxKiloDetalleF12.resx">
+      <DependentUpon>FrmRptCostoxKiloDetalleF12.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="produccion\ReporteCostoxKilo\FrmRptCostoxKiloDetalleF2.resx">
       <DependentUpon>FrmRptCostoxKiloDetalleF2.vb</DependentUpon>
     </EmbeddedResource>

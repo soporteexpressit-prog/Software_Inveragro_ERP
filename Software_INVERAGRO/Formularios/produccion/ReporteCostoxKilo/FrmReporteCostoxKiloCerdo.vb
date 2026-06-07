@@ -235,6 +235,8 @@ Public Class FrmReporteCostoxKiloCerdo
         Try
             Dim obj As coControlAnimal = CType(e.Argument, coControlAnimal)
             ds = cn.Cn_CostoxKiloLechonMaternidad(obj).Copy
+            ds.Tables(1).Columns("Id").ColumnMapping = MappingType.Hidden
+            ds.Tables(1).Columns("Calculado").ColumnMapping = MappingType.Hidden
             e.Result = ds
         Catch ex As Exception
             e.Cancel = True
@@ -407,7 +409,7 @@ Public Class FrmReporteCostoxKiloCerdo
                         }
                         frm.ShowDialog()
                     ElseIf idDetalleVal = "RP19" Then
-                        Dim frm As New FrmRptCostoxKiloDetalleF7 With {
+                        Dim frm As New FrmRptCostoxKiloDetalleF12 With {
                             .idDetalle = idDetalleVal,
                             .idCampaña = CmbCampaña.Value
                         }
