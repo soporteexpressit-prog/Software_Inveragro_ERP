@@ -320,6 +320,62 @@ Public Class FrmReporteCostoxKiloCerdo
         Next
     End Sub
 
+    Private Sub BtnGuardar1_Click(sender As Object, e As EventArgs) Handles BtnGuardar1.Click
+        Try
+            dtgListado1.PerformAction(Infragistics.Win.UltraWinGrid.UltraGridAction.ExitEditMode)
+
+            If (MessageBox.Show("¿ESTÁ SEGURO DE REGISTRAR ESTOS COSTOS?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.No) Then
+                Return
+            End If
+
+            Dim obj As New coControlAnimal With {
+                .IdCampaña = CmbCampaña.Value,
+                .ListaItems = CreacionArrayCosto1()
+            }
+
+            Dim MensajeBgWk As String = cn.Cn_RegistrarCostoKiloCerdo(obj)
+            If (obj.Coderror = 0) Then
+                msj_ok(MensajeBgWk)
+            Else
+                msj_advert(MensajeBgWk)
+            End If
+        Catch ex As Exception
+            clsBasicas.controlException(Name, ex)
+        End Try
+    End Sub
+
+    Function CreacionArrayCosto1() As String
+        Dim array_costos As String = ""
+
+        If (dtgListado1.Rows.Count = 0) Then
+            Return ""
+        End If
+
+        For i = 0 To dtgListado1.Rows.Count - 1
+            If (dtgListado1.Rows(i).Cells("Id").Value IsNot Nothing AndAlso dtgListado1.Rows(i).Cells("Id").Value.ToString.Trim.Length <> 0) Then
+                With dtgListado1.Rows(i)
+                    Dim calculadoValue As String = If(.Cells("Calculado").Value IsNot Nothing AndAlso .Cells("Calculado").Value.ToString().Trim().ToUpper() = "TRUE", "1", "0")
+                    Dim monto As String = If(.Cells("Monto").Value IsNot Nothing AndAlso IsNumeric(.Cells("Monto").Value), CDec(.Cells("Monto").Value).ToString("F4"), "0.0000")
+
+                    array_costos &= .Cells("Id").Value.ToString().Trim() & "|" &
+                                   .Cells("Concepto").Value.ToString().Trim() & "|" &
+                                   monto & "|" &
+                                   calculadoValue & ","
+                End With
+            End If
+        Next
+
+        If (dtgListado1.Rows.Count = 1) Then
+            array_costos &= ","
+        End If
+
+        If array_costos.Length > 0 AndAlso array_costos.EndsWith(",") Then
+            array_costos = array_costos.Substring(0, array_costos.Length - 1)
+        End If
+
+        Return array_costos
+    End Function
+
     Private Sub BtnGenerar2_Click(sender As Object, e As EventArgs) Handles BtnGenerar2.Click
         If CmbCampaña Is Nothing OrElse String.IsNullOrEmpty(CmbCampaña.Text) Then
             Return

@@ -171,25 +171,21 @@ Partial Class FrmReporteCostoxKiloCerdo
         Me.Ptbx_Cargando4 = New System.Windows.Forms.PictureBox()
         Me.dtgListado4 = New Infragistics.Win.UltraWinGrid.UltraGrid()
         Me.BarraOpciones4 = New System.Windows.Forms.ToolStrip()
-        Me.BtnExportar4 = New System.Windows.Forms.ToolStripButton()
         Me.BtnGenerar4 = New System.Windows.Forms.ToolStripButton()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.Ptbx_Cargando3 = New System.Windows.Forms.PictureBox()
         Me.dtgListado3 = New Infragistics.Win.UltraWinGrid.UltraGrid()
         Me.BarraOpciones3 = New System.Windows.Forms.ToolStrip()
-        Me.BtnExportar3 = New System.Windows.Forms.ToolStripButton()
         Me.BtnGenerar3 = New System.Windows.Forms.ToolStripButton()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.Ptbx_Cargando2 = New System.Windows.Forms.PictureBox()
         Me.dtgListado2 = New Infragistics.Win.UltraWinGrid.UltraGrid()
         Me.BarraOpciones2 = New System.Windows.Forms.ToolStrip()
-        Me.BtnExportar2 = New System.Windows.Forms.ToolStripButton()
         Me.BtnGenerar2 = New System.Windows.Forms.ToolStripButton()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Ptbx_Cargando1 = New System.Windows.Forms.PictureBox()
         Me.dtgListado1 = New Infragistics.Win.UltraWinGrid.UltraGrid()
         Me.BarraOpciones1 = New System.Windows.Forms.ToolStrip()
-        Me.BtnExportar1 = New System.Windows.Forms.ToolStripButton()
         Me.BtnGenerar1 = New System.Windows.Forms.ToolStripButton()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.GrupoFiltros = New System.Windows.Forms.GroupBox()
@@ -203,6 +199,10 @@ Partial Class FrmReporteCostoxKiloCerdo
         Me.BackgroundWorker2 = New System.ComponentModel.BackgroundWorker()
         Me.BackgroundWorker3 = New System.ComponentModel.BackgroundWorker()
         Me.BackgroundWorker4 = New System.ComponentModel.BackgroundWorker()
+        Me.BtnGuardar1 = New System.Windows.Forms.ToolStripButton()
+        Me.BtnGuardar2 = New System.Windows.Forms.ToolStripButton()
+        Me.BtnGuardar3 = New System.Windows.Forms.ToolStripButton()
+        Me.BtnGuardar4 = New System.Windows.Forms.ToolStripButton()
         Me.Panel2.SuspendLayout()
         Me.GroupBox8.SuspendLayout()
         Me.GroupBox7.SuspendLayout()
@@ -1176,7 +1176,7 @@ Partial Class FrmReporteCostoxKiloCerdo
         Me.BarraOpciones4.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.BarraOpciones4.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
         Me.BarraOpciones4.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.BarraOpciones4.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnExportar4, Me.BtnGenerar4})
+        Me.BarraOpciones4.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnGenerar4, Me.BtnGuardar4})
         Me.BarraOpciones4.Location = New System.Drawing.Point(3, 16)
         Me.BarraOpciones4.Margin = New System.Windows.Forms.Padding(2, 1, 2, 1)
         Me.BarraOpciones4.Name = "BarraOpciones4"
@@ -1184,19 +1184,6 @@ Partial Class FrmReporteCostoxKiloCerdo
         Me.BarraOpciones4.Size = New System.Drawing.Size(405, 38)
         Me.BarraOpciones4.TabIndex = 53
         Me.BarraOpciones4.Text = "ToolStrip4"
-        '
-        'BtnExportar4
-        '
-        Me.BtnExportar4.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnExportar4.ForeColor = System.Drawing.Color.White
-        Me.BtnExportar4.Image = Global.Formularios.My.Resources.Resources.exportar2
-        Me.BtnExportar4.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.BtnExportar4.Margin = New System.Windows.Forms.Padding(5)
-        Me.BtnExportar4.Name = "BtnExportar4"
-        Me.BtnExportar4.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnExportar4.Size = New System.Drawing.Size(92, 28)
-        Me.BtnExportar4.Text = "Exportar"
-        Me.BtnExportar4.ToolTipText = "Exportar"
         '
         'BtnGenerar4
         '
@@ -1319,7 +1306,7 @@ Partial Class FrmReporteCostoxKiloCerdo
         Me.BarraOpciones3.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.BarraOpciones3.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
         Me.BarraOpciones3.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.BarraOpciones3.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnExportar3, Me.BtnGenerar3})
+        Me.BarraOpciones3.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnGenerar3, Me.BtnGuardar3})
         Me.BarraOpciones3.Location = New System.Drawing.Point(3, 16)
         Me.BarraOpciones3.Margin = New System.Windows.Forms.Padding(2, 1, 2, 1)
         Me.BarraOpciones3.Name = "BarraOpciones3"
@@ -1327,19 +1314,6 @@ Partial Class FrmReporteCostoxKiloCerdo
         Me.BarraOpciones3.Size = New System.Drawing.Size(405, 38)
         Me.BarraOpciones3.TabIndex = 53
         Me.BarraOpciones3.Text = "ToolStrip3"
-        '
-        'BtnExportar3
-        '
-        Me.BtnExportar3.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnExportar3.ForeColor = System.Drawing.Color.White
-        Me.BtnExportar3.Image = Global.Formularios.My.Resources.Resources.exportar2
-        Me.BtnExportar3.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.BtnExportar3.Margin = New System.Windows.Forms.Padding(5)
-        Me.BtnExportar3.Name = "BtnExportar3"
-        Me.BtnExportar3.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnExportar3.Size = New System.Drawing.Size(92, 28)
-        Me.BtnExportar3.Text = "Exportar"
-        Me.BtnExportar3.ToolTipText = "Exportar"
         '
         'BtnGenerar3
         '
@@ -1462,7 +1436,7 @@ Partial Class FrmReporteCostoxKiloCerdo
         Me.BarraOpciones2.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.BarraOpciones2.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
         Me.BarraOpciones2.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.BarraOpciones2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnExportar2, Me.BtnGenerar2})
+        Me.BarraOpciones2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnGenerar2, Me.BtnGuardar2})
         Me.BarraOpciones2.Location = New System.Drawing.Point(3, 16)
         Me.BarraOpciones2.Margin = New System.Windows.Forms.Padding(2, 1, 2, 1)
         Me.BarraOpciones2.Name = "BarraOpciones2"
@@ -1470,19 +1444,6 @@ Partial Class FrmReporteCostoxKiloCerdo
         Me.BarraOpciones2.Size = New System.Drawing.Size(405, 38)
         Me.BarraOpciones2.TabIndex = 53
         Me.BarraOpciones2.Text = "ToolStrip1"
-        '
-        'BtnExportar2
-        '
-        Me.BtnExportar2.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnExportar2.ForeColor = System.Drawing.Color.White
-        Me.BtnExportar2.Image = Global.Formularios.My.Resources.Resources.exportar2
-        Me.BtnExportar2.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.BtnExportar2.Margin = New System.Windows.Forms.Padding(5)
-        Me.BtnExportar2.Name = "BtnExportar2"
-        Me.BtnExportar2.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnExportar2.Size = New System.Drawing.Size(92, 28)
-        Me.BtnExportar2.Text = "Exportar"
-        Me.BtnExportar2.ToolTipText = "Exportar"
         '
         'BtnGenerar2
         '
@@ -1605,7 +1566,7 @@ Partial Class FrmReporteCostoxKiloCerdo
         Me.BarraOpciones1.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.BarraOpciones1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
         Me.BarraOpciones1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.BarraOpciones1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnExportar1, Me.BtnGenerar1})
+        Me.BarraOpciones1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnGenerar1, Me.BtnGuardar1})
         Me.BarraOpciones1.Location = New System.Drawing.Point(3, 16)
         Me.BarraOpciones1.Margin = New System.Windows.Forms.Padding(2, 1, 2, 1)
         Me.BarraOpciones1.Name = "BarraOpciones1"
@@ -1613,19 +1574,6 @@ Partial Class FrmReporteCostoxKiloCerdo
         Me.BarraOpciones1.Size = New System.Drawing.Size(405, 38)
         Me.BarraOpciones1.TabIndex = 53
         Me.BarraOpciones1.Text = "ToolStrip2"
-        '
-        'BtnExportar1
-        '
-        Me.BtnExportar1.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnExportar1.ForeColor = System.Drawing.Color.White
-        Me.BtnExportar1.Image = Global.Formularios.My.Resources.Resources.exportar2
-        Me.BtnExportar1.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.BtnExportar1.Margin = New System.Windows.Forms.Padding(5)
-        Me.BtnExportar1.Name = "BtnExportar1"
-        Me.BtnExportar1.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnExportar1.Size = New System.Drawing.Size(92, 28)
-        Me.BtnExportar1.Text = "Exportar"
-        Me.BtnExportar1.ToolTipText = "Exportar"
         '
         'BtnGenerar1
         '
@@ -1853,6 +1801,61 @@ Partial Class FrmReporteCostoxKiloCerdo
         'BackgroundWorker3
         '
         '
+        'BackgroundWorker4
+        '
+        '
+        'BtnGuardar1
+        '
+        Me.BtnGuardar1.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnGuardar1.ForeColor = System.Drawing.Color.White
+        Me.BtnGuardar1.Image = Global.Formularios.My.Resources.Resources.guardar
+        Me.BtnGuardar1.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BtnGuardar1.Margin = New System.Windows.Forms.Padding(5)
+        Me.BtnGuardar1.Name = "BtnGuardar1"
+        Me.BtnGuardar1.Padding = New System.Windows.Forms.Padding(2)
+        Me.BtnGuardar1.Size = New System.Drawing.Size(89, 28)
+        Me.BtnGuardar1.Text = "Guardar"
+        Me.BtnGuardar1.ToolTipText = "Guardar"
+        '
+        'BtnGuardar2
+        '
+        Me.BtnGuardar2.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnGuardar2.ForeColor = System.Drawing.Color.White
+        Me.BtnGuardar2.Image = Global.Formularios.My.Resources.Resources.guardar
+        Me.BtnGuardar2.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BtnGuardar2.Margin = New System.Windows.Forms.Padding(5)
+        Me.BtnGuardar2.Name = "BtnGuardar2"
+        Me.BtnGuardar2.Padding = New System.Windows.Forms.Padding(2)
+        Me.BtnGuardar2.Size = New System.Drawing.Size(89, 28)
+        Me.BtnGuardar2.Text = "Guardar"
+        Me.BtnGuardar2.ToolTipText = "Guardar"
+        '
+        'BtnGuardar3
+        '
+        Me.BtnGuardar3.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnGuardar3.ForeColor = System.Drawing.Color.White
+        Me.BtnGuardar3.Image = Global.Formularios.My.Resources.Resources.guardar
+        Me.BtnGuardar3.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BtnGuardar3.Margin = New System.Windows.Forms.Padding(5)
+        Me.BtnGuardar3.Name = "BtnGuardar3"
+        Me.BtnGuardar3.Padding = New System.Windows.Forms.Padding(2)
+        Me.BtnGuardar3.Size = New System.Drawing.Size(89, 28)
+        Me.BtnGuardar3.Text = "Guardar"
+        Me.BtnGuardar3.ToolTipText = "Guardar"
+        '
+        'BtnGuardar4
+        '
+        Me.BtnGuardar4.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnGuardar4.ForeColor = System.Drawing.Color.White
+        Me.BtnGuardar4.Image = Global.Formularios.My.Resources.Resources.guardar
+        Me.BtnGuardar4.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BtnGuardar4.Margin = New System.Windows.Forms.Padding(5)
+        Me.BtnGuardar4.Name = "BtnGuardar4"
+        Me.BtnGuardar4.Padding = New System.Windows.Forms.Padding(2)
+        Me.BtnGuardar4.Size = New System.Drawing.Size(89, 28)
+        Me.BtnGuardar4.Text = "Guardar"
+        Me.BtnGuardar4.ToolTipText = "Guardar"
+        '
         'FrmReporteCostoxKiloCerdo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1912,17 +1915,14 @@ Partial Class FrmReporteCostoxKiloCerdo
     Friend WithEvents dtgListado1 As Infragistics.Win.UltraWinGrid.UltraGrid
     Friend WithEvents GroupBox4 As GroupBox
     Friend WithEvents BarraOpciones4 As ToolStrip
-    Friend WithEvents BtnExportar4 As ToolStripButton
     Friend WithEvents Ptbx_Cargando4 As PictureBox
     Friend WithEvents dtgListado4 As Infragistics.Win.UltraWinGrid.UltraGrid
     Friend WithEvents GroupBox3 As GroupBox
     Friend WithEvents BarraOpciones3 As ToolStrip
-    Friend WithEvents BtnExportar3 As ToolStripButton
     Friend WithEvents Ptbx_Cargando3 As PictureBox
     Friend WithEvents dtgListado3 As Infragistics.Win.UltraWinGrid.UltraGrid
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents BarraOpciones2 As ToolStrip
-    Friend WithEvents BtnExportar2 As ToolStripButton
     Friend WithEvents Ptbx_Cargando2 As PictureBox
     Friend WithEvents dtgListado2 As Infragistics.Win.UltraWinGrid.UltraGrid
     Friend WithEvents GroupBox1 As GroupBox
@@ -1933,7 +1933,6 @@ Partial Class FrmReporteCostoxKiloCerdo
     Friend WithEvents Label1 As Label
     Friend WithEvents CmbAnios As ComboBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents BtnExportar1 As ToolStripButton
     Friend WithEvents BtnGenerar4 As ToolStripButton
     Friend WithEvents BtnGenerar3 As ToolStripButton
     Friend WithEvents BtnGenerar2 As ToolStripButton
@@ -2000,4 +1999,8 @@ Partial Class FrmReporteCostoxKiloCerdo
     Friend WithEvents Label38 As Label
     Friend WithEvents Label39 As Label
     Friend WithEvents BackgroundWorker4 As System.ComponentModel.BackgroundWorker
+    Friend WithEvents BtnGuardar1 As ToolStripButton
+    Friend WithEvents BtnGuardar4 As ToolStripButton
+    Friend WithEvents BtnGuardar3 As ToolStripButton
+    Friend WithEvents BtnGuardar2 As ToolStripButton
 End Class

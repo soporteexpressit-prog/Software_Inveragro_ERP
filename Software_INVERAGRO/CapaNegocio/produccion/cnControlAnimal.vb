@@ -413,9 +413,14 @@ Public Class cnControlAnimal
         Return cls_at.Cd_ConsultarxIdCampaña("[w_pa_costo_x_kilo_lechon_engorde]", obj)
     End Function
 
-    'REGISTRAR COSTO X KILO CERDO (REPRODUCCION)
+    'REGISTRAR COSTO X KILO CERDO
 
     Public Function Cn_RegistrarCostoKiloCerdo(ByRef obj As coControlAnimal) As String
-        Return cls_at.Cd_RegistrarRegularizacionCerdosCodificado("[w_pa_reg_regularizar_cerdos_codificados]", obj)
+        Return cls_at.Cd_RegistrarCostoKiloCerdo("[w_pa_crear_actualizar_costo_x_kilo_cerdo]", obj)
+    End Function
+
+    'CONSULTAS POR COSTO X KILO CERDO
+    Public Function Cn_ConsultarCostoxKiloCerdo(ByRef obj As coControlAnimal) As DataTable
+        Return cls_at.Cd_ConsultarCostoxKiloCerdo("[w_pa_cons_animales_codificados_regularizar]", obj)
     End Function
 End Class
