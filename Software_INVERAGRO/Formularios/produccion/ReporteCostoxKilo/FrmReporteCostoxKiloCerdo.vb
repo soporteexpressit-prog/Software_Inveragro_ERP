@@ -336,6 +336,7 @@ Public Class FrmReporteCostoxKiloCerdo
             Dim MensajeBgWk As String = cn.Cn_RegistrarCostoKiloCerdo(obj)
             If (obj.Coderror = 0) Then
                 msj_ok(MensajeBgWk)
+                ConsultarReproduccion()
             Else
                 msj_advert(MensajeBgWk)
             End If

@@ -172,21 +172,24 @@ Partial Class FrmReporteCostoxKiloCerdo
         Me.dtgListado4 = New Infragistics.Win.UltraWinGrid.UltraGrid()
         Me.BarraOpciones4 = New System.Windows.Forms.ToolStrip()
         Me.BtnGenerar4 = New System.Windows.Forms.ToolStripButton()
+        Me.BtnGuardar4 = New System.Windows.Forms.ToolStripButton()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.Ptbx_Cargando3 = New System.Windows.Forms.PictureBox()
         Me.dtgListado3 = New Infragistics.Win.UltraWinGrid.UltraGrid()
         Me.BarraOpciones3 = New System.Windows.Forms.ToolStrip()
         Me.BtnGenerar3 = New System.Windows.Forms.ToolStripButton()
+        Me.BtnGuardar3 = New System.Windows.Forms.ToolStripButton()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.Ptbx_Cargando2 = New System.Windows.Forms.PictureBox()
         Me.dtgListado2 = New Infragistics.Win.UltraWinGrid.UltraGrid()
         Me.BarraOpciones2 = New System.Windows.Forms.ToolStrip()
         Me.BtnGenerar2 = New System.Windows.Forms.ToolStripButton()
+        Me.BtnGuardar2 = New System.Windows.Forms.ToolStripButton()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Ptbx_Cargando1 = New System.Windows.Forms.PictureBox()
         Me.dtgListado1 = New Infragistics.Win.UltraWinGrid.UltraGrid()
         Me.BarraOpciones1 = New System.Windows.Forms.ToolStrip()
-        Me.BtnGenerar1 = New System.Windows.Forms.ToolStripButton()
+        Me.BtnGuardar1 = New System.Windows.Forms.ToolStripButton()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.GrupoFiltros = New System.Windows.Forms.GroupBox()
         Me.CmbAnios = New System.Windows.Forms.ComboBox()
@@ -199,10 +202,7 @@ Partial Class FrmReporteCostoxKiloCerdo
         Me.BackgroundWorker2 = New System.ComponentModel.BackgroundWorker()
         Me.BackgroundWorker3 = New System.ComponentModel.BackgroundWorker()
         Me.BackgroundWorker4 = New System.ComponentModel.BackgroundWorker()
-        Me.BtnGuardar1 = New System.Windows.Forms.ToolStripButton()
-        Me.BtnGuardar2 = New System.Windows.Forms.ToolStripButton()
-        Me.BtnGuardar3 = New System.Windows.Forms.ToolStripButton()
-        Me.BtnGuardar4 = New System.Windows.Forms.ToolStripButton()
+        Me.BtnGenerar1 = New System.Windows.Forms.ToolStripButton()
         Me.Panel2.SuspendLayout()
         Me.GroupBox8.SuspendLayout()
         Me.GroupBox7.SuspendLayout()
@@ -1199,6 +1199,19 @@ Partial Class FrmReporteCostoxKiloCerdo
         Me.BtnGenerar4.Text = "Generar"
         Me.BtnGenerar4.ToolTipText = "Generar"
         '
+        'BtnGuardar4
+        '
+        Me.BtnGuardar4.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnGuardar4.ForeColor = System.Drawing.Color.White
+        Me.BtnGuardar4.Image = Global.Formularios.My.Resources.Resources.guardar
+        Me.BtnGuardar4.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BtnGuardar4.Margin = New System.Windows.Forms.Padding(5)
+        Me.BtnGuardar4.Name = "BtnGuardar4"
+        Me.BtnGuardar4.Padding = New System.Windows.Forms.Padding(2)
+        Me.BtnGuardar4.Size = New System.Drawing.Size(89, 28)
+        Me.BtnGuardar4.Text = "Guardar"
+        Me.BtnGuardar4.ToolTipText = "Guardar"
+        '
         'GroupBox3
         '
         Me.GroupBox3.Controls.Add(Me.Ptbx_Cargando3)
@@ -1328,6 +1341,19 @@ Partial Class FrmReporteCostoxKiloCerdo
         Me.BtnGenerar3.Size = New System.Drawing.Size(89, 28)
         Me.BtnGenerar3.Text = "Generar"
         Me.BtnGenerar3.ToolTipText = "Generar"
+        '
+        'BtnGuardar3
+        '
+        Me.BtnGuardar3.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnGuardar3.ForeColor = System.Drawing.Color.White
+        Me.BtnGuardar3.Image = Global.Formularios.My.Resources.Resources.guardar
+        Me.BtnGuardar3.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BtnGuardar3.Margin = New System.Windows.Forms.Padding(5)
+        Me.BtnGuardar3.Name = "BtnGuardar3"
+        Me.BtnGuardar3.Padding = New System.Windows.Forms.Padding(2)
+        Me.BtnGuardar3.Size = New System.Drawing.Size(89, 28)
+        Me.BtnGuardar3.Text = "Guardar"
+        Me.BtnGuardar3.ToolTipText = "Guardar"
         '
         'GroupBox2
         '
@@ -1459,6 +1485,19 @@ Partial Class FrmReporteCostoxKiloCerdo
         Me.BtnGenerar2.Text = "Generar"
         Me.BtnGenerar2.ToolTipText = "Generar"
         '
+        'BtnGuardar2
+        '
+        Me.BtnGuardar2.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnGuardar2.ForeColor = System.Drawing.Color.White
+        Me.BtnGuardar2.Image = Global.Formularios.My.Resources.Resources.guardar
+        Me.BtnGuardar2.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BtnGuardar2.Margin = New System.Windows.Forms.Padding(5)
+        Me.BtnGuardar2.Name = "BtnGuardar2"
+        Me.BtnGuardar2.Padding = New System.Windows.Forms.Padding(2)
+        Me.BtnGuardar2.Size = New System.Drawing.Size(89, 28)
+        Me.BtnGuardar2.Text = "Guardar"
+        Me.BtnGuardar2.ToolTipText = "Guardar"
+        '
         'GroupBox1
         '
         Me.GroupBox1.Controls.Add(Me.Ptbx_Cargando1)
@@ -1566,7 +1605,7 @@ Partial Class FrmReporteCostoxKiloCerdo
         Me.BarraOpciones1.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.BarraOpciones1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
         Me.BarraOpciones1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.BarraOpciones1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnGenerar1, Me.BtnGuardar1})
+        Me.BarraOpciones1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnGuardar1, Me.BtnGenerar1})
         Me.BarraOpciones1.Location = New System.Drawing.Point(3, 16)
         Me.BarraOpciones1.Margin = New System.Windows.Forms.Padding(2, 1, 2, 1)
         Me.BarraOpciones1.Name = "BarraOpciones1"
@@ -1575,19 +1614,18 @@ Partial Class FrmReporteCostoxKiloCerdo
         Me.BarraOpciones1.TabIndex = 53
         Me.BarraOpciones1.Text = "ToolStrip2"
         '
-        'BtnGenerar1
+        'BtnGuardar1
         '
-        Me.BtnGenerar1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.BtnGenerar1.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnGenerar1.ForeColor = System.Drawing.Color.White
-        Me.BtnGenerar1.Image = Global.Formularios.My.Resources.Resources.buscar16px
-        Me.BtnGenerar1.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.BtnGenerar1.Margin = New System.Windows.Forms.Padding(5)
-        Me.BtnGenerar1.Name = "BtnGenerar1"
-        Me.BtnGenerar1.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnGenerar1.Size = New System.Drawing.Size(89, 28)
-        Me.BtnGenerar1.Text = "Generar"
-        Me.BtnGenerar1.ToolTipText = "Generar"
+        Me.BtnGuardar1.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnGuardar1.ForeColor = System.Drawing.Color.White
+        Me.BtnGuardar1.Image = Global.Formularios.My.Resources.Resources.guardar
+        Me.BtnGuardar1.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BtnGuardar1.Margin = New System.Windows.Forms.Padding(5)
+        Me.BtnGuardar1.Name = "BtnGuardar1"
+        Me.BtnGuardar1.Padding = New System.Windows.Forms.Padding(2)
+        Me.BtnGuardar1.Size = New System.Drawing.Size(89, 28)
+        Me.BtnGuardar1.Text = "Guardar"
+        Me.BtnGuardar1.ToolTipText = "Guardar"
         '
         'Label6
         '
@@ -1804,57 +1842,19 @@ Partial Class FrmReporteCostoxKiloCerdo
         'BackgroundWorker4
         '
         '
-        'BtnGuardar1
+        'BtnGenerar1
         '
-        Me.BtnGuardar1.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnGuardar1.ForeColor = System.Drawing.Color.White
-        Me.BtnGuardar1.Image = Global.Formularios.My.Resources.Resources.guardar
-        Me.BtnGuardar1.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.BtnGuardar1.Margin = New System.Windows.Forms.Padding(5)
-        Me.BtnGuardar1.Name = "BtnGuardar1"
-        Me.BtnGuardar1.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnGuardar1.Size = New System.Drawing.Size(89, 28)
-        Me.BtnGuardar1.Text = "Guardar"
-        Me.BtnGuardar1.ToolTipText = "Guardar"
-        '
-        'BtnGuardar2
-        '
-        Me.BtnGuardar2.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnGuardar2.ForeColor = System.Drawing.Color.White
-        Me.BtnGuardar2.Image = Global.Formularios.My.Resources.Resources.guardar
-        Me.BtnGuardar2.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.BtnGuardar2.Margin = New System.Windows.Forms.Padding(5)
-        Me.BtnGuardar2.Name = "BtnGuardar2"
-        Me.BtnGuardar2.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnGuardar2.Size = New System.Drawing.Size(89, 28)
-        Me.BtnGuardar2.Text = "Guardar"
-        Me.BtnGuardar2.ToolTipText = "Guardar"
-        '
-        'BtnGuardar3
-        '
-        Me.BtnGuardar3.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnGuardar3.ForeColor = System.Drawing.Color.White
-        Me.BtnGuardar3.Image = Global.Formularios.My.Resources.Resources.guardar
-        Me.BtnGuardar3.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.BtnGuardar3.Margin = New System.Windows.Forms.Padding(5)
-        Me.BtnGuardar3.Name = "BtnGuardar3"
-        Me.BtnGuardar3.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnGuardar3.Size = New System.Drawing.Size(89, 28)
-        Me.BtnGuardar3.Text = "Guardar"
-        Me.BtnGuardar3.ToolTipText = "Guardar"
-        '
-        'BtnGuardar4
-        '
-        Me.BtnGuardar4.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnGuardar4.ForeColor = System.Drawing.Color.White
-        Me.BtnGuardar4.Image = Global.Formularios.My.Resources.Resources.guardar
-        Me.BtnGuardar4.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.BtnGuardar4.Margin = New System.Windows.Forms.Padding(5)
-        Me.BtnGuardar4.Name = "BtnGuardar4"
-        Me.BtnGuardar4.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnGuardar4.Size = New System.Drawing.Size(89, 28)
-        Me.BtnGuardar4.Text = "Guardar"
-        Me.BtnGuardar4.ToolTipText = "Guardar"
+        Me.BtnGenerar1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.BtnGenerar1.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnGenerar1.ForeColor = System.Drawing.Color.White
+        Me.BtnGenerar1.Image = Global.Formularios.My.Resources.Resources.buscar16px
+        Me.BtnGenerar1.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BtnGenerar1.Margin = New System.Windows.Forms.Padding(5)
+        Me.BtnGenerar1.Name = "BtnGenerar1"
+        Me.BtnGenerar1.Padding = New System.Windows.Forms.Padding(2)
+        Me.BtnGenerar1.Size = New System.Drawing.Size(89, 28)
+        Me.BtnGenerar1.Text = "Generar"
+        Me.BtnGenerar1.ToolTipText = "Generar"
         '
         'FrmReporteCostoxKiloCerdo
         '
@@ -1927,7 +1927,6 @@ Partial Class FrmReporteCostoxKiloCerdo
     Friend WithEvents dtgListado2 As Infragistics.Win.UltraWinGrid.UltraGrid
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents BarraOpciones1 As ToolStrip
-    Friend WithEvents BtnGenerar1 As ToolStripButton
     Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
     Friend WithEvents CmbUbicacion As Infragistics.Win.UltraWinGrid.UltraCombo
     Friend WithEvents Label1 As Label
@@ -2003,4 +2002,5 @@ Partial Class FrmReporteCostoxKiloCerdo
     Friend WithEvents BtnGuardar4 As ToolStripButton
     Friend WithEvents BtnGuardar3 As ToolStripButton
     Friend WithEvents BtnGuardar2 As ToolStripButton
+    Friend WithEvents BtnGenerar1 As ToolStripButton
 End Class
