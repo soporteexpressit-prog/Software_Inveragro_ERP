@@ -172,7 +172,7 @@ Partial Class FrmReporteCostoxKiloCerdo
         Me.dtgListado4 = New Infragistics.Win.UltraWinGrid.UltraGrid()
         Me.BarraOpciones4 = New System.Windows.Forms.ToolStrip()
         Me.BtnExportar4 = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripButton5 = New System.Windows.Forms.ToolStripButton()
+        Me.BtnGenerar4 = New System.Windows.Forms.ToolStripButton()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.Ptbx_Cargando3 = New System.Windows.Forms.PictureBox()
         Me.dtgListado3 = New Infragistics.Win.UltraWinGrid.UltraGrid()
@@ -202,6 +202,7 @@ Partial Class FrmReporteCostoxKiloCerdo
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         Me.BackgroundWorker2 = New System.ComponentModel.BackgroundWorker()
         Me.BackgroundWorker3 = New System.ComponentModel.BackgroundWorker()
+        Me.BackgroundWorker4 = New System.ComponentModel.BackgroundWorker()
         Me.Panel2.SuspendLayout()
         Me.GroupBox8.SuspendLayout()
         Me.GroupBox7.SuspendLayout()
@@ -1175,7 +1176,7 @@ Partial Class FrmReporteCostoxKiloCerdo
         Me.BarraOpciones4.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.BarraOpciones4.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
         Me.BarraOpciones4.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.BarraOpciones4.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnExportar4, Me.ToolStripButton5})
+        Me.BarraOpciones4.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnExportar4, Me.BtnGenerar4})
         Me.BarraOpciones4.Location = New System.Drawing.Point(3, 16)
         Me.BarraOpciones4.Margin = New System.Windows.Forms.Padding(2, 1, 2, 1)
         Me.BarraOpciones4.Name = "BarraOpciones4"
@@ -1197,19 +1198,19 @@ Partial Class FrmReporteCostoxKiloCerdo
         Me.BtnExportar4.Text = "Exportar"
         Me.BtnExportar4.ToolTipText = "Exportar"
         '
-        'ToolStripButton5
+        'BtnGenerar4
         '
-        Me.ToolStripButton5.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.ToolStripButton5.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ToolStripButton5.ForeColor = System.Drawing.Color.White
-        Me.ToolStripButton5.Image = Global.Formularios.My.Resources.Resources.buscar16px
-        Me.ToolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton5.Margin = New System.Windows.Forms.Padding(5)
-        Me.ToolStripButton5.Name = "ToolStripButton5"
-        Me.ToolStripButton5.Padding = New System.Windows.Forms.Padding(2)
-        Me.ToolStripButton5.Size = New System.Drawing.Size(89, 28)
-        Me.ToolStripButton5.Text = "Generar"
-        Me.ToolStripButton5.ToolTipText = "Generar"
+        Me.BtnGenerar4.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.BtnGenerar4.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnGenerar4.ForeColor = System.Drawing.Color.White
+        Me.BtnGenerar4.Image = Global.Formularios.My.Resources.Resources.buscar16px
+        Me.BtnGenerar4.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BtnGenerar4.Margin = New System.Windows.Forms.Padding(5)
+        Me.BtnGenerar4.Name = "BtnGenerar4"
+        Me.BtnGenerar4.Padding = New System.Windows.Forms.Padding(2)
+        Me.BtnGenerar4.Size = New System.Drawing.Size(89, 28)
+        Me.BtnGenerar4.Text = "Generar"
+        Me.BtnGenerar4.ToolTipText = "Generar"
         '
         'GroupBox3
         '
@@ -1933,7 +1934,7 @@ Partial Class FrmReporteCostoxKiloCerdo
     Friend WithEvents CmbAnios As ComboBox
     Friend WithEvents Label3 As Label
     Friend WithEvents BtnExportar1 As ToolStripButton
-    Friend WithEvents ToolStripButton5 As ToolStripButton
+    Friend WithEvents BtnGenerar4 As ToolStripButton
     Friend WithEvents BtnGenerar3 As ToolStripButton
     Friend WithEvents BtnGenerar2 As ToolStripButton
     Friend WithEvents GroupBox5 As GroupBox
@@ -1998,4 +1999,5 @@ Partial Class FrmReporteCostoxKiloCerdo
     Friend WithEvents Label37 As Label
     Friend WithEvents Label38 As Label
     Friend WithEvents Label39 As Label
+    Friend WithEvents BackgroundWorker4 As System.ComponentModel.BackgroundWorker
 End Class

@@ -24,8 +24,8 @@ Public Class FrmReporteCostoxKiloCerdo
         clsBasicas.LlenarComboAnios(CmbAnios)
         clsBasicas.Formato_Tablas_Grid_AnteAntePenultimaColumnaEditable(dtgListado1)
         clsBasicas.Formato_Tablas_Grid_AnteAntePenultimaColumnaEditable(dtgListado2)
-        clsBasicas.Formato_Tablas_Grid(dtgListado3)
-        clsBasicas.Formato_Tablas_Grid(dtgListado4)
+        clsBasicas.Formato_Tablas_Grid_AnteAntePenultimaColumnaEditable(dtgListado3)
+        clsBasicas.Formato_Tablas_Grid_AnteAntePenultimaColumnaEditable(dtgListado4)
     End Sub
 
     Sub ListarPlanteles()
@@ -521,6 +521,8 @@ Public Class FrmReporteCostoxKiloCerdo
         Try
             Dim obj As coControlAnimal = CType(e.Argument, coControlAnimal)
             ds = cn.Cn_CostoxKiloLechonRecria(obj).Copy
+            ds.Tables(1).Columns("Id").ColumnMapping = MappingType.Hidden
+            ds.Tables(1).Columns("Calculado").ColumnMapping = MappingType.Hidden
             e.Result = ds
         Catch ex As Exception
             e.Cancel = True
@@ -554,9 +556,57 @@ Public Class FrmReporteCostoxKiloCerdo
                 colVerPDF = dtgListado3.DisplayLayout.Bands(0).Columns("[+]")
                 colVerPDF.Style = Infragistics.Win.UltraWinGrid.ColumnStyle.Button
                 colVerPDF.ButtonDisplayStyle = Infragistics.Win.UltraWinGrid.ButtonDisplayStyle.Always
+                colVerPDF.Width = sizeButtonVerPDF
+                colVerPDF.MinWidth = sizeButtonVerPDF
+                colVerPDF.MaxWidth = sizeButtonVerPDF
+
                 If Not e.ReInitialize Then
                     e.Row.Cells("[+]").Value = "[+]"
                     e.Row.Cells("[+]").Appearance.TextHAlign = Infragistics.Win.HAlign.Center
+                End If
+            End If
+
+            ' === Ancho fijo para la columna Concepto ===
+            If dtgListado3.DisplayLayout.Bands(0).Columns.Exists("Concepto") Then
+                Dim colConcepto As Infragistics.Win.UltraWinGrid.UltraGridColumn
+                colConcepto = dtgListado3.DisplayLayout.Bands(0).Columns("Concepto")
+                colConcepto.Width = sizeButtonConcepto
+                colConcepto.MinWidth = sizeButtonConcepto
+                colConcepto.MaxWidth = sizeButtonConcepto
+            End If
+
+            ' === Bloquear celdas calculadas por Id ===
+            If e.Row.Cells.Exists("Id") AndAlso e.Row.Cells.Exists("Monto") Then
+                Dim idFila As String = e.Row.Cells("Id").Value.ToString()
+                Dim idsCalculados As New List(Of String) From {"RP18", "RP19", "RP20", "RP21"}
+
+                If idsCalculados.Contains(idFila) Then
+                    ' Bloqueado - fondo gris
+                    e.Row.Cells("Monto").Activation = Infragistics.Win.UltraWinGrid.Activation.NoEdit
+                    e.Row.Cells("Monto").Appearance.BackColor = Color.FromArgb(220, 220, 220)
+                Else
+                    ' Editable - fondo blanco
+                    e.Row.Cells("Monto").Activation = Infragistics.Win.UltraWinGrid.Activation.AllowEdit
+                    e.Row.Cells("Monto").Appearance.BackColor = Color.White
+                End If
+            End If
+
+            ' === Colores especiales por Id ===
+            If e.Row.Cells.Exists("Id") Then
+                Dim idFila As String = e.Row.Cells("Id").Value.ToString()
+                Dim idCostoLechonDestetado As String = "RP21"
+
+                If idFila = idCostoLechonDestetado Then
+                    ' Fila completa verde
+                    e.Row.Appearance.BackColor = Color.FromArgb(34, 139, 34)
+                    e.Row.Appearance.BackColor2 = Color.FromArgb(34, 139, 34)
+                    e.Row.Appearance.ForeColor = Color.White
+                    e.Row.Appearance.FontData.Bold = DefaultableBoolean.True
+
+                    ' Monto con su propio color - texto oscuro legible
+                    e.Row.Cells("Monto").Appearance.BackColor = Color.FromArgb(34, 139, 34)
+                    e.Row.Cells("Monto").Appearance.BackColor2 = Color.FromArgb(34, 139, 34)
+                    e.Row.Cells("Monto").Appearance.FontData.Bold = DefaultableBoolean.True
                 End If
             End If
         End If
@@ -581,6 +631,163 @@ Public Class FrmReporteCostoxKiloCerdo
                         }
                         frm.ShowDialog()
                     ElseIf idDetalleVal = "RP20" Then
+                        Dim frm As New FrmRptCostoxKiloDetalleF8 With {
+                            .idDetalle = idDetalleVal,
+                            .idCampaña = CmbCampaña.Value
+                        }
+                        frm.ShowDialog()
+                    End If
+                End If
+            End With
+        Catch ex As Exception
+            clsBasicas.controlException(Name, ex)
+        End Try
+    End Sub
+
+    Private Sub BtnGenerar4_Click(sender As Object, e As EventArgs) Handles BtnGenerar4.Click
+        If CmbCampaña Is Nothing OrElse String.IsNullOrEmpty(CmbCampaña.Text) Then
+            Return
+        End If
+        ConsultarEngorde()
+    End Sub
+
+    Private Sub BloquearControladores4()
+        Ptbx_Cargando4.Visible = True
+        BarraOpciones4.Enabled = False
+    End Sub
+
+    Private Sub DesbloquearControladores4()
+        Ptbx_Cargando4.Visible = False
+        BarraOpciones4.Enabled = True
+    End Sub
+
+    Sub ConsultarEngorde()
+        If Not BackgroundWorker4.IsBusy Then
+            BloquearControladores4()
+
+            Dim obj As New coControlAnimal With {
+                .IdCampaña = CmbCampaña.Value
+            }
+
+            BackgroundWorker4.RunWorkerAsync(obj)
+        End If
+    End Sub
+
+    Private Sub BackgroundWorker4_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorker4.DoWork
+        Try
+            Dim obj As coControlAnimal = CType(e.Argument, coControlAnimal)
+            ds = cn.Cn_CostoxKiloLechonEngorde(obj).Copy
+            ds.Tables(1).Columns("Id").ColumnMapping = MappingType.Hidden
+            ds.Tables(1).Columns("Calculado").ColumnMapping = MappingType.Hidden
+            e.Result = ds
+        Catch ex As Exception
+            e.Cancel = True
+        End Try
+    End Sub
+
+    Private Sub BackgroundWorker4_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BackgroundWorker4.RunWorkerCompleted
+        DesbloquearControladores4()
+        If e.Error IsNot Nothing OrElse e.Cancelled Then
+            msj_advert("Error al Cargar los Datos")
+        Else
+            Dim dsResult As DataSet = CType(e.Result, DataSet)
+            Dim dtResult As DataTable = dsResult.Tables(0)
+
+            LblInicioCampana4.Text = If(IsDBNull(dtResult.Rows(0)("Campaña_Inicio")), "- / - / -", Convert.ToDateTime(dtResult.Rows(0)("Campaña_Inicio")).ToString("dd/MM/yyyy"))
+            LblFinCampana4.Text = If(IsDBNull(dtResult.Rows(0)("Campaña_Fin")), "- / - / -", Convert.ToDateTime(dtResult.Rows(0)("Campaña_Fin")).ToString("dd/MM/yyyy"))
+            LblInicioInseminacion4.Text = If(IsDBNull(dtResult.Rows(0)("Monta_Inicio")), "- / - / -", Convert.ToDateTime(dtResult.Rows(0)("Monta_Inicio")).ToString("dd/MM/yyyy"))
+            LblFinInseminacion4.Text = If(IsDBNull(dtResult.Rows(0)("Monta_Fin")), "- / - / -", Convert.ToDateTime(dtResult.Rows(0)("Monta_Fin")).ToString("dd/MM/yyyy"))
+            LblInicioChanchilla4.Text = If(IsDBNull(dtResult.Rows(0)("Chanchilla_Inicio")), "- / - / -", Convert.ToDateTime(dtResult.Rows(0)("Chanchilla_Inicio")).ToString("dd/MM/yyyy"))
+            LblFinChanchilla4.Text = If(IsDBNull(dtResult.Rows(0)("Chanchilla_Fin")), "- / - / -", Convert.ToDateTime(dtResult.Rows(0)("Chanchilla_Fin")).ToString("dd/MM/yyyy"))
+            LblLotesInvolucrados4.Text = If(IsDBNull(dtResult.Rows(0)("LotesInvolucrados")), "- / - / -", dtResult.Rows(0)("LotesInvolucrados").ToString().Replace(",", Environment.NewLine))
+
+            dtgListado4.DataSource = dsResult.Tables(1)
+        End If
+    End Sub
+
+    Private Sub dtgListado4_InitializeRow(sender As Object, e As Infragistics.Win.UltraWinGrid.InitializeRowEventArgs) Handles dtgListado4.InitializeRow
+        If e.Row.Band.Index = 0 Then
+            Dim colVerPDF As Infragistics.Win.UltraWinGrid.UltraGridColumn
+            If dtgListado4.DisplayLayout.Bands(0).Columns.Exists("[+]") Then
+                colVerPDF = dtgListado4.DisplayLayout.Bands(0).Columns("[+]")
+                colVerPDF.Style = Infragistics.Win.UltraWinGrid.ColumnStyle.Button
+                colVerPDF.ButtonDisplayStyle = Infragistics.Win.UltraWinGrid.ButtonDisplayStyle.Always
+                colVerPDF.Width = sizeButtonVerPDF
+                colVerPDF.MinWidth = sizeButtonVerPDF
+                colVerPDF.MaxWidth = sizeButtonVerPDF
+
+                If Not e.ReInitialize Then
+                    e.Row.Cells("[+]").Value = "[+]"
+                    e.Row.Cells("[+]").Appearance.TextHAlign = Infragistics.Win.HAlign.Center
+                End If
+            End If
+
+
+            ' === Ancho fijo para la columna Concepto ===
+            If dtgListado4.DisplayLayout.Bands(0).Columns.Exists("Concepto") Then
+                Dim colConcepto As Infragistics.Win.UltraWinGrid.UltraGridColumn
+                colConcepto = dtgListado4.DisplayLayout.Bands(0).Columns("Concepto")
+                colConcepto.Width = sizeButtonConcepto
+                colConcepto.MinWidth = sizeButtonConcepto
+                colConcepto.MaxWidth = sizeButtonConcepto
+            End If
+
+            ' === Bloquear celdas calculadas por Id ===
+            If e.Row.Cells.Exists("Id") AndAlso e.Row.Cells.Exists("Monto") Then
+                Dim idFila As String = e.Row.Cells("Id").Value.ToString()
+                Dim idsCalculados As New List(Of String) From {"RP22", "RP23", "RP24", "RP25", "RP26", "RP27", "RP28", "RP29", "RP30"}
+
+                If idsCalculados.Contains(idFila) Then
+                    ' Bloqueado - fondo gris
+                    e.Row.Cells("Monto").Activation = Infragistics.Win.UltraWinGrid.Activation.NoEdit
+                    e.Row.Cells("Monto").Appearance.BackColor = Color.FromArgb(220, 220, 220)
+                Else
+                    ' Editable - fondo blanco
+                    e.Row.Cells("Monto").Activation = Infragistics.Win.UltraWinGrid.Activation.AllowEdit
+                    e.Row.Cells("Monto").Appearance.BackColor = Color.White
+                End If
+            End If
+
+            ' === Colores especiales por Id ===
+            If e.Row.Cells.Exists("Id") Then
+                Dim idFila As String = e.Row.Cells("Id").Value.ToString()
+                Dim idCostoLechonDestetado As String = "RP31"
+
+                If idFila = idCostoLechonDestetado Then
+                    ' Fila completa verde
+                    e.Row.Appearance.BackColor = Color.FromArgb(34, 139, 34)
+                    e.Row.Appearance.BackColor2 = Color.FromArgb(34, 139, 34)
+                    e.Row.Appearance.ForeColor = Color.White
+                    e.Row.Appearance.FontData.Bold = DefaultableBoolean.True
+
+                    ' Monto con su propio color - texto oscuro legible
+                    e.Row.Cells("Monto").Appearance.BackColor = Color.FromArgb(34, 139, 34)
+                    e.Row.Cells("Monto").Appearance.BackColor2 = Color.FromArgb(34, 139, 34)
+                    e.Row.Cells("Monto").Appearance.FontData.Bold = DefaultableBoolean.True
+                End If
+            End If
+        End If
+    End Sub
+
+    Private Sub dtgListado4_ClickCellButton(sender As Object, e As Infragistics.Win.UltraWinGrid.CellEventArgs) Handles dtgListado4.ClickCellButton
+        Try
+            With dtgListado4
+                If (e.Cell.Column.Key = "[+]") Then
+                    Dim idDetalleVal As String = .ActiveRow.Cells("Id").Value.ToString()
+
+                    If idDetalleVal = "RP21" Then
+                        Dim frm As New FrmRptCostoxKiloDetalleF11 With {
+                            .idDetalle = idDetalleVal,
+                            .idCampaña = CmbCampaña.Value
+                        }
+                        frm.ShowDialog()
+                    ElseIf idDetalleVal = "RP22" Then
+                        Dim frm As New FrmRptCostoxKiloDetalleF12 With {
+                            .idDetalle = idDetalleVal,
+                            .idCampaña = CmbCampaña.Value
+                        }
+                        frm.ShowDialog()
+                    ElseIf idDetalleVal = "RP23" Then
                         Dim frm As New FrmRptCostoxKiloDetalleF8 With {
                             .idDetalle = idDetalleVal,
                             .idCampaña = CmbCampaña.Value
