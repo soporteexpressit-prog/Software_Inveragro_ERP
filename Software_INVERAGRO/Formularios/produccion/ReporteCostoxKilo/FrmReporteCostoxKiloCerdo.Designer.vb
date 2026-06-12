@@ -190,6 +190,7 @@ Partial Class FrmReporteCostoxKiloCerdo
         Me.dtgListado1 = New Infragistics.Win.UltraWinGrid.UltraGrid()
         Me.BarraOpciones1 = New System.Windows.Forms.ToolStrip()
         Me.BtnGuardar1 = New System.Windows.Forms.ToolStripButton()
+        Me.BtnGenerar1 = New System.Windows.Forms.ToolStripButton()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.GrupoFiltros = New System.Windows.Forms.GroupBox()
         Me.CmbAnios = New System.Windows.Forms.ComboBox()
@@ -202,7 +203,16 @@ Partial Class FrmReporteCostoxKiloCerdo
         Me.BackgroundWorker2 = New System.ComponentModel.BackgroundWorker()
         Me.BackgroundWorker3 = New System.ComponentModel.BackgroundWorker()
         Me.BackgroundWorker4 = New System.ComponentModel.BackgroundWorker()
-        Me.BtnGenerar1 = New System.Windows.Forms.ToolStripButton()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.LblAcumuladoReproduccion = New System.Windows.Forms.Label()
+        Me.LblAcumuladoMaternidad = New System.Windows.Forms.Label()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.Label19 = New System.Windows.Forms.Label()
+        Me.LblAcumuladoRecria = New System.Windows.Forms.Label()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.LblAcumuladoEngorde = New System.Windows.Forms.Label()
+        Me.Label26 = New System.Windows.Forms.Label()
+        Me.Label33 = New System.Windows.Forms.Label()
         Me.Panel2.SuspendLayout()
         Me.GroupBox8.SuspendLayout()
         Me.GroupBox7.SuspendLayout()
@@ -232,6 +242,16 @@ Partial Class FrmReporteCostoxKiloCerdo
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.Panel2.Controls.Add(Me.Label26)
+        Me.Panel2.Controls.Add(Me.Label33)
+        Me.Panel2.Controls.Add(Me.LblAcumuladoEngorde)
+        Me.Panel2.Controls.Add(Me.Label16)
+        Me.Panel2.Controls.Add(Me.LblAcumuladoRecria)
+        Me.Panel2.Controls.Add(Me.Label19)
+        Me.Panel2.Controls.Add(Me.LblAcumuladoMaternidad)
+        Me.Panel2.Controls.Add(Me.Label18)
+        Me.Panel2.Controls.Add(Me.LblAcumuladoReproduccion)
+        Me.Panel2.Controls.Add(Me.Label12)
         Me.Panel2.Controls.Add(Me.GroupBox8)
         Me.Panel2.Controls.Add(Me.GroupBox7)
         Me.Panel2.Controls.Add(Me.GroupBox6)
@@ -265,7 +285,7 @@ Partial Class FrmReporteCostoxKiloCerdo
         Me.GroupBox8.Controls.Add(Me.Label37)
         Me.GroupBox8.Controls.Add(Me.Label38)
         Me.GroupBox8.Controls.Add(Me.Label39)
-        Me.GroupBox8.Location = New System.Drawing.Point(1301, 426)
+        Me.GroupBox8.Location = New System.Drawing.Point(1301, 455)
         Me.GroupBox8.Name = "GroupBox8"
         Me.GroupBox8.Size = New System.Drawing.Size(411, 215)
         Me.GroupBox8.TabIndex = 199
@@ -278,7 +298,7 @@ Partial Class FrmReporteCostoxKiloCerdo
         Me.LblLotesInvolucrados4.BackColor = System.Drawing.Color.Transparent
         Me.LblLotesInvolucrados4.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblLotesInvolucrados4.ForeColor = System.Drawing.Color.Black
-        Me.LblLotesInvolucrados4.Location = New System.Drawing.Point(267, 66)
+        Me.LblLotesInvolucrados4.Location = New System.Drawing.Point(267, 56)
         Me.LblLotesInvolucrados4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblLotesInvolucrados4.Name = "LblLotesInvolucrados4"
         Me.LblLotesInvolucrados4.Size = New System.Drawing.Size(12, 13)
@@ -470,7 +490,7 @@ Partial Class FrmReporteCostoxKiloCerdo
         Me.GroupBox7.Controls.Add(Me.Label30)
         Me.GroupBox7.Controls.Add(Me.Label31)
         Me.GroupBox7.Controls.Add(Me.Label32)
-        Me.GroupBox7.Location = New System.Drawing.Point(874, 426)
+        Me.GroupBox7.Location = New System.Drawing.Point(874, 455)
         Me.GroupBox7.Name = "GroupBox7"
         Me.GroupBox7.Size = New System.Drawing.Size(411, 215)
         Me.GroupBox7.TabIndex = 198
@@ -483,7 +503,7 @@ Partial Class FrmReporteCostoxKiloCerdo
         Me.LblLotesInvolucrados3.BackColor = System.Drawing.Color.Transparent
         Me.LblLotesInvolucrados3.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblLotesInvolucrados3.ForeColor = System.Drawing.Color.Black
-        Me.LblLotesInvolucrados3.Location = New System.Drawing.Point(267, 66)
+        Me.LblLotesInvolucrados3.Location = New System.Drawing.Point(267, 56)
         Me.LblLotesInvolucrados3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblLotesInvolucrados3.Name = "LblLotesInvolucrados3"
         Me.LblLotesInvolucrados3.Size = New System.Drawing.Size(12, 13)
@@ -675,7 +695,7 @@ Partial Class FrmReporteCostoxKiloCerdo
         Me.GroupBox6.Controls.Add(Me.Label23)
         Me.GroupBox6.Controls.Add(Me.Label24)
         Me.GroupBox6.Controls.Add(Me.Label25)
-        Me.GroupBox6.Location = New System.Drawing.Point(448, 426)
+        Me.GroupBox6.Location = New System.Drawing.Point(448, 455)
         Me.GroupBox6.Name = "GroupBox6"
         Me.GroupBox6.Size = New System.Drawing.Size(411, 215)
         Me.GroupBox6.TabIndex = 197
@@ -688,7 +708,7 @@ Partial Class FrmReporteCostoxKiloCerdo
         Me.LblLotesInvolucrados2.BackColor = System.Drawing.Color.Transparent
         Me.LblLotesInvolucrados2.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblLotesInvolucrados2.ForeColor = System.Drawing.Color.Black
-        Me.LblLotesInvolucrados2.Location = New System.Drawing.Point(267, 66)
+        Me.LblLotesInvolucrados2.Location = New System.Drawing.Point(267, 56)
         Me.LblLotesInvolucrados2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblLotesInvolucrados2.Name = "LblLotesInvolucrados2"
         Me.LblLotesInvolucrados2.Size = New System.Drawing.Size(12, 13)
@@ -880,7 +900,7 @@ Partial Class FrmReporteCostoxKiloCerdo
         Me.GroupBox5.Controls.Add(Me.Label8)
         Me.GroupBox5.Controls.Add(Me.Label4)
         Me.GroupBox5.Controls.Add(Me.Label2)
-        Me.GroupBox5.Location = New System.Drawing.Point(24, 426)
+        Me.GroupBox5.Location = New System.Drawing.Point(27, 455)
         Me.GroupBox5.Name = "GroupBox5"
         Me.GroupBox5.Size = New System.Drawing.Size(408, 215)
         Me.GroupBox5.TabIndex = 171
@@ -893,7 +913,7 @@ Partial Class FrmReporteCostoxKiloCerdo
         Me.LblLotesInvolucrados1.BackColor = System.Drawing.Color.Transparent
         Me.LblLotesInvolucrados1.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblLotesInvolucrados1.ForeColor = System.Drawing.Color.Black
-        Me.LblLotesInvolucrados1.Location = New System.Drawing.Point(263, 66)
+        Me.LblLotesInvolucrados1.Location = New System.Drawing.Point(263, 56)
         Me.LblLotesInvolucrados1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblLotesInvolucrados1.Name = "LblLotesInvolucrados1"
         Me.LblLotesInvolucrados1.Size = New System.Drawing.Size(12, 13)
@@ -1627,6 +1647,20 @@ Partial Class FrmReporteCostoxKiloCerdo
         Me.BtnGuardar1.Text = "Guardar"
         Me.BtnGuardar1.ToolTipText = "Guardar"
         '
+        'BtnGenerar1
+        '
+        Me.BtnGenerar1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.BtnGenerar1.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnGenerar1.ForeColor = System.Drawing.Color.White
+        Me.BtnGenerar1.Image = Global.Formularios.My.Resources.Resources.buscar16px
+        Me.BtnGenerar1.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BtnGenerar1.Margin = New System.Windows.Forms.Padding(5)
+        Me.BtnGenerar1.Name = "BtnGenerar1"
+        Me.BtnGenerar1.Padding = New System.Windows.Forms.Padding(2)
+        Me.BtnGenerar1.Size = New System.Drawing.Size(89, 28)
+        Me.BtnGenerar1.Text = "Generar"
+        Me.BtnGenerar1.ToolTipText = "Generar"
+        '
         'Label6
         '
         Me.Label6.AutoSize = True
@@ -1842,19 +1876,135 @@ Partial Class FrmReporteCostoxKiloCerdo
         'BackgroundWorker4
         '
         '
-        'BtnGenerar1
+        'Label12
         '
-        Me.BtnGenerar1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.BtnGenerar1.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnGenerar1.ForeColor = System.Drawing.Color.White
-        Me.BtnGenerar1.Image = Global.Formularios.My.Resources.Resources.buscar16px
-        Me.BtnGenerar1.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.BtnGenerar1.Margin = New System.Windows.Forms.Padding(5)
-        Me.BtnGenerar1.Name = "BtnGenerar1"
-        Me.BtnGenerar1.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnGenerar1.Size = New System.Drawing.Size(89, 28)
-        Me.BtnGenerar1.Text = "Generar"
-        Me.BtnGenerar1.ToolTipText = "Generar"
+        Me.Label12.AutoSize = True
+        Me.Label12.BackColor = System.Drawing.Color.Orange
+        Me.Label12.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.ForeColor = System.Drawing.Color.Black
+        Me.Label12.Location = New System.Drawing.Point(159, 429)
+        Me.Label12.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(218, 14)
+        Me.Label12.TabIndex = 197
+        Me.Label12.Text = "Total Acumulado Reproducción :"
+        '
+        'LblAcumuladoReproduccion
+        '
+        Me.LblAcumuladoReproduccion.AutoSize = True
+        Me.LblAcumuladoReproduccion.BackColor = System.Drawing.Color.Orange
+        Me.LblAcumuladoReproduccion.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblAcumuladoReproduccion.ForeColor = System.Drawing.Color.Black
+        Me.LblAcumuladoReproduccion.Location = New System.Drawing.Point(388, 430)
+        Me.LblAcumuladoReproduccion.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblAcumuladoReproduccion.Name = "LblAcumuladoReproduccion"
+        Me.LblAcumuladoReproduccion.Size = New System.Drawing.Size(13, 13)
+        Me.LblAcumuladoReproduccion.TabIndex = 197
+        Me.LblAcumuladoReproduccion.Text = "-"
+        '
+        'LblAcumuladoMaternidad
+        '
+        Me.LblAcumuladoMaternidad.AutoSize = True
+        Me.LblAcumuladoMaternidad.BackColor = System.Drawing.Color.Orange
+        Me.LblAcumuladoMaternidad.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblAcumuladoMaternidad.ForeColor = System.Drawing.Color.Black
+        Me.LblAcumuladoMaternidad.Location = New System.Drawing.Point(820, 430)
+        Me.LblAcumuladoMaternidad.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblAcumuladoMaternidad.Name = "LblAcumuladoMaternidad"
+        Me.LblAcumuladoMaternidad.Size = New System.Drawing.Size(13, 13)
+        Me.LblAcumuladoMaternidad.TabIndex = 200
+        Me.LblAcumuladoMaternidad.Text = "-"
+        '
+        'Label18
+        '
+        Me.Label18.AutoSize = True
+        Me.Label18.BackColor = System.Drawing.Color.Orange
+        Me.Label18.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label18.ForeColor = System.Drawing.Color.Black
+        Me.Label18.Location = New System.Drawing.Point(594, 429)
+        Me.Label18.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(203, 14)
+        Me.Label18.TabIndex = 201
+        Me.Label18.Text = "Total Acumulado Maternidad :"
+        '
+        'Label19
+        '
+        Me.Label19.AutoSize = True
+        Me.Label19.BackColor = System.Drawing.Color.Orange
+        Me.Label19.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label19.ForeColor = System.Drawing.Color.Black
+        Me.Label19.Location = New System.Drawing.Point(1065, 429)
+        Me.Label19.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(171, 14)
+        Me.Label19.TabIndex = 202
+        Me.Label19.Text = "Total Acumulado Recría :"
+        '
+        'LblAcumuladoRecria
+        '
+        Me.LblAcumuladoRecria.AutoSize = True
+        Me.LblAcumuladoRecria.BackColor = System.Drawing.Color.Orange
+        Me.LblAcumuladoRecria.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblAcumuladoRecria.ForeColor = System.Drawing.Color.Black
+        Me.LblAcumuladoRecria.Location = New System.Drawing.Point(1244, 430)
+        Me.LblAcumuladoRecria.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblAcumuladoRecria.Name = "LblAcumuladoRecria"
+        Me.LblAcumuladoRecria.Size = New System.Drawing.Size(13, 13)
+        Me.LblAcumuladoRecria.TabIndex = 203
+        Me.LblAcumuladoRecria.Text = "-"
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.BackColor = System.Drawing.Color.Orange
+        Me.Label16.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label16.ForeColor = System.Drawing.Color.Black
+        Me.Label16.Location = New System.Drawing.Point(1469, 429)
+        Me.Label16.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(183, 14)
+        Me.Label16.TabIndex = 204
+        Me.Label16.Text = "Total Acumulado Engorde :"
+        '
+        'LblAcumuladoEngorde
+        '
+        Me.LblAcumuladoEngorde.AutoSize = True
+        Me.LblAcumuladoEngorde.BackColor = System.Drawing.Color.Orange
+        Me.LblAcumuladoEngorde.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblAcumuladoEngorde.ForeColor = System.Drawing.Color.Black
+        Me.LblAcumuladoEngorde.Location = New System.Drawing.Point(1660, 430)
+        Me.LblAcumuladoEngorde.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblAcumuladoEngorde.Name = "LblAcumuladoEngorde"
+        Me.LblAcumuladoEngorde.Size = New System.Drawing.Size(13, 13)
+        Me.LblAcumuladoEngorde.TabIndex = 205
+        Me.LblAcumuladoEngorde.Text = "-"
+        '
+        'Label26
+        '
+        Me.Label26.AutoSize = True
+        Me.Label26.BackColor = System.Drawing.Color.LimeGreen
+        Me.Label26.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label26.ForeColor = System.Drawing.Color.Black
+        Me.Label26.Location = New System.Drawing.Point(1643, 37)
+        Me.Label26.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label26.Name = "Label26"
+        Me.Label26.Size = New System.Drawing.Size(12, 13)
+        Me.Label26.TabIndex = 207
+        Me.Label26.Text = "-"
+        '
+        'Label33
+        '
+        Me.Label33.AutoSize = True
+        Me.Label33.BackColor = System.Drawing.Color.LimeGreen
+        Me.Label33.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label33.ForeColor = System.Drawing.Color.Black
+        Me.Label33.Location = New System.Drawing.Point(1576, 36)
+        Me.Label33.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label33.Name = "Label33"
+        Me.Label33.Size = New System.Drawing.Size(49, 14)
+        Me.Label33.TabIndex = 206
+        Me.Label33.Text = "Total :"
         '
         'FrmReporteCostoxKiloCerdo
         '
@@ -2003,4 +2153,14 @@ Partial Class FrmReporteCostoxKiloCerdo
     Friend WithEvents BtnGuardar3 As ToolStripButton
     Friend WithEvents BtnGuardar2 As ToolStripButton
     Friend WithEvents BtnGenerar1 As ToolStripButton
+    Friend WithEvents LblAcumuladoReproduccion As Label
+    Friend WithEvents Label12 As Label
+    Friend WithEvents LblAcumuladoRecria As Label
+    Friend WithEvents Label19 As Label
+    Friend WithEvents LblAcumuladoMaternidad As Label
+    Friend WithEvents Label18 As Label
+    Friend WithEvents Label26 As Label
+    Friend WithEvents Label33 As Label
+    Friend WithEvents LblAcumuladoEngorde As Label
+    Friend WithEvents Label16 As Label
 End Class

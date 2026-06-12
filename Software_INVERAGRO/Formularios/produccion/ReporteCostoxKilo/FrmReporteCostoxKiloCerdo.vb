@@ -9,6 +9,10 @@ Public Class FrmReporteCostoxKiloCerdo
     Dim ds As New DataSet
     Dim sizeButtonConcepto As Integer = 275
     Dim sizeButtonVerPDF As Integer = 50
+    Dim acumReproduccion As Decimal = 0D
+    Dim acumMaternidad As Decimal = 0D
+    Dim acumRecria As Decimal = 0D
+    Dim acumEngorde As Decimal = 0D
 
     Private Sub FrmReporteCostoxKiloCerdo_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
@@ -138,6 +142,9 @@ Public Class FrmReporteCostoxKiloCerdo
             LblInicioChanchilla1.Text = If(IsDBNull(dtResult.Rows(0)("Chanchilla_Inicio")), "- / - / -", Convert.ToDateTime(dtResult.Rows(0)("Chanchilla_Inicio")).ToString("dd/MM/yyyy"))
             LblFinChanchilla1.Text = If(IsDBNull(dtResult.Rows(0)("Chanchilla_Fin")), "- / - / -", Convert.ToDateTime(dtResult.Rows(0)("Chanchilla_Fin")).ToString("dd/MM/yyyy"))
             LblLotesInvolucrados1.Text = If(IsDBNull(dtResult.Rows(0)("LotesInvolucrados")), "- / - / -", dtResult.Rows(0)("LotesInvolucrados").ToString().Replace(",", Environment.NewLine))
+
+            acumReproduccion = ObtenerMontoDT(dsResult.Tables(1), "RP11")
+            LblAcumuladoReproduccion.Text = acumReproduccion.ToString("F2")
 
             dtgListado1.DataSource = dsResult.Tables(1)
         End If
@@ -439,6 +446,7 @@ Public Class FrmReporteCostoxKiloCerdo
         Else
             Dim dsResult As DataSet = CType(e.Result, DataSet)
             Dim dtResult As DataTable = dsResult.Tables(0)
+            Dim dtResult2 As DataTable = dsResult.Tables(1)
 
             LblInicioCampana2.Text = If(IsDBNull(dtResult.Rows(0)("Campaña_Inicio")), "- / - / -", Convert.ToDateTime(dtResult.Rows(0)("Campaña_Inicio")).ToString("dd/MM/yyyy"))
             LblFinCampana2.Text = If(IsDBNull(dtResult.Rows(0)("Campaña_Fin")), "- / - / -", Convert.ToDateTime(dtResult.Rows(0)("Campaña_Fin")).ToString("dd/MM/yyyy"))
@@ -447,6 +455,28 @@ Public Class FrmReporteCostoxKiloCerdo
             LblInicioChanchilla2.Text = If(IsDBNull(dtResult.Rows(0)("Chanchilla_Inicio")), "- / - / -", Convert.ToDateTime(dtResult.Rows(0)("Chanchilla_Inicio")).ToString("dd/MM/yyyy"))
             LblFinChanchilla2.Text = If(IsDBNull(dtResult.Rows(0)("Chanchilla_Fin")), "- / - / -", Convert.ToDateTime(dtResult.Rows(0)("Chanchilla_Fin")).ToString("dd/MM/yyyy"))
             LblLotesInvolucrados2.Text = If(IsDBNull(dtResult.Rows(0)("LotesInvolucrados")), "- / - / -", dtResult.Rows(0)("LotesInvolucrados").ToString().Replace(",", Environment.NewLine))
+
+            ' Sumar todos los Montos excepto la fila RP17 misma
+            Dim suma As Decimal = 0D
+            For Each fila As DataRow In dtResult2.Rows
+                Dim id As String = fila("Id").ToString()
+                If id <> "RP17" Then
+                    If Not IsDBNull(fila("Monto")) Then
+                        suma += Convert.ToDecimal(fila("Monto"))
+                    End If
+                End If
+            Next
+
+            ' Asignar el total a la fila RP17
+            For Each fila As DataRow In dtResult2.Rows
+                If fila("Id").ToString() = "RP17" Then
+                    fila("Monto") = suma
+                    Exit For
+                End If
+            Next
+
+            acumMaternidad = acumReproduccion + suma
+            LblAcumuladoMaternidad.Text = acumMaternidad.ToString("F2")
 
             dtgListado2.DataSource = dsResult.Tables(1)
         End If
@@ -616,6 +646,10 @@ Public Class FrmReporteCostoxKiloCerdo
             LblFinChanchilla3.Text = If(IsDBNull(dtResult.Rows(0)("Chanchilla_Fin")), "- / - / -", Convert.ToDateTime(dtResult.Rows(0)("Chanchilla_Fin")).ToString("dd/MM/yyyy"))
             LblLotesInvolucrados3.Text = If(IsDBNull(dtResult.Rows(0)("LotesInvolucrados")), "- / - / -", dtResult.Rows(0)("LotesInvolucrados").ToString().Replace(",", Environment.NewLine))
 
+            Dim rp21 As Decimal = ObtenerMontoDT(dsResult.Tables(1), "RP21")
+            acumRecria = acumMaternidad + rp21
+            LblAcumuladoRecria.Text = acumRecria.ToString("F2")
+
             dtgListado3.DataSource = dsResult.Tables(1)
         End If
     End Sub
@@ -772,6 +806,10 @@ Public Class FrmReporteCostoxKiloCerdo
             LblFinChanchilla4.Text = If(IsDBNull(dtResult.Rows(0)("Chanchilla_Fin")), "- / - / -", Convert.ToDateTime(dtResult.Rows(0)("Chanchilla_Fin")).ToString("dd/MM/yyyy"))
             LblLotesInvolucrados4.Text = If(IsDBNull(dtResult.Rows(0)("LotesInvolucrados")), "- / - / -", dtResult.Rows(0)("LotesInvolucrados").ToString().Replace(",", Environment.NewLine))
 
+            Dim rp31 As Decimal = ObtenerMontoDT(dsResult.Tables(1), "RP31")
+            acumEngorde = acumRecria + rp31
+            LblAcumuladoEngorde.Text = acumEngorde.ToString("F2")
+
             dtgListado4.DataSource = dsResult.Tables(1)
         End If
     End Sub
@@ -871,4 +909,14 @@ Public Class FrmReporteCostoxKiloCerdo
             clsBasicas.controlException(Name, ex)
         End Try
     End Sub
+
+    Private Function ObtenerMontoDT(dt As DataTable, idBuscado As String) As Decimal
+        For Each fila As DataRow In dt.Rows
+            If fila("Id").ToString() = idBuscado Then
+                If IsDBNull(fila("Monto")) Then Return 0D
+                Return Convert.ToDecimal(fila("Monto"))
+            End If
+        Next
+        Return 0D
+    End Function
 End Class
