@@ -174,7 +174,21 @@ Public Class FrmReporteCostoxKiloCerdo
                 Dim idFila As String = e.Row.Cells("Id").Value.ToString()
                 Dim idsCalculados As New List(Of String) From {"RP2", "RP4", "RP6", "RP7", "RP8", "RP9", "RP10", "RP11"}
 
-                If idsCalculados.Contains(idFila) Then
+                Dim monto As Decimal = 0
+                Decimal.TryParse(e.Row.Cells("Monto").Value.ToString(), monto)
+
+                Dim esCalculado As Boolean = idsCalculados.Contains(idFila)
+                Dim bloquear As Boolean
+
+                If esCalculado Then
+                    ' Calculado: bloquea solo si tiene valor (>0). Si es 0, se deja editar.
+                    bloquear = (monto <> 0)
+                Else
+                    ' No calculado: bloquea si el monto es 0 (no tiene valor guardado aún)
+                    bloquear = (monto = 0)
+                End If
+
+                If bloquear Then
                     ' Bloqueado - fondo gris
                     e.Row.Cells("Monto").Activation = Infragistics.Win.UltraWinGrid.Activation.NoEdit
                     e.Row.Cells("Monto").Appearance.BackColor = Color.FromArgb(220, 220, 220)

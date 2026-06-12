@@ -380,6 +380,10 @@ Public Class cnControlAnimal
         Return cls_at.Cd_ConsultarxIdCampaña("[w_pa_detalle_parvo_maternidad]", obj)
     End Function
 
+    Public Function Cn_CostoxKiloLechonRP14Detallado(ByRef obj As coControlAnimal) As DataSet
+        Return cls_at.Cd_ConsultarxIdCampaña("[w_pa_detalle_regalias_maternidad]", obj)
+    End Function
+
     Public Function Cn_CostoxKiloLechonRP15Detallado(ByRef obj As coControlAnimal) As DataSet
         Return cls_at.Cd_ConsultarxIdCampaña("[w_costo_gastos_veterinarios_detalle_maternidad]", obj)
     End Function
