@@ -1,0 +1,3 @@
+﻿Public Class FrmRptCostoxKiloDetalleF13
+
+End Class

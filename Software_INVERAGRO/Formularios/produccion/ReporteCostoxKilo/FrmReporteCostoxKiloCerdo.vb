@@ -637,6 +637,7 @@ Public Class FrmReporteCostoxKiloCerdo
         Else
             Dim dsResult As DataSet = CType(e.Result, DataSet)
             Dim dtResult As DataTable = dsResult.Tables(0)
+            Dim dtResult2 As DataTable = dsResult.Tables(1)
 
             LblInicioCampana3.Text = If(IsDBNull(dtResult.Rows(0)("Campaña_Inicio")), "- / - / -", Convert.ToDateTime(dtResult.Rows(0)("Campaña_Inicio")).ToString("dd/MM/yyyy"))
             LblFinCampana3.Text = If(IsDBNull(dtResult.Rows(0)("Campaña_Fin")), "- / - / -", Convert.ToDateTime(dtResult.Rows(0)("Campaña_Fin")).ToString("dd/MM/yyyy"))
@@ -645,6 +646,25 @@ Public Class FrmReporteCostoxKiloCerdo
             LblInicioChanchilla3.Text = If(IsDBNull(dtResult.Rows(0)("Chanchilla_Inicio")), "- / - / -", Convert.ToDateTime(dtResult.Rows(0)("Chanchilla_Inicio")).ToString("dd/MM/yyyy"))
             LblFinChanchilla3.Text = If(IsDBNull(dtResult.Rows(0)("Chanchilla_Fin")), "- / - / -", Convert.ToDateTime(dtResult.Rows(0)("Chanchilla_Fin")).ToString("dd/MM/yyyy"))
             LblLotesInvolucrados3.Text = If(IsDBNull(dtResult.Rows(0)("LotesInvolucrados")), "- / - / -", dtResult.Rows(0)("LotesInvolucrados").ToString().Replace(",", Environment.NewLine))
+
+            ' Sumar todos los Montos excepto la fila RP21 misma
+            Dim suma As Decimal = 0D
+            For Each fila As DataRow In dtResult2.Rows
+                Dim id As String = fila("Id").ToString()
+                If id <> "RP21" Then
+                    If Not IsDBNull(fila("Monto")) Then
+                        suma += Convert.ToDecimal(fila("Monto"))
+                    End If
+                End If
+            Next
+
+            ' Asignar el total a la fila RP21
+            For Each fila As DataRow In dtResult2.Rows
+                If fila("Id").ToString() = "RP21" Then
+                    fila("Monto") = suma
+                    Exit For
+                End If
+            Next
 
             Dim rp21 As Decimal = ObtenerMontoDT(dsResult.Tables(1), "RP21")
             acumRecria = acumMaternidad + rp21
@@ -797,6 +817,7 @@ Public Class FrmReporteCostoxKiloCerdo
         Else
             Dim dsResult As DataSet = CType(e.Result, DataSet)
             Dim dtResult As DataTable = dsResult.Tables(0)
+            Dim dtResult2 As DataTable = dsResult.Tables(1)
 
             LblInicioCampana4.Text = If(IsDBNull(dtResult.Rows(0)("Campaña_Inicio")), "- / - / -", Convert.ToDateTime(dtResult.Rows(0)("Campaña_Inicio")).ToString("dd/MM/yyyy"))
             LblFinCampana4.Text = If(IsDBNull(dtResult.Rows(0)("Campaña_Fin")), "- / - / -", Convert.ToDateTime(dtResult.Rows(0)("Campaña_Fin")).ToString("dd/MM/yyyy"))
@@ -805,6 +826,25 @@ Public Class FrmReporteCostoxKiloCerdo
             LblInicioChanchilla4.Text = If(IsDBNull(dtResult.Rows(0)("Chanchilla_Inicio")), "- / - / -", Convert.ToDateTime(dtResult.Rows(0)("Chanchilla_Inicio")).ToString("dd/MM/yyyy"))
             LblFinChanchilla4.Text = If(IsDBNull(dtResult.Rows(0)("Chanchilla_Fin")), "- / - / -", Convert.ToDateTime(dtResult.Rows(0)("Chanchilla_Fin")).ToString("dd/MM/yyyy"))
             LblLotesInvolucrados4.Text = If(IsDBNull(dtResult.Rows(0)("LotesInvolucrados")), "- / - / -", dtResult.Rows(0)("LotesInvolucrados").ToString().Replace(",", Environment.NewLine))
+
+            ' Sumar todos los Montos excepto la fila RP31 misma
+            Dim suma As Decimal = 0D
+            For Each fila As DataRow In dtResult2.Rows
+                Dim id As String = fila("Id").ToString()
+                If id <> "RP31" Then
+                    If Not IsDBNull(fila("Monto")) Then
+                        suma += Convert.ToDecimal(fila("Monto"))
+                    End If
+                End If
+            Next
+
+            ' Asignar el total a la fila RP31
+            For Each fila As DataRow In dtResult2.Rows
+                If fila("Id").ToString() = "RP31" Then
+                    fila("Monto") = suma
+                    Exit For
+                End If
+            Next
 
             Dim rp31 As Decimal = ObtenerMontoDT(dsResult.Tables(1), "RP31")
             acumEngorde = acumRecria + rp31

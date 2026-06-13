@@ -1939,6 +1939,12 @@
     <Compile Include="produccion\RegularizacionCerdos\FrmRegularizarSalidaConArete.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="produccion\ReporteCostoxKilo\FrmRptCostoxKiloDetalleF13.Designer.vb">
+      <DependentUpon>FrmRptCostoxKiloDetalleF13.vb</DependentUpon>
+    </Compile>
+    <Compile Include="produccion\ReporteCostoxKilo\FrmRptCostoxKiloDetalleF13.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="produccion\ReporteCostoxKilo\FrmRptCostoxKiloDetalleF1.Designer.vb">
       <DependentUpon>FrmRptCostoxKiloDetalleF1.vb</DependentUpon>
     </Compile>
@@ -1961,6 +1967,18 @@
       <DependentUpon>FrmRptCostoxKiloDetalleF12.vb</DependentUpon>
     </Compile>
     <Compile Include="produccion\ReporteCostoxKilo\FrmRptCostoxKiloDetalleF12.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="produccion\ReporteCostoxKilo\FrmRptCostoxKiloDetalleF14.Designer.vb">
+      <DependentUpon>FrmRptCostoxKiloDetalleF14.vb</DependentUpon>
+    </Compile>
+    <Compile Include="produccion\ReporteCostoxKilo\FrmRptCostoxKiloDetalleF14.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="produccion\ReporteCostoxKilo\FrmRptCostoxKiloDetalleF15.Designer.vb">
+      <DependentUpon>FrmRptCostoxKiloDetalleF15.vb</DependentUpon>
+    </Compile>
+    <Compile Include="produccion\ReporteCostoxKilo\FrmRptCostoxKiloDetalleF15.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="produccion\ReporteCostoxKilo\FrmRptCostoxKiloDetalleF2.Designer.vb">
