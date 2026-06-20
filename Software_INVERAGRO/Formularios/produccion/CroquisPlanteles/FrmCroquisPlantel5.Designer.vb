@@ -24,6 +24,11 @@ Partial Class FrmCroquisPlantel5
     Private Sub InitializeComponent()
         Me.PanelPrincipal = New System.Windows.Forms.Panel()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.LblMortalidad = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.LblTotalIngreso = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.LblCampaña = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
@@ -87,11 +92,10 @@ Partial Class FrmCroquisPlantel5
         Me.Galpon16 = New System.Windows.Forms.FlowLayoutPanel()
         Me.Galpon10 = New System.Windows.Forms.FlowLayoutPanel()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
-        Me.LblMortalidad = New System.Windows.Forms.Label()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.LblTotalIngreso = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.LblCampaña = New System.Windows.Forms.Label()
+        Me.LblCapacidadMax = New System.Windows.Forms.Label()
+        Me.LblCapacidadMin = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
         Me.PanelPrincipal.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.Ptbx_Cargando, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -153,7 +157,7 @@ Partial Class FrmCroquisPlantel5
         Me.PanelPrincipal.Controls.Add(Me.Galpon10)
         Me.PanelPrincipal.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PanelPrincipal.Location = New System.Drawing.Point(0, 0)
-        Me.PanelPrincipal.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PanelPrincipal.Margin = New System.Windows.Forms.Padding(2)
         Me.PanelPrincipal.Name = "PanelPrincipal"
         Me.PanelPrincipal.Size = New System.Drawing.Size(1283, 690)
         Me.PanelPrincipal.TabIndex = 181
@@ -161,6 +165,10 @@ Partial Class FrmCroquisPlantel5
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.LightGray
+        Me.Panel1.Controls.Add(Me.LblCapacidadMax)
+        Me.Panel1.Controls.Add(Me.LblCapacidadMin)
+        Me.Panel1.Controls.Add(Me.Label13)
+        Me.Panel1.Controls.Add(Me.Label12)
         Me.Panel1.Controls.Add(Me.LblMortalidad)
         Me.Panel1.Controls.Add(Me.Label11)
         Me.Panel1.Controls.Add(Me.LblTotalIngreso)
@@ -181,8 +189,68 @@ Partial Class FrmCroquisPlantel5
         Me.Panel1.Controls.Add(Me.LblDensidadxCorral)
         Me.Panel1.Location = New System.Drawing.Point(5, 6)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(506, 149)
+        Me.Panel1.Size = New System.Drawing.Size(506, 174)
         Me.Panel1.TabIndex = 100
+        '
+        'LblMortalidad
+        '
+        Me.LblMortalidad.AutoSize = True
+        Me.LblMortalidad.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblMortalidad.ForeColor = System.Drawing.Color.Red
+        Me.LblMortalidad.Location = New System.Drawing.Point(429, 28)
+        Me.LblMortalidad.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.LblMortalidad.Name = "LblMortalidad"
+        Me.LblMortalidad.Size = New System.Drawing.Size(17, 18)
+        Me.LblMortalidad.TabIndex = 117
+        Me.LblMortalidad.Text = "0"
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
+        Me.Label11.ForeColor = System.Drawing.Color.Black
+        Me.Label11.Location = New System.Drawing.Point(316, 29)
+        Me.Label11.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(108, 16)
+        Me.Label11.TabIndex = 116
+        Me.Label11.Text = "Total Mortalidad:"
+        '
+        'LblTotalIngreso
+        '
+        Me.LblTotalIngreso.AutoSize = True
+        Me.LblTotalIngreso.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblTotalIngreso.ForeColor = System.Drawing.Color.Black
+        Me.LblTotalIngreso.Location = New System.Drawing.Point(429, 6)
+        Me.LblTotalIngreso.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.LblTotalIngreso.Name = "LblTotalIngreso"
+        Me.LblTotalIngreso.Size = New System.Drawing.Size(17, 18)
+        Me.LblTotalIngreso.TabIndex = 115
+        Me.LblTotalIngreso.Text = "0"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
+        Me.Label5.ForeColor = System.Drawing.Color.Black
+        Me.Label5.Location = New System.Drawing.Point(335, 7)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(89, 16)
+        Me.Label5.TabIndex = 114
+        Me.Label5.Text = "Total Ingreso:"
+        '
+        'LblCampaña
+        '
+        Me.LblCampaña.AutoSize = True
+        Me.LblCampaña.BackColor = System.Drawing.Color.White
+        Me.LblCampaña.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblCampaña.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.LblCampaña.Location = New System.Drawing.Point(154, 2)
+        Me.LblCampaña.Name = "LblCampaña"
+        Me.LblCampaña.Size = New System.Drawing.Size(20, 25)
+        Me.LblCampaña.TabIndex = 113
+        Me.LblCampaña.Text = "-"
         '
         'Label1
         '
@@ -566,7 +634,7 @@ Partial Class FrmCroquisPlantel5
         '
         Me.Galpon01.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.Galpon01.Location = New System.Drawing.Point(1065, 621)
-        Me.Galpon01.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Galpon01.Margin = New System.Windows.Forms.Padding(2)
         Me.Galpon01.Name = "Galpon01"
         Me.Galpon01.Size = New System.Drawing.Size(465, 90)
         Me.Galpon01.TabIndex = 79
@@ -588,7 +656,7 @@ Partial Class FrmCroquisPlantel5
         '
         Me.Galpon02.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.Galpon02.Location = New System.Drawing.Point(553, 621)
-        Me.Galpon02.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Galpon02.Margin = New System.Windows.Forms.Padding(2)
         Me.Galpon02.Name = "Galpon02"
         Me.Galpon02.Size = New System.Drawing.Size(429, 90)
         Me.Galpon02.TabIndex = 77
@@ -610,7 +678,7 @@ Partial Class FrmCroquisPlantel5
         '
         Me.Galpon03.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.Galpon03.Location = New System.Drawing.Point(25, 621)
-        Me.Galpon03.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Galpon03.Margin = New System.Windows.Forms.Padding(2)
         Me.Galpon03.Name = "Galpon03"
         Me.Galpon03.Size = New System.Drawing.Size(447, 90)
         Me.Galpon03.TabIndex = 75
@@ -632,7 +700,7 @@ Partial Class FrmCroquisPlantel5
         '
         Me.Galpon04.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.Galpon04.Location = New System.Drawing.Point(23, 515)
-        Me.Galpon04.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Galpon04.Margin = New System.Windows.Forms.Padding(2)
         Me.Galpon04.Name = "Galpon04"
         Me.Galpon04.Size = New System.Drawing.Size(452, 90)
         Me.Galpon04.TabIndex = 73
@@ -654,7 +722,7 @@ Partial Class FrmCroquisPlantel5
         '
         Me.Galpon05.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.Galpon05.Location = New System.Drawing.Point(551, 515)
-        Me.Galpon05.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Galpon05.Margin = New System.Windows.Forms.Padding(2)
         Me.Galpon05.Name = "Galpon05"
         Me.Galpon05.Size = New System.Drawing.Size(429, 90)
         Me.Galpon05.TabIndex = 71
@@ -676,7 +744,7 @@ Partial Class FrmCroquisPlantel5
         '
         Me.Galpon06.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.Galpon06.Location = New System.Drawing.Point(1065, 515)
-        Me.Galpon06.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Galpon06.Margin = New System.Windows.Forms.Padding(2)
         Me.Galpon06.Name = "Galpon06"
         Me.Galpon06.Size = New System.Drawing.Size(465, 90)
         Me.Galpon06.TabIndex = 69
@@ -698,7 +766,7 @@ Partial Class FrmCroquisPlantel5
         '
         Me.Galpon07.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.Galpon07.Location = New System.Drawing.Point(1029, 410)
-        Me.Galpon07.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Galpon07.Margin = New System.Windows.Forms.Padding(2)
         Me.Galpon07.Name = "Galpon07"
         Me.Galpon07.Size = New System.Drawing.Size(501, 90)
         Me.Galpon07.TabIndex = 67
@@ -720,7 +788,7 @@ Partial Class FrmCroquisPlantel5
         '
         Me.Galpon08.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.Galpon08.Location = New System.Drawing.Point(429, 410)
-        Me.Galpon08.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Galpon08.Margin = New System.Windows.Forms.Padding(2)
         Me.Galpon08.Name = "Galpon08"
         Me.Galpon08.Size = New System.Drawing.Size(501, 90)
         Me.Galpon08.TabIndex = 65
@@ -742,7 +810,7 @@ Partial Class FrmCroquisPlantel5
         '
         Me.Galpon09.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.Galpon09.Location = New System.Drawing.Point(628, 307)
-        Me.Galpon09.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Galpon09.Margin = New System.Windows.Forms.Padding(2)
         Me.Galpon09.Name = "Galpon09"
         Me.Galpon09.Size = New System.Drawing.Size(903, 90)
         Me.Galpon09.TabIndex = 63
@@ -764,7 +832,7 @@ Partial Class FrmCroquisPlantel5
         '
         Me.Galpon11.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.Galpon11.Location = New System.Drawing.Point(1078, 202)
-        Me.Galpon11.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Galpon11.Margin = New System.Windows.Forms.Padding(2)
         Me.Galpon11.Name = "Galpon11"
         Me.Galpon11.Size = New System.Drawing.Size(501, 90)
         Me.Galpon11.TabIndex = 61
@@ -786,7 +854,7 @@ Partial Class FrmCroquisPlantel5
         '
         Me.Galpon12.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.Galpon12.Location = New System.Drawing.Point(517, 202)
-        Me.Galpon12.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Galpon12.Margin = New System.Windows.Forms.Padding(2)
         Me.Galpon12.Name = "Galpon12"
         Me.Galpon12.Size = New System.Drawing.Size(500, 90)
         Me.Galpon12.TabIndex = 59
@@ -808,7 +876,7 @@ Partial Class FrmCroquisPlantel5
         '
         Me.Galpon13.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.Galpon13.Location = New System.Drawing.Point(517, 108)
-        Me.Galpon13.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Galpon13.Margin = New System.Windows.Forms.Padding(2)
         Me.Galpon13.Name = "Galpon13"
         Me.Galpon13.Size = New System.Drawing.Size(500, 86)
         Me.Galpon13.TabIndex = 57
@@ -830,7 +898,7 @@ Partial Class FrmCroquisPlantel5
         '
         Me.Galpon14.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.Galpon14.Location = New System.Drawing.Point(1078, 110)
-        Me.Galpon14.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Galpon14.Margin = New System.Windows.Forms.Padding(2)
         Me.Galpon14.Name = "Galpon14"
         Me.Galpon14.Size = New System.Drawing.Size(501, 86)
         Me.Galpon14.TabIndex = 55
@@ -852,7 +920,7 @@ Partial Class FrmCroquisPlantel5
         '
         Me.Galpon15.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.Galpon15.Location = New System.Drawing.Point(1078, 14)
-        Me.Galpon15.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Galpon15.Margin = New System.Windows.Forms.Padding(2)
         Me.Galpon15.Name = "Galpon15"
         Me.Galpon15.Size = New System.Drawing.Size(501, 86)
         Me.Galpon15.TabIndex = 53
@@ -899,7 +967,7 @@ Partial Class FrmCroquisPlantel5
         '
         Me.Galpon16.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.Galpon16.Location = New System.Drawing.Point(516, 14)
-        Me.Galpon16.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Galpon16.Margin = New System.Windows.Forms.Padding(2)
         Me.Galpon16.Name = "Galpon16"
         Me.Galpon16.Size = New System.Drawing.Size(501, 86)
         Me.Galpon16.TabIndex = 7
@@ -908,7 +976,7 @@ Partial Class FrmCroquisPlantel5
         '
         Me.Galpon10.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.Galpon10.Location = New System.Drawing.Point(101, 307)
-        Me.Galpon10.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Galpon10.Margin = New System.Windows.Forms.Padding(2)
         Me.Galpon10.Name = "Galpon10"
         Me.Galpon10.Size = New System.Drawing.Size(485, 90)
         Me.Galpon10.TabIndex = 6
@@ -916,65 +984,53 @@ Partial Class FrmCroquisPlantel5
         'BackgroundWorker1
         '
         '
-        'LblMortalidad
+        'LblCapacidadMax
         '
-        Me.LblMortalidad.AutoSize = True
-        Me.LblMortalidad.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblMortalidad.ForeColor = System.Drawing.Color.Red
-        Me.LblMortalidad.Location = New System.Drawing.Point(429, 28)
-        Me.LblMortalidad.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.LblMortalidad.Name = "LblMortalidad"
-        Me.LblMortalidad.Size = New System.Drawing.Size(17, 18)
-        Me.LblMortalidad.TabIndex = 117
-        Me.LblMortalidad.Text = "0"
+        Me.LblCapacidadMax.AutoSize = True
+        Me.LblCapacidadMax.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblCapacidadMax.ForeColor = System.Drawing.Color.Black
+        Me.LblCapacidadMax.Location = New System.Drawing.Point(429, 142)
+        Me.LblCapacidadMax.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.LblCapacidadMax.Name = "LblCapacidadMax"
+        Me.LblCapacidadMax.Size = New System.Drawing.Size(17, 18)
+        Me.LblCapacidadMax.TabIndex = 121
+        Me.LblCapacidadMax.Text = "0"
         '
-        'Label11
+        'LblCapacidadMin
         '
-        Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
-        Me.Label11.ForeColor = System.Drawing.Color.Black
-        Me.Label11.Location = New System.Drawing.Point(316, 29)
-        Me.Label11.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(108, 16)
-        Me.Label11.TabIndex = 116
-        Me.Label11.Text = "Total Mortalidad:"
+        Me.LblCapacidadMin.AutoSize = True
+        Me.LblCapacidadMin.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblCapacidadMin.ForeColor = System.Drawing.Color.Black
+        Me.LblCapacidadMin.Location = New System.Drawing.Point(190, 142)
+        Me.LblCapacidadMin.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.LblCapacidadMin.Name = "LblCapacidadMin"
+        Me.LblCapacidadMin.Size = New System.Drawing.Size(17, 18)
+        Me.LblCapacidadMin.TabIndex = 120
+        Me.LblCapacidadMin.Text = "0"
         '
-        'LblTotalIngreso
+        'Label13
         '
-        Me.LblTotalIngreso.AutoSize = True
-        Me.LblTotalIngreso.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblTotalIngreso.ForeColor = System.Drawing.Color.Black
-        Me.LblTotalIngreso.Location = New System.Drawing.Point(429, 6)
-        Me.LblTotalIngreso.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.LblTotalIngreso.Name = "LblTotalIngreso"
-        Me.LblTotalIngreso.Size = New System.Drawing.Size(17, 18)
-        Me.LblTotalIngreso.TabIndex = 115
-        Me.LblTotalIngreso.Text = "0"
+        Me.Label13.AutoSize = True
+        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
+        Me.Label13.ForeColor = System.Drawing.Color.Black
+        Me.Label13.Location = New System.Drawing.Point(297, 143)
+        Me.Label13.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(127, 16)
+        Me.Label13.TabIndex = 119
+        Me.Label13.Text = "Capacidad Máxima:"
         '
-        'Label5
+        'Label12
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
-        Me.Label5.ForeColor = System.Drawing.Color.Black
-        Me.Label5.Location = New System.Drawing.Point(335, 7)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(89, 16)
-        Me.Label5.TabIndex = 114
-        Me.Label5.Text = "Total Ingreso:"
-        '
-        'LblCampaña
-        '
-        Me.LblCampaña.AutoSize = True
-        Me.LblCampaña.BackColor = System.Drawing.Color.White
-        Me.LblCampaña.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblCampaña.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.LblCampaña.Location = New System.Drawing.Point(154, 2)
-        Me.LblCampaña.Name = "LblCampaña"
-        Me.LblCampaña.Size = New System.Drawing.Size(20, 25)
-        Me.LblCampaña.TabIndex = 113
-        Me.LblCampaña.Text = "-"
+        Me.Label12.AutoSize = True
+        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
+        Me.Label12.ForeColor = System.Drawing.Color.Black
+        Me.Label12.Location = New System.Drawing.Point(63, 143)
+        Me.Label12.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(123, 16)
+        Me.Label12.TabIndex = 118
+        Me.Label12.Text = "Capacidad Mínima:"
         '
         'FrmCroquisPlantel5
         '
@@ -982,7 +1038,7 @@ Partial Class FrmCroquisPlantel5
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1283, 690)
         Me.Controls.Add(Me.PanelPrincipal)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "FrmCroquisPlantel5"
@@ -1067,4 +1123,8 @@ Partial Class FrmCroquisPlantel5
     Friend WithEvents LblTotalIngreso As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents LblCampaña As Label
+    Friend WithEvents LblCapacidadMax As Label
+    Friend WithEvents LblCapacidadMin As Label
+    Friend WithEvents Label13 As Label
+    Friend WithEvents Label12 As Label
 End Class

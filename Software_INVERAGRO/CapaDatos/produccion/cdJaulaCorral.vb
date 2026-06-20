@@ -24,6 +24,7 @@ Public Class cdJaulaCorral
                 .AddWithValue("@ancho", SqlDbType.Decimal).Value = obj.Ancho
                 .AddWithValue("@abreviatura", SqlDbType.VarChar).Value = obj.Abreviatura
                 .AddWithValue("@esClinica", SqlDbType.VarChar).Value = obj.EsClinica
+                .AddWithValue("@esEmbarcadero", SqlDbType.VarChar).Value = obj.EsEmbarcadero
                 .Add("@msj", SqlDbType.VarChar, 100).Direction = 2
                 .Add("@coderror", SqlDbType.Int).Direction = 2
             End With

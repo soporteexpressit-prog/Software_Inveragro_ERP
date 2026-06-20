@@ -70,13 +70,17 @@ Partial Class FrmCroquisPlantel3
         Me.Label10 = New System.Windows.Forms.Label()
         Me.PanelPrincipal = New System.Windows.Forms.Panel()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.LblMortalidad = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.LblTotalIngreso = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.LblCampaña = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Ptbx_Cargando = New System.Windows.Forms.PictureBox()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.LblTotalIngreso = New System.Windows.Forms.Label()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.LblMortalidad = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.LblCapacidadMin = New System.Windows.Forms.Label()
+        Me.LblCapacidadMax = New System.Windows.Forms.Label()
         Me.PanelPrincipal.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.Ptbx_Cargando, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -669,6 +673,10 @@ Partial Class FrmCroquisPlantel3
         '
         Me.Panel1.BackColor = System.Drawing.Color.LightGray
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel1.Controls.Add(Me.LblCapacidadMax)
+        Me.Panel1.Controls.Add(Me.LblCapacidadMin)
+        Me.Panel1.Controls.Add(Me.Label13)
+        Me.Panel1.Controls.Add(Me.Label12)
         Me.Panel1.Controls.Add(Me.LblMortalidad)
         Me.Panel1.Controls.Add(Me.Label11)
         Me.Panel1.Controls.Add(Me.LblTotalIngreso)
@@ -689,8 +697,56 @@ Partial Class FrmCroquisPlantel3
         Me.Panel1.Controls.Add(Me.LblTotalAniGranja)
         Me.Panel1.Location = New System.Drawing.Point(29, 13)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(546, 149)
+        Me.Panel1.Size = New System.Drawing.Size(555, 174)
         Me.Panel1.TabIndex = 108
+        '
+        'LblMortalidad
+        '
+        Me.LblMortalidad.AutoSize = True
+        Me.LblMortalidad.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblMortalidad.ForeColor = System.Drawing.Color.Red
+        Me.LblMortalidad.Location = New System.Drawing.Point(470, 30)
+        Me.LblMortalidad.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.LblMortalidad.Name = "LblMortalidad"
+        Me.LblMortalidad.Size = New System.Drawing.Size(17, 18)
+        Me.LblMortalidad.TabIndex = 112
+        Me.LblMortalidad.Text = "0"
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
+        Me.Label11.ForeColor = System.Drawing.Color.Black
+        Me.Label11.Location = New System.Drawing.Point(358, 31)
+        Me.Label11.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(108, 16)
+        Me.Label11.TabIndex = 111
+        Me.Label11.Text = "Total Mortalidad:"
+        '
+        'LblTotalIngreso
+        '
+        Me.LblTotalIngreso.AutoSize = True
+        Me.LblTotalIngreso.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblTotalIngreso.ForeColor = System.Drawing.Color.Black
+        Me.LblTotalIngreso.Location = New System.Drawing.Point(470, 8)
+        Me.LblTotalIngreso.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.LblTotalIngreso.Name = "LblTotalIngreso"
+        Me.LblTotalIngreso.Size = New System.Drawing.Size(17, 18)
+        Me.LblTotalIngreso.TabIndex = 110
+        Me.LblTotalIngreso.Text = "0"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
+        Me.Label5.ForeColor = System.Drawing.Color.Black
+        Me.Label5.Location = New System.Drawing.Point(377, 9)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(89, 16)
+        Me.Label5.TabIndex = 109
+        Me.Label5.Text = "Total Ingreso:"
         '
         'LblCampaña
         '
@@ -728,53 +784,53 @@ Partial Class FrmCroquisPlantel3
         Me.Ptbx_Cargando.TabStop = False
         Me.Ptbx_Cargando.Visible = False
         '
-        'Label5
+        'Label12
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
-        Me.Label5.ForeColor = System.Drawing.Color.Black
-        Me.Label5.Location = New System.Drawing.Point(377, 9)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(89, 16)
-        Me.Label5.TabIndex = 109
-        Me.Label5.Text = "Total Ingreso:"
+        Me.Label12.AutoSize = True
+        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
+        Me.Label12.ForeColor = System.Drawing.Color.Black
+        Me.Label12.Location = New System.Drawing.Point(66, 141)
+        Me.Label12.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(123, 16)
+        Me.Label12.TabIndex = 113
+        Me.Label12.Text = "Capacidad Mínima:"
         '
-        'LblTotalIngreso
+        'Label13
         '
-        Me.LblTotalIngreso.AutoSize = True
-        Me.LblTotalIngreso.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblTotalIngreso.ForeColor = System.Drawing.Color.Black
-        Me.LblTotalIngreso.Location = New System.Drawing.Point(470, 8)
-        Me.LblTotalIngreso.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.LblTotalIngreso.Name = "LblTotalIngreso"
-        Me.LblTotalIngreso.Size = New System.Drawing.Size(17, 18)
-        Me.LblTotalIngreso.TabIndex = 110
-        Me.LblTotalIngreso.Text = "0"
+        Me.Label13.AutoSize = True
+        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
+        Me.Label13.ForeColor = System.Drawing.Color.Black
+        Me.Label13.Location = New System.Drawing.Point(339, 141)
+        Me.Label13.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(127, 16)
+        Me.Label13.TabIndex = 114
+        Me.Label13.Text = "Capacidad Máxima:"
         '
-        'Label11
+        'LblCapacidadMin
         '
-        Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
-        Me.Label11.ForeColor = System.Drawing.Color.Black
-        Me.Label11.Location = New System.Drawing.Point(358, 31)
-        Me.Label11.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(108, 16)
-        Me.Label11.TabIndex = 111
-        Me.Label11.Text = "Total Mortalidad:"
+        Me.LblCapacidadMin.AutoSize = True
+        Me.LblCapacidadMin.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblCapacidadMin.ForeColor = System.Drawing.Color.Black
+        Me.LblCapacidadMin.Location = New System.Drawing.Point(193, 140)
+        Me.LblCapacidadMin.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.LblCapacidadMin.Name = "LblCapacidadMin"
+        Me.LblCapacidadMin.Size = New System.Drawing.Size(17, 18)
+        Me.LblCapacidadMin.TabIndex = 115
+        Me.LblCapacidadMin.Text = "0"
         '
-        'LblMortalidad
+        'LblCapacidadMax
         '
-        Me.LblMortalidad.AutoSize = True
-        Me.LblMortalidad.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblMortalidad.ForeColor = System.Drawing.Color.Red
-        Me.LblMortalidad.Location = New System.Drawing.Point(470, 30)
-        Me.LblMortalidad.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.LblMortalidad.Name = "LblMortalidad"
-        Me.LblMortalidad.Size = New System.Drawing.Size(17, 18)
-        Me.LblMortalidad.TabIndex = 112
-        Me.LblMortalidad.Text = "0"
+        Me.LblCapacidadMax.AutoSize = True
+        Me.LblCapacidadMax.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblCapacidadMax.ForeColor = System.Drawing.Color.Black
+        Me.LblCapacidadMax.Location = New System.Drawing.Point(470, 140)
+        Me.LblCapacidadMax.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.LblCapacidadMax.Name = "LblCapacidadMax"
+        Me.LblCapacidadMax.Size = New System.Drawing.Size(17, 18)
+        Me.LblCapacidadMax.TabIndex = 116
+        Me.LblCapacidadMax.Text = "0"
         '
         'FrmCroquisPlantel3
         '
@@ -849,4 +905,8 @@ Partial Class FrmCroquisPlantel3
     Friend WithEvents Label5 As Label
     Friend WithEvents LblMortalidad As Label
     Friend WithEvents Label11 As Label
+    Friend WithEvents LblCapacidadMax As Label
+    Friend WithEvents LblCapacidadMin As Label
+    Friend WithEvents Label13 As Label
+    Friend WithEvents Label12 As Label
 End Class

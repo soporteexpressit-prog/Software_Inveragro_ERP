@@ -12,6 +12,7 @@
     Private _Ancho As Decimal
     Private _Abreviatura As String
     Private _EsClinica As String
+    Private _EsEmbarcadero As String
     Private _IdArea As Integer
     Private _Operacion As Integer
     Private _IdCampaña As Integer
@@ -123,6 +124,15 @@
         End Get
         Set(value As String)
             _EsClinica = value
+        End Set
+    End Property
+
+    Public Property EsEmbarcadero As String
+        Get
+            Return _EsEmbarcadero
+        End Get
+        Set(value As String)
+            _EsEmbarcadero = value
         End Set
     End Property
 
