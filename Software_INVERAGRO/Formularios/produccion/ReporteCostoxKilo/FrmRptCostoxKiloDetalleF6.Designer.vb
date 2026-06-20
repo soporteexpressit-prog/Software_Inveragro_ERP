@@ -50,10 +50,10 @@ Partial Class FrmRptCostoxKiloDetalleF6
         Me.Label11 = New System.Windows.Forms.Label()
         Me.LblLotesInvolucrados = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.LblFinChanchilla = New System.Windows.Forms.Label()
-        Me.LblInicioChanchilla = New System.Windows.Forms.Label()
-        Me.LblFinInseminacion = New System.Windows.Forms.Label()
-        Me.LblInicioInseminacion = New System.Windows.Forms.Label()
+        Me.LblFinDestete = New System.Windows.Forms.Label()
+        Me.LblInicioDestete = New System.Windows.Forms.Label()
+        Me.LblFinMaternidad = New System.Windows.Forms.Label()
+        Me.LblInicioMaternidad = New System.Windows.Forms.Label()
         Me.LblFinCampana = New System.Windows.Forms.Label()
         Me.LblInicioCampana = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
@@ -90,10 +90,10 @@ Partial Class FrmRptCostoxKiloDetalleF6
         Me.Panel2.Controls.Add(Me.Label11)
         Me.Panel2.Controls.Add(Me.LblLotesInvolucrados)
         Me.Panel2.Controls.Add(Me.Label1)
-        Me.Panel2.Controls.Add(Me.LblFinChanchilla)
-        Me.Panel2.Controls.Add(Me.LblInicioChanchilla)
-        Me.Panel2.Controls.Add(Me.LblFinInseminacion)
-        Me.Panel2.Controls.Add(Me.LblInicioInseminacion)
+        Me.Panel2.Controls.Add(Me.LblFinDestete)
+        Me.Panel2.Controls.Add(Me.LblInicioDestete)
+        Me.Panel2.Controls.Add(Me.LblFinMaternidad)
+        Me.Panel2.Controls.Add(Me.LblInicioMaternidad)
         Me.Panel2.Controls.Add(Me.LblFinCampana)
         Me.Panel2.Controls.Add(Me.LblInicioCampana)
         Me.Panel2.Controls.Add(Me.Label9)
@@ -267,57 +267,57 @@ Partial Class FrmRptCostoxKiloDetalleF6
         Me.Label1.TabIndex = 207
         Me.Label1.Text = "Lotes Involucrados:"
         '
-        'LblFinChanchilla
+        'LblFinDestete
         '
-        Me.LblFinChanchilla.AutoSize = True
-        Me.LblFinChanchilla.BackColor = System.Drawing.Color.Transparent
-        Me.LblFinChanchilla.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblFinChanchilla.ForeColor = System.Drawing.Color.Black
-        Me.LblFinChanchilla.Location = New System.Drawing.Point(905, 103)
-        Me.LblFinChanchilla.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.LblFinChanchilla.Name = "LblFinChanchilla"
-        Me.LblFinChanchilla.Size = New System.Drawing.Size(48, 13)
-        Me.LblFinChanchilla.TabIndex = 206
-        Me.LblFinChanchilla.Text = "- / - / -"
+        Me.LblFinDestete.AutoSize = True
+        Me.LblFinDestete.BackColor = System.Drawing.Color.Transparent
+        Me.LblFinDestete.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblFinDestete.ForeColor = System.Drawing.Color.Black
+        Me.LblFinDestete.Location = New System.Drawing.Point(905, 103)
+        Me.LblFinDestete.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblFinDestete.Name = "LblFinDestete"
+        Me.LblFinDestete.Size = New System.Drawing.Size(48, 13)
+        Me.LblFinDestete.TabIndex = 206
+        Me.LblFinDestete.Text = "- / - / -"
         '
-        'LblInicioChanchilla
+        'LblInicioDestete
         '
-        Me.LblInicioChanchilla.AutoSize = True
-        Me.LblInicioChanchilla.BackColor = System.Drawing.Color.Yellow
-        Me.LblInicioChanchilla.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblInicioChanchilla.ForeColor = System.Drawing.Color.Black
-        Me.LblInicioChanchilla.Location = New System.Drawing.Point(905, 73)
-        Me.LblInicioChanchilla.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.LblInicioChanchilla.Name = "LblInicioChanchilla"
-        Me.LblInicioChanchilla.Size = New System.Drawing.Size(48, 13)
-        Me.LblInicioChanchilla.TabIndex = 205
-        Me.LblInicioChanchilla.Text = "- / - / -"
+        Me.LblInicioDestete.AutoSize = True
+        Me.LblInicioDestete.BackColor = System.Drawing.Color.Transparent
+        Me.LblInicioDestete.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblInicioDestete.ForeColor = System.Drawing.Color.Black
+        Me.LblInicioDestete.Location = New System.Drawing.Point(905, 73)
+        Me.LblInicioDestete.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblInicioDestete.Name = "LblInicioDestete"
+        Me.LblInicioDestete.Size = New System.Drawing.Size(48, 13)
+        Me.LblInicioDestete.TabIndex = 205
+        Me.LblInicioDestete.Text = "- / - / -"
         '
-        'LblFinInseminacion
+        'LblFinMaternidad
         '
-        Me.LblFinInseminacion.AutoSize = True
-        Me.LblFinInseminacion.BackColor = System.Drawing.Color.Yellow
-        Me.LblFinInseminacion.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblFinInseminacion.ForeColor = System.Drawing.Color.Black
-        Me.LblFinInseminacion.Location = New System.Drawing.Point(558, 103)
-        Me.LblFinInseminacion.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.LblFinInseminacion.Name = "LblFinInseminacion"
-        Me.LblFinInseminacion.Size = New System.Drawing.Size(48, 13)
-        Me.LblFinInseminacion.TabIndex = 204
-        Me.LblFinInseminacion.Text = "- / - / -"
+        Me.LblFinMaternidad.AutoSize = True
+        Me.LblFinMaternidad.BackColor = System.Drawing.Color.Transparent
+        Me.LblFinMaternidad.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblFinMaternidad.ForeColor = System.Drawing.Color.Black
+        Me.LblFinMaternidad.Location = New System.Drawing.Point(558, 103)
+        Me.LblFinMaternidad.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblFinMaternidad.Name = "LblFinMaternidad"
+        Me.LblFinMaternidad.Size = New System.Drawing.Size(48, 13)
+        Me.LblFinMaternidad.TabIndex = 204
+        Me.LblFinMaternidad.Text = "- / - / -"
         '
-        'LblInicioInseminacion
+        'LblInicioMaternidad
         '
-        Me.LblInicioInseminacion.AutoSize = True
-        Me.LblInicioInseminacion.BackColor = System.Drawing.Color.Transparent
-        Me.LblInicioInseminacion.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblInicioInseminacion.ForeColor = System.Drawing.Color.Black
-        Me.LblInicioInseminacion.Location = New System.Drawing.Point(558, 73)
-        Me.LblInicioInseminacion.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.LblInicioInseminacion.Name = "LblInicioInseminacion"
-        Me.LblInicioInseminacion.Size = New System.Drawing.Size(48, 13)
-        Me.LblInicioInseminacion.TabIndex = 203
-        Me.LblInicioInseminacion.Text = "- / - / -"
+        Me.LblInicioMaternidad.AutoSize = True
+        Me.LblInicioMaternidad.BackColor = System.Drawing.Color.Transparent
+        Me.LblInicioMaternidad.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblInicioMaternidad.ForeColor = System.Drawing.Color.Black
+        Me.LblInicioMaternidad.Location = New System.Drawing.Point(558, 73)
+        Me.LblInicioMaternidad.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblInicioMaternidad.Name = "LblInicioMaternidad"
+        Me.LblInicioMaternidad.Size = New System.Drawing.Size(48, 13)
+        Me.LblInicioMaternidad.TabIndex = 203
+        Me.LblInicioMaternidad.Text = "- / - / -"
         '
         'LblFinCampana
         '
@@ -351,12 +351,12 @@ Partial Class FrmRptCostoxKiloDetalleF6
         Me.Label9.BackColor = System.Drawing.Color.Transparent
         Me.Label9.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label9.Location = New System.Drawing.Point(789, 102)
+        Me.Label9.Location = New System.Drawing.Point(806, 102)
         Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(108, 14)
+        Me.Label9.Size = New System.Drawing.Size(91, 14)
         Me.Label9.TabIndex = 200
-        Me.Label9.Text = "Fin Chanchilla :"
+        Me.Label9.Text = "Fin Destete :"
         '
         'Label10
         '
@@ -364,12 +364,12 @@ Partial Class FrmRptCostoxKiloDetalleF6
         Me.Label10.BackColor = System.Drawing.Color.Transparent
         Me.Label10.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label10.Location = New System.Drawing.Point(772, 72)
+        Me.Label10.Location = New System.Drawing.Point(789, 72)
         Me.Label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(125, 14)
+        Me.Label10.Size = New System.Drawing.Size(108, 14)
         Me.Label10.TabIndex = 199
-        Me.Label10.Text = "Inicio Chanchilla :"
+        Me.Label10.Text = "Inicio Destete :"
         '
         'Label7
         '
@@ -377,12 +377,12 @@ Partial Class FrmRptCostoxKiloDetalleF6
         Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label7.Location = New System.Drawing.Point(422, 102)
+        Me.Label7.Location = New System.Drawing.Point(436, 102)
         Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(128, 14)
+        Me.Label7.Size = New System.Drawing.Size(114, 14)
         Me.Label7.TabIndex = 198
-        Me.Label7.Text = "Fin Inseminación :"
+        Me.Label7.Text = "Fin Maternidad :"
         '
         'Label8
         '
@@ -390,12 +390,12 @@ Partial Class FrmRptCostoxKiloDetalleF6
         Me.Label8.BackColor = System.Drawing.Color.Transparent
         Me.Label8.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label8.Location = New System.Drawing.Point(405, 72)
+        Me.Label8.Location = New System.Drawing.Point(419, 72)
         Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(145, 14)
+        Me.Label8.Size = New System.Drawing.Size(131, 14)
         Me.Label8.TabIndex = 197
-        Me.Label8.Text = "Inicio Inseminación :"
+        Me.Label8.Text = "Inicio Maternidad :"
         '
         'Label4
         '
@@ -597,10 +597,10 @@ Partial Class FrmRptCostoxKiloDetalleF6
     Friend WithEvents Label11 As Label
     Friend WithEvents LblLotesInvolucrados As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents LblFinChanchilla As Label
-    Friend WithEvents LblInicioChanchilla As Label
-    Friend WithEvents LblFinInseminacion As Label
-    Friend WithEvents LblInicioInseminacion As Label
+    Friend WithEvents LblFinDestete As Label
+    Friend WithEvents LblInicioDestete As Label
+    Friend WithEvents LblFinMaternidad As Label
+    Friend WithEvents LblInicioMaternidad As Label
     Friend WithEvents LblFinCampana As Label
     Friend WithEvents LblInicioCampana As Label
     Friend WithEvents Label9 As Label

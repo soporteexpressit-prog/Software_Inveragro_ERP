@@ -111,8 +111,12 @@ Public Class FrmCroquisPlantel3
 
                         Dim cantidadAnimales As Integer = Convert.ToInt32(corralFila("Cantidad Animales"))
                         Dim limiteAnimales As Integer = Convert.ToInt32(corralFila("Límite de Animales"))
+                        Dim esEmbarcadero As String = corralFila("esEmbarcadero").ToString().Trim().ToUpper()
 
-                        If cantidadAnimales = 0 Then
+                        If esEmbarcadero = "SI" Then
+                            corralPanel.BackColor = Color.Aqua
+                            corralPanel.ForeColor = Color.Black
+                        ElseIf cantidadAnimales = 0 Then
                             corralPanel.BackColor = Color.White ' Celda vacía
                         ElseIf cantidadAnimales < limiteAnimales Then
                             corralPanel.BackColor = Color.Red

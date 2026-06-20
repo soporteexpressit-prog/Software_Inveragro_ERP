@@ -45,18 +45,6 @@ Partial Class FrmRptCostoxKiloDetalleF9
         Me.LblNumLechones = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.LblFinChanchilla = New System.Windows.Forms.Label()
-        Me.LblInicioChanchilla = New System.Windows.Forms.Label()
-        Me.LblFinInseminacion = New System.Windows.Forms.Label()
-        Me.LblInicioInseminacion = New System.Windows.Forms.Label()
-        Me.LblFinDestete = New System.Windows.Forms.Label()
-        Me.LblInicioDestete = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.LblTitle = New System.Windows.Forms.Label()
         Me.BarraOpciones = New System.Windows.Forms.ToolStrip()
         Me.BtnExportarprocontrolcerdos = New System.Windows.Forms.ToolStripButton()
@@ -64,6 +52,18 @@ Partial Class FrmRptCostoxKiloDetalleF9
         Me.Ptbx_Cargando = New System.Windows.Forms.PictureBox()
         Me.dtgListado = New Infragistics.Win.UltraWinGrid.UltraGrid()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
+        Me.LblFinDestete = New System.Windows.Forms.Label()
+        Me.LblInicioDestete = New System.Windows.Forms.Label()
+        Me.LblFinMaternidad = New System.Windows.Forms.Label()
+        Me.LblInicioMaternidad = New System.Windows.Forms.Label()
+        Me.LblFinCampana = New System.Windows.Forms.Label()
+        Me.LblInicioCampana = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.Panel2.SuspendLayout()
         Me.BarraOpciones.SuspendLayout()
         CType(Me.Ptbx_Cargando, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -73,6 +73,18 @@ Partial Class FrmRptCostoxKiloDetalleF9
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.Panel2.Controls.Add(Me.LblFinDestete)
+        Me.Panel2.Controls.Add(Me.LblInicioDestete)
+        Me.Panel2.Controls.Add(Me.LblFinMaternidad)
+        Me.Panel2.Controls.Add(Me.LblInicioMaternidad)
+        Me.Panel2.Controls.Add(Me.LblFinCampana)
+        Me.Panel2.Controls.Add(Me.LblInicioCampana)
+        Me.Panel2.Controls.Add(Me.Label9)
+        Me.Panel2.Controls.Add(Me.Label2)
+        Me.Panel2.Controls.Add(Me.Label7)
+        Me.Panel2.Controls.Add(Me.Label8)
+        Me.Panel2.Controls.Add(Me.Label4)
+        Me.Panel2.Controls.Add(Me.Label5)
         Me.Panel2.Controls.Add(Me.LblTotal)
         Me.Panel2.Controls.Add(Me.Label11)
         Me.Panel2.Controls.Add(Me.Label6)
@@ -80,18 +92,6 @@ Partial Class FrmRptCostoxKiloDetalleF9
         Me.Panel2.Controls.Add(Me.LblNumLechones)
         Me.Panel2.Controls.Add(Me.Label3)
         Me.Panel2.Controls.Add(Me.Label1)
-        Me.Panel2.Controls.Add(Me.LblFinChanchilla)
-        Me.Panel2.Controls.Add(Me.LblInicioChanchilla)
-        Me.Panel2.Controls.Add(Me.LblFinInseminacion)
-        Me.Panel2.Controls.Add(Me.LblInicioInseminacion)
-        Me.Panel2.Controls.Add(Me.LblFinDestete)
-        Me.Panel2.Controls.Add(Me.LblInicioDestete)
-        Me.Panel2.Controls.Add(Me.Label9)
-        Me.Panel2.Controls.Add(Me.Label10)
-        Me.Panel2.Controls.Add(Me.Label7)
-        Me.Panel2.Controls.Add(Me.Label8)
-        Me.Panel2.Controls.Add(Me.Label4)
-        Me.Panel2.Controls.Add(Me.Label2)
         Me.Panel2.Controls.Add(Me.LblTitle)
         Me.Panel2.Controls.Add(Me.BarraOpciones)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
@@ -146,7 +146,7 @@ Partial Class FrmRptCostoxKiloDetalleF9
         Me.LblCostoVeteBruto.BackColor = System.Drawing.Color.Transparent
         Me.LblCostoVeteBruto.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblCostoVeteBruto.ForeColor = System.Drawing.Color.Black
-        Me.LblCostoVeteBruto.Location = New System.Drawing.Point(558, 125)
+        Me.LblCostoVeteBruto.Location = New System.Drawing.Point(581, 125)
         Me.LblCostoVeteBruto.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblCostoVeteBruto.Name = "LblCostoVeteBruto"
         Me.LblCostoVeteBruto.Size = New System.Drawing.Size(14, 13)
@@ -159,7 +159,7 @@ Partial Class FrmRptCostoxKiloDetalleF9
         Me.LblNumLechones.BackColor = System.Drawing.Color.Transparent
         Me.LblNumLechones.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblNumLechones.ForeColor = System.Drawing.Color.Black
-        Me.LblNumLechones.Location = New System.Drawing.Point(203, 125)
+        Me.LblNumLechones.Location = New System.Drawing.Point(226, 125)
         Me.LblNumLechones.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblNumLechones.Name = "LblNumLechones"
         Me.LblNumLechones.Size = New System.Drawing.Size(14, 13)
@@ -172,7 +172,7 @@ Partial Class FrmRptCostoxKiloDetalleF9
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(379, 124)
+        Me.Label3.Location = New System.Drawing.Point(402, 124)
         Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(171, 14)
@@ -185,168 +185,12 @@ Partial Class FrmRptCostoxKiloDetalleF9
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(18, 124)
+        Me.Label1.Location = New System.Drawing.Point(41, 124)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(177, 14)
         Me.Label1.TabIndex = 207
         Me.Label1.Text = "N° Lechones Destetados :"
-        '
-        'LblFinChanchilla
-        '
-        Me.LblFinChanchilla.AutoSize = True
-        Me.LblFinChanchilla.BackColor = System.Drawing.Color.Transparent
-        Me.LblFinChanchilla.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblFinChanchilla.ForeColor = System.Drawing.Color.Black
-        Me.LblFinChanchilla.Location = New System.Drawing.Point(203, 97)
-        Me.LblFinChanchilla.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.LblFinChanchilla.Name = "LblFinChanchilla"
-        Me.LblFinChanchilla.Size = New System.Drawing.Size(48, 13)
-        Me.LblFinChanchilla.TabIndex = 206
-        Me.LblFinChanchilla.Text = "- / - / -"
-        '
-        'LblInicioChanchilla
-        '
-        Me.LblInicioChanchilla.AutoSize = True
-        Me.LblInicioChanchilla.BackColor = System.Drawing.Color.Transparent
-        Me.LblInicioChanchilla.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblInicioChanchilla.ForeColor = System.Drawing.Color.Black
-        Me.LblInicioChanchilla.Location = New System.Drawing.Point(203, 73)
-        Me.LblInicioChanchilla.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.LblInicioChanchilla.Name = "LblInicioChanchilla"
-        Me.LblInicioChanchilla.Size = New System.Drawing.Size(48, 13)
-        Me.LblInicioChanchilla.TabIndex = 205
-        Me.LblInicioChanchilla.Text = "- / - / -"
-        '
-        'LblFinInseminacion
-        '
-        Me.LblFinInseminacion.AutoSize = True
-        Me.LblFinInseminacion.BackColor = System.Drawing.Color.Yellow
-        Me.LblFinInseminacion.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblFinInseminacion.ForeColor = System.Drawing.Color.Black
-        Me.LblFinInseminacion.Location = New System.Drawing.Point(558, 97)
-        Me.LblFinInseminacion.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.LblFinInseminacion.Name = "LblFinInseminacion"
-        Me.LblFinInseminacion.Size = New System.Drawing.Size(48, 13)
-        Me.LblFinInseminacion.TabIndex = 204
-        Me.LblFinInseminacion.Text = "- / - / -"
-        '
-        'LblInicioInseminacion
-        '
-        Me.LblInicioInseminacion.AutoSize = True
-        Me.LblInicioInseminacion.BackColor = System.Drawing.Color.Transparent
-        Me.LblInicioInseminacion.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblInicioInseminacion.ForeColor = System.Drawing.Color.Black
-        Me.LblInicioInseminacion.Location = New System.Drawing.Point(558, 73)
-        Me.LblInicioInseminacion.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.LblInicioInseminacion.Name = "LblInicioInseminacion"
-        Me.LblInicioInseminacion.Size = New System.Drawing.Size(48, 13)
-        Me.LblInicioInseminacion.TabIndex = 203
-        Me.LblInicioInseminacion.Text = "- / - / -"
-        '
-        'LblFinDestete
-        '
-        Me.LblFinDestete.AutoSize = True
-        Me.LblFinDestete.BackColor = System.Drawing.Color.Yellow
-        Me.LblFinDestete.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblFinDestete.ForeColor = System.Drawing.Color.Black
-        Me.LblFinDestete.Location = New System.Drawing.Point(856, 97)
-        Me.LblFinDestete.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.LblFinDestete.Name = "LblFinDestete"
-        Me.LblFinDestete.Size = New System.Drawing.Size(48, 13)
-        Me.LblFinDestete.TabIndex = 202
-        Me.LblFinDestete.Text = "- / - / -"
-        '
-        'LblInicioDestete
-        '
-        Me.LblInicioDestete.AutoSize = True
-        Me.LblInicioDestete.BackColor = System.Drawing.Color.Transparent
-        Me.LblInicioDestete.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblInicioDestete.ForeColor = System.Drawing.Color.Black
-        Me.LblInicioDestete.Location = New System.Drawing.Point(856, 73)
-        Me.LblInicioDestete.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.LblInicioDestete.Name = "LblInicioDestete"
-        Me.LblInicioDestete.Size = New System.Drawing.Size(48, 13)
-        Me.LblInicioDestete.TabIndex = 201
-        Me.LblInicioDestete.Text = "- / - / -"
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.BackColor = System.Drawing.Color.Transparent
-        Me.Label9.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label9.Location = New System.Drawing.Point(87, 96)
-        Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(108, 14)
-        Me.Label9.TabIndex = 200
-        Me.Label9.Text = "Fin Chanchilla :"
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.BackColor = System.Drawing.Color.Transparent
-        Me.Label10.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label10.Location = New System.Drawing.Point(70, 72)
-        Me.Label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(125, 14)
-        Me.Label10.TabIndex = 199
-        Me.Label10.Text = "Inicio Chanchilla :"
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.BackColor = System.Drawing.Color.Transparent
-        Me.Label7.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label7.Location = New System.Drawing.Point(422, 96)
-        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(128, 14)
-        Me.Label7.TabIndex = 198
-        Me.Label7.Text = "Fin Inseminación :"
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.BackColor = System.Drawing.Color.Transparent
-        Me.Label8.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label8.Location = New System.Drawing.Point(405, 72)
-        Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(145, 14)
-        Me.Label8.TabIndex = 197
-        Me.Label8.Text = "Inicio Inseminación :"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.BackColor = System.Drawing.Color.Transparent
-        Me.Label4.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label4.Location = New System.Drawing.Point(752, 96)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(91, 14)
-        Me.Label4.TabIndex = 196
-        Me.Label4.Text = "Fin Destete :"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(735, 72)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(108, 14)
-        Me.Label2.TabIndex = 195
-        Me.Label2.Text = "Inicio Destete :"
         '
         'LblTitle
         '
@@ -494,6 +338,162 @@ Partial Class FrmRptCostoxKiloDetalleF9
         'BackgroundWorker1
         '
         '
+        'LblFinDestete
+        '
+        Me.LblFinDestete.AutoSize = True
+        Me.LblFinDestete.BackColor = System.Drawing.Color.Yellow
+        Me.LblFinDestete.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblFinDestete.ForeColor = System.Drawing.Color.Black
+        Me.LblFinDestete.Location = New System.Drawing.Point(928, 93)
+        Me.LblFinDestete.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblFinDestete.Name = "LblFinDestete"
+        Me.LblFinDestete.Size = New System.Drawing.Size(48, 13)
+        Me.LblFinDestete.TabIndex = 238
+        Me.LblFinDestete.Text = "- / - / -"
+        '
+        'LblInicioDestete
+        '
+        Me.LblInicioDestete.AutoSize = True
+        Me.LblInicioDestete.BackColor = System.Drawing.Color.Transparent
+        Me.LblInicioDestete.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblInicioDestete.ForeColor = System.Drawing.Color.Black
+        Me.LblInicioDestete.Location = New System.Drawing.Point(928, 63)
+        Me.LblInicioDestete.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblInicioDestete.Name = "LblInicioDestete"
+        Me.LblInicioDestete.Size = New System.Drawing.Size(48, 13)
+        Me.LblInicioDestete.TabIndex = 237
+        Me.LblInicioDestete.Text = "- / - / -"
+        '
+        'LblFinMaternidad
+        '
+        Me.LblFinMaternidad.AutoSize = True
+        Me.LblFinMaternidad.BackColor = System.Drawing.Color.Transparent
+        Me.LblFinMaternidad.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblFinMaternidad.ForeColor = System.Drawing.Color.Black
+        Me.LblFinMaternidad.Location = New System.Drawing.Point(581, 93)
+        Me.LblFinMaternidad.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblFinMaternidad.Name = "LblFinMaternidad"
+        Me.LblFinMaternidad.Size = New System.Drawing.Size(48, 13)
+        Me.LblFinMaternidad.TabIndex = 236
+        Me.LblFinMaternidad.Text = "- / - / -"
+        '
+        'LblInicioMaternidad
+        '
+        Me.LblInicioMaternidad.AutoSize = True
+        Me.LblInicioMaternidad.BackColor = System.Drawing.Color.Yellow
+        Me.LblInicioMaternidad.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblInicioMaternidad.ForeColor = System.Drawing.Color.Black
+        Me.LblInicioMaternidad.Location = New System.Drawing.Point(581, 63)
+        Me.LblInicioMaternidad.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblInicioMaternidad.Name = "LblInicioMaternidad"
+        Me.LblInicioMaternidad.Size = New System.Drawing.Size(48, 13)
+        Me.LblInicioMaternidad.TabIndex = 235
+        Me.LblInicioMaternidad.Text = "- / - / -"
+        '
+        'LblFinCampana
+        '
+        Me.LblFinCampana.AutoSize = True
+        Me.LblFinCampana.BackColor = System.Drawing.Color.Transparent
+        Me.LblFinCampana.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblFinCampana.ForeColor = System.Drawing.Color.Black
+        Me.LblFinCampana.Location = New System.Drawing.Point(226, 93)
+        Me.LblFinCampana.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblFinCampana.Name = "LblFinCampana"
+        Me.LblFinCampana.Size = New System.Drawing.Size(48, 13)
+        Me.LblFinCampana.TabIndex = 234
+        Me.LblFinCampana.Text = "- / - / -"
+        '
+        'LblInicioCampana
+        '
+        Me.LblInicioCampana.AutoSize = True
+        Me.LblInicioCampana.BackColor = System.Drawing.Color.Transparent
+        Me.LblInicioCampana.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblInicioCampana.ForeColor = System.Drawing.Color.Black
+        Me.LblInicioCampana.Location = New System.Drawing.Point(226, 63)
+        Me.LblInicioCampana.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblInicioCampana.Name = "LblInicioCampana"
+        Me.LblInicioCampana.Size = New System.Drawing.Size(48, 13)
+        Me.LblInicioCampana.TabIndex = 233
+        Me.LblInicioCampana.Text = "- / - / -"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.BackColor = System.Drawing.Color.Transparent
+        Me.Label9.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.Label9.Location = New System.Drawing.Point(829, 92)
+        Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(91, 14)
+        Me.Label9.TabIndex = 232
+        Me.Label9.Text = "Fin Destete :"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.Label2.Location = New System.Drawing.Point(812, 62)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(108, 14)
+        Me.Label2.TabIndex = 231
+        Me.Label2.Text = "Inicio Destete :"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.BackColor = System.Drawing.Color.Transparent
+        Me.Label7.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.Label7.Location = New System.Drawing.Point(459, 92)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(114, 14)
+        Me.Label7.TabIndex = 230
+        Me.Label7.Text = "Fin Maternidad :"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.BackColor = System.Drawing.Color.Transparent
+        Me.Label8.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.Label8.Location = New System.Drawing.Point(442, 62)
+        Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(131, 14)
+        Me.Label8.TabIndex = 229
+        Me.Label8.Text = "Inicio Maternidad :"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.BackColor = System.Drawing.Color.Transparent
+        Me.Label4.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.Label4.Location = New System.Drawing.Point(117, 92)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(101, 14)
+        Me.Label4.TabIndex = 228
+        Me.Label4.Text = "Fin Campaña :"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.BackColor = System.Drawing.Color.Transparent
+        Me.Label5.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.Label5.Location = New System.Drawing.Point(100, 62)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(118, 14)
+        Me.Label5.TabIndex = 227
+        Me.Label5.Text = "Inicio Campaña :"
+        '
         'FrmRptCostoxKiloDetalleF9
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -525,18 +525,6 @@ Partial Class FrmRptCostoxKiloDetalleF9
     Friend WithEvents LblNumLechones As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents LblFinChanchilla As Label
-    Friend WithEvents LblInicioChanchilla As Label
-    Friend WithEvents LblFinInseminacion As Label
-    Friend WithEvents LblInicioInseminacion As Label
-    Friend WithEvents LblFinDestete As Label
-    Friend WithEvents LblInicioDestete As Label
-    Friend WithEvents Label9 As Label
-    Friend WithEvents Label10 As Label
-    Friend WithEvents Label7 As Label
-    Friend WithEvents Label8 As Label
-    Friend WithEvents Label4 As Label
-    Friend WithEvents Label2 As Label
     Friend WithEvents LblTitle As Label
     Friend WithEvents BarraOpciones As ToolStrip
     Friend WithEvents BtnExportarprocontrolcerdos As ToolStripButton
@@ -544,4 +532,16 @@ Partial Class FrmRptCostoxKiloDetalleF9
     Friend WithEvents Ptbx_Cargando As PictureBox
     Friend WithEvents dtgListado As Infragistics.Win.UltraWinGrid.UltraGrid
     Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
+    Friend WithEvents LblFinDestete As Label
+    Friend WithEvents LblInicioDestete As Label
+    Friend WithEvents LblFinMaternidad As Label
+    Friend WithEvents LblInicioMaternidad As Label
+    Friend WithEvents LblFinCampana As Label
+    Friend WithEvents LblInicioCampana As Label
+    Friend WithEvents Label9 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label7 As Label
+    Friend WithEvents Label8 As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label5 As Label
 End Class

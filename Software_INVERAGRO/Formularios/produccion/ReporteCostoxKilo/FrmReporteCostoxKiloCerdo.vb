@@ -450,10 +450,10 @@ Public Class FrmReporteCostoxKiloCerdo
 
             LblInicioCampana2.Text = If(IsDBNull(dtResult.Rows(0)("Campaña_Inicio")), "- / - / -", Convert.ToDateTime(dtResult.Rows(0)("Campaña_Inicio")).ToString("dd/MM/yyyy"))
             LblFinCampana2.Text = If(IsDBNull(dtResult.Rows(0)("Campaña_Fin")), "- / - / -", Convert.ToDateTime(dtResult.Rows(0)("Campaña_Fin")).ToString("dd/MM/yyyy"))
-            LblInicioInseminacion2.Text = If(IsDBNull(dtResult.Rows(0)("Monta_Inicio")), "- / - / -", Convert.ToDateTime(dtResult.Rows(0)("Monta_Inicio")).ToString("dd/MM/yyyy"))
-            LblFinInseminacion2.Text = If(IsDBNull(dtResult.Rows(0)("Monta_Fin")), "- / - / -", Convert.ToDateTime(dtResult.Rows(0)("Monta_Fin")).ToString("dd/MM/yyyy"))
-            LblInicioChanchilla2.Text = If(IsDBNull(dtResult.Rows(0)("Chanchilla_Inicio")), "- / - / -", Convert.ToDateTime(dtResult.Rows(0)("Chanchilla_Inicio")).ToString("dd/MM/yyyy"))
-            LblFinChanchilla2.Text = If(IsDBNull(dtResult.Rows(0)("Chanchilla_Fin")), "- / - / -", Convert.ToDateTime(dtResult.Rows(0)("Chanchilla_Fin")).ToString("dd/MM/yyyy"))
+            LblInicioMaternidad.Text = If(IsDBNull(dtResult.Rows(0)("Maternidad_Inicio")), "- / - / -", Convert.ToDateTime(dtResult.Rows(0)("Maternidad_Inicio")).ToString("dd/MM/yyyy"))
+            LblFinMaternidad.Text = If(IsDBNull(dtResult.Rows(0)("Maternidad_Fin")), "- / - / -", Convert.ToDateTime(dtResult.Rows(0)("Maternidad_Fin")).ToString("dd/MM/yyyy"))
+            LblInicioDestete.Text = If(IsDBNull(dtResult.Rows(0)("Destete_Inicio")), "- / - / -", Convert.ToDateTime(dtResult.Rows(0)("Destete_Inicio")).ToString("dd/MM/yyyy"))
+            LblFinDestete.Text = If(IsDBNull(dtResult.Rows(0)("Destete_Fin")), "- / - / -", Convert.ToDateTime(dtResult.Rows(0)("Destete_Fin")).ToString("dd/MM/yyyy"))
             LblLotesInvolucrados2.Text = If(IsDBNull(dtResult.Rows(0)("LotesInvolucrados")), "- / - / -", dtResult.Rows(0)("LotesInvolucrados").ToString().Replace(",", Environment.NewLine))
 
             ' Sumar todos los Montos excepto la fila RP17 misma
@@ -588,6 +588,63 @@ Public Class FrmReporteCostoxKiloCerdo
             clsBasicas.controlException(Name, ex)
         End Try
     End Sub
+
+    Private Sub BtnGuardar2_Click(sender As Object, e As EventArgs) Handles BtnGuardar2.Click
+        Try
+            dtgListado2.PerformAction(Infragistics.Win.UltraWinGrid.UltraGridAction.ExitEditMode)
+
+            If (MessageBox.Show("¿ESTÁ SEGURO DE REGISTRAR ESTOS COSTOS?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.No) Then
+                Return
+            End If
+
+            Dim obj As New coControlAnimal With {
+                .IdCampaña = CmbCampaña.Value,
+                .ListaItems = CreacionArrayCosto2()
+            }
+
+            Dim MensajeBgWk As String = cn.Cn_RegistrarCostoKiloCerdo(obj)
+            If (obj.Coderror = 0) Then
+                msj_ok(MensajeBgWk)
+                ConsultarMaternidad()
+            Else
+                msj_advert(MensajeBgWk)
+            End If
+        Catch ex As Exception
+            clsBasicas.controlException(Name, ex)
+        End Try
+    End Sub
+
+    Function CreacionArrayCosto2() As String
+        Dim array_costos As String = ""
+
+        If (dtgListado2.Rows.Count = 0) Then
+            Return ""
+        End If
+
+        For i = 0 To dtgListado2.Rows.Count - 1
+            If (dtgListado2.Rows(i).Cells("Id").Value IsNot Nothing AndAlso dtgListado2.Rows(i).Cells("Id").Value.ToString.Trim.Length <> 0) Then
+                With dtgListado2.Rows(i)
+                    Dim calculadoValue As String = If(.Cells("Calculado").Value IsNot Nothing AndAlso .Cells("Calculado").Value.ToString().Trim().ToUpper() = "TRUE", "1", "0")
+                    Dim monto As String = If(.Cells("Monto").Value IsNot Nothing AndAlso IsNumeric(.Cells("Monto").Value), CDec(.Cells("Monto").Value).ToString("F4"), "0.0000")
+
+                    array_costos &= .Cells("Id").Value.ToString().Trim() & "|" &
+                                   .Cells("Concepto").Value.ToString().Trim() & "|" &
+                                   monto & "|" &
+                                   calculadoValue & ","
+                End With
+            End If
+        Next
+
+        If (dtgListado2.Rows.Count = 1) Then
+            array_costos &= ","
+        End If
+
+        If array_costos.Length > 0 AndAlso array_costos.EndsWith(",") Then
+            array_costos = array_costos.Substring(0, array_costos.Length - 1)
+        End If
+
+        Return array_costos
+    End Function
 
     Private Sub BtnGenerar3_Click(sender As Object, e As EventArgs) Handles BtnGenerar3.Click
         If CmbCampaña Is Nothing OrElse String.IsNullOrEmpty(CmbCampaña.Text) Then
