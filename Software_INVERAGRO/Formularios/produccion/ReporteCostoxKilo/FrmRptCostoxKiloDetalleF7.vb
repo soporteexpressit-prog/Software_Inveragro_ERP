@@ -11,7 +11,7 @@ Public Class FrmRptCostoxKiloDetalleF7
     Private Sub FrmRptCostoxKiloDetalleF7_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
             Consultar()
-            clsBasicas.Formato_Tablas_Grid(dtgListado1)
+            clsBasicas.Formato_Tablas_Grid_Sin_Ajustar(dtgListado1)
             clsBasicas.Formato_Tablas_Grid(dtgListado2)
         Catch ex As Exception
             clsBasicas.controlException(Name, ex)
@@ -45,7 +45,11 @@ Public Class FrmRptCostoxKiloDetalleF7
             Dim obj As coControlAnimal = CType(e.Argument, coControlAnimal)
             ds = cn.Cn_CostoxKiloLechonRP13Detallado(obj).Copy
             ds.Tables(1).Columns("idControlTratamiento").ColumnMapping = MappingType.Hidden
+            ds.Tables(1).Columns("EstadoEnCalculo").ColumnMapping = MappingType.Hidden
+
             ds.Tables(2).Columns("idVacunacionTratamiento").ColumnMapping = MappingType.Hidden
+            ds.Tables(2).Columns("FechaControl").ColumnMapping = MappingType.Hidden
+            ds.Tables(2).Columns("Producto").ColumnMapping = MappingType.Hidden
             e.Result = ds
         Catch ex As Exception
             e.Cancel = True

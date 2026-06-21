@@ -11,7 +11,7 @@ Public Class FrmRptCostoxKiloDetalleF10
     Private Sub FrmRptCostoxKiloDetalleF10_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
             Consultar()
-            clsBasicas.Formato_Tablas_Grid(dtgListado1)
+            clsBasicas.Formato_Tablas_Grid_Sin_Ajustar(dtgListado1)
             clsBasicas.Formato_Tablas_Grid(dtgListado2)
         Catch ex As Exception
             clsBasicas.controlException(Name, ex)
@@ -47,6 +47,10 @@ Public Class FrmRptCostoxKiloDetalleF10
             'Tabla 1
             ds.Tables(1).Columns("idPersona").ColumnMapping = MappingType.Hidden
             ds.Tables(1).Columns("Area").ColumnMapping = MappingType.Hidden
+            ds.Tables(1).Columns("Plantel").ColumnMapping = MappingType.Hidden
+
+            'Tabla 3
+            ds.Tables(2).Columns("ExtraProrrateada").ColumnMapping = MappingType.Hidden
 
             e.Result = ds
         Catch ex As Exception
