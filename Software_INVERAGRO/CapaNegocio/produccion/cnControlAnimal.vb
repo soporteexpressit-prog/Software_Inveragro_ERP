@@ -420,7 +420,7 @@ Public Class cnControlAnimal
     'CONSULTAS POR COSTO X KILO CERDO - DETALLADO
 
     Public Function Cn_CostoxKiloLechonRP20Detallado(ByRef obj As coControlAnimal) As DataSet
-        Return cls_at.Cd_ConsultarxIdCampaña("[w_pa_detalle_alimento_x_id_engorde]", obj)
+        Return cls_at.Cd_ConsultarxIdCampañaIdRacion("[w_pa_detalle_alimento_x_id_engorde]", obj)
     End Function
 
     Public Function Cn_CostoxKiloLechonRP21Detallado(ByRef obj As coControlAnimal) As DataSet

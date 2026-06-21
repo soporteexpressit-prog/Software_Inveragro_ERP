@@ -1472,6 +1472,22 @@ Public Class cdControlAnimal
         Return ds
     End Function
 
+    Public Function Cd_ConsultarxIdCampañaIdRacion(name As String, obj As coControlAnimal) As DataSet
+        Dim ds As New DataSet
+        Try
+            con.Abrir()
+            Dim da As New SqlDataAdapter(name, con.con)
+            da.SelectCommand.CommandType = 4
+            da.SelectCommand.Parameters.AddWithValue("@idCampaña", obj.IdCampaña)
+            da.SelectCommand.Parameters.AddWithValue("@idRacion", obj.IdProducto)
+            da.Fill(ds)
+        Catch ex As Exception
+            Throw ex
+        End Try
+        con.Salir()
+        Return ds
+    End Function
+
     Public Function Cd_RegistrarCostoKiloCerdo(name As String, obj As coControlAnimal) As String
         Dim mensaje As String
         Dim cmd As New SqlCommand(name, con.con)

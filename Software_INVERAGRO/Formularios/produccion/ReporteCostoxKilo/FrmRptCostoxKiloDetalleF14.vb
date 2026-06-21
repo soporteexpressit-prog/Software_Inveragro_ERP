@@ -7,6 +7,7 @@ Public Class FrmRptCostoxKiloDetalleF14
     Dim ds As New DataSet
     Public idDetalle As String
     Public idCampaña As Integer
+    Public idRacion As Integer
 
     Private Sub FrmRptCostoxKiloDetalleF14_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
@@ -31,7 +32,8 @@ Public Class FrmRptCostoxKiloDetalleF14
             BloquearControladores()
 
             Dim obj As New coControlAnimal With {
-                .idCampaña = idCampaña
+                .IdCampaña = idCampaña,
+                .IdProducto = idRacion
             }
 
             BackgroundWorker1.RunWorkerAsync(obj)

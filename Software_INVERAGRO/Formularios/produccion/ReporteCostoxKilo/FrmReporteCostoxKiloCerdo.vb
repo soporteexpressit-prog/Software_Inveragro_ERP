@@ -1035,57 +1035,64 @@ Public Class FrmReporteCostoxKiloCerdo
                     If idDetalleVal = "RP22" Then
                         Dim frm As New FrmRptCostoxKiloDetalleF14 With {
                             .idDetalle = idDetalleVal,
-                            .idCampaña = CmbCampaña.Value
+                            .idCampaña = CmbCampaña.Value,
+                            .idRacion = 39
                         }
                         frm.ShowDialog()
                     ElseIf idDetalleVal = "RP23" Then
                         Dim frm As New FrmRptCostoxKiloDetalleF14 With {
                             .idDetalle = idDetalleVal,
-                            .idCampaña = CmbCampaña.Value
+                            .idCampaña = CmbCampaña.Value,
+                            .idRacion = 235
                         }
                         frm.ShowDialog()
                     ElseIf idDetalleVal = "RP24" Then
                         Dim frm As New FrmRptCostoxKiloDetalleF14 With {
                             .idDetalle = idDetalleVal,
-                            .idCampaña = CmbCampaña.Value
+                            .idCampaña = CmbCampaña.Value,
+                            .idRacion = 236
                         }
                         frm.ShowDialog()
                     ElseIf idDetalleVal = "RP25" Then
                         Dim frm As New FrmRptCostoxKiloDetalleF14 With {
                             .idDetalle = idDetalleVal,
-                            .idCampaña = CmbCampaña.Value
+                            .idCampaña = CmbCampaña.Value,
+                            .idRacion = 237
                         }
                         frm.ShowDialog()
                     ElseIf idDetalleVal = "RP26" Then
                         Dim frm As New FrmRptCostoxKiloDetalleF14 With {
                             .idDetalle = idDetalleVal,
-                            .idCampaña = CmbCampaña.Value
+                            .idCampaña = CmbCampaña.Value,
+                            .idRacion = 238
                         }
                         frm.ShowDialog()
                     ElseIf idDetalleVal = "RP27" Then
                         Dim frm As New FrmRptCostoxKiloDetalleF14 With {
                             .idDetalle = idDetalleVal,
-                            .idCampaña = CmbCampaña.Value
+                            .idCampaña = CmbCampaña.Value,
+                            .idRacion = 239
                         }
                         frm.ShowDialog()
                     ElseIf idDetalleVal = "RP28" Then
                         Dim frm As New FrmRptCostoxKiloDetalleF14 With {
                             .idDetalle = idDetalleVal,
-                            .idCampaña = CmbCampaña.Value
+                            .idCampaña = CmbCampaña.Value,
+                            .idRacion = 240
                         }
                         frm.ShowDialog()
                     ElseIf idDetalleVal = "RP29" Then
-                        Dim frm As New FrmRptCostoxKiloDetalleF12 With {
+                        Dim frm As New FrmRptCostoxKiloDetalleF15 With {
                             .idDetalle = idDetalleVal,
                             .idCampaña = CmbCampaña.Value
                         }
                         frm.ShowDialog()
                     ElseIf idDetalleVal = "RP30" Then
-                        Dim frm As New FrmRptCostoxKiloDetalleF8 With {
-                            .idDetalle = idDetalleVal,
-                            .idCampaña = CmbCampaña.Value
-                        }
-                        frm.ShowDialog()
+                        'Dim frm As New FrmRptCostoxKiloDetalleF16 With {
+                        '    .idDetalle = idDetalleVal,
+                        '    .idCampaña = CmbCampaña.Value
+                        '}
+                        'frm.ShowDialog()
                     End If
                 End If
             End With

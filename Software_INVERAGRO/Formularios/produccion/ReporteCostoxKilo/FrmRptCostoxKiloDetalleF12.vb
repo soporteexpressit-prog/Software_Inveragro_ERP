@@ -78,7 +78,7 @@ Public Class FrmRptCostoxKiloDetalleF12
                 Dim totalVeteBruto As Decimal = Convert.ToDecimal(dtResult2.Rows(0)("CostoVeterinario_Total_Bruto"))
                 LblCostoVeteBruto.Text = Math.Round(totalVeteBruto, 2).ToString("0.00")
 
-                Dim total As Decimal = Convert.ToDecimal(dtResult2.Rows(0)("GastosVet_XVendido_SinPlantel"))
+                Dim total As Decimal = Convert.ToDecimal(dtResult2.Rows(0)("GastosVet_XVendido_ConPlantel"))
                 LblTotal.Text = Math.Round(total, 2).ToString("0.00")
             End If
         End If
