@@ -914,7 +914,7 @@ Public Class FrmReporteCostoxKiloCerdo
         Try
             Dim obj As coControlAnimal = CType(e.Argument, coControlAnimal)
             ds = cn.Cn_CostoxKiloLechonEngorde(obj).Copy
-            'ds.Tables(1).Columns("Id").ColumnMapping = MappingType.Hidden
+            ds.Tables(1).Columns("Id").ColumnMapping = MappingType.Hidden
             ds.Tables(1).Columns("Calculado").ColumnMapping = MappingType.Hidden
             e.Result = ds
         Catch ex As Exception
