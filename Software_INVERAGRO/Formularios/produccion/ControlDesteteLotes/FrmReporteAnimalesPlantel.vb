@@ -53,6 +53,7 @@ Public Class FrmReporteAnimalesPlantel
             tbtmp.Columns("Campaña").ColumnMapping = MappingType.Hidden
             tbtmp.Columns("totalLotes").ColumnMapping = MappingType.Hidden
             tbtmp.Columns("consumo").ColumnMapping = MappingType.Hidden
+            tbtmp.Columns("Mortalidad Transporte").ColumnMapping = MappingType.Hidden
             e.Result = tbtmp
         Catch ex As Exception
             e.Cancel = True
@@ -173,7 +174,9 @@ Public Class FrmReporteAnimalesPlantel
     Private Function SumarMortalidad() As Integer
         Dim suma As Integer = 0
         For i As Integer = 0 To dtgListado.Rows.Count - 1
-            suma += dtgListado.Rows(i).Cells("Mortalidad").Value
+            Dim mortalidad As Integer = If(IsNumeric(dtgListado.Rows(i).Cells("Mortalidad").Value), CInt(dtgListado.Rows(i).Cells("Mortalidad").Value), 0)
+            Dim regularizacion As Integer = If(dtgListado.Rows(i).Cells.Exists("Regularizacion") AndAlso IsNumeric(dtgListado.Rows(i).Cells("Regularizacion").Value), CInt(dtgListado.Rows(i).Cells("Regularizacion").Value), 0)
+            suma += (mortalidad + regularizacion)
         Next
         Return suma
     End Function
@@ -270,6 +273,7 @@ Public Class FrmReporteAnimalesPlantel
                     clsBasicas.SumarTotales_Formato(dtgListado, e, 10)
                     clsBasicas.SumarTotales_Formato(dtgListado, e, 11)
                     clsBasicas.SumarTotales_Formato(dtgListado, e, 20)
+                    clsBasicas.SumarTotales_Formato(dtgListado, e, 25)
                 Else
                     clsBasicas.PromedioTotales_Formato(dtgListado, e, 4)
                 End If
