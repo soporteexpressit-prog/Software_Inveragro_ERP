@@ -15,7 +15,7 @@ Public Class FrmListaUbicacionxRacion
             dtgListado.DisplayLayout.Bands(0).Columns("Densidad por Corral").Hidden = True
             dtgListado.DisplayLayout.Bands(0).Columns("Dirección").Hidden = True
             dtgListado.DisplayLayout.Bands(0).Columns("Clasificación").Hidden = True
-            dtgListado.DisplayLayout.Bands(0).Columns("+ N° Chanchillas").Hidden = True
+            dtgListado.DisplayLayout.Bands(0).Columns("N° Chanchillas / Engorde").Hidden = True
         Catch ex As Exception
             clsBasicas.controlException(Name, ex)
         End Try
