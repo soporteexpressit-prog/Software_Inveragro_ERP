@@ -40,6 +40,8 @@ Partial Class FrmMonitoreoCondicionCorporal
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmMonitoreoCondicionCorporal))
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.LblFechaFin = New System.Windows.Forms.Label()
+        Me.LblFechaInicio = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.LblNumLote = New System.Windows.Forms.Label()
@@ -57,8 +59,8 @@ Partial Class FrmMonitoreoCondicionCorporal
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.BtnGuardar = New System.Windows.Forms.ToolStripButton()
         Me.BtnCerrar = New System.Windows.Forms.ToolStripButton()
-        Me.LblFechaInicio = New System.Windows.Forms.Label()
-        Me.LblFechaFin = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.DtpFecha = New System.Windows.Forms.DateTimePicker()
         Me.Panel2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -78,7 +80,7 @@ Partial Class FrmMonitoreoCondicionCorporal
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
         Me.Panel2.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(529, 467)
+        Me.Panel2.Size = New System.Drawing.Size(529, 505)
         Me.Panel2.TabIndex = 11
         '
         'GroupBox3
@@ -89,12 +91,38 @@ Partial Class FrmMonitoreoCondicionCorporal
         Me.GroupBox3.Controls.Add(Me.Label3)
         Me.GroupBox3.Controls.Add(Me.LblNumLote)
         Me.GroupBox3.Controls.Add(Me.LblNumSemana)
-        Me.GroupBox3.Location = New System.Drawing.Point(13, 163)
+        Me.GroupBox3.Location = New System.Drawing.Point(13, 199)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(508, 96)
         Me.GroupBox3.TabIndex = 162
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "INFORMACIÓN GESTACIÓN"
+        '
+        'LblFechaFin
+        '
+        Me.LblFechaFin.AutoSize = True
+        Me.LblFechaFin.BackColor = System.Drawing.Color.Transparent
+        Me.LblFechaFin.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblFechaFin.ForeColor = System.Drawing.Color.Black
+        Me.LblFechaFin.Location = New System.Drawing.Point(370, 58)
+        Me.LblFechaFin.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblFechaFin.Name = "LblFechaFin"
+        Me.LblFechaFin.Size = New System.Drawing.Size(13, 14)
+        Me.LblFechaFin.TabIndex = 222
+        Me.LblFechaFin.Text = "-"
+        '
+        'LblFechaInicio
+        '
+        Me.LblFechaInicio.AutoSize = True
+        Me.LblFechaInicio.BackColor = System.Drawing.Color.Transparent
+        Me.LblFechaInicio.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblFechaInicio.ForeColor = System.Drawing.Color.Black
+        Me.LblFechaInicio.Location = New System.Drawing.Point(122, 58)
+        Me.LblFechaInicio.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblFechaInicio.Name = "LblFechaInicio"
+        Me.LblFechaInicio.Size = New System.Drawing.Size(13, 14)
+        Me.LblFechaInicio.TabIndex = 221
+        Me.LblFechaInicio.Text = "-"
         '
         'Label4
         '
@@ -151,14 +179,14 @@ Partial Class FrmMonitoreoCondicionCorporal
         'GroupBox2
         '
         Me.GroupBox2.Controls.Add(Me.dtgListado)
-        Me.GroupBox2.Location = New System.Drawing.Point(13, 264)
+        Me.GroupBox2.Location = New System.Drawing.Point(13, 306)
         Me.GroupBox2.Margin = New System.Windows.Forms.Padding(2)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Padding = New System.Windows.Forms.Padding(2)
         Me.GroupBox2.Size = New System.Drawing.Size(508, 193)
         Me.GroupBox2.TabIndex = 161
         Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "DETALLE DE TESTS DE GESTACIÓN"
+        Me.GroupBox2.Text = "DETALLE DE TEST DE GESTACIÓN"
         '
         'dtgListado
         '
@@ -238,6 +266,8 @@ Partial Class FrmMonitoreoCondicionCorporal
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.DtpFecha)
+        Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.BtnBuscarCerda)
         Me.GroupBox1.Controls.Add(Me.LblSeleccionarCerda)
         Me.GroupBox1.Controls.Add(Me.LblCodArete)
@@ -249,7 +279,7 @@ Partial Class FrmMonitoreoCondicionCorporal
         Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2)
-        Me.GroupBox1.Size = New System.Drawing.Size(508, 107)
+        Me.GroupBox1.Size = New System.Drawing.Size(508, 136)
         Me.GroupBox1.TabIndex = 160
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "MONITOREO CONDICIÓN CORPORAL"
@@ -299,7 +329,7 @@ Partial Class FrmMonitoreoCondicionCorporal
         Me.LblDiasEtapa.BackColor = System.Drawing.Color.Transparent
         Me.LblDiasEtapa.Font = New System.Drawing.Font("Verdana", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblDiasEtapa.ForeColor = System.Drawing.Color.Black
-        Me.LblDiasEtapa.Location = New System.Drawing.Point(395, 75)
+        Me.LblDiasEtapa.Location = New System.Drawing.Point(343, 109)
         Me.LblDiasEtapa.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblDiasEtapa.Name = "LblDiasEtapa"
         Me.LblDiasEtapa.Size = New System.Drawing.Size(18, 17)
@@ -312,7 +342,7 @@ Partial Class FrmMonitoreoCondicionCorporal
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(282, 76)
+        Me.Label1.Location = New System.Drawing.Point(239, 110)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(100, 14)
@@ -323,7 +353,7 @@ Partial Class FrmMonitoreoCondicionCorporal
         '
         Me.TxtCondCorporal.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxtCondCorporal.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtCondCorporal.Location = New System.Drawing.Point(158, 74)
+        Me.TxtCondCorporal.Location = New System.Drawing.Point(158, 72)
         Me.TxtCondCorporal.MaxLength = 50
         Me.TxtCondCorporal.Name = "TxtCondCorporal"
         Me.TxtCondCorporal.Size = New System.Drawing.Size(71, 21)
@@ -336,7 +366,7 @@ Partial Class FrmMonitoreoCondicionCorporal
         Me.Label11.BackColor = System.Drawing.Color.Transparent
         Me.Label11.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label11.Location = New System.Drawing.Point(19, 76)
+        Me.Label11.Location = New System.Drawing.Point(19, 75)
         Me.Label11.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(135, 14)
@@ -383,37 +413,32 @@ Partial Class FrmMonitoreoCondicionCorporal
         Me.BtnCerrar.Text = "Salir"
         Me.BtnCerrar.ToolTipText = "Cerrar"
         '
-        'LblFechaInicio
+        'Label2
         '
-        Me.LblFechaInicio.AutoSize = True
-        Me.LblFechaInicio.BackColor = System.Drawing.Color.Transparent
-        Me.LblFechaInicio.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblFechaInicio.ForeColor = System.Drawing.Color.Black
-        Me.LblFechaInicio.Location = New System.Drawing.Point(122, 58)
-        Me.LblFechaInicio.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.LblFechaInicio.Name = "LblFechaInicio"
-        Me.LblFechaInicio.Size = New System.Drawing.Size(13, 14)
-        Me.LblFechaInicio.TabIndex = 221
-        Me.LblFechaInicio.Text = "-"
+        Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.Label2.Location = New System.Drawing.Point(290, 75)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(49, 14)
+        Me.Label2.TabIndex = 217
+        Me.Label2.Text = "Fecha:"
         '
-        'LblFechaFin
+        'DtpFecha
         '
-        Me.LblFechaFin.AutoSize = True
-        Me.LblFechaFin.BackColor = System.Drawing.Color.Transparent
-        Me.LblFechaFin.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblFechaFin.ForeColor = System.Drawing.Color.Black
-        Me.LblFechaFin.Location = New System.Drawing.Point(370, 58)
-        Me.LblFechaFin.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.LblFechaFin.Name = "LblFechaFin"
-        Me.LblFechaFin.Size = New System.Drawing.Size(13, 14)
-        Me.LblFechaFin.TabIndex = 222
-        Me.LblFechaFin.Text = "-"
+        Me.DtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DtpFecha.Location = New System.Drawing.Point(346, 72)
+        Me.DtpFecha.Name = "DtpFecha"
+        Me.DtpFecha.Size = New System.Drawing.Size(102, 20)
+        Me.DtpFecha.TabIndex = 218
         '
         'FrmMonitoreoCondicionCorporal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(529, 467)
+        Me.ClientSize = New System.Drawing.Size(529, 505)
         Me.Controls.Add(Me.Panel2)
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.MaximizeBox = False
@@ -456,4 +481,6 @@ Partial Class FrmMonitoreoCondicionCorporal
     Friend WithEvents LblNumSemana As Label
     Friend WithEvents LblFechaFin As Label
     Friend WithEvents LblFechaInicio As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents DtpFecha As DateTimePicker
 End Class
