@@ -362,6 +362,7 @@ Public Class cdControlAnimal
 
             With cmd.Parameters
                 .AddWithValue("@idCerda", SqlDbType.Int).Value = obj.Codigo
+                .AddWithValue("@fechaControl", SqlDbType.Date).Value = obj.FechaControl
                 .AddWithValue("@condCorporal", SqlDbType.VarChar).Value = obj.CondCorporal
                 .AddWithValue("@diasEtapa", SqlDbType.Int).Value = obj.DiasTranscurridos
                 .AddWithValue("@idUsuario", SqlDbType.Int).Value = obj.IdUsuario
