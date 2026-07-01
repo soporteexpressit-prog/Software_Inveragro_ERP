@@ -87,6 +87,7 @@ Partial Class FrmControlCerda
         Me.dtgListado = New Infragistics.Win.UltraWinGrid.UltraGrid()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         Me.Ptbx_Cargando = New System.Windows.Forms.PictureBox()
+        Me.CondiciónCorporalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel2.SuspendLayout()
         Me.GrupoFiltros.SuspendLayout()
         CType(Me.CmbUbicacion, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -508,7 +509,7 @@ Partial Class FrmControlCerda
         'btnreporteRrhhctrlcapaci
         '
         Me.btnreporteRrhhctrlcapaci.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.btnreporteRrhhctrlcapaci.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnReportePartos, Me.MortalidadMaternidadToolStripMenuItem, Me.HistoricoDePartosToolStripMenuItem, Me.HistoricoDeDesteteToolStripMenuItem, Me.BtnReporteConsumoMaternidad})
+        Me.btnreporteRrhhctrlcapaci.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnReportePartos, Me.MortalidadMaternidadToolStripMenuItem, Me.HistoricoDePartosToolStripMenuItem, Me.HistoricoDeDesteteToolStripMenuItem, Me.BtnReporteConsumoMaternidad, Me.CondiciónCorporalToolStripMenuItem})
         Me.btnreporteRrhhctrlcapaci.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnreporteRrhhctrlcapaci.ForeColor = System.Drawing.Color.White
         Me.btnreporteRrhhctrlcapaci.Image = Global.Formularios.My.Resources.Resources.reporte
@@ -641,6 +642,12 @@ Partial Class FrmControlCerda
         Me.Ptbx_Cargando.TabStop = False
         Me.Ptbx_Cargando.Visible = False
         '
+        'CondiciónCorporalToolStripMenuItem
+        '
+        Me.CondiciónCorporalToolStripMenuItem.Name = "CondiciónCorporalToolStripMenuItem"
+        Me.CondiciónCorporalToolStripMenuItem.Size = New System.Drawing.Size(232, 22)
+        Me.CondiciónCorporalToolStripMenuItem.Text = "Condición Corporal"
+        '
         'FrmControlCerda
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -703,4 +710,5 @@ Partial Class FrmControlCerda
     Friend WithEvents HistoricoDeDesteteToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents HistoricoDePartosToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents BtnReporteConsumoMaternidad As ToolStripMenuItem
+    Friend WithEvents CondiciónCorporalToolStripMenuItem As ToolStripMenuItem
 End Class

@@ -511,7 +511,19 @@ Public Class FrmControlCerda
         End Try
     End Sub
 
+    Private Sub CondiciónCorporalToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CondiciónCorporalToolStripMenuItem.Click
+        Try
+            Dim frm As New FrmReporteCondicionCorporal With {
+                .idUbicacion = CmbUbicacion.Value
+            }
+            frm.ShowDialog()
+        Catch ex As Exception
+            clsBasicas.controlException(Name, ex)
+        End Try
+    End Sub
+
     Private Sub BtnCerrar_Click(sender As Object, e As EventArgs) Handles BtnCerrar.Click
         Dispose()
     End Sub
+
 End Class
