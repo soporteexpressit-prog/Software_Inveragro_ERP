@@ -425,4 +425,8 @@ Public Class cnControlLoteDestete
     Public Function Cn_ReporteConsumoAlimentoMaternidad(ByRef obj As coControlLoteDestete) As DataTable
         Return cls_at.Cd_ConsultarLoteAnio("[w_pa_consumo_alimento_lote_maternidad]", obj)
     End Function
+
+    Public Function Cn_ReporteCondicionCorporal(ByRef obj As coControlLoteDestete) As DataTable
+        Return cls_at.Cd_ReporteCondicionCorporal("[w_pa_reporte_condicion_corporal]", obj)
+    End Function
 End Class

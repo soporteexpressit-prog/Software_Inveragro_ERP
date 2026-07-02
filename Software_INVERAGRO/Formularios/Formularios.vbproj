@@ -1789,6 +1789,12 @@
     <Compile Include="produccion\FrmRegistrarPesosChanchillas.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="produccion\FrmReporteCondicionCorporal.Designer.vb">
+      <DependentUpon>FrmReporteCondicionCorporal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="produccion\FrmReporteCondicionCorporal.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="produccion\FrmReporteConsumoMaternidad.Designer.vb">
       <DependentUpon>FrmReporteConsumoMaternidad.vb</DependentUpon>
     </Compile>
@@ -4884,6 +4890,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="produccion\FrmRegistrarPesosChanchillas.resx">
       <DependentUpon>FrmRegistrarPesosChanchillas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="produccion\FrmReporteCondicionCorporal.resx">
+      <DependentUpon>FrmReporteCondicionCorporal.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="produccion\FrmReporteConsumoMaternidad.resx">
       <DependentUpon>FrmReporteConsumoMaternidad.vb</DependentUpon>

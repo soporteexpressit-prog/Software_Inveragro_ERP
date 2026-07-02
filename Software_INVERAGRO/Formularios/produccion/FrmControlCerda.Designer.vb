@@ -84,10 +84,10 @@ Partial Class FrmControlCerda
         Me.HistoricoDePartosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HistoricoDeDesteteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BtnReporteConsumoMaternidad = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CondiciónCorporalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.dtgListado = New Infragistics.Win.UltraWinGrid.UltraGrid()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         Me.Ptbx_Cargando = New System.Windows.Forms.PictureBox()
-        Me.CondiciónCorporalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel2.SuspendLayout()
         Me.GrupoFiltros.SuspendLayout()
         CType(Me.CmbUbicacion, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -549,6 +549,12 @@ Partial Class FrmControlCerda
         Me.BtnReporteConsumoMaternidad.Size = New System.Drawing.Size(232, 22)
         Me.BtnReporteConsumoMaternidad.Text = "Consumo de Maternidad"
         '
+        'CondiciónCorporalToolStripMenuItem
+        '
+        Me.CondiciónCorporalToolStripMenuItem.Name = "CondiciónCorporalToolStripMenuItem"
+        Me.CondiciónCorporalToolStripMenuItem.Size = New System.Drawing.Size(232, 22)
+        Me.CondiciónCorporalToolStripMenuItem.Text = "Condición Corporal"
+        '
         'dtgListado
         '
         Appearance13.BackColor = System.Drawing.Color.White
@@ -641,12 +647,6 @@ Partial Class FrmControlCerda
         Me.Ptbx_Cargando.TabIndex = 28
         Me.Ptbx_Cargando.TabStop = False
         Me.Ptbx_Cargando.Visible = False
-        '
-        'CondiciónCorporalToolStripMenuItem
-        '
-        Me.CondiciónCorporalToolStripMenuItem.Name = "CondiciónCorporalToolStripMenuItem"
-        Me.CondiciónCorporalToolStripMenuItem.Size = New System.Drawing.Size(232, 22)
-        Me.CondiciónCorporalToolStripMenuItem.Text = "Condición Corporal"
         '
         'FrmControlCerda
         '
