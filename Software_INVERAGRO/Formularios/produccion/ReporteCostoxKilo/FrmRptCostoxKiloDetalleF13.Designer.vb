@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class FrmRptCostoxKiloDetalleF10
+Partial Class FrmRptCostoxKiloDetalleF13
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -55,14 +55,10 @@ Partial Class FrmRptCostoxKiloDetalleF10
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.LblFinDestete = New System.Windows.Forms.Label()
         Me.LblInicioDestete = New System.Windows.Forms.Label()
-        Me.LblFinMaternidad = New System.Windows.Forms.Label()
-        Me.LblInicioMaternidad = New System.Windows.Forms.Label()
         Me.LblFinCampana = New System.Windows.Forms.Label()
         Me.LblInicioCampana = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.LblCostoTotalPersonal = New System.Windows.Forms.Label()
@@ -73,16 +69,16 @@ Partial Class FrmRptCostoxKiloDetalleF10
         Me.Label3 = New System.Windows.Forms.Label()
         Me.LblTitle = New System.Windows.Forms.Label()
         Me.BarraOpciones = New System.Windows.Forms.ToolStrip()
+        Me.BtnCerrar = New System.Windows.Forms.ToolStripButton()
+        Me.Ptbx_Cargando = New System.Windows.Forms.PictureBox()
         Me.dtgListado1 = New Infragistics.Win.UltraWinGrid.UltraGrid()
         Me.dtgListado2 = New Infragistics.Win.UltraWinGrid.UltraGrid()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
-        Me.Ptbx_Cargando = New System.Windows.Forms.PictureBox()
-        Me.BtnCerrar = New System.Windows.Forms.ToolStripButton()
         Me.Panel2.SuspendLayout()
         Me.BarraOpciones.SuspendLayout()
+        CType(Me.Ptbx_Cargando, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dtgListado1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dtgListado2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Ptbx_Cargando, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel2
@@ -90,14 +86,10 @@ Partial Class FrmRptCostoxKiloDetalleF10
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(233, Byte), Integer))
         Me.Panel2.Controls.Add(Me.LblFinDestete)
         Me.Panel2.Controls.Add(Me.LblInicioDestete)
-        Me.Panel2.Controls.Add(Me.LblFinMaternidad)
-        Me.Panel2.Controls.Add(Me.LblInicioMaternidad)
         Me.Panel2.Controls.Add(Me.LblFinCampana)
         Me.Panel2.Controls.Add(Me.LblInicioCampana)
         Me.Panel2.Controls.Add(Me.Label9)
         Me.Panel2.Controls.Add(Me.Label2)
-        Me.Panel2.Controls.Add(Me.Label7)
-        Me.Panel2.Controls.Add(Me.Label8)
         Me.Panel2.Controls.Add(Me.Label4)
         Me.Panel2.Controls.Add(Me.Label5)
         Me.Panel2.Controls.Add(Me.LblCostoTotalPersonal)
@@ -112,8 +104,8 @@ Partial Class FrmRptCostoxKiloDetalleF10
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
         Me.Panel2.Margin = New System.Windows.Forms.Padding(2, 1, 2, 1)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1124, 233)
-        Me.Panel2.TabIndex = 13
+        Me.Panel2.Size = New System.Drawing.Size(1142, 233)
+        Me.Panel2.TabIndex = 14
         '
         'LblFinDestete
         '
@@ -121,7 +113,7 @@ Partial Class FrmRptCostoxKiloDetalleF10
         Me.LblFinDestete.BackColor = System.Drawing.Color.Yellow
         Me.LblFinDestete.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblFinDestete.ForeColor = System.Drawing.Color.Black
-        Me.LblFinDestete.Location = New System.Drawing.Point(895, 94)
+        Me.LblFinDestete.Location = New System.Drawing.Point(548, 94)
         Me.LblFinDestete.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblFinDestete.Name = "LblFinDestete"
         Me.LblFinDestete.Size = New System.Drawing.Size(48, 13)
@@ -131,41 +123,15 @@ Partial Class FrmRptCostoxKiloDetalleF10
         'LblInicioDestete
         '
         Me.LblInicioDestete.AutoSize = True
-        Me.LblInicioDestete.BackColor = System.Drawing.Color.Transparent
+        Me.LblInicioDestete.BackColor = System.Drawing.Color.Yellow
         Me.LblInicioDestete.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblInicioDestete.ForeColor = System.Drawing.Color.Black
-        Me.LblInicioDestete.Location = New System.Drawing.Point(895, 64)
+        Me.LblInicioDestete.Location = New System.Drawing.Point(548, 64)
         Me.LblInicioDestete.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblInicioDestete.Name = "LblInicioDestete"
         Me.LblInicioDestete.Size = New System.Drawing.Size(48, 13)
         Me.LblInicioDestete.TabIndex = 249
         Me.LblInicioDestete.Text = "- / - / -"
-        '
-        'LblFinMaternidad
-        '
-        Me.LblFinMaternidad.AutoSize = True
-        Me.LblFinMaternidad.BackColor = System.Drawing.Color.Transparent
-        Me.LblFinMaternidad.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblFinMaternidad.ForeColor = System.Drawing.Color.Black
-        Me.LblFinMaternidad.Location = New System.Drawing.Point(548, 94)
-        Me.LblFinMaternidad.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.LblFinMaternidad.Name = "LblFinMaternidad"
-        Me.LblFinMaternidad.Size = New System.Drawing.Size(48, 13)
-        Me.LblFinMaternidad.TabIndex = 248
-        Me.LblFinMaternidad.Text = "- / - / -"
-        '
-        'LblInicioMaternidad
-        '
-        Me.LblInicioMaternidad.AutoSize = True
-        Me.LblInicioMaternidad.BackColor = System.Drawing.Color.Yellow
-        Me.LblInicioMaternidad.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblInicioMaternidad.ForeColor = System.Drawing.Color.Black
-        Me.LblInicioMaternidad.Location = New System.Drawing.Point(548, 64)
-        Me.LblInicioMaternidad.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.LblInicioMaternidad.Name = "LblInicioMaternidad"
-        Me.LblInicioMaternidad.Size = New System.Drawing.Size(48, 13)
-        Me.LblInicioMaternidad.TabIndex = 247
-        Me.LblInicioMaternidad.Text = "- / - / -"
         '
         'LblFinCampana
         '
@@ -199,7 +165,7 @@ Partial Class FrmRptCostoxKiloDetalleF10
         Me.Label9.BackColor = System.Drawing.Color.Transparent
         Me.Label9.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label9.Location = New System.Drawing.Point(796, 93)
+        Me.Label9.Location = New System.Drawing.Point(449, 93)
         Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(91, 14)
@@ -212,38 +178,12 @@ Partial Class FrmRptCostoxKiloDetalleF10
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(779, 63)
+        Me.Label2.Location = New System.Drawing.Point(432, 63)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(108, 14)
         Me.Label2.TabIndex = 243
         Me.Label2.Text = "Inicio Destete :"
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.BackColor = System.Drawing.Color.Transparent
-        Me.Label7.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label7.Location = New System.Drawing.Point(426, 93)
-        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(114, 14)
-        Me.Label7.TabIndex = 242
-        Me.Label7.Text = "Fin Maternidad :"
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.BackColor = System.Drawing.Color.Transparent
-        Me.Label8.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label8.Location = New System.Drawing.Point(409, 63)
-        Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(131, 14)
-        Me.Label8.TabIndex = 241
-        Me.Label8.Text = "Inicio Maternidad :"
         '
         'Label4
         '
@@ -373,9 +313,33 @@ Partial Class FrmRptCostoxKiloDetalleF10
         Me.BarraOpciones.Margin = New System.Windows.Forms.Padding(2, 1, 2, 1)
         Me.BarraOpciones.Name = "BarraOpciones"
         Me.BarraOpciones.Padding = New System.Windows.Forms.Padding(0, 0, 2, 0)
-        Me.BarraOpciones.Size = New System.Drawing.Size(1124, 38)
+        Me.BarraOpciones.Size = New System.Drawing.Size(1142, 38)
         Me.BarraOpciones.TabIndex = 52
         Me.BarraOpciones.Text = "ToolStrip1"
+        '
+        'BtnCerrar
+        '
+        Me.BtnCerrar.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnCerrar.ForeColor = System.Drawing.Color.White
+        Me.BtnCerrar.Image = Global.Formularios.My.Resources.Resources.salir
+        Me.BtnCerrar.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BtnCerrar.Margin = New System.Windows.Forms.Padding(5)
+        Me.BtnCerrar.Name = "BtnCerrar"
+        Me.BtnCerrar.Padding = New System.Windows.Forms.Padding(2)
+        Me.BtnCerrar.Size = New System.Drawing.Size(66, 28)
+        Me.BtnCerrar.Text = "Salir"
+        '
+        'Ptbx_Cargando
+        '
+        Me.Ptbx_Cargando.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Ptbx_Cargando.Image = Global.Formularios.My.Resources.Resources.loader
+        Me.Ptbx_Cargando.Location = New System.Drawing.Point(590, 413)
+        Me.Ptbx_Cargando.Name = "Ptbx_Cargando"
+        Me.Ptbx_Cargando.Size = New System.Drawing.Size(43, 37)
+        Me.Ptbx_Cargando.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.Ptbx_Cargando.TabIndex = 41
+        Me.Ptbx_Cargando.TabStop = False
+        Me.Ptbx_Cargando.Visible = False
         '
         'dtgListado1
         '
@@ -451,8 +415,8 @@ Partial Class FrmRptCostoxKiloDetalleF10
         Me.dtgListado1.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dtgListado1.Location = New System.Drawing.Point(0, 233)
         Me.dtgListado1.Name = "dtgListado1"
-        Me.dtgListado1.Size = New System.Drawing.Size(859, 462)
-        Me.dtgListado1.TabIndex = 37
+        Me.dtgListado1.Size = New System.Drawing.Size(877, 449)
+        Me.dtgListado1.TabIndex = 40
         Me.dtgListado1.Text = "UltraGrid1"
         '
         'dtgListado2
@@ -527,65 +491,49 @@ Partial Class FrmRptCostoxKiloDetalleF10
         Me.dtgListado2.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy
         Me.dtgListado2.Dock = System.Windows.Forms.DockStyle.Right
         Me.dtgListado2.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dtgListado2.Location = New System.Drawing.Point(859, 233)
+        Me.dtgListado2.Location = New System.Drawing.Point(877, 233)
         Me.dtgListado2.Name = "dtgListado2"
-        Me.dtgListado2.Size = New System.Drawing.Size(265, 462)
-        Me.dtgListado2.TabIndex = 39
+        Me.dtgListado2.Size = New System.Drawing.Size(265, 449)
+        Me.dtgListado2.TabIndex = 42
         Me.dtgListado2.Text = "UltraGrid1"
         '
         'BackgroundWorker1
         '
         '
-        'Ptbx_Cargando
-        '
-        Me.Ptbx_Cargando.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Ptbx_Cargando.Image = Global.Formularios.My.Resources.Resources.loader
-        Me.Ptbx_Cargando.Location = New System.Drawing.Point(610, 394)
-        Me.Ptbx_Cargando.Name = "Ptbx_Cargando"
-        Me.Ptbx_Cargando.Size = New System.Drawing.Size(43, 37)
-        Me.Ptbx_Cargando.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.Ptbx_Cargando.TabIndex = 38
-        Me.Ptbx_Cargando.TabStop = False
-        Me.Ptbx_Cargando.Visible = False
-        '
-        'BtnCerrar
-        '
-        Me.BtnCerrar.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnCerrar.ForeColor = System.Drawing.Color.White
-        Me.BtnCerrar.Image = Global.Formularios.My.Resources.Resources.salir
-        Me.BtnCerrar.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.BtnCerrar.Margin = New System.Windows.Forms.Padding(5)
-        Me.BtnCerrar.Name = "BtnCerrar"
-        Me.BtnCerrar.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnCerrar.Size = New System.Drawing.Size(66, 28)
-        Me.BtnCerrar.Text = "Salir"
-        '
-        'FrmRptCostoxKiloDetalleF10
+        'FrmRptCostoxKiloDetalleF13
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1124, 695)
+        Me.ClientSize = New System.Drawing.Size(1142, 682)
         Me.Controls.Add(Me.Ptbx_Cargando)
         Me.Controls.Add(Me.dtgListado1)
         Me.Controls.Add(Me.dtgListado2)
         Me.Controls.Add(Me.Panel2)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
-        Me.Name = "FrmRptCostoxKiloDetalleF10"
+        Me.Name = "FrmRptCostoxKiloDetalleF13"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "REPORTE DETALLADO"
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         Me.BarraOpciones.ResumeLayout(False)
         Me.BarraOpciones.PerformLayout()
+        CType(Me.Ptbx_Cargando, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dtgListado1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dtgListado2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Ptbx_Cargando, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents Panel2 As Panel
+    Friend WithEvents LblFinDestete As Label
+    Friend WithEvents LblInicioDestete As Label
+    Friend WithEvents LblFinCampana As Label
+    Friend WithEvents LblInicioCampana As Label
+    Friend WithEvents Label9 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label5 As Label
     Friend WithEvents LblCostoTotalPersonal As Label
     Friend WithEvents Label11 As Label
     Friend WithEvents LblCostoTotalLechon As Label
@@ -599,16 +547,4 @@ Partial Class FrmRptCostoxKiloDetalleF10
     Friend WithEvents dtgListado1 As Infragistics.Win.UltraWinGrid.UltraGrid
     Friend WithEvents dtgListado2 As Infragistics.Win.UltraWinGrid.UltraGrid
     Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
-    Friend WithEvents LblFinDestete As Label
-    Friend WithEvents LblInicioDestete As Label
-    Friend WithEvents LblFinMaternidad As Label
-    Friend WithEvents LblInicioMaternidad As Label
-    Friend WithEvents LblFinCampana As Label
-    Friend WithEvents LblInicioCampana As Label
-    Friend WithEvents Label9 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label7 As Label
-    Friend WithEvents Label8 As Label
-    Friend WithEvents Label4 As Label
-    Friend WithEvents Label5 As Label
 End Class

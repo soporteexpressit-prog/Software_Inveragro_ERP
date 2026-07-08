@@ -11,7 +11,7 @@ Public Class FrmRptCostoxKiloDetalleF10
     Private Sub FrmRptCostoxKiloDetalleF10_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
             Consultar()
-            clsBasicas.Formato_Tablas_Grid(dtgListado1)
+            clsBasicas.Formato_Tablas_Grid_Sin_Ajustar(dtgListado1)
             clsBasicas.Formato_Tablas_Grid(dtgListado2)
         Catch ex As Exception
             clsBasicas.controlException(Name, ex)
@@ -47,6 +47,10 @@ Public Class FrmRptCostoxKiloDetalleF10
             'Tabla 1
             ds.Tables(1).Columns("idPersona").ColumnMapping = MappingType.Hidden
             ds.Tables(1).Columns("Area").ColumnMapping = MappingType.Hidden
+            ds.Tables(1).Columns("Plantel").ColumnMapping = MappingType.Hidden
+
+            'Tabla 3
+            ds.Tables(2).Columns("ExtraProrrateada").ColumnMapping = MappingType.Hidden
 
             e.Result = ds
         Catch ex As Exception
@@ -67,11 +71,10 @@ Public Class FrmRptCostoxKiloDetalleF10
 
             LblInicioCampana.Text = If(IsDBNull(dtResult.Rows(0)("Campaña_Inicio")), "- / - / -", Convert.ToDateTime(dtResult.Rows(0)("Campaña_Inicio")).ToString("dd/MM/yyyy"))
             LblFinCampana.Text = If(IsDBNull(dtResult.Rows(0)("Campaña_Fin")), "- / - / -", Convert.ToDateTime(dtResult.Rows(0)("Campaña_Fin")).ToString("dd/MM/yyyy"))
-            LblInicioInseminacion.Text = If(IsDBNull(dtResult.Rows(0)("Monta_Inicio")), "- / - / -", Convert.ToDateTime(dtResult.Rows(0)("Monta_Inicio")).ToString("dd/MM/yyyy"))
-            LblFinInseminacion.Text = If(IsDBNull(dtResult.Rows(0)("Monta_Fin")), "- / - / -", Convert.ToDateTime(dtResult.Rows(0)("Monta_Fin")).ToString("dd/MM/yyyy"))
-            LblInicioChanchilla.Text = If(IsDBNull(dtResult.Rows(0)("Chanchilla_Inicio")), "- / - / -", Convert.ToDateTime(dtResult.Rows(0)("Chanchilla_Inicio")).ToString("dd/MM/yyyy"))
-            LblFinChanchilla.Text = If(IsDBNull(dtResult.Rows(0)("Chanchilla_Fin")), "- / - / -", Convert.ToDateTime(dtResult.Rows(0)("Chanchilla_Fin")).ToString("dd/MM/yyyy"))
-            LblFechaUltDestete.Text = If(IsDBNull(dtResult.Rows(0)("Destete_UltimoRegistro")), "- / - / -", Convert.ToDateTime(dtResult.Rows(0)("Destete_UltimoRegistro")).ToString("dd/MM/yyyy"))
+            LblInicioMaternidad.Text = If(IsDBNull(dtResult.Rows(0)("Maternidad_Inicio")), "- / - / -", Convert.ToDateTime(dtResult.Rows(0)("Maternidad_Inicio")).ToString("dd/MM/yyyy"))
+            LblFinMaternidad.Text = If(IsDBNull(dtResult.Rows(0)("Maternidad_Fin")), "- / - / -", Convert.ToDateTime(dtResult.Rows(0)("Maternidad_Fin")).ToString("dd/MM/yyyy"))
+            LblInicioDestete.Text = If(IsDBNull(dtResult.Rows(0)("Destete_Inicio")), "- / - / -", Convert.ToDateTime(dtResult.Rows(0)("Destete_Inicio")).ToString("dd/MM/yyyy"))
+            LblFinDestete.Text = If(IsDBNull(dtResult.Rows(0)("Destete_Fin")), "- / - / -", Convert.ToDateTime(dtResult.Rows(0)("Destete_Fin")).ToString("dd/MM/yyyy"))
 
             dtgListado2.DataSource = dsResult.Tables(1)
             dtgListado1.DataSource = dsResult.Tables(2)

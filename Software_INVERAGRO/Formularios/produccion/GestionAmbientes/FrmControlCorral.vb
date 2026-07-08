@@ -94,6 +94,9 @@ Public Class FrmControlCorral
             'colorear segun clave
             clsBasicas.Colorear_SegunClave(dtgListado, Color.LightBlue, Color.Black, "CLÍNICA", nombreCorral)
 
+            'colorear segun clave
+            clsBasicas.Colorear_SegunClave(dtgListado, Color.Aqua, Color.Black, "EMBARCADERO", nombreCorral)
+
             'estadoCapacidad
             clsBasicas.Colorear_SegunValor(dtgListado, Color.LightGreen, Color.DarkGreen, "LIBRE", estadoCapacidad)
             clsBasicas.Colorear_SegunValor(dtgListado, Color.LightYellow, Color.DarkGoldenrod, "PARCIAL", estadoCapacidad)
@@ -179,6 +182,8 @@ Public Class FrmControlCorral
             Else
                 e.Layout.Bands(0).Summaries.Clear()
                 clsBasicas.Totales_Formato(dtgListado, e, 1)
+                clsBasicas.SumarTotales_Formato(dtgListado, e, 5)
+                clsBasicas.SumarTotales_Formato(dtgListado, e, 6)
             End If
         Catch ex As Exception
             clsBasicas.controlException(Name, ex)

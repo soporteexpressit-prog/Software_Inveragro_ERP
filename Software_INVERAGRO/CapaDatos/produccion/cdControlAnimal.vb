@@ -362,6 +362,7 @@ Public Class cdControlAnimal
 
             With cmd.Parameters
                 .AddWithValue("@idCerda", SqlDbType.Int).Value = obj.Codigo
+                .AddWithValue("@fechaControl", SqlDbType.Date).Value = obj.FechaControl
                 .AddWithValue("@condCorporal", SqlDbType.VarChar).Value = obj.CondCorporal
                 .AddWithValue("@diasEtapa", SqlDbType.Int).Value = obj.DiasTranscurridos
                 .AddWithValue("@idUsuario", SqlDbType.Int).Value = obj.IdUsuario
@@ -1470,5 +1471,44 @@ Public Class cdControlAnimal
         End Try
         con.Salir()
         Return ds
+    End Function
+
+    Public Function Cd_ConsultarxIdCampañaIdRacion(name As String, obj As coControlAnimal) As DataSet
+        Dim ds As New DataSet
+        Try
+            con.Abrir()
+            Dim da As New SqlDataAdapter(name, con.con)
+            da.SelectCommand.CommandType = 4
+            da.SelectCommand.Parameters.AddWithValue("@idCampaña", obj.IdCampaña)
+            da.SelectCommand.Parameters.AddWithValue("@idRacion", obj.IdProducto)
+            da.Fill(ds)
+        Catch ex As Exception
+            Throw ex
+        End Try
+        con.Salir()
+        Return ds
+    End Function
+
+    Public Function Cd_RegistrarCostoKiloCerdo(name As String, obj As coControlAnimal) As String
+        Dim mensaje As String
+        Dim cmd As New SqlCommand(name, con.con)
+        Try
+            con.Abrir()
+            cmd.CommandType = 4
+
+            With cmd.Parameters
+                .Add("@idCampaña", SqlDbType.Int).Value = obj.IdCampaña
+                .Add("@listaItems", SqlDbType.VarChar).Value = obj.ListaItems 'codigo+monto,codigo1+monto1 separados por coma
+                .Add("@msj", SqlDbType.VarChar, 100).Direction = 2
+                .Add("@coderror", SqlDbType.Int).Direction = 2
+            End With
+            cmd.ExecuteNonQuery()
+            mensaje = cmd.Parameters("@msj").Value.ToString
+            obj.Coderror = cmd.Parameters("@coderror").Value.ToString
+            con.Salir()
+            Return mensaje
+        Catch ex As Exception
+            Throw ex
+        End Try
     End Function
 End Class

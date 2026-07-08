@@ -380,6 +380,10 @@ Public Class cnControlAnimal
         Return cls_at.Cd_ConsultarxIdCampaña("[w_pa_detalle_parvo_maternidad]", obj)
     End Function
 
+    Public Function Cn_CostoxKiloLechonRP14Detallado(ByRef obj As coControlAnimal) As DataSet
+        Return cls_at.Cd_ConsultarxIdCampaña("[w_pa_detalle_regalias_maternidad]", obj)
+    End Function
+
     Public Function Cn_CostoxKiloLechonRP15Detallado(ByRef obj As coControlAnimal) As DataSet
         Return cls_at.Cd_ConsultarxIdCampaña("[w_costo_gastos_veterinarios_detalle_maternidad]", obj)
     End Function
@@ -401,5 +405,35 @@ Public Class cnControlAnimal
 
     Public Function Cn_CostoxKiloLechonRP18Detallado(ByRef obj As coControlAnimal) As DataSet
         Return cls_at.Cd_ConsultarxIdCampaña("[w_costo_gastos_veterinarios_detalle_recria]", obj)
+    End Function
+
+    Public Function Cn_CostoxKiloLechonRP19Detallado(ByRef obj As coControlAnimal) As DataSet
+        Return cls_at.Cd_ConsultarxIdCampaña("[w_costo_personal_area_recria_detalle]", obj)
+    End Function
+
+    'CONSULTAS POR COSTO X KILO CERDO (ENGORDE)
+
+    Public Function Cn_CostoxKiloLechonEngorde(ByRef obj As coControlAnimal) As DataSet
+        Return cls_at.Cd_ConsultarxIdCampaña("[w_pa_costo_x_kilo_lechon_engorde]", obj)
+    End Function
+
+    'CONSULTAS POR COSTO X KILO CERDO - DETALLADO
+
+    Public Function Cn_CostoxKiloLechonRP20Detallado(ByRef obj As coControlAnimal) As DataSet
+        Return cls_at.Cd_ConsultarxIdCampañaIdRacion("[w_pa_detalle_alimento_x_id_engorde]", obj)
+    End Function
+
+    Public Function Cn_CostoxKiloLechonRP21Detallado(ByRef obj As coControlAnimal) As DataSet
+        Return cls_at.Cd_ConsultarxIdCampaña("[w_costo_gastos_veterinarios_detalle_engorde]", obj)
+    End Function
+
+    Public Function Cn_CostoxKiloLechonRP22Detallado(ByRef obj As coControlAnimal) As DataSet
+        Return cls_at.Cd_ConsultarxIdCampaña("[w_costo_personal_area_engorde_detalle]", obj)
+    End Function
+
+    'REGISTRAR COSTO X KILO CERDO
+
+    Public Function Cn_RegistrarCostoKiloCerdo(ByRef obj As coControlAnimal) As String
+        Return cls_at.Cd_RegistrarCostoKiloCerdo("[w_pa_crear_actualizar_costo_x_kilo_cerdo]", obj)
     End Function
 End Class

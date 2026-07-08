@@ -6,6 +6,7 @@ Public Class FrmMonitoreoCondicionCorporal
     Dim idCerda As Integer = 0
     Public idUbicacion As Integer = 0
     Public tipoControl As String = ""
+    Dim fechaMinimaControl As Date = Date.MaxValue
 
     Private Sub FrmMonitoreoCondicionCorporal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
@@ -23,14 +24,49 @@ Public Class FrmMonitoreoCondicionCorporal
         Dim obj As New coControlAnimal With {
             .Codigo = idCerda
         }
-        dtgListado.DataSource = cn.Cn_ConsultarMonitoreoCondCorporalxIdCerda(obj)
+        Dim dt As DataTable = cn.Cn_ConsultarMonitoreoCondCorporalxIdCerda(obj)
+        dtgListado.DataSource = dt
+        ConfigurarDtpFecha(dt)
+    End Sub
+
+    Private Sub ConfigurarDtpFecha(dt As DataTable)
+        Dim hoy As Date = Date.Today
+        DtpFecha.MaxDate = hoy
+        DtpFecha.Value = hoy
+        fechaMinimaControl = Date.MaxValue
+
+        If dt IsNot Nothing AndAlso dt.Rows.Count > 0 AndAlso dt.Columns.Contains("Fecha") Then
+            For Each fila As DataRow In dt.Rows
+                If Not IsDBNull(fila("Fecha")) Then
+                    Try
+                        Dim f As Date = Convert.ToDateTime(fila("Fecha")).Date
+                        If f < fechaMinimaControl Then fechaMinimaControl = f
+                    Catch
+                    End Try
+                End If
+            Next
+        End If
+
+        DtpFecha.MinDate = If(fechaMinimaControl < Date.MaxValue, fechaMinimaControl, DateTimePicker.MinimumDateTime)
+        ActualizarDiasEtapa()
+    End Sub
+
+    Private Sub ActualizarDiasEtapa()
+        If fechaMinimaControl = Date.MaxValue Then
+            LblDiasEtapa.Text = "0"
+        Else
+            LblDiasEtapa.Text = (DtpFecha.Value.Date - fechaMinimaControl.Date).Days
+        End If
+    End Sub
+
+    Private Sub DtpFecha_ValueChanged(sender As Object, e As EventArgs) Handles DtpFecha.ValueChanged
+        ActualizarDiasEtapa()
     End Sub
 
     Public Sub LlenarCamposCerda(id As Integer, codigo As String, diasEtapa As Integer, condicionCorporal As Decimal)
         Try
             idCerda = id
             LblCodArete.Text = codigo
-            LblDiasEtapa.Text = diasEtapa
             TxtCondCorporal.Text = condicionCorporal.ToString("0.00")
 
             ' Consultar información adicional de gestación
@@ -126,6 +162,7 @@ Public Class FrmMonitoreoCondicionCorporal
 
             Dim obj As New coControlAnimal With {
                 .Codigo = idCerda,
+                .FechaControl = DtpFecha.Value,
                 .CondCorporal = TxtCondCorporal.Text,
                 .DiasTranscurridos = LblDiasEtapa.Text,
                 .IdUsuario = VP_IdUser

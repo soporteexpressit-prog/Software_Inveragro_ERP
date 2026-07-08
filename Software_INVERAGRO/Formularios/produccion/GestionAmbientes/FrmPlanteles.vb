@@ -99,7 +99,7 @@ Public Class FrmPlanteles
                     Dim obj As New coUbicacion
                     obj.Codigo = CInt(.ActiveRow.Cells("idUbicacion").Value)
                     obj.Densidad = CDec(.ActiveRow.Cells("Densidad por Corral").Value)
-                    obj.NumChanchillas = CInt(.ActiveRow.Cells("+ N° Chanchillas").Value)
+                    obj.NumChanchillas = CInt(.ActiveRow.Cells("N° Chanchillas / Engorde").Value)
 
                     Dim _mensaje As String = cn.Cn_AplicarDensidadPlantel(obj)
                     If (obj.Coderror = 0) Then

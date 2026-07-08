@@ -107,13 +107,41 @@ Partial Class FrmReporteCostoxKiloCerdo
         Dim Appearance83 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance84 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Label26 = New System.Windows.Forms.Label()
+        Me.Label33 = New System.Windows.Forms.Label()
+        Me.LblAcumuladoEngorde = New System.Windows.Forms.Label()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.LblAcumuladoRecria = New System.Windows.Forms.Label()
+        Me.Label19 = New System.Windows.Forms.Label()
+        Me.LblAcumuladoMaternidad = New System.Windows.Forms.Label()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.LblAcumuladoReproduccion = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.GroupBox8 = New System.Windows.Forms.GroupBox()
+        Me.LblLotesInvolucrados4 = New System.Windows.Forms.Label()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.LblFinCampana4 = New System.Windows.Forms.Label()
+        Me.LblInicioCampana4 = New System.Windows.Forms.Label()
+        Me.Label38 = New System.Windows.Forms.Label()
+        Me.Label39 = New System.Windows.Forms.Label()
+        Me.GroupBox7 = New System.Windows.Forms.GroupBox()
+        Me.LblLotesInvolucrados3 = New System.Windows.Forms.Label()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.LblFinDestete3 = New System.Windows.Forms.Label()
+        Me.LblInicioDestete3 = New System.Windows.Forms.Label()
+        Me.LblFinCampana3 = New System.Windows.Forms.Label()
+        Me.LblInicioCampana3 = New System.Windows.Forms.Label()
+        Me.Label29 = New System.Windows.Forms.Label()
+        Me.Label30 = New System.Windows.Forms.Label()
+        Me.Label31 = New System.Windows.Forms.Label()
+        Me.Label32 = New System.Windows.Forms.Label()
         Me.GroupBox6 = New System.Windows.Forms.GroupBox()
         Me.LblLotesInvolucrados2 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
-        Me.LblFinChanchilla2 = New System.Windows.Forms.Label()
-        Me.LblInicioChanchilla2 = New System.Windows.Forms.Label()
-        Me.LblFinInseminacion2 = New System.Windows.Forms.Label()
-        Me.LblInicioInseminacion2 = New System.Windows.Forms.Label()
+        Me.LblFinDestete = New System.Windows.Forms.Label()
+        Me.LblInicioDestete = New System.Windows.Forms.Label()
+        Me.LblFinMaternidad = New System.Windows.Forms.Label()
+        Me.LblInicioMaternidad = New System.Windows.Forms.Label()
         Me.LblFinCampana2 = New System.Windows.Forms.Label()
         Me.LblInicioCampana2 = New System.Windows.Forms.Label()
         Me.Label20 = New System.Windows.Forms.Label()
@@ -138,29 +166,17 @@ Partial Class FrmReporteCostoxKiloCerdo
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
-        Me.Ptbx_Cargando4 = New System.Windows.Forms.PictureBox()
         Me.dtgListado4 = New Infragistics.Win.UltraWinGrid.UltraGrid()
         Me.BarraOpciones4 = New System.Windows.Forms.ToolStrip()
-        Me.BtnExportar4 = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripButton5 = New System.Windows.Forms.ToolStripButton()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.Ptbx_Cargando3 = New System.Windows.Forms.PictureBox()
         Me.dtgListado3 = New Infragistics.Win.UltraWinGrid.UltraGrid()
         Me.BarraOpciones3 = New System.Windows.Forms.ToolStrip()
-        Me.BtnExportar3 = New System.Windows.Forms.ToolStripButton()
-        Me.BtnGenerar3 = New System.Windows.Forms.ToolStripButton()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.Ptbx_Cargando2 = New System.Windows.Forms.PictureBox()
         Me.dtgListado2 = New Infragistics.Win.UltraWinGrid.UltraGrid()
         Me.BarraOpciones2 = New System.Windows.Forms.ToolStrip()
-        Me.BtnExportar2 = New System.Windows.Forms.ToolStripButton()
-        Me.BtnGenerar2 = New System.Windows.Forms.ToolStripButton()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Ptbx_Cargando1 = New System.Windows.Forms.PictureBox()
         Me.dtgListado1 = New Infragistics.Win.UltraWinGrid.UltraGrid()
         Me.BarraOpciones1 = New System.Windows.Forms.ToolStrip()
-        Me.BtnExportar1 = New System.Windows.Forms.ToolStripButton()
-        Me.BtnGenerar1 = New System.Windows.Forms.ToolStripButton()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.GrupoFiltros = New System.Windows.Forms.GroupBox()
         Me.CmbAnios = New System.Windows.Forms.ComboBox()
@@ -172,65 +188,58 @@ Partial Class FrmReporteCostoxKiloCerdo
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         Me.BackgroundWorker2 = New System.ComponentModel.BackgroundWorker()
         Me.BackgroundWorker3 = New System.ComponentModel.BackgroundWorker()
-        Me.GroupBox7 = New System.Windows.Forms.GroupBox()
-        Me.LblLotesInvolucrados3 = New System.Windows.Forms.Label()
-        Me.Label14 = New System.Windows.Forms.Label()
-        Me.LblFinChanchilla3 = New System.Windows.Forms.Label()
-        Me.LblInicioChanchilla3 = New System.Windows.Forms.Label()
-        Me.LblFinInseminacion3 = New System.Windows.Forms.Label()
-        Me.LblInicioInseminacion3 = New System.Windows.Forms.Label()
-        Me.LblFinCampana3 = New System.Windows.Forms.Label()
-        Me.LblInicioCampana3 = New System.Windows.Forms.Label()
-        Me.Label27 = New System.Windows.Forms.Label()
-        Me.Label28 = New System.Windows.Forms.Label()
-        Me.Label29 = New System.Windows.Forms.Label()
-        Me.Label30 = New System.Windows.Forms.Label()
-        Me.Label31 = New System.Windows.Forms.Label()
-        Me.Label32 = New System.Windows.Forms.Label()
-        Me.GroupBox8 = New System.Windows.Forms.GroupBox()
-        Me.LblLotesInvolucrados4 = New System.Windows.Forms.Label()
-        Me.Label15 = New System.Windows.Forms.Label()
-        Me.LblFinChanchilla4 = New System.Windows.Forms.Label()
-        Me.LblInicioChanchilla4 = New System.Windows.Forms.Label()
-        Me.LblFinInseminacion4 = New System.Windows.Forms.Label()
-        Me.LblInicioInseminacion4 = New System.Windows.Forms.Label()
-        Me.LblFinCampana4 = New System.Windows.Forms.Label()
-        Me.LblInicioCampana4 = New System.Windows.Forms.Label()
-        Me.Label34 = New System.Windows.Forms.Label()
-        Me.Label35 = New System.Windows.Forms.Label()
-        Me.Label36 = New System.Windows.Forms.Label()
-        Me.Label37 = New System.Windows.Forms.Label()
-        Me.Label38 = New System.Windows.Forms.Label()
-        Me.Label39 = New System.Windows.Forms.Label()
+        Me.BackgroundWorker4 = New System.ComponentModel.BackgroundWorker()
+        Me.Ptbx_Cargando4 = New System.Windows.Forms.PictureBox()
+        Me.BtnGenerar4 = New System.Windows.Forms.ToolStripButton()
+        Me.BtnGuardar4 = New System.Windows.Forms.ToolStripButton()
+        Me.Ptbx_Cargando3 = New System.Windows.Forms.PictureBox()
+        Me.BtnGenerar3 = New System.Windows.Forms.ToolStripButton()
+        Me.BtnGuardar3 = New System.Windows.Forms.ToolStripButton()
+        Me.Ptbx_Cargando2 = New System.Windows.Forms.PictureBox()
+        Me.BtnGenerar2 = New System.Windows.Forms.ToolStripButton()
+        Me.BtnGuardar2 = New System.Windows.Forms.ToolStripButton()
+        Me.Ptbx_Cargando1 = New System.Windows.Forms.PictureBox()
+        Me.BtnGuardar1 = New System.Windows.Forms.ToolStripButton()
+        Me.BtnGenerar1 = New System.Windows.Forms.ToolStripButton()
         Me.Panel2.SuspendLayout()
+        Me.GroupBox8.SuspendLayout()
+        Me.GroupBox7.SuspendLayout()
         Me.GroupBox6.SuspendLayout()
         Me.GroupBox5.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
-        CType(Me.Ptbx_Cargando4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dtgListado4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.BarraOpciones4.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
-        CType(Me.Ptbx_Cargando3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dtgListado3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.BarraOpciones3.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
-        CType(Me.Ptbx_Cargando2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dtgListado2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.BarraOpciones2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
-        CType(Me.Ptbx_Cargando1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dtgListado1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.BarraOpciones1.SuspendLayout()
         Me.GrupoFiltros.SuspendLayout()
         CType(Me.CmbUbicacion, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CmbCampaña, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox7.SuspendLayout()
-        Me.GroupBox8.SuspendLayout()
+        CType(Me.Ptbx_Cargando4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Ptbx_Cargando3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Ptbx_Cargando2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Ptbx_Cargando1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.Panel2.Controls.Add(Me.Label26)
+        Me.Panel2.Controls.Add(Me.Label33)
+        Me.Panel2.Controls.Add(Me.LblAcumuladoEngorde)
+        Me.Panel2.Controls.Add(Me.Label16)
+        Me.Panel2.Controls.Add(Me.LblAcumuladoRecria)
+        Me.Panel2.Controls.Add(Me.Label19)
+        Me.Panel2.Controls.Add(Me.LblAcumuladoMaternidad)
+        Me.Panel2.Controls.Add(Me.Label18)
+        Me.Panel2.Controls.Add(Me.LblAcumuladoReproduccion)
+        Me.Panel2.Controls.Add(Me.Label12)
         Me.Panel2.Controls.Add(Me.GroupBox8)
         Me.Panel2.Controls.Add(Me.GroupBox7)
         Me.Panel2.Controls.Add(Me.GroupBox6)
@@ -248,14 +257,386 @@ Partial Class FrmReporteCostoxKiloCerdo
         Me.Panel2.Size = New System.Drawing.Size(1728, 742)
         Me.Panel2.TabIndex = 10
         '
+        'Label26
+        '
+        Me.Label26.AutoSize = True
+        Me.Label26.BackColor = System.Drawing.Color.LimeGreen
+        Me.Label26.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label26.ForeColor = System.Drawing.Color.Black
+        Me.Label26.Location = New System.Drawing.Point(1643, 37)
+        Me.Label26.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label26.Name = "Label26"
+        Me.Label26.Size = New System.Drawing.Size(12, 13)
+        Me.Label26.TabIndex = 207
+        Me.Label26.Text = "-"
+        '
+        'Label33
+        '
+        Me.Label33.AutoSize = True
+        Me.Label33.BackColor = System.Drawing.Color.LimeGreen
+        Me.Label33.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label33.ForeColor = System.Drawing.Color.Black
+        Me.Label33.Location = New System.Drawing.Point(1576, 36)
+        Me.Label33.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label33.Name = "Label33"
+        Me.Label33.Size = New System.Drawing.Size(49, 14)
+        Me.Label33.TabIndex = 206
+        Me.Label33.Text = "Total :"
+        '
+        'LblAcumuladoEngorde
+        '
+        Me.LblAcumuladoEngorde.AutoSize = True
+        Me.LblAcumuladoEngorde.BackColor = System.Drawing.Color.Orange
+        Me.LblAcumuladoEngorde.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblAcumuladoEngorde.ForeColor = System.Drawing.Color.Black
+        Me.LblAcumuladoEngorde.Location = New System.Drawing.Point(1660, 430)
+        Me.LblAcumuladoEngorde.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblAcumuladoEngorde.Name = "LblAcumuladoEngorde"
+        Me.LblAcumuladoEngorde.Size = New System.Drawing.Size(13, 13)
+        Me.LblAcumuladoEngorde.TabIndex = 205
+        Me.LblAcumuladoEngorde.Text = "-"
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.BackColor = System.Drawing.Color.Orange
+        Me.Label16.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label16.ForeColor = System.Drawing.Color.Black
+        Me.Label16.Location = New System.Drawing.Point(1469, 429)
+        Me.Label16.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(183, 14)
+        Me.Label16.TabIndex = 204
+        Me.Label16.Text = "Total Acumulado Engorde :"
+        '
+        'LblAcumuladoRecria
+        '
+        Me.LblAcumuladoRecria.AutoSize = True
+        Me.LblAcumuladoRecria.BackColor = System.Drawing.Color.Orange
+        Me.LblAcumuladoRecria.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblAcumuladoRecria.ForeColor = System.Drawing.Color.Black
+        Me.LblAcumuladoRecria.Location = New System.Drawing.Point(1244, 430)
+        Me.LblAcumuladoRecria.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblAcumuladoRecria.Name = "LblAcumuladoRecria"
+        Me.LblAcumuladoRecria.Size = New System.Drawing.Size(13, 13)
+        Me.LblAcumuladoRecria.TabIndex = 203
+        Me.LblAcumuladoRecria.Text = "-"
+        '
+        'Label19
+        '
+        Me.Label19.AutoSize = True
+        Me.Label19.BackColor = System.Drawing.Color.Orange
+        Me.Label19.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label19.ForeColor = System.Drawing.Color.Black
+        Me.Label19.Location = New System.Drawing.Point(1065, 429)
+        Me.Label19.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(171, 14)
+        Me.Label19.TabIndex = 202
+        Me.Label19.Text = "Total Acumulado Recría :"
+        '
+        'LblAcumuladoMaternidad
+        '
+        Me.LblAcumuladoMaternidad.AutoSize = True
+        Me.LblAcumuladoMaternidad.BackColor = System.Drawing.Color.Orange
+        Me.LblAcumuladoMaternidad.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblAcumuladoMaternidad.ForeColor = System.Drawing.Color.Black
+        Me.LblAcumuladoMaternidad.Location = New System.Drawing.Point(820, 430)
+        Me.LblAcumuladoMaternidad.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblAcumuladoMaternidad.Name = "LblAcumuladoMaternidad"
+        Me.LblAcumuladoMaternidad.Size = New System.Drawing.Size(13, 13)
+        Me.LblAcumuladoMaternidad.TabIndex = 200
+        Me.LblAcumuladoMaternidad.Text = "-"
+        '
+        'Label18
+        '
+        Me.Label18.AutoSize = True
+        Me.Label18.BackColor = System.Drawing.Color.Orange
+        Me.Label18.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label18.ForeColor = System.Drawing.Color.Black
+        Me.Label18.Location = New System.Drawing.Point(594, 429)
+        Me.Label18.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(203, 14)
+        Me.Label18.TabIndex = 201
+        Me.Label18.Text = "Total Acumulado Maternidad :"
+        '
+        'LblAcumuladoReproduccion
+        '
+        Me.LblAcumuladoReproduccion.AutoSize = True
+        Me.LblAcumuladoReproduccion.BackColor = System.Drawing.Color.Orange
+        Me.LblAcumuladoReproduccion.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblAcumuladoReproduccion.ForeColor = System.Drawing.Color.Black
+        Me.LblAcumuladoReproduccion.Location = New System.Drawing.Point(388, 430)
+        Me.LblAcumuladoReproduccion.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblAcumuladoReproduccion.Name = "LblAcumuladoReproduccion"
+        Me.LblAcumuladoReproduccion.Size = New System.Drawing.Size(13, 13)
+        Me.LblAcumuladoReproduccion.TabIndex = 197
+        Me.LblAcumuladoReproduccion.Text = "-"
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.BackColor = System.Drawing.Color.Orange
+        Me.Label12.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.ForeColor = System.Drawing.Color.Black
+        Me.Label12.Location = New System.Drawing.Point(159, 429)
+        Me.Label12.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(218, 14)
+        Me.Label12.TabIndex = 197
+        Me.Label12.Text = "Total Acumulado Reproducción :"
+        '
+        'GroupBox8
+        '
+        Me.GroupBox8.Controls.Add(Me.LblLotesInvolucrados4)
+        Me.GroupBox8.Controls.Add(Me.Label15)
+        Me.GroupBox8.Controls.Add(Me.LblFinCampana4)
+        Me.GroupBox8.Controls.Add(Me.LblInicioCampana4)
+        Me.GroupBox8.Controls.Add(Me.Label38)
+        Me.GroupBox8.Controls.Add(Me.Label39)
+        Me.GroupBox8.Location = New System.Drawing.Point(1301, 455)
+        Me.GroupBox8.Name = "GroupBox8"
+        Me.GroupBox8.Size = New System.Drawing.Size(411, 215)
+        Me.GroupBox8.TabIndex = 199
+        Me.GroupBox8.TabStop = False
+        Me.GroupBox8.Text = "Información Adicional"
+        '
+        'LblLotesInvolucrados4
+        '
+        Me.LblLotesInvolucrados4.AutoSize = True
+        Me.LblLotesInvolucrados4.BackColor = System.Drawing.Color.Transparent
+        Me.LblLotesInvolucrados4.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblLotesInvolucrados4.ForeColor = System.Drawing.Color.Black
+        Me.LblLotesInvolucrados4.Location = New System.Drawing.Point(267, 56)
+        Me.LblLotesInvolucrados4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblLotesInvolucrados4.Name = "LblLotesInvolucrados4"
+        Me.LblLotesInvolucrados4.Size = New System.Drawing.Size(12, 13)
+        Me.LblLotesInvolucrados4.TabIndex = 196
+        Me.LblLotesInvolucrados4.Text = "-"
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.BackColor = System.Drawing.Color.Transparent
+        Me.Label15.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label15.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.Label15.Location = New System.Drawing.Point(267, 28)
+        Me.Label15.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(133, 14)
+        Me.Label15.TabIndex = 195
+        Me.Label15.Text = "Lotes Involucrados"
+        '
+        'LblFinCampana4
+        '
+        Me.LblFinCampana4.AutoSize = True
+        Me.LblFinCampana4.BackColor = System.Drawing.Color.Transparent
+        Me.LblFinCampana4.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblFinCampana4.ForeColor = System.Drawing.Color.Black
+        Me.LblFinCampana4.Location = New System.Drawing.Point(161, 53)
+        Me.LblFinCampana4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblFinCampana4.Name = "LblFinCampana4"
+        Me.LblFinCampana4.Size = New System.Drawing.Size(48, 13)
+        Me.LblFinCampana4.TabIndex = 190
+        Me.LblFinCampana4.Text = "- / - / -"
+        '
+        'LblInicioCampana4
+        '
+        Me.LblInicioCampana4.AutoSize = True
+        Me.LblInicioCampana4.BackColor = System.Drawing.Color.Transparent
+        Me.LblInicioCampana4.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblInicioCampana4.ForeColor = System.Drawing.Color.Black
+        Me.LblInicioCampana4.Location = New System.Drawing.Point(161, 29)
+        Me.LblInicioCampana4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblInicioCampana4.Name = "LblInicioCampana4"
+        Me.LblInicioCampana4.Size = New System.Drawing.Size(48, 13)
+        Me.LblInicioCampana4.TabIndex = 189
+        Me.LblInicioCampana4.Text = "- / - / -"
+        '
+        'Label38
+        '
+        Me.Label38.AutoSize = True
+        Me.Label38.BackColor = System.Drawing.Color.Transparent
+        Me.Label38.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label38.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.Label38.Location = New System.Drawing.Point(52, 52)
+        Me.Label38.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label38.Name = "Label38"
+        Me.Label38.Size = New System.Drawing.Size(101, 14)
+        Me.Label38.TabIndex = 184
+        Me.Label38.Text = "Fin Campaña :"
+        '
+        'Label39
+        '
+        Me.Label39.AutoSize = True
+        Me.Label39.BackColor = System.Drawing.Color.Transparent
+        Me.Label39.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label39.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.Label39.Location = New System.Drawing.Point(35, 28)
+        Me.Label39.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label39.Name = "Label39"
+        Me.Label39.Size = New System.Drawing.Size(118, 14)
+        Me.Label39.TabIndex = 183
+        Me.Label39.Text = "Inicio Campaña :"
+        '
+        'GroupBox7
+        '
+        Me.GroupBox7.Controls.Add(Me.LblLotesInvolucrados3)
+        Me.GroupBox7.Controls.Add(Me.Label14)
+        Me.GroupBox7.Controls.Add(Me.LblFinDestete3)
+        Me.GroupBox7.Controls.Add(Me.LblInicioDestete3)
+        Me.GroupBox7.Controls.Add(Me.LblFinCampana3)
+        Me.GroupBox7.Controls.Add(Me.LblInicioCampana3)
+        Me.GroupBox7.Controls.Add(Me.Label29)
+        Me.GroupBox7.Controls.Add(Me.Label30)
+        Me.GroupBox7.Controls.Add(Me.Label31)
+        Me.GroupBox7.Controls.Add(Me.Label32)
+        Me.GroupBox7.Location = New System.Drawing.Point(874, 455)
+        Me.GroupBox7.Name = "GroupBox7"
+        Me.GroupBox7.Size = New System.Drawing.Size(411, 215)
+        Me.GroupBox7.TabIndex = 198
+        Me.GroupBox7.TabStop = False
+        Me.GroupBox7.Text = "Información Adicional"
+        '
+        'LblLotesInvolucrados3
+        '
+        Me.LblLotesInvolucrados3.AutoSize = True
+        Me.LblLotesInvolucrados3.BackColor = System.Drawing.Color.Transparent
+        Me.LblLotesInvolucrados3.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblLotesInvolucrados3.ForeColor = System.Drawing.Color.Black
+        Me.LblLotesInvolucrados3.Location = New System.Drawing.Point(267, 56)
+        Me.LblLotesInvolucrados3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblLotesInvolucrados3.Name = "LblLotesInvolucrados3"
+        Me.LblLotesInvolucrados3.Size = New System.Drawing.Size(12, 13)
+        Me.LblLotesInvolucrados3.TabIndex = 196
+        Me.LblLotesInvolucrados3.Text = "-"
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.BackColor = System.Drawing.Color.Transparent
+        Me.Label14.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label14.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.Label14.Location = New System.Drawing.Point(267, 28)
+        Me.Label14.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(133, 14)
+        Me.Label14.TabIndex = 195
+        Me.Label14.Text = "Lotes Involucrados"
+        '
+        'LblFinDestete3
+        '
+        Me.LblFinDestete3.AutoSize = True
+        Me.LblFinDestete3.BackColor = System.Drawing.Color.Transparent
+        Me.LblFinDestete3.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblFinDestete3.ForeColor = System.Drawing.Color.Black
+        Me.LblFinDestete3.Location = New System.Drawing.Point(161, 116)
+        Me.LblFinDestete3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblFinDestete3.Name = "LblFinDestete3"
+        Me.LblFinDestete3.Size = New System.Drawing.Size(48, 13)
+        Me.LblFinDestete3.TabIndex = 192
+        Me.LblFinDestete3.Text = "- / - / -"
+        '
+        'LblInicioDestete3
+        '
+        Me.LblInicioDestete3.AutoSize = True
+        Me.LblInicioDestete3.BackColor = System.Drawing.Color.Transparent
+        Me.LblInicioDestete3.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblInicioDestete3.ForeColor = System.Drawing.Color.Black
+        Me.LblInicioDestete3.Location = New System.Drawing.Point(161, 92)
+        Me.LblInicioDestete3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblInicioDestete3.Name = "LblInicioDestete3"
+        Me.LblInicioDestete3.Size = New System.Drawing.Size(48, 13)
+        Me.LblInicioDestete3.TabIndex = 191
+        Me.LblInicioDestete3.Text = "- / - / -"
+        '
+        'LblFinCampana3
+        '
+        Me.LblFinCampana3.AutoSize = True
+        Me.LblFinCampana3.BackColor = System.Drawing.Color.Transparent
+        Me.LblFinCampana3.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblFinCampana3.ForeColor = System.Drawing.Color.Black
+        Me.LblFinCampana3.Location = New System.Drawing.Point(161, 53)
+        Me.LblFinCampana3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblFinCampana3.Name = "LblFinCampana3"
+        Me.LblFinCampana3.Size = New System.Drawing.Size(48, 13)
+        Me.LblFinCampana3.TabIndex = 190
+        Me.LblFinCampana3.Text = "- / - / -"
+        '
+        'LblInicioCampana3
+        '
+        Me.LblInicioCampana3.AutoSize = True
+        Me.LblInicioCampana3.BackColor = System.Drawing.Color.Transparent
+        Me.LblInicioCampana3.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblInicioCampana3.ForeColor = System.Drawing.Color.Black
+        Me.LblInicioCampana3.Location = New System.Drawing.Point(161, 29)
+        Me.LblInicioCampana3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblInicioCampana3.Name = "LblInicioCampana3"
+        Me.LblInicioCampana3.Size = New System.Drawing.Size(48, 13)
+        Me.LblInicioCampana3.TabIndex = 189
+        Me.LblInicioCampana3.Text = "- / - / -"
+        '
+        'Label29
+        '
+        Me.Label29.AutoSize = True
+        Me.Label29.BackColor = System.Drawing.Color.Transparent
+        Me.Label29.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label29.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.Label29.Location = New System.Drawing.Point(62, 115)
+        Me.Label29.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label29.Name = "Label29"
+        Me.Label29.Size = New System.Drawing.Size(91, 14)
+        Me.Label29.TabIndex = 186
+        Me.Label29.Text = "Fin Destete :"
+        '
+        'Label30
+        '
+        Me.Label30.AutoSize = True
+        Me.Label30.BackColor = System.Drawing.Color.Transparent
+        Me.Label30.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label30.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.Label30.Location = New System.Drawing.Point(45, 91)
+        Me.Label30.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label30.Name = "Label30"
+        Me.Label30.Size = New System.Drawing.Size(108, 14)
+        Me.Label30.TabIndex = 185
+        Me.Label30.Text = "Inicio Destete :"
+        '
+        'Label31
+        '
+        Me.Label31.AutoSize = True
+        Me.Label31.BackColor = System.Drawing.Color.Transparent
+        Me.Label31.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label31.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.Label31.Location = New System.Drawing.Point(52, 52)
+        Me.Label31.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label31.Name = "Label31"
+        Me.Label31.Size = New System.Drawing.Size(101, 14)
+        Me.Label31.TabIndex = 184
+        Me.Label31.Text = "Fin Campaña :"
+        '
+        'Label32
+        '
+        Me.Label32.AutoSize = True
+        Me.Label32.BackColor = System.Drawing.Color.Transparent
+        Me.Label32.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label32.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.Label32.Location = New System.Drawing.Point(35, 28)
+        Me.Label32.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label32.Name = "Label32"
+        Me.Label32.Size = New System.Drawing.Size(118, 14)
+        Me.Label32.TabIndex = 183
+        Me.Label32.Text = "Inicio Campaña :"
+        '
         'GroupBox6
         '
         Me.GroupBox6.Controls.Add(Me.LblLotesInvolucrados2)
         Me.GroupBox6.Controls.Add(Me.Label13)
-        Me.GroupBox6.Controls.Add(Me.LblFinChanchilla2)
-        Me.GroupBox6.Controls.Add(Me.LblInicioChanchilla2)
-        Me.GroupBox6.Controls.Add(Me.LblFinInseminacion2)
-        Me.GroupBox6.Controls.Add(Me.LblInicioInseminacion2)
+        Me.GroupBox6.Controls.Add(Me.LblFinDestete)
+        Me.GroupBox6.Controls.Add(Me.LblInicioDestete)
+        Me.GroupBox6.Controls.Add(Me.LblFinMaternidad)
+        Me.GroupBox6.Controls.Add(Me.LblInicioMaternidad)
         Me.GroupBox6.Controls.Add(Me.LblFinCampana2)
         Me.GroupBox6.Controls.Add(Me.LblInicioCampana2)
         Me.GroupBox6.Controls.Add(Me.Label20)
@@ -264,7 +645,7 @@ Partial Class FrmReporteCostoxKiloCerdo
         Me.GroupBox6.Controls.Add(Me.Label23)
         Me.GroupBox6.Controls.Add(Me.Label24)
         Me.GroupBox6.Controls.Add(Me.Label25)
-        Me.GroupBox6.Location = New System.Drawing.Point(448, 426)
+        Me.GroupBox6.Location = New System.Drawing.Point(448, 455)
         Me.GroupBox6.Name = "GroupBox6"
         Me.GroupBox6.Size = New System.Drawing.Size(411, 215)
         Me.GroupBox6.TabIndex = 197
@@ -277,7 +658,7 @@ Partial Class FrmReporteCostoxKiloCerdo
         Me.LblLotesInvolucrados2.BackColor = System.Drawing.Color.Transparent
         Me.LblLotesInvolucrados2.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblLotesInvolucrados2.ForeColor = System.Drawing.Color.Black
-        Me.LblLotesInvolucrados2.Location = New System.Drawing.Point(267, 66)
+        Me.LblLotesInvolucrados2.Location = New System.Drawing.Point(267, 56)
         Me.LblLotesInvolucrados2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblLotesInvolucrados2.Name = "LblLotesInvolucrados2"
         Me.LblLotesInvolucrados2.Size = New System.Drawing.Size(12, 13)
@@ -297,57 +678,57 @@ Partial Class FrmReporteCostoxKiloCerdo
         Me.Label13.TabIndex = 195
         Me.Label13.Text = "Lotes Involucrados"
         '
-        'LblFinChanchilla2
+        'LblFinDestete
         '
-        Me.LblFinChanchilla2.AutoSize = True
-        Me.LblFinChanchilla2.BackColor = System.Drawing.Color.Transparent
-        Me.LblFinChanchilla2.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblFinChanchilla2.ForeColor = System.Drawing.Color.Black
-        Me.LblFinChanchilla2.Location = New System.Drawing.Point(161, 186)
-        Me.LblFinChanchilla2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.LblFinChanchilla2.Name = "LblFinChanchilla2"
-        Me.LblFinChanchilla2.Size = New System.Drawing.Size(48, 13)
-        Me.LblFinChanchilla2.TabIndex = 194
-        Me.LblFinChanchilla2.Text = "- / - / -"
+        Me.LblFinDestete.AutoSize = True
+        Me.LblFinDestete.BackColor = System.Drawing.Color.Transparent
+        Me.LblFinDestete.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblFinDestete.ForeColor = System.Drawing.Color.Black
+        Me.LblFinDestete.Location = New System.Drawing.Point(161, 186)
+        Me.LblFinDestete.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblFinDestete.Name = "LblFinDestete"
+        Me.LblFinDestete.Size = New System.Drawing.Size(48, 13)
+        Me.LblFinDestete.TabIndex = 194
+        Me.LblFinDestete.Text = "- / - / -"
         '
-        'LblInicioChanchilla2
+        'LblInicioDestete
         '
-        Me.LblInicioChanchilla2.AutoSize = True
-        Me.LblInicioChanchilla2.BackColor = System.Drawing.Color.Transparent
-        Me.LblInicioChanchilla2.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblInicioChanchilla2.ForeColor = System.Drawing.Color.Black
-        Me.LblInicioChanchilla2.Location = New System.Drawing.Point(161, 162)
-        Me.LblInicioChanchilla2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.LblInicioChanchilla2.Name = "LblInicioChanchilla2"
-        Me.LblInicioChanchilla2.Size = New System.Drawing.Size(48, 13)
-        Me.LblInicioChanchilla2.TabIndex = 193
-        Me.LblInicioChanchilla2.Text = "- / - / -"
+        Me.LblInicioDestete.AutoSize = True
+        Me.LblInicioDestete.BackColor = System.Drawing.Color.Transparent
+        Me.LblInicioDestete.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblInicioDestete.ForeColor = System.Drawing.Color.Black
+        Me.LblInicioDestete.Location = New System.Drawing.Point(161, 162)
+        Me.LblInicioDestete.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblInicioDestete.Name = "LblInicioDestete"
+        Me.LblInicioDestete.Size = New System.Drawing.Size(48, 13)
+        Me.LblInicioDestete.TabIndex = 193
+        Me.LblInicioDestete.Text = "- / - / -"
         '
-        'LblFinInseminacion2
+        'LblFinMaternidad
         '
-        Me.LblFinInseminacion2.AutoSize = True
-        Me.LblFinInseminacion2.BackColor = System.Drawing.Color.Transparent
-        Me.LblFinInseminacion2.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblFinInseminacion2.ForeColor = System.Drawing.Color.Black
-        Me.LblFinInseminacion2.Location = New System.Drawing.Point(161, 116)
-        Me.LblFinInseminacion2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.LblFinInseminacion2.Name = "LblFinInseminacion2"
-        Me.LblFinInseminacion2.Size = New System.Drawing.Size(48, 13)
-        Me.LblFinInseminacion2.TabIndex = 192
-        Me.LblFinInseminacion2.Text = "- / - / -"
+        Me.LblFinMaternidad.AutoSize = True
+        Me.LblFinMaternidad.BackColor = System.Drawing.Color.Transparent
+        Me.LblFinMaternidad.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblFinMaternidad.ForeColor = System.Drawing.Color.Black
+        Me.LblFinMaternidad.Location = New System.Drawing.Point(161, 116)
+        Me.LblFinMaternidad.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblFinMaternidad.Name = "LblFinMaternidad"
+        Me.LblFinMaternidad.Size = New System.Drawing.Size(48, 13)
+        Me.LblFinMaternidad.TabIndex = 192
+        Me.LblFinMaternidad.Text = "- / - / -"
         '
-        'LblInicioInseminacion2
+        'LblInicioMaternidad
         '
-        Me.LblInicioInseminacion2.AutoSize = True
-        Me.LblInicioInseminacion2.BackColor = System.Drawing.Color.Transparent
-        Me.LblInicioInseminacion2.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblInicioInseminacion2.ForeColor = System.Drawing.Color.Black
-        Me.LblInicioInseminacion2.Location = New System.Drawing.Point(161, 92)
-        Me.LblInicioInseminacion2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.LblInicioInseminacion2.Name = "LblInicioInseminacion2"
-        Me.LblInicioInseminacion2.Size = New System.Drawing.Size(48, 13)
-        Me.LblInicioInseminacion2.TabIndex = 191
-        Me.LblInicioInseminacion2.Text = "- / - / -"
+        Me.LblInicioMaternidad.AutoSize = True
+        Me.LblInicioMaternidad.BackColor = System.Drawing.Color.Transparent
+        Me.LblInicioMaternidad.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblInicioMaternidad.ForeColor = System.Drawing.Color.Black
+        Me.LblInicioMaternidad.Location = New System.Drawing.Point(161, 92)
+        Me.LblInicioMaternidad.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblInicioMaternidad.Name = "LblInicioMaternidad"
+        Me.LblInicioMaternidad.Size = New System.Drawing.Size(48, 13)
+        Me.LblInicioMaternidad.TabIndex = 191
+        Me.LblInicioMaternidad.Text = "- / - / -"
         '
         'LblFinCampana2
         '
@@ -381,12 +762,12 @@ Partial Class FrmReporteCostoxKiloCerdo
         Me.Label20.BackColor = System.Drawing.Color.Transparent
         Me.Label20.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label20.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label20.Location = New System.Drawing.Point(45, 185)
+        Me.Label20.Location = New System.Drawing.Point(62, 185)
         Me.Label20.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(108, 14)
+        Me.Label20.Size = New System.Drawing.Size(91, 14)
         Me.Label20.TabIndex = 188
-        Me.Label20.Text = "Fin Chanchilla :"
+        Me.Label20.Text = "Fin Destete :"
         '
         'Label21
         '
@@ -394,12 +775,12 @@ Partial Class FrmReporteCostoxKiloCerdo
         Me.Label21.BackColor = System.Drawing.Color.Transparent
         Me.Label21.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label21.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label21.Location = New System.Drawing.Point(28, 161)
+        Me.Label21.Location = New System.Drawing.Point(45, 161)
         Me.Label21.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(125, 14)
+        Me.Label21.Size = New System.Drawing.Size(108, 14)
         Me.Label21.TabIndex = 187
-        Me.Label21.Text = "Inicio Chanchilla :"
+        Me.Label21.Text = "Inicio Destete :"
         '
         'Label22
         '
@@ -407,12 +788,12 @@ Partial Class FrmReporteCostoxKiloCerdo
         Me.Label22.BackColor = System.Drawing.Color.Transparent
         Me.Label22.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label22.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label22.Location = New System.Drawing.Point(25, 115)
+        Me.Label22.Location = New System.Drawing.Point(39, 115)
         Me.Label22.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(128, 14)
+        Me.Label22.Size = New System.Drawing.Size(114, 14)
         Me.Label22.TabIndex = 186
-        Me.Label22.Text = "Fin Inseminación :"
+        Me.Label22.Text = "Fin Maternidad :"
         '
         'Label23
         '
@@ -420,12 +801,12 @@ Partial Class FrmReporteCostoxKiloCerdo
         Me.Label23.BackColor = System.Drawing.Color.Transparent
         Me.Label23.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label23.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label23.Location = New System.Drawing.Point(8, 91)
+        Me.Label23.Location = New System.Drawing.Point(22, 91)
         Me.Label23.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(145, 14)
+        Me.Label23.Size = New System.Drawing.Size(131, 14)
         Me.Label23.TabIndex = 185
-        Me.Label23.Text = "Inicio Inseminación :"
+        Me.Label23.Text = "Inicio Maternidad :"
         '
         'Label24
         '
@@ -469,7 +850,7 @@ Partial Class FrmReporteCostoxKiloCerdo
         Me.GroupBox5.Controls.Add(Me.Label8)
         Me.GroupBox5.Controls.Add(Me.Label4)
         Me.GroupBox5.Controls.Add(Me.Label2)
-        Me.GroupBox5.Location = New System.Drawing.Point(24, 426)
+        Me.GroupBox5.Location = New System.Drawing.Point(27, 455)
         Me.GroupBox5.Name = "GroupBox5"
         Me.GroupBox5.Size = New System.Drawing.Size(408, 215)
         Me.GroupBox5.TabIndex = 171
@@ -482,7 +863,7 @@ Partial Class FrmReporteCostoxKiloCerdo
         Me.LblLotesInvolucrados1.BackColor = System.Drawing.Color.Transparent
         Me.LblLotesInvolucrados1.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblLotesInvolucrados1.ForeColor = System.Drawing.Color.Black
-        Me.LblLotesInvolucrados1.Location = New System.Drawing.Point(263, 66)
+        Me.LblLotesInvolucrados1.Location = New System.Drawing.Point(263, 56)
         Me.LblLotesInvolucrados1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblLotesInvolucrados1.Name = "LblLotesInvolucrados1"
         Me.LblLotesInvolucrados1.Size = New System.Drawing.Size(12, 13)
@@ -670,18 +1051,6 @@ Partial Class FrmReporteCostoxKiloCerdo
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "ENGORDE"
         '
-        'Ptbx_Cargando4
-        '
-        Me.Ptbx_Cargando4.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Ptbx_Cargando4.Image = Global.Formularios.My.Resources.Resources.loader
-        Me.Ptbx_Cargando4.Location = New System.Drawing.Point(175, 149)
-        Me.Ptbx_Cargando4.Name = "Ptbx_Cargando4"
-        Me.Ptbx_Cargando4.Size = New System.Drawing.Size(43, 37)
-        Me.Ptbx_Cargando4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.Ptbx_Cargando4.TabIndex = 30
-        Me.Ptbx_Cargando4.TabStop = False
-        Me.Ptbx_Cargando4.Visible = False
-        '
         'dtgListado4
         '
         Appearance1.BackColor = System.Drawing.Color.White
@@ -765,7 +1134,7 @@ Partial Class FrmReporteCostoxKiloCerdo
         Me.BarraOpciones4.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.BarraOpciones4.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
         Me.BarraOpciones4.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.BarraOpciones4.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnExportar4, Me.ToolStripButton5})
+        Me.BarraOpciones4.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnGenerar4, Me.BtnGuardar4})
         Me.BarraOpciones4.Location = New System.Drawing.Point(3, 16)
         Me.BarraOpciones4.Margin = New System.Windows.Forms.Padding(2, 1, 2, 1)
         Me.BarraOpciones4.Name = "BarraOpciones4"
@@ -773,33 +1142,6 @@ Partial Class FrmReporteCostoxKiloCerdo
         Me.BarraOpciones4.Size = New System.Drawing.Size(405, 38)
         Me.BarraOpciones4.TabIndex = 53
         Me.BarraOpciones4.Text = "ToolStrip4"
-        '
-        'BtnExportar4
-        '
-        Me.BtnExportar4.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnExportar4.ForeColor = System.Drawing.Color.White
-        Me.BtnExportar4.Image = Global.Formularios.My.Resources.Resources.exportar2
-        Me.BtnExportar4.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.BtnExportar4.Margin = New System.Windows.Forms.Padding(5)
-        Me.BtnExportar4.Name = "BtnExportar4"
-        Me.BtnExportar4.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnExportar4.Size = New System.Drawing.Size(92, 28)
-        Me.BtnExportar4.Text = "Exportar"
-        Me.BtnExportar4.ToolTipText = "Exportar"
-        '
-        'ToolStripButton5
-        '
-        Me.ToolStripButton5.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.ToolStripButton5.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ToolStripButton5.ForeColor = System.Drawing.Color.White
-        Me.ToolStripButton5.Image = Global.Formularios.My.Resources.Resources.buscar16px
-        Me.ToolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton5.Margin = New System.Windows.Forms.Padding(5)
-        Me.ToolStripButton5.Name = "ToolStripButton5"
-        Me.ToolStripButton5.Padding = New System.Windows.Forms.Padding(2)
-        Me.ToolStripButton5.Size = New System.Drawing.Size(89, 28)
-        Me.ToolStripButton5.Text = "Generar"
-        Me.ToolStripButton5.ToolTipText = "Generar"
         '
         'GroupBox3
         '
@@ -812,18 +1154,6 @@ Partial Class FrmReporteCostoxKiloCerdo
         Me.GroupBox3.TabIndex = 54
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "RECRÍA"
-        '
-        'Ptbx_Cargando3
-        '
-        Me.Ptbx_Cargando3.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Ptbx_Cargando3.Image = Global.Formularios.My.Resources.Resources.loader
-        Me.Ptbx_Cargando3.Location = New System.Drawing.Point(175, 149)
-        Me.Ptbx_Cargando3.Name = "Ptbx_Cargando3"
-        Me.Ptbx_Cargando3.Size = New System.Drawing.Size(43, 37)
-        Me.Ptbx_Cargando3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.Ptbx_Cargando3.TabIndex = 30
-        Me.Ptbx_Cargando3.TabStop = False
-        Me.Ptbx_Cargando3.Visible = False
         '
         'dtgListado3
         '
@@ -908,7 +1238,7 @@ Partial Class FrmReporteCostoxKiloCerdo
         Me.BarraOpciones3.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.BarraOpciones3.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
         Me.BarraOpciones3.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.BarraOpciones3.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnExportar3, Me.BtnGenerar3})
+        Me.BarraOpciones3.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnGenerar3, Me.BtnGuardar3})
         Me.BarraOpciones3.Location = New System.Drawing.Point(3, 16)
         Me.BarraOpciones3.Margin = New System.Windows.Forms.Padding(2, 1, 2, 1)
         Me.BarraOpciones3.Name = "BarraOpciones3"
@@ -916,33 +1246,6 @@ Partial Class FrmReporteCostoxKiloCerdo
         Me.BarraOpciones3.Size = New System.Drawing.Size(405, 38)
         Me.BarraOpciones3.TabIndex = 53
         Me.BarraOpciones3.Text = "ToolStrip3"
-        '
-        'BtnExportar3
-        '
-        Me.BtnExportar3.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnExportar3.ForeColor = System.Drawing.Color.White
-        Me.BtnExportar3.Image = Global.Formularios.My.Resources.Resources.exportar2
-        Me.BtnExportar3.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.BtnExportar3.Margin = New System.Windows.Forms.Padding(5)
-        Me.BtnExportar3.Name = "BtnExportar3"
-        Me.BtnExportar3.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnExportar3.Size = New System.Drawing.Size(92, 28)
-        Me.BtnExportar3.Text = "Exportar"
-        Me.BtnExportar3.ToolTipText = "Exportar"
-        '
-        'BtnGenerar3
-        '
-        Me.BtnGenerar3.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.BtnGenerar3.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnGenerar3.ForeColor = System.Drawing.Color.White
-        Me.BtnGenerar3.Image = Global.Formularios.My.Resources.Resources.buscar16px
-        Me.BtnGenerar3.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.BtnGenerar3.Margin = New System.Windows.Forms.Padding(5)
-        Me.BtnGenerar3.Name = "BtnGenerar3"
-        Me.BtnGenerar3.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnGenerar3.Size = New System.Drawing.Size(89, 28)
-        Me.BtnGenerar3.Text = "Generar"
-        Me.BtnGenerar3.ToolTipText = "Generar"
         '
         'GroupBox2
         '
@@ -955,18 +1258,6 @@ Partial Class FrmReporteCostoxKiloCerdo
         Me.GroupBox2.TabIndex = 54
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "MATERNIDAD"
-        '
-        'Ptbx_Cargando2
-        '
-        Me.Ptbx_Cargando2.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Ptbx_Cargando2.Image = Global.Formularios.My.Resources.Resources.loader
-        Me.Ptbx_Cargando2.Location = New System.Drawing.Point(175, 149)
-        Me.Ptbx_Cargando2.Name = "Ptbx_Cargando2"
-        Me.Ptbx_Cargando2.Size = New System.Drawing.Size(43, 37)
-        Me.Ptbx_Cargando2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.Ptbx_Cargando2.TabIndex = 30
-        Me.Ptbx_Cargando2.TabStop = False
-        Me.Ptbx_Cargando2.Visible = False
         '
         'dtgListado2
         '
@@ -1051,7 +1342,7 @@ Partial Class FrmReporteCostoxKiloCerdo
         Me.BarraOpciones2.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.BarraOpciones2.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
         Me.BarraOpciones2.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.BarraOpciones2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnExportar2, Me.BtnGenerar2})
+        Me.BarraOpciones2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnGenerar2, Me.BtnGuardar2})
         Me.BarraOpciones2.Location = New System.Drawing.Point(3, 16)
         Me.BarraOpciones2.Margin = New System.Windows.Forms.Padding(2, 1, 2, 1)
         Me.BarraOpciones2.Name = "BarraOpciones2"
@@ -1059,33 +1350,6 @@ Partial Class FrmReporteCostoxKiloCerdo
         Me.BarraOpciones2.Size = New System.Drawing.Size(405, 38)
         Me.BarraOpciones2.TabIndex = 53
         Me.BarraOpciones2.Text = "ToolStrip1"
-        '
-        'BtnExportar2
-        '
-        Me.BtnExportar2.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnExportar2.ForeColor = System.Drawing.Color.White
-        Me.BtnExportar2.Image = Global.Formularios.My.Resources.Resources.exportar2
-        Me.BtnExportar2.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.BtnExportar2.Margin = New System.Windows.Forms.Padding(5)
-        Me.BtnExportar2.Name = "BtnExportar2"
-        Me.BtnExportar2.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnExportar2.Size = New System.Drawing.Size(92, 28)
-        Me.BtnExportar2.Text = "Exportar"
-        Me.BtnExportar2.ToolTipText = "Exportar"
-        '
-        'BtnGenerar2
-        '
-        Me.BtnGenerar2.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.BtnGenerar2.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnGenerar2.ForeColor = System.Drawing.Color.White
-        Me.BtnGenerar2.Image = Global.Formularios.My.Resources.Resources.buscar16px
-        Me.BtnGenerar2.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.BtnGenerar2.Margin = New System.Windows.Forms.Padding(5)
-        Me.BtnGenerar2.Name = "BtnGenerar2"
-        Me.BtnGenerar2.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnGenerar2.Size = New System.Drawing.Size(89, 28)
-        Me.BtnGenerar2.Text = "Generar"
-        Me.BtnGenerar2.ToolTipText = "Generar"
         '
         'GroupBox1
         '
@@ -1098,18 +1362,6 @@ Partial Class FrmReporteCostoxKiloCerdo
         Me.GroupBox1.TabIndex = 31
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "REPRODUCCIÓN"
-        '
-        'Ptbx_Cargando1
-        '
-        Me.Ptbx_Cargando1.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Ptbx_Cargando1.Image = Global.Formularios.My.Resources.Resources.loader
-        Me.Ptbx_Cargando1.Location = New System.Drawing.Point(177, 149)
-        Me.Ptbx_Cargando1.Name = "Ptbx_Cargando1"
-        Me.Ptbx_Cargando1.Size = New System.Drawing.Size(43, 37)
-        Me.Ptbx_Cargando1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.Ptbx_Cargando1.TabIndex = 30
-        Me.Ptbx_Cargando1.TabStop = False
-        Me.Ptbx_Cargando1.Visible = False
         '
         'dtgListado1
         '
@@ -1194,7 +1446,7 @@ Partial Class FrmReporteCostoxKiloCerdo
         Me.BarraOpciones1.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.BarraOpciones1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
         Me.BarraOpciones1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.BarraOpciones1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnExportar1, Me.BtnGenerar1})
+        Me.BarraOpciones1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnGuardar1, Me.BtnGenerar1})
         Me.BarraOpciones1.Location = New System.Drawing.Point(3, 16)
         Me.BarraOpciones1.Margin = New System.Windows.Forms.Padding(2, 1, 2, 1)
         Me.BarraOpciones1.Name = "BarraOpciones1"
@@ -1202,33 +1454,6 @@ Partial Class FrmReporteCostoxKiloCerdo
         Me.BarraOpciones1.Size = New System.Drawing.Size(405, 38)
         Me.BarraOpciones1.TabIndex = 53
         Me.BarraOpciones1.Text = "ToolStrip2"
-        '
-        'BtnExportar1
-        '
-        Me.BtnExportar1.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnExportar1.ForeColor = System.Drawing.Color.White
-        Me.BtnExportar1.Image = Global.Formularios.My.Resources.Resources.exportar2
-        Me.BtnExportar1.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.BtnExportar1.Margin = New System.Windows.Forms.Padding(5)
-        Me.BtnExportar1.Name = "BtnExportar1"
-        Me.BtnExportar1.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnExportar1.Size = New System.Drawing.Size(92, 28)
-        Me.BtnExportar1.Text = "Exportar"
-        Me.BtnExportar1.ToolTipText = "Exportar"
-        '
-        'BtnGenerar1
-        '
-        Me.BtnGenerar1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.BtnGenerar1.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnGenerar1.ForeColor = System.Drawing.Color.White
-        Me.BtnGenerar1.Image = Global.Formularios.My.Resources.Resources.buscar16px
-        Me.BtnGenerar1.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.BtnGenerar1.Margin = New System.Windows.Forms.Padding(5)
-        Me.BtnGenerar1.Name = "BtnGenerar1"
-        Me.BtnGenerar1.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnGenerar1.Size = New System.Drawing.Size(89, 28)
-        Me.BtnGenerar1.Text = "Generar"
-        Me.BtnGenerar1.ToolTipText = "Generar"
         '
         'Label6
         '
@@ -1442,415 +1667,164 @@ Partial Class FrmReporteCostoxKiloCerdo
         'BackgroundWorker3
         '
         '
-        'GroupBox7
+        'BackgroundWorker4
         '
-        Me.GroupBox7.Controls.Add(Me.LblLotesInvolucrados3)
-        Me.GroupBox7.Controls.Add(Me.Label14)
-        Me.GroupBox7.Controls.Add(Me.LblFinChanchilla3)
-        Me.GroupBox7.Controls.Add(Me.LblInicioChanchilla3)
-        Me.GroupBox7.Controls.Add(Me.LblFinInseminacion3)
-        Me.GroupBox7.Controls.Add(Me.LblInicioInseminacion3)
-        Me.GroupBox7.Controls.Add(Me.LblFinCampana3)
-        Me.GroupBox7.Controls.Add(Me.LblInicioCampana3)
-        Me.GroupBox7.Controls.Add(Me.Label27)
-        Me.GroupBox7.Controls.Add(Me.Label28)
-        Me.GroupBox7.Controls.Add(Me.Label29)
-        Me.GroupBox7.Controls.Add(Me.Label30)
-        Me.GroupBox7.Controls.Add(Me.Label31)
-        Me.GroupBox7.Controls.Add(Me.Label32)
-        Me.GroupBox7.Location = New System.Drawing.Point(874, 426)
-        Me.GroupBox7.Name = "GroupBox7"
-        Me.GroupBox7.Size = New System.Drawing.Size(411, 215)
-        Me.GroupBox7.TabIndex = 198
-        Me.GroupBox7.TabStop = False
-        Me.GroupBox7.Text = "Información Adicional"
         '
-        'LblLotesInvolucrados3
+        'Ptbx_Cargando4
         '
-        Me.LblLotesInvolucrados3.AutoSize = True
-        Me.LblLotesInvolucrados3.BackColor = System.Drawing.Color.Transparent
-        Me.LblLotesInvolucrados3.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblLotesInvolucrados3.ForeColor = System.Drawing.Color.Black
-        Me.LblLotesInvolucrados3.Location = New System.Drawing.Point(267, 66)
-        Me.LblLotesInvolucrados3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.LblLotesInvolucrados3.Name = "LblLotesInvolucrados3"
-        Me.LblLotesInvolucrados3.Size = New System.Drawing.Size(12, 13)
-        Me.LblLotesInvolucrados3.TabIndex = 196
-        Me.LblLotesInvolucrados3.Text = "-"
+        Me.Ptbx_Cargando4.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Ptbx_Cargando4.Image = Global.Formularios.My.Resources.Resources.loader
+        Me.Ptbx_Cargando4.Location = New System.Drawing.Point(175, 149)
+        Me.Ptbx_Cargando4.Name = "Ptbx_Cargando4"
+        Me.Ptbx_Cargando4.Size = New System.Drawing.Size(43, 37)
+        Me.Ptbx_Cargando4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.Ptbx_Cargando4.TabIndex = 30
+        Me.Ptbx_Cargando4.TabStop = False
+        Me.Ptbx_Cargando4.Visible = False
         '
-        'Label14
+        'BtnGenerar4
         '
-        Me.Label14.AutoSize = True
-        Me.Label14.BackColor = System.Drawing.Color.Transparent
-        Me.Label14.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label14.Location = New System.Drawing.Point(267, 28)
-        Me.Label14.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(133, 14)
-        Me.Label14.TabIndex = 195
-        Me.Label14.Text = "Lotes Involucrados"
+        Me.BtnGenerar4.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.BtnGenerar4.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnGenerar4.ForeColor = System.Drawing.Color.White
+        Me.BtnGenerar4.Image = Global.Formularios.My.Resources.Resources.buscar16px
+        Me.BtnGenerar4.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BtnGenerar4.Margin = New System.Windows.Forms.Padding(5)
+        Me.BtnGenerar4.Name = "BtnGenerar4"
+        Me.BtnGenerar4.Padding = New System.Windows.Forms.Padding(2)
+        Me.BtnGenerar4.Size = New System.Drawing.Size(89, 28)
+        Me.BtnGenerar4.Text = "Generar"
+        Me.BtnGenerar4.ToolTipText = "Generar"
         '
-        'LblFinChanchilla3
+        'BtnGuardar4
         '
-        Me.LblFinChanchilla3.AutoSize = True
-        Me.LblFinChanchilla3.BackColor = System.Drawing.Color.Transparent
-        Me.LblFinChanchilla3.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblFinChanchilla3.ForeColor = System.Drawing.Color.Black
-        Me.LblFinChanchilla3.Location = New System.Drawing.Point(161, 186)
-        Me.LblFinChanchilla3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.LblFinChanchilla3.Name = "LblFinChanchilla3"
-        Me.LblFinChanchilla3.Size = New System.Drawing.Size(48, 13)
-        Me.LblFinChanchilla3.TabIndex = 194
-        Me.LblFinChanchilla3.Text = "- / - / -"
+        Me.BtnGuardar4.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnGuardar4.ForeColor = System.Drawing.Color.White
+        Me.BtnGuardar4.Image = Global.Formularios.My.Resources.Resources.guardar
+        Me.BtnGuardar4.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BtnGuardar4.Margin = New System.Windows.Forms.Padding(5)
+        Me.BtnGuardar4.Name = "BtnGuardar4"
+        Me.BtnGuardar4.Padding = New System.Windows.Forms.Padding(2)
+        Me.BtnGuardar4.Size = New System.Drawing.Size(89, 28)
+        Me.BtnGuardar4.Text = "Guardar"
+        Me.BtnGuardar4.ToolTipText = "Guardar"
         '
-        'LblInicioChanchilla3
+        'Ptbx_Cargando3
         '
-        Me.LblInicioChanchilla3.AutoSize = True
-        Me.LblInicioChanchilla3.BackColor = System.Drawing.Color.Transparent
-        Me.LblInicioChanchilla3.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblInicioChanchilla3.ForeColor = System.Drawing.Color.Black
-        Me.LblInicioChanchilla3.Location = New System.Drawing.Point(161, 162)
-        Me.LblInicioChanchilla3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.LblInicioChanchilla3.Name = "LblInicioChanchilla3"
-        Me.LblInicioChanchilla3.Size = New System.Drawing.Size(48, 13)
-        Me.LblInicioChanchilla3.TabIndex = 193
-        Me.LblInicioChanchilla3.Text = "- / - / -"
+        Me.Ptbx_Cargando3.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Ptbx_Cargando3.Image = Global.Formularios.My.Resources.Resources.loader
+        Me.Ptbx_Cargando3.Location = New System.Drawing.Point(175, 149)
+        Me.Ptbx_Cargando3.Name = "Ptbx_Cargando3"
+        Me.Ptbx_Cargando3.Size = New System.Drawing.Size(43, 37)
+        Me.Ptbx_Cargando3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.Ptbx_Cargando3.TabIndex = 30
+        Me.Ptbx_Cargando3.TabStop = False
+        Me.Ptbx_Cargando3.Visible = False
         '
-        'LblFinInseminacion3
+        'BtnGenerar3
         '
-        Me.LblFinInseminacion3.AutoSize = True
-        Me.LblFinInseminacion3.BackColor = System.Drawing.Color.Transparent
-        Me.LblFinInseminacion3.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblFinInseminacion3.ForeColor = System.Drawing.Color.Black
-        Me.LblFinInseminacion3.Location = New System.Drawing.Point(161, 116)
-        Me.LblFinInseminacion3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.LblFinInseminacion3.Name = "LblFinInseminacion3"
-        Me.LblFinInseminacion3.Size = New System.Drawing.Size(48, 13)
-        Me.LblFinInseminacion3.TabIndex = 192
-        Me.LblFinInseminacion3.Text = "- / - / -"
+        Me.BtnGenerar3.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.BtnGenerar3.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnGenerar3.ForeColor = System.Drawing.Color.White
+        Me.BtnGenerar3.Image = Global.Formularios.My.Resources.Resources.buscar16px
+        Me.BtnGenerar3.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BtnGenerar3.Margin = New System.Windows.Forms.Padding(5)
+        Me.BtnGenerar3.Name = "BtnGenerar3"
+        Me.BtnGenerar3.Padding = New System.Windows.Forms.Padding(2)
+        Me.BtnGenerar3.Size = New System.Drawing.Size(89, 28)
+        Me.BtnGenerar3.Text = "Generar"
+        Me.BtnGenerar3.ToolTipText = "Generar"
         '
-        'LblInicioInseminacion3
+        'BtnGuardar3
         '
-        Me.LblInicioInseminacion3.AutoSize = True
-        Me.LblInicioInseminacion3.BackColor = System.Drawing.Color.Transparent
-        Me.LblInicioInseminacion3.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblInicioInseminacion3.ForeColor = System.Drawing.Color.Black
-        Me.LblInicioInseminacion3.Location = New System.Drawing.Point(161, 92)
-        Me.LblInicioInseminacion3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.LblInicioInseminacion3.Name = "LblInicioInseminacion3"
-        Me.LblInicioInseminacion3.Size = New System.Drawing.Size(48, 13)
-        Me.LblInicioInseminacion3.TabIndex = 191
-        Me.LblInicioInseminacion3.Text = "- / - / -"
+        Me.BtnGuardar3.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnGuardar3.ForeColor = System.Drawing.Color.White
+        Me.BtnGuardar3.Image = Global.Formularios.My.Resources.Resources.guardar
+        Me.BtnGuardar3.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BtnGuardar3.Margin = New System.Windows.Forms.Padding(5)
+        Me.BtnGuardar3.Name = "BtnGuardar3"
+        Me.BtnGuardar3.Padding = New System.Windows.Forms.Padding(2)
+        Me.BtnGuardar3.Size = New System.Drawing.Size(89, 28)
+        Me.BtnGuardar3.Text = "Guardar"
+        Me.BtnGuardar3.ToolTipText = "Guardar"
         '
-        'LblFinCampana3
+        'Ptbx_Cargando2
         '
-        Me.LblFinCampana3.AutoSize = True
-        Me.LblFinCampana3.BackColor = System.Drawing.Color.Transparent
-        Me.LblFinCampana3.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblFinCampana3.ForeColor = System.Drawing.Color.Black
-        Me.LblFinCampana3.Location = New System.Drawing.Point(161, 53)
-        Me.LblFinCampana3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.LblFinCampana3.Name = "LblFinCampana3"
-        Me.LblFinCampana3.Size = New System.Drawing.Size(48, 13)
-        Me.LblFinCampana3.TabIndex = 190
-        Me.LblFinCampana3.Text = "- / - / -"
+        Me.Ptbx_Cargando2.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Ptbx_Cargando2.Image = Global.Formularios.My.Resources.Resources.loader
+        Me.Ptbx_Cargando2.Location = New System.Drawing.Point(175, 149)
+        Me.Ptbx_Cargando2.Name = "Ptbx_Cargando2"
+        Me.Ptbx_Cargando2.Size = New System.Drawing.Size(43, 37)
+        Me.Ptbx_Cargando2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.Ptbx_Cargando2.TabIndex = 30
+        Me.Ptbx_Cargando2.TabStop = False
+        Me.Ptbx_Cargando2.Visible = False
         '
-        'LblInicioCampana3
+        'BtnGenerar2
         '
-        Me.LblInicioCampana3.AutoSize = True
-        Me.LblInicioCampana3.BackColor = System.Drawing.Color.Transparent
-        Me.LblInicioCampana3.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblInicioCampana3.ForeColor = System.Drawing.Color.Black
-        Me.LblInicioCampana3.Location = New System.Drawing.Point(161, 29)
-        Me.LblInicioCampana3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.LblInicioCampana3.Name = "LblInicioCampana3"
-        Me.LblInicioCampana3.Size = New System.Drawing.Size(48, 13)
-        Me.LblInicioCampana3.TabIndex = 189
-        Me.LblInicioCampana3.Text = "- / - / -"
+        Me.BtnGenerar2.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.BtnGenerar2.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnGenerar2.ForeColor = System.Drawing.Color.White
+        Me.BtnGenerar2.Image = Global.Formularios.My.Resources.Resources.buscar16px
+        Me.BtnGenerar2.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BtnGenerar2.Margin = New System.Windows.Forms.Padding(5)
+        Me.BtnGenerar2.Name = "BtnGenerar2"
+        Me.BtnGenerar2.Padding = New System.Windows.Forms.Padding(2)
+        Me.BtnGenerar2.Size = New System.Drawing.Size(89, 28)
+        Me.BtnGenerar2.Text = "Generar"
+        Me.BtnGenerar2.ToolTipText = "Generar"
         '
-        'Label27
+        'BtnGuardar2
         '
-        Me.Label27.AutoSize = True
-        Me.Label27.BackColor = System.Drawing.Color.Transparent
-        Me.Label27.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label27.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label27.Location = New System.Drawing.Point(45, 185)
-        Me.Label27.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label27.Name = "Label27"
-        Me.Label27.Size = New System.Drawing.Size(108, 14)
-        Me.Label27.TabIndex = 188
-        Me.Label27.Text = "Fin Chanchilla :"
+        Me.BtnGuardar2.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnGuardar2.ForeColor = System.Drawing.Color.White
+        Me.BtnGuardar2.Image = Global.Formularios.My.Resources.Resources.guardar
+        Me.BtnGuardar2.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BtnGuardar2.Margin = New System.Windows.Forms.Padding(5)
+        Me.BtnGuardar2.Name = "BtnGuardar2"
+        Me.BtnGuardar2.Padding = New System.Windows.Forms.Padding(2)
+        Me.BtnGuardar2.Size = New System.Drawing.Size(89, 28)
+        Me.BtnGuardar2.Text = "Guardar"
+        Me.BtnGuardar2.ToolTipText = "Guardar"
         '
-        'Label28
+        'Ptbx_Cargando1
         '
-        Me.Label28.AutoSize = True
-        Me.Label28.BackColor = System.Drawing.Color.Transparent
-        Me.Label28.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label28.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label28.Location = New System.Drawing.Point(28, 161)
-        Me.Label28.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label28.Name = "Label28"
-        Me.Label28.Size = New System.Drawing.Size(125, 14)
-        Me.Label28.TabIndex = 187
-        Me.Label28.Text = "Inicio Chanchilla :"
+        Me.Ptbx_Cargando1.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Ptbx_Cargando1.Image = Global.Formularios.My.Resources.Resources.loader
+        Me.Ptbx_Cargando1.Location = New System.Drawing.Point(177, 149)
+        Me.Ptbx_Cargando1.Name = "Ptbx_Cargando1"
+        Me.Ptbx_Cargando1.Size = New System.Drawing.Size(43, 37)
+        Me.Ptbx_Cargando1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.Ptbx_Cargando1.TabIndex = 30
+        Me.Ptbx_Cargando1.TabStop = False
+        Me.Ptbx_Cargando1.Visible = False
         '
-        'Label29
+        'BtnGuardar1
         '
-        Me.Label29.AutoSize = True
-        Me.Label29.BackColor = System.Drawing.Color.Transparent
-        Me.Label29.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label29.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label29.Location = New System.Drawing.Point(25, 115)
-        Me.Label29.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label29.Name = "Label29"
-        Me.Label29.Size = New System.Drawing.Size(128, 14)
-        Me.Label29.TabIndex = 186
-        Me.Label29.Text = "Fin Inseminación :"
+        Me.BtnGuardar1.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnGuardar1.ForeColor = System.Drawing.Color.White
+        Me.BtnGuardar1.Image = Global.Formularios.My.Resources.Resources.guardar
+        Me.BtnGuardar1.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BtnGuardar1.Margin = New System.Windows.Forms.Padding(5)
+        Me.BtnGuardar1.Name = "BtnGuardar1"
+        Me.BtnGuardar1.Padding = New System.Windows.Forms.Padding(2)
+        Me.BtnGuardar1.Size = New System.Drawing.Size(89, 28)
+        Me.BtnGuardar1.Text = "Guardar"
+        Me.BtnGuardar1.ToolTipText = "Guardar"
         '
-        'Label30
+        'BtnGenerar1
         '
-        Me.Label30.AutoSize = True
-        Me.Label30.BackColor = System.Drawing.Color.Transparent
-        Me.Label30.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label30.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label30.Location = New System.Drawing.Point(8, 91)
-        Me.Label30.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label30.Name = "Label30"
-        Me.Label30.Size = New System.Drawing.Size(145, 14)
-        Me.Label30.TabIndex = 185
-        Me.Label30.Text = "Inicio Inseminación :"
-        '
-        'Label31
-        '
-        Me.Label31.AutoSize = True
-        Me.Label31.BackColor = System.Drawing.Color.Transparent
-        Me.Label31.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label31.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label31.Location = New System.Drawing.Point(52, 52)
-        Me.Label31.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label31.Name = "Label31"
-        Me.Label31.Size = New System.Drawing.Size(101, 14)
-        Me.Label31.TabIndex = 184
-        Me.Label31.Text = "Fin Campaña :"
-        '
-        'Label32
-        '
-        Me.Label32.AutoSize = True
-        Me.Label32.BackColor = System.Drawing.Color.Transparent
-        Me.Label32.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label32.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label32.Location = New System.Drawing.Point(35, 28)
-        Me.Label32.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label32.Name = "Label32"
-        Me.Label32.Size = New System.Drawing.Size(118, 14)
-        Me.Label32.TabIndex = 183
-        Me.Label32.Text = "Inicio Campaña :"
-        '
-        'GroupBox8
-        '
-        Me.GroupBox8.Controls.Add(Me.LblLotesInvolucrados4)
-        Me.GroupBox8.Controls.Add(Me.Label15)
-        Me.GroupBox8.Controls.Add(Me.LblFinChanchilla4)
-        Me.GroupBox8.Controls.Add(Me.LblInicioChanchilla4)
-        Me.GroupBox8.Controls.Add(Me.LblFinInseminacion4)
-        Me.GroupBox8.Controls.Add(Me.LblInicioInseminacion4)
-        Me.GroupBox8.Controls.Add(Me.LblFinCampana4)
-        Me.GroupBox8.Controls.Add(Me.LblInicioCampana4)
-        Me.GroupBox8.Controls.Add(Me.Label34)
-        Me.GroupBox8.Controls.Add(Me.Label35)
-        Me.GroupBox8.Controls.Add(Me.Label36)
-        Me.GroupBox8.Controls.Add(Me.Label37)
-        Me.GroupBox8.Controls.Add(Me.Label38)
-        Me.GroupBox8.Controls.Add(Me.Label39)
-        Me.GroupBox8.Location = New System.Drawing.Point(1301, 426)
-        Me.GroupBox8.Name = "GroupBox8"
-        Me.GroupBox8.Size = New System.Drawing.Size(411, 215)
-        Me.GroupBox8.TabIndex = 199
-        Me.GroupBox8.TabStop = False
-        Me.GroupBox8.Text = "Información Adicional"
-        '
-        'LblLotesInvolucrados4
-        '
-        Me.LblLotesInvolucrados4.AutoSize = True
-        Me.LblLotesInvolucrados4.BackColor = System.Drawing.Color.Transparent
-        Me.LblLotesInvolucrados4.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblLotesInvolucrados4.ForeColor = System.Drawing.Color.Black
-        Me.LblLotesInvolucrados4.Location = New System.Drawing.Point(267, 66)
-        Me.LblLotesInvolucrados4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.LblLotesInvolucrados4.Name = "LblLotesInvolucrados4"
-        Me.LblLotesInvolucrados4.Size = New System.Drawing.Size(12, 13)
-        Me.LblLotesInvolucrados4.TabIndex = 196
-        Me.LblLotesInvolucrados4.Text = "-"
-        '
-        'Label15
-        '
-        Me.Label15.AutoSize = True
-        Me.Label15.BackColor = System.Drawing.Color.Transparent
-        Me.Label15.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label15.Location = New System.Drawing.Point(267, 28)
-        Me.Label15.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(133, 14)
-        Me.Label15.TabIndex = 195
-        Me.Label15.Text = "Lotes Involucrados"
-        '
-        'LblFinChanchilla4
-        '
-        Me.LblFinChanchilla4.AutoSize = True
-        Me.LblFinChanchilla4.BackColor = System.Drawing.Color.Transparent
-        Me.LblFinChanchilla4.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblFinChanchilla4.ForeColor = System.Drawing.Color.Black
-        Me.LblFinChanchilla4.Location = New System.Drawing.Point(161, 186)
-        Me.LblFinChanchilla4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.LblFinChanchilla4.Name = "LblFinChanchilla4"
-        Me.LblFinChanchilla4.Size = New System.Drawing.Size(48, 13)
-        Me.LblFinChanchilla4.TabIndex = 194
-        Me.LblFinChanchilla4.Text = "- / - / -"
-        '
-        'LblInicioChanchilla4
-        '
-        Me.LblInicioChanchilla4.AutoSize = True
-        Me.LblInicioChanchilla4.BackColor = System.Drawing.Color.Transparent
-        Me.LblInicioChanchilla4.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblInicioChanchilla4.ForeColor = System.Drawing.Color.Black
-        Me.LblInicioChanchilla4.Location = New System.Drawing.Point(161, 162)
-        Me.LblInicioChanchilla4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.LblInicioChanchilla4.Name = "LblInicioChanchilla4"
-        Me.LblInicioChanchilla4.Size = New System.Drawing.Size(48, 13)
-        Me.LblInicioChanchilla4.TabIndex = 193
-        Me.LblInicioChanchilla4.Text = "- / - / -"
-        '
-        'LblFinInseminacion4
-        '
-        Me.LblFinInseminacion4.AutoSize = True
-        Me.LblFinInseminacion4.BackColor = System.Drawing.Color.Transparent
-        Me.LblFinInseminacion4.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblFinInseminacion4.ForeColor = System.Drawing.Color.Black
-        Me.LblFinInseminacion4.Location = New System.Drawing.Point(161, 116)
-        Me.LblFinInseminacion4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.LblFinInseminacion4.Name = "LblFinInseminacion4"
-        Me.LblFinInseminacion4.Size = New System.Drawing.Size(48, 13)
-        Me.LblFinInseminacion4.TabIndex = 192
-        Me.LblFinInseminacion4.Text = "- / - / -"
-        '
-        'LblInicioInseminacion4
-        '
-        Me.LblInicioInseminacion4.AutoSize = True
-        Me.LblInicioInseminacion4.BackColor = System.Drawing.Color.Transparent
-        Me.LblInicioInseminacion4.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblInicioInseminacion4.ForeColor = System.Drawing.Color.Black
-        Me.LblInicioInseminacion4.Location = New System.Drawing.Point(161, 92)
-        Me.LblInicioInseminacion4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.LblInicioInseminacion4.Name = "LblInicioInseminacion4"
-        Me.LblInicioInseminacion4.Size = New System.Drawing.Size(48, 13)
-        Me.LblInicioInseminacion4.TabIndex = 191
-        Me.LblInicioInseminacion4.Text = "- / - / -"
-        '
-        'LblFinCampana4
-        '
-        Me.LblFinCampana4.AutoSize = True
-        Me.LblFinCampana4.BackColor = System.Drawing.Color.Transparent
-        Me.LblFinCampana4.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblFinCampana4.ForeColor = System.Drawing.Color.Black
-        Me.LblFinCampana4.Location = New System.Drawing.Point(161, 53)
-        Me.LblFinCampana4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.LblFinCampana4.Name = "LblFinCampana4"
-        Me.LblFinCampana4.Size = New System.Drawing.Size(48, 13)
-        Me.LblFinCampana4.TabIndex = 190
-        Me.LblFinCampana4.Text = "- / - / -"
-        '
-        'LblInicioCampana4
-        '
-        Me.LblInicioCampana4.AutoSize = True
-        Me.LblInicioCampana4.BackColor = System.Drawing.Color.Transparent
-        Me.LblInicioCampana4.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblInicioCampana4.ForeColor = System.Drawing.Color.Black
-        Me.LblInicioCampana4.Location = New System.Drawing.Point(161, 29)
-        Me.LblInicioCampana4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.LblInicioCampana4.Name = "LblInicioCampana4"
-        Me.LblInicioCampana4.Size = New System.Drawing.Size(48, 13)
-        Me.LblInicioCampana4.TabIndex = 189
-        Me.LblInicioCampana4.Text = "- / - / -"
-        '
-        'Label34
-        '
-        Me.Label34.AutoSize = True
-        Me.Label34.BackColor = System.Drawing.Color.Transparent
-        Me.Label34.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label34.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label34.Location = New System.Drawing.Point(45, 185)
-        Me.Label34.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label34.Name = "Label34"
-        Me.Label34.Size = New System.Drawing.Size(108, 14)
-        Me.Label34.TabIndex = 188
-        Me.Label34.Text = "Fin Chanchilla :"
-        '
-        'Label35
-        '
-        Me.Label35.AutoSize = True
-        Me.Label35.BackColor = System.Drawing.Color.Transparent
-        Me.Label35.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label35.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label35.Location = New System.Drawing.Point(28, 161)
-        Me.Label35.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label35.Name = "Label35"
-        Me.Label35.Size = New System.Drawing.Size(125, 14)
-        Me.Label35.TabIndex = 187
-        Me.Label35.Text = "Inicio Chanchilla :"
-        '
-        'Label36
-        '
-        Me.Label36.AutoSize = True
-        Me.Label36.BackColor = System.Drawing.Color.Transparent
-        Me.Label36.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label36.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label36.Location = New System.Drawing.Point(25, 115)
-        Me.Label36.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label36.Name = "Label36"
-        Me.Label36.Size = New System.Drawing.Size(128, 14)
-        Me.Label36.TabIndex = 186
-        Me.Label36.Text = "Fin Inseminación :"
-        '
-        'Label37
-        '
-        Me.Label37.AutoSize = True
-        Me.Label37.BackColor = System.Drawing.Color.Transparent
-        Me.Label37.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label37.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label37.Location = New System.Drawing.Point(8, 91)
-        Me.Label37.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label37.Name = "Label37"
-        Me.Label37.Size = New System.Drawing.Size(145, 14)
-        Me.Label37.TabIndex = 185
-        Me.Label37.Text = "Inicio Inseminación :"
-        '
-        'Label38
-        '
-        Me.Label38.AutoSize = True
-        Me.Label38.BackColor = System.Drawing.Color.Transparent
-        Me.Label38.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label38.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label38.Location = New System.Drawing.Point(52, 52)
-        Me.Label38.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label38.Name = "Label38"
-        Me.Label38.Size = New System.Drawing.Size(101, 14)
-        Me.Label38.TabIndex = 184
-        Me.Label38.Text = "Fin Campaña :"
-        '
-        'Label39
-        '
-        Me.Label39.AutoSize = True
-        Me.Label39.BackColor = System.Drawing.Color.Transparent
-        Me.Label39.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label39.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label39.Location = New System.Drawing.Point(35, 28)
-        Me.Label39.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label39.Name = "Label39"
-        Me.Label39.Size = New System.Drawing.Size(118, 14)
-        Me.Label39.TabIndex = 183
-        Me.Label39.Text = "Inicio Campaña :"
+        Me.BtnGenerar1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.BtnGenerar1.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnGenerar1.ForeColor = System.Drawing.Color.White
+        Me.BtnGenerar1.Image = Global.Formularios.My.Resources.Resources.buscar16px
+        Me.BtnGenerar1.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BtnGenerar1.Margin = New System.Windows.Forms.Padding(5)
+        Me.BtnGenerar1.Name = "BtnGenerar1"
+        Me.BtnGenerar1.Padding = New System.Windows.Forms.Padding(2)
+        Me.BtnGenerar1.Size = New System.Drawing.Size(89, 28)
+        Me.BtnGenerar1.Text = "Generar"
+        Me.BtnGenerar1.ToolTipText = "Generar"
         '
         'FrmReporteCostoxKiloCerdo
         '
@@ -1862,31 +1836,31 @@ Partial Class FrmReporteCostoxKiloCerdo
         Me.Text = "REPORTE POR KILO DE CERDO"
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
+        Me.GroupBox8.ResumeLayout(False)
+        Me.GroupBox8.PerformLayout()
+        Me.GroupBox7.ResumeLayout(False)
+        Me.GroupBox7.PerformLayout()
         Me.GroupBox6.ResumeLayout(False)
         Me.GroupBox6.PerformLayout()
         Me.GroupBox5.ResumeLayout(False)
         Me.GroupBox5.PerformLayout()
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox4.PerformLayout()
-        CType(Me.Ptbx_Cargando4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dtgListado4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.BarraOpciones4.ResumeLayout(False)
         Me.BarraOpciones4.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
-        CType(Me.Ptbx_Cargando3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dtgListado3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.BarraOpciones3.ResumeLayout(False)
         Me.BarraOpciones3.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
-        CType(Me.Ptbx_Cargando2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dtgListado2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.BarraOpciones2.ResumeLayout(False)
         Me.BarraOpciones2.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
-        CType(Me.Ptbx_Cargando1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dtgListado1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.BarraOpciones1.ResumeLayout(False)
         Me.BarraOpciones1.PerformLayout()
@@ -1894,10 +1868,10 @@ Partial Class FrmReporteCostoxKiloCerdo
         Me.GrupoFiltros.PerformLayout()
         CType(Me.CmbUbicacion, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CmbCampaña, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox7.ResumeLayout(False)
-        Me.GroupBox7.PerformLayout()
-        Me.GroupBox8.ResumeLayout(False)
-        Me.GroupBox8.PerformLayout()
+        CType(Me.Ptbx_Cargando4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Ptbx_Cargando3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Ptbx_Cargando2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Ptbx_Cargando1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1911,29 +1885,24 @@ Partial Class FrmReporteCostoxKiloCerdo
     Friend WithEvents dtgListado1 As Infragistics.Win.UltraWinGrid.UltraGrid
     Friend WithEvents GroupBox4 As GroupBox
     Friend WithEvents BarraOpciones4 As ToolStrip
-    Friend WithEvents BtnExportar4 As ToolStripButton
     Friend WithEvents Ptbx_Cargando4 As PictureBox
     Friend WithEvents dtgListado4 As Infragistics.Win.UltraWinGrid.UltraGrid
     Friend WithEvents GroupBox3 As GroupBox
     Friend WithEvents BarraOpciones3 As ToolStrip
-    Friend WithEvents BtnExportar3 As ToolStripButton
     Friend WithEvents Ptbx_Cargando3 As PictureBox
     Friend WithEvents dtgListado3 As Infragistics.Win.UltraWinGrid.UltraGrid
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents BarraOpciones2 As ToolStrip
-    Friend WithEvents BtnExportar2 As ToolStripButton
     Friend WithEvents Ptbx_Cargando2 As PictureBox
     Friend WithEvents dtgListado2 As Infragistics.Win.UltraWinGrid.UltraGrid
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents BarraOpciones1 As ToolStrip
-    Friend WithEvents BtnGenerar1 As ToolStripButton
     Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
     Friend WithEvents CmbUbicacion As Infragistics.Win.UltraWinGrid.UltraCombo
     Friend WithEvents Label1 As Label
     Friend WithEvents CmbAnios As ComboBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents BtnExportar1 As ToolStripButton
-    Friend WithEvents ToolStripButton5 As ToolStripButton
+    Friend WithEvents BtnGenerar4 As ToolStripButton
     Friend WithEvents BtnGenerar3 As ToolStripButton
     Friend WithEvents BtnGenerar2 As ToolStripButton
     Friend WithEvents GroupBox5 As GroupBox
@@ -1955,10 +1924,10 @@ Partial Class FrmReporteCostoxKiloCerdo
     Friend WithEvents GroupBox6 As GroupBox
     Friend WithEvents LblLotesInvolucrados2 As Label
     Friend WithEvents Label13 As Label
-    Friend WithEvents LblFinChanchilla2 As Label
-    Friend WithEvents LblInicioChanchilla2 As Label
-    Friend WithEvents LblFinInseminacion2 As Label
-    Friend WithEvents LblInicioInseminacion2 As Label
+    Friend WithEvents LblFinDestete As Label
+    Friend WithEvents LblInicioDestete As Label
+    Friend WithEvents LblFinMaternidad As Label
+    Friend WithEvents LblInicioMaternidad As Label
     Friend WithEvents LblFinCampana2 As Label
     Friend WithEvents LblInicioCampana2 As Label
     Friend WithEvents Label20 As Label
@@ -1971,14 +1940,10 @@ Partial Class FrmReporteCostoxKiloCerdo
     Friend WithEvents GroupBox7 As GroupBox
     Friend WithEvents LblLotesInvolucrados3 As Label
     Friend WithEvents Label14 As Label
-    Friend WithEvents LblFinChanchilla3 As Label
-    Friend WithEvents LblInicioChanchilla3 As Label
-    Friend WithEvents LblFinInseminacion3 As Label
-    Friend WithEvents LblInicioInseminacion3 As Label
+    Friend WithEvents LblFinDestete3 As Label
+    Friend WithEvents LblInicioDestete3 As Label
     Friend WithEvents LblFinCampana3 As Label
     Friend WithEvents LblInicioCampana3 As Label
-    Friend WithEvents Label27 As Label
-    Friend WithEvents Label28 As Label
     Friend WithEvents Label29 As Label
     Friend WithEvents Label30 As Label
     Friend WithEvents Label31 As Label
@@ -1986,16 +1951,24 @@ Partial Class FrmReporteCostoxKiloCerdo
     Friend WithEvents GroupBox8 As GroupBox
     Friend WithEvents LblLotesInvolucrados4 As Label
     Friend WithEvents Label15 As Label
-    Friend WithEvents LblFinChanchilla4 As Label
-    Friend WithEvents LblInicioChanchilla4 As Label
-    Friend WithEvents LblFinInseminacion4 As Label
-    Friend WithEvents LblInicioInseminacion4 As Label
     Friend WithEvents LblFinCampana4 As Label
     Friend WithEvents LblInicioCampana4 As Label
-    Friend WithEvents Label34 As Label
-    Friend WithEvents Label35 As Label
-    Friend WithEvents Label36 As Label
-    Friend WithEvents Label37 As Label
     Friend WithEvents Label38 As Label
     Friend WithEvents Label39 As Label
+    Friend WithEvents BackgroundWorker4 As System.ComponentModel.BackgroundWorker
+    Friend WithEvents BtnGuardar1 As ToolStripButton
+    Friend WithEvents BtnGuardar4 As ToolStripButton
+    Friend WithEvents BtnGuardar3 As ToolStripButton
+    Friend WithEvents BtnGuardar2 As ToolStripButton
+    Friend WithEvents BtnGenerar1 As ToolStripButton
+    Friend WithEvents LblAcumuladoReproduccion As Label
+    Friend WithEvents Label12 As Label
+    Friend WithEvents LblAcumuladoRecria As Label
+    Friend WithEvents Label19 As Label
+    Friend WithEvents LblAcumuladoMaternidad As Label
+    Friend WithEvents Label18 As Label
+    Friend WithEvents Label26 As Label
+    Friend WithEvents Label33 As Label
+    Friend WithEvents LblAcumuladoEngorde As Label
+    Friend WithEvents Label16 As Label
 End Class

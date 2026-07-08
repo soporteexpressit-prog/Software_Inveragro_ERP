@@ -27,6 +27,15 @@ Partial Class FrmCroquisPlantel4
         Me.LblTotalAniGalpon9 = New System.Windows.Forms.Label()
         Me.Galpon09 = New System.Windows.Forms.FlowLayoutPanel()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.LblCapacidadMax = New System.Windows.Forms.Label()
+        Me.LblCapacidadMin = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.LblMortalidad = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.LblTotalIngreso = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.LblCampaña = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
@@ -66,6 +75,8 @@ Partial Class FrmCroquisPlantel4
         Me.Galpon08 = New System.Windows.Forms.FlowLayoutPanel()
         Me.Galpon01 = New System.Windows.Forms.FlowLayoutPanel()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.Label14 = New System.Windows.Forms.Label()
         Me.PanelPrincipal.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.Ptbx_Cargando, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -149,6 +160,17 @@ Partial Class FrmCroquisPlantel4
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.LightGray
+        Me.Panel1.Controls.Add(Me.Label15)
+        Me.Panel1.Controls.Add(Me.Label14)
+        Me.Panel1.Controls.Add(Me.LblCapacidadMax)
+        Me.Panel1.Controls.Add(Me.LblCapacidadMin)
+        Me.Panel1.Controls.Add(Me.Label13)
+        Me.Panel1.Controls.Add(Me.Label12)
+        Me.Panel1.Controls.Add(Me.LblMortalidad)
+        Me.Panel1.Controls.Add(Me.Label11)
+        Me.Panel1.Controls.Add(Me.LblTotalIngreso)
+        Me.Panel1.Controls.Add(Me.Label5)
+        Me.Panel1.Controls.Add(Me.LblCampaña)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.Label10)
         Me.Panel1.Controls.Add(Me.Label9)
@@ -164,8 +186,116 @@ Partial Class FrmCroquisPlantel4
         Me.Panel1.Controls.Add(Me.LblTotalAniGranja)
         Me.Panel1.Location = New System.Drawing.Point(4, 5)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(546, 117)
+        Me.Panel1.Size = New System.Drawing.Size(517, 176)
         Me.Panel1.TabIndex = 64
+        '
+        'LblCapacidadMax
+        '
+        Me.LblCapacidadMax.AutoSize = True
+        Me.LblCapacidadMax.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblCapacidadMax.ForeColor = System.Drawing.Color.Black
+        Me.LblCapacidadMax.Location = New System.Drawing.Point(457, 140)
+        Me.LblCapacidadMax.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.LblCapacidadMax.Name = "LblCapacidadMax"
+        Me.LblCapacidadMax.Size = New System.Drawing.Size(17, 18)
+        Me.LblCapacidadMax.TabIndex = 121
+        Me.LblCapacidadMax.Text = "0"
+        '
+        'LblCapacidadMin
+        '
+        Me.LblCapacidadMin.AutoSize = True
+        Me.LblCapacidadMin.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblCapacidadMin.ForeColor = System.Drawing.Color.Black
+        Me.LblCapacidadMin.Location = New System.Drawing.Point(198, 140)
+        Me.LblCapacidadMin.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.LblCapacidadMin.Name = "LblCapacidadMin"
+        Me.LblCapacidadMin.Size = New System.Drawing.Size(17, 18)
+        Me.LblCapacidadMin.TabIndex = 120
+        Me.LblCapacidadMin.Text = "0"
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
+        Me.Label13.ForeColor = System.Drawing.Color.Black
+        Me.Label13.Location = New System.Drawing.Point(322, 141)
+        Me.Label13.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(127, 16)
+        Me.Label13.TabIndex = 119
+        Me.Label13.Text = "Capacidad Máxima:"
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
+        Me.Label12.ForeColor = System.Drawing.Color.Black
+        Me.Label12.Location = New System.Drawing.Point(71, 141)
+        Me.Label12.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(123, 16)
+        Me.Label12.TabIndex = 118
+        Me.Label12.Text = "Capacidad Mínima:"
+        '
+        'LblMortalidad
+        '
+        Me.LblMortalidad.AutoSize = True
+        Me.LblMortalidad.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblMortalidad.ForeColor = System.Drawing.Color.Red
+        Me.LblMortalidad.Location = New System.Drawing.Point(457, 35)
+        Me.LblMortalidad.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.LblMortalidad.Name = "LblMortalidad"
+        Me.LblMortalidad.Size = New System.Drawing.Size(17, 18)
+        Me.LblMortalidad.TabIndex = 117
+        Me.LblMortalidad.Text = "0"
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
+        Me.Label11.ForeColor = System.Drawing.Color.Black
+        Me.Label11.Location = New System.Drawing.Point(341, 36)
+        Me.Label11.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(108, 16)
+        Me.Label11.TabIndex = 116
+        Me.Label11.Text = "Total Mortalidad:"
+        '
+        'LblTotalIngreso
+        '
+        Me.LblTotalIngreso.AutoSize = True
+        Me.LblTotalIngreso.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblTotalIngreso.ForeColor = System.Drawing.Color.Black
+        Me.LblTotalIngreso.Location = New System.Drawing.Point(457, 7)
+        Me.LblTotalIngreso.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.LblTotalIngreso.Name = "LblTotalIngreso"
+        Me.LblTotalIngreso.Size = New System.Drawing.Size(17, 18)
+        Me.LblTotalIngreso.TabIndex = 115
+        Me.LblTotalIngreso.Text = "0"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
+        Me.Label5.ForeColor = System.Drawing.Color.Black
+        Me.Label5.Location = New System.Drawing.Point(360, 8)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(89, 16)
+        Me.Label5.TabIndex = 114
+        Me.Label5.Text = "Total Ingreso:"
+        '
+        'LblCampaña
+        '
+        Me.LblCampaña.AutoSize = True
+        Me.LblCampaña.BackColor = System.Drawing.Color.White
+        Me.LblCampaña.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblCampaña.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.LblCampaña.Location = New System.Drawing.Point(156, 4)
+        Me.LblCampaña.Name = "LblCampaña"
+        Me.LblCampaña.Size = New System.Drawing.Size(20, 25)
+        Me.LblCampaña.TabIndex = 113
+        Me.LblCampaña.Text = "-"
         '
         'Label1
         '
@@ -185,7 +315,7 @@ Partial Class FrmCroquisPlantel4
         Me.Label10.AutoSize = True
         Me.Label10.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(115, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.Label10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(115, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.Label10.Location = New System.Drawing.Point(429, 65)
+        Me.Label10.Location = New System.Drawing.Point(457, 89)
         Me.Label10.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(28, 13)
@@ -197,7 +327,7 @@ Partial Class FrmCroquisPlantel4
         Me.Label9.AutoSize = True
         Me.Label9.BackColor = System.Drawing.Color.Lime
         Me.Label9.ForeColor = System.Drawing.Color.Lime
-        Me.Label9.Location = New System.Drawing.Point(429, 87)
+        Me.Label9.Location = New System.Drawing.Point(457, 116)
         Me.Label9.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(28, 13)
@@ -209,7 +339,7 @@ Partial Class FrmCroquisPlantel4
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.Label2.ForeColor = System.Drawing.Color.Black
-        Me.Label2.Location = New System.Drawing.Point(100, 38)
+        Me.Label2.Location = New System.Drawing.Point(80, 60)
         Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(114, 16)
@@ -221,7 +351,7 @@ Partial Class FrmCroquisPlantel4
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.Label3.ForeColor = System.Drawing.Color.Black
-        Me.Label3.Location = New System.Drawing.Point(83, 61)
+        Me.Label3.Location = New System.Drawing.Point(63, 87)
         Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(131, 16)
@@ -233,7 +363,7 @@ Partial Class FrmCroquisPlantel4
         Me.LblTotalCorrales.AutoSize = True
         Me.LblTotalCorrales.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblTotalCorrales.ForeColor = System.Drawing.Color.Black
-        Me.LblTotalCorrales.Location = New System.Drawing.Point(218, 38)
+        Me.LblTotalCorrales.Location = New System.Drawing.Point(198, 60)
         Me.LblTotalCorrales.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.LblTotalCorrales.Name = "LblTotalCorrales"
         Me.LblTotalCorrales.Size = New System.Drawing.Size(17, 17)
@@ -245,7 +375,7 @@ Partial Class FrmCroquisPlantel4
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.Label7.ForeColor = System.Drawing.Color.Black
-        Me.Label7.Location = New System.Drawing.Point(308, 83)
+        Me.Label7.Location = New System.Drawing.Point(346, 114)
         Me.Label7.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(103, 16)
@@ -257,7 +387,7 @@ Partial Class FrmCroquisPlantel4
         Me.LblDensidadxCorral.AutoSize = True
         Me.LblDensidadxCorral.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblDensidadxCorral.ForeColor = System.Drawing.Color.Black
-        Me.LblDensidadxCorral.Location = New System.Drawing.Point(218, 61)
+        Me.LblDensidadxCorral.Location = New System.Drawing.Point(198, 87)
         Me.LblDensidadxCorral.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.LblDensidadxCorral.Name = "LblDensidadxCorral"
         Me.LblDensidadxCorral.Size = New System.Drawing.Size(17, 17)
@@ -269,7 +399,7 @@ Partial Class FrmCroquisPlantel4
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.Label8.ForeColor = System.Drawing.Color.Black
-        Me.Label8.Location = New System.Drawing.Point(313, 59)
+        Me.Label8.Location = New System.Drawing.Point(351, 87)
         Me.Label8.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(98, 16)
@@ -281,7 +411,7 @@ Partial Class FrmCroquisPlantel4
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.Label4.ForeColor = System.Drawing.Color.Black
-        Me.Label4.Location = New System.Drawing.Point(58, 89)
+        Me.Label4.Location = New System.Drawing.Point(38, 114)
         Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(156, 16)
@@ -293,7 +423,7 @@ Partial Class FrmCroquisPlantel4
         Me.LblCapacidadTotal.AutoSize = True
         Me.LblCapacidadTotal.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblCapacidadTotal.ForeColor = System.Drawing.Color.Black
-        Me.LblCapacidadTotal.Location = New System.Drawing.Point(218, 91)
+        Me.LblCapacidadTotal.Location = New System.Drawing.Point(198, 114)
         Me.LblCapacidadTotal.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.LblCapacidadTotal.Name = "LblCapacidadTotal"
         Me.LblCapacidadTotal.Size = New System.Drawing.Size(17, 17)
@@ -305,7 +435,7 @@ Partial Class FrmCroquisPlantel4
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.Label6.ForeColor = System.Drawing.Color.Black
-        Me.Label6.Location = New System.Drawing.Point(268, 36)
+        Me.Label6.Location = New System.Drawing.Point(306, 60)
         Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(143, 16)
@@ -317,7 +447,7 @@ Partial Class FrmCroquisPlantel4
         Me.LblTotalAniGranja.AutoSize = True
         Me.LblTotalAniGranja.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblTotalAniGranja.ForeColor = System.Drawing.Color.Black
-        Me.LblTotalAniGranja.Location = New System.Drawing.Point(417, 36)
+        Me.LblTotalAniGranja.Location = New System.Drawing.Point(457, 60)
         Me.LblTotalAniGranja.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.LblTotalAniGranja.Name = "LblTotalAniGranja"
         Me.LblTotalAniGranja.Size = New System.Drawing.Size(17, 17)
@@ -619,6 +749,30 @@ Partial Class FrmCroquisPlantel4
         'BackgroundWorker1
         '
         '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.BackColor = System.Drawing.Color.Aqua
+        Me.Label15.ForeColor = System.Drawing.Color.Aqua
+        Me.Label15.Location = New System.Drawing.Point(198, 38)
+        Me.Label15.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(28, 13)
+        Me.Label15.TabIndex = 125
+        Me.Label15.Text = "-------"
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
+        Me.Label14.ForeColor = System.Drawing.Color.Black
+        Me.Label14.Location = New System.Drawing.Point(101, 36)
+        Me.Label14.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(93, 16)
+        Me.Label14.TabIndex = 124
+        Me.Label14.Text = "Embarcadero:"
+        '
         'FrmCroquisPlantel4
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -684,4 +838,15 @@ Partial Class FrmCroquisPlantel4
     Friend WithEvents LblTotalCorrGalpon9 As Label
     Friend WithEvents LblTotalAniGalpon9 As Label
     Friend WithEvents Galpon09 As FlowLayoutPanel
+    Friend WithEvents LblMortalidad As Label
+    Friend WithEvents Label11 As Label
+    Friend WithEvents LblTotalIngreso As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents LblCampaña As Label
+    Friend WithEvents LblCapacidadMax As Label
+    Friend WithEvents LblCapacidadMin As Label
+    Friend WithEvents Label13 As Label
+    Friend WithEvents Label12 As Label
+    Friend WithEvents Label15 As Label
+    Friend WithEvents Label14 As Label
 End Class

@@ -58,6 +58,11 @@ Public Class FrmCroquisPlantel3
                 LblCapacidadTotal.Text = CInt(ds.Tables(1).Rows(0)("Capacidad Total"))
                 LblTotalAniGranja.Text = CInt(ds.Tables(1).Rows(0)("Cantidad Total de Animales"))
                 LblDensidadxCorral.Text = CDec(ds.Tables(1).Rows(0)("Densidad por Corral")).ToString("F2")
+                LblCampaña.Text = ds.Tables(1).Rows(0)("Campaña")
+                LblTotalIngreso.Text = CInt(ds.Tables(1).Rows(0)("Total Ingreso"))
+                LblMortalidad.Text = CInt(ds.Tables(1).Rows(0)("Total Mortalidad"))
+                LblCapacidadMin.Text = CInt(ds.Tables(1).Rows(0)("Capacidad Mínima"))
+                LblCapacidadMax.Text = CInt(ds.Tables(1).Rows(0)("Capacidad Máxima"))
             End If
 
             For Each fila As DataRow In galponData.Rows
@@ -106,8 +111,12 @@ Public Class FrmCroquisPlantel3
 
                         Dim cantidadAnimales As Integer = Convert.ToInt32(corralFila("Cantidad Animales"))
                         Dim limiteAnimales As Integer = Convert.ToInt32(corralFila("Límite de Animales"))
+                        Dim esEmbarcadero As String = corralFila("esEmbarcadero").ToString().Trim().ToUpper()
 
-                        If cantidadAnimales = 0 Then
+                        If esEmbarcadero = "SI" Then
+                            corralPanel.BackColor = Color.Aqua
+                            corralPanel.ForeColor = Color.Black
+                        ElseIf cantidadAnimales = 0 Then
                             corralPanel.BackColor = Color.White ' Celda vacía
                         ElseIf cantidadAnimales < limiteAnimales Then
                             corralPanel.BackColor = Color.Red
@@ -130,13 +139,5 @@ Public Class FrmCroquisPlantel3
                 End If
             Next
         End If
-    End Sub
-
-    Private Sub Label11_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub PanelPrincipal_Paint(sender As Object, e As PaintEventArgs) Handles PanelPrincipal.Paint
-
     End Sub
 End Class

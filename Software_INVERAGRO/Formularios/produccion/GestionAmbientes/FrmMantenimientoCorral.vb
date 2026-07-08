@@ -80,7 +80,8 @@ Public Class FrmMantenimientoCorral
                 TxtAncho.Text = dt.Rows(0)("ancho")
                 TxtLargo.Text = dt.Rows(0)("largo")
                 TxtAbreviatura.Text = dt.Rows(0)("abreviatura").ToString()
-                ChxClinica.Checked = If(dt.Rows(0)("esClinica").ToString() = "SI", True, False)
+                RtnClinica.Checked = If(dt.Rows(0)("esClinica").ToString() = "SI", True, False)
+                RtnEmbarcadero.Checked = If(dt.Rows(0)("esEmbarcadero").ToString() = "SI", True, False)
             End If
         Catch ex As Exception
             clsBasicas.controlException(Name, ex)
@@ -104,6 +105,11 @@ Public Class FrmMantenimientoCorral
                 Return
             End If
 
+            If (RtnClinica.Checked And RtnEmbarcadero.Checked) Then
+                msj_advert("No se puede seleccionar ambas opciones, solo una debe ser seleccionada")
+                Return
+            End If
+
             If (MessageBox.Show("¿ESTÁ SEGURO DE ESTA ACCIÓN?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.No) Then
                 Return
             End If
@@ -120,7 +126,8 @@ Public Class FrmMantenimientoCorral
                 .Largo = CDec(TxtLargo.Text),
                 .Ancho = CDec(TxtAncho.Text),
                 .Abreviatura = TxtAbreviatura.Text,
-                .esClinica = If(ChxClinica.Checked, "SI", "NO")
+                .EsClinica = If(RtnClinica.Checked, "SI", "NO"),
+                .EsEmbarcadero = If(RtnEmbarcadero.Checked, "SI", "NO")
             }
 
             Dim _mensaje As String = cn.Cn_Mantenimiento(obj)
