@@ -37,7 +37,6 @@ Partial Class Frmcondiciondepago
         Dim Appearance13 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance14 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance15 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Me.dtgListado = New Infragistics.Win.UltraWinGrid.UltraGrid()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtCodigo = New System.Windows.Forms.TextBox()
@@ -51,10 +50,183 @@ Partial Class Frmcondiciondepago
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.txtdias = New System.Windows.Forms.TextBox()
-        CType(Me.dtgListado, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.dtgListado = New Infragistics.Win.UltraWinGrid.UltraGrid()
         Me.GroupBox1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
+        CType(Me.dtgListado, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.GroupBox1.Controls.Add(Me.Label1)
+        Me.GroupBox1.Controls.Add(Me.txtCodigo)
+        Me.GroupBox1.Controls.Add(Me.ToolStrip1)
+        Me.GroupBox1.Controls.Add(Me.txtDescripcion)
+        Me.GroupBox1.Controls.Add(Me.Label3)
+        Me.GroupBox1.Controls.Add(Me.Label4)
+        Me.GroupBox1.Controls.Add(Me.txtdias)
+        Me.GroupBox1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.GroupBox1.Location = New System.Drawing.Point(0, 0)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox1.Size = New System.Drawing.Size(759, 155)
+        Me.GroupBox1.TabIndex = 130
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Información de Condición de pago"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.Label1.Location = New System.Drawing.Point(53, 34)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(74, 18)
+        Me.Label1.TabIndex = 53
+        Me.Label1.Text = "Código :"
+        '
+        'txtCodigo
+        '
+        Me.txtCodigo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.txtCodigo.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCodigo.Location = New System.Drawing.Point(133, 33)
+        Me.txtCodigo.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtCodigo.MaxLength = 50
+        Me.txtCodigo.Name = "txtCodigo"
+        Me.txtCodigo.Size = New System.Drawing.Size(72, 24)
+        Me.txtCodigo.TabIndex = 54
+        '
+        'ToolStrip1
+        '
+        Me.ToolStrip1.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.ToolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.ToolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
+        Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnNuevoContabilidadcondicionpago, Me.btnEditarContabilidadcondicionpago, Me.btnCancelar, Me.btnGuardarContabilidadbancos, Me.btnCerrar})
+        Me.ToolStrip1.Location = New System.Drawing.Point(2, 115)
+        Me.ToolStrip1.Margin = New System.Windows.Forms.Padding(1, 1, 1, 1)
+        Me.ToolStrip1.Name = "ToolStrip1"
+        Me.ToolStrip1.Padding = New System.Windows.Forms.Padding(0, 0, 2, 0)
+        Me.ToolStrip1.Size = New System.Drawing.Size(755, 38)
+        Me.ToolStrip1.TabIndex = 52
+        Me.ToolStrip1.Text = "ToolStrip1"
+        '
+        'btnNuevoContabilidadcondicionpago
+        '
+        Me.btnNuevoContabilidadcondicionpago.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnNuevoContabilidadcondicionpago.ForeColor = System.Drawing.Color.White
+        Me.btnNuevoContabilidadcondicionpago.Image = Global.Formularios.My.Resources.Resources.nuevo
+        Me.btnNuevoContabilidadcondicionpago.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btnNuevoContabilidadcondicionpago.Margin = New System.Windows.Forms.Padding(5)
+        Me.btnNuevoContabilidadcondicionpago.Name = "btnNuevoContabilidadcondicionpago"
+        Me.btnNuevoContabilidadcondicionpago.Padding = New System.Windows.Forms.Padding(2)
+        Me.btnNuevoContabilidadcondicionpago.Size = New System.Drawing.Size(93, 28)
+        Me.btnNuevoContabilidadcondicionpago.Text = "Nuevo "
+        Me.btnNuevoContabilidadcondicionpago.ToolTipText = "Nuevo "
+        '
+        'btnEditarContabilidadcondicionpago
+        '
+        Me.btnEditarContabilidadcondicionpago.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnEditarContabilidadcondicionpago.ForeColor = System.Drawing.Color.White
+        Me.btnEditarContabilidadcondicionpago.Image = Global.Formularios.My.Resources.Resources.editar
+        Me.btnEditarContabilidadcondicionpago.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btnEditarContabilidadcondicionpago.Margin = New System.Windows.Forms.Padding(5)
+        Me.btnEditarContabilidadcondicionpago.Name = "btnEditarContabilidadcondicionpago"
+        Me.btnEditarContabilidadcondicionpago.Padding = New System.Windows.Forms.Padding(2)
+        Me.btnEditarContabilidadcondicionpago.Size = New System.Drawing.Size(84, 28)
+        Me.btnEditarContabilidadcondicionpago.Text = "Editar"
+        Me.btnEditarContabilidadcondicionpago.ToolTipText = "Editar"
+        '
+        'btnCancelar
+        '
+        Me.btnCancelar.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCancelar.ForeColor = System.Drawing.Color.White
+        Me.btnCancelar.Image = Global.Formularios.My.Resources.Resources.cancelar
+        Me.btnCancelar.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btnCancelar.Margin = New System.Windows.Forms.Padding(5)
+        Me.btnCancelar.Name = "btnCancelar"
+        Me.btnCancelar.Padding = New System.Windows.Forms.Padding(2)
+        Me.btnCancelar.Size = New System.Drawing.Size(106, 28)
+        Me.btnCancelar.Text = "Cancelar"
+        Me.btnCancelar.ToolTipText = "Cancelar"
+        Me.btnCancelar.Visible = False
+        '
+        'btnGuardarContabilidadbancos
+        '
+        Me.btnGuardarContabilidadbancos.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnGuardarContabilidadbancos.ForeColor = System.Drawing.Color.White
+        Me.btnGuardarContabilidadbancos.Image = Global.Formularios.My.Resources.Resources.guardar
+        Me.btnGuardarContabilidadbancos.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btnGuardarContabilidadbancos.Margin = New System.Windows.Forms.Padding(5)
+        Me.btnGuardarContabilidadbancos.Name = "btnGuardarContabilidadbancos"
+        Me.btnGuardarContabilidadbancos.Padding = New System.Windows.Forms.Padding(2)
+        Me.btnGuardarContabilidadbancos.Size = New System.Drawing.Size(102, 28)
+        Me.btnGuardarContabilidadbancos.Text = "Guardar"
+        Me.btnGuardarContabilidadbancos.ToolTipText = "Guardar"
+        '
+        'btnCerrar
+        '
+        Me.btnCerrar.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCerrar.ForeColor = System.Drawing.Color.White
+        Me.btnCerrar.Image = Global.Formularios.My.Resources.Resources.salir
+        Me.btnCerrar.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btnCerrar.Margin = New System.Windows.Forms.Padding(5)
+        Me.btnCerrar.Name = "btnCerrar"
+        Me.btnCerrar.Padding = New System.Windows.Forms.Padding(2)
+        Me.btnCerrar.Size = New System.Drawing.Size(72, 28)
+        Me.btnCerrar.Text = "Salir"
+        Me.btnCerrar.ToolTipText = "Salir"
+        '
+        'txtDescripcion
+        '
+        Me.txtDescripcion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.txtDescripcion.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtDescripcion.Location = New System.Drawing.Point(133, 62)
+        Me.txtDescripcion.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtDescripcion.MaxLength = 150
+        Me.txtDescripcion.Name = "txtDescripcion"
+        Me.txtDescripcion.Size = New System.Drawing.Size(329, 24)
+        Me.txtDescripcion.TabIndex = 48
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.Label3.Location = New System.Drawing.Point(486, 64)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(54, 18)
+        Me.Label3.TabIndex = 46
+        Me.Label3.Text = "Días :"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.BackColor = System.Drawing.Color.Transparent
+        Me.Label4.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.Label4.Location = New System.Drawing.Point(20, 62)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(111, 18)
+        Me.Label4.TabIndex = 47
+        Me.Label4.Text = "Descripción :"
+        '
+        'txtdias
+        '
+        Me.txtdias.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.txtdias.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtdias.Location = New System.Drawing.Point(566, 62)
+        Me.txtdias.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtdias.MaxLength = 50
+        Me.txtdias.Name = "txtdias"
+        Me.txtdias.Size = New System.Drawing.Size(72, 24)
+        Me.txtdias.TabIndex = 51
         '
         'dtgListado
         '
@@ -126,203 +298,33 @@ Partial Class Frmcondiciondepago
         Me.dtgListado.DisplayLayout.ScrollBounds = Infragistics.Win.UltraWinGrid.ScrollBounds.ScrollToFill
         Me.dtgListado.DisplayLayout.ScrollStyle = Infragistics.Win.UltraWinGrid.ScrollStyle.Immediate
         Me.dtgListado.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy
-        Me.dtgListado.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.dtgListado.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dtgListado.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dtgListado.Location = New System.Drawing.Point(0, -17)
+        Me.dtgListado.Location = New System.Drawing.Point(0, 155)
+        Me.dtgListado.Margin = New System.Windows.Forms.Padding(2)
         Me.dtgListado.Name = "dtgListado"
-        Me.dtgListado.Size = New System.Drawing.Size(1139, 1079)
-        Me.dtgListado.TabIndex = 8
+        Me.dtgListado.Size = New System.Drawing.Size(759, 535)
+        Me.dtgListado.TabIndex = 131
         Me.dtgListado.Text = "UltraGrid1"
-        '
-        'GroupBox1
-        '
-        Me.GroupBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(233, Byte), Integer))
-        Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Controls.Add(Me.txtCodigo)
-        Me.GroupBox1.Controls.Add(Me.ToolStrip1)
-        Me.GroupBox1.Controls.Add(Me.txtDescripcion)
-        Me.GroupBox1.Controls.Add(Me.Label3)
-        Me.GroupBox1.Controls.Add(Me.Label4)
-        Me.GroupBox1.Controls.Add(Me.txtdias)
-        Me.GroupBox1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.GroupBox1.Location = New System.Drawing.Point(0, 0)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(1139, 191)
-        Me.GroupBox1.TabIndex = 130
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Información de Condición de pago"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(80, 53)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(92, 22)
-        Me.Label1.TabIndex = 53
-        Me.Label1.Text = "Código :"
-        '
-        'txtCodigo
-        '
-        Me.txtCodigo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.txtCodigo.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCodigo.Location = New System.Drawing.Point(200, 51)
-        Me.txtCodigo.MaxLength = 50
-        Me.txtCodigo.Name = "txtCodigo"
-        Me.txtCodigo.Size = New System.Drawing.Size(106, 28)
-        Me.txtCodigo.TabIndex = 54
-        '
-        'ToolStrip1
-        '
-        Me.ToolStrip1.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.ToolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.ToolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
-        Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnNuevoContabilidadcondicionpago, Me.btnEditarContabilidadcondicionpago, Me.btnCancelar, Me.btnGuardarContabilidadbancos, Me.btnCerrar})
-        Me.ToolStrip1.Location = New System.Drawing.Point(3, 148)
-        Me.ToolStrip1.Margin = New System.Windows.Forms.Padding(2)
-        Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Padding = New System.Windows.Forms.Padding(0, 0, 3, 0)
-        Me.ToolStrip1.Size = New System.Drawing.Size(1133, 40)
-        Me.ToolStrip1.TabIndex = 52
-        Me.ToolStrip1.Text = "ToolStrip1"
-        '
-        'btnNuevoContabilidadcondicionpago
-        '
-        Me.btnNuevoContabilidadcondicionpago.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnNuevoContabilidadcondicionpago.ForeColor = System.Drawing.Color.White
-        Me.btnNuevoContabilidadcondicionpago.Image = Global.Formularios.My.Resources.Resources.nuevo
-        Me.btnNuevoContabilidadcondicionpago.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.btnNuevoContabilidadcondicionpago.Margin = New System.Windows.Forms.Padding(5)
-        Me.btnNuevoContabilidadcondicionpago.Name = "btnNuevoContabilidadcondicionpago"
-        Me.btnNuevoContabilidadcondicionpago.Padding = New System.Windows.Forms.Padding(2)
-        Me.btnNuevoContabilidadcondicionpago.Size = New System.Drawing.Size(108, 30)
-        Me.btnNuevoContabilidadcondicionpago.Text = "Nuevo "
-        Me.btnNuevoContabilidadcondicionpago.ToolTipText = "Nuevo "
-        '
-        'btnEditarContabilidadcondicionpago
-        '
-        Me.btnEditarContabilidadcondicionpago.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnEditarContabilidadcondicionpago.ForeColor = System.Drawing.Color.White
-        Me.btnEditarContabilidadcondicionpago.Image = Global.Formularios.My.Resources.Resources.editar
-        Me.btnEditarContabilidadcondicionpago.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.btnEditarContabilidadcondicionpago.Margin = New System.Windows.Forms.Padding(5)
-        Me.btnEditarContabilidadcondicionpago.Name = "btnEditarContabilidadcondicionpago"
-        Me.btnEditarContabilidadcondicionpago.Padding = New System.Windows.Forms.Padding(2)
-        Me.btnEditarContabilidadcondicionpago.Size = New System.Drawing.Size(98, 30)
-        Me.btnEditarContabilidadcondicionpago.Text = "Editar"
-        Me.btnEditarContabilidadcondicionpago.ToolTipText = "Editar"
-        '
-        'btnCancelar
-        '
-        Me.btnCancelar.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCancelar.ForeColor = System.Drawing.Color.White
-        Me.btnCancelar.Image = Global.Formularios.My.Resources.Resources.cancelar
-        Me.btnCancelar.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.btnCancelar.Margin = New System.Windows.Forms.Padding(5)
-        Me.btnCancelar.Name = "btnCancelar"
-        Me.btnCancelar.Padding = New System.Windows.Forms.Padding(2)
-        Me.btnCancelar.Size = New System.Drawing.Size(126, 30)
-        Me.btnCancelar.Text = "Cancelar"
-        Me.btnCancelar.ToolTipText = "Cancelar"
-        Me.btnCancelar.Visible = False
-        '
-        'btnGuardarContabilidadbancos
-        '
-        Me.btnGuardarContabilidadbancos.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnGuardarContabilidadbancos.ForeColor = System.Drawing.Color.White
-        Me.btnGuardarContabilidadbancos.Image = Global.Formularios.My.Resources.Resources.guardar
-        Me.btnGuardarContabilidadbancos.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.btnGuardarContabilidadbancos.Margin = New System.Windows.Forms.Padding(5)
-        Me.btnGuardarContabilidadbancos.Name = "btnGuardarContabilidadbancos"
-        Me.btnGuardarContabilidadbancos.Padding = New System.Windows.Forms.Padding(2)
-        Me.btnGuardarContabilidadbancos.Size = New System.Drawing.Size(121, 30)
-        Me.btnGuardarContabilidadbancos.Text = "Guardar"
-        Me.btnGuardarContabilidadbancos.ToolTipText = "Guardar"
-        '
-        'btnCerrar
-        '
-        Me.btnCerrar.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCerrar.ForeColor = System.Drawing.Color.White
-        Me.btnCerrar.Image = Global.Formularios.My.Resources.Resources.salir
-        Me.btnCerrar.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.btnCerrar.Margin = New System.Windows.Forms.Padding(5)
-        Me.btnCerrar.Name = "btnCerrar"
-        Me.btnCerrar.Padding = New System.Windows.Forms.Padding(2)
-        Me.btnCerrar.Size = New System.Drawing.Size(84, 30)
-        Me.btnCerrar.Text = "Salir"
-        Me.btnCerrar.ToolTipText = "Salir"
-        '
-        'txtDescripcion
-        '
-        Me.txtDescripcion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.txtDescripcion.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtDescripcion.Location = New System.Drawing.Point(200, 96)
-        Me.txtDescripcion.MaxLength = 150
-        Me.txtDescripcion.Name = "txtDescripcion"
-        Me.txtDescripcion.Size = New System.Drawing.Size(492, 28)
-        Me.txtDescripcion.TabIndex = 48
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.BackColor = System.Drawing.Color.Transparent
-        Me.Label3.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(729, 99)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(67, 22)
-        Me.Label3.TabIndex = 46
-        Me.Label3.Text = "Días :"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.BackColor = System.Drawing.Color.Transparent
-        Me.Label4.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label4.Location = New System.Drawing.Point(30, 96)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(142, 22)
-        Me.Label4.TabIndex = 47
-        Me.Label4.Text = "Descripción :"
-        '
-        'txtdias
-        '
-        Me.txtdias.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.txtdias.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtdias.Location = New System.Drawing.Point(849, 96)
-        Me.txtdias.MaxLength = 50
-        Me.txtdias.Name = "txtdias"
-        Me.txtdias.Size = New System.Drawing.Size(106, 28)
-        Me.txtdias.TabIndex = 51
         '
         'Frmcondiciondepago
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1139, 1062)
-        Me.Controls.Add(Me.GroupBox1)
+        Me.ClientSize = New System.Drawing.Size(759, 690)
         Me.Controls.Add(Me.dtgListado)
+        Me.Controls.Add(Me.GroupBox1)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "Frmcondiciondepago"
         Me.Text = "Frmcondiciondepago"
-        CType(Me.dtgListado, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()
+        CType(Me.dtgListado, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
-
-    Friend WithEvents dtgListado As Infragistics.Win.UltraWinGrid.UltraGrid
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents ToolStrip1 As ToolStrip
     Friend WithEvents btnNuevoContabilidadcondicionpago As ToolStripButton
@@ -336,4 +338,5 @@ Partial Class Frmcondiciondepago
     Friend WithEvents txtdias As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents txtCodigo As TextBox
+    Friend WithEvents dtgListado As Infragistics.Win.UltraWinGrid.UltraGrid
 End Class

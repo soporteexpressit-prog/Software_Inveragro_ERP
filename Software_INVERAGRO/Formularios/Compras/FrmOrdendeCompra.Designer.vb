@@ -201,6 +201,7 @@ Partial Class FrmOrdendeCompra
         Me.Label12 = New System.Windows.Forms.Label()
         Me.checkpagoanticipado = New System.Windows.Forms.CheckBox()
         Me.Label26 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.UltraGroupBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.UltraGroupBox3.SuspendLayout()
         CType(Me.txtcodcotizacion, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -298,7 +299,7 @@ Partial Class FrmOrdendeCompra
         Me.Label24.Location = New System.Drawing.Point(22, 30)
         Me.Label24.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(92, 22)
+        Me.Label24.Size = New System.Drawing.Size(74, 18)
         Me.Label24.TabIndex = 40
         Me.Label24.Text = "Código :"
         '
@@ -309,7 +310,7 @@ Partial Class FrmOrdendeCompra
         Me.txtcodcotizacion.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.txtcodcotizacion.Name = "txtcodcotizacion"
         Me.txtcodcotizacion.ReadOnly = True
-        Me.txtcodcotizacion.Size = New System.Drawing.Size(81, 29)
+        Me.txtcodcotizacion.Size = New System.Drawing.Size(81, 25)
         Me.txtcodcotizacion.TabIndex = 39
         Me.txtcodcotizacion.TabStop = False
         '
@@ -325,7 +326,7 @@ Partial Class FrmOrdendeCompra
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Padding = New System.Windows.Forms.Padding(0, 0, 4, 0)
         Me.ToolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-        Me.ToolStrip1.Size = New System.Drawing.Size(996, 40)
+        Me.ToolStrip1.Size = New System.Drawing.Size(996, 38)
         Me.ToolStrip1.TabIndex = 37
         Me.ToolStrip1.TabStop = True
         Me.ToolStrip1.Text = "ToolStrip1"
@@ -339,7 +340,7 @@ Partial Class FrmOrdendeCompra
         Me.btnGuardar.Margin = New System.Windows.Forms.Padding(5)
         Me.btnGuardar.Name = "btnGuardar"
         Me.btnGuardar.Padding = New System.Windows.Forms.Padding(2)
-        Me.btnGuardar.Size = New System.Drawing.Size(139, 30)
+        Me.btnGuardar.Size = New System.Drawing.Size(120, 28)
         Me.btnGuardar.Tag = "343"
         Me.btnGuardar.Text = "GUARDAR"
         Me.btnGuardar.ToolTipText = "GUARDAR"
@@ -354,7 +355,7 @@ Partial Class FrmOrdendeCompra
         Me.TsBtn_Cerrar.Name = "TsBtn_Cerrar"
         Me.TsBtn_Cerrar.Padding = New System.Windows.Forms.Padding(2)
         Me.TsBtn_Cerrar.RightToLeftAutoMirrorImage = True
-        Me.TsBtn_Cerrar.Size = New System.Drawing.Size(100, 30)
+        Me.TsBtn_Cerrar.Size = New System.Drawing.Size(89, 28)
         Me.TsBtn_Cerrar.Tag = "3434"
         Me.TsBtn_Cerrar.Text = "SALIR"
         Me.TsBtn_Cerrar.ToolTipText = "SALIR"
@@ -365,7 +366,7 @@ Partial Class FrmOrdendeCompra
         Me.dtfechaemision.Location = New System.Drawing.Point(315, 1268)
         Me.dtfechaemision.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.dtfechaemision.Name = "dtfechaemision"
-        Me.dtfechaemision.Size = New System.Drawing.Size(130, 29)
+        Me.dtfechaemision.Size = New System.Drawing.Size(130, 25)
         Me.dtfechaemision.TabIndex = 163
         Me.dtfechaemision.TabStop = False
         Me.dtfechaemision.Value = New Date(2010, 12, 16, 0, 0, 0, 0)
@@ -379,7 +380,7 @@ Partial Class FrmOrdendeCompra
         Me.Label17.Location = New System.Drawing.Point(223, 1274)
         Me.Label17.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(127, 22)
+        Me.Label17.Size = New System.Drawing.Size(102, 18)
         Me.Label17.TabIndex = 162
         Me.Label17.Text = "F. Emisión :"
         Me.Label17.Visible = False
@@ -392,7 +393,7 @@ Partial Class FrmOrdendeCompra
         Me.Label20.Location = New System.Drawing.Point(184, 1392)
         Me.Label20.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(184, 22)
+        Me.Label20.Size = New System.Drawing.Size(148, 18)
         Me.Label20.TabIndex = 160
         Me.Label20.Text = "Almacén Origen :"
         Me.Label20.Visible = False
@@ -457,7 +458,7 @@ Partial Class FrmOrdendeCompra
         Me.cbxmotivotransaccion.Location = New System.Drawing.Point(315, 1235)
         Me.cbxmotivotransaccion.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.cbxmotivotransaccion.Name = "cbxmotivotransaccion"
-        Me.cbxmotivotransaccion.Size = New System.Drawing.Size(267, 30)
+        Me.cbxmotivotransaccion.Size = New System.Drawing.Size(267, 26)
         Me.cbxmotivotransaccion.TabIndex = 159
         Me.cbxmotivotransaccion.TabStop = False
         Me.cbxmotivotransaccion.Visible = False
@@ -470,7 +471,7 @@ Partial Class FrmOrdendeCompra
         Me.Label15.Location = New System.Drawing.Point(162, 1238)
         Me.Label15.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(218, 22)
+        Me.Label15.Size = New System.Drawing.Size(175, 18)
         Me.Label15.TabIndex = 158
         Me.Label15.Text = "Motivo Transacción :"
         Me.Label15.Visible = False
@@ -481,7 +482,7 @@ Partial Class FrmOrdendeCompra
         Me.txtcorrelativo.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.txtcorrelativo.MaxLength = 20
         Me.txtcorrelativo.Name = "txtcorrelativo"
-        Me.txtcorrelativo.Size = New System.Drawing.Size(180, 27)
+        Me.txtcorrelativo.Size = New System.Drawing.Size(180, 24)
         Me.txtcorrelativo.TabIndex = 159
         Me.txtcorrelativo.Visible = False
         '
@@ -545,7 +546,7 @@ Partial Class FrmOrdendeCompra
         Me.cbxtipodocumento.Location = New System.Drawing.Point(315, 1144)
         Me.cbxtipodocumento.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.cbxtipodocumento.Name = "cbxtipodocumento"
-        Me.cbxtipodocumento.Size = New System.Drawing.Size(215, 30)
+        Me.cbxtipodocumento.Size = New System.Drawing.Size(215, 26)
         Me.cbxtipodocumento.TabIndex = 157
         Me.cbxtipodocumento.TabStop = False
         Me.cbxtipodocumento.Visible = False
@@ -556,7 +557,7 @@ Partial Class FrmOrdendeCompra
         Me.txtserie.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.txtserie.MaxLength = 4
         Me.txtserie.Name = "txtserie"
-        Me.txtserie.Size = New System.Drawing.Size(180, 27)
+        Me.txtserie.Size = New System.Drawing.Size(180, 24)
         Me.txtserie.TabIndex = 158
         Me.txtserie.Visible = False
         '
@@ -568,7 +569,7 @@ Partial Class FrmOrdendeCompra
         Me.Label14.Location = New System.Drawing.Point(193, 1148)
         Me.Label14.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(187, 22)
+        Me.Label14.Size = New System.Drawing.Size(151, 18)
         Me.Label14.TabIndex = 156
         Me.Label14.Text = "Tipo Documento :"
         Me.Label14.Visible = False
@@ -581,7 +582,7 @@ Partial Class FrmOrdendeCompra
         Me.Label19.Location = New System.Drawing.Point(225, 1209)
         Me.Label19.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(134, 22)
+        Me.Label19.Size = New System.Drawing.Size(109, 18)
         Me.Label19.TabIndex = 157
         Me.Label19.Text = "Correlativo :"
         Me.Label19.Visible = False
@@ -594,7 +595,7 @@ Partial Class FrmOrdendeCompra
         Me.Label18.Location = New System.Drawing.Point(264, 1178)
         Me.Label18.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(75, 22)
+        Me.Label18.Size = New System.Drawing.Size(61, 18)
         Me.Label18.TabIndex = 156
         Me.Label18.Text = "Serie :"
         Me.Label18.Visible = False
@@ -660,7 +661,7 @@ Partial Class FrmOrdendeCompra
         Me.Cmbx_Almacenes.Location = New System.Drawing.Point(99, 48)
         Me.Cmbx_Almacenes.Name = "Cmbx_Almacenes"
         Me.Cmbx_Almacenes.ReadOnly = True
-        Me.Cmbx_Almacenes.Size = New System.Drawing.Size(366, 29)
+        Me.Cmbx_Almacenes.Size = New System.Drawing.Size(366, 22)
         Me.Cmbx_Almacenes.TabIndex = 11
         Me.Cmbx_Almacenes.TabStop = False
         '
@@ -672,7 +673,7 @@ Partial Class FrmOrdendeCompra
         Me.Label7.Location = New System.Drawing.Point(329, 755)
         Me.Label7.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(112, 22)
+        Me.Label7.Size = New System.Drawing.Size(91, 18)
         Me.Label7.TabIndex = 51
         Me.Label7.Text = "SubTotal :"
         '
@@ -687,7 +688,7 @@ Partial Class FrmOrdendeCompra
         Me.txtsubtotal.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.txtsubtotal.Name = "txtsubtotal"
         Me.txtsubtotal.ReadOnly = True
-        Me.txtsubtotal.Size = New System.Drawing.Size(116, 37)
+        Me.txtsubtotal.Size = New System.Drawing.Size(116, 32)
         Me.txtsubtotal.TabIndex = 50
         Me.txtsubtotal.TabStop = False
         '
@@ -699,7 +700,7 @@ Partial Class FrmOrdendeCompra
         Me.Label9.Location = New System.Drawing.Point(30, 804)
         Me.Label9.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(149, 22)
+        Me.Label9.Size = New System.Drawing.Size(120, 18)
         Me.Label9.TabIndex = 52
         Me.Label9.Text = "Observación :"
         '
@@ -721,7 +722,7 @@ Partial Class FrmOrdendeCompra
         Me.Label10.Location = New System.Drawing.Point(568, 755)
         Me.Label10.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(62, 22)
+        Me.Label10.Size = New System.Drawing.Size(50, 18)
         Me.Label10.TabIndex = 55
         Me.Label10.Text = "IGV :"
         '
@@ -736,7 +737,7 @@ Partial Class FrmOrdendeCompra
         Me.txtigv.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.txtigv.Name = "txtigv"
         Me.txtigv.ReadOnly = True
-        Me.txtigv.Size = New System.Drawing.Size(116, 37)
+        Me.txtigv.Size = New System.Drawing.Size(116, 32)
         Me.txtigv.TabIndex = 54
         Me.txtigv.TabStop = False
         '
@@ -748,7 +749,7 @@ Partial Class FrmOrdendeCompra
         Me.Label11.Location = New System.Drawing.Point(764, 754)
         Me.Label11.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(73, 22)
+        Me.Label11.Size = New System.Drawing.Size(60, 18)
         Me.Label11.TabIndex = 57
         Me.Label11.Text = "Total :"
         '
@@ -763,7 +764,7 @@ Partial Class FrmOrdendeCompra
         Me.txttotal.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.txttotal.Name = "txttotal"
         Me.txttotal.ReadOnly = True
-        Me.txttotal.Size = New System.Drawing.Size(116, 37)
+        Me.txttotal.Size = New System.Drawing.Size(116, 32)
         Me.txttotal.TabIndex = 56
         Me.txttotal.TabStop = False
         '
@@ -778,7 +779,7 @@ Partial Class FrmOrdendeCompra
         Me.txtflete.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.txtflete.MaxLength = 8
         Me.txtflete.Name = "txtflete"
-        Me.txtflete.Size = New System.Drawing.Size(116, 37)
+        Me.txtflete.Size = New System.Drawing.Size(116, 32)
         Me.txtflete.TabIndex = 8
         '
         'cbxalmacen_origen
@@ -787,7 +788,7 @@ Partial Class FrmOrdendeCompra
         Me.cbxalmacen_origen.FormattingEnabled = True
         Me.cbxalmacen_origen.Location = New System.Drawing.Point(304, 1390)
         Me.cbxalmacen_origen.Name = "cbxalmacen_origen"
-        Me.cbxalmacen_origen.Size = New System.Drawing.Size(267, 26)
+        Me.cbxalmacen_origen.Size = New System.Drawing.Size(267, 24)
         Me.cbxalmacen_origen.TabIndex = 175
         '
         'GroupBox1
@@ -875,7 +876,7 @@ Partial Class FrmOrdendeCompra
         Me.cbUnidadMedida.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbUnidadMedida.Location = New System.Drawing.Point(161, 85)
         Me.cbUnidadMedida.Name = "cbUnidadMedida"
-        Me.cbUnidadMedida.Size = New System.Drawing.Size(202, 33)
+        Me.cbUnidadMedida.Size = New System.Drawing.Size(202, 29)
         Me.cbUnidadMedida.TabIndex = 242
         '
         'Label30
@@ -887,7 +888,7 @@ Partial Class FrmOrdendeCompra
         Me.Label30.Location = New System.Drawing.Point(69, 93)
         Me.Label30.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label30.Name = "Label30"
-        Me.Label30.Size = New System.Drawing.Size(124, 22)
+        Me.Label30.Size = New System.Drawing.Size(99, 18)
         Me.Label30.TabIndex = 241
         Me.Label30.Text = "U. Medida :"
         '
@@ -899,7 +900,7 @@ Partial Class FrmOrdendeCompra
         Me.Label27.Location = New System.Drawing.Point(600, 28)
         Me.Label27.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Label27.Name = "Label27"
-        Me.Label27.Size = New System.Drawing.Size(197, 22)
+        Me.Label27.Size = New System.Drawing.Size(160, 18)
         Me.Label27.TabIndex = 69
         Me.Label27.Text = "Cantidad Solicitada :"
         '
@@ -913,7 +914,7 @@ Partial Class FrmOrdendeCompra
         Me.txtcantsolicitada.MaxLength = 8
         Me.txtcantsolicitada.Name = "txtcantsolicitada"
         Me.txtcantsolicitada.ReadOnly = True
-        Me.txtcantsolicitada.Size = New System.Drawing.Size(118, 29)
+        Me.txtcantsolicitada.Size = New System.Drawing.Size(118, 25)
         Me.txtcantsolicitada.TabIndex = 68
         '
         'btnbuscarproducto
@@ -953,7 +954,7 @@ Partial Class FrmOrdendeCompra
         Me.Label5.Location = New System.Drawing.Point(683, 86)
         Me.Label5.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(79, 22)
+        Me.Label5.Size = New System.Drawing.Size(65, 18)
         Me.Label5.TabIndex = 65
         Me.Label5.Text = "Precio :"
         '
@@ -966,7 +967,7 @@ Partial Class FrmOrdendeCompra
         Me.txtprecio.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.txtprecio.MaxLength = 25
         Me.txtprecio.Name = "txtprecio"
-        Me.txtprecio.Size = New System.Drawing.Size(118, 29)
+        Me.txtprecio.Size = New System.Drawing.Size(118, 25)
         Me.txtprecio.TabIndex = 56
         '
         'Label4
@@ -977,7 +978,7 @@ Partial Class FrmOrdendeCompra
         Me.Label4.Location = New System.Drawing.Point(664, 55)
         Me.Label4.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(104, 22)
+        Me.Label4.Size = New System.Drawing.Size(85, 18)
         Me.Label4.TabIndex = 64
         Me.Label4.Text = "Cantidad :"
         '
@@ -990,7 +991,7 @@ Partial Class FrmOrdendeCompra
         Me.txtcantidad.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.txtcantidad.MaxLength = 8
         Me.txtcantidad.Name = "txtcantidad"
-        Me.txtcantidad.Size = New System.Drawing.Size(118, 29)
+        Me.txtcantidad.Size = New System.Drawing.Size(118, 25)
         Me.txtcantidad.TabIndex = 55
         '
         'Label1
@@ -1001,7 +1002,7 @@ Partial Class FrmOrdendeCompra
         Me.Label1.Location = New System.Drawing.Point(78, 59)
         Me.Label1.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(103, 22)
+        Me.Label1.Size = New System.Drawing.Size(87, 18)
         Me.Label1.TabIndex = 61
         Me.Label1.Text = "Producto :"
         '
@@ -1013,7 +1014,7 @@ Partial Class FrmOrdendeCompra
         Me.Label2.Location = New System.Drawing.Point(90, 30)
         Me.Label2.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(86, 22)
+        Me.Label2.Size = New System.Drawing.Size(72, 18)
         Me.Label2.TabIndex = 60
         Me.Label2.Text = "Código :"
         '
@@ -1023,7 +1024,7 @@ Partial Class FrmOrdendeCompra
         Me.txtcodprod.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.txtcodprod.Name = "txtcodprod"
         Me.txtcodprod.ReadOnly = True
-        Me.txtcodprod.Size = New System.Drawing.Size(205, 29)
+        Me.txtcodprod.Size = New System.Drawing.Size(205, 25)
         Me.txtcodprod.TabIndex = 59
         Me.txtcodprod.TabStop = False
         '
@@ -1036,7 +1037,7 @@ Partial Class FrmOrdendeCompra
         Me.txtproducto.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.txtproducto.Name = "txtproducto"
         Me.txtproducto.ReadOnly = True
-        Me.txtproducto.Size = New System.Drawing.Size(438, 29)
+        Me.txtproducto.Size = New System.Drawing.Size(438, 25)
         Me.txtproducto.TabIndex = 58
         Me.txtproducto.TabStop = False
         '
@@ -1119,6 +1120,7 @@ Partial Class FrmOrdendeCompra
         '
         'GroupBox2
         '
+        Me.GroupBox2.Controls.Add(Me.Button1)
         Me.GroupBox2.Controls.Add(Me.ckigv)
         Me.GroupBox2.Controls.Add(Me.Label3)
         Me.GroupBox2.Controls.Add(Me.cbxalmacendestino)
@@ -1155,7 +1157,7 @@ Partial Class FrmOrdendeCompra
         Me.ckigv.Location = New System.Drawing.Point(659, 90)
         Me.ckigv.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.ckigv.Name = "ckigv"
-        Me.ckigv.Size = New System.Drawing.Size(22, 21)
+        Me.ckigv.Size = New System.Drawing.Size(18, 17)
         Me.ckigv.TabIndex = 193
         Me.ckigv.UseVisualStyleBackColor = False
         '
@@ -1168,7 +1170,7 @@ Partial Class FrmOrdendeCompra
         Me.Label3.Location = New System.Drawing.Point(674, 87)
         Me.Label3.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(95, 28)
+        Me.Label3.Size = New System.Drawing.Size(78, 23)
         Me.Label3.TabIndex = 192
         Me.Label3.Text = "CON IGV"
         '
@@ -1178,7 +1180,7 @@ Partial Class FrmOrdendeCompra
         Me.cbxalmacendestino.FormattingEnabled = True
         Me.cbxalmacendestino.Location = New System.Drawing.Point(155, 83)
         Me.cbxalmacendestino.Name = "cbxalmacendestino"
-        Me.cbxalmacendestino.Size = New System.Drawing.Size(361, 26)
+        Me.cbxalmacendestino.Size = New System.Drawing.Size(361, 24)
         Me.cbxalmacendestino.TabIndex = 191
         '
         'btnarchivoadjunto
@@ -1203,7 +1205,7 @@ Partial Class FrmOrdendeCompra
         Me.txtArchivoRuta.MaxLength = 100
         Me.txtArchivoRuta.Name = "txtArchivoRuta"
         Me.txtArchivoRuta.ReadOnly = True
-        Me.txtArchivoRuta.Size = New System.Drawing.Size(324, 29)
+        Me.txtArchivoRuta.Size = New System.Drawing.Size(324, 26)
         Me.txtArchivoRuta.TabIndex = 189
         '
         'Label25
@@ -1213,7 +1215,7 @@ Partial Class FrmOrdendeCompra
         Me.Label25.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.Label25.Location = New System.Drawing.Point(6, 110)
         Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(199, 22)
+        Me.Label25.Size = New System.Drawing.Size(166, 18)
         Me.Label25.TabIndex = 188
         Me.Label25.Text = "Adjuntar Cotización :"
         '
@@ -1222,7 +1224,7 @@ Partial Class FrmOrdendeCompra
         Me.txttc.Location = New System.Drawing.Point(435, 56)
         Me.txttc.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.txttc.Name = "txttc"
-        Me.txttc.Size = New System.Drawing.Size(81, 29)
+        Me.txttc.Size = New System.Drawing.Size(81, 25)
         Me.txttc.TabIndex = 177
         Me.txttc.TabStop = False
         '
@@ -1234,7 +1236,7 @@ Partial Class FrmOrdendeCompra
         Me.Label23.Location = New System.Drawing.Point(390, 59)
         Me.Label23.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(55, 22)
+        Me.Label23.Size = New System.Drawing.Size(45, 18)
         Me.Label23.TabIndex = 187
         Me.Label23.Text = "T.C :"
         '
@@ -1247,7 +1249,7 @@ Partial Class FrmOrdendeCompra
         Me.ckrecepcionado.Location = New System.Drawing.Point(804, 90)
         Me.ckrecepcionado.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.ckrecepcionado.Name = "ckrecepcionado"
-        Me.ckrecepcionado.Size = New System.Drawing.Size(22, 21)
+        Me.ckrecepcionado.Size = New System.Drawing.Size(18, 17)
         Me.ckrecepcionado.TabIndex = 186
         Me.ckrecepcionado.UseVisualStyleBackColor = False
         '
@@ -1259,7 +1261,7 @@ Partial Class FrmOrdendeCompra
         Me.Label21.Location = New System.Drawing.Point(25, 81)
         Me.Label21.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(175, 22)
+        Me.Label21.Size = New System.Drawing.Size(144, 18)
         Me.Label21.TabIndex = 184
         Me.Label21.Text = "Almacén Destino :"
         '
@@ -1272,7 +1274,7 @@ Partial Class FrmOrdendeCompra
         Me.Label22.Location = New System.Drawing.Point(821, 87)
         Me.Label22.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(165, 28)
+        Me.Label22.Size = New System.Drawing.Size(137, 23)
         Me.Label22.TabIndex = 185
         Me.Label22.Text = "RECEPCIONADO"
         '
@@ -1282,7 +1284,7 @@ Partial Class FrmOrdendeCompra
         Me.dtfecharececpcion.Location = New System.Drawing.Point(664, 55)
         Me.dtfecharececpcion.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.dtfecharececpcion.Name = "dtfecharececpcion"
-        Me.dtfecharececpcion.Size = New System.Drawing.Size(260, 29)
+        Me.dtfecharececpcion.Size = New System.Drawing.Size(260, 25)
         Me.dtfecharececpcion.TabIndex = 183
         Me.dtfecharececpcion.TabStop = False
         Me.dtfecharececpcion.Value = New Date(2010, 12, 16, 0, 0, 0, 0)
@@ -1295,7 +1297,7 @@ Partial Class FrmOrdendeCompra
         Me.Label16.Location = New System.Drawing.Point(562, 62)
         Me.Label16.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(135, 22)
+        Me.Label16.Size = New System.Drawing.Size(112, 18)
         Me.Label16.TabIndex = 182
         Me.Label16.Text = "F. Recepción :"
         '
@@ -1359,7 +1361,7 @@ Partial Class FrmOrdendeCompra
         Me.cbxcondicionpago.Location = New System.Drawing.Point(155, 27)
         Me.cbxcondicionpago.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.cbxcondicionpago.Name = "cbxcondicionpago"
-        Me.cbxcondicionpago.Size = New System.Drawing.Size(361, 30)
+        Me.cbxcondicionpago.Size = New System.Drawing.Size(325, 26)
         Me.cbxcondicionpago.TabIndex = 181
         Me.cbxcondicionpago.TabStop = False
         '
@@ -1371,7 +1373,7 @@ Partial Class FrmOrdendeCompra
         Me.Label6.Location = New System.Drawing.Point(12, 28)
         Me.Label6.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(189, 22)
+        Me.Label6.Size = New System.Drawing.Size(157, 18)
         Me.Label6.TabIndex = 180
         Me.Label6.Text = "Condición de Pago :"
         '
@@ -1435,7 +1437,7 @@ Partial Class FrmOrdendeCompra
         Me.cbxmoneda.Location = New System.Drawing.Point(155, 53)
         Me.cbxmoneda.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.cbxmoneda.Name = "cbxmoneda"
-        Me.cbxmoneda.Size = New System.Drawing.Size(205, 30)
+        Me.cbxmoneda.Size = New System.Drawing.Size(205, 26)
         Me.cbxmoneda.TabIndex = 179
         Me.cbxmoneda.TabStop = False
         '
@@ -1447,7 +1449,7 @@ Partial Class FrmOrdendeCompra
         Me.Label8.Location = New System.Drawing.Point(79, 52)
         Me.Label8.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(94, 22)
+        Me.Label8.Size = New System.Drawing.Size(79, 18)
         Me.Label8.TabIndex = 178
         Me.Label8.Text = "Moneda :"
         '
@@ -1457,7 +1459,7 @@ Partial Class FrmOrdendeCompra
         Me.dtpedido.Location = New System.Drawing.Point(664, 25)
         Me.dtpedido.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.dtpedido.Name = "dtpedido"
-        Me.dtpedido.Size = New System.Drawing.Size(260, 29)
+        Me.dtpedido.Size = New System.Drawing.Size(260, 25)
         Me.dtpedido.TabIndex = 176
         Me.dtpedido.TabStop = False
         Me.dtpedido.Value = New Date(2010, 12, 16, 0, 0, 0, 0)
@@ -1470,7 +1472,7 @@ Partial Class FrmOrdendeCompra
         Me.Label13.Location = New System.Drawing.Point(582, 28)
         Me.Label13.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(104, 22)
+        Me.Label13.Size = New System.Drawing.Size(86, 18)
         Me.Label13.TabIndex = 175
         Me.Label13.Text = "F. Pedido :"
         '
@@ -1511,7 +1513,7 @@ Partial Class FrmOrdendeCompra
         Me.Label29.Location = New System.Drawing.Point(206, 32)
         Me.Label29.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Label29.Name = "Label29"
-        Me.Label29.Size = New System.Drawing.Size(151, 22)
+        Me.Label29.Size = New System.Drawing.Size(122, 18)
         Me.Label29.TabIndex = 42
         Me.Label29.Text = "Razón Social :"
         '
@@ -1523,7 +1525,7 @@ Partial Class FrmOrdendeCompra
         Me.Label28.Location = New System.Drawing.Point(18, 30)
         Me.Label28.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Label28.Name = "Label28"
-        Me.Label28.Size = New System.Drawing.Size(92, 22)
+        Me.Label28.Size = New System.Drawing.Size(74, 18)
         Me.Label28.TabIndex = 41
         Me.Label28.Text = "Código :"
         '
@@ -1534,7 +1536,7 @@ Partial Class FrmOrdendeCompra
         Me.txtcodproveedor.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.txtcodproveedor.Name = "txtcodproveedor"
         Me.txtcodproveedor.ReadOnly = True
-        Me.txtcodproveedor.Size = New System.Drawing.Size(81, 29)
+        Me.txtcodproveedor.Size = New System.Drawing.Size(81, 25)
         Me.txtcodproveedor.TabIndex = 40
         Me.txtcodproveedor.TabStop = False
         '
@@ -1547,7 +1549,7 @@ Partial Class FrmOrdendeCompra
         Me.txtproveedor.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.txtproveedor.Name = "txtproveedor"
         Me.txtproveedor.ReadOnly = True
-        Me.txtproveedor.Size = New System.Drawing.Size(577, 29)
+        Me.txtproveedor.Size = New System.Drawing.Size(577, 25)
         Me.txtproveedor.TabIndex = 39
         Me.txtproveedor.TabStop = False
         '
@@ -1560,7 +1562,7 @@ Partial Class FrmOrdendeCompra
         Me.cbxflete.Items.AddRange(New Object() {"FLETE INTERNO :", "FLETE EXTERNO :"})
         Me.cbxflete.Location = New System.Drawing.Point(37, 750)
         Me.cbxflete.Name = "cbxflete"
-        Me.cbxflete.Size = New System.Drawing.Size(121, 26)
+        Me.cbxflete.Size = New System.Drawing.Size(121, 24)
         Me.cbxflete.TabIndex = 179
         '
         'txtfleteinterno
@@ -1574,7 +1576,7 @@ Partial Class FrmOrdendeCompra
         Me.txtfleteinterno.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.txtfleteinterno.MaxLength = 8
         Me.txtfleteinterno.Name = "txtfleteinterno"
-        Me.txtfleteinterno.Size = New System.Drawing.Size(116, 37)
+        Me.txtfleteinterno.Size = New System.Drawing.Size(116, 32)
         Me.txtfleteinterno.TabIndex = 180
         '
         'checkservicios
@@ -1586,7 +1588,7 @@ Partial Class FrmOrdendeCompra
         Me.checkservicios.Location = New System.Drawing.Point(854, 276)
         Me.checkservicios.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.checkservicios.Name = "checkservicios"
-        Me.checkservicios.Size = New System.Drawing.Size(22, 21)
+        Me.checkservicios.Size = New System.Drawing.Size(18, 17)
         Me.checkservicios.TabIndex = 195
         Me.checkservicios.UseVisualStyleBackColor = False
         '
@@ -1599,7 +1601,7 @@ Partial Class FrmOrdendeCompra
         Me.Label12.Location = New System.Drawing.Point(866, 274)
         Me.Label12.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(88, 28)
+        Me.Label12.Size = New System.Drawing.Size(73, 23)
         Me.Label12.TabIndex = 194
         Me.Label12.Text = "Servicio"
         '
@@ -1612,7 +1614,7 @@ Partial Class FrmOrdendeCompra
         Me.checkpagoanticipado.Location = New System.Drawing.Point(710, 276)
         Me.checkpagoanticipado.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.checkpagoanticipado.Name = "checkpagoanticipado"
-        Me.checkpagoanticipado.Size = New System.Drawing.Size(22, 21)
+        Me.checkpagoanticipado.Size = New System.Drawing.Size(18, 17)
         Me.checkpagoanticipado.TabIndex = 197
         Me.checkpagoanticipado.UseVisualStyleBackColor = False
         '
@@ -1625,13 +1627,27 @@ Partial Class FrmOrdendeCompra
         Me.Label26.Location = New System.Drawing.Point(723, 274)
         Me.Label26.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Label26.Name = "Label26"
-        Me.Label26.Size = New System.Drawing.Size(162, 28)
+        Me.Label26.Size = New System.Drawing.Size(134, 23)
         Me.Label26.TabIndex = 196
         Me.Label26.Text = "Pago anticipado"
         '
+        'Button1
+        '
+        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button1.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button1.Location = New System.Drawing.Point(486, 27)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(30, 26)
+        Me.Button1.TabIndex = 194
+        Me.Button1.Text = "+"
+        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'FrmOrdendeCompra
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 18.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(233, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(996, 889)
@@ -1791,4 +1807,5 @@ Partial Class FrmOrdendeCompra
     Friend WithEvents Label30 As Label
     Friend WithEvents checkpagoanticipado As CheckBox
     Friend WithEvents Label26 As Label
+    Friend WithEvents Button1 As Button
 End Class

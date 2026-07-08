@@ -694,4 +694,34 @@ Public Class FrmOrdendeCompra
         ActualizarConversion()
     End Sub
 
+
+    Sub Listarcondicionpago()
+        Try
+            Dim ds As New DataSet
+            ds = cn.Cn_ListarTablasMaestrasCompra().Copy
+            ds.DataSetName = "tmp"
+            ds.Tables(0).Columns(1).ColumnName = "Seleccione una Moneda"
+
+            Dim indice_tabla As Integer = 0
+            indice_tabla = 1
+            ds.Tables(indice_tabla).Columns(1).ColumnName = "Seleccione una Condicion de Pago"
+            With cbxcondicionpago
+                .DataSource = ds.Tables(indice_tabla)
+                .DisplayMember = ds.Tables(indice_tabla).Columns(1).ColumnName
+                .ValueMember = ds.Tables(indice_tabla).Columns(0).ColumnName
+                If (ds.Tables(indice_tabla).Rows.Count > 0) Then
+                    .Value = ds.Tables(indice_tabla).Rows(0)(0)
+                End If
+            End With
+
+        Catch ex As Exception
+            clsBasicas.controlException(Name, ex)
+        End Try
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim f As New Frmcondiciondepago
+        f.ShowDialog()
+        Listarcondicionpago()
+    End Sub
 End Class

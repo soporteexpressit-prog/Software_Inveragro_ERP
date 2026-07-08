@@ -87,12 +87,12 @@ Partial Class FrmCuentasCobrar
         Me.txtproveedor.BackColor = System.Drawing.Color.White
         Me.txtproveedor.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtproveedor.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtproveedor.Location = New System.Drawing.Point(224, 32)
-        Me.txtproveedor.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.txtproveedor.Location = New System.Drawing.Point(299, 39)
+        Me.txtproveedor.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtproveedor.MaxLength = 150
         Me.txtproveedor.Name = "txtproveedor"
         Me.txtproveedor.ReadOnly = True
-        Me.txtproveedor.Size = New System.Drawing.Size(401, 21)
+        Me.txtproveedor.Size = New System.Drawing.Size(533, 24)
         Me.txtproveedor.TabIndex = 167
         '
         'Label5
@@ -101,10 +101,10 @@ Partial Class FrmCuentasCobrar
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label5.Location = New System.Drawing.Point(52, 34)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label5.Location = New System.Drawing.Point(69, 42)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(55, 14)
+        Me.Label5.Size = New System.Drawing.Size(65, 18)
         Me.Label5.TabIndex = 166
         Me.Label5.Text = "Titular :"
         '
@@ -113,12 +113,12 @@ Partial Class FrmCuentasCobrar
         Me.txtcodproveedor.BackColor = System.Drawing.Color.White
         Me.txtcodproveedor.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtcodproveedor.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtcodproveedor.Location = New System.Drawing.Point(123, 32)
-        Me.txtcodproveedor.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.txtcodproveedor.Location = New System.Drawing.Point(164, 39)
+        Me.txtcodproveedor.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtcodproveedor.MaxLength = 150
         Me.txtcodproveedor.Name = "txtcodproveedor"
         Me.txtcodproveedor.ReadOnly = True
-        Me.txtcodproveedor.Size = New System.Drawing.Size(82, 21)
+        Me.txtcodproveedor.Size = New System.Drawing.Size(108, 24)
         Me.txtcodproveedor.TabIndex = 165
         '
         'cktodods
@@ -130,10 +130,10 @@ Partial Class FrmCuentasCobrar
         Me.cktodods.CheckState = System.Windows.Forms.CheckState.Checked
         Me.cktodods.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cktodods.ForeColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(95, Byte), Integer), CType(CType(166, Byte), Integer))
-        Me.cktodods.Location = New System.Drawing.Point(631, 32)
-        Me.cktodods.Margin = New System.Windows.Forms.Padding(2)
+        Me.cktodods.Location = New System.Drawing.Point(841, 39)
+        Me.cktodods.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.cktodods.Name = "cktodods"
-        Me.cktodods.Size = New System.Drawing.Size(71, 17)
+        Me.cktodods.Size = New System.Drawing.Size(90, 21)
         Me.cktodods.TabIndex = 163
         Me.cktodods.Text = "Todos :   "
         Me.cktodods.UseVisualStyleBackColor = False
@@ -144,10 +144,10 @@ Partial Class FrmCuentasCobrar
         Me.cbxestado.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbxestado.FormattingEnabled = True
         Me.cbxestado.Items.AddRange(New Object() {"TODOS", "ACTIVO", "ANULADO"})
-        Me.cbxestado.Location = New System.Drawing.Point(959, 30)
-        Me.cbxestado.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.cbxestado.Location = New System.Drawing.Point(1279, 37)
+        Me.cbxestado.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.cbxestado.Name = "cbxestado"
-        Me.cbxestado.Size = New System.Drawing.Size(88, 21)
+        Me.cbxestado.Size = New System.Drawing.Size(116, 25)
         Me.cbxestado.TabIndex = 161
         '
         'Label1
@@ -156,10 +156,10 @@ Partial Class FrmCuentasCobrar
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(52, 94)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(69, 116)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(58, 14)
+        Me.Label1.Size = New System.Drawing.Size(71, 18)
         Me.Label1.TabIndex = 160
         Me.Label1.Text = "Banco : "
         '
@@ -167,20 +167,20 @@ Partial Class FrmCuentasCobrar
         '
         Me.dtpFechaHasta.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dtpFechaHasta.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFechaHasta.Location = New System.Drawing.Point(485, 65)
-        Me.dtpFechaHasta.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.dtpFechaHasta.Location = New System.Drawing.Point(647, 80)
+        Me.dtpFechaHasta.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.dtpFechaHasta.Name = "dtpFechaHasta"
-        Me.dtpFechaHasta.Size = New System.Drawing.Size(139, 21)
+        Me.dtpFechaHasta.Size = New System.Drawing.Size(184, 24)
         Me.dtpFechaHasta.TabIndex = 159
         '
         'dtpFechaDesde
         '
         Me.dtpFechaDesde.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dtpFechaDesde.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFechaDesde.Location = New System.Drawing.Point(123, 65)
-        Me.dtpFechaDesde.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.dtpFechaDesde.Location = New System.Drawing.Point(164, 80)
+        Me.dtpFechaDesde.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.dtpFechaDesde.Name = "dtpFechaDesde"
-        Me.dtpFechaDesde.Size = New System.Drawing.Size(127, 21)
+        Me.dtpFechaDesde.Size = New System.Drawing.Size(168, 24)
         Me.dtpFechaDesde.TabIndex = 158
         '
         'Label3
@@ -189,10 +189,10 @@ Partial Class FrmCuentasCobrar
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(11, 68)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Location = New System.Drawing.Point(15, 84)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(97, 14)
+        Me.Label3.Size = New System.Drawing.Size(115, 18)
         Me.Label3.TabIndex = 46
         Me.Label3.Text = "Fecha Desde :"
         '
@@ -202,10 +202,10 @@ Partial Class FrmCuentasCobrar
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label4.Location = New System.Drawing.Point(385, 68)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Location = New System.Drawing.Point(513, 84)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(94, 14)
+        Me.Label4.Size = New System.Drawing.Size(112, 18)
         Me.Label4.TabIndex = 47
         Me.Label4.Text = "Fecha Hasta :"
         '
@@ -216,11 +216,11 @@ Partial Class FrmCuentasCobrar
         Me.ToolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
         Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton2ctcc, Me.btneditarModucontabiidad, Me.btnPagarctcc, Me.btnPagarctcp, Me.btneditarclientecuentacobrarcontabilidad, Me.btnexportarctcc, Me.btndetallesaldofavor, Me.ToolStripButton1productos, Me.ToolStripButton2, Me.ToolStripButton1, Me.btncerrar})
-        Me.ToolStrip1.Location = New System.Drawing.Point(0, 164)
-        Me.ToolStrip1.Margin = New System.Windows.Forms.Padding(2)
+        Me.ToolStrip1.Location = New System.Drawing.Point(0, 211)
+        Me.ToolStrip1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Padding = New System.Windows.Forms.Padding(0, 0, 2, 0)
-        Me.ToolStrip1.Size = New System.Drawing.Size(1545, 38)
+        Me.ToolStrip1.Padding = New System.Windows.Forms.Padding(0, 0, 3, 0)
+        Me.ToolStrip1.Size = New System.Drawing.Size(2060, 38)
         Me.ToolStrip1.TabIndex = 52
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -233,7 +233,7 @@ Partial Class FrmCuentasCobrar
         Me.ToolStripButton2ctcc.Margin = New System.Windows.Forms.Padding(5)
         Me.ToolStripButton2ctcc.Name = "ToolStripButton2ctcc"
         Me.ToolStripButton2ctcc.Padding = New System.Windows.Forms.Padding(2)
-        Me.ToolStripButton2ctcc.Size = New System.Drawing.Size(132, 28)
+        Me.ToolStripButton2ctcc.Size = New System.Drawing.Size(157, 28)
         Me.ToolStripButton2ctcc.Text = "Nuevo Ingreso"
         '
         'btneditarModucontabiidad
@@ -245,7 +245,7 @@ Partial Class FrmCuentasCobrar
         Me.btneditarModucontabiidad.Margin = New System.Windows.Forms.Padding(5)
         Me.btneditarModucontabiidad.Name = "btneditarModucontabiidad"
         Me.btneditarModucontabiidad.Padding = New System.Windows.Forms.Padding(2)
-        Me.btneditarModucontabiidad.Size = New System.Drawing.Size(74, 28)
+        Me.btneditarModucontabiidad.Size = New System.Drawing.Size(84, 28)
         Me.btneditarModucontabiidad.Text = "Editar"
         '
         'btnPagarctcc
@@ -257,7 +257,7 @@ Partial Class FrmCuentasCobrar
         Me.btnPagarctcc.Margin = New System.Windows.Forms.Padding(5)
         Me.btnPagarctcc.Name = "btnPagarctcc"
         Me.btnPagarctcc.Padding = New System.Windows.Forms.Padding(2)
-        Me.btnPagarctcc.Size = New System.Drawing.Size(80, 28)
+        Me.btnPagarctcc.Size = New System.Drawing.Size(91, 28)
         Me.btnPagarctcc.Text = "Cobrar"
         Me.btnPagarctcc.ToolTipText = "Cobrar"
         '
@@ -270,7 +270,7 @@ Partial Class FrmCuentasCobrar
         Me.btnPagarctcp.Margin = New System.Windows.Forms.Padding(5)
         Me.btnPagarctcp.Name = "btnPagarctcp"
         Me.btnPagarctcp.Padding = New System.Windows.Forms.Padding(2)
-        Me.btnPagarctcp.Size = New System.Drawing.Size(116, 28)
+        Me.btnPagarctcp.Size = New System.Drawing.Size(135, 28)
         Me.btnPagarctcp.Text = "Aplicar Nota"
         Me.btnPagarctcp.ToolTipText = "Pagar"
         '
@@ -283,7 +283,7 @@ Partial Class FrmCuentasCobrar
         Me.btneditarclientecuentacobrarcontabilidad.Margin = New System.Windows.Forms.Padding(5)
         Me.btneditarclientecuentacobrarcontabilidad.Name = "btneditarclientecuentacobrarcontabilidad"
         Me.btneditarclientecuentacobrarcontabilidad.Padding = New System.Windows.Forms.Padding(2)
-        Me.btneditarclientecuentacobrarcontabilidad.Size = New System.Drawing.Size(124, 28)
+        Me.btneditarclientecuentacobrarcontabilidad.Size = New System.Drawing.Size(145, 28)
         Me.btneditarclientecuentacobrarcontabilidad.Text = "Editar Cliente"
         '
         'btnexportarctcc
@@ -295,7 +295,7 @@ Partial Class FrmCuentasCobrar
         Me.btnexportarctcc.Margin = New System.Windows.Forms.Padding(5)
         Me.btnexportarctcc.Name = "btnexportarctcc"
         Me.btnexportarctcc.Padding = New System.Windows.Forms.Padding(2)
-        Me.btnexportarctcc.Size = New System.Drawing.Size(92, 28)
+        Me.btnexportarctcc.Size = New System.Drawing.Size(107, 28)
         Me.btnexportarctcc.Text = "Exportar"
         Me.btnexportarctcc.ToolTipText = "Exportar"
         '
@@ -308,7 +308,7 @@ Partial Class FrmCuentasCobrar
         Me.btndetallesaldofavor.Margin = New System.Windows.Forms.Padding(5)
         Me.btndetallesaldofavor.Name = "btndetallesaldofavor"
         Me.btndetallesaldofavor.Padding = New System.Windows.Forms.Padding(2)
-        Me.btndetallesaldofavor.Size = New System.Drawing.Size(163, 28)
+        Me.btndetallesaldofavor.Size = New System.Drawing.Size(194, 28)
         Me.btndetallesaldofavor.Text = "Cuentas Vinculadas"
         '
         'ToolStripButton1productos
@@ -322,7 +322,7 @@ Partial Class FrmCuentasCobrar
         Me.ToolStripButton1productos.Margin = New System.Windows.Forms.Padding(5)
         Me.ToolStripButton1productos.Name = "ToolStripButton1productos"
         Me.ToolStripButton1productos.Padding = New System.Windows.Forms.Padding(2)
-        Me.ToolStripButton1productos.Size = New System.Drawing.Size(87, 28)
+        Me.ToolStripButton1productos.Size = New System.Drawing.Size(99, 28)
         Me.ToolStripButton1productos.Text = "Anular"
         Me.ToolStripButton1productos.ToolTipText = "Anular"
         '
@@ -331,13 +331,13 @@ Partial Class FrmCuentasCobrar
         Me.HistoricoDeRecepcionesToolStripMenuItem.Checked = True
         Me.HistoricoDeRecepcionesToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
         Me.HistoricoDeRecepcionesToolStripMenuItem.Name = "HistoricoDeRecepcionesToolStripMenuItem"
-        Me.HistoricoDeRecepcionesToolStripMenuItem.Size = New System.Drawing.Size(217, 22)
+        Me.HistoricoDeRecepcionesToolStripMenuItem.Size = New System.Drawing.Size(268, 26)
         Me.HistoricoDeRecepcionesToolStripMenuItem.Text = "Anular Cuenta"
         '
         'AnularAbonoCobroToolStripMenuItem
         '
         Me.AnularAbonoCobroToolStripMenuItem.Name = "AnularAbonoCobroToolStripMenuItem"
-        Me.AnularAbonoCobroToolStripMenuItem.Size = New System.Drawing.Size(217, 22)
+        Me.AnularAbonoCobroToolStripMenuItem.Size = New System.Drawing.Size(268, 26)
         Me.AnularAbonoCobroToolStripMenuItem.Text = "Anular Abono / Cobro"
         '
         'ToolStripButton2
@@ -351,7 +351,7 @@ Partial Class FrmCuentasCobrar
         Me.ToolStripButton2.Margin = New System.Windows.Forms.Padding(5)
         Me.ToolStripButton2.Name = "ToolStripButton2"
         Me.ToolStripButton2.Padding = New System.Windows.Forms.Padding(2)
-        Me.ToolStripButton2.Size = New System.Drawing.Size(88, 28)
+        Me.ToolStripButton2.Size = New System.Drawing.Size(102, 28)
         Me.ToolStripButton2.Text = "Agrupar"
         '
         'ToolStripButton1
@@ -365,7 +365,7 @@ Partial Class FrmCuentasCobrar
         Me.ToolStripButton1.Margin = New System.Windows.Forms.Padding(5)
         Me.ToolStripButton1.Name = "ToolStripButton1"
         Me.ToolStripButton1.Padding = New System.Windows.Forms.Padding(2)
-        Me.ToolStripButton1.Size = New System.Drawing.Size(77, 28)
+        Me.ToolStripButton1.Size = New System.Drawing.Size(87, 28)
         Me.ToolStripButton1.Text = "Filtros"
         '
         'btncerrar
@@ -377,7 +377,7 @@ Partial Class FrmCuentasCobrar
         Me.btncerrar.Margin = New System.Windows.Forms.Padding(5)
         Me.btncerrar.Name = "btncerrar"
         Me.btncerrar.Padding = New System.Windows.Forms.Padding(2)
-        Me.btncerrar.Size = New System.Drawing.Size(66, 28)
+        Me.btncerrar.Size = New System.Drawing.Size(72, 28)
         Me.btncerrar.Text = "Salir"
         '
         'Panel2
@@ -388,9 +388,9 @@ Partial Class FrmCuentasCobrar
         Me.Panel2.Controls.Add(Me.ToolStrip1)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(2)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1545, 202)
+        Me.Panel2.Size = New System.Drawing.Size(2060, 249)
         Me.Panel2.TabIndex = 8
         '
         'GroupBox1
@@ -414,9 +414,11 @@ Partial Class FrmCuentasCobrar
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.GroupBox1.Location = New System.Drawing.Point(14, 30)
+        Me.GroupBox1.Location = New System.Drawing.Point(19, 37)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(1068, 129)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox1.Size = New System.Drawing.Size(1424, 159)
         Me.GroupBox1.TabIndex = 174
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Información de Búsqueda"
@@ -427,10 +429,10 @@ Partial Class FrmCuentasCobrar
         Me.cbxliquidado.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbxliquidado.FormattingEnabled = True
         Me.cbxliquidado.Items.AddRange(New Object() {"TODOS", "SI", "NO"})
-        Me.cbxliquidado.Location = New System.Drawing.Point(959, 65)
-        Me.cbxliquidado.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.cbxliquidado.Location = New System.Drawing.Point(1279, 80)
+        Me.cbxliquidado.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.cbxliquidado.Name = "cbxliquidado"
-        Me.cbxliquidado.Size = New System.Drawing.Size(88, 21)
+        Me.cbxliquidado.Size = New System.Drawing.Size(116, 25)
         Me.cbxliquidado.TabIndex = 178
         '
         'Label7
@@ -439,10 +441,10 @@ Partial Class FrmCuentasCobrar
         Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label7.Location = New System.Drawing.Point(876, 68)
-        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label7.Location = New System.Drawing.Point(1168, 84)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(77, 14)
+        Me.Label7.Size = New System.Drawing.Size(89, 18)
         Me.Label7.TabIndex = 177
         Me.Label7.Text = "Liquidado :"
         '
@@ -452,10 +454,10 @@ Partial Class FrmCuentasCobrar
         Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label6.Location = New System.Drawing.Point(826, 33)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label6.Location = New System.Drawing.Point(1101, 41)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(127, 14)
+        Me.Label6.Size = New System.Drawing.Size(149, 18)
         Me.Label6.TabIndex = 176
         Me.Label6.Text = "Estado de cuenta :"
         '
@@ -465,10 +467,10 @@ Partial Class FrmCuentasCobrar
         Me.cbxbancodestino.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbxbancodestino.FormattingEnabled = True
         Me.cbxbancodestino.Items.AddRange(New Object() {"TODOS", "ACTIVO", "ANULADO"})
-        Me.cbxbancodestino.Location = New System.Drawing.Point(123, 92)
-        Me.cbxbancodestino.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.cbxbancodestino.Location = New System.Drawing.Point(164, 113)
+        Me.cbxbancodestino.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.cbxbancodestino.Name = "cbxbancodestino"
-        Me.cbxbancodestino.Size = New System.Drawing.Size(502, 21)
+        Me.cbxbancodestino.Size = New System.Drawing.Size(668, 25)
         Me.cbxbancodestino.TabIndex = 175
         '
         'cktodosfechas
@@ -478,10 +480,10 @@ Partial Class FrmCuentasCobrar
         Me.cktodosfechas.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.cktodosfechas.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cktodosfechas.ForeColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(95, Byte), Integer), CType(CType(166, Byte), Integer))
-        Me.cktodosfechas.Location = New System.Drawing.Point(631, 67)
-        Me.cktodosfechas.Margin = New System.Windows.Forms.Padding(2)
+        Me.cktodosfechas.Location = New System.Drawing.Point(841, 82)
+        Me.cktodosfechas.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.cktodosfechas.Name = "cktodosfechas"
-        Me.cktodosfechas.Size = New System.Drawing.Size(71, 17)
+        Me.cktodosfechas.Size = New System.Drawing.Size(90, 21)
         Me.cktodosfechas.TabIndex = 174
         Me.cktodosfechas.Text = "Todos :   "
         Me.cktodosfechas.UseVisualStyleBackColor = False
@@ -492,9 +494,10 @@ Partial Class FrmCuentasCobrar
         Me.btnBuscar.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBuscar.Image = CType(resources.GetObject("btnBuscar.Image"), System.Drawing.Image)
         Me.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnBuscar.Location = New System.Drawing.Point(707, 26)
+        Me.btnBuscar.Location = New System.Drawing.Point(943, 32)
+        Me.btnBuscar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnBuscar.Name = "btnBuscar"
-        Me.btnBuscar.Size = New System.Drawing.Size(95, 29)
+        Me.btnBuscar.Size = New System.Drawing.Size(127, 36)
         Me.btnBuscar.TabIndex = 173
         Me.btnBuscar.Text = "Buscar"
         Me.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -506,9 +509,10 @@ Partial Class FrmCuentasCobrar
         Me.btnConsultar.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnConsultar.Image = Global.Formularios.My.Resources.Resources.buscando__1_
         Me.btnConsultar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnConsultar.Location = New System.Drawing.Point(707, 61)
+        Me.btnConsultar.Location = New System.Drawing.Point(943, 75)
+        Me.btnConsultar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnConsultar.Name = "btnConsultar"
-        Me.btnConsultar.Size = New System.Drawing.Size(95, 29)
+        Me.btnConsultar.Size = New System.Drawing.Size(127, 36)
         Me.btnConsultar.TabIndex = 169
         Me.btnConsultar.Text = "Buscar"
         Me.btnConsultar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -520,10 +524,9 @@ Partial Class FrmCuentasCobrar
         Me.Label2.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(233, Byte), Integer))
         Me.Label2.Font = New System.Drawing.Font("Verdana", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(11, 9)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label2.Location = New System.Drawing.Point(15, 11)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(217, 18)
+        Me.Label2.Size = New System.Drawing.Size(273, 25)
         Me.Label2.TabIndex = 159
         Me.Label2.Text = "CUENTAS POR COBRAR"
         '
@@ -597,10 +600,10 @@ Partial Class FrmCuentasCobrar
         Me.dtgListado.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy
         Me.dtgListado.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dtgListado.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dtgListado.Location = New System.Drawing.Point(0, 202)
-        Me.dtgListado.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.dtgListado.Location = New System.Drawing.Point(0, 249)
+        Me.dtgListado.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.dtgListado.Name = "dtgListado"
-        Me.dtgListado.Size = New System.Drawing.Size(1545, 479)
+        Me.dtgListado.Size = New System.Drawing.Size(2060, 589)
         Me.dtgListado.TabIndex = 9
         Me.dtgListado.Text = "UltraGrid1"
         '
@@ -613,9 +616,10 @@ Partial Class FrmCuentasCobrar
         '
         Me.Ptbx_Cargando.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Ptbx_Cargando.Image = Global.Formularios.My.Resources.Resources.loader
-        Me.Ptbx_Cargando.Location = New System.Drawing.Point(863, 412)
+        Me.Ptbx_Cargando.Location = New System.Drawing.Point(1151, 507)
+        Me.Ptbx_Cargando.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Ptbx_Cargando.Name = "Ptbx_Cargando"
-        Me.Ptbx_Cargando.Size = New System.Drawing.Size(43, 37)
+        Me.Ptbx_Cargando.Size = New System.Drawing.Size(57, 46)
         Me.Ptbx_Cargando.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.Ptbx_Cargando.TabIndex = 10
         Me.Ptbx_Cargando.TabStop = False
@@ -623,13 +627,13 @@ Partial Class FrmCuentasCobrar
         '
         'FrmCuentasCobrar
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1545, 681)
+        Me.ClientSize = New System.Drawing.Size(2060, 838)
         Me.Controls.Add(Me.Ptbx_Cargando)
         Me.Controls.Add(Me.dtgListado)
         Me.Controls.Add(Me.Panel2)
-        Me.Margin = New System.Windows.Forms.Padding(2)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "FrmCuentasCobrar"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "FrmCuentasCobrar"
