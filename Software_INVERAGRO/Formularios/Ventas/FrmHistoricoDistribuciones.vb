@@ -57,6 +57,8 @@ Public Class FrmHistoricoDistribuciones
         Try
             clsBasicas.Totales_Formato(dtgListado, e, 1)
             clsBasicas.SumarTotales_Formato(dtgListado, e, 3)
+            clsBasicas.SumarTotales_Formato(dtgListado, e, 9)
+            clsBasicas.SumarTotales_Formato(dtgListado, e, 10)
             e.Layout.AutoFitStyle = Infragistics.Win.UltraWinGrid.AutoFitStyle.ResizeAllColumns
             e.Layout.Bands(0).PerformAutoResizeColumns(False, PerformAutoSizeType.AllRowsInBand)
 
