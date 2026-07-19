@@ -2,8 +2,8 @@
 
 Public Class cdConexion
 
-    Private Shared ReadOnly conexionProduccion As String = "Data Source=161.132.55.56,1433;Initial Catalog=BDINVERAGRO;User ID=SuperA;Password=!!Inveragro26"
-    Private Shared ReadOnly conexionPruebas As String = "Data Source=161.132.55.56,1433;Initial Catalog=BDINVERAGRO_TEST;User ID=SuperA;Password=!!Inveragro26"
+    Private Shared ReadOnly conexionProduccion As String = "Data Source=localhost,1433;Initial Catalog=BDINVERAGRO;User ID=SuperA;Password=!!Inveragro26"
+    Private Shared ReadOnly conexionPruebas As String = "Data Source=localhost,1433;Initial Catalog=BDINVERAGRO_TEST;User ID=SuperA;Password=!!Inveragro26"
     Public Shared EsProduccion As Boolean = False
 
     Public con As SqlConnection
