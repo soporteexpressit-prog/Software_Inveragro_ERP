@@ -73,7 +73,7 @@ Public Class FrmControlLotes
 
             ds = cn.Cn_ConsultarLotesxAnio(obj).Copy
             ds.DataSetName = "tmp"
-            'ds.Tables(0).Columns("idLote").ColumnMapping = MappingType.Hidden
+            ds.Tables(0).Columns("idLote").ColumnMapping = MappingType.Hidden
             ds.Tables(0).Columns("idPlantel").ColumnMapping = MappingType.Hidden
             ds.Tables(0).Columns("Día Actual").ColumnMapping = MappingType.Hidden
             ds.Tables(0).Columns("Fecha Apertura").ColumnMapping = MappingType.Hidden
