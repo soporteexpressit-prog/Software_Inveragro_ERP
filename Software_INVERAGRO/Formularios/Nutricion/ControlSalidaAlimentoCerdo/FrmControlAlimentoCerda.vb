@@ -55,6 +55,44 @@ Public Class FrmControlAlimentoCerda
         End With
     End Sub
 
+    Private Sub CmbUbicacion_ValueChanged(sender As Object, e As EventArgs) Handles CmbUbicacion.ValueChanged
+        If CmbUbicacion Is Nothing OrElse CmbUbicacion.Value Is Nothing Then
+            Return
+        End If
+        ListarRaciones()
+    End Sub
+
+    Sub ListarRaciones()
+        Dim tb As New DataTable
+        tb = cnAlimento.Cn_ListarAlimentoCerdoActivo(CmbUbicacion.Value).Copy
+        tb.TableName = "tmp"
+        tb.Columns(1).ColumnName = "Seleccione una Ración"
+
+        Dim filaTodas As DataRow = tb.NewRow()
+        filaTodas(0) = 0
+        filaTodas(1) = "TODAS LAS RACIONES"
+        For i As Integer = 2 To tb.Columns.Count - 1
+            If tb.Columns(i).DataType Is GetType(String) Then
+                filaTodas(i) = String.Empty
+            ElseIf tb.Columns(i).AllowDBNull Then
+                filaTodas(i) = DBNull.Value
+            Else
+                filaTodas(i) = 0
+            End If
+        Next
+        tb.Rows.InsertAt(filaTodas, 0)
+
+        With CmbRacion
+            .DataSource = tb
+            .DisplayMember = tb.Columns(1).ColumnName
+            .ValueMember = tb.Columns(0).ColumnName
+            .Value = 0
+            For i As Integer = 2 To .DisplayLayout.Bands(0).Columns.Count - 1
+                .DisplayLayout.Bands(0).Columns(i).Hidden = True
+            Next
+        End With
+    End Sub
+
     Sub Consultar()
         If Not BackgroundWorker1.IsBusy Then
             BloquearControles()
@@ -63,7 +101,8 @@ Public Class FrmControlAlimentoCerda
                 .FechaDesde = dtpFechaDesde.Value,
                 .FechaHasta = dtpFechaHasta.Value,
                 .IdUbicacion = CmbUbicacion.Value,
-                .Estado = CmbEstado.Text
+                .Estado = CmbEstado.Text,
+                .IdRacion = CmbRacion.Value
             }
 
             BackgroundWorker1.RunWorkerAsync(obj)
@@ -181,6 +220,7 @@ Public Class FrmControlAlimentoCerda
             Else
                 e.Layout.Bands(0).Summaries.Clear()
                 clsBasicas.Totales_Formato(dtgListado, e, 1)
+                clsBasicas.SumarTotales_Formato(dtgListado, e, 11)
             End If
         Catch ex As Exception
             clsBasicas.controlException(Name, ex)

@@ -532,6 +532,7 @@ Public Class cdControlAlimento
             da.SelectCommand.Parameters.AddWithValue("@fechaHasta", If(obj.FechaHasta.HasValue, obj.FechaHasta.Value, DBNull.Value))
             da.SelectCommand.Parameters.AddWithValue("@idUbicacion", obj.IdUbicacion)
             da.SelectCommand.Parameters.AddWithValue("@estado", obj.Estado)
+            da.SelectCommand.Parameters.AddWithValue("@idRacion", obj.IdRacion)
             da.Fill(ds)
         Catch ex As Exception
             Throw ex
