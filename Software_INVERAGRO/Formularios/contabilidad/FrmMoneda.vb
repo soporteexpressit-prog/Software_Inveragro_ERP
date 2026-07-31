@@ -132,8 +132,8 @@ Public Class FrmMoneda
                 txtCodigo.Text = _CodTMoneda.ToString
                 txtDescripcion.Text = dtgListado.DisplayLayout.ActiveRow.Cells(1).Value.ToString
                 txtAbreviatura.Text = dtgListado.DisplayLayout.ActiveRow.Cells(2).Value.ToString
-                txtpreciocompra.Text = dtgListado.DisplayLayout.ActiveRow.Cells(3).Value.ToString
-                txtprecioventa.Text = dtgListado.DisplayLayout.ActiveRow.Cells(4).Value.ToString
+                txtpreciocompra.Text = dtgListado.DisplayLayout.ActiveRow.Cells(4).Value.ToString
+                txtprecioventa.Text = dtgListado.DisplayLayout.ActiveRow.Cells(3).Value.ToString
                 txtDescripcion.Focus()
             Else
                 msj_advert(MensajesSistema.mensajesGenerales("SELECCIONE_REGISTRO"))

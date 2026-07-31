@@ -120,19 +120,20 @@ Partial Class FrmMant_Producto
         Appearance18.TextHAlignAsString = "Center"
         Me.UltraGroupBox2.HeaderAppearance = Appearance18
         Me.UltraGroupBox2.HeaderPosition = Infragistics.Win.Misc.GroupBoxHeaderPosition.TopOnBorder
-        Me.UltraGroupBox2.Location = New System.Drawing.Point(0, 169)
+        Me.UltraGroupBox2.Location = New System.Drawing.Point(0, 208)
+        Me.UltraGroupBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.UltraGroupBox2.Name = "UltraGroupBox2"
-        Me.UltraGroupBox2.Size = New System.Drawing.Size(1709, 446)
+        Me.UltraGroupBox2.Size = New System.Drawing.Size(2279, 549)
         Me.UltraGroupBox2.TabIndex = 4
         '
         'Ptbx_Cargando
         '
         Me.Ptbx_Cargando.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Ptbx_Cargando.Image = Global.Formularios.My.Resources.Resources.loader
-        Me.Ptbx_Cargando.Location = New System.Drawing.Point(810, 198)
-        Me.Ptbx_Cargando.Margin = New System.Windows.Forms.Padding(2)
+        Me.Ptbx_Cargando.Location = New System.Drawing.Point(1080, 244)
+        Me.Ptbx_Cargando.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Ptbx_Cargando.Name = "Ptbx_Cargando"
-        Me.Ptbx_Cargando.Size = New System.Drawing.Size(43, 37)
+        Me.Ptbx_Cargando.Size = New System.Drawing.Size(57, 46)
         Me.Ptbx_Cargando.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.Ptbx_Cargando.TabIndex = 2
         Me.Ptbx_Cargando.TabStop = False
@@ -215,15 +216,17 @@ Partial Class FrmMant_Producto
         Me.dtg_Listado.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dtg_Listado.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dtg_Listado.Location = New System.Drawing.Point(3, 3)
+        Me.dtg_Listado.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.dtg_Listado.Name = "dtg_Listado"
-        Me.dtg_Listado.Size = New System.Drawing.Size(1703, 440)
+        Me.dtg_Listado.Size = New System.Drawing.Size(2273, 543)
         Me.dtg_Listado.TabIndex = 10
         '
         'txtnombre
         '
-        Me.txtnombre.Location = New System.Drawing.Point(670, 32)
+        Me.txtnombre.Location = New System.Drawing.Point(893, 39)
+        Me.txtnombre.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtnombre.Name = "txtnombre"
-        Me.txtnombre.Size = New System.Drawing.Size(380, 20)
+        Me.txtnombre.Size = New System.Drawing.Size(505, 22)
         Me.txtnombre.TabIndex = 159
         '
         'UltraLabel3
@@ -234,9 +237,10 @@ Partial Class FrmMant_Producto
         Appearance19.TextVAlignAsString = "Middle"
         Me.UltraLabel3.Appearance = Appearance19
         Me.UltraLabel3.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.UltraLabel3.Location = New System.Drawing.Point(558, 30)
+        Me.UltraLabel3.Location = New System.Drawing.Point(744, 37)
+        Me.UltraLabel3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.UltraLabel3.Name = "UltraLabel3"
-        Me.UltraLabel3.Size = New System.Drawing.Size(97, 20)
+        Me.UltraLabel3.Size = New System.Drawing.Size(129, 25)
         Me.UltraLabel3.TabIndex = 158
         Me.UltraLabel3.Text = "Descripción :"
         '
@@ -247,13 +251,13 @@ Partial Class FrmMant_Producto
         Me.ToolStrip1.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold)
         Me.ToolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
         Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btn_nuevoproductos, Me.btn_editarproductos, Me.btn_eliminar, Me.ToolStripButton1productos, Me.btnexportar_excelproductos, Me.btn_historicodecompraalmacenali, Me.btnverkardexproductos, Me.BtnCodigoBarraalmaali, Me.BtnVerLotealmcenproductos, Me.btnrecepciones, Me.btnAsignarUnidadesMedida, Me.ToolStripButton3, Me.btn_cerrar, Me.ToolStripButton2, Me.ToolStripButton1})
-        Me.ToolStrip1.Location = New System.Drawing.Point(0, 131)
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btn_nuevoproductos, Me.btn_editarproductos, Me.ToolStripButton1productos, Me.btn_eliminar, Me.btnexportar_excelproductos, Me.btn_historicodecompraalmacenali, Me.btnverkardexproductos, Me.BtnCodigoBarraalmaali, Me.BtnVerLotealmcenproductos, Me.btnrecepciones, Me.btnAsignarUnidadesMedida, Me.ToolStripButton3, Me.btn_cerrar, Me.ToolStripButton2, Me.ToolStripButton1})
+        Me.ToolStrip1.Location = New System.Drawing.Point(0, 170)
         Me.ToolStrip1.Margin = New System.Windows.Forms.Padding(1)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Padding = New System.Windows.Forms.Padding(0, 0, 2, 0)
+        Me.ToolStrip1.Padding = New System.Windows.Forms.Padding(0, 0, 3, 0)
         Me.ToolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System
-        Me.ToolStrip1.Size = New System.Drawing.Size(1709, 38)
+        Me.ToolStrip1.Size = New System.Drawing.Size(2279, 38)
         Me.ToolStrip1.TabIndex = 10
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -267,7 +271,7 @@ Partial Class FrmMant_Producto
         Me.btn_nuevoproductos.Margin = New System.Windows.Forms.Padding(5)
         Me.btn_nuevoproductos.Name = "btn_nuevoproductos"
         Me.btn_nuevoproductos.Padding = New System.Windows.Forms.Padding(2)
-        Me.btn_nuevoproductos.Size = New System.Drawing.Size(81, 28)
+        Me.btn_nuevoproductos.Size = New System.Drawing.Size(93, 28)
         Me.btn_nuevoproductos.Text = " Nuevo"
         Me.btn_nuevoproductos.ToolTipText = "Nuevo "
         '
@@ -280,7 +284,7 @@ Partial Class FrmMant_Producto
         Me.btn_editarproductos.Margin = New System.Windows.Forms.Padding(5)
         Me.btn_editarproductos.Name = "btn_editarproductos"
         Me.btn_editarproductos.Padding = New System.Windows.Forms.Padding(2)
-        Me.btn_editarproductos.Size = New System.Drawing.Size(94, 28)
+        Me.btn_editarproductos.Size = New System.Drawing.Size(109, 28)
         Me.btn_editarproductos.Text = " Editar    "
         Me.btn_editarproductos.ToolTipText = "Editar"
         '
@@ -294,7 +298,7 @@ Partial Class FrmMant_Producto
         Me.btn_eliminar.Margin = New System.Windows.Forms.Padding(5)
         Me.btn_eliminar.Name = "btn_eliminar"
         Me.btn_eliminar.Padding = New System.Windows.Forms.Padding(2)
-        Me.btn_eliminar.Size = New System.Drawing.Size(89, 28)
+        Me.btn_eliminar.Size = New System.Drawing.Size(101, 28)
         Me.btn_eliminar.Text = "Eliminar"
         Me.btn_eliminar.ToolTipText = "Eliminar"
         Me.btn_eliminar.Visible = False
@@ -310,45 +314,45 @@ Partial Class FrmMant_Producto
         Me.ToolStripButton1productos.Margin = New System.Windows.Forms.Padding(5)
         Me.ToolStripButton1productos.Name = "ToolStripButton1productos"
         Me.ToolStripButton1productos.Padding = New System.Windows.Forms.Padding(2)
-        Me.ToolStripButton1productos.Size = New System.Drawing.Size(107, 28)
+        Me.ToolStripButton1productos.Size = New System.Drawing.Size(126, 28)
         Me.ToolStripButton1productos.Text = " Reportes"
         Me.ToolStripButton1productos.ToolTipText = "Reportes"
         '
         'btnImprimirListaInventario
         '
         Me.btnImprimirListaInventario.Name = "btnImprimirListaInventario"
-        Me.btnImprimirListaInventario.Size = New System.Drawing.Size(416, 22)
+        Me.btnImprimirListaInventario.Size = New System.Drawing.Size(517, 26)
         Me.btnImprimirListaInventario.Text = "Imprimir Lista de Inventario"
         Me.btnImprimirListaInventario.ToolTipText = "Imprimir Lista de Inventario"
         '
         'ReporteToolStripMenuItem
         '
         Me.ReporteToolStripMenuItem.Name = "ReporteToolStripMenuItem"
-        Me.ReporteToolStripMenuItem.Size = New System.Drawing.Size(416, 22)
+        Me.ReporteToolStripMenuItem.Size = New System.Drawing.Size(517, 26)
         Me.ReporteToolStripMenuItem.Text = "Reporte Gastos Generales"
         '
         'ReporteDeCostosDeAlmancenToolStripMenuItem
         '
         Me.ReporteDeCostosDeAlmancenToolStripMenuItem.Name = "ReporteDeCostosDeAlmancenToolStripMenuItem"
-        Me.ReporteDeCostosDeAlmancenToolStripMenuItem.Size = New System.Drawing.Size(416, 22)
+        Me.ReporteDeCostosDeAlmancenToolStripMenuItem.Size = New System.Drawing.Size(517, 26)
         Me.ReporteDeCostosDeAlmancenToolStripMenuItem.Text = "Reporte Valorizado "
         '
         'btnDashboardproductos
         '
         Me.btnDashboardproductos.Name = "btnDashboardproductos"
-        Me.btnDashboardproductos.Size = New System.Drawing.Size(416, 22)
+        Me.btnDashboardproductos.Size = New System.Drawing.Size(517, 26)
         Me.btnDashboardproductos.Text = " Reporte Dashboard"
         '
         'HistoricoDeRecepcionesToolStripMenuItem
         '
         Me.HistoricoDeRecepcionesToolStripMenuItem.Name = "HistoricoDeRecepcionesToolStripMenuItem"
-        Me.HistoricoDeRecepcionesToolStripMenuItem.Size = New System.Drawing.Size(416, 22)
+        Me.HistoricoDeRecepcionesToolStripMenuItem.Size = New System.Drawing.Size(517, 26)
         Me.HistoricoDeRecepcionesToolStripMenuItem.Text = "Historico de Recepciones"
         '
         'ReporteDeInconsistenciasEnKardexDeInventarioToolStripMenuItem
         '
         Me.ReporteDeInconsistenciasEnKardexDeInventarioToolStripMenuItem.Name = "ReporteDeInconsistenciasEnKardexDeInventarioToolStripMenuItem"
-        Me.ReporteDeInconsistenciasEnKardexDeInventarioToolStripMenuItem.Size = New System.Drawing.Size(416, 22)
+        Me.ReporteDeInconsistenciasEnKardexDeInventarioToolStripMenuItem.Size = New System.Drawing.Size(517, 26)
         Me.ReporteDeInconsistenciasEnKardexDeInventarioToolStripMenuItem.Text = "Reporte de Inconsistencias en Kardex de Inventario"
         '
         'btnexportar_excelproductos
@@ -361,7 +365,7 @@ Partial Class FrmMant_Producto
         Me.btnexportar_excelproductos.Margin = New System.Windows.Forms.Padding(5)
         Me.btnexportar_excelproductos.Name = "btnexportar_excelproductos"
         Me.btnexportar_excelproductos.Padding = New System.Windows.Forms.Padding(2)
-        Me.btnexportar_excelproductos.Size = New System.Drawing.Size(92, 28)
+        Me.btnexportar_excelproductos.Size = New System.Drawing.Size(107, 28)
         Me.btnexportar_excelproductos.Text = "Exportar"
         Me.btnexportar_excelproductos.ToolTipText = "Exportar"
         '
@@ -374,7 +378,7 @@ Partial Class FrmMant_Producto
         Me.btn_historicodecompraalmacenali.Margin = New System.Windows.Forms.Padding(5)
         Me.btn_historicodecompraalmacenali.Name = "btn_historicodecompraalmacenali"
         Me.btn_historicodecompraalmacenali.Padding = New System.Windows.Forms.Padding(2)
-        Me.btn_historicodecompraalmacenali.Size = New System.Drawing.Size(149, 28)
+        Me.btn_historicodecompraalmacenali.Size = New System.Drawing.Size(176, 28)
         Me.btn_historicodecompraalmacenali.Text = "Historico Compra"
         '
         'btnverkardexproductos
@@ -386,7 +390,7 @@ Partial Class FrmMant_Producto
         Me.btnverkardexproductos.Margin = New System.Windows.Forms.Padding(5)
         Me.btnverkardexproductos.Name = "btnverkardexproductos"
         Me.btnverkardexproductos.Padding = New System.Windows.Forms.Padding(2)
-        Me.btnverkardexproductos.Size = New System.Drawing.Size(82, 28)
+        Me.btnverkardexproductos.Size = New System.Drawing.Size(95, 28)
         Me.btnverkardexproductos.Text = "Kardex"
         '
         'BtnCodigoBarraalmaali
@@ -399,7 +403,7 @@ Partial Class FrmMant_Producto
         Me.BtnCodigoBarraalmaali.Margin = New System.Windows.Forms.Padding(5)
         Me.BtnCodigoBarraalmaali.Name = "BtnCodigoBarraalmaali"
         Me.BtnCodigoBarraalmaali.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnCodigoBarraalmaali.Size = New System.Drawing.Size(150, 28)
+        Me.BtnCodigoBarraalmaali.Size = New System.Drawing.Size(179, 28)
         Me.BtnCodigoBarraalmaali.Text = "Imprimir Cod. QR"
         Me.BtnCodigoBarraalmaali.ToolTipText = "Cerrar"
         '
@@ -413,7 +417,7 @@ Partial Class FrmMant_Producto
         Me.BtnVerLotealmcenproductos.Margin = New System.Windows.Forms.Padding(5)
         Me.BtnVerLotealmcenproductos.Name = "BtnVerLotealmcenproductos"
         Me.BtnVerLotealmcenproductos.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnVerLotealmcenproductos.Size = New System.Drawing.Size(139, 28)
+        Me.BtnVerLotealmcenproductos.Size = New System.Drawing.Size(166, 28)
         Me.BtnVerLotealmcenproductos.Text = "Ver Stock Lotes"
         Me.BtnVerLotealmcenproductos.ToolTipText = "Ver "
         '
@@ -427,7 +431,7 @@ Partial Class FrmMant_Producto
         Me.btnrecepciones.Margin = New System.Windows.Forms.Padding(5)
         Me.btnrecepciones.Name = "btnrecepciones"
         Me.btnrecepciones.Padding = New System.Windows.Forms.Padding(2)
-        Me.btnrecepciones.Size = New System.Drawing.Size(166, 28)
+        Me.btnrecepciones.Size = New System.Drawing.Size(196, 28)
         Me.btnrecepciones.Text = "Órdenes Vinculadas"
         Me.btnrecepciones.ToolTipText = "Ver "
         '
@@ -441,7 +445,7 @@ Partial Class FrmMant_Producto
         Me.btnAsignarUnidadesMedida.Margin = New System.Windows.Forms.Padding(5)
         Me.btnAsignarUnidadesMedida.Name = "btnAsignarUnidadesMedida"
         Me.btnAsignarUnidadesMedida.Padding = New System.Windows.Forms.Padding(2)
-        Me.btnAsignarUnidadesMedida.Size = New System.Drawing.Size(114, 28)
+        Me.btnAsignarUnidadesMedida.Size = New System.Drawing.Size(134, 28)
         Me.btnAsignarUnidadesMedida.Text = "Asignar U.M"
         Me.btnAsignarUnidadesMedida.ToolTipText = "Asignar U.M"
         '
@@ -455,7 +459,7 @@ Partial Class FrmMant_Producto
         Me.ToolStripButton3.Margin = New System.Windows.Forms.Padding(5)
         Me.ToolStripButton3.Name = "ToolStripButton3"
         Me.ToolStripButton3.Padding = New System.Windows.Forms.Padding(2)
-        Me.ToolStripButton3.Size = New System.Drawing.Size(103, 28)
+        Me.ToolStripButton3.Size = New System.Drawing.Size(120, 28)
         Me.ToolStripButton3.Text = "Editar U.M"
         Me.ToolStripButton3.ToolTipText = "Asignar U.M"
         '
@@ -469,7 +473,7 @@ Partial Class FrmMant_Producto
         Me.btn_cerrar.Margin = New System.Windows.Forms.Padding(5)
         Me.btn_cerrar.Name = "btn_cerrar"
         Me.btn_cerrar.Padding = New System.Windows.Forms.Padding(2)
-        Me.btn_cerrar.Size = New System.Drawing.Size(70, 28)
+        Me.btn_cerrar.Size = New System.Drawing.Size(77, 28)
         Me.btn_cerrar.Text = " Salir"
         Me.btn_cerrar.ToolTipText = "Cerrar"
         '
@@ -484,7 +488,7 @@ Partial Class FrmMant_Producto
         Me.ToolStripButton2.Margin = New System.Windows.Forms.Padding(5)
         Me.ToolStripButton2.Name = "ToolStripButton2"
         Me.ToolStripButton2.Padding = New System.Windows.Forms.Padding(2)
-        Me.ToolStripButton2.Size = New System.Drawing.Size(88, 28)
+        Me.ToolStripButton2.Size = New System.Drawing.Size(102, 28)
         Me.ToolStripButton2.Text = "Agrupar"
         '
         'ToolStripButton1
@@ -498,7 +502,7 @@ Partial Class FrmMant_Producto
         Me.ToolStripButton1.Margin = New System.Windows.Forms.Padding(5)
         Me.ToolStripButton1.Name = "ToolStripButton1"
         Me.ToolStripButton1.Padding = New System.Windows.Forms.Padding(2)
-        Me.ToolStripButton1.Size = New System.Drawing.Size(77, 28)
+        Me.ToolStripButton1.Size = New System.Drawing.Size(87, 28)
         Me.ToolStripButton1.Text = "Filtros"
         '
         'Panel1
@@ -508,8 +512,9 @@ Partial Class FrmMant_Producto
         Me.Panel1.Controls.Add(Me.GroupBox1)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1709, 169)
+        Me.Panel1.Size = New System.Drawing.Size(2279, 208)
         Me.Panel1.TabIndex = 20
         '
         'Label1
@@ -518,9 +523,10 @@ Partial Class FrmMant_Producto
         Me.Label1.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(233, Byte), Integer))
         Me.Label1.Font = New System.Drawing.Font("Verdana", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(49, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(9, 9)
+        Me.Label1.Location = New System.Drawing.Point(12, 11)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(235, 18)
+        Me.Label1.Size = New System.Drawing.Size(296, 25)
         Me.Label1.TabIndex = 128
         Me.Label1.Text = "MODULO DE PRODUCTOS"
         '
@@ -532,9 +538,11 @@ Partial Class FrmMant_Producto
         Me.GroupBox1.Controls.Add(Me.txtnombre)
         Me.GroupBox1.Controls.Add(Me.UltraLabel3)
         Me.GroupBox1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.GroupBox1.Location = New System.Drawing.Point(13, 39)
+        Me.GroupBox1.Location = New System.Drawing.Point(17, 48)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(1269, 70)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox1.Size = New System.Drawing.Size(1692, 86)
         Me.GroupBox1.TabIndex = 178
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Filtros de Búsqueda"
@@ -545,10 +553,11 @@ Partial Class FrmMant_Producto
         Me.btnBuscar.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBuscar.Image = CType(resources.GetObject("btnBuscar.Image"), System.Drawing.Image)
         Me.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnBuscar.Location = New System.Drawing.Point(1093, 20)
+        Me.btnBuscar.Location = New System.Drawing.Point(1457, 25)
+        Me.btnBuscar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnBuscar.Name = "btnBuscar"
-        Me.btnBuscar.Padding = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.btnBuscar.Size = New System.Drawing.Size(92, 40)
+        Me.btnBuscar.Padding = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.btnBuscar.Size = New System.Drawing.Size(123, 49)
         Me.btnBuscar.TabIndex = 162
         Me.btnBuscar.Text = "Buscar"
         Me.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -562,9 +571,10 @@ Partial Class FrmMant_Producto
         Appearance20.TextVAlignAsString = "Middle"
         Me.lblalmacen.Appearance = Appearance20
         Me.lblalmacen.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblalmacen.Location = New System.Drawing.Point(8, 29)
+        Me.lblalmacen.Location = New System.Drawing.Point(11, 36)
+        Me.lblalmacen.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.lblalmacen.Name = "lblalmacen"
-        Me.lblalmacen.Size = New System.Drawing.Size(73, 20)
+        Me.lblalmacen.Size = New System.Drawing.Size(97, 25)
         Me.lblalmacen.TabIndex = 176
         Me.lblalmacen.Text = "Almacen :"
         '
@@ -572,9 +582,10 @@ Partial Class FrmMant_Producto
         '
         Me.cbxalmacen.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbxalmacen.FormattingEnabled = True
-        Me.cbxalmacen.Location = New System.Drawing.Point(87, 30)
+        Me.cbxalmacen.Location = New System.Drawing.Point(116, 37)
+        Me.cbxalmacen.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.cbxalmacen.Name = "cbxalmacen"
-        Me.cbxalmacen.Size = New System.Drawing.Size(449, 21)
+        Me.cbxalmacen.Size = New System.Drawing.Size(597, 24)
         Me.cbxalmacen.TabIndex = 177
         '
         'Cmbx_TipoDoc
@@ -638,7 +649,7 @@ Partial Class FrmMant_Producto
         Me.Cmbx_TipoDoc.Location = New System.Drawing.Point(104, 16)
         Me.Cmbx_TipoDoc.Margin = New System.Windows.Forms.Padding(4)
         Me.Cmbx_TipoDoc.Name = "Cmbx_TipoDoc"
-        Me.Cmbx_TipoDoc.Size = New System.Drawing.Size(244, 22)
+        Me.Cmbx_TipoDoc.Size = New System.Drawing.Size(244, 25)
         Me.Cmbx_TipoDoc.TabIndex = 4
         '
         'BackgroundWorker1
@@ -648,15 +659,16 @@ Partial Class FrmMant_Producto
         '
         'FrmMant_Producto
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(233, Byte), Integer))
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(1709, 615)
+        Me.ClientSize = New System.Drawing.Size(2279, 757)
         Me.Controls.Add(Me.UltraGroupBox2)
         Me.Controls.Add(Me.Panel1)
         Me.DoubleBuffered = True
         Me.KeyPreview = True
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "FrmMant_Producto"
         Me.ShowIcon = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
