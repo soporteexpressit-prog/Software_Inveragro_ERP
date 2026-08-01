@@ -417,7 +417,7 @@ Public Class FrmControlPagosDescuentos
                                 ' Monto salario base
                                 Dim salarioDiario As Decimal = (objp.Salario + objp.bonoagrario) / 30
                                 Dim costo As Decimal = 0D
-                                If objp.IngresoBasico > 2000 Then
+                                If objp.IngresoBasico >= 2000 Then
                                     costo = (salarioDiario * ((objp.DiasAsistidos + diasrestantes) + objp.Nfenotrabajado + (objp.Nfetrabajado) + objp.diasdescanso + objp.diapermisomedico + objp.diasvacaciones))
                                 Else
                                     costo = (salarioDiario * ((objp.DiasAsistidos + diasrestantes) + objp.Nfenotrabajado + (objp.Nfetrabajado * 2) + objp.diasdescanso + objp.diapermisomedico + objp.diasvacaciones))
@@ -597,7 +597,7 @@ Public Class FrmControlPagosDescuentos
                                 ' Monto salario base
                                 Dim salarioDiario As Decimal = (objp.Salario + objp.bonoagrario) / 30
                                 Dim costo As Decimal = 0D
-                                If objp.IngresoBasico > 2000 Then
+                                If objp.IngresoBasico >= 2000 Then
                                     costo = (salarioDiario * ((objp.DiasAsistidos + diasrestantes) + objp.Nfenotrabajado + (objp.Nfetrabajado) + objp.diasdescanso + objp.diapermisomedico + objp.diasvacaciones))
                                 Else
                                     costo = (salarioDiario * ((objp.DiasAsistidos + diasrestantes) + objp.Nfenotrabajado + (objp.Nfetrabajado * 2) + objp.diasdescanso + objp.diapermisomedico + objp.diasvacaciones))
