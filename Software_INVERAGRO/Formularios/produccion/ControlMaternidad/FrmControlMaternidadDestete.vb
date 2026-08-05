@@ -350,4 +350,16 @@ Public Class FrmControlMaternidadDestete
             clsBasicas.controlException(Name, ex)
         End Try
     End Sub
+
+    Private Sub BtnReporteCondicionCorporal_Click(sender As Object, e As EventArgs) Handles BtnReporteCondicionCorporal.Click
+        Try
+            Dim frm As New FrmReporteCondicionCorporalMaternidadGestacion With {
+                .idUbicacion = CmbUbicacion.Value,
+                .tipoControl = "PARTO"
+            }
+            frm.ShowDialog()
+        Catch ex As Exception
+            clsBasicas.controlException(Name, ex)
+        End Try
+    End Sub
 End Class

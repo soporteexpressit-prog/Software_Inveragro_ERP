@@ -1431,8 +1431,7 @@ Public Class cdControlLoteDestete
             da.SelectCommand.CommandType = 4
             da.SelectCommand.Parameters.AddWithValue("@anio", obj.Anio)
             da.SelectCommand.Parameters.AddWithValue("@numSemana", obj.NumeroLote)
-            da.SelectCommand.Parameters.AddWithValue("@idLote", obj.IdLote)
-            da.SelectCommand.Parameters.AddWithValue("@tipoControl", obj.TipoFiltro)
+            da.SelectCommand.Parameters.AddWithValue("@idUbicacion", obj.IdPlantel)
             da.Fill(dt)
         Catch ex As Exception
             Throw ex

@@ -7,6 +7,7 @@ Imports Infragistics.Win.UltraWinGrid
 Public Class FrmReporteCostoxKiloCerdo
     Dim cn As New cnControlAnimal
     Dim ds As New DataSet
+    Dim tbtmp As New DataTable
     Dim sizeButtonConcepto As Integer = 275
     Dim sizeButtonVerPDF As Integer = 50
     Dim acumReproduccion As Decimal = 0D
@@ -30,6 +31,7 @@ Public Class FrmReporteCostoxKiloCerdo
         clsBasicas.Formato_Tablas_Grid_AnteAntePenultimaColumnaEditable(dtgListado2)
         clsBasicas.Formato_Tablas_Grid_AnteAntePenultimaColumnaEditable(dtgListado3)
         clsBasicas.Formato_Tablas_Grid_AnteAntePenultimaColumnaEditable(dtgListado4)
+        clsBasicas.Formato_Tablas_Grid(dtgListado5)
     End Sub
 
     Sub ListarPlanteles()
@@ -1167,4 +1169,56 @@ Public Class FrmReporteCostoxKiloCerdo
 
         Return array_costos
     End Function
+
+    Private Sub BtnGenerarResumen_Click(sender As Object, e As EventArgs) Handles BtnGenerarResumen.Click
+        'validamos que haya seleccionado campaña y LblAcumuladoEngorde no sea vacio
+        If CmbCampaña Is Nothing OrElse String.IsNullOrEmpty(CmbCampaña.Text) Then
+            msj_advert("Debe seleccionar una campaña para generar el resumen")
+            Return
+        End If
+
+        If String.IsNullOrEmpty(LblAcumuladoEngorde.Text) Then
+            msj_advert("Debe generar el acumulado de engorde para generar el resumen")
+            Return
+        End If
+
+        Dim acumuladoEngorde As Decimal
+        If Not Decimal.TryParse(LblAcumuladoEngorde.Text, acumuladoEngorde) Then
+            msj_advert("El acumulado de engorde no es un valor numérico válido")
+            Return
+        End If
+
+        Consultar()
+    End Sub
+
+    Sub Consultar()
+        If Not BackgroundWorker5.IsBusy Then
+
+            Dim obj As New coControlAnimal With {
+                .IdCampaña = CmbCampaña.Value,
+                .TotalCampaña = CInt(LblAcumuladoEngorde.Text)
+            }
+
+            BackgroundWorker5.RunWorkerAsync(obj)
+        End If
+    End Sub
+
+    Private Sub BackgroundWorker5_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorker5.DoWork, BackgroundWorker5.DoWork
+        Try
+            Dim obj As coControlAnimal = CType(e.Argument, coControlAnimal)
+            tbtmp = cn.Cn_ResumenCostoKiloCerdoTeoricoReal(obj).Copy
+            tbtmp.TableName = "tmp"
+            e.Result = tbtmp
+        Catch ex As Exception
+            e.Cancel = True
+        End Try
+    End Sub
+
+    Private Sub BackgroundWorker5_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BackgroundWorker5.RunWorkerCompleted
+        If e.Error IsNot Nothing OrElse e.Cancelled Then
+            msj_advert("Error al Cargar los Datos")
+        Else
+            dtgListado5.DataSource = CType(e.Result, DataTable)
+        End If
+    End Sub
 End Class

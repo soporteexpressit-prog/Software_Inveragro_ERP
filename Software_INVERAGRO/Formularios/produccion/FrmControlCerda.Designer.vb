@@ -85,6 +85,7 @@ Partial Class FrmControlCerda
         Me.HistoricoDeDesteteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BtnReporteConsumoMaternidad = New System.Windows.Forms.ToolStripMenuItem()
         Me.CondiciónCorporalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BtnCondiciónCorporalFechas = New System.Windows.Forms.ToolStripMenuItem()
         Me.dtgListado = New Infragistics.Win.UltraWinGrid.UltraGrid()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         Me.Ptbx_Cargando = New System.Windows.Forms.PictureBox()
@@ -509,7 +510,7 @@ Partial Class FrmControlCerda
         'btnreporteRrhhctrlcapaci
         '
         Me.btnreporteRrhhctrlcapaci.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.btnreporteRrhhctrlcapaci.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnReportePartos, Me.MortalidadMaternidadToolStripMenuItem, Me.HistoricoDePartosToolStripMenuItem, Me.HistoricoDeDesteteToolStripMenuItem, Me.BtnReporteConsumoMaternidad, Me.CondiciónCorporalToolStripMenuItem})
+        Me.btnreporteRrhhctrlcapaci.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnReportePartos, Me.MortalidadMaternidadToolStripMenuItem, Me.HistoricoDePartosToolStripMenuItem, Me.HistoricoDeDesteteToolStripMenuItem, Me.BtnReporteConsumoMaternidad, Me.CondiciónCorporalToolStripMenuItem, Me.BtnCondiciónCorporalFechas})
         Me.btnreporteRrhhctrlcapaci.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnreporteRrhhctrlcapaci.ForeColor = System.Drawing.Color.White
         Me.btnreporteRrhhctrlcapaci.Image = Global.Formularios.My.Resources.Resources.reporte
@@ -522,38 +523,44 @@ Partial Class FrmControlCerda
         'BtnReportePartos
         '
         Me.BtnReportePartos.Name = "BtnReportePartos"
-        Me.BtnReportePartos.Size = New System.Drawing.Size(232, 22)
+        Me.BtnReportePartos.Size = New System.Drawing.Size(249, 22)
         Me.BtnReportePartos.Text = "Partos Detallado"
         '
         'MortalidadMaternidadToolStripMenuItem
         '
         Me.MortalidadMaternidadToolStripMenuItem.Name = "MortalidadMaternidadToolStripMenuItem"
-        Me.MortalidadMaternidadToolStripMenuItem.Size = New System.Drawing.Size(232, 22)
+        Me.MortalidadMaternidadToolStripMenuItem.Size = New System.Drawing.Size(249, 22)
         Me.MortalidadMaternidadToolStripMenuItem.Text = "Historico para Descarte"
         '
         'HistoricoDePartosToolStripMenuItem
         '
         Me.HistoricoDePartosToolStripMenuItem.Name = "HistoricoDePartosToolStripMenuItem"
-        Me.HistoricoDePartosToolStripMenuItem.Size = New System.Drawing.Size(232, 22)
+        Me.HistoricoDePartosToolStripMenuItem.Size = New System.Drawing.Size(249, 22)
         Me.HistoricoDePartosToolStripMenuItem.Text = "Historico de Partos"
         '
         'HistoricoDeDesteteToolStripMenuItem
         '
         Me.HistoricoDeDesteteToolStripMenuItem.Name = "HistoricoDeDesteteToolStripMenuItem"
-        Me.HistoricoDeDesteteToolStripMenuItem.Size = New System.Drawing.Size(232, 22)
+        Me.HistoricoDeDesteteToolStripMenuItem.Size = New System.Drawing.Size(249, 22)
         Me.HistoricoDeDesteteToolStripMenuItem.Text = "Historico de Destete"
         '
         'BtnReporteConsumoMaternidad
         '
         Me.BtnReporteConsumoMaternidad.Name = "BtnReporteConsumoMaternidad"
-        Me.BtnReporteConsumoMaternidad.Size = New System.Drawing.Size(232, 22)
+        Me.BtnReporteConsumoMaternidad.Size = New System.Drawing.Size(249, 22)
         Me.BtnReporteConsumoMaternidad.Text = "Consumo de Maternidad"
         '
         'CondiciónCorporalToolStripMenuItem
         '
         Me.CondiciónCorporalToolStripMenuItem.Name = "CondiciónCorporalToolStripMenuItem"
-        Me.CondiciónCorporalToolStripMenuItem.Size = New System.Drawing.Size(232, 22)
-        Me.CondiciónCorporalToolStripMenuItem.Text = "Condición Corporal"
+        Me.CondiciónCorporalToolStripMenuItem.Size = New System.Drawing.Size(249, 22)
+        Me.CondiciónCorporalToolStripMenuItem.Text = "Condición Corporal S/L"
+        '
+        'BtnCondiciónCorporalFechas
+        '
+        Me.BtnCondiciónCorporalFechas.Name = "BtnCondiciónCorporalFechas"
+        Me.BtnCondiciónCorporalFechas.Size = New System.Drawing.Size(249, 22)
+        Me.BtnCondiciónCorporalFechas.Text = "Condición Corporal Fechas"
         '
         'dtgListado
         '
@@ -711,4 +718,5 @@ Partial Class FrmControlCerda
     Friend WithEvents HistoricoDePartosToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents BtnReporteConsumoMaternidad As ToolStripMenuItem
     Friend WithEvents CondiciónCorporalToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents BtnCondiciónCorporalFechas As ToolStripMenuItem
 End Class

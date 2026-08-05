@@ -68,7 +68,9 @@ Partial Class FrmControlGestacion
         Me.BtnHistorialPerdidaReprogestpro = New System.Windows.Forms.ToolStripButton()
         Me.BtnHistorialCerda = New System.Windows.Forms.ToolStripButton()
         Me.BtnExportartestgestapro = New System.Windows.Forms.ToolStripButton()
-        Me.BtnReporteInseminaciones = New System.Windows.Forms.ToolStripButton()
+        Me.btnreporteRrhhctrlcapaci = New System.Windows.Forms.ToolStripDropDownButton()
+        Me.BtnReporteInseminaciones = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BtnReporteCondicionCorporal = New System.Windows.Forms.ToolStripMenuItem()
         Me.dtgListado = New Infragistics.Win.UltraWinGrid.UltraGrid()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         Me.Ptbx_Cargando = New System.Windows.Forms.PictureBox()
@@ -88,9 +90,9 @@ Partial Class FrmControlGestacion
         Me.Panel2.Controls.Add(Me.ToolStrip1)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(2, 1, 2, 1)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(2202, 276)
+        Me.Panel2.Size = New System.Drawing.Size(1476, 179)
         Me.Panel2.TabIndex = 11
         '
         'Label6
@@ -99,9 +101,10 @@ Partial Class FrmControlGestacion
         Me.Label6.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(233, Byte), Integer))
         Me.Label6.Font = New System.Drawing.Font("Verdana", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(49, Byte), Integer))
-        Me.Label6.Location = New System.Drawing.Point(30, 35)
+        Me.Label6.Location = New System.Drawing.Point(20, 23)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(649, 29)
+        Me.Label6.Size = New System.Drawing.Size(435, 18)
         Me.Label6.TabIndex = 128
         Me.Label6.Text = "CONTROL DE CERDAS EN ETAPA DE GESTACIÓN"
         '
@@ -114,9 +117,11 @@ Partial Class FrmControlGestacion
         Me.GrupoFiltros.Controls.Add(Me.btnBuscar)
         Me.GrupoFiltros.Controls.Add(Me.TxtCodArete)
         Me.GrupoFiltros.Controls.Add(Me.LblArete)
-        Me.GrupoFiltros.Location = New System.Drawing.Point(35, 97)
+        Me.GrupoFiltros.Location = New System.Drawing.Point(23, 63)
+        Me.GrupoFiltros.Margin = New System.Windows.Forms.Padding(2)
         Me.GrupoFiltros.Name = "GrupoFiltros"
-        Me.GrupoFiltros.Size = New System.Drawing.Size(1470, 95)
+        Me.GrupoFiltros.Padding = New System.Windows.Forms.Padding(2)
+        Me.GrupoFiltros.Size = New System.Drawing.Size(980, 62)
         Me.GrupoFiltros.TabIndex = 177
         Me.GrupoFiltros.TabStop = False
         Me.GrupoFiltros.Text = "Filtro de Búsqueda"
@@ -127,10 +132,10 @@ Partial Class FrmControlGestacion
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(854, 39)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label2.Location = New System.Drawing.Point(569, 25)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(122, 22)
+        Me.Label2.Size = New System.Drawing.Size(80, 14)
         Me.Label2.TabIndex = 219
         Me.Label2.Text = "Condición :"
         '
@@ -140,10 +145,10 @@ Partial Class FrmControlGestacion
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(38, 39)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label3.Location = New System.Drawing.Point(25, 25)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(93, 22)
+        Me.Label3.Size = New System.Drawing.Size(62, 14)
         Me.Label3.TabIndex = 171
         Me.Label3.Text = "Plantel :"
         '
@@ -152,9 +157,10 @@ Partial Class FrmControlGestacion
         Me.CmbCondicacion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CmbCondicacion.FormattingEnabled = True
         Me.CmbCondicacion.Items.AddRange(New Object() {"GESTANTE", "VACÍA"})
-        Me.CmbCondicacion.Location = New System.Drawing.Point(985, 36)
+        Me.CmbCondicacion.Location = New System.Drawing.Point(657, 23)
+        Me.CmbCondicacion.Margin = New System.Windows.Forms.Padding(2)
         Me.CmbCondicacion.Name = "CmbCondicacion"
-        Me.CmbCondicacion.Size = New System.Drawing.Size(211, 28)
+        Me.CmbCondicacion.Size = New System.Drawing.Size(142, 21)
         Me.CmbCondicacion.TabIndex = 218
         '
         'CmbUbicacion
@@ -214,10 +220,9 @@ Partial Class FrmControlGestacion
         Me.CmbUbicacion.DisplayLayout.ScrollStyle = Infragistics.Win.UltraWinGrid.ScrollStyle.Immediate
         Me.CmbUbicacion.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy
         Me.CmbUbicacion.DropDownStyle = Infragistics.Win.UltraWinGrid.UltraComboStyle.DropDownList
-        Me.CmbUbicacion.Location = New System.Drawing.Point(144, 36)
-        Me.CmbUbicacion.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.CmbUbicacion.Location = New System.Drawing.Point(96, 23)
         Me.CmbUbicacion.Name = "CmbUbicacion"
-        Me.CmbUbicacion.Size = New System.Drawing.Size(267, 29)
+        Me.CmbUbicacion.Size = New System.Drawing.Size(178, 22)
         Me.CmbUbicacion.TabIndex = 170
         '
         'btnBuscar
@@ -226,11 +231,10 @@ Partial Class FrmControlGestacion
         Me.btnBuscar.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBuscar.Image = CType(resources.GetObject("btnBuscar.Image"), System.Drawing.Image)
         Me.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnBuscar.Location = New System.Drawing.Point(1298, 19)
-        Me.btnBuscar.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btnBuscar.Location = New System.Drawing.Point(865, 12)
         Me.btnBuscar.Name = "btnBuscar"
-        Me.btnBuscar.Padding = New System.Windows.Forms.Padding(6, 0, 6, 0)
-        Me.btnBuscar.Size = New System.Drawing.Size(138, 63)
+        Me.btnBuscar.Padding = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.btnBuscar.Size = New System.Drawing.Size(92, 41)
         Me.btnBuscar.TabIndex = 217
         Me.btnBuscar.Text = "Buscar"
         Me.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -240,11 +244,10 @@ Partial Class FrmControlGestacion
         '
         Me.TxtCodArete.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxtCodArete.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtCodArete.Location = New System.Drawing.Point(586, 36)
-        Me.TxtCodArete.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.TxtCodArete.Location = New System.Drawing.Point(391, 23)
         Me.TxtCodArete.MaxLength = 20
         Me.TxtCodArete.Name = "TxtCodArete"
-        Me.TxtCodArete.Size = New System.Drawing.Size(179, 28)
+        Me.TxtCodArete.Size = New System.Drawing.Size(121, 21)
         Me.TxtCodArete.TabIndex = 216
         Me.TxtCodArete.TabStop = False
         '
@@ -254,10 +257,10 @@ Partial Class FrmControlGestacion
         Me.LblArete.BackColor = System.Drawing.Color.Transparent
         Me.LblArete.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblArete.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.LblArete.Location = New System.Drawing.Point(498, 39)
-        Me.LblArete.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.LblArete.Location = New System.Drawing.Point(332, 25)
+        Me.LblArete.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblArete.Name = "LblArete"
-        Me.LblArete.Size = New System.Drawing.Size(78, 22)
+        Me.LblArete.Size = New System.Drawing.Size(52, 14)
         Me.LblArete.TabIndex = 215
         Me.LblArete.Text = "Arete :"
         '
@@ -267,12 +270,12 @@ Partial Class FrmControlGestacion
         Me.ToolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.ToolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
         Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnNuevaColecta, Me.BtnNuevaInseminacion, Me.BtnTestGestacionpro, Me.BtnMonitoreoCondicionCorporalprogestacion, Me.BtnHistorialPerdidaReprogestpro, Me.BtnHistorialCerda, Me.BtnExportartestgestapro, Me.BtnReporteInseminaciones})
-        Me.ToolStrip1.Location = New System.Drawing.Point(0, 236)
-        Me.ToolStrip1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnNuevaColecta, Me.BtnNuevaInseminacion, Me.BtnTestGestacionpro, Me.BtnMonitoreoCondicionCorporalprogestacion, Me.BtnHistorialPerdidaReprogestpro, Me.BtnHistorialCerda, Me.BtnExportartestgestapro, Me.btnreporteRrhhctrlcapaci})
+        Me.ToolStrip1.Location = New System.Drawing.Point(0, 141)
+        Me.ToolStrip1.Margin = New System.Windows.Forms.Padding(2, 1, 2, 1)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Padding = New System.Windows.Forms.Padding(0, 0, 3, 0)
-        Me.ToolStrip1.Size = New System.Drawing.Size(2202, 40)
+        Me.ToolStrip1.Padding = New System.Windows.Forms.Padding(0, 0, 2, 0)
+        Me.ToolStrip1.Size = New System.Drawing.Size(1476, 38)
         Me.ToolStrip1.TabIndex = 52
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -285,7 +288,7 @@ Partial Class FrmControlGestacion
         Me.BtnNuevaColecta.Margin = New System.Windows.Forms.Padding(5)
         Me.BtnNuevaColecta.Name = "BtnNuevaColecta"
         Me.BtnNuevaColecta.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnNuevaColecta.Size = New System.Drawing.Size(112, 30)
+        Me.BtnNuevaColecta.Size = New System.Drawing.Size(84, 28)
         Me.BtnNuevaColecta.Text = "Colecta"
         Me.BtnNuevaColecta.ToolTipText = "Nuevo "
         '
@@ -298,7 +301,7 @@ Partial Class FrmControlGestacion
         Me.BtnNuevaInseminacion.Margin = New System.Windows.Forms.Padding(5)
         Me.BtnNuevaInseminacion.Name = "BtnNuevaInseminacion"
         Me.BtnNuevaInseminacion.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnNuevaInseminacion.Size = New System.Drawing.Size(143, 30)
+        Me.BtnNuevaInseminacion.Size = New System.Drawing.Size(102, 28)
         Me.BtnNuevaInseminacion.Text = "Inseminar"
         Me.BtnNuevaInseminacion.ToolTipText = "Nuevo "
         '
@@ -311,7 +314,7 @@ Partial Class FrmControlGestacion
         Me.BtnTestGestacionpro.Margin = New System.Windows.Forms.Padding(5)
         Me.BtnTestGestacionpro.Name = "BtnTestGestacionpro"
         Me.BtnTestGestacionpro.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnTestGestacionpro.Size = New System.Drawing.Size(257, 30)
+        Me.BtnTestGestacionpro.Size = New System.Drawing.Size(177, 28)
         Me.BtnTestGestacionpro.Text = "Pérdida Reproductiva"
         Me.BtnTestGestacionpro.ToolTipText = "Nuevo "
         '
@@ -324,7 +327,7 @@ Partial Class FrmControlGestacion
         Me.BtnMonitoreoCondicionCorporalprogestacion.Margin = New System.Windows.Forms.Padding(5)
         Me.BtnMonitoreoCondicionCorporalprogestacion.Name = "BtnMonitoreoCondicionCorporalprogestacion"
         Me.BtnMonitoreoCondicionCorporalprogestacion.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnMonitoreoCondicionCorporalprogestacion.Size = New System.Drawing.Size(336, 30)
+        Me.BtnMonitoreoCondicionCorporalprogestacion.Size = New System.Drawing.Size(230, 28)
         Me.BtnMonitoreoCondicionCorporalprogestacion.Text = "Monitoreo Condicion Corporal"
         Me.BtnMonitoreoCondicionCorporalprogestacion.ToolTipText = "Nuevo "
         '
@@ -337,7 +340,7 @@ Partial Class FrmControlGestacion
         Me.BtnHistorialPerdidaReprogestpro.Margin = New System.Windows.Forms.Padding(5)
         Me.BtnHistorialPerdidaReprogestpro.Name = "BtnHistorialPerdidaReprogestpro"
         Me.BtnHistorialPerdidaReprogestpro.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnHistorialPerdidaReprogestpro.Size = New System.Drawing.Size(401, 30)
+        Me.BtnHistorialPerdidaReprogestpro.Size = New System.Drawing.Size(271, 28)
         Me.BtnHistorialPerdidaReprogestpro.Text = "Historial de Perdidas Reproductivas"
         Me.BtnHistorialPerdidaReprogestpro.ToolTipText = "Nuevo "
         '
@@ -350,7 +353,7 @@ Partial Class FrmControlGestacion
         Me.BtnHistorialCerda.Margin = New System.Windows.Forms.Padding(5)
         Me.BtnHistorialCerda.Name = "BtnHistorialCerda"
         Me.BtnHistorialCerda.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnHistorialCerda.Size = New System.Drawing.Size(123, 30)
+        Me.BtnHistorialCerda.Size = New System.Drawing.Size(91, 28)
         Me.BtnHistorialCerda.Text = "Historial"
         Me.BtnHistorialCerda.ToolTipText = "Historial Extracciones"
         '
@@ -363,23 +366,34 @@ Partial Class FrmControlGestacion
         Me.BtnExportartestgestapro.Margin = New System.Windows.Forms.Padding(5)
         Me.BtnExportartestgestapro.Name = "BtnExportartestgestapro"
         Me.BtnExportartestgestapro.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnExportartestgestapro.Size = New System.Drawing.Size(125, 30)
+        Me.BtnExportartestgestapro.Size = New System.Drawing.Size(92, 28)
         Me.BtnExportartestgestapro.Text = "Exportar"
         Me.BtnExportartestgestapro.ToolTipText = "Exportar"
         '
+        'btnreporteRrhhctrlcapaci
+        '
+        Me.btnreporteRrhhctrlcapaci.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.btnreporteRrhhctrlcapaci.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnReporteInseminaciones, Me.BtnReporteCondicionCorporal})
+        Me.btnreporteRrhhctrlcapaci.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnreporteRrhhctrlcapaci.ForeColor = System.Drawing.Color.White
+        Me.btnreporteRrhhctrlcapaci.Image = Global.Formularios.My.Resources.Resources.reporte
+        Me.btnreporteRrhhctrlcapaci.Margin = New System.Windows.Forms.Padding(5)
+        Me.btnreporteRrhhctrlcapaci.Name = "btnreporteRrhhctrlcapaci"
+        Me.btnreporteRrhhctrlcapaci.Padding = New System.Windows.Forms.Padding(2)
+        Me.btnreporteRrhhctrlcapaci.Size = New System.Drawing.Size(103, 28)
+        Me.btnreporteRrhhctrlcapaci.Text = "Reportes"
+        '
         'BtnReporteInseminaciones
         '
-        Me.BtnReporteInseminaciones.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.BtnReporteInseminaciones.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.BtnReporteInseminaciones.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnReporteInseminaciones.ForeColor = System.Drawing.Color.White
-        Me.BtnReporteInseminaciones.Image = Global.Formularios.My.Resources.Resources.reporte
-        Me.BtnReporteInseminaciones.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.BtnReporteInseminaciones.Margin = New System.Windows.Forms.Padding(5)
         Me.BtnReporteInseminaciones.Name = "BtnReporteInseminaciones"
-        Me.BtnReporteInseminaciones.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnReporteInseminaciones.Size = New System.Drawing.Size(216, 30)
-        Me.BtnReporteInseminaciones.Text = "Reporte Servicios"
+        Me.BtnReporteInseminaciones.Size = New System.Drawing.Size(248, 22)
+        Me.BtnReporteInseminaciones.Text = "Servicios"
+        '
+        'BtnReporteCondicionCorporal
+        '
+        Me.BtnReporteCondicionCorporal.Name = "BtnReporteCondicionCorporal"
+        Me.BtnReporteCondicionCorporal.Size = New System.Drawing.Size(180, 22)
+        Me.BtnReporteCondicionCorporal.Text = "Cond. Corporal"
         '
         'dtgListado
         '
@@ -453,10 +467,9 @@ Partial Class FrmControlGestacion
         Me.dtgListado.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy
         Me.dtgListado.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dtgListado.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dtgListado.Location = New System.Drawing.Point(0, 276)
-        Me.dtgListado.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.dtgListado.Location = New System.Drawing.Point(0, 179)
         Me.dtgListado.Name = "dtgListado"
-        Me.dtgListado.Size = New System.Drawing.Size(2202, 799)
+        Me.dtgListado.Size = New System.Drawing.Size(1476, 511)
         Me.dtgListado.TabIndex = 31
         Me.dtgListado.Text = "UltraGrid1"
         '
@@ -467,10 +480,9 @@ Partial Class FrmControlGestacion
         '
         Me.Ptbx_Cargando.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Ptbx_Cargando.Image = Global.Formularios.My.Resources.Resources.loader
-        Me.Ptbx_Cargando.Location = New System.Drawing.Point(1082, 555)
-        Me.Ptbx_Cargando.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Ptbx_Cargando.Location = New System.Drawing.Point(818, 361)
         Me.Ptbx_Cargando.Name = "Ptbx_Cargando"
-        Me.Ptbx_Cargando.Size = New System.Drawing.Size(64, 57)
+        Me.Ptbx_Cargando.Size = New System.Drawing.Size(43, 37)
         Me.Ptbx_Cargando.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.Ptbx_Cargando.TabIndex = 32
         Me.Ptbx_Cargando.TabStop = False
@@ -478,12 +490,13 @@ Partial Class FrmControlGestacion
         '
         'FrmControlGestacion
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(2202, 1075)
+        Me.ClientSize = New System.Drawing.Size(1476, 690)
         Me.Controls.Add(Me.Ptbx_Cargando)
         Me.Controls.Add(Me.dtgListado)
         Me.Controls.Add(Me.Panel2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "FrmControlGestacion"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "CONTROL DE CERDAS EN LA ETAPA DE GESTACIÓN"
@@ -514,7 +527,6 @@ Partial Class FrmControlGestacion
     Friend WithEvents BtnHistorialPerdidaReprogestpro As ToolStripButton
     Friend WithEvents BtnHistorialCerda As ToolStripButton
     Friend WithEvents BtnNuevaColecta As ToolStripButton
-    Friend WithEvents BtnReporteInseminaciones As ToolStripButton
     Friend WithEvents GrupoFiltros As GroupBox
     Friend WithEvents Label2 As Label
     Friend WithEvents CmbCondicacion As ComboBox
@@ -522,4 +534,7 @@ Partial Class FrmControlGestacion
     Friend WithEvents TxtCodArete As TextBox
     Friend WithEvents LblArete As Label
     Friend WithEvents BtnNuevaInseminacion As ToolStripButton
+    Friend WithEvents btnreporteRrhhctrlcapaci As ToolStripDropDownButton
+    Friend WithEvents BtnReporteInseminaciones As ToolStripMenuItem
+    Friend WithEvents BtnReporteCondicionCorporal As ToolStripMenuItem
 End Class

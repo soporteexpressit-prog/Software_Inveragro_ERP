@@ -436,4 +436,16 @@ Public Class cnControlAnimal
     Public Function Cn_RegistrarCostoKiloCerdo(ByRef obj As coControlAnimal) As String
         Return cls_at.Cd_RegistrarCostoKiloCerdo("[w_pa_crear_actualizar_costo_x_kilo_cerdo]", obj)
     End Function
+
+    Public Function Cn_ReporteCondCorporal(ByRef obj As coControlAnimal) As DataTable
+        Return cls_at.Cd_ReporteCondCorporal("[w_pa_reporte_condicion_corporal_detalle]", obj)
+    End Function
+
+    Public Function Cn_ReporteCondCorporalFechas(ByRef obj As coControlAnimal) As DataTable
+        Return cls_at.Cd_ReporteCondCorporalFechas("[w_pa_reporte_condicion_corporal_detalle_general]", obj)
+    End Function
+
+    Public Function Cn_ResumenCostoKiloCerdoTeoricoReal(ByRef obj As coControlAnimal) As DataTable
+        Return cls_at.Cd_ResumenCostoKiloCerdoTeoricoReal("[w_pa_resumen_costo_kg_cerdo_teorico_real]", obj)
+    End Function
 End Class

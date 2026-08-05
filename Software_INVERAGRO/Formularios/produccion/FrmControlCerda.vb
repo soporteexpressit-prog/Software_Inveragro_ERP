@@ -522,6 +522,17 @@ Public Class FrmControlCerda
         End Try
     End Sub
 
+    Private Sub BtnCondiciónCorporalFechas_Click(sender As Object, e As EventArgs) Handles BtnCondiciónCorporalFechas.Click
+        Try
+            Dim frm As New FrmReporteCondCorporalFechas With {
+                .idUbicacion = CmbUbicacion.Value
+            }
+            frm.ShowDialog()
+        Catch ex As Exception
+            clsBasicas.controlException(Name, ex)
+        End Try
+    End Sub
+
     Private Sub BtnCerrar_Click(sender As Object, e As EventArgs) Handles BtnCerrar.Click
         Dispose()
     End Sub

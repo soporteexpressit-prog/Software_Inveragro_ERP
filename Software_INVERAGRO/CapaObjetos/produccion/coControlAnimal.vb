@@ -83,6 +83,7 @@
     Private _EsChanchilla As Boolean
     Private _TipoEnvioCamal As Integer
     Private _ListaItems As String
+    Private _TotalCampaña As Integer
 
     Public Property Operacion As Integer
         Get
@@ -828,6 +829,15 @@
         End Get
         Set(value As String)
             _ListaItems = value
+        End Set
+    End Property
+
+    Public Property TotalCampaña As Integer
+        Get
+            Return _TotalCampaña
+        End Get
+        Set(value As Integer)
+            _TotalCampaña = value
         End Set
     End Property
 End Class

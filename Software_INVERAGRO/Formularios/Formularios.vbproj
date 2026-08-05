@@ -1624,6 +1624,12 @@
     <Compile Include="produccion\ControlMaternidad\FrmReporteCondCorporal.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="produccion\ControlMaternidad\FrmReporteCondicionCorporalMaternidadGestacion.Designer.vb">
+      <DependentUpon>FrmReporteCondicionCorporalMaternidadGestacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="produccion\ControlMaternidad\FrmReporteCondicionCorporalMaternidadGestacion.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="produccion\ControlMaternidad\FrmReporteDetalladoViables.Designer.vb">
       <DependentUpon>FrmReporteDetalladoViables.vb</DependentUpon>
     </Compile>
@@ -1802,6 +1808,12 @@
       <DependentUpon>FrmRegistrarPesosChanchillas.vb</DependentUpon>
     </Compile>
     <Compile Include="produccion\FrmRegistrarPesosChanchillas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="produccion\FrmReporteCondCorporalFechas.Designer.vb">
+      <DependentUpon>FrmReporteCondCorporalFechas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="produccion\FrmReporteCondCorporalFechas.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="produccion\FrmReporteCondicionCorporal.Designer.vb">
@@ -4837,6 +4849,9 @@
     <EmbeddedResource Include="produccion\ControlMaternidad\FrmReporteCondCorporal.resx">
       <DependentUpon>FrmReporteCondCorporal.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="produccion\ControlMaternidad\FrmReporteCondicionCorporalMaternidadGestacion.resx">
+      <DependentUpon>FrmReporteCondicionCorporalMaternidadGestacion.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="produccion\ControlMaternidad\FrmReporteDetalladoViables.resx">
       <DependentUpon>FrmReporteDetalladoViables.vb</DependentUpon>
     </EmbeddedResource>
@@ -4905,6 +4920,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="produccion\FrmRegistrarPesosChanchillas.resx">
       <DependentUpon>FrmRegistrarPesosChanchillas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="produccion\FrmReporteCondCorporalFechas.resx">
+      <DependentUpon>FrmReporteCondCorporalFechas.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="produccion\FrmReporteCondicionCorporal.resx">
       <DependentUpon>FrmReporteCondicionCorporal.vb</DependentUpon>

@@ -231,6 +231,18 @@ Public Class FrmControlGestacion
         End Try
     End Sub
 
+    Private Sub BtnReporteCondicionCorporal_Click(sender As Object, e As EventArgs) Handles BtnReporteCondicionCorporal.Click
+        Try
+            Dim frm As New FrmReporteCondicionCorporalMaternidadGestacion With {
+                .idUbicacion = CmbUbicacion.Value,
+                .tipoControl = "SERVICIO"
+            }
+            frm.ShowDialog()
+        Catch ex As Exception
+            clsBasicas.controlException(Name, ex)
+        End Try
+    End Sub
+
     Private Sub dtgListado_KeyDown(sender As Object, e As KeyEventArgs) Handles dtgListado.KeyDown
         If e.KeyCode = Keys.Enter Then
             btnBuscar.PerformClick()
