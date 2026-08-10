@@ -11,7 +11,9 @@ Public Class FrmRptCostoxKiloDetalleF3
     Private Sub FrmRptCostoxKiloDetalleF4_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
             Consultar()
-            clsBasicas.Formato_Tablas_Grid(dtgListado)
+            clsBasicas.Formato_Tablas_Grid_Sin_Ajustar(dtgListado)
+            clsBasicas.Formato_Tablas_Grid_Sin_Ajustar(dtgListado2)
+            clsBasicas.Formato_Tablas_Grid_Sin_Ajustar(dtgListado3)
         Catch ex As Exception
             clsBasicas.controlException(Name, ex)
         End Try
@@ -43,8 +45,16 @@ Public Class FrmRptCostoxKiloDetalleF3
         Try
             Dim obj As coControlAnimal = CType(e.Argument, coControlAnimal)
             ds = cn.Cn_CostoxKiloLechonRP7Detallado(obj).Copy
+            ds.Tables(1).Columns("idControlTratamiento").ColumnMapping = MappingType.Hidden
             ds.Tables(1).Columns("idProducto").ColumnMapping = MappingType.Hidden
-            ds.Tables(1).Columns("idPlantel").ColumnMapping = MappingType.Hidden
+            ds.Tables(1).Columns("TipoControl").ColumnMapping = MappingType.Hidden
+            ds.Tables(1).Columns("idUnidadMedida").ColumnMapping = MappingType.Hidden
+
+            ds.Tables(2).Columns("idVacunacionTratamiento").ColumnMapping = MappingType.Hidden
+
+            ds.Tables(3).Columns("idControlTratamiento").ColumnMapping = MappingType.Hidden
+            ds.Tables(3).Columns("idProducto").ColumnMapping = MappingType.Hidden
+            ds.Tables(3).Columns("idUnidadMedida").ColumnMapping = MappingType.Hidden
             e.Result = ds
         Catch ex As Exception
             e.Cancel = True
@@ -61,26 +71,27 @@ Public Class FrmRptCostoxKiloDetalleF3
 
             Dim dtResult As DataTable = dsResult.Tables(0)
             Dim dtResult2 As DataTable = dsResult.Tables(2)
+            Dim dtResult3 As DataTable = dsResult.Tables(3)
+            Dim dtResult4 As DataTable = dsResult.Tables(4)
 
             LblInicioCampana.Text = If(IsDBNull(dtResult.Rows(0)("Campaña_Inicio")), "- / - / -", Convert.ToDateTime(dtResult.Rows(0)("Campaña_Inicio")).ToString("dd/MM/yyyy"))
             LblFinCampana.Text = If(IsDBNull(dtResult.Rows(0)("Campaña_Fin")), "- / - / -", Convert.ToDateTime(dtResult.Rows(0)("Campaña_Fin")).ToString("dd/MM/yyyy"))
-            LblDiasCampana.Visible = False
-            Label1.Visible = False
+
             LblInicioInseminacion.Text = If(IsDBNull(dtResult.Rows(0)("Monta_Inicio")), "- / - / -", Convert.ToDateTime(dtResult.Rows(0)("Monta_Inicio")).ToString("dd/MM/yyyy"))
             LblFinInseminacion.Text = If(IsDBNull(dtResult.Rows(0)("Monta_Fin")), "- / - / -", Convert.ToDateTime(dtResult.Rows(0)("Monta_Fin")).ToString("dd/MM/yyyy"))
-            LblDiasInseminacion.Visible = False
-            Label3.Visible = False
+
             LblInicioChanchilla.Text = If(IsDBNull(dtResult.Rows(0)("Chanchilla_Inicio")), "- / - / -", Convert.ToDateTime(dtResult.Rows(0)("Chanchilla_Inicio")).ToString("dd/MM/yyyy"))
             LblFinChanchilla.Text = If(IsDBNull(dtResult.Rows(0)("Chanchilla_Fin")), "- / - / -", Convert.ToDateTime(dtResult.Rows(0)("Chanchilla_Fin")).ToString("dd/MM/yyyy"))
-            LblDiasChanchilla.Visible = False
-            Label5.Visible = False
+
 
             dtgListado.DataSource = dsResult.Tables(1)
+            dtgListado2.DataSource = dsResult.Tables(2)
+            dtgListado3.DataSource = dsResult.Tables(3)
 
-            If IsDBNull(dtResult2.Rows(0)("CostoDosisSemenxMadre")) Then
+            If IsDBNull(dtResult4.Rows(0)("gastos_vacunas_gestantes_TOTAL")) Then
                 LblTotal.Text = "-"
             Else
-                Dim total As Decimal = Convert.ToDecimal(dtResult2.Rows(0)("CostoDosisSemenxMadre"))
+                Dim total As Decimal = Convert.ToDecimal(dtResult4.Rows(0)("gastos_vacunas_gestantes_TOTAL"))
                 LblTotal.Text = Math.Round(total, 2).ToString("0.00")
             End If
         End If
@@ -91,9 +102,36 @@ Public Class FrmRptCostoxKiloDetalleF3
             If (dtgListado.Rows.Count = 0) Then
             Else
                 clsBasicas.Totales_Formato(dtgListado, e, 1)
-                clsBasicas.SumarTotales_Formato(dtgListado, e, 2)
-                clsBasicas.SumarTotales_Formato(dtgListado, e, 3)
-                clsBasicas.SumarTotales_Formato(dtgListado, e, 4)
+                clsBasicas.SumarTotales_Formato(dtgListado, e, 5)
+                clsBasicas.SumarTotales_Formato(dtgListado, e, 9)
+            End If
+        Catch ex As Exception
+            clsBasicas.controlException(Name, ex)
+        End Try
+    End Sub
+
+    Private Sub dtgListado2_InitializeLayout(sender As Object, e As Infragistics.Win.UltraWinGrid.InitializeLayoutEventArgs) Handles dtgListado2.InitializeLayout
+        Try
+            If (dtgListado2.Rows.Count = 0) Then
+            Else
+                clsBasicas.Totales_Formato(dtgListado2, e, 1)
+                clsBasicas.SumarTotales_Formato(dtgListado2, e, 4)
+                clsBasicas.SumarTotales_Formato(dtgListado2, e, 5)
+            End If
+        Catch ex As Exception
+            clsBasicas.controlException(Name, ex)
+        End Try
+    End Sub
+
+    Private Sub dtgListado3_InitializeLayout(sender As Object, e As Infragistics.Win.UltraWinGrid.InitializeLayoutEventArgs) Handles dtgListado3.InitializeLayout
+        Try
+            If (dtgListado3.Rows.Count = 0) Then
+            Else
+                clsBasicas.Totales_Formato(dtgListado3, e, 1)
+                clsBasicas.SumarTotales_Formato(dtgListado3, e, 6)
+                clsBasicas.SumarTotales_Formato(dtgListado3, e, 8)
+                clsBasicas.SumarTotales_Formato(dtgListado3, e, 9)
+                clsBasicas.SumarTotales_Formato(dtgListado3, e, 11)
             End If
         Catch ex As Exception
             clsBasicas.controlException(Name, ex)

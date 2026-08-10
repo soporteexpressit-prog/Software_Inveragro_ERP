@@ -194,7 +194,7 @@ Public Class FrmReporteCostoxKiloCerdo
                     bloquear = (monto <> 0)
                 Else
                     ' No calculado: bloquea si el monto es 0 (no tiene valor guardado aún)
-                    bloquear = (monto = 0)
+                    bloquear = (monto <> 0)
                 End If
 
                 If bloquear Then
