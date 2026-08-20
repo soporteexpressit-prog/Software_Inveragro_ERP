@@ -49,6 +49,7 @@ Public Class FrmRptCostoxKiloDetalleF5
             ds.Tables(1).Columns("Plantel").ColumnMapping = MappingType.Hidden
 
             'Tabla 3
+            ds.Tables(2).Columns("Base Prorrateada").ColumnMapping = MappingType.Hidden
             ds.Tables(2).Columns("ExtraProrrateada").ColumnMapping = MappingType.Hidden
 
             e.Result = ds
