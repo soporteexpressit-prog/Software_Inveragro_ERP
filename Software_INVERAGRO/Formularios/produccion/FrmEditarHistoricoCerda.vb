@@ -51,8 +51,6 @@ Public Class FrmEditarHistoricoCerda
             ' 1. Invertimos el orden de las filas que extrajimos
             idsOrdenados.Reverse()
 
-            msj_advert("Se guardará el siguiente orden de historial: " & String.Join(", ", idsOrdenados))
-
             ' 2. Unimos la lista con comas (Ej: "49697,67771,67789") para enviarlo como String al PA
             Dim cadenaIds As String = String.Join(",", idsOrdenados)
 
