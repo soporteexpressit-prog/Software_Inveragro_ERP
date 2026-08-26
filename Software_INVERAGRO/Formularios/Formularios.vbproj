@@ -1738,6 +1738,12 @@
     <Compile Include="produccion\DespachosCerdosVenta\FrmListarRacionDespacharPedido.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="produccion\FrmEditarHistoricoCerda.Designer.vb">
+      <DependentUpon>FrmEditarHistoricoCerda.vb</DependentUpon>
+    </Compile>
+    <Compile Include="produccion\FrmEditarHistoricoCerda.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="produccion\FrmEnvioCamalMasivo.Designer.vb">
       <DependentUpon>FrmEnvioCamalMasivo.vb</DependentUpon>
     </Compile>
@@ -4884,6 +4890,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="produccion\DespachosCerdosVenta\FrmListarRacionDespacharPedido.resx">
       <DependentUpon>FrmListarRacionDespacharPedido.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="produccion\FrmEditarHistoricoCerda.resx">
+      <DependentUpon>FrmEditarHistoricoCerda.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="produccion\FrmEnvioCamalMasivo.resx">
       <DependentUpon>FrmEnvioCamalMasivo.vb</DependentUpon>

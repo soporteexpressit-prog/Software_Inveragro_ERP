@@ -533,6 +533,25 @@ Public Class FrmControlCerda
         End Try
     End Sub
 
+    Private Sub BtnEditarHistorial_Click(sender As Object, e As EventArgs) Handles BtnEditarHistorial.Click
+        Dim activeRow As Infragistics.Win.UltraWinGrid.UltraGridRow = dtgListado.ActiveRow
+        If (dtgListado.Rows.Count > 0) Then
+            If (activeRow.Cells(0).Value.ToString.Length <> 0) Then
+                Dim frm As New FrmEditarHistoricoCerda With {
+                    .idCerda = activeRow.Cells("idAnimal").Value,
+                    .codAnimal = activeRow.Cells("Arete").Value,
+                    .etapa = activeRow.Cells("Etapa Reproducción").Value
+                }
+                frm.ShowDialog()
+                Consultar()
+            Else
+                msj_advert(MensajesSistema.mensajesGenerales("SELECCIONE_REGISTRO"))
+            End If
+        Else
+            msj_advert(MensajesSistema.mensajesGenerales("SELECCIONE_REGISTRO"))
+        End If
+    End Sub
+
     Private Sub BtnCerrar_Click(sender As Object, e As EventArgs) Handles BtnCerrar.Click
         Dispose()
     End Sub

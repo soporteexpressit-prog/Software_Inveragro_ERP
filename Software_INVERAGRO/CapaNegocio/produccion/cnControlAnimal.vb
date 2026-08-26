@@ -448,4 +448,8 @@ Public Class cnControlAnimal
     Public Function Cn_ResumenCostoKiloCerdoTeoricoReal(ByRef obj As coControlAnimal) As DataTable
         Return cls_at.Cd_ResumenCostoKiloCerdoTeoricoReal("[w_pa_resumen_costo_kg_cerdo_teorico_real]", obj)
     End Function
+
+    Public Function Cn_EditarHistorialHembra(ByRef obj As coControlAnimal) As String
+        Return cls_at.Cd_EditarHistorialHembra("[w_pa_reordenar_eventos_cerda]", obj)
+    End Function
 End Class
