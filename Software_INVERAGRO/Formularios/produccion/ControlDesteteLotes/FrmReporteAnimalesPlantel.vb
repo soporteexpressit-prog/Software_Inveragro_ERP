@@ -281,6 +281,15 @@ Public Class FrmReporteAnimalesPlantel
         End Try
     End Sub
 
+    Private Sub BtnConsulta_Click(sender As Object, e As EventArgs) Handles BtnConsulta.Click
+        Try
+            Dim frm As New FrmConsultarCalculoRpteLote
+            frm.ShowDialog()
+        Catch ex As Exception
+            clsBasicas.controlException(Name, ex)
+        End Try
+    End Sub
+
     Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
         Dispose()
     End Sub
