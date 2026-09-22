@@ -1342,6 +1342,12 @@
     <Compile Include="produccion\ControlDesteteLotes\FrmCodificarCeladorMeishan.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="produccion\ControlDesteteLotes\FrmConsultarCalculoRpteLote.Designer.vb">
+      <DependentUpon>FrmConsultarCalculoRpteLote.vb</DependentUpon>
+    </Compile>
+    <Compile Include="produccion\ControlDesteteLotes\FrmConsultarCalculoRpteLote.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="produccion\ControlDesteteLotes\FrmDetalleMotivoFrecuente.Designer.vb">
       <DependentUpon>FrmDetalleMotivoFrecuente.vb</DependentUpon>
     </Compile>
@@ -4701,6 +4707,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="produccion\ControlDesteteLotes\FrmCodificarCeladorMeishan.resx">
       <DependentUpon>FrmCodificarCeladorMeishan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="produccion\ControlDesteteLotes\FrmConsultarCalculoRpteLote.resx">
+      <DependentUpon>FrmConsultarCalculoRpteLote.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="produccion\ControlDesteteLotes\FrmDetalleMotivoFrecuente.resx">
       <DependentUpon>FrmDetalleMotivoFrecuente.vb</DependentUpon>

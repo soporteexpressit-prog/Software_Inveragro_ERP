@@ -284,6 +284,25 @@ Public Class FrmReporteAnimalesPlantel
     Private Sub BtnConsulta_Click(sender As Object, e As EventArgs) Handles BtnConsulta.Click
         Try
             Dim frm As New FrmConsultarCalculoRpteLote
+
+            ' Pasar valores del reporte al formulario de consulta para ejemplos numericos
+            If dtgListado.Rows.Count > 0 Then
+                Try
+                    frm.Consumo = If(IsNumeric(dtgListado.Rows(0).Cells("consumo").Value), Convert.ToDecimal(dtgListado.Rows(0).Cells("consumo").Value), -1)
+                    frm.PesoVenta = If(IsNumeric(dtgListado.Rows(0).Cells("peso").Value), Convert.ToDecimal(dtgListado.Rows(0).Cells("peso").Value), -1)
+                    frm.PesoBajada = SumarTotalPesoBajada()
+                    frm.PesoPromedioVenta = If(IsNumeric(dtgListado.Rows(0).Cells("pesoPromedioVentaLote").Value), Convert.ToDecimal(dtgListado.Rows(0).Cells("pesoPromedioVentaLote").Value), -1)
+                    frm.EdadPromedioLote = If(IsNumeric(dtgListado.Rows(0).Cells("edadPromedioLote").Value), Convert.ToDecimal(dtgListado.Rows(0).Cells("edadPromedioLote").Value), -1)
+                    frm.TotalDisponibles = SumarTotalAnimales()
+                    frm.TotalLotes = SumaTotalLotes()
+                    frm.TotalMortalidad = SumarMortalidad()
+                    frm.TotalIngreso = SumarTotalAnimalesIngreso()
+                    frm.TotalEmergencia = SumarTotalAnimalesEmergencia()
+                Catch ex As Exception
+                    ' Ignorar errores de parseo y dejar valores por defecto
+                End Try
+            End If
+
             frm.ShowDialog()
         Catch ex As Exception
             clsBasicas.controlException(Name, ex)

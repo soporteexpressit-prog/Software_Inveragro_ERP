@@ -24,12 +24,14 @@ Partial Class FrmConsultarCalculoRpteLote
     Private Sub InitializeComponent()
         Me.Contenedor = New System.Windows.Forms.Panel()
         Me.Label6 = New System.Windows.Forms.Label()
+        Me.rtbFormulas = New System.Windows.Forms.RichTextBox()
         Me.Contenedor.SuspendLayout()
         Me.SuspendLayout()
         '
         'Contenedor
         '
         Me.Contenedor.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.Contenedor.Controls.Add(Me.rtbFormulas)
         Me.Contenedor.Controls.Add(Me.Label6)
         Me.Contenedor.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Contenedor.Location = New System.Drawing.Point(0, 0)
@@ -50,6 +52,17 @@ Partial Class FrmConsultarCalculoRpteLote
         Me.Label6.Size = New System.Drawing.Size(223, 18)
         Me.Label6.TabIndex = 128
         Me.Label6.Text = "FORMULAS DE CALCULO"
+
+        ' rtbFormulas
+        '
+        Me.rtbFormulas.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.rtbFormulas.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.rtbFormulas.Location = New System.Drawing.Point(36, 60)
+        Me.rtbFormulas.Name = "rtbFormulas"
+        Me.rtbFormulas.ReadOnly = True
+        Me.rtbFormulas.Size = New System.Drawing.Size(512, 420)
+        Me.rtbFormulas.TabIndex = 129
+        Me.rtbFormulas.Text = ""
         '
         'FrmConsultarCalculoRpteLote
         '
@@ -70,4 +83,7 @@ Partial Class FrmConsultarCalculoRpteLote
 
     Friend WithEvents Contenedor As Panel
     Friend WithEvents Label6 As Label
+    Friend WithEvents rtbFormulas As RichTextBox
+
+    ' (Removed duplicated form-level fields — these are declared in the code-behind file)
 End Class
