@@ -48,6 +48,7 @@
             sb.AppendLine()
             sb.AppendLine("Variables usadas en calculos (nombres tal como aparecen en el DataTable):")
             sb.AppendLine("  consumo, peso, pesoConsumoDonacion, edadPromedioLote, pesoPromedioVentaLote, totalLotes, Ingreso, Retorno, Mortalidad, Regularizacion, Vendidos, Disponibles para Venta")
+            sb.AppendLine("En el Consumo Alimento Total de la Campaña (kg) se toma lo de MOLINO")
 
             ' Si se proporcionaron valores, agregamos ejemplos numéricos usando esos parámetros
             If PesoPromedioVenta >= 0 AndAlso EdadPromedioLote >= 0 Then
