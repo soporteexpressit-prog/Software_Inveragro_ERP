@@ -42,6 +42,8 @@ Partial Class FrmReporteAnimalesPlantel
         Me.BtnExportar = New System.Windows.Forms.ToolStripButton()
         Me.btnSalir = New System.Windows.Forms.ToolStripButton()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.LblPesoTotalBajada = New System.Windows.Forms.Label()
+        Me.Label19 = New System.Windows.Forms.Label()
         Me.LblConsumoAlimentoTotalCampaña = New System.Windows.Forms.Label()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.LblAproxVentaSemana = New System.Windows.Forms.Label()
@@ -86,6 +88,7 @@ Partial Class FrmReporteAnimalesPlantel
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         Me.BackgroundWorker2 = New System.ComponentModel.BackgroundWorker()
         Me.Ptbx_Cargando = New System.Windows.Forms.PictureBox()
+        Me.BtnConsulta = New System.Windows.Forms.Button()
         CType(Me.dtgListado, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ToolStrip1.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -166,7 +169,7 @@ Partial Class FrmReporteAnimalesPlantel
         Me.dtgListado.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dtgListado.Location = New System.Drawing.Point(0, 275)
         Me.dtgListado.Name = "dtgListado"
-        Me.dtgListado.Size = New System.Drawing.Size(1283, 382)
+        Me.dtgListado.Size = New System.Drawing.Size(1480, 382)
         Me.dtgListado.TabIndex = 180
         Me.dtgListado.Text = "UltraGrid1"
         '
@@ -180,7 +183,7 @@ Partial Class FrmReporteAnimalesPlantel
         Me.ToolStrip1.Margin = New System.Windows.Forms.Padding(2)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Padding = New System.Windows.Forms.Padding(0, 0, 2, 0)
-        Me.ToolStrip1.Size = New System.Drawing.Size(1283, 38)
+        Me.ToolStrip1.Size = New System.Drawing.Size(1480, 38)
         Me.ToolStrip1.TabIndex = 179
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -213,6 +216,9 @@ Partial Class FrmReporteAnimalesPlantel
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.Panel2.Controls.Add(Me.BtnConsulta)
+        Me.Panel2.Controls.Add(Me.LblPesoTotalBajada)
+        Me.Panel2.Controls.Add(Me.Label19)
         Me.Panel2.Controls.Add(Me.LblConsumoAlimentoTotalCampaña)
         Me.Panel2.Controls.Add(Me.Label17)
         Me.Panel2.Controls.Add(Me.LblAproxVentaSemana)
@@ -226,8 +232,34 @@ Partial Class FrmReporteAnimalesPlantel
         Me.Panel2.Location = New System.Drawing.Point(0, 38)
         Me.Panel2.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1283, 237)
+        Me.Panel2.Size = New System.Drawing.Size(1480, 237)
         Me.Panel2.TabIndex = 181
+        '
+        'LblPesoTotalBajada
+        '
+        Me.LblPesoTotalBajada.AutoSize = True
+        Me.LblPesoTotalBajada.BackColor = System.Drawing.Color.Transparent
+        Me.LblPesoTotalBajada.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblPesoTotalBajada.ForeColor = System.Drawing.Color.Green
+        Me.LblPesoTotalBajada.Location = New System.Drawing.Point(675, 202)
+        Me.LblPesoTotalBajada.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblPesoTotalBajada.Name = "LblPesoTotalBajada"
+        Me.LblPesoTotalBajada.Size = New System.Drawing.Size(16, 14)
+        Me.LblPesoTotalBajada.TabIndex = 258
+        Me.LblPesoTotalBajada.Text = "0"
+        '
+        'Label19
+        '
+        Me.Label19.AutoSize = True
+        Me.Label19.BackColor = System.Drawing.Color.Transparent
+        Me.Label19.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label19.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.Label19.Location = New System.Drawing.Point(518, 202)
+        Me.Label19.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(154, 14)
+        Me.Label19.TabIndex = 258
+        Me.Label19.Text = "Peso Total Bajada (kg):"
         '
         'LblConsumoAlimentoTotalCampaña
         '
@@ -798,7 +830,7 @@ Partial Class FrmReporteAnimalesPlantel
         '
         Me.Ptbx_Cargando.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Ptbx_Cargando.Image = Global.Formularios.My.Resources.Resources.loader
-        Me.Ptbx_Cargando.Location = New System.Drawing.Point(716, 379)
+        Me.Ptbx_Cargando.Location = New System.Drawing.Point(815, 379)
         Me.Ptbx_Cargando.Name = "Ptbx_Cargando"
         Me.Ptbx_Cargando.Size = New System.Drawing.Size(43, 37)
         Me.Ptbx_Cargando.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -806,11 +838,26 @@ Partial Class FrmReporteAnimalesPlantel
         Me.Ptbx_Cargando.TabStop = False
         Me.Ptbx_Cargando.Visible = False
         '
+        'BtnConsulta
+        '
+        Me.BtnConsulta.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnConsulta.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnConsulta.Image = Global.Formularios.My.Resources.Resources.boton_de_informacion
+        Me.BtnConsulta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnConsulta.Location = New System.Drawing.Point(1305, 14)
+        Me.BtnConsulta.Name = "BtnConsulta"
+        Me.BtnConsulta.Padding = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.BtnConsulta.Size = New System.Drawing.Size(43, 33)
+        Me.BtnConsulta.TabIndex = 259
+        Me.BtnConsulta.Tag = "Consultar"
+        Me.BtnConsulta.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnConsulta.UseVisualStyleBackColor = True
+        '
         'FrmReporteAnimalesPlantel
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1283, 657)
+        Me.ClientSize = New System.Drawing.Size(1480, 657)
         Me.Controls.Add(Me.Ptbx_Cargando)
         Me.Controls.Add(Me.dtgListado)
         Me.Controls.Add(Me.Panel2)
@@ -885,4 +932,7 @@ Partial Class FrmReporteAnimalesPlantel
     Friend WithEvents Label14 As Label
     Friend WithEvents LblConsumoAlimentoTotalCampaña As Label
     Friend WithEvents Label17 As Label
+    Friend WithEvents LblPesoTotalBajada As Label
+    Friend WithEvents Label19 As Label
+    Friend WithEvents BtnConsulta As Button
 End Class

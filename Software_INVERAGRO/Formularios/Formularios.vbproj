@@ -1342,6 +1342,12 @@
     <Compile Include="produccion\ControlDesteteLotes\FrmCodificarCeladorMeishan.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="produccion\ControlDesteteLotes\FrmConsultarCalculoRpteLote.Designer.vb">
+      <DependentUpon>FrmConsultarCalculoRpteLote.vb</DependentUpon>
+    </Compile>
+    <Compile Include="produccion\ControlDesteteLotes\FrmConsultarCalculoRpteLote.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="produccion\ControlDesteteLotes\FrmDetalleMotivoFrecuente.Designer.vb">
       <DependentUpon>FrmDetalleMotivoFrecuente.vb</DependentUpon>
     </Compile>
@@ -1624,6 +1630,12 @@
     <Compile Include="produccion\ControlMaternidad\FrmReporteCondCorporal.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="produccion\ControlMaternidad\FrmReporteCondicionCorporalMaternidadGestacion.Designer.vb">
+      <DependentUpon>FrmReporteCondicionCorporalMaternidadGestacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="produccion\ControlMaternidad\FrmReporteCondicionCorporalMaternidadGestacion.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="produccion\ControlMaternidad\FrmReporteDetalladoViables.Designer.vb">
       <DependentUpon>FrmReporteDetalladoViables.vb</DependentUpon>
     </Compile>
@@ -1732,6 +1744,12 @@
     <Compile Include="produccion\DespachosCerdosVenta\FrmListarRacionDespacharPedido.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="produccion\FrmEditarHistoricoCerda.Designer.vb">
+      <DependentUpon>FrmEditarHistoricoCerda.vb</DependentUpon>
+    </Compile>
+    <Compile Include="produccion\FrmEditarHistoricoCerda.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="produccion\FrmEnvioCamalMasivo.Designer.vb">
       <DependentUpon>FrmEnvioCamalMasivo.vb</DependentUpon>
     </Compile>
@@ -1802,6 +1820,12 @@
       <DependentUpon>FrmRegistrarPesosChanchillas.vb</DependentUpon>
     </Compile>
     <Compile Include="produccion\FrmRegistrarPesosChanchillas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="produccion\FrmReporteCondCorporalFechas.Designer.vb">
+      <DependentUpon>FrmReporteCondCorporalFechas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="produccion\FrmReporteCondCorporalFechas.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="produccion\FrmReporteCondicionCorporal.Designer.vb">
@@ -4684,6 +4708,9 @@
     <EmbeddedResource Include="produccion\ControlDesteteLotes\FrmCodificarCeladorMeishan.resx">
       <DependentUpon>FrmCodificarCeladorMeishan.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="produccion\ControlDesteteLotes\FrmConsultarCalculoRpteLote.resx">
+      <DependentUpon>FrmConsultarCalculoRpteLote.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="produccion\ControlDesteteLotes\FrmDetalleMotivoFrecuente.resx">
       <DependentUpon>FrmDetalleMotivoFrecuente.vb</DependentUpon>
     </EmbeddedResource>
@@ -4837,6 +4864,9 @@
     <EmbeddedResource Include="produccion\ControlMaternidad\FrmReporteCondCorporal.resx">
       <DependentUpon>FrmReporteCondCorporal.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="produccion\ControlMaternidad\FrmReporteCondicionCorporalMaternidadGestacion.resx">
+      <DependentUpon>FrmReporteCondicionCorporalMaternidadGestacion.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="produccion\ControlMaternidad\FrmReporteDetalladoViables.resx">
       <DependentUpon>FrmReporteDetalladoViables.vb</DependentUpon>
     </EmbeddedResource>
@@ -4869,6 +4899,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="produccion\DespachosCerdosVenta\FrmListarRacionDespacharPedido.resx">
       <DependentUpon>FrmListarRacionDespacharPedido.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="produccion\FrmEditarHistoricoCerda.resx">
+      <DependentUpon>FrmEditarHistoricoCerda.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="produccion\FrmEnvioCamalMasivo.resx">
       <DependentUpon>FrmEnvioCamalMasivo.vb</DependentUpon>
@@ -4905,6 +4938,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="produccion\FrmRegistrarPesosChanchillas.resx">
       <DependentUpon>FrmRegistrarPesosChanchillas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="produccion\FrmReporteCondCorporalFechas.resx">
+      <DependentUpon>FrmReporteCondCorporalFechas.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="produccion\FrmReporteCondicionCorporal.resx">
       <DependentUpon>FrmReporteCondicionCorporal.vb</DependentUpon>

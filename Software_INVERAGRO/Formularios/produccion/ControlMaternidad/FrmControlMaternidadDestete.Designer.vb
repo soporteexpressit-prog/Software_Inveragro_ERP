@@ -75,6 +75,7 @@ Partial Class FrmControlMaternidadDestete
         Me.MortalidadMaternidadToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BtnReporteDestete = New System.Windows.Forms.ToolStripMenuItem()
         Me.PartosVsDesteteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BtnReporteCondicionCorporal = New System.Windows.Forms.ToolStripMenuItem()
         Me.dtgListado = New Infragistics.Win.UltraWinGrid.UltraGrid()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         Me.Ptbx_Cargando = New System.Windows.Forms.PictureBox()
@@ -405,7 +406,7 @@ Partial Class FrmControlMaternidadDestete
         'btnreporteRrhhctrlcapaci
         '
         Me.btnreporteRrhhctrlcapaci.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.btnreporteRrhhctrlcapaci.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnReportePartos, Me.MortalidadMaternidadToolStripMenuItem, Me.BtnReporteDestete, Me.PartosVsDesteteToolStripMenuItem})
+        Me.btnreporteRrhhctrlcapaci.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnReportePartos, Me.MortalidadMaternidadToolStripMenuItem, Me.BtnReporteDestete, Me.PartosVsDesteteToolStripMenuItem, Me.BtnReporteCondicionCorporal})
         Me.btnreporteRrhhctrlcapaci.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnreporteRrhhctrlcapaci.ForeColor = System.Drawing.Color.White
         Me.btnreporteRrhhctrlcapaci.Image = Global.Formularios.My.Resources.Resources.reporte
@@ -438,6 +439,12 @@ Partial Class FrmControlMaternidadDestete
         Me.PartosVsDesteteToolStripMenuItem.Name = "PartosVsDesteteToolStripMenuItem"
         Me.PartosVsDesteteToolStripMenuItem.Size = New System.Drawing.Size(222, 22)
         Me.PartosVsDesteteToolStripMenuItem.Text = "Partos vs Destete"
+        '
+        'BtnReporteCondicionCorporal
+        '
+        Me.BtnReporteCondicionCorporal.Name = "BtnReporteCondicionCorporal"
+        Me.BtnReporteCondicionCorporal.Size = New System.Drawing.Size(222, 22)
+        Me.BtnReporteCondicionCorporal.Text = "Cond. Corporal"
         '
         'dtgListado
         '
@@ -584,4 +591,5 @@ Partial Class FrmControlMaternidadDestete
     Friend WithEvents MortalidadMaternidadToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PartosVsDesteteToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents BtnObjetivoPartos As Button
+    Friend WithEvents BtnReporteCondicionCorporal As ToolStripMenuItem
 End Class

@@ -85,9 +85,11 @@ Partial Class FrmControlCerda
         Me.HistoricoDeDesteteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BtnReporteConsumoMaternidad = New System.Windows.Forms.ToolStripMenuItem()
         Me.CondiciónCorporalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BtnCondiciónCorporalFechas = New System.Windows.Forms.ToolStripMenuItem()
         Me.dtgListado = New Infragistics.Win.UltraWinGrid.UltraGrid()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         Me.Ptbx_Cargando = New System.Windows.Forms.PictureBox()
+        Me.BtnEditarHistorial = New System.Windows.Forms.ToolStripButton()
         Me.Panel2.SuspendLayout()
         Me.GrupoFiltros.SuspendLayout()
         CType(Me.CmbUbicacion, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -356,7 +358,7 @@ Partial Class FrmControlCerda
         Me.ToolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.ToolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
         Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnNuevaCerdaprocontrolcerdos, Me.BtnActualizarDatosprocontrolcerdos, Me.BtnMortalidadAnimal, Me.BtnMandarCamalprocontrolcerdos, Me.BtnEnvioCamalMasivo, Me.BtnVaciaMasMenos7procontrolcerdos, Me.BtnHistorialCerdaprocontrolcerdos, Me.BtnHistorial, Me.BtnExportarprocontrolcerdos, Me.BtnEliminar, Me.BtnCerrar, Me.btnreporteRrhhctrlcapaci})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnNuevaCerdaprocontrolcerdos, Me.BtnActualizarDatosprocontrolcerdos, Me.BtnMortalidadAnimal, Me.BtnMandarCamalprocontrolcerdos, Me.BtnEnvioCamalMasivo, Me.BtnVaciaMasMenos7procontrolcerdos, Me.BtnHistorialCerdaprocontrolcerdos, Me.BtnHistorial, Me.BtnEditarHistorial, Me.BtnExportarprocontrolcerdos, Me.BtnEliminar, Me.BtnCerrar, Me.btnreporteRrhhctrlcapaci})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 164)
         Me.ToolStrip1.Margin = New System.Windows.Forms.Padding(2, 1, 2, 1)
         Me.ToolStrip1.Name = "ToolStrip1"
@@ -509,7 +511,7 @@ Partial Class FrmControlCerda
         'btnreporteRrhhctrlcapaci
         '
         Me.btnreporteRrhhctrlcapaci.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.btnreporteRrhhctrlcapaci.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnReportePartos, Me.MortalidadMaternidadToolStripMenuItem, Me.HistoricoDePartosToolStripMenuItem, Me.HistoricoDeDesteteToolStripMenuItem, Me.BtnReporteConsumoMaternidad, Me.CondiciónCorporalToolStripMenuItem})
+        Me.btnreporteRrhhctrlcapaci.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnReportePartos, Me.MortalidadMaternidadToolStripMenuItem, Me.HistoricoDePartosToolStripMenuItem, Me.HistoricoDeDesteteToolStripMenuItem, Me.BtnReporteConsumoMaternidad, Me.CondiciónCorporalToolStripMenuItem, Me.BtnCondiciónCorporalFechas})
         Me.btnreporteRrhhctrlcapaci.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnreporteRrhhctrlcapaci.ForeColor = System.Drawing.Color.White
         Me.btnreporteRrhhctrlcapaci.Image = Global.Formularios.My.Resources.Resources.reporte
@@ -522,38 +524,44 @@ Partial Class FrmControlCerda
         'BtnReportePartos
         '
         Me.BtnReportePartos.Name = "BtnReportePartos"
-        Me.BtnReportePartos.Size = New System.Drawing.Size(232, 22)
+        Me.BtnReportePartos.Size = New System.Drawing.Size(249, 22)
         Me.BtnReportePartos.Text = "Partos Detallado"
         '
         'MortalidadMaternidadToolStripMenuItem
         '
         Me.MortalidadMaternidadToolStripMenuItem.Name = "MortalidadMaternidadToolStripMenuItem"
-        Me.MortalidadMaternidadToolStripMenuItem.Size = New System.Drawing.Size(232, 22)
+        Me.MortalidadMaternidadToolStripMenuItem.Size = New System.Drawing.Size(249, 22)
         Me.MortalidadMaternidadToolStripMenuItem.Text = "Historico para Descarte"
         '
         'HistoricoDePartosToolStripMenuItem
         '
         Me.HistoricoDePartosToolStripMenuItem.Name = "HistoricoDePartosToolStripMenuItem"
-        Me.HistoricoDePartosToolStripMenuItem.Size = New System.Drawing.Size(232, 22)
+        Me.HistoricoDePartosToolStripMenuItem.Size = New System.Drawing.Size(249, 22)
         Me.HistoricoDePartosToolStripMenuItem.Text = "Historico de Partos"
         '
         'HistoricoDeDesteteToolStripMenuItem
         '
         Me.HistoricoDeDesteteToolStripMenuItem.Name = "HistoricoDeDesteteToolStripMenuItem"
-        Me.HistoricoDeDesteteToolStripMenuItem.Size = New System.Drawing.Size(232, 22)
+        Me.HistoricoDeDesteteToolStripMenuItem.Size = New System.Drawing.Size(249, 22)
         Me.HistoricoDeDesteteToolStripMenuItem.Text = "Historico de Destete"
         '
         'BtnReporteConsumoMaternidad
         '
         Me.BtnReporteConsumoMaternidad.Name = "BtnReporteConsumoMaternidad"
-        Me.BtnReporteConsumoMaternidad.Size = New System.Drawing.Size(232, 22)
+        Me.BtnReporteConsumoMaternidad.Size = New System.Drawing.Size(249, 22)
         Me.BtnReporteConsumoMaternidad.Text = "Consumo de Maternidad"
         '
         'CondiciónCorporalToolStripMenuItem
         '
         Me.CondiciónCorporalToolStripMenuItem.Name = "CondiciónCorporalToolStripMenuItem"
-        Me.CondiciónCorporalToolStripMenuItem.Size = New System.Drawing.Size(232, 22)
-        Me.CondiciónCorporalToolStripMenuItem.Text = "Condición Corporal"
+        Me.CondiciónCorporalToolStripMenuItem.Size = New System.Drawing.Size(249, 22)
+        Me.CondiciónCorporalToolStripMenuItem.Text = "Condición Corporal S/L"
+        '
+        'BtnCondiciónCorporalFechas
+        '
+        Me.BtnCondiciónCorporalFechas.Name = "BtnCondiciónCorporalFechas"
+        Me.BtnCondiciónCorporalFechas.Size = New System.Drawing.Size(249, 22)
+        Me.BtnCondiciónCorporalFechas.Text = "Condición Corporal Fechas"
         '
         'dtgListado
         '
@@ -648,6 +656,19 @@ Partial Class FrmControlCerda
         Me.Ptbx_Cargando.TabStop = False
         Me.Ptbx_Cargando.Visible = False
         '
+        'BtnEditarHistorial
+        '
+        Me.BtnEditarHistorial.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnEditarHistorial.ForeColor = System.Drawing.Color.White
+        Me.BtnEditarHistorial.Image = Global.Formularios.My.Resources.Resources.registro
+        Me.BtnEditarHistorial.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BtnEditarHistorial.Margin = New System.Windows.Forms.Padding(5)
+        Me.BtnEditarHistorial.Name = "BtnEditarHistorial"
+        Me.BtnEditarHistorial.Padding = New System.Windows.Forms.Padding(2)
+        Me.BtnEditarHistorial.Size = New System.Drawing.Size(134, 28)
+        Me.BtnEditarHistorial.Text = "Editar Historial"
+        Me.BtnEditarHistorial.ToolTipText = "Expediente Vital"
+        '
         'FrmControlCerda
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -711,4 +732,6 @@ Partial Class FrmControlCerda
     Friend WithEvents HistoricoDePartosToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents BtnReporteConsumoMaternidad As ToolStripMenuItem
     Friend WithEvents CondiciónCorporalToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents BtnCondiciónCorporalFechas As ToolStripMenuItem
+    Friend WithEvents BtnEditarHistorial As ToolStripButton
 End Class

@@ -466,19 +466,23 @@ Public Class cdControlAsistencia
                 .Add("@msj", SqlDbType.VarChar, 100).Direction = 2
                 .Add("@coderror", SqlDbType.Int).Direction = 2
             End With
+            obj.TramosVacaciones = New List(Of (DiaInicio As Integer, DiaFin As Integer))()
             Using reader As SqlDataReader = cmd.ExecuteReader()
-                If reader.Read() Then
+                While reader.Read()
                     If Not IsDBNull(reader("DNI")) Then
                         obj.NumDocumento = reader("DNI").ToString()
                     End If
-                    If Not IsDBNull(reader("DiaInicio")) Then
-                        obj.DiaInicio = reader("DiaInicio")
+                    If Not IsDBNull(reader("DiaInicio")) AndAlso Not IsDBNull(reader("DiaFin")) Then
+                        obj.TramosVacaciones.Add((Convert.ToInt32(reader("DiaInicio")), Convert.ToInt32(reader("DiaFin"))))
                     End If
-                    If Not IsDBNull(reader("DiaFin")) Then
-                        obj.DiaFin = reader("DiaFin")
-                    End If
-                End If
+                End While
             End Using
+
+            ' Compatibilidad con el código que aún usa DiaInicio/DiaFin: primer y último día cubierto
+            If obj.TramosVacaciones.Count > 0 Then
+                obj.DiaInicio = obj.TramosVacaciones.Min(Function(t) t.DiaInicio)
+                obj.DiaFin = obj.TramosVacaciones.Max(Function(t) t.DiaFin)
+            End If
             mensaje = cmd.Parameters("@msj").Value.ToString
             obj.CodeError = cmd.Parameters("@coderror").Value.ToString
             con.Salir()

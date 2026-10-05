@@ -7,7 +7,6 @@ Public Class FrmReporteAnimalesPlantel
     Dim tbtmp As New DataTable
     Dim totalLotes As Decimal = 0
     Dim consumo As Decimal = 0
-    Dim pesoTotalBajada As Decimal = 0
     Public idPlantel As Integer = 0
     Public idCampana As Integer = 0
 
@@ -77,12 +76,11 @@ Public Class FrmReporteAnimalesPlantel
             LblEmergencia.Text = SumarTotalAnimalesEmergencia()
             totalLotes = SumaTotalLotes()
             LblAproxVentaSemana.Text = (SumarTotalAnimales() / totalLotes).ToString("N0")
-            pesoTotalBajada = SumarTotalPesoBajada()
+            LblPesoTotalBajada.Text = SumarTotalPesoBajada().ToString("F2")
             LblTotalConsDona.Text = SumarTotalAnimalesConsumoDonacion()
             If dtgListado.Rows.Count > 0 Then
                 LblPesoVenta.Text = Convert.ToDecimal(dtgListado.Rows(0).Cells("peso").Value).ToString("N0")
                 LblPesoTotalConsDona.Text = Convert.ToDecimal(dtgListado.Rows(0).Cells("pesoConsumoDonacion").Value).ToString("N0")
-                'LblConversionAlimenticia.Text = If(CInt(LblEdadPromedioLote.Text) = 0, 0, Convert.ToDecimal((dtgListado.Rows(0).Cells("consumo").Value + dtgListado.Rows(0).Cells("pesoConsumoDonacion").Value) / (CDec(LblPesoVenta.Text) - pesoTotalBajada))).ToString("F2")
                 LblEdadPromedioLote.Text = Convert.ToDecimal(dtgListado.Rows(0).Cells("edadPromedioLote").Value).ToString("F2")
                 LblPromedioPesoVenta.Text = Convert.ToDecimal(dtgListado.Rows(0).Cells("pesoPromedioVentaLote").Value).ToString("F2")
                 LblCampaña.Text = dtgListado.Rows(0).Cells("Campaña").Value.ToString()
@@ -92,7 +90,7 @@ Public Class FrmReporteAnimalesPlantel
                 If CInt(LblEdadPromedioLote.Text) <> 0 Then
                     valor = Convert.ToDecimal(
                         (dtgListado.Rows(0).Cells("consumo").Value) /
-                        (CDec(LblPesoVenta.Text) - pesoTotalBajada)
+                        (CDec(LblPesoVenta.Text) - CDec(LblPesoTotalBajada.Text))
                     )
                 End If
 
@@ -213,8 +211,8 @@ Public Class FrmReporteAnimalesPlantel
         Return suma
     End Function
 
-    Private Function SumarTotalPesoBajada() As Integer
-        Dim suma As Integer = 0
+    Private Function SumarTotalPesoBajada() As Decimal
+        Dim suma As Decimal = 0
         For i As Integer = 0 To dtgListado.Rows.Count - 1
             suma += dtgListado.Rows(i).Cells("Peso Bajada").Value
         Next
@@ -278,6 +276,34 @@ Public Class FrmReporteAnimalesPlantel
                     clsBasicas.PromedioTotales_Formato(dtgListado, e, 4)
                 End If
             End If
+        Catch ex As Exception
+            clsBasicas.controlException(Name, ex)
+        End Try
+    End Sub
+
+    Private Sub BtnConsulta_Click(sender As Object, e As EventArgs) Handles BtnConsulta.Click
+        Try
+            Dim frm As New FrmConsultarCalculoRpteLote
+
+            ' Pasar valores del reporte al formulario de consulta para ejemplos numericos
+            If dtgListado.Rows.Count > 0 Then
+                Try
+                    frm.Consumo = If(IsNumeric(dtgListado.Rows(0).Cells("consumo").Value), Convert.ToDecimal(dtgListado.Rows(0).Cells("consumo").Value), -1)
+                    frm.PesoVenta = If(IsNumeric(dtgListado.Rows(0).Cells("peso").Value), Convert.ToDecimal(dtgListado.Rows(0).Cells("peso").Value), -1)
+                    frm.PesoBajada = SumarTotalPesoBajada()
+                    frm.PesoPromedioVenta = If(IsNumeric(dtgListado.Rows(0).Cells("pesoPromedioVentaLote").Value), Convert.ToDecimal(dtgListado.Rows(0).Cells("pesoPromedioVentaLote").Value), -1)
+                    frm.EdadPromedioLote = If(IsNumeric(dtgListado.Rows(0).Cells("edadPromedioLote").Value), Convert.ToDecimal(dtgListado.Rows(0).Cells("edadPromedioLote").Value), -1)
+                    frm.TotalDisponibles = SumarTotalAnimales()
+                    frm.TotalLotes = SumaTotalLotes()
+                    frm.TotalMortalidad = SumarMortalidad()
+                    frm.TotalIngreso = SumarTotalAnimalesIngreso()
+                    frm.TotalEmergencia = SumarTotalAnimalesEmergencia()
+                Catch ex As Exception
+                    ' Ignorar errores de parseo y dejar valores por defecto
+                End Try
+            End If
+
+            frm.ShowDialog()
         Catch ex As Exception
             clsBasicas.controlException(Name, ex)
         End Try

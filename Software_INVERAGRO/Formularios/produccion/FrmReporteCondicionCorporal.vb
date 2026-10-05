@@ -1,7 +1,7 @@
 ﻿Imports System.ComponentModel
 Imports CapaNegocio
 Imports CapaObjetos
-Imports Stimulsoft.Editor
+Imports Infragistics.Win
 
 Public Class FrmReporteCondicionCorporal
     Dim cn As New cnControlLoteDestete
@@ -11,14 +11,13 @@ Public Class FrmReporteCondicionCorporal
     Private Sub FrmReporteCondicionCorporal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
             Inicializar()
-            ListarLotes()
+            Consultar()
         Catch ex As Exception
             clsBasicas.controlException(Name, ex)
         End Try
     End Sub
 
     Private Sub Inicializar()
-        CmbTipoControl.SelectedIndex = 0
         clsBasicas.LlenarComboAnios(CmbAnios)
         NumLote.Value = clsBasicas.ObtenerNumeroSemanaFecha(DateTime.Now)
         clsBasicas.Formato_Tablas_Grid(dtgListado)
@@ -35,27 +34,6 @@ Public Class FrmReporteCondicionCorporal
         BarraNavegacion.Enabled = True
     End Sub
 
-
-    Sub ListarLotes()
-        Dim cn As New cnControlLoteDestete
-        Dim obj As New coControlLoteDestete With {
-           .Anio = CmbAnios.Text,
-           .IdPlantel = idUbicacion
-        }
-        Dim tb As New DataTable
-        tb = cn.Cn_ConsultarLotesAnioCombo(obj).Copy
-        tb.TableName = "tmp"
-        tb.Columns(1).ColumnName = "Seleccione un Plantel"
-        With CmbLotes
-            .DataSource = tb
-            .DisplayMember = tb.Columns(1).ColumnName
-            .ValueMember = tb.Columns(0).ColumnName
-            If (tb.Rows.Count > 0) Then
-                .Value = tb.Rows(0)(0)
-            End If
-        End With
-    End Sub
-
     Private Sub NumLote_ValueChanged(sender As Object, e As EventArgs) Handles NumLote.ValueChanged
         If CmbAnios.Text = "" Or NumLote.Value = 0 Then
             LblPeriodo.Text = ""
@@ -63,22 +41,7 @@ Public Class FrmReporteCondicionCorporal
         End If
 
         LblPeriodo.Text = clsBasicas.ObtenerPeriodoDeSemana(CmbAnios.Text, NumLote.Value)
-    End Sub
-
-    Private Sub CmbTipoControl_TextChanged(sender As Object, e As EventArgs) Handles CmbTipoControl.TextChanged
-        If CmbTipoControl.Text = "GESTACION" Then
-            NumLote.Visible = True
-            CmbLotes.Visible = False
-            LblPeriodo.Visible = True
-            LblSemana.Visible = True
-            LblLotes.Visible = False
-        Else
-            NumLote.Visible = False
-            CmbLotes.Visible = True
-            LblPeriodo.Visible = False
-            LblSemana.Visible = False
-            LblLotes.Visible = True
-        End If
+        LblLote.Text = CInt(NumLote.Value) + 17
     End Sub
 
     Private Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
@@ -92,9 +55,8 @@ Public Class FrmReporteCondicionCorporal
 
             Dim obj As New coControlLoteDestete With {
                 .Anio = CmbAnios.Text,
-                .IdLote = CmbLotes.Value,
                 .NumeroLote = NumLote.Value,
-                .TipoFiltro = If(CmbTipoControl.Text = "GESTACION", "SERVICIO", "PARTO")
+                .IdPlantel = idUbicacion
             }
 
             BackgroundWorker1.RunWorkerAsync(obj)
@@ -118,8 +80,27 @@ Public Class FrmReporteCondicionCorporal
             msj_advert("Error al Cargar los Datos")
         Else
             dtgListado.DataSource = CType(e.Result, DataTable)
+            Colorear()
         End If
     End Sub
+
+    Sub Colorear()
+        If (dtgListado.Rows.Count > 0) Then
+            Dim etapa As Integer = 0
+
+            'ETAPA
+            'GESTACIÓN
+            clsBasicas.Colorear_SegunClave(dtgListado, Color.AntiqueWhite, Color.DarkOliveGreen, "GESTACIÓN", etapa)
+            'MATERNIDAD
+            clsBasicas.Colorear_SegunClave(dtgListado, Color.MistyRose, Color.Maroon, "MATERNIDAD", etapa)
+
+            'centrar columnas
+            With dtgListado.DisplayLayout.Bands(0)
+                .Columns(etapa).CellAppearance.TextHAlign = HAlign.Center
+            End With
+        End If
+    End Sub
+
 
     Private Sub BtnExportarControlCerdacontrollotespro_Click(sender As Object, e As EventArgs) Handles BtnExportarControlCerdacontrollotespro.Click
         Try

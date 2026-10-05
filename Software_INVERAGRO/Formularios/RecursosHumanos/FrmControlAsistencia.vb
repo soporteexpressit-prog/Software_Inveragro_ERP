@@ -3476,20 +3476,26 @@ Public Class FrmControlAsistencia
                             Dim mensaje As String = cn.Cn_AplicarVacacionesPorTrabajadorAsistencia(obj)
 
                             If obj.CodeError = 0 Then
+                                If obj.TramosVacaciones Is Nothing OrElse obj.TramosVacaciones.Count = 0 Then
+                                    msj_advert("La persona no tiene vacaciones en el mes y año seleccionado")
+                                    Exit Sub
+                                End If
+
                                 If horariosTrabajadores.ContainsKey(dni) Then
                                     Dim listaHorarios = horariosTrabajadores(dni)
+                                    Dim diasAplicados As Integer = 0
+                                    Dim ultimoDiaPintado As Integer = 0
 
                                     If generadoEnPlanilla Then
-                                        ' Para planilla procesa todo el rango normalmente
-                                        For i As Integer = obj.DiaInicio - 1 To obj.DiaFin - 1
-
-                                            ultimoDiaRegistroEventual = i + 1
-
-                                            Dim nombreCelda As String = $"Dia{i + 1}"
-                                            Dim entrada As String = "08:00"
-                                            Dim salida As String = "17:00"
-                                            listaHorarios(i) = (entrada, salida, "VACACIONES", "0", "0", "8", 1, "NO", "SIN ASIGNAR", "0")
-                                            activeRow.Cells(nombreCelda).Value = "V"
+                                        ' Para planilla procesa todos los tramos de vacaciones
+                                        For Each tramo In obj.TramosVacaciones
+                                            For i As Integer = tramo.DiaInicio - 1 To tramo.DiaFin - 1
+                                                Dim nombreCelda As String = $"Dia{i + 1}"
+                                                listaHorarios(i) = ("08:00", "17:00", "VACACIONES", "0", "0", "8", 1, "NO", "SIN ASIGNAR", "0")
+                                                activeRow.Cells(nombreCelda).Value = "V"
+                                                diasAplicados += 1
+                                                If i + 1 > ultimoDiaPintado Then ultimoDiaPintado = i + 1
+                                            Next
                                         Next
 
                                     ElseIf generadoEnOperario Then
@@ -3501,62 +3507,45 @@ Public Class FrmControlAsistencia
                                         Dim mensajeOpe As String = cn.Cn_ConsOperariosAsistencia(objOpe)
 
                                         If objOpe.CodeError = 0 Then
-                                            ' Obtener el rango real de vacaciones
-                                            Dim diaInicioVacaciones As Integer = obj.DiaInicio - 1 ' Convertir a índice base 0
-                                            Dim diaFinVacaciones As Integer = obj.DiaFin - 1 ' Convertir a índice base 0
+                                            ' Límites de la quincena que se está mostrando (índice base 0)
+                                            Dim diasEnElMes As Integer = DateTime.DaysInMonth(objOpe.Anio, objOpe.Mes)
+                                            Dim limiteInf As Integer = If(objOpe.Tipoperiodo = "QUINCENA 1", 0, 15)
+                                            Dim limiteSup As Integer = If(objOpe.Tipoperiodo = "QUINCENA 1", 14, diasEnElMes - 1)
 
-                                            ' Aplicar vacaciones solo en el rango especificado, pero respetando la quincena
-                                            If objOpe.Tipoperiodo = "QUINCENA 1" Then
-                                                ' Para QUINCENA 1: aplicar vacaciones del día 1 al 15, pero solo en el rango de vacaciones
-                                                Dim inicioRango As Integer = Math.Max(diaInicioVacaciones, 0) ' No antes del día 1
-                                                Dim finRango As Integer = Math.Min(diaFinVacaciones, 14) ' No después del día 15
-
+                                            ' Aplicar cada tramo de vacaciones, recortado a la quincena
+                                            For Each tramo In obj.TramosVacaciones
+                                                Dim inicioRango As Integer = Math.Max(tramo.DiaInicio - 1, limiteInf)
+                                                Dim finRango As Integer = Math.Min(tramo.DiaFin - 1, limiteSup)
                                                 For i As Integer = inicioRango To finRango
-                                                    ultimoDiaRegistroEventual = i + 1
                                                     Dim nombreCelda As String = $"Dia{i + 1}"
-                                                    Dim entrada As String = "08:00"
-                                                    Dim salida As String = "17:00"
-                                                    listaHorarios(i) = (entrada, salida, "VACACIONES", "0", "0", "8", 1, "NO", "SIN ASIGNAR", "0")
+                                                    listaHorarios(i) = ("08:00", "17:00", "VACACIONES", "0", "0", "8", 1, "NO", "SIN ASIGNAR", "0")
                                                     activeRow.Cells(nombreCelda).Value = "V"
+                                                    diasAplicados += 1
+                                                    If i + 1 > ultimoDiaPintado Then ultimoDiaPintado = i + 1
                                                 Next
-
-                                            Else ' QUINCENA 2
-                                                ' Para QUINCENA 2: aplicar vacaciones del día 16 al fin del mes, pero solo en el rango de vacaciones
-                                                Dim diasEnElMes As Integer = DateTime.DaysInMonth(objOpe.Anio, objOpe.Mes)
-                                                Dim inicioRango As Integer = Math.Max(diaInicioVacaciones, 15) ' No antes del día 16
-                                                Dim finRango As Integer = Math.Min(diaFinVacaciones, diasEnElMes - 1) ' No después del fin del mes
-
-                                                For i As Integer = inicioRango To finRango
-                                                    ultimoDiaRegistroEventual = i + 1
-                                                    Dim nombreCelda As String = $"Dia{i + 1}"
-                                                    Dim entrada As String = "08:00"
-                                                    Dim salida As String = "17:00"
-                                                    listaHorarios(i) = (entrada, salida, "VACACIONES", "0", "0", "8", 1, "NO", "SIN ASIGNAR", "0")
-                                                    activeRow.Cells(nombreCelda).Value = "V"
-                                                Next
-                                            End If
+                                            Next
                                         End If
                                     Else
                                         ' Para otros casos, verifica que la celda no contenga "-"
-                                        For i As Integer = obj.DiaInicio - 1 To obj.DiaFin - 1
-                                            Dim nombreCelda As String = $"Dia{i + 1}"
-                                            If activeRow.Cells(nombreCelda).Value IsNot Nothing AndAlso
-                                           activeRow.Cells(nombreCelda).Value.ToString() <> "-" Then
-
-                                                ultimoDiaRegistroEventual = i + 1
-
-                                                Dim entrada As String = "08:00"
-                                                Dim salida As String = "17:00"
-                                                listaHorarios(i) = (entrada, salida, "VACACIONES", "0", "0", "8", 1, "NO", "SIN ASIGNAR", "0")
-                                                activeRow.Cells(nombreCelda).Value = "V"
-                                            End If
+                                        For Each tramo In obj.TramosVacaciones
+                                            For i As Integer = tramo.DiaInicio - 1 To tramo.DiaFin - 1
+                                                Dim nombreCelda As String = $"Dia{i + 1}"
+                                                If activeRow.Cells(nombreCelda).Value IsNot Nothing AndAlso
+                                               activeRow.Cells(nombreCelda).Value.ToString() <> "-" Then
+                                                    listaHorarios(i) = ("08:00", "17:00", "VACACIONES", "0", "0", "8", 1, "NO", "SIN ASIGNAR", "0")
+                                                    activeRow.Cells(nombreCelda).Value = "V"
+                                                    diasAplicados += 1
+                                                    If i + 1 > ultimoDiaPintado Then ultimoDiaPintado = i + 1
+                                                End If
+                                            Next
                                         Next
                                     End If
 
-                                    ' Actualizar totales según los días procesados
-                                    Dim diasTrabajados As Integer = obj.DiaFin - obj.DiaInicio + 1
-                                    activeRow.Cells("H.T").Value = diasTrabajados * 8
-                                    activeRow.Cells("H.TR").Value = diasTrabajados * 8
+                                    If ultimoDiaPintado > 0 Then ultimoDiaRegistroEventual = ultimoDiaPintado
+
+                                    ' Actualizar totales según los días realmente pintados
+                                    activeRow.Cells("H.T").Value = diasAplicados * 8
+                                    activeRow.Cells("H.TR").Value = diasAplicados * 8
                                     activeRow.Cells("H.EX").Value = 0
 
                                     Colorear()

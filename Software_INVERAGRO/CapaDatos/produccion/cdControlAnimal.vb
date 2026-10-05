@@ -1511,4 +1511,80 @@ Public Class cdControlAnimal
             Throw ex
         End Try
     End Function
+
+    Public Function Cd_ReporteCondCorporal(name As String, obj As coControlAnimal) As DataTable
+        Dim dt As New DataTable
+        Try
+            con.Abrir()
+            Dim da As New SqlDataAdapter(name, con.con)
+            da.SelectCommand.CommandType = 4
+            da.SelectCommand.Parameters.AddWithValue("@FechaInicio", obj.FechaDesde)
+            da.SelectCommand.Parameters.AddWithValue("@FechaFin", obj.FechaHasta)
+            da.SelectCommand.Parameters.AddWithValue("@idUbicacion", obj.IdPlantel)
+            da.SelectCommand.Parameters.AddWithValue("@tipo", obj.TipoControl)
+            da.Fill(dt)
+        Catch ex As Exception
+            Throw ex
+        End Try
+        con.Salir()
+        Return dt
+    End Function
+
+    Public Function Cd_ReporteCondCorporalFechas(name As String, obj As coControlAnimal) As DataTable
+        Dim dt As New DataTable
+        Try
+            con.Abrir()
+            Dim da As New SqlDataAdapter(name, con.con)
+            da.SelectCommand.CommandType = 4
+            da.SelectCommand.Parameters.AddWithValue("@FechaInicio", obj.FechaDesde)
+            da.SelectCommand.Parameters.AddWithValue("@FechaFin", obj.FechaHasta)
+            da.SelectCommand.Parameters.AddWithValue("@idUbicacion", obj.IdPlantel)
+            da.Fill(dt)
+        Catch ex As Exception
+            Throw ex
+        End Try
+        con.Salir()
+        Return dt
+    End Function
+
+    Public Function Cd_ResumenCostoKiloCerdoTeoricoReal(name As String, obj As coControlAnimal) As DataTable
+        Dim dt As New DataTable
+        Try
+            con.Abrir()
+            Dim da As New SqlDataAdapter(name, con.con)
+            da.SelectCommand.CommandType = 4
+            da.SelectCommand.Parameters.AddWithValue("@idCampaña", obj.IdCampaña)
+            da.SelectCommand.Parameters.AddWithValue("@totalCampaña", obj.TotalCampaña)
+            da.Fill(dt)
+        Catch ex As Exception
+            Throw ex
+        End Try
+        con.Salir()
+        Return dt
+    End Function
+
+    Public Function Cd_EditarHistorialHembra(name As String, obj As coControlAnimal) As String
+        Dim mensaje As String
+        Dim cmd As New SqlCommand(name, con.con)
+        Try
+            con.Abrir()
+            cmd.CommandType = 4
+
+            With cmd.Parameters
+                .Add("@idAnimal", SqlDbType.Int).Value = obj.Codigo
+                .Add("@idsOrdenados", SqlDbType.VarChar).Value = obj.ListaIdsControlFicha
+                .Add("@msj", SqlDbType.VarChar, 100).Direction = 2
+                .Add("@coderror", SqlDbType.Int).Direction = 2
+            End With
+            cmd.ExecuteNonQuery()
+            mensaje = cmd.Parameters("@msj").Value.ToString
+            obj.Coderror = cmd.Parameters("@coderror").Value.ToString
+            con.Salir()
+            Return mensaje
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Function
+
+
 End Class

@@ -117,6 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="RichTextBox1.Text" xml:space="preserve">
+    <value>CÓMO SE CALCULA EL PRORRATEO
+Monto Original     = Pago total de la quincena/mes (todo el personal)
+% Area             = Personas del área reproducción / Total personas
+% Dias             = Días del período dentro del rango de monta / Días totales del período
+Monto Prorrateado  = Monto Original x % Area x % Dias
+Costo x Lechón     = SUM(Monto Prorrateado) / Crías Destetadas</value>
+  </data>
   <metadata name="BarraOpciones.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>

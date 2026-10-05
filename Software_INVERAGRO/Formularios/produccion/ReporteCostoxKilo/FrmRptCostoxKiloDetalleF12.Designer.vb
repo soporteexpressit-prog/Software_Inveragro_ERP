@@ -41,7 +41,9 @@ Partial Class FrmRptCostoxKiloDetalleF12
         Me.LblTotal = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
+        Me.LblCostoVeteBruto = New System.Windows.Forms.Label()
         Me.LblVendidosSinPlantel = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.LblInicioDestete = New System.Windows.Forms.Label()
         Me.LblFinDestete = New System.Windows.Forms.Label()
@@ -58,8 +60,7 @@ Partial Class FrmRptCostoxKiloDetalleF12
         Me.Ptbx_Cargando = New System.Windows.Forms.PictureBox()
         Me.dtgListado = New Infragistics.Win.UltraWinGrid.UltraGrid()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.LblCostoVeteBruto = New System.Windows.Forms.Label()
+        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.Panel2.SuspendLayout()
         Me.BarraOpciones.SuspendLayout()
         CType(Me.Ptbx_Cargando, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -69,6 +70,7 @@ Partial Class FrmRptCostoxKiloDetalleF12
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.Panel2.Controls.Add(Me.RichTextBox1)
         Me.Panel2.Controls.Add(Me.LblTotal)
         Me.Panel2.Controls.Add(Me.Label11)
         Me.Panel2.Controls.Add(Me.Label6)
@@ -132,6 +134,19 @@ Partial Class FrmRptCostoxKiloDetalleF12
         Me.Label6.TabIndex = 215
         Me.Label6.Text = "Solo se considera productos de categoría MEDICINA - ACCESORIOS VETERINARIOS "
         '
+        'LblCostoVeteBruto
+        '
+        Me.LblCostoVeteBruto.AutoSize = True
+        Me.LblCostoVeteBruto.BackColor = System.Drawing.Color.Transparent
+        Me.LblCostoVeteBruto.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblCostoVeteBruto.ForeColor = System.Drawing.Color.Black
+        Me.LblCostoVeteBruto.Location = New System.Drawing.Point(579, 125)
+        Me.LblCostoVeteBruto.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblCostoVeteBruto.Name = "LblCostoVeteBruto"
+        Me.LblCostoVeteBruto.Size = New System.Drawing.Size(14, 13)
+        Me.LblCostoVeteBruto.TabIndex = 211
+        Me.LblCostoVeteBruto.Text = "0"
+        '
         'LblVendidosSinPlantel
         '
         Me.LblVendidosSinPlantel.AutoSize = True
@@ -144,6 +159,19 @@ Partial Class FrmRptCostoxKiloDetalleF12
         Me.LblVendidosSinPlantel.Size = New System.Drawing.Size(14, 13)
         Me.LblVendidosSinPlantel.TabIndex = 210
         Me.LblVendidosSinPlantel.Text = "0"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.Label3.Location = New System.Drawing.Point(400, 124)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(171, 14)
+        Me.Label3.TabIndex = 208
+        Me.Label3.Text = "Costo Veterinario Bruto :"
         '
         'Label1
         '
@@ -408,31 +436,16 @@ Partial Class FrmRptCostoxKiloDetalleF12
         'BackgroundWorker1
         '
         '
-        'Label3
+        'RichTextBox1
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.BackColor = System.Drawing.Color.Transparent
-        Me.Label3.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(400, 124)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(171, 14)
-        Me.Label3.TabIndex = 208
-        Me.Label3.Text = "Costo Veterinario Bruto :"
-        '
-        'LblCostoVeteBruto
-        '
-        Me.LblCostoVeteBruto.AutoSize = True
-        Me.LblCostoVeteBruto.BackColor = System.Drawing.Color.Transparent
-        Me.LblCostoVeteBruto.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblCostoVeteBruto.ForeColor = System.Drawing.Color.Black
-        Me.LblCostoVeteBruto.Location = New System.Drawing.Point(579, 125)
-        Me.LblCostoVeteBruto.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.LblCostoVeteBruto.Name = "LblCostoVeteBruto"
-        Me.LblCostoVeteBruto.Size = New System.Drawing.Size(14, 13)
-        Me.LblCostoVeteBruto.TabIndex = 211
-        Me.LblCostoVeteBruto.Text = "0"
+        Me.RichTextBox1.HideSelection = False
+        Me.RichTextBox1.Location = New System.Drawing.Point(811, 37)
+        Me.RichTextBox1.Name = "RichTextBox1"
+        Me.RichTextBox1.ReadOnly = True
+        Me.RichTextBox1.Size = New System.Drawing.Size(193, 72)
+        Me.RichTextBox1.TabIndex = 218
+        Me.RichTextBox1.Text = """Costo x Vendido"" significa: cuánto costo en gastos veterinarios corresponde, en " &
+    "promedio, a cada animal vendido."
         '
         'FrmRptCostoxKiloDetalleF12
         '
@@ -480,4 +493,5 @@ Partial Class FrmRptCostoxKiloDetalleF12
     Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
     Friend WithEvents LblCostoVeteBruto As Label
     Friend WithEvents Label3 As Label
+    Friend WithEvents RichTextBox1 As RichTextBox
 End Class

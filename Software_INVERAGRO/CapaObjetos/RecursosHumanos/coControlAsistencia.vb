@@ -262,4 +262,16 @@
             _DiaFin = value
         End Set
     End Property
+
+    ' Todos los tramos de vacaciones que caen en el mes consultado (uno por permiso).
+    ' Cada tramo ya viene recortado a los límites del mes por el SP.
+    Private _TramosVacaciones As New List(Of (DiaInicio As Integer, DiaFin As Integer))
+    Public Property TramosVacaciones As List(Of (DiaInicio As Integer, DiaFin As Integer))
+        Get
+            Return _TramosVacaciones
+        End Get
+        Set(value As List(Of (DiaInicio As Integer, DiaFin As Integer)))
+            _TramosVacaciones = value
+        End Set
+    End Property
 End Class
