@@ -266,36 +266,6 @@ Public Class FrmMant_Proveedor
     End Sub
 
 
-    Private Sub ToolStripButton1_Click(sender As Object, e As EventArgs) Handles ToolStripButton1ComprasConvercli.Click
-        Try
-            If (dtg_Listado.Rows.Count > 0) Then
-                If Not String.IsNullOrEmpty(dtg_Listado.ActiveRow.Cells(0).Value.ToString()) Then
-                    Dim codigo As String = dtg_Listado.ActiveRow.Cells(0).Value.ToString()
-                    Dim resultado As DialogResult = MessageBox.Show("¿Estás seguro de que quieres convertirlo?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
-                    If resultado = DialogResult.Yes Then
-                        Try
-                            Dim f As New FrmMantenimientoCliente
-                            f._Codigo = dtg_Listado.ActiveRow.Cells(0).Value.ToString
-                            f.ShowDialog()
-                            f.Consultar()
-                        Catch ex As Exception
-                            clsBasicas.controlException(Name, ex)
-                        End Try
-                    Else
-                        msj_advert(MensajesSistema.mensajesGenerales("Conversión cancelada."))
-                    End If
-                Else
-                    msj_advert(MensajesSistema.mensajesGenerales("SELECCIONE_REGISTRO"))
-                End If
-            Else
-                msj_advert(MensajesSistema.mensajesGenerales("SELECCIONE_REGISTRO"))
-            End If
-        Catch ex As Exception
-            'clsBasicas.controlException(Name, ex)
-        End Try
-    End Sub
-
-
 
     Private Sub ToolStripButton1_Click_1(sender As Object, e As EventArgs) Handles ToolStripButton1.Click
         Dim isFilterActive As Boolean = Not ToolStripButton1.Checked
@@ -331,5 +301,85 @@ Public Class FrmMant_Proveedor
 
     Private Sub ToolStrip1_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs) Handles ToolStrip1.ItemClicked
 
+    End Sub
+
+    Private Sub ConvertirAProveedorToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ConvertirAProveedorToolStripMenuItem.Click
+        Try
+            If (dtg_Listado.Rows.Count > 0) Then
+                If Not String.IsNullOrEmpty(dtg_Listado.ActiveRow.Cells(0).Value.ToString()) Then
+                    Dim codigo As String = dtg_Listado.ActiveRow.Cells(0).Value.ToString()
+                    Dim resultado As DialogResult = MessageBox.Show("¿Estás seguro de que quieres convertirlo?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+                    If resultado = DialogResult.Yes Then
+                        Try
+                            Dim f As New FrmMantenimientoCliente
+                            f._Codigo = dtg_Listado.ActiveRow.Cells(0).Value.ToString
+                            f.ShowDialog()
+                            f.Consultar()
+                        Catch ex As Exception
+                            clsBasicas.controlException(Name, ex)
+                        End Try
+                    Else
+                        msj_advert(MensajesSistema.mensajesGenerales("Conversión cancelada."))
+                    End If
+                Else
+                    msj_advert(MensajesSistema.mensajesGenerales("SELECCIONE_REGISTRO"))
+                End If
+            Else
+                msj_advert(MensajesSistema.mensajesGenerales("SELECCIONE_REGISTRO"))
+            End If
+        Catch ex As Exception
+            'clsBasicas.controlException(Name, ex)
+        End Try
+    End Sub
+
+    Private Sub ToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem1.Click
+        Try
+            If (dtg_Listado.Rows.Count > 0) Then
+                If Not String.IsNullOrEmpty(dtg_Listado.ActiveRow.Cells(0).Value.ToString()) Then
+                    Dim codigo As String = dtg_Listado.ActiveRow.Cells(0).Value.ToString()
+                    Dim resultado As DialogResult = MessageBox.Show("¿Estás seguro de que quieres convertirlo?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+                    If resultado = DialogResult.Yes Then
+                        Try
+                            Dim f As New FrmTrabajador
+                            f._Codigo = dtg_Listado.ActiveRow.Cells(0).Value.ToString
+                            f.operacion = 1
+                            f.ShowDialog()
+                            f.Consultar()
+                            Consultar()
+                        Catch ex As Exception
+                            ' clsBasicas.controlException(Name, ex)
+                        End Try
+                    Else
+                        msj_advert(MensajesSistema.mensajesGenerales("Conversión cancelada."))
+                    End If
+                Else
+                    msj_advert(MensajesSistema.mensajesGenerales("SELECCIONE_REGISTRO"))
+                End If
+            Else
+                msj_advert(MensajesSistema.mensajesGenerales("SELECCIONE_REGISTRO"))
+            End If
+        Catch ex As Exception
+            'clsBasicas.controlException(Name, ex)
+        End Try
+    End Sub
+
+    Private Sub ConvertirAConductorToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ConvertirAConductorToolStripMenuItem.Click
+        Try
+            If (dtg_Listado.Rows.Count > 0) Then
+                If (dtg_Listado.ActiveRow.Cells(0).Value.ToString.Length <> 0) Then
+                    Dim f As New Mant_Conductores
+                    f._Codigo = dtg_Listado.ActiveRow.Cells(0).Value.ToString
+                    f._tipotrabajador = "CONDUCTOR"
+                    f.ShowDialog()
+                    Consultar()
+                Else
+                    msj_advert("Seleccione un Registro")
+                End If
+            Else
+                msj_advert("Seleccione un Registro")
+            End If
+        Catch ex As Exception
+            'clsBasicas.controlException(Name, ex)
+        End Try
     End Sub
 End Class
