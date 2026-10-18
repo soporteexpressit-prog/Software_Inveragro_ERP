@@ -47,7 +47,10 @@ Partial Class FrmMant_Proveedor
         Me.btnexportar_excelcomprasproveedores = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButton1comprasproveedores = New System.Windows.Forms.ToolStripDropDownButton()
         Me.btnImprimirListaProveedor = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripButton1ComprasConvercli = New System.Windows.Forms.ToolStripButton()
+        Me.btnconvertirclientesVentas = New System.Windows.Forms.ToolStripDropDownButton()
+        Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ConvertirAProveedorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ConvertirAConductorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.btn_cerrar = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButton2 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
@@ -72,10 +75,9 @@ Partial Class FrmMant_Proveedor
         Me.Label1.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(233, Byte), Integer))
         Me.Label1.Font = New System.Drawing.Font("Verdana", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(49, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(18, 28)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(12, 18)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(381, 29)
+        Me.Label1.Size = New System.Drawing.Size(256, 18)
         Me.Label1.TabIndex = 129
         Me.Label1.Text = "MODULO DE PROVEEDORES"
         '
@@ -169,10 +171,9 @@ Partial Class FrmMant_Proveedor
         Me.dtg_Listado.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy
         Me.dtg_Listado.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dtg_Listado.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dtg_Listado.Location = New System.Drawing.Point(4, 24)
-        Me.dtg_Listado.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.dtg_Listado.Location = New System.Drawing.Point(3, 16)
         Me.dtg_Listado.Name = "dtg_Listado"
-        Me.dtg_Listado.Size = New System.Drawing.Size(1754, 858)
+        Me.dtg_Listado.Size = New System.Drawing.Size(1169, 558)
         Me.dtg_Listado.TabIndex = 181
         Me.dtg_Listado.Text = "UltraGrid1"
         '
@@ -183,13 +184,13 @@ Partial Class FrmMant_Proveedor
         Me.ToolStrip1.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold)
         Me.ToolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
         Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btn_nuevocomprasproveedores, Me.btn_editarcomprasproveedores, Me.btnexportar_excelcomprasproveedores, Me.ToolStripButton1comprasproveedores, Me.ToolStripButton1ComprasConvercli, Me.btn_cerrar, Me.ToolStripButton2, Me.ToolStripButton1})
-        Me.ToolStrip1.Location = New System.Drawing.Point(0, 99)
-        Me.ToolStrip1.Margin = New System.Windows.Forms.Padding(3, 3, 3, 3)
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btn_nuevocomprasproveedores, Me.btn_editarcomprasproveedores, Me.btnexportar_excelcomprasproveedores, Me.ToolStripButton1comprasproveedores, Me.btnconvertirclientesVentas, Me.btn_cerrar, Me.ToolStripButton2, Me.ToolStripButton1})
+        Me.ToolStrip1.Location = New System.Drawing.Point(0, 54)
+        Me.ToolStrip1.Margin = New System.Windows.Forms.Padding(2)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Padding = New System.Windows.Forms.Padding(0, 0, 3, 0)
+        Me.ToolStrip1.Padding = New System.Windows.Forms.Padding(0, 0, 2, 0)
         Me.ToolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System
-        Me.ToolStrip1.Size = New System.Drawing.Size(1762, 43)
+        Me.ToolStrip1.Size = New System.Drawing.Size(1175, 38)
         Me.ToolStrip1.TabIndex = 180
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -203,7 +204,7 @@ Partial Class FrmMant_Proveedor
         Me.btn_nuevocomprasproveedores.Margin = New System.Windows.Forms.Padding(5)
         Me.btn_nuevocomprasproveedores.Name = "btn_nuevocomprasproveedores"
         Me.btn_nuevocomprasproveedores.Padding = New System.Windows.Forms.Padding(2)
-        Me.btn_nuevocomprasproveedores.Size = New System.Drawing.Size(118, 33)
+        Me.btn_nuevocomprasproveedores.Size = New System.Drawing.Size(90, 28)
         Me.btn_nuevocomprasproveedores.Text = " Nuevo"
         Me.btn_nuevocomprasproveedores.ToolTipText = "Nuevo "
         '
@@ -216,7 +217,7 @@ Partial Class FrmMant_Proveedor
         Me.btn_editarcomprasproveedores.Margin = New System.Windows.Forms.Padding(5)
         Me.btn_editarcomprasproveedores.Name = "btn_editarcomprasproveedores"
         Me.btn_editarcomprasproveedores.Padding = New System.Windows.Forms.Padding(2)
-        Me.btn_editarcomprasproveedores.Size = New System.Drawing.Size(135, 33)
+        Me.btn_editarcomprasproveedores.Size = New System.Drawing.Size(102, 28)
         Me.btn_editarcomprasproveedores.Text = " Editar   "
         Me.btn_editarcomprasproveedores.ToolTipText = "Editar"
         '
@@ -230,7 +231,7 @@ Partial Class FrmMant_Proveedor
         Me.btnexportar_excelcomprasproveedores.Margin = New System.Windows.Forms.Padding(5)
         Me.btnexportar_excelcomprasproveedores.Name = "btnexportar_excelcomprasproveedores"
         Me.btnexportar_excelcomprasproveedores.Padding = New System.Windows.Forms.Padding(2)
-        Me.btnexportar_excelcomprasproveedores.Size = New System.Drawing.Size(144, 33)
+        Me.btnexportar_excelcomprasproveedores.Size = New System.Drawing.Size(109, 28)
         Me.btnexportar_excelcomprasproveedores.Text = " Exportar"
         '
         'ToolStripButton1comprasproveedores
@@ -244,29 +245,50 @@ Partial Class FrmMant_Proveedor
         Me.ToolStripButton1comprasproveedores.Margin = New System.Windows.Forms.Padding(5)
         Me.ToolStripButton1comprasproveedores.Name = "ToolStripButton1comprasproveedores"
         Me.ToolStripButton1comprasproveedores.Padding = New System.Windows.Forms.Padding(2)
-        Me.ToolStripButton1comprasproveedores.Size = New System.Drawing.Size(162, 33)
+        Me.ToolStripButton1comprasproveedores.Size = New System.Drawing.Size(120, 28)
         Me.ToolStripButton1comprasproveedores.Text = " Reportes"
         Me.ToolStripButton1comprasproveedores.ToolTipText = "Reportes"
         '
         'btnImprimirListaProveedor
         '
         Me.btnImprimirListaProveedor.Name = "btnImprimirListaProveedor"
-        Me.btnImprimirListaProveedor.Size = New System.Drawing.Size(276, 34)
+        Me.btnImprimirListaProveedor.Size = New System.Drawing.Size(185, 22)
         Me.btnImprimirListaProveedor.Text = "Imprimir Lista"
         Me.btnImprimirListaProveedor.ToolTipText = "Imprimir Lista"
         '
-        'ToolStripButton1ComprasConvercli
+        'btnconvertirclientesVentas
         '
-        Me.ToolStripButton1ComprasConvercli.AutoToolTip = False
-        Me.ToolStripButton1ComprasConvercli.Font = New System.Drawing.Font("Verdana", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ToolStripButton1ComprasConvercli.ForeColor = System.Drawing.Color.White
-        Me.ToolStripButton1ComprasConvercli.Image = Global.Formularios.My.Resources.Resources.circle_of_two_clockwise_arrows_rotation
-        Me.ToolStripButton1ComprasConvercli.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton1ComprasConvercli.Margin = New System.Windows.Forms.Padding(5)
-        Me.ToolStripButton1ComprasConvercli.Name = "ToolStripButton1ComprasConvercli"
-        Me.ToolStripButton1ComprasConvercli.Padding = New System.Windows.Forms.Padding(2)
-        Me.ToolStripButton1ComprasConvercli.Size = New System.Drawing.Size(246, 33)
-        Me.ToolStripButton1ComprasConvercli.Text = "Convertir a cliente"
+        Me.btnconvertirclientesVentas.BackColor = System.Drawing.Color.Transparent
+        Me.btnconvertirclientesVentas.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem1, Me.ConvertirAProveedorToolStripMenuItem, Me.ConvertirAConductorToolStripMenuItem})
+        Me.btnconvertirclientesVentas.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnconvertirclientesVentas.ForeColor = System.Drawing.Color.White
+        Me.btnconvertirclientesVentas.Image = Global.Formularios.My.Resources.Resources.circle_of_two_clockwise_arrows_rotation
+        Me.btnconvertirclientesVentas.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btnconvertirclientesVentas.Margin = New System.Windows.Forms.Padding(5)
+        Me.btnconvertirclientesVentas.Name = "btnconvertirclientesVentas"
+        Me.btnconvertirclientesVentas.Padding = New System.Windows.Forms.Padding(2)
+        Me.btnconvertirclientesVentas.Size = New System.Drawing.Size(156, 28)
+        Me.btnconvertirclientesVentas.Text = "Convertir Cliente"
+        Me.btnconvertirclientesVentas.ToolTipText = "Reportes"
+        '
+        'ToolStripMenuItem1
+        '
+        Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(225, 22)
+        Me.ToolStripMenuItem1.Text = "Convertir a Trabajador"
+        Me.ToolStripMenuItem1.ToolTipText = "Imprimir Lista de Inventario"
+        '
+        'ConvertirAProveedorToolStripMenuItem
+        '
+        Me.ConvertirAProveedorToolStripMenuItem.Name = "ConvertirAProveedorToolStripMenuItem"
+        Me.ConvertirAProveedorToolStripMenuItem.Size = New System.Drawing.Size(225, 22)
+        Me.ConvertirAProveedorToolStripMenuItem.Text = "Convertir a Cliente"
+        '
+        'ConvertirAConductorToolStripMenuItem
+        '
+        Me.ConvertirAConductorToolStripMenuItem.Name = "ConvertirAConductorToolStripMenuItem"
+        Me.ConvertirAConductorToolStripMenuItem.Size = New System.Drawing.Size(225, 22)
+        Me.ConvertirAConductorToolStripMenuItem.Text = "Convertir a Conductor"
         '
         'btn_cerrar
         '
@@ -278,7 +300,7 @@ Partial Class FrmMant_Proveedor
         Me.btn_cerrar.Margin = New System.Windows.Forms.Padding(5)
         Me.btn_cerrar.Name = "btn_cerrar"
         Me.btn_cerrar.Padding = New System.Windows.Forms.Padding(2)
-        Me.btn_cerrar.Size = New System.Drawing.Size(91, 33)
+        Me.btn_cerrar.Size = New System.Drawing.Size(70, 28)
         Me.btn_cerrar.Text = "Salir"
         Me.btn_cerrar.ToolTipText = "Cerrar"
         '
@@ -293,7 +315,7 @@ Partial Class FrmMant_Proveedor
         Me.ToolStripButton2.Margin = New System.Windows.Forms.Padding(5)
         Me.ToolStripButton2.Name = "ToolStripButton2"
         Me.ToolStripButton2.Padding = New System.Windows.Forms.Padding(2)
-        Me.ToolStripButton2.Size = New System.Drawing.Size(121, 33)
+        Me.ToolStripButton2.Size = New System.Drawing.Size(88, 28)
         Me.ToolStripButton2.Text = "Agrupar"
         '
         'ToolStripButton1
@@ -307,17 +329,16 @@ Partial Class FrmMant_Proveedor
         Me.ToolStripButton1.Margin = New System.Windows.Forms.Padding(5)
         Me.ToolStripButton1.Name = "ToolStripButton1"
         Me.ToolStripButton1.Padding = New System.Windows.Forms.Padding(2)
-        Me.ToolStripButton1.Size = New System.Drawing.Size(102, 33)
+        Me.ToolStripButton1.Size = New System.Drawing.Size(77, 28)
         Me.ToolStripButton1.Text = "Filtros"
         '
         'Ptbx_Cargando
         '
         Me.Ptbx_Cargando.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Ptbx_Cargando.Image = Global.Formularios.My.Resources.Resources.loader
-        Me.Ptbx_Cargando.Location = New System.Drawing.Point(483, 537)
-        Me.Ptbx_Cargando.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Ptbx_Cargando.Location = New System.Drawing.Point(322, 349)
         Me.Ptbx_Cargando.Name = "Ptbx_Cargando"
-        Me.Ptbx_Cargando.Size = New System.Drawing.Size(64, 57)
+        Me.Ptbx_Cargando.Size = New System.Drawing.Size(43, 37)
         Me.Ptbx_Cargando.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.Ptbx_Cargando.TabIndex = 182
         Me.Ptbx_Cargando.TabStop = False
@@ -329,9 +350,8 @@ Partial Class FrmMant_Proveedor
         Me.Panel1.Controls.Add(Me.ToolStrip1)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1762, 142)
+        Me.Panel1.Size = New System.Drawing.Size(1175, 92)
         Me.Panel1.TabIndex = 183
         '
         'GroupBox1
@@ -339,22 +359,21 @@ Partial Class FrmMant_Proveedor
         Me.GroupBox1.Controls.Add(Me.dtg_Listado)
         Me.GroupBox1.Controls.Add(Me.Ptbx_Cargando)
         Me.GroupBox1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.GroupBox1.Location = New System.Drawing.Point(0, 142)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.GroupBox1.Location = New System.Drawing.Point(0, 92)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.GroupBox1.Size = New System.Drawing.Size(1762, 887)
+        Me.GroupBox1.Size = New System.Drawing.Size(1175, 577)
         Me.GroupBox1.TabIndex = 184
         Me.GroupBox1.TabStop = False
         '
         'FrmMant_Proveedor
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(233, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1762, 1029)
+        Me.ClientSize = New System.Drawing.Size(1175, 669)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Panel1)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "FrmMant_Proveedor"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "PROVEEDORES"
@@ -378,11 +397,14 @@ Partial Class FrmMant_Proveedor
     Friend WithEvents btnexportar_excelcomprasproveedores As ToolStripButton
     Friend WithEvents ToolStripButton1comprasproveedores As ToolStripDropDownButton
     Friend WithEvents btnImprimirListaProveedor As ToolStripMenuItem
-    Friend WithEvents ToolStripButton1ComprasConvercli As ToolStripButton
     Friend WithEvents btn_cerrar As ToolStripButton
     Friend WithEvents ToolStripButton2 As ToolStripButton
     Friend WithEvents ToolStripButton1 As ToolStripButton
     Friend WithEvents ToolStrip1 As ToolStrip
     Friend WithEvents Panel1 As Panel
     Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents btnconvertirclientesVentas As ToolStripDropDownButton
+    Friend WithEvents ToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents ConvertirAProveedorToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ConvertirAConductorToolStripMenuItem As ToolStripMenuItem
 End Class
