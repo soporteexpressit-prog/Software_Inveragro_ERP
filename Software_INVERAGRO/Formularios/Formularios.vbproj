@@ -1984,6 +1984,12 @@
     <Compile Include="produccion\RegularizacionCerdos\FrmRegularizarSalidaConArete.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="produccion\ReporteCostoxKilo\FrmRkcTrabajadoresxArea.Designer.vb">
+      <DependentUpon>FrmRkcTrabajadoresxArea.vb</DependentUpon>
+    </Compile>
+    <Compile Include="produccion\ReporteCostoxKilo\FrmRkcTrabajadoresxArea.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="produccion\ReporteCostoxKilo\FrmRptCostoxKiloDetalleF13.Designer.vb">
       <DependentUpon>FrmRptCostoxKiloDetalleF13.vb</DependentUpon>
     </Compile>
@@ -2024,6 +2030,12 @@
       <DependentUpon>FrmRptCostoxKiloDetalleF15.vb</DependentUpon>
     </Compile>
     <Compile Include="produccion\ReporteCostoxKilo\FrmRptCostoxKiloDetalleF15.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="produccion\ReporteCostoxKilo\FrmRptCostoxKiloDetalleF16.Designer.vb">
+      <DependentUpon>FrmRptCostoxKiloDetalleF16.vb</DependentUpon>
+    </Compile>
+    <Compile Include="produccion\ReporteCostoxKilo\FrmRptCostoxKiloDetalleF16.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="produccion\ReporteCostoxKilo\FrmRptCostoxKiloDetalleF2.Designer.vb">
@@ -5020,6 +5032,9 @@
     <EmbeddedResource Include="produccion\RegularizacionCerdos\FrmRegularizarSalidaConArete.resx">
       <DependentUpon>FrmRegularizarSalidaConArete.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="produccion\ReporteCostoxKilo\FrmRkcTrabajadoresxArea.resx">
+      <DependentUpon>FrmRkcTrabajadoresxArea.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="produccion\ReporteCostoxKilo\FrmRptCostoxKiloDetalleF1.resx">
       <DependentUpon>FrmRptCostoxKiloDetalleF1.vb</DependentUpon>
     </EmbeddedResource>
@@ -5040,6 +5055,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="produccion\ReporteCostoxKilo\FrmRptCostoxKiloDetalleF15.resx">
       <DependentUpon>FrmRptCostoxKiloDetalleF15.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="produccion\ReporteCostoxKilo\FrmRptCostoxKiloDetalleF16.resx">
+      <DependentUpon>FrmRptCostoxKiloDetalleF16.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="produccion\ReporteCostoxKilo\FrmRptCostoxKiloDetalleF2.resx">
       <DependentUpon>FrmRptCostoxKiloDetalleF2.vb</DependentUpon>
