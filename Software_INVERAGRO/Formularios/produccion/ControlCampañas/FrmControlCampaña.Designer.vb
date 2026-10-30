@@ -181,8 +181,8 @@ Partial Class FrmControlCampaña
         Me.BtnCerrarCampaña.Margin = New System.Windows.Forms.Padding(5)
         Me.BtnCerrarCampaña.Name = "BtnCerrarCampaña"
         Me.BtnCerrarCampaña.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnCerrarCampaña.Size = New System.Drawing.Size(143, 28)
-        Me.BtnCerrarCampaña.Text = "Cerrar Campaña"
+        Me.BtnCerrarCampaña.Size = New System.Drawing.Size(134, 28)
+        Me.BtnCerrarCampaña.Text = "Cerrar Llenado"
         Me.BtnCerrarCampaña.ToolTipText = "Finalizar Venta"
         '
         'BtnFinalizarVenta
@@ -194,8 +194,8 @@ Partial Class FrmControlCampaña
         Me.BtnFinalizarVenta.Margin = New System.Windows.Forms.Padding(5)
         Me.BtnFinalizarVenta.Name = "BtnFinalizarVenta"
         Me.BtnFinalizarVenta.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnFinalizarVenta.Size = New System.Drawing.Size(134, 28)
-        Me.BtnFinalizarVenta.Text = "Finalizar Venta"
+        Me.BtnFinalizarVenta.Size = New System.Drawing.Size(143, 28)
+        Me.BtnFinalizarVenta.Text = "Cerrar Campaña"
         Me.BtnFinalizarVenta.ToolTipText = "Finalizar Venta"
         '
         'BtnCerrar

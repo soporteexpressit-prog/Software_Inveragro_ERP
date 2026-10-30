@@ -51,7 +51,7 @@ Public Class FrmListarSemenPorcino
             If (dtgListado.Rows.Count > 0) Then
                 If (dtgListado.ActiveRow.Cells(0).Value.ToString.Length <> 0) Then
                     Dim codigo As String = e.Cell.Row.Cells("Código").Value.ToString()
-                    Dim codigoGenetica As Integer = e.Cell.Row.Cells("Código Genética").Value
+                    Dim codigoGenetica As String = e.Cell.Row.Cells("Código Genética").Value
                     Dim descripcion As String = e.Cell.Row.Cells("Descripción").Value.ToString()
                     Dim presentacion As String = e.Cell.Row.Cells("Presentación").Value.ToString()
                     Dim tipoProducto As String = e.Cell.Row.Cells("Tipo Producto").Value.ToString()
