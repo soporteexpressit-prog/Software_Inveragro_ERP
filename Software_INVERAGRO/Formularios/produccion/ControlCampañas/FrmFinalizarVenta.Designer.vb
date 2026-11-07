@@ -27,10 +27,10 @@ Partial Class FrmFinalizarVenta
         Me.BtnSalir = New System.Windows.Forms.ToolStripButton()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.LblPlantel = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.DtpFechaFinVenta = New System.Windows.Forms.DateTimePicker()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.LblPlantel = New System.Windows.Forms.Label()
         Me.ToolStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
@@ -84,9 +84,9 @@ Partial Class FrmFinalizarVenta
         Me.Label6.Location = New System.Drawing.Point(11, 59)
         Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(170, 18)
+        Me.Label6.Size = New System.Drawing.Size(175, 18)
         Me.Label6.TabIndex = 169
-        Me.Label6.Text = "FINALIZAR VENTA"
+        Me.Label6.Text = "CERRAR CAMPAÑA"
         '
         'GroupBox1
         '
@@ -102,6 +102,32 @@ Partial Class FrmFinalizarVenta
         Me.GroupBox1.TabIndex = 171
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Información"
+        '
+        'LblPlantel
+        '
+        Me.LblPlantel.AutoSize = True
+        Me.LblPlantel.BackColor = System.Drawing.Color.Transparent
+        Me.LblPlantel.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblPlantel.ForeColor = System.Drawing.Color.Black
+        Me.LblPlantel.Location = New System.Drawing.Point(169, 36)
+        Me.LblPlantel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblPlantel.Name = "LblPlantel"
+        Me.LblPlantel.Size = New System.Drawing.Size(13, 14)
+        Me.LblPlantel.TabIndex = 176
+        Me.LblPlantel.Text = "-"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.Label2.Location = New System.Drawing.Point(82, 36)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(80, 14)
+        Me.Label2.TabIndex = 175
+        Me.Label2.Text = "Ubicación :"
         '
         'Label1
         '
@@ -124,32 +150,6 @@ Partial Class FrmFinalizarVenta
         Me.DtpFechaFinVenta.Name = "DtpFechaFinVenta"
         Me.DtpFechaFinVenta.Size = New System.Drawing.Size(151, 21)
         Me.DtpFechaFinVenta.TabIndex = 173
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(82, 36)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(80, 14)
-        Me.Label2.TabIndex = 175
-        Me.Label2.Text = "Ubicación :"
-        '
-        'LblPlantel
-        '
-        Me.LblPlantel.AutoSize = True
-        Me.LblPlantel.BackColor = System.Drawing.Color.Transparent
-        Me.LblPlantel.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblPlantel.ForeColor = System.Drawing.Color.Black
-        Me.LblPlantel.Location = New System.Drawing.Point(169, 36)
-        Me.LblPlantel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.LblPlantel.Name = "LblPlantel"
-        Me.LblPlantel.Size = New System.Drawing.Size(13, 14)
-        Me.LblPlantel.TabIndex = 176
-        Me.LblPlantel.Text = "-"
         '
         'FrmFinalizarVenta
         '

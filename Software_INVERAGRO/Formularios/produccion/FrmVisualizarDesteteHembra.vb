@@ -57,6 +57,7 @@ Public Class FrmVisualizarDesteteHembra
                 LblDestetoNodriza.Text = row("destetoNodriza").ToString()
                 LblPlantel.Text = row("plantel").ToString()
                 LblArea.Text = row("area").ToString()
+                LblJaulaCorralGalpon.Text = row("galpon").ToString() & " | " & row("corral").ToString() & " | " & row("sala").ToString()
 
                 mensaje = "El destete registro " & row("numPuras").ToString() & " puras y " & row("numCambor").ToString() & " camborough."
                 LblMensaje.Text = mensaje

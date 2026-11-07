@@ -215,6 +215,7 @@ Public Class cdJaulaCorral
                 .AddWithValue("@estado", SqlDbType.VarChar).Value = obj.Estado
                 .AddWithValue("@idGalpon", SqlDbType.Int).Value = obj.IdGalpon
                 .AddWithValue("@idSala", SqlDbType.Int).Value = obj.IdSala
+                .AddWithValue("@idSala", SqlDbType.Int).Value = obj.IdSala
                 .Add("@msj", SqlDbType.VarChar, 100).Direction = 2
                 .Add("@coderror", SqlDbType.Int).Direction = 2
             End With

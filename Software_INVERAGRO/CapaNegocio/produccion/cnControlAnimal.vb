@@ -452,4 +452,8 @@ Public Class cnControlAnimal
     Public Function Cn_EditarHistorialHembra(ByRef obj As coControlAnimal) As String
         Return cls_at.Cd_EditarHistorialHembra("[w_pa_reordenar_eventos_cerda]", obj)
     End Function
+
+    Public Function Cn_ConsultarPersonaxArea(ByRef obj As coControlAnimal) As DataTable
+        Return cls_at.Cd_ConsultarPersonaxArea("[w_pa_personal_x_ubicacion]", obj)
+    End Function
 End Class

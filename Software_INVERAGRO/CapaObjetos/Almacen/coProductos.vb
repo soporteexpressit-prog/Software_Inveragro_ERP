@@ -31,6 +31,7 @@
     Private _IdProductoEquivalencia As Integer
     Private _NumDosis As Integer
     Private _Ml As Integer
+    Private _Abreviatura As String
 
     Public Property Idproducto As Integer
         Get
@@ -315,6 +316,15 @@
         End Get
         Set(value As Integer)
             _Ml = value
+        End Set
+    End Property
+
+    Public Property Abreviatura As String
+        Get
+            Return _Abreviatura
+        End Get
+        Set(value As String)
+            _Abreviatura = value
         End Set
     End Property
 End Class

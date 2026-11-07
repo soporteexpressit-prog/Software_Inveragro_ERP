@@ -137,6 +137,11 @@ Public Class FrmProducto
             obj.esmolino = _esmolino
             obj.EsRacionExterna = _esRacionExterna
             obj.IdProductoEquivalencia = codProductoEq
+            If (cbxcategoria.Value = 1015 Or cbxcategoria.Value = 12) Then
+                obj.Abreviatura = If(RbtMacho.Checked, "MACHO", "HEMBRA")
+            Else
+                obj.Abreviatura = ""
+            End If
             If String.IsNullOrWhiteSpace(TxtNumDosis.Text) Then
                 obj.NumDosis = 0
             Else
@@ -466,6 +471,14 @@ Public Class FrmProducto
             codProductoEq = 0
             TxtNombreEqProducto.Text = ""
             TxtEqProducto.Text = ""
+        End If
+    End Sub
+
+    Private Sub cbxcategoria_ValueChanged(sender As Object, e As EventArgs) Handles cbxcategoria.ValueChanged
+        If (cbxcategoria.Value = 1015 Or cbxcategoria.Value = 12) Then
+            GroupBox4.Visible = True
+        Else
+            GroupBox4.Visible = False
         End If
     End Sub
 

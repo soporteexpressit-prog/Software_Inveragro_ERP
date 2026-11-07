@@ -174,7 +174,8 @@ Public Class FrmMantenimientoJaula
                 .IdGalpon = cmbGalpon.Value,
                 .IdSala = If(CkxSala.Checked, CmbSala.Value, Nothing),
                 .Tipo = "JAULA",
-                .Abreviatura = TxtAbreviatura.Text
+                .Abreviatura = TxtAbreviatura.Text,
+                .EsEmbarcadero = "NO"
             }
 
             Dim _mensaje As String = cn.Cn_Mantenimiento(obj)

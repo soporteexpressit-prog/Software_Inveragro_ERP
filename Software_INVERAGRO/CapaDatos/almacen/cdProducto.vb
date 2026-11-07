@@ -35,6 +35,7 @@ Public Class cdProducto
                 .AddWithValue("@idProductoEquivalencia", SqlDbType.Int).Value = obj.IdProductoEquivalencia
                 .AddWithValue("@numDosis", SqlDbType.Int).Value = obj.NumDosis
                 .AddWithValue("@ml", SqlDbType.Int).Value = obj.Ml
+                .AddWithValue("@abreviatura", SqlDbType.VarChar).Value = obj.Abreviatura
                 .Add("@msj", SqlDbType.VarChar, 100).Direction = ParameterDirection.Output
                 .Add("@coderror", SqlDbType.Int).Direction = ParameterDirection.Output
             End With

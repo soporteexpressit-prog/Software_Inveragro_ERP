@@ -1090,11 +1090,11 @@ Public Class FrmReporteCostoxKiloCerdo
                         }
                         frm.ShowDialog()
                     ElseIf idDetalleVal = "RP30" Then
-                        'Dim frm As New FrmRptCostoxKiloDetalleF16 With {
-                        '    .idDetalle = idDetalleVal,
-                        '    .idCampaña = CmbCampaña.Value
-                        '}
-                        'frm.ShowDialog()
+                        Dim frm As New FrmRptCostoxKiloDetalleF16 With {
+                            .idDetalle = idDetalleVal,
+                            .idCampaña = CmbCampaña.Value
+                        }
+                        frm.ShowDialog()
                     End If
                 End If
             End With
@@ -1220,5 +1220,53 @@ Public Class FrmReporteCostoxKiloCerdo
         Else
             dtgListado5.DataSource = CType(e.Result, DataTable)
         End If
+    End Sub
+
+    Private Sub BtnTrabajadores1_Click(sender As Object, e As EventArgs) Handles BtnTrabajadores1.Click
+        Try
+            Dim frm As New FrmRkcTrabajadoresxArea With {
+                .IdCampaña = CmbCampaña.Value,
+                .IdsArea = "11,2" 'Area de Gestación y chanchilla
+            }
+            frm.ShowDialog()
+        Catch ex As Exception
+            clsBasicas.controlException(Name, ex)
+        End Try
+    End Sub
+
+    Private Sub BtnTrabajadores2_Click(sender As Object, e As EventArgs) Handles BtnTrabajadores2.Click
+        Try
+            Dim frm As New FrmRkcTrabajadoresxArea With {
+                .IdCampaña = CmbCampaña.Value,
+                .IdsArea = "1" 'Area de Maternidad
+            }
+            frm.ShowDialog()
+        Catch ex As Exception
+            clsBasicas.controlException(Name, ex)
+        End Try
+    End Sub
+
+    Private Sub BtnTrabajadores3_Click(sender As Object, e As EventArgs) Handles BtnTrabajadores3.Click
+        Try
+            Dim frm As New FrmRkcTrabajadoresxArea With {
+                .IdCampaña = CmbCampaña.Value,
+                .IdsArea = "3" 'Area de Recría
+            }
+            frm.ShowDialog()
+        Catch ex As Exception
+            clsBasicas.controlException(Name, ex)
+        End Try
+    End Sub
+
+    Private Sub BtnTrabajadores4_Click(sender As Object, e As EventArgs) Handles BtnTrabajadores4.Click
+        Try
+            Dim frm As New FrmRkcTrabajadoresxArea With {
+                .IdCampaña = CmbCampaña.Value,
+                .IdsArea = "4" 'Area de Engorde
+            }
+            frm.ShowDialog()
+        Catch ex As Exception
+            clsBasicas.controlException(Name, ex)
+        End Try
     End Sub
 End Class
