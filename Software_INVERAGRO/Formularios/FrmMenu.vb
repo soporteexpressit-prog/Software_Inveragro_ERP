@@ -1405,4 +1405,12 @@ GetType(FrmUnidadMedida)}
     Private Sub COSTOXKILOCERDOToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles COSTOXKILOCERDOToolStripMenuItem.Click
         AbrirFormulario("FrmReporteCostoxKiloCerdo")
     End Sub
+
+    Private Sub UBICACIONESToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UBICACIONESToolStripMenuItem.Click
+        AbrirFormulario("FrmUbicacion")
+    End Sub
+
+    Private Sub AREASToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AREASToolStripMenuItem.Click
+        AbrirFormulario("FrmArea")
+    End Sub
 End Class

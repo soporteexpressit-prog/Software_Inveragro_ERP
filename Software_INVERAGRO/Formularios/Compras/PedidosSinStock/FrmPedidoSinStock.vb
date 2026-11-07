@@ -120,19 +120,48 @@ Public Class FrmPedidoSinStock
             ConsultarPedido()
         End If
     End Sub
+
     Sub ConsultarPedido()
         Dim obj As New coIngreso
         Dim cn As New cnIngreso
         obj.Codigo = _codigo
         Dim ds As New DataSet
         ds = cn.Cn_ConsultarPedidoxCodigo(obj).Copy
-        DtDetalle = ds.Tables(1).Copy
+
+        ' Recrear DtDetalle con la estructura correcta
+        Dim dtOriginal As DataTable = ds.Tables(1).Copy
+        DtDetalle = New DataTable("TempDetProd")
+        DtDetalle.Columns.Add("codprod", GetType(Integer))
+        DtDetalle.Columns.Add("producto", GetType(String))
+        DtDetalle.Columns.Add("unidad", GetType(String))
+        DtDetalle.Columns.Add("cantidad", GetType(Decimal))
+        DtDetalle.Columns.Add("precunit", GetType(Decimal))
+        DtDetalle.Columns.Add("idalcance", GetType(Integer))
+        DtDetalle.Columns.Add("idConversion", GetType(Integer))
+        DtDetalle.Columns.Add("btneliminar", GetType(String))
+
+        ' Copiar datos del DataTable original al nuevo
+        For Each row As DataRow In dtOriginal.Rows
+            Dim newRow As DataRow = DtDetalle.NewRow()
+
+            ' Copiar solo las primeras 7 columnas (o menos si no existen)
+            For i As Integer = 0 To Math.Min(6, dtOriginal.Columns.Count - 1)
+                Try
+                    If Not row.IsNull(i) Then
+                        newRow(i) = row(i)
+                    End If
+                Catch ex As Exception
+                    ' Ignorar errores de conversión
+                End Try
+            Next
+
+            ' Asegurar que btneliminar está vacío
+            newRow("btneliminar") = ""
+            DtDetalle.Rows.Add(newRow)
+        Next
 
         If ds.Tables(0).Rows.Count > 0 Then
-            Dim row As DataRow = ds.Tables(0).Rows(0) ' Tomar la primera fila
-
-            ' Llenar los campos del formulario con los valores de la fila
-
+            Dim row As DataRow = ds.Tables(0).Rows(0)
             dtpedido.Value = Convert.ToDateTime(row(1))
             txtcodproveedor.Text = row(2)
             txtproveedor.Text = row(3)
@@ -143,7 +172,6 @@ Public Class FrmPedidoSinStock
             ' Llenar el DataGrid con los detalles
             dtgListado.DataSource = DtDetalle
         Else
-            ' Si no hay datos, dejar los campos vacíos o con valores predeterminados
             dtgListado.DataSource = Nothing
         End If
 
@@ -243,26 +271,53 @@ Public Class FrmPedidoSinStock
     Private Sub dtgListado_InitializeLayout(sender As Object, e As Infragistics.Win.UltraWinGrid.InitializeLayoutEventArgs) Handles dtgListado.InitializeLayout
         Try
             With e.Layout.Bands(0)
-                .Columns(0).Header.Caption = "Codigo"
-                .Columns(0).Width = 80
-                .Columns(1).Header.Caption = "Producto"
-                .Columns(1).Width = 160
-                .Columns(2).Header.Caption = "Unidad Medida"
-                .Columns(2).Width = 120
-                .Columns(3).Header.Caption = "Cantidad"
-                .Columns(3).Width = 90
-                .Columns(4).Header.Caption = "Precio"
-                .Columns(4).Width = 90
-                .Columns(4).Hidden = True
-                .Columns(5).Hidden = True
-                .Columns(6).Hidden = True
-                .Columns(7).Header.Caption = "Eliminar"
-                .Columns(7).Width = 80
-                .Columns(7).Style = UltraWinGrid.ColumnStyle.Button
-                .Columns(7).CellButtonAppearance.Image = My.Resources.ico_eliminar
-                .Columns(7).ButtonDisplayStyle = UltraWinGrid.ButtonDisplayStyle.Always
+                ' Configurar columnas existentes
+                If .Columns.Count > 0 Then
+                    .Columns(0).Header.Caption = "Codigo"
+                    .Columns(0).Width = 80
+                End If
+                If .Columns.Count > 1 Then
+                    .Columns(1).Header.Caption = "Producto"
+                    .Columns(1).Width = 160
+                End If
+                If .Columns.Count > 2 Then
+                    .Columns(2).Header.Caption = "Unidad Medida"
+                    .Columns(2).Width = 120
+                End If
+                If .Columns.Count > 3 Then
+                    .Columns(3).Header.Caption = "Cantidad"
+                    .Columns(3).Width = 90
+                End If
+                If .Columns.Count > 4 Then
+                    .Columns(4).Header.Caption = "Precio"
+                    .Columns(4).Width = 90
+                    .Columns(4).Hidden = True
+                End If
+                If .Columns.Count > 5 Then
+                    .Columns(5).Hidden = True
+                End If
+                If .Columns.Count > 6 Then
+                    .Columns(6).Hidden = True
+                End If
 
+                ' Crear o configurar columna de eliminar
+                Dim btnEliminarColumn As Infragistics.Win.UltraWinGrid.UltraGridColumn = Nothing
+                Try
+                    btnEliminarColumn = .Columns("btneliminar")
+                Catch
+                    ' Si no existe, intentar por índice
+                    If .Columns.Count > 7 Then
+                        btnEliminarColumn = .Columns(7)
+                    End If
+                End Try
 
+                If btnEliminarColumn IsNot Nothing Then
+                    btnEliminarColumn.Header.Caption = "Eliminar"
+                    btnEliminarColumn.Width = 80
+                    btnEliminarColumn.Style = UltraWinGrid.ColumnStyle.Button
+                    btnEliminarColumn.CellButtonAppearance.Image = My.Resources.ico_eliminar
+                    btnEliminarColumn.ButtonDisplayStyle = UltraWinGrid.ButtonDisplayStyle.Always
+                End If
             End With
         Catch ex As Exception
             clsBasicas.controlException(Name, ex)
