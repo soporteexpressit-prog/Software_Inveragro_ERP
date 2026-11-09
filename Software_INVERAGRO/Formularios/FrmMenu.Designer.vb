@@ -112,6 +112,7 @@ Partial Class FrmMenu
         Me.CONTROLDEMADRESFUTURASToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MORTALIDADToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HISTORICODEDEPURACIÓNToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.COSTOXKILOCERDOToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GESTIÓNMATERIALGENÉTICOToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PEDIDOSEMENPORCINOToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CONTROLMATERIALGENÉTICOToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -176,7 +177,8 @@ Partial Class FrmMenu
         Me.btnSolicitudPedidosRequerimientos = New System.Windows.Forms.ToolStripMenuItem()
         Me.ACERCADEToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.MORTALIDADDECERDOSToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.COSTOXKILOCERDOToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UBICACIONESToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AREASToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PanelContenedor.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -814,6 +816,12 @@ Partial Class FrmMenu
         Me.HISTORICODEDEPURACIÓNToolStripMenuItem.Size = New System.Drawing.Size(270, 22)
         Me.HISTORICODEDEPURACIÓNToolStripMenuItem.Text = "HISTORICO DE DEPURACIÓN"
         '
+        'COSTOXKILOCERDOToolStripMenuItem
+        '
+        Me.COSTOXKILOCERDOToolStripMenuItem.Name = "COSTOXKILOCERDOToolStripMenuItem"
+        Me.COSTOXKILOCERDOToolStripMenuItem.Size = New System.Drawing.Size(270, 22)
+        Me.COSTOXKILOCERDOToolStripMenuItem.Text = "COSTO X KILO CERDO"
+        '
         'GESTIÓNMATERIALGENÉTICOToolStripMenuItem
         '
         Me.GESTIÓNMATERIALGENÉTICOToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PEDIDOSEMENPORCINOToolStripMenuItem, Me.CONTROLMATERIALGENÉTICOToolStripMenuItem})
@@ -1029,7 +1037,7 @@ Partial Class FrmMenu
         '
         'TABLASMAESTRASToolStripMenuItem
         '
-        Me.TABLASMAESTRASToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CARGOSToolStripMenuItem})
+        Me.TABLASMAESTRASToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CARGOSToolStripMenuItem, Me.UBICACIONESToolStripMenuItem, Me.AREASToolStripMenuItem})
         Me.TABLASMAESTRASToolStripMenuItem.Name = "TABLASMAESTRASToolStripMenuItem"
         Me.TABLASMAESTRASToolStripMenuItem.Size = New System.Drawing.Size(392, 22)
         Me.TABLASMAESTRASToolStripMenuItem.Text = "TABLAS MAESTRAS"
@@ -1037,7 +1045,7 @@ Partial Class FrmMenu
         'CARGOSToolStripMenuItem
         '
         Me.CARGOSToolStripMenuItem.Name = "CARGOSToolStripMenuItem"
-        Me.CARGOSToolStripMenuItem.Size = New System.Drawing.Size(126, 22)
+        Me.CARGOSToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.CARGOSToolStripMenuItem.Text = "CARGOS"
         '
         'toolSegPersonal
@@ -1276,11 +1284,17 @@ Partial Class FrmMenu
         Me.MORTALIDADDECERDOSToolStripMenuItem.Size = New System.Drawing.Size(208, 22)
         Me.MORTALIDADDECERDOSToolStripMenuItem.Text = "MORTALIDAD DE CERDOS"
         '
-        'COSTOXKILOCERDOToolStripMenuItem
+        'UBICACIONESToolStripMenuItem
         '
-        Me.COSTOXKILOCERDOToolStripMenuItem.Name = "COSTOXKILOCERDOToolStripMenuItem"
-        Me.COSTOXKILOCERDOToolStripMenuItem.Size = New System.Drawing.Size(270, 22)
-        Me.COSTOXKILOCERDOToolStripMenuItem.Text = "COSTO X KILO CERDO"
+        Me.UBICACIONESToolStripMenuItem.Name = "UBICACIONESToolStripMenuItem"
+        Me.UBICACIONESToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.UBICACIONESToolStripMenuItem.Text = "UBICACIONES"
+        '
+        'AREASToolStripMenuItem
+        '
+        Me.AREASToolStripMenuItem.Name = "AREASToolStripMenuItem"
+        Me.AREASToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.AREASToolStripMenuItem.Text = "AREAS"
         '
         'FrmMenu
         '
@@ -1459,4 +1473,6 @@ Partial Class FrmMenu
     Friend WithEvents PROGRAMADEALIMENTACIÓNToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents HISTORICODEDEPURACIÓNToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents COSTOXKILOCERDOToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents UBICACIONESToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents AREASToolStripMenuItem As ToolStripMenuItem
 End Class
