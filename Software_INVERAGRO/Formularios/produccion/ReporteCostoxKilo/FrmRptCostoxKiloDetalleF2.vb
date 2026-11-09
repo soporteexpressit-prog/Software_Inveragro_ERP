@@ -77,8 +77,14 @@ Public Class FrmRptCostoxKiloDetalleF2
                 Dim totalVeteBruto As Decimal = Convert.ToDecimal(dtResult2.Rows(0)("CostoVeterinario_Total_Bruto"))
                 LblCostoVeteBruto.Text = Math.Round(totalVeteBruto, 2).ToString("0.00")
 
-                Dim total As Decimal = Convert.ToDecimal(dtResult2.Rows(0)("GastosVeterinarios_XMadre"))
-                LblTotal.Text = Math.Round(total, 2).ToString("0.00")
+                Dim subtotal As Decimal = Convert.ToDecimal(dtResult2.Rows(0)("GastosVeterinarios_XMadre"))
+                LblTotal.Text = Math.Round(subtotal, 2).ToString("0.00")
+
+                Dim totalVacGestantes As Decimal = Convert.ToDecimal(dtResult2.Rows(0)("vacunasGestantes"))
+                LblTotalVacGestantes.Text = Math.Round(totalVacGestantes, 2).ToString("0.00")
+
+                Dim totalMasVacGestantes As Decimal = subtotal + totalVacGestantes
+                LblTotalMasVacGestantes.Text = Math.Round(totalMasVacGestantes, 2).ToString("0.00")
             End If
         End If
     End Sub
@@ -105,6 +111,18 @@ Public Class FrmRptCostoxKiloDetalleF2
             Else
                 clsBasicas.ExportarExcel("CONTROL DE DETALLE DE COSTO", dtgListado)
             End If
+        Catch ex As Exception
+            clsBasicas.controlException(Name, ex)
+        End Try
+    End Sub
+
+    Private Sub BtnDetalleVacGestantes_Click(sender As Object, e As EventArgs) Handles BtnDetalleVacGestantes.Click
+        Try
+            Dim frm As New FrmRptCostoxKiloDetalleF3 With {
+                .idDetalle = "RP7",
+                .idCampaña = idCampaña
+            }
+            frm.ShowDialog()
         Catch ex As Exception
             clsBasicas.controlException(Name, ex)
         End Try
