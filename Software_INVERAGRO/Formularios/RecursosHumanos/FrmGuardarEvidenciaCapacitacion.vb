@@ -77,47 +77,53 @@ Public Class FrmGuardarEvidenciaCapacitacion
         If ValidarImagenSeleccionada() Then
             Dim fechaHora As String = DateTime.Now.ToString("yyyyMMdd_HHmmss")
             Dim nombreCarpeta As String = String.Format("{0}_{1}", CapacitacionId, fechaHora)
-            Dim rutaCarpeta = Path.Combine("C:\Users\Administrator\Documents\evidencia_capacitaciones", nombreCarpeta)
 
-            If Not Directory.Exists(rutaCarpeta) Then
-                Directory.CreateDirectory(rutaCarpeta)
-                carpetaCreada = True
+            ' Usar ruta relativa basada en la carpeta de la aplicación
+            Dim rutaPadre As String = Path.Combine(Application.StartupPath, "evidencia_capacitaciones")
+            Dim rutaCarpeta As String = Path.Combine(rutaPadre, nombreCarpeta)
+
+            ' Crear carpeta padre si no existe
+            If Not Directory.Exists(rutaPadre) Then
+                Directory.CreateDirectory(rutaPadre)
             End If
 
-            If carpetaCreada Then
-                If seleccionar1 Then
-                    GuardarImagen(picEvidencia1, rutaCarpeta, "Evidencia1")
-                    imagenesCargadas += 1
-                End If
+            ' Crear carpeta de la capacitación
+            If Not Directory.Exists(rutaCarpeta) Then
+                Directory.CreateDirectory(rutaCarpeta)
+            End If
 
-                If seleccionar2 Then
-                    GuardarImagen(picEvidencia2, rutaCarpeta, "Evidencia2")
-                    imagenesCargadas += 1
-                End If
+            If seleccionar1 Then
+                GuardarImagen(picEvidencia1, rutaCarpeta, "Evidencia1")
+                imagenesCargadas += 1
+            End If
 
-                If seleccionar3 Then
-                    GuardarImagen(picEvidencia3, rutaCarpeta, "Evidencia3")
-                    imagenesCargadas += 1
-                End If
+            If seleccionar2 Then
+                GuardarImagen(picEvidencia2, rutaCarpeta, "Evidencia2")
+                imagenesCargadas += 1
+            End If
 
-                If totalImagensEsperadas = 4 AndAlso seleccionar4 Then
-                    GuardarImagen(picEvidencia4, rutaCarpeta, "Evidencia4")
-                    imagenesCargadas += 1
-                End If
+            If seleccionar3 Then
+                GuardarImagen(picEvidencia3, rutaCarpeta, "Evidencia3")
+                imagenesCargadas += 1
+            End If
 
-                If imagenesCargadas = totalImagensEsperadas Then
-                    Dim obj As New coControlCapacitacion
-                    obj.Codigo = CapacitacionId
-                    obj.RutaEvidencia = rutaCarpeta
+            If totalImagensEsperadas = 4 AndAlso seleccionar4 Then
+                GuardarImagen(picEvidencia4, rutaCarpeta, "Evidencia4")
+                imagenesCargadas += 1
+            End If
 
-                    Dim MensajeBgWk As String = ""
-                    MensajeBgWk = cn.Cn_RegistrarRutaEvidencia(obj)
-                    If (obj.Coderror = 0) Then
-                        msj_ok(MensajeBgWk)
-                        Dispose()
-                    Else
-                        msj_advert(MensajeBgWk)
-                    End If
+            If imagenesCargadas = totalImagensEsperadas Then
+                Dim obj As New coControlCapacitacion
+                obj.Codigo = CapacitacionId
+                obj.RutaEvidencia = rutaCarpeta
+
+                Dim MensajeBgWk As String = ""
+                MensajeBgWk = cn.Cn_RegistrarRutaEvidencia(obj)
+                If (obj.Coderror = 0) Then
+                    msj_ok(MensajeBgWk)
+                    Dispose()
+                Else
+                    msj_advert(MensajeBgWk)
                 End If
             End If
         End If
