@@ -1601,4 +1601,84 @@ Public Class cdControlAnimal
         con.Salir()
         Return dt
     End Function
+
+    Public Function Cd_ConsultarGenetica(name As String, obj As coControlAnimal) As DataTable
+        Dim dt As New DataTable
+        Try
+            con.Abrir()
+            Dim da As New SqlDataAdapter(name, con.con)
+            da.SelectCommand.CommandType = 4
+            da.SelectCommand.Parameters.AddWithValue("@tipo", obj.TipoControl)
+            da.Fill(dt)
+        Catch ex As Exception
+            Throw ex
+        End Try
+        con.Salir()
+        Return dt
+    End Function
+
+    Public Function Cd_ConsultarGeneticaxId(name As String, obj As coControlAnimal) As DataTable
+        Dim dt As New DataTable
+        Try
+            con.Abrir()
+            Dim da As New SqlDataAdapter(name, con.con)
+            da.SelectCommand.CommandType = 4
+            da.SelectCommand.Parameters.AddWithValue("@idGenetica", obj.Codigo)
+            da.Fill(dt)
+        Catch ex As Exception
+            Throw ex
+        End Try
+        con.Salir()
+        Return dt
+    End Function
+
+    Public Function Cd_MantenimientoGenetica(name As String, obj As coControlAnimal) As String
+        Dim mensaje As String
+        Dim cmd As New SqlCommand(name, con.con)
+        Try
+            con.Abrir()
+            cmd.CommandType = 4
+
+            With cmd.Parameters
+                .AddWithValue("@operacion", SqlDbType.Int).Value = obj.Operacion
+                .AddWithValue("@codigo", SqlDbType.Int).Value = obj.Codigo
+                .AddWithValue("@categoria", SqlDbType.VarChar).Value = obj.Observacion
+                .AddWithValue("@descripcion", SqlDbType.VarChar).Value = obj.MotivoAnulacion
+                .AddWithValue("@tipo", SqlDbType.VarChar).Value = obj.TipoControl
+                .Add("@msj", SqlDbType.VarChar, 100).Direction = 2
+                .Add("@coderror", SqlDbType.Int).Direction = 2
+            End With
+            cmd.ExecuteNonQuery()
+            mensaje = cmd.Parameters("@msj").Value.ToString
+            obj.Coderror = cmd.Parameters("@coderror").Value.ToString
+            con.Salir()
+            Return mensaje
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Function
+
+    Public Function Cd_EnlaceGeneticaProducto(name As String, obj As coControlAnimal) As String
+        Dim mensaje As String
+        Dim cmd As New SqlCommand(name, con.con)
+        Try
+            con.Abrir()
+            cmd.CommandType = 4
+
+            With cmd.Parameters
+                .AddWithValue("@idGenetica", SqlDbType.Int).Value = obj.IdGenetica
+                .AddWithValue("@tipo", SqlDbType.VarChar).Value = obj.TipoControl
+                .AddWithValue("@idUsuario", SqlDbType.Int).Value = obj.IdUsuario
+                .Add("@msj", SqlDbType.VarChar, 100).Direction = 2
+                .Add("@coderror", SqlDbType.Int).Direction = 2
+            End With
+            cmd.ExecuteNonQuery()
+            mensaje = cmd.Parameters("@msj").Value.ToString
+            obj.Coderror = cmd.Parameters("@coderror").Value.ToString
+            con.Salir()
+            Return mensaje
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Function
 End Class

@@ -51,6 +51,7 @@ Partial Class FrmProgramaAlimentacion
         Me.BtnEditarProgAlimentacion = New System.Windows.Forms.ToolStripButton()
         Me.BtnExportar = New System.Windows.Forms.ToolStripButton()
         Me.btncerrar = New System.Windows.Forms.ToolStripButton()
+        Me.BtnAsociarProductoRacion = New System.Windows.Forms.ToolStripButton()
         Me.Ptbx_Cargando = New System.Windows.Forms.PictureBox()
         Me.dtgListado = New Infragistics.Win.UltraWinGrid.UltraGrid()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
@@ -169,7 +170,7 @@ Partial Class FrmProgramaAlimentacion
         Me.BarraOpciones.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.BarraOpciones.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
         Me.BarraOpciones.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.BarraOpciones.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnNuevoProgAlimentacion, Me.BtnEditarProgAlimentacion, Me.BtnExportar, Me.btncerrar})
+        Me.BarraOpciones.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnNuevoProgAlimentacion, Me.BtnEditarProgAlimentacion, Me.BtnExportar, Me.btncerrar, Me.BtnAsociarProductoRacion})
         Me.BarraOpciones.Location = New System.Drawing.Point(0, 255)
         Me.BarraOpciones.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BarraOpciones.Name = "BarraOpciones"
@@ -228,6 +229,20 @@ Partial Class FrmProgramaAlimentacion
         Me.btncerrar.Padding = New System.Windows.Forms.Padding(2)
         Me.btncerrar.Size = New System.Drawing.Size(84, 30)
         Me.btncerrar.Text = "Salir"
+        '
+        'BtnAsociarProductoRacion
+        '
+        Me.BtnAsociarProductoRacion.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.BtnAsociarProductoRacion.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnAsociarProductoRacion.ForeColor = System.Drawing.Color.White
+        Me.BtnAsociarProductoRacion.Image = Global.Formularios.My.Resources.Resources.sincronizar
+        Me.BtnAsociarProductoRacion.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BtnAsociarProductoRacion.Margin = New System.Windows.Forms.Padding(5)
+        Me.BtnAsociarProductoRacion.Name = "BtnAsociarProductoRacion"
+        Me.BtnAsociarProductoRacion.Padding = New System.Windows.Forms.Padding(2)
+        Me.BtnAsociarProductoRacion.Size = New System.Drawing.Size(353, 30)
+        Me.BtnAsociarProductoRacion.Text = "Asociar (Productos - Raciones)"
+        Me.BtnAsociarProductoRacion.ToolTipText = "Exportar"
         '
         'Ptbx_Cargando
         '
@@ -365,4 +380,5 @@ Partial Class FrmProgramaAlimentacion
     Friend WithEvents Label1 As Label
     Friend WithEvents CmbAnios As ComboBox
     Friend WithEvents Label3 As Label
+    Friend WithEvents BtnAsociarProductoRacion As ToolStripButton
 End Class

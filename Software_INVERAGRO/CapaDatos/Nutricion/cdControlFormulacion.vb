@@ -668,4 +668,63 @@ Public Class cdControlFormulacion
         con.Salir()
         Return dt
     End Function
+
+    Public Function Cd_ConsultarAgrupacionProductoRacion(name As String) As DataSet
+        Dim dt As New DataSet
+        Try
+            con.Abrir()
+            Dim da As New SqlDataAdapter(name, con.con)
+            da.SelectCommand.CommandType = 4
+            da.Fill(dt)
+        Catch ex As Exception
+            Throw ex
+        End Try
+        con.Salir()
+        Return dt
+    End Function
+
+    Public Function Cd_MantenimientoAgrupacionProductoRacion(name As String, obj As coControlFormulacion) As String
+        Dim mensaje As String
+        Dim cmd As New SqlCommand(name, con.con)
+        Try
+            con.Abrir()
+            cmd.CommandType = 4
+
+            With cmd.Parameters
+                .AddWithValue("@idProducto1", SqlDbType.Int).Value = obj.IdNucleo
+                .AddWithValue("@idProducto2", SqlDbType.Int).Value = obj.Codigo
+                .Add("@msj", SqlDbType.VarChar, 100).Direction = 2
+                .Add("@coderror", SqlDbType.Int).Direction = 2
+            End With
+            cmd.ExecuteNonQuery()
+            mensaje = cmd.Parameters("@msj").Value.ToString
+            obj.Coderror = cmd.Parameters("@coderror").Value.ToString
+            con.Salir()
+            Return mensaje
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Function
+
+    Public Function Cd_DesagruparProductoRacion(name As String, obj As coControlFormulacion) As String
+        Dim mensaje As String
+        Dim cmd As New SqlCommand(name, con.con)
+        Try
+            con.Abrir()
+            cmd.CommandType = 4
+
+            With cmd.Parameters
+                .AddWithValue("@idAgrupamiento", SqlDbType.Int).Value = obj.Codigo
+                .Add("@msj", SqlDbType.VarChar, 100).Direction = 2
+                .Add("@coderror", SqlDbType.Int).Direction = 2
+            End With
+            cmd.ExecuteNonQuery()
+            mensaje = cmd.Parameters("@msj").Value.ToString
+            obj.Coderror = cmd.Parameters("@coderror").Value.ToString
+            con.Salir()
+            Return mensaje
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Function
 End Class

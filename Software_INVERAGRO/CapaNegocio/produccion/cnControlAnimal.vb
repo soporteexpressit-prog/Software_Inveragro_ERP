@@ -456,4 +456,20 @@ Public Class cnControlAnimal
     Public Function Cn_ConsultarPersonaxArea(ByRef obj As coControlAnimal) As DataTable
         Return cls_at.Cd_ConsultarPersonaxArea("[w_pa_personal_x_ubicacion]", obj)
     End Function
+
+    Public Function Cn_ConsultarGenetica(ByRef obj As coControlAnimal) As DataTable
+        Return cls_at.Cd_ConsultarGenetica("[w_pa_cons_genetica]", obj)
+    End Function
+
+    Public Function Cn_ConsultarGeneticaxId(obj As coControlAnimal) As DataTable
+        Return cls_at.Cd_ConsultarGeneticaxId("[w_pa_cons_genetica_x_id]", obj)
+    End Function
+
+    Public Function Cn_MantenimientoGenetica(ByRef obj As coControlAnimal) As String
+        Return cls_at.Cd_MantenimientoGenetica("[w_pa_mant_genetica]", obj)
+    End Function
+
+    Public Function Cn_EnlaceGeneticaProducto(ByRef obj As coControlAnimal) As String
+        Return cls_at.Cd_EnlaceGeneticaProducto("[w_pa_crear_productos_desde_genetica]", obj)
+    End Function
 End Class

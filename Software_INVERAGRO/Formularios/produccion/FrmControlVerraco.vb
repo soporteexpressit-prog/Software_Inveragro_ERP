@@ -391,6 +391,17 @@ Public Class FrmControlVerraco
         End If
     End Sub
 
+    Private Sub BtnGenetica_Click(sender As Object, e As EventArgs) Handles BtnGenetica.Click
+        Try
+            Dim frm As New FrmGestionGenetica With {
+                .Modulo_CV = "VERRACO"
+            }
+            frm.ShowDialog()
+        Catch ex As Exception
+            clsBasicas.controlException(Name, ex)
+        End Try
+    End Sub
+
     Private Sub BtnCerrar_Click(sender As Object, e As EventArgs) Handles BtnCerrar.Click
         Dispose()
     End Sub

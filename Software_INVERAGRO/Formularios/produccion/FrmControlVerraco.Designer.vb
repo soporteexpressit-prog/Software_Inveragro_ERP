@@ -77,6 +77,7 @@ Partial Class FrmControlVerraco
         Me.dtgListado = New Infragistics.Win.UltraWinGrid.UltraGrid()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         Me.Ptbx_Cargando = New System.Windows.Forms.PictureBox()
+        Me.BtnGenetica = New System.Windows.Forms.ToolStripButton()
         Me.Panel2.SuspendLayout()
         Me.GrupoFiltros.SuspendLayout()
         CType(Me.CmbUbicacion, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -93,9 +94,9 @@ Partial Class FrmControlVerraco
         Me.Panel2.Controls.Add(Me.BarraOpciones)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(2, 1, 2, 1)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1610, 194)
+        Me.Panel2.Size = New System.Drawing.Size(2415, 298)
         Me.Panel2.TabIndex = 8
         '
         'Label6
@@ -104,10 +105,9 @@ Partial Class FrmControlVerraco
         Me.Label6.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(233, Byte), Integer))
         Me.Label6.Font = New System.Drawing.Font("Verdana", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(49, Byte), Integer))
-        Me.Label6.Location = New System.Drawing.Point(23, 24)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label6.Location = New System.Drawing.Point(34, 37)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(228, 18)
+        Me.Label6.Size = New System.Drawing.Size(337, 29)
         Me.Label6.TabIndex = 128
         Me.Label6.Text = "CONTROL DE VERRACOS"
         '
@@ -123,11 +123,9 @@ Partial Class FrmControlVerraco
         Me.GrupoFiltros.Controls.Add(Me.CkbMadre)
         Me.GrupoFiltros.Controls.Add(Me.Label2)
         Me.GrupoFiltros.Controls.Add(Me.CmbEstadoVenta)
-        Me.GrupoFiltros.Location = New System.Drawing.Point(15, 54)
-        Me.GrupoFiltros.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GrupoFiltros.Location = New System.Drawing.Point(22, 83)
         Me.GrupoFiltros.Name = "GrupoFiltros"
-        Me.GrupoFiltros.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.GrupoFiltros.Size = New System.Drawing.Size(1581, 93)
+        Me.GrupoFiltros.Size = New System.Drawing.Size(2372, 143)
         Me.GrupoFiltros.TabIndex = 170
         Me.GrupoFiltros.TabStop = False
         Me.GrupoFiltros.Text = "Filtros de Búsqueda"
@@ -135,10 +133,9 @@ Partial Class FrmControlVerraco
         'CbxEstadoVenta
         '
         Me.CbxEstadoVenta.AutoSize = True
-        Me.CbxEstadoVenta.Location = New System.Drawing.Point(1443, 24)
-        Me.CbxEstadoVenta.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.CbxEstadoVenta.Location = New System.Drawing.Point(2164, 37)
         Me.CbxEstadoVenta.Name = "CbxEstadoVenta"
-        Me.CbxEstadoVenta.Size = New System.Drawing.Size(90, 17)
+        Me.CbxEstadoVenta.Size = New System.Drawing.Size(133, 24)
         Me.CbxEstadoVenta.TabIndex = 180
         Me.CbxEstadoVenta.Text = "Estado Venta"
         Me.CbxEstadoVenta.UseVisualStyleBackColor = True
@@ -146,10 +143,9 @@ Partial Class FrmControlVerraco
         'CbxTipoAdquisicion
         '
         Me.CbxTipoAdquisicion.AutoSize = True
-        Me.CbxTipoAdquisicion.Location = New System.Drawing.Point(1268, 55)
-        Me.CbxTipoAdquisicion.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.CbxTipoAdquisicion.Location = New System.Drawing.Point(1902, 85)
         Me.CbxTipoAdquisicion.Name = "CbxTipoAdquisicion"
-        Me.CbxTipoAdquisicion.Size = New System.Drawing.Size(104, 17)
+        Me.CbxTipoAdquisicion.Size = New System.Drawing.Size(150, 24)
         Me.CbxTipoAdquisicion.TabIndex = 179
         Me.CbxTipoAdquisicion.Text = "Tipo Adquisición"
         Me.CbxTipoAdquisicion.UseVisualStyleBackColor = True
@@ -160,10 +156,10 @@ Partial Class FrmControlVerraco
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(636, 38)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(954, 58)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(60, 14)
+        Me.Label1.Size = New System.Drawing.Size(91, 22)
         Me.Label1.TabIndex = 160
         Me.Label1.Text = "Estado :"
         '
@@ -173,10 +169,10 @@ Partial Class FrmControlVerraco
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label5.Location = New System.Drawing.Point(19, 38)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label5.Location = New System.Drawing.Point(28, 58)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(62, 14)
+        Me.Label5.Size = New System.Drawing.Size(93, 22)
         Me.Label5.TabIndex = 177
         Me.Label5.Text = "Plantel :"
         '
@@ -186,9 +182,10 @@ Partial Class FrmControlVerraco
         Me.CmbEstadoVivo.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CmbEstadoVivo.FormattingEnabled = True
         Me.CmbEstadoVivo.Items.AddRange(New Object() {"VIVO", "MUERTO", "TODOS"})
-        Me.CmbEstadoVivo.Location = New System.Drawing.Point(705, 36)
+        Me.CmbEstadoVivo.Location = New System.Drawing.Point(1058, 55)
+        Me.CmbEstadoVivo.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.CmbEstadoVivo.Name = "CmbEstadoVivo"
-        Me.CmbEstadoVivo.Size = New System.Drawing.Size(131, 21)
+        Me.CmbEstadoVivo.Size = New System.Drawing.Size(194, 28)
         Me.CmbEstadoVivo.TabIndex = 161
         '
         'CmbUbicacion
@@ -248,9 +245,10 @@ Partial Class FrmControlVerraco
         Me.CmbUbicacion.DisplayLayout.ScrollStyle = Infragistics.Win.UltraWinGrid.ScrollStyle.Immediate
         Me.CmbUbicacion.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy
         Me.CmbUbicacion.DropDownStyle = Infragistics.Win.UltraWinGrid.UltraComboStyle.DropDownList
-        Me.CmbUbicacion.Location = New System.Drawing.Point(89, 36)
+        Me.CmbUbicacion.Location = New System.Drawing.Point(134, 55)
+        Me.CmbUbicacion.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.CmbUbicacion.Name = "CmbUbicacion"
-        Me.CmbUbicacion.Size = New System.Drawing.Size(178, 22)
+        Me.CmbUbicacion.Size = New System.Drawing.Size(267, 29)
         Me.CmbUbicacion.TabIndex = 176
         '
         'btnBuscarVerracos
@@ -259,10 +257,11 @@ Partial Class FrmControlVerraco
         Me.btnBuscarVerracos.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBuscarVerracos.Image = CType(resources.GetObject("btnBuscarVerracos.Image"), System.Drawing.Image)
         Me.btnBuscarVerracos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnBuscarVerracos.Location = New System.Drawing.Point(871, 25)
+        Me.btnBuscarVerracos.Location = New System.Drawing.Point(1306, 38)
+        Me.btnBuscarVerracos.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.btnBuscarVerracos.Name = "btnBuscarVerracos"
-        Me.btnBuscarVerracos.Padding = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.btnBuscarVerracos.Size = New System.Drawing.Size(92, 41)
+        Me.btnBuscarVerracos.Padding = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.btnBuscarVerracos.Size = New System.Drawing.Size(138, 63)
         Me.btnBuscarVerracos.TabIndex = 163
         Me.btnBuscarVerracos.Text = "Buscar"
         Me.btnBuscarVerracos.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -271,10 +270,9 @@ Partial Class FrmControlVerraco
         'CkbMadre
         '
         Me.CkbMadre.AutoSize = True
-        Me.CkbMadre.Location = New System.Drawing.Point(1268, 24)
-        Me.CkbMadre.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.CkbMadre.Location = New System.Drawing.Point(1902, 37)
         Me.CkbMadre.Name = "CkbMadre"
-        Me.CkbMadre.Size = New System.Drawing.Size(94, 17)
+        Me.CkbMadre.Size = New System.Drawing.Size(138, 24)
         Me.CkbMadre.TabIndex = 174
         Me.CkbMadre.Text = "Mostrar Madre"
         Me.CkbMadre.UseVisualStyleBackColor = True
@@ -285,10 +283,10 @@ Partial Class FrmControlVerraco
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(323, 38)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Location = New System.Drawing.Point(484, 58)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(102, 14)
+        Me.Label2.Size = New System.Drawing.Size(156, 22)
         Me.Label2.TabIndex = 164
         Me.Label2.Text = "Estado Venta :"
         '
@@ -298,9 +296,10 @@ Partial Class FrmControlVerraco
         Me.CmbEstadoVenta.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CmbEstadoVenta.FormattingEnabled = True
         Me.CmbEstadoVenta.Items.AddRange(New Object() {"TODOS", "PENDIENTE", "EN VENTA", "VENDIDO"})
-        Me.CmbEstadoVenta.Location = New System.Drawing.Point(435, 36)
+        Me.CmbEstadoVenta.Location = New System.Drawing.Point(652, 55)
+        Me.CmbEstadoVenta.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.CmbEstadoVenta.Name = "CmbEstadoVenta"
-        Me.CmbEstadoVenta.Size = New System.Drawing.Size(131, 21)
+        Me.CmbEstadoVenta.Size = New System.Drawing.Size(194, 28)
         Me.CmbEstadoVenta.TabIndex = 165
         '
         'BarraOpciones
@@ -309,12 +308,12 @@ Partial Class FrmControlVerraco
         Me.BarraOpciones.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.BarraOpciones.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
         Me.BarraOpciones.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.BarraOpciones.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnNuevoprocontrolverracos, Me.BtnActualizarDatosprocontrolverracos, Me.BtnMortalidadAnimal, Me.BtnMandarCamalprocontrolverracos, Me.BtnHistorialExtraccionprocontrolverracos, Me.BtnHistorial, Me.BtnExportarBtnMandarCamalprocontrolverracos, Me.BtnEliminar, Me.BtnCerrar, Me.BtnFiltros})
-        Me.BarraOpciones.Location = New System.Drawing.Point(0, 156)
-        Me.BarraOpciones.Margin = New System.Windows.Forms.Padding(2, 1, 2, 1)
+        Me.BarraOpciones.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnNuevoprocontrolverracos, Me.BtnActualizarDatosprocontrolverracos, Me.BtnMortalidadAnimal, Me.BtnMandarCamalprocontrolverracos, Me.BtnHistorialExtraccionprocontrolverracos, Me.BtnHistorial, Me.BtnGenetica, Me.BtnExportarBtnMandarCamalprocontrolverracos, Me.BtnEliminar, Me.BtnCerrar, Me.BtnFiltros})
+        Me.BarraOpciones.Location = New System.Drawing.Point(0, 258)
+        Me.BarraOpciones.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BarraOpciones.Name = "BarraOpciones"
-        Me.BarraOpciones.Padding = New System.Windows.Forms.Padding(0, 0, 2, 0)
-        Me.BarraOpciones.Size = New System.Drawing.Size(1610, 38)
+        Me.BarraOpciones.Padding = New System.Windows.Forms.Padding(0, 0, 3, 0)
+        Me.BarraOpciones.Size = New System.Drawing.Size(2415, 40)
         Me.BarraOpciones.TabIndex = 52
         Me.BarraOpciones.Text = "ToolStrip1"
         '
@@ -327,7 +326,7 @@ Partial Class FrmControlVerraco
         Me.btnNuevoprocontrolverracos.Margin = New System.Windows.Forms.Padding(5)
         Me.btnNuevoprocontrolverracos.Name = "btnNuevoprocontrolverracos"
         Me.btnNuevoprocontrolverracos.Padding = New System.Windows.Forms.Padding(2)
-        Me.btnNuevoprocontrolverracos.Size = New System.Drawing.Size(81, 28)
+        Me.btnNuevoprocontrolverracos.Size = New System.Drawing.Size(108, 30)
         Me.btnNuevoprocontrolverracos.Text = "Nuevo "
         Me.btnNuevoprocontrolverracos.ToolTipText = "Nuevo "
         '
@@ -340,7 +339,7 @@ Partial Class FrmControlVerraco
         Me.BtnActualizarDatosprocontrolverracos.Margin = New System.Windows.Forms.Padding(5)
         Me.BtnActualizarDatosprocontrolverracos.Name = "BtnActualizarDatosprocontrolverracos"
         Me.BtnActualizarDatosprocontrolverracos.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnActualizarDatosprocontrolverracos.Size = New System.Drawing.Size(154, 28)
+        Me.BtnActualizarDatosprocontrolverracos.Size = New System.Drawing.Size(221, 30)
         Me.BtnActualizarDatosprocontrolverracos.Text = "Editar / Migración"
         Me.BtnActualizarDatosprocontrolverracos.ToolTipText = "Nuevo "
         '
@@ -353,7 +352,7 @@ Partial Class FrmControlVerraco
         Me.BtnMortalidadAnimal.Margin = New System.Windows.Forms.Padding(5)
         Me.BtnMortalidadAnimal.Name = "BtnMortalidadAnimal"
         Me.BtnMortalidadAnimal.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnMortalidadAnimal.Size = New System.Drawing.Size(105, 28)
+        Me.BtnMortalidadAnimal.Size = New System.Drawing.Size(146, 30)
         Me.BtnMortalidadAnimal.Text = "Mortalidad"
         Me.BtnMortalidadAnimal.ToolTipText = "Mandar Camal"
         '
@@ -366,7 +365,7 @@ Partial Class FrmControlVerraco
         Me.BtnMandarCamalprocontrolverracos.Margin = New System.Windows.Forms.Padding(5)
         Me.BtnMandarCamalprocontrolverracos.Name = "BtnMandarCamalprocontrolverracos"
         Me.BtnMandarCamalprocontrolverracos.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnMandarCamalprocontrolverracos.Size = New System.Drawing.Size(129, 28)
+        Me.BtnMandarCamalprocontrolverracos.Size = New System.Drawing.Size(182, 30)
         Me.BtnMandarCamalprocontrolverracos.Text = "Mandar Camal"
         Me.BtnMandarCamalprocontrolverracos.ToolTipText = "Mandar Camal"
         '
@@ -379,7 +378,7 @@ Partial Class FrmControlVerraco
         Me.BtnHistorialExtraccionprocontrolverracos.Margin = New System.Windows.Forms.Padding(5)
         Me.BtnHistorialExtraccionprocontrolverracos.Name = "BtnHistorialExtraccionprocontrolverracos"
         Me.BtnHistorialExtraccionprocontrolverracos.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnHistorialExtraccionprocontrolverracos.Size = New System.Drawing.Size(123, 28)
+        Me.BtnHistorialExtraccionprocontrolverracos.Size = New System.Drawing.Size(174, 30)
         Me.BtnHistorialExtraccionprocontrolverracos.Text = "Ficha de Vida"
         Me.BtnHistorialExtraccionprocontrolverracos.ToolTipText = "Historial Extracciones"
         '
@@ -392,7 +391,7 @@ Partial Class FrmControlVerraco
         Me.BtnHistorial.Margin = New System.Windows.Forms.Padding(5)
         Me.BtnHistorial.Name = "BtnHistorial"
         Me.BtnHistorial.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnHistorial.Size = New System.Drawing.Size(91, 28)
+        Me.BtnHistorial.Size = New System.Drawing.Size(123, 30)
         Me.BtnHistorial.Text = "Historial"
         Me.BtnHistorial.ToolTipText = "Expediente Vital"
         '
@@ -405,7 +404,7 @@ Partial Class FrmControlVerraco
         Me.BtnExportarBtnMandarCamalprocontrolverracos.Margin = New System.Windows.Forms.Padding(5)
         Me.BtnExportarBtnMandarCamalprocontrolverracos.Name = "BtnExportarBtnMandarCamalprocontrolverracos"
         Me.BtnExportarBtnMandarCamalprocontrolverracos.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnExportarBtnMandarCamalprocontrolverracos.Size = New System.Drawing.Size(92, 28)
+        Me.BtnExportarBtnMandarCamalprocontrolverracos.Size = New System.Drawing.Size(125, 30)
         Me.BtnExportarBtnMandarCamalprocontrolverracos.Text = "Exportar"
         Me.BtnExportarBtnMandarCamalprocontrolverracos.ToolTipText = "Exportar"
         '
@@ -418,7 +417,7 @@ Partial Class FrmControlVerraco
         Me.BtnEliminar.Margin = New System.Windows.Forms.Padding(5)
         Me.BtnEliminar.Name = "BtnEliminar"
         Me.BtnEliminar.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnEliminar.Size = New System.Drawing.Size(89, 28)
+        Me.BtnEliminar.Size = New System.Drawing.Size(121, 30)
         Me.BtnEliminar.Text = "Eliminar"
         '
         'BtnCerrar
@@ -430,7 +429,7 @@ Partial Class FrmControlVerraco
         Me.BtnCerrar.Margin = New System.Windows.Forms.Padding(5)
         Me.BtnCerrar.Name = "BtnCerrar"
         Me.BtnCerrar.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnCerrar.Size = New System.Drawing.Size(66, 28)
+        Me.BtnCerrar.Size = New System.Drawing.Size(84, 30)
         Me.BtnCerrar.Text = "Salir"
         '
         'BtnFiltros
@@ -444,7 +443,7 @@ Partial Class FrmControlVerraco
         Me.BtnFiltros.Margin = New System.Windows.Forms.Padding(5)
         Me.BtnFiltros.Name = "BtnFiltros"
         Me.BtnFiltros.Padding = New System.Windows.Forms.Padding(2)
-        Me.BtnFiltros.Size = New System.Drawing.Size(77, 28)
+        Me.BtnFiltros.Size = New System.Drawing.Size(102, 30)
         Me.BtnFiltros.Text = "Filtros"
         '
         'dtgListado
@@ -519,9 +518,10 @@ Partial Class FrmControlVerraco
         Me.dtgListado.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy
         Me.dtgListado.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dtgListado.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dtgListado.Location = New System.Drawing.Point(0, 194)
+        Me.dtgListado.Location = New System.Drawing.Point(0, 298)
+        Me.dtgListado.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.dtgListado.Name = "dtgListado"
-        Me.dtgListado.Size = New System.Drawing.Size(1610, 431)
+        Me.dtgListado.Size = New System.Drawing.Size(2415, 664)
         Me.dtgListado.TabIndex = 9
         Me.dtgListado.Text = "UltraGrid1"
         '
@@ -532,23 +532,36 @@ Partial Class FrmControlVerraco
         '
         Me.Ptbx_Cargando.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Ptbx_Cargando.Image = Global.Formularios.My.Resources.Resources.loader
-        Me.Ptbx_Cargando.Location = New System.Drawing.Point(936, 385)
+        Me.Ptbx_Cargando.Location = New System.Drawing.Point(1404, 592)
+        Me.Ptbx_Cargando.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Ptbx_Cargando.Name = "Ptbx_Cargando"
-        Me.Ptbx_Cargando.Size = New System.Drawing.Size(43, 37)
+        Me.Ptbx_Cargando.Size = New System.Drawing.Size(64, 57)
         Me.Ptbx_Cargando.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.Ptbx_Cargando.TabIndex = 26
         Me.Ptbx_Cargando.TabStop = False
         Me.Ptbx_Cargando.Visible = False
         '
+        'BtnGenetica
+        '
+        Me.BtnGenetica.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnGenetica.ForeColor = System.Drawing.Color.White
+        Me.BtnGenetica.Image = Global.Formularios.My.Resources.Resources.drogas
+        Me.BtnGenetica.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BtnGenetica.Margin = New System.Windows.Forms.Padding(5)
+        Me.BtnGenetica.Name = "BtnGenetica"
+        Me.BtnGenetica.Padding = New System.Windows.Forms.Padding(2)
+        Me.BtnGenetica.Size = New System.Drawing.Size(127, 30)
+        Me.BtnGenetica.Text = "Genética"
+        Me.BtnGenetica.ToolTipText = "Expediente Vital"
+        '
         'FrmControlVerraco
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1610, 625)
+        Me.ClientSize = New System.Drawing.Size(2415, 962)
         Me.Controls.Add(Me.Ptbx_Cargando)
         Me.Controls.Add(Me.dtgListado)
         Me.Controls.Add(Me.Panel2)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "FrmControlVerraco"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "CONTROL DE VERRACOS"
@@ -592,4 +605,5 @@ Partial Class FrmControlVerraco
     Friend WithEvents BtnHistorial As ToolStripButton
     Friend WithEvents GrupoFiltros As GroupBox
     Friend WithEvents BtnEliminar As ToolStripButton
+    Friend WithEvents BtnGenetica As ToolStripButton
 End Class

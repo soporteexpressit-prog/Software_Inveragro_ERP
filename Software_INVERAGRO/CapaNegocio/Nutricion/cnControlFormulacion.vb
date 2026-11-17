@@ -159,4 +159,16 @@ Public Class cnControlFormulacion
     Public Function Cn_ConsultarFormulaBasexIdNutricionista(ByRef obj As coControlFormulacion) As DataTable
         Return cls_at.Cd_ConsultarFormulaBasexIdNutricionista("[w_pa_obtener_formulacion_base_x_id_almacen]", obj)
     End Function
+
+    Public Function Cn_ConsultarAgrupacionProductoRacion() As DataSet
+        Return cls_at.Cd_ConsultarAgrupacionProductoRacion("[w_pa_listar_agrupamiento_producto_racion]")
+    End Function
+
+    Public Function Cn_MantenimientoAgrupacionProductoRacion(ByRef obj As coControlFormulacion) As String
+        Return cls_at.Cd_MantenimientoAgrupacionProductoRacion("[w_pa_agrupar_producto_racion]", obj)
+    End Function
+
+    Public Function Cn_DesagruparProductoRacion(ByRef obj As coControlFormulacion) As String
+        Return cls_at.Cd_DesagruparProductoRacion("[w_pa_desagrupar_producto_racion]", obj)
+    End Function
 End Class

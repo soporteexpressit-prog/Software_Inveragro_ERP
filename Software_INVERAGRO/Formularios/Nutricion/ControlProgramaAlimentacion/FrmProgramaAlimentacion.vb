@@ -140,6 +140,15 @@ Public Class FrmProgramaAlimentacion
         Consultar()
     End Sub
 
+    Private Sub BtnAsociarProductoRacion_Click(sender As Object, e As EventArgs) Handles BtnAsociarProductoRacion.Click
+        Try
+            Dim frm As New FrmAsociarProductoRacion
+            frm.ShowDialog()
+        Catch ex As Exception
+            clsBasicas.controlException(Name, ex)
+        End Try
+    End Sub
+
     Private Sub btncerrar_Click(sender As Object, e As EventArgs) Handles btncerrar.Click
         Dispose()
     End Sub

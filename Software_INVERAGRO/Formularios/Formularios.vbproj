@@ -1156,10 +1156,28 @@
     <Compile Include="Nutricion\ControlPedidoAlimento\FrmReporteSemanalAlimentoxRacion.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Nutricion\ControlProgramaAlimentacion\FrmAsociarProductoRacion.Designer.vb">
+      <DependentUpon>FrmAsociarProductoRacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Nutricion\ControlProgramaAlimentacion\FrmAsociarProductoRacion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nutricion\ControlProgramaAlimentacion\FrmListarProductoRacion.Designer.vb">
+      <DependentUpon>FrmListarProductoRacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Nutricion\ControlProgramaAlimentacion\FrmListarProductoRacion.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Nutricion\ControlProgramaAlimentacion\FrmListarRacionesCerdo.Designer.vb">
       <DependentUpon>FrmListarRacionesCerdo.vb</DependentUpon>
     </Compile>
     <Compile Include="Nutricion\ControlProgramaAlimentacion\FrmListarRacionesCerdo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nutricion\ControlProgramaAlimentacion\FrmMantAsociarRacionProducto.Designer.vb">
+      <DependentUpon>FrmMantAsociarRacionProducto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Nutricion\ControlProgramaAlimentacion\FrmMantAsociarRacionProducto.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Nutricion\ControlProgramaAlimentacion\FrmMantProgramaAlimentacion.Designer.vb">
@@ -1756,6 +1774,12 @@
     <Compile Include="produccion\FrmEnvioCamalMasivo.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="produccion\FrmGestionGenetica.Designer.vb">
+      <DependentUpon>FrmGestionGenetica.vb</DependentUpon>
+    </Compile>
+    <Compile Include="produccion\FrmGestionGenetica.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="produccion\FrmGestionLotes.Designer.vb">
       <DependentUpon>FrmGestionLotes.vb</DependentUpon>
     </Compile>
@@ -1790,6 +1814,12 @@
       <DependentUpon>FrmListarIncidenciaMandarCamalMasivo.vb</DependentUpon>
     </Compile>
     <Compile Include="produccion\FrmListarIncidenciaMandarCamalMasivo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="produccion\FrmMantenimientoGenetica.Designer.vb">
+      <DependentUpon>FrmMantenimientoGenetica.vb</DependentUpon>
+    </Compile>
+    <Compile Include="produccion\FrmMantenimientoGenetica.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="produccion\FrmMantenimientoLote.Designer.vb">
@@ -4620,8 +4650,17 @@
     <EmbeddedResource Include="Nutricion\ControlPedidoAlimento\FrmReporteSemanalAlimentoxRacion.resx">
       <DependentUpon>FrmReporteSemanalAlimentoxRacion.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Nutricion\ControlProgramaAlimentacion\FrmAsociarProductoRacion.resx">
+      <DependentUpon>FrmAsociarProductoRacion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nutricion\ControlProgramaAlimentacion\FrmListarProductoRacion.resx">
+      <DependentUpon>FrmListarProductoRacion.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Nutricion\ControlProgramaAlimentacion\FrmListarRacionesCerdo.resx">
       <DependentUpon>FrmListarRacionesCerdo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nutricion\ControlProgramaAlimentacion\FrmMantAsociarRacionProducto.resx">
+      <DependentUpon>FrmMantAsociarRacionProducto.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Nutricion\ControlProgramaAlimentacion\FrmMantProgramaAlimentacion.resx">
       <DependentUpon>FrmMantProgramaAlimentacion.vb</DependentUpon>
@@ -4918,6 +4957,9 @@
     <EmbeddedResource Include="produccion\FrmEnvioCamalMasivo.resx">
       <DependentUpon>FrmEnvioCamalMasivo.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="produccion\FrmGestionGenetica.resx">
+      <DependentUpon>FrmGestionGenetica.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="produccion\FrmGestionLotes.resx">
       <DependentUpon>FrmGestionLotes.vb</DependentUpon>
     </EmbeddedResource>
@@ -4935,6 +4977,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="produccion\FrmListarIncidenciaMandarCamalMasivo.resx">
       <DependentUpon>FrmListarIncidenciaMandarCamalMasivo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="produccion\FrmMantenimientoGenetica.resx">
+      <DependentUpon>FrmMantenimientoGenetica.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="produccion\FrmMantenimientoLote.resx">
       <DependentUpon>FrmMantenimientoLote.vb</DependentUpon>
